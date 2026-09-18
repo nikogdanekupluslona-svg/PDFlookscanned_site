@@ -1,0 +1,18 @@
+{
+  "order": 3,
+  "title": "PDF to Scanned PDF: Convert, Flatten & Keep It Readable",
+  "description": "Convert a PDF to a scanned PDF: flatten text into page images, pick DPI and grayscale, keep the file small and make it look scanned. Step-by-step and free.",
+  "h1": "PDF to Scanned PDF: How to Convert, Flatten and Keep It Readable",
+  "tag": "Conversion",
+  "main_keyword": "pdf to scanned pdf",
+  "keywords": ["pdf to scanned pdf", "pdf to scanned", "convert pdf to scanned pdf", "scanned pdf", "flatten pdf", "rasterize pdf", "image-only pdf", "pdf to image pdf", "scanned pdf resolution", "scanned pdf file size"],
+  "word_target": 3600,
+  "date_published": "2026-09-18",
+  "date_modified": "2026-09-18",
+  "about": ["PDF", "Scanned document", "Rasterisation", "Image resolution", "Data compression"],
+  "mentions": ["JPEG", "OCR", "Dots per inch", "Grayscale", "Binary image", "CM/ECF", "National Archives and Records Administration", "Federal Agencies Digital Guidelines Initiative", "WCAG", "PDF/A", "Google Chrome"],
+  "howto_name": "How to convert a PDF to a scanned PDF",
+  "related": ["what-is-a-scanned-pdf", "how-to-make-a-pdf-look-scanned", "convert-color-pdf-to-black-and-white"],
+  "cta_title": "Convert your PDF to a scanned PDF now",
+  "cta_body": "Drop a PDF into the free tool, choose resolution and grayscale, and download an image-only scanned PDF. Everything runs locally in your browser."
+}

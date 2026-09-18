@@ -1,0 +1,18 @@
+{
+  "order": 7,
+  "title": "Scan Effect: What Makes a Document Look Scanned",
+  "description": "The scan effect explained: noise, skew, blur, paper tone, edge shadows, grayscale — what makes a file look scanned, plus ready settings for 5 looks.",
+  "h1": "Scan Effect Explained: What Makes a Document Look Scanned (and the Settings for 5 Looks)",
+  "tag": "Scan effect",
+  "main_keyword": "scan effect",
+  "keywords": ["scan effect", "look scanned", "look scan", "scanner effect", "scanned look", "scan effect settings", "photocopy effect", "fax effect", "make a pdf look scanned"],
+  "word_target": 3000,
+  "date_published": "2026-09-18",
+  "date_modified": "2026-09-18",
+  "about": ["Image scanner", "Scanned document", "Digital image noise", "Skew (image)", "Compression artifact"],
+  "mentions": ["Moiré pattern", "Fax", "Photocopier", "JPEG", "Grayscale", "Binary image", "Halftone", "OCR", "National Archives and Records Administration", "Federal Agencies Digital Guidelines Initiative", "PDF"],
+  "howto_name": "How to apply a realistic scan effect to a PDF",
+  "related": ["how-to-make-a-pdf-look-scanned", "convert-color-pdf-to-black-and-white", "image-to-scanned-pdf"],
+  "cta_title": "Try the 5 scan effect presets now",
+  "cta_body": "Open the free tool, enter one of the recipes from this guide and watch the live preview. Your file is processed in your browser and never uploaded."
+}

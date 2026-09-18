@@ -1,0 +1,836 @@
+{
+  "how-to-make-a-pdf-look-scanned": {
+    "facts": [
+      {
+        "text": "On a Mac, any app that can print can create a PDF: choose File > Print, then the PDF pop-up menu, then Save as PDF (a first step before rasterizing a document for a scanned look).",
+        "source": "https://support.apple.com/guide/mac-help/save-a-document-as-a-pdf-on-mac-mchlp1531/mac"
+      },
+      {
+        "text": "macOS Preview can apply Quartz filters (File > Export > Quartz Filter) that change a PDF's colors, e.g. convert a color document to black and white.",
+        "source": "https://support.apple.com/guide/preview/add-effects-to-a-pdf-prvw1510/mac"
+      },
+      {
+        "text": "Windows includes a virtual printer, \"Microsoft Print to PDF\", which can be selected in the Printer list to export to PDF.",
+        "source": "https://support.microsoft.com/en-us/office/print-notes-in-onenote-for-windows-10-45edbbc5-fbb8-453f-99c7-aaadebe5c06a"
+      },
+      {
+        "text": "iPhone and iPad can scan paper documents with the built-in Notes or Files app; you drag the corners to fit the page before keeping the scan.",
+        "source": "https://support.apple.com/en-us/108963"
+      },
+      {
+        "text": "U.S. federal rules define image noise as an undesirable artifact that is not part of the source material, and list skew, flipping and improper cropping as defects to check in scans — i.e. the very artifacts a \"scanned look\" imitates.",
+        "source": "https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E"
+      },
+      {
+        "text": "PDF.js, maintained by Mozilla, is a web-standards platform for parsing and rendering PDFs in the browser — the kind of engine a local, in-browser scan-effect tool can use to render pages to canvas without uploading files.",
+        "source": "https://mozilla.github.io/pdf.js/"
+      },
+      {
+        "text": "Federal courts that accept scans typically require 300 dpi black-and-white scanning, which is a realistic target setting for a simulated office scan.",
+        "source": "https://www.ncmd.uscourts.gov/sites/ncmd/files/ecfprocman.pdf"
+      }
+    ],
+    "statistics": [
+      {
+        "value": "300 dpi, black and white",
+        "context": "Scan setting required by the U.S. District Court (M.D.N.C.) for scanned filings; color only when the original is in color.",
+        "source": "https://www.ncmd.uscourts.gov/sites/ncmd/files/ecfprocman.pdf"
+      },
+      {
+        "value": "300 ppi minimum",
+        "context": "NARA minimum resolution for digitizing modern textual paper records (36 CFR 1236.50(d)); ≥294 ppi tolerance (300 ppi − 2%).",
+        "source": "https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E"
+      },
+      {
+        "value": "72 points per inch",
+        "context": "PDF/PostScript page geometry is based on the 72-points-per-inch typographic convention (so a \"1x\" render of a PDF page equals 72 dpi, 2x = 144 dpi, 3x = 216 dpi).",
+        "source": "https://en.wikipedia.org/wiki/Dots_per_inch"
+      },
+      {
+        "value": "24-bit minimum; 36–48 bits on high-quality models",
+        "context": "Typical color depth of image scanners.",
+        "source": "https://en.wikipedia.org/wiki/Image_scanner"
+      }
+    ],
+    "expert_quotes": [
+      {
+        "text": "Noise is one or more undesirable image artifact(s) in a digitized record that is not part of the source material.",
+        "author": "U.S. National Archives and Records Administration (NARA)",
+        "role": "Federal digitization regulation, 36 CFR Part 1236 Subpart E",
+        "source": "https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E",
+        "verbatim": true
+      },
+      {
+        "text": "Skew behaviors in the captured image can often be traced to lack of parallelism between the focal plane of the camera and the platen.",
+        "author": "Federal Agencies Digital Guidelines Initiative (FADGI), Still Image Working Group",
+        "role": "Technical Guidelines for Digitizing Cultural Heritage Materials, 3rd ed. (2023)",
+        "source": "https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf",
+        "verbatim": true
+      },
+      {
+        "text": "Rotation keeps all the parallel features of the opposite sides and maintains 90° angles at all corners and is introduced at capture by improper content alignment at capture.",
+        "author": "Federal Agencies Digital Guidelines Initiative (FADGI), Still Image Working Group",
+        "role": "Technical Guidelines for Digitizing Cultural Heritage Materials, 3rd ed. (2023)",
+        "source": "https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf",
+        "verbatim": true
+      },
+      {
+        "text": "Simply printing a document to PDF or scanning without text recognition or OCR usually results in an image-based, non-accessible file.",
+        "author": "James Madison University, Digital Accessibility",
+        "role": "University accessibility guide",
+        "source": "https://www.jmu.edu/accessibility/digital-accessibility/guides/pdf/scanned-documents.shtml",
+        "verbatim": true
+      },
+      {
+        "text": "Scanned PDF documents are generally not searchable and have a larger file size.",
+        "author": "U.S. District Court, District of Massachusetts",
+        "role": "CM/ECF Administrative Procedures",
+        "source": "https://www.mad.uscourts.gov/caseinfo/pdf/ECFadminProc.pdf",
+        "verbatim": true
+      },
+      {
+        "text": "Only documents that cannot be directly converted to PDF should be scanned.",
+        "author": "U.S. District Court, Northern District of California",
+        "role": "Preparing Your CM/ECF Filing (court e-filing guidance)",
+        "source": "https://cand.uscourts.gov/cases-e-filing/cmecf-information/preparing-your-cmecf-filing",
+        "verbatim": true
+      }
+    ]
+  },
+  "make-a-document-look-scanned": {
+    "facts": [
+      {
+        "text": "Microsoft Office desktop apps can save directly to PDF, with \"Standard\" for print quality or \"Minimum size\" when file size matters more.",
+        "source": "https://support.microsoft.com/en-us/office/save-or-convert-to-pdf-or-xps-in-office-desktop-apps-d85416c5-7d77-4fd6-a216-6f4bf7c7c110"
+      },
+      {
+        "text": "Office's PDF option \"Bitmap text when fonts may not be embedded\" renders text as bitmap images when a font cannot be embedded — an example of text becoming images inside a PDF.",
+        "source": "https://support.microsoft.com/en-us/office/save-or-convert-to-pdf-or-xps-in-office-desktop-apps-d85416c5-7d77-4fd6-a216-6f4bf7c7c110"
+      },
+      {
+        "text": "The IRS Internal Revenue Manual lists a scanned or digitized image of a handwritten signature attached to an electronic record as a permissible form of electronic signature.",
+        "source": "https://www.irs.gov/irm/part10/irm_10-010-001"
+      },
+      {
+        "text": "Under the U.S. ESIGN Act, a signature or record may not be denied legal effect solely because it is in electronic form.",
+        "source": "https://www.law.cornell.edu/uscode/text/15/7001"
+      },
+      {
+        "text": "The N.D. Cal. federal court lets e-filers use a conformed \"/s/\" signature instead of scanning a signed page for many documents.",
+        "source": "https://cand.uscourts.gov/cases-e-filing/cmecf-information/preparing-your-cmecf-filing"
+      },
+      {
+        "text": "A scanned-looking copy is not a certified copy: in the UK a true copy must be signed and dated by a professional person who has seen the original.",
+        "source": "https://www.gov.uk/certifying-a-document"
+      },
+      {
+        "text": "Apple's built-in Notes app can scan a paper document and then add a signature via Markup.",
+        "source": "https://support.apple.com/en-us/108963"
+      }
+    ],
+    "statistics": [
+      {
+        "value": "12 MB",
+        "context": "Maximum size per evidence file uploaded to USCIS online filing (PDF, JPG or JPEG; TIF/TIFF for some forms).",
+        "source": "https://www.uscis.gov/file-online/tips-for-filing-forms-online"
+      },
+      {
+        "value": "50 MB",
+        "context": "Per-filing PDF size threshold in the N.D. Cal. CM/ECF system above which exhibits must be split into separate filings.",
+        "source": "https://cand.uscourts.gov/cases-e-filing/cmecf-information/preparing-your-cmecf-filing"
+      },
+      {
+        "value": "10¢ vs 25¢ per page",
+        "context": "Black-and-white vs color printing price at East Tennessee State University library — the print step of a print-sign-scan workflow.",
+        "source": "https://libanswers.etsu.edu/faq/40850"
+      }
+    ],
+    "expert_quotes": [
+      {
+        "text": "A scanned or digitized image of a handwritten signature that is attached to an electronic record.",
+        "author": "Internal Revenue Service (IRS)",
+        "role": "Internal Revenue Manual 10.10.1, IRS Electronic Signature Program (listed permissible e-signature form)",
+        "source": "https://www.irs.gov/irm/part10/irm_10-010-001",
+        "verbatim": true
+      },
+      {
+        "text": "a signature, contract, or other record relating to such transaction may not be denied legal effect, validity, or enforceability solely because it is in electronic form",
+        "author": "U.S. Congress (ESIGN Act), 15 U.S.C. § 7001(a)(1)",
+        "role": "Federal statute, via Cornell Law School Legal Information Institute",
+        "source": "https://www.law.cornell.edu/uscode/text/15/7001",
+        "verbatim": true
+      },
+      {
+        "text": "You can certify a document as a true copy by getting it signed and dated by a professional person, like a solicitor.",
+        "author": "GOV.UK (UK Government)",
+        "role": "Guidance: Certifying a document",
+        "source": "https://www.gov.uk/certifying-a-document",
+        "verbatim": true
+      },
+      {
+        "text": "If fonts can't be embedded into the document, the PDF uses bitmap images of the text so that the PDF looks the same as the original document.",
+        "author": "Microsoft Support",
+        "role": "Save or convert to PDF in Office desktop apps",
+        "source": "https://support.microsoft.com/en-us/office/save-or-convert-to-pdf-or-xps-in-office-desktop-apps-d85416c5-7d77-4fd6-a216-6f4bf7c7c110",
+        "verbatim": true
+      },
+      {
+        "text": "Scanning, however, is not the preferred method.",
+        "author": "U.S. District Court, District of Minnesota",
+        "role": "Electronic Case Filing Procedures Guide (Criminal), April 2025",
+        "source": "https://www.mnd.uscourts.gov/sites/mnd/files/Criminal-ECF-Procedures-Guide.pdf",
+        "verbatim": true
+      },
+      {
+        "text": "PDFs of scanned documents are often just images of documents, similar to digital photographs, and typically do not contain readable text.",
+        "author": "James Madison University, Digital Accessibility",
+        "role": "University accessibility guide: Creating Accessible PDFs from Scanned Documents",
+        "source": "https://www.jmu.edu/accessibility/digital-accessibility/guides/pdf/scanned-documents.shtml",
+        "verbatim": true
+      }
+    ]
+  },
+  "pdf-to-scanned-pdf": {
+    "facts": [
+      {
+        "text": "Federal CM/ECF e-filing systems accept only PDF documents.",
+        "source": "https://www.uscourts.gov/court-records/file-a-case-cm-ecf/faqs-case-management-electronic-case-files-cm-ecf"
+      },
+      {
+        "text": "The Southern District of Florida requires main documents (pleadings) to be text-searchable PDFs; exhibits should be text searchable whenever possible.",
+        "source": "https://www.flsd.uscourts.gov/all-faqs/CMECF"
+      },
+      {
+        "text": "The District of Massachusetts distinguishes \"electronically converted\" PDFs (text searchable) from \"scanned\" PDFs (paper run through a scanner, generally not searchable, larger files) and prefers converted PDFs.",
+        "source": "https://www.mad.uscourts.gov/caseinfo/pdf/ECFadminProc.pdf"
+      },
+      {
+        "text": "The Eastern District of Oklahoma advises creating PDF/A from a word processor rather than printing and scanning, to keep files small and text-searchable.",
+        "source": "https://www.oked.uscourts.gov/pdfa-frequently-asked-questions"
+      },
+      {
+        "text": "FADGI notes standard JPEG processing introduces 8x8 pixel blocks not present in the original — a side effect of JPEG-compressing rasterized pages.",
+        "source": "https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf"
+      },
+      {
+        "text": "PDF/A (ISO 19005) is the archival PDF subset; it prohibits features unsuitable for long-term archiving such as font linking and encryption.",
+        "source": "https://en.wikipedia.org/wiki/PDF/A"
+      },
+      {
+        "text": "W3C lists OCR of scanned PDFs as the remedy so that actual text is present; image-only pages fail images-of-text accessibility criteria.",
+        "source": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF7"
+      }
+    ],
+    "statistics": [
+      {
+        "value": "23.86 MB vs 374.47 MB",
+        "context": "N.D. Cal. test of a 317-page document: bitonal at 300 ppi = 23.86 MB and legible; grayscale at 400 ppi = 374.47 MB.",
+        "source": "https://cand.uscourts.gov/cases-e-filing/cmecf-information/preparing-your-cmecf-filing"
+      },
+      {
+        "value": "2 MB ≈ 45 pages",
+        "context": "M.D.N.C. notes 2 MB is approximately forty-five pages of PDF text; scanned PDFs use considerably more space than electronically generated ones.",
+        "source": "https://www.ncmd.uscourts.gov/sites/ncmd/files/ecfprocman.pdf"
+      },
+      {
+        "value": "100 MB, 300 dpi",
+        "context": "W.D. Wash. per-document limit (100 MB) and required scan resolution (300 dpi, black and white unless color is integral).",
+        "source": "https://www.wawd.uscourts.gov/attorneys/cm-ecf-faqs/Technical"
+      },
+      {
+        "value": "35 MB",
+        "context": "Maximum PDF size per exhibit in the District of Minnesota ECF (criminal) procedures.",
+        "source": "https://www.mnd.uscourts.gov/sites/mnd/files/Criminal-ECF-Procedures-Guide.pdf"
+      },
+      {
+        "value": "20:1 ≈ 95% smaller",
+        "context": "FADGI: JPEG 2000 at 20:1 compression gives about a 95% file-size reduction with no visible loss.",
+        "source": "https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf"
+      }
+    ],
+    "expert_quotes": [
+      {
+        "text": "CM/ECF systems are designed to accept only documents in PDF format.",
+        "author": "Administrative Office of the U.S. Courts (uscourts.gov)",
+        "role": "CM/ECF FAQ, federal judiciary",
+        "source": "https://www.uscourts.gov/court-records/file-a-case-cm-ecf/faqs-case-management-electronic-case-files-cm-ecf",
+        "verbatim": true
+      },
+      {
+        "text": "However, pleadings/main documents filed electronically in CM/ECF must be in text searchable PDF format",
+        "author": "U.S. District Court, Southern District of Florida",
+        "role": "CM/ECF FAQ (court e-filing rules)",
+        "source": "https://www.flsd.uscourts.gov/all-faqs/CMECF",
+        "verbatim": true
+      },
+      {
+        "text": "Documents converted to PDF, rather than scanned, are preferred for filing in CM/ECF.",
+        "author": "U.S. District Court, District of Massachusetts",
+        "role": "CM/ECF Administrative Procedures",
+        "source": "https://www.mad.uscourts.gov/caseinfo/pdf/ECFadminProc.pdf",
+        "verbatim": true
+      },
+      {
+        "text": "To keep file sizes down and to ensure that files are text-searchable, PDF/A documents should be created using a word processing program (like WordPerfect or Microsoft Word), rather than being printed out in hard copy and scanned.",
+        "author": "U.S. District Court, Eastern District of Oklahoma",
+        "role": "PDF/A FAQ (court e-filing guidance)",
+        "source": "https://www.oked.uscourts.gov/pdfa-frequently-asked-questions",
+        "verbatim": true
+      },
+      {
+        "text": "Most scanned PDFs are not searchable and have a large file size.",
+        "author": "U.S. District Court, Middle District of North Carolina",
+        "role": "CM/ECF Administrative Procedures Manual",
+        "source": "https://www.ncmd.uscourts.gov/sites/ncmd/files/ecfprocman.pdf",
+        "verbatim": true
+      },
+      {
+        "text": "Text-searchable scanned PDF documents are preferred, but not required.",
+        "author": "U.S. District Court, District of Minnesota",
+        "role": "Electronic Case Filing Procedures Guide (Criminal), April 2025",
+        "source": "https://www.mnd.uscourts.gov/sites/mnd/files/Criminal-ECF-Procedures-Guide.pdf",
+        "verbatim": true
+      },
+      {
+        "text": "A document that consists of scanned images of text is inherently inaccessible because the content of the document is images, not searchable text.",
+        "author": "W3C Web Accessibility Initiative (WAI)",
+        "role": "WCAG 2.1 Technique PDF7 (standards body guidance)",
+        "source": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF7",
+        "verbatim": true
+      }
+    ]
+  },
+  "what-is-a-scanned-pdf": {
+    "facts": [
+      {
+        "text": "A scanned PDF is created from paper documents run through an optical scanner; an electronically converted PDF is created from a word processor and is text searchable.",
+        "source": "https://www.mad.uscourts.gov/caseinfo/pdf/ECFadminProc.pdf"
+      },
+      {
+        "text": "Scanned PDFs are typically just images of pages; unless OCR is applied, screen readers and other assistive technology cannot interpret the content.",
+        "source": "https://www.jmu.edu/accessibility/digital-accessibility/guides/pdf/scanned-documents.shtml"
+      },
+      {
+        "text": "A quick test: search for a word you can see (Ctrl+F); if it gets highlighted, the PDF has real text rather than being a scanned image of text.",
+        "source": "https://pressbooks.ulib.csuohio.edu/accessibility/chapter/chapter-4-2-the-difference-between-an-accessible-pdf-and-a-scanned-image-of-text/"
+      },
+      {
+        "text": "If a PDF is not text-searchable, you cannot copy its text.",
+        "source": "https://www.flsd.uscourts.gov/all-faqs/CMECF"
+      },
+      {
+        "text": "OCR (optical character recognition) converts images of typed, handwritten or printed text into machine-encoded text, e.g. from a scanned document or a photo of a document.",
+        "source": "https://en.wikipedia.org/wiki/Optical_character_recognition"
+      },
+      {
+        "text": "Even OCR'd scanned PDFs usually place the text layer under the page image, so zooming shows pixelation and the hidden text can be inaccurate.",
+        "source": "https://www.jmu.edu/accessibility/digital-accessibility/guides/pdf/scanned-documents.shtml"
+      },
+      {
+        "text": "PDF/A is an ISO-standardized (ISO 19005) version of PDF specialized for archiving and long-term preservation.",
+        "source": "https://en.wikipedia.org/wiki/PDF/A"
+      },
+      {
+        "text": "Microsoft Office can export ISO 19005-1 (PDF/A) compliant files.",
+        "source": "https://support.microsoft.com/en-us/office/save-or-convert-to-pdf-or-xps-in-office-desktop-apps-d85416c5-7d77-4fd6-a216-6f4bf7c7c110"
+      }
+    ],
+    "statistics": [
+      {
+        "value": "1993; ISO 32000-2",
+        "context": "PDF was first released June 15, 1993 and is now standardized as ISO 32000-2 (PDF 2.0).",
+        "source": "https://en.wikipedia.org/wiki/PDF"
+      },
+      {
+        "value": "2005",
+        "context": "PDF/A (ISO 19005) initial release: October 1, 2005.",
+        "source": "https://en.wikipedia.org/wiki/PDF/A"
+      },
+      {
+        "value": "317 pages: 23.86 MB (bitonal 300 ppi)",
+        "context": "Real-world size of an image-only scanned PDF per the N.D. Cal. court's test.",
+        "source": "https://cand.uscourts.gov/cases-e-filing/cmecf-information/preparing-your-cmecf-filing"
+      },
+      {
+        "value": "24-bit color",
+        "context": "A typical color scan is 24-bit (8 bits x 3 channels).",
+        "source": "https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E"
+      }
+    ],
+    "expert_quotes": [
+      {
+        "text": "A document that consists of scanned images of text is inherently inaccessible because the content of the document is images, not searchable text.",
+        "author": "W3C Web Accessibility Initiative (WAI)",
+        "role": "WCAG 2.1 Technique PDF7 (standards body guidance)",
+        "source": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF7",
+        "verbatim": true
+      },
+      {
+        "text": "Assistive technologies cannot read or extract the words; users cannot select, edit, resize, or reflow text nor can they change text and background colors; and authors cannot manipulate the PDF for accessibility.",
+        "author": "W3C Web Accessibility Initiative (WAI)",
+        "role": "WCAG 2.1 Technique PDF7 (standards body guidance)",
+        "source": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF7",
+        "verbatim": true
+      },
+      {
+        "text": "Scanned PDFs are a compilation of images, therefore they are unreadable to most standard screen readers.",
+        "author": "Georgetown University, Accessibility at Georgetown",
+        "role": "University PDF accessibility guidance",
+        "source": "https://accessibility.georgetown.edu/digital-accessibility/pdf-accessibility/",
+        "verbatim": true
+      },
+      {
+        "text": "PDFs of scanned documents are often just images of documents, similar to digital photographs, and typically do not contain readable text.",
+        "author": "James Madison University, Digital Accessibility",
+        "role": "University accessibility guide: Creating Accessible PDFs from Scanned Documents",
+        "source": "https://www.jmu.edu/accessibility/digital-accessibility/guides/pdf/scanned-documents.shtml",
+        "verbatim": true
+      },
+      {
+        "text": "For people who need to zoom-in on the text, the output becomes pixelated and distorted because the eText is under the image of the text.",
+        "author": "James Madison University, Digital Accessibility",
+        "role": "University accessibility guide",
+        "source": "https://www.jmu.edu/accessibility/digital-accessibility/guides/pdf/scanned-documents.shtml",
+        "verbatim": true
+      },
+      {
+        "text": "If the word becomes highlighted on the page, then it has searchable text as opposed to being a scanned image of text.",
+        "author": "Heather Caprette, Cleveland State University",
+        "role": "Author, \"Best Practices in Accessible Online Design\" (CSU open textbook)",
+        "source": "https://pressbooks.ulib.csuohio.edu/accessibility/chapter/chapter-4-2-the-difference-between-an-accessible-pdf-and-a-scanned-image-of-text/",
+        "verbatim": true
+      },
+      {
+        "text": "Scanned text is a photograph of a printed page produced either by a digital camera or scanner.",
+        "author": "U.S. District Court, Northern District of California (citing NARA transfer guidance)",
+        "role": "Preparing Your CM/ECF Filing",
+        "source": "https://cand.uscourts.gov/cases-e-filing/cmecf-information/preparing-your-cmecf-filing",
+        "verbatim": true
+      },
+      {
+        "text": "Optical Character Recognition (OCR) is the process of converting a raster image of text into searchable electronic text.",
+        "author": "Federal Agencies Digital Guidelines Initiative (FADGI), Still Image Working Group",
+        "role": "Technical Guidelines for Digitizing Cultural Heritage Materials, 3rd ed. (2023)",
+        "source": "https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf",
+        "verbatim": true
+      }
+    ]
+  },
+  "image-to-scanned-pdf": {
+    "facts": [
+      {
+        "text": "macOS Preview can export an image (File > Export) as HEIC, JPEG, JPEG-2000, OpenEXR, PDF, PNG or TIFF; choosing PDF also lets you apply a Quartz filter.",
+        "source": "https://support.apple.com/guide/preview/convert-image-file-types-prvw1012/mac"
+      },
+      {
+        "text": "The iPhone Notes and Files apps capture a document with the camera, auto-detect it in Auto mode, and let you drag the corners to fit the page (perspective correction).",
+        "source": "https://support.apple.com/en-us/108963"
+      },
+      {
+        "text": "USCIS accepts either a scanner or phone photos of documents as evidence, provided each image is clear and all text readable.",
+        "source": "https://www.uscis.gov/file-online/tips-for-filing-forms-online"
+      },
+      {
+        "text": "FADGI distinguishes skew (non-90° angles, often from the camera's focal plane not being parallel to the platen) from rotation (content misaligned at capture).",
+        "source": "https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf"
+      },
+      {
+        "text": "Equipment specs like scanner ppi settings or camera megapixels alone do not guarantee image quality under NARA rules.",
+        "source": "https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E"
+      },
+      {
+        "text": "USCIS asks paper filers not to submit photos or documents smaller than 4x6 inches, because it scans and uploads documents into electronic systems.",
+        "source": "https://www.uscis.gov/archive/recommendations-for-paper-filings-to-avoid-scanning-delays"
+      }
+    ],
+    "statistics": [
+      {
+        "value": "12 MB; PDF/JPG/JPEG (TIF/TIFF for some forms)",
+        "context": "USCIS online-evidence file limit and accepted formats.",
+        "source": "https://www.uscis.gov/file-online/tips-for-filing-forms-online"
+      },
+      {
+        "value": "400 ppi",
+        "context": "NARA minimum for photographic prints and paper records with fine details (vs 300 ppi for modern textual records).",
+        "source": "https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E"
+      },
+      {
+        "value": "200 / 250 / 300 / 400 ppi",
+        "context": "FADGI 1- to 4-star resolution levels for unbound general-collection documents.",
+        "source": "https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf"
+      },
+      {
+        "value": "24 / 36 / 48-bit",
+        "context": "Typical capture depth of color scanners and cameras (24- or 36-bit) and high-end devices (48-bit).",
+        "source": "https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E"
+      }
+    ],
+    "expert_quotes": [
+      {
+        "text": "Use a scanner or take pictures of each document.",
+        "author": "U.S. Citizenship and Immigration Services (USCIS)",
+        "role": "Tips for Filing Forms Online",
+        "source": "https://www.uscis.gov/file-online/tips-for-filing-forms-online",
+        "verbatim": true
+      },
+      {
+        "text": "Make sure each image you attach is clear and that all text is readable.",
+        "author": "U.S. Citizenship and Immigration Services (USCIS)",
+        "role": "Tips for Filing Forms Online",
+        "source": "https://www.uscis.gov/file-online/tips-for-filing-forms-online",
+        "verbatim": true
+      },
+      {
+        "text": "Then drag the corners to adjust the scan to fit the page, then tap Keep Scan.",
+        "author": "Apple Support",
+        "role": "How to scan documents on your iPhone or iPad (built-in Notes app)",
+        "source": "https://support.apple.com/en-us/108963",
+        "verbatim": true
+      },
+      {
+        "text": "Skew behaviors in the captured image can often be traced to lack of parallelism between the focal plane of the camera and the platen.",
+        "author": "Federal Agencies Digital Guidelines Initiative (FADGI), Still Image Working Group",
+        "role": "Technical Guidelines for Digitizing Cultural Heritage Materials, 3rd ed. (2023)",
+        "source": "https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf",
+        "verbatim": true
+      },
+      {
+        "text": "The agency cannot rely solely on equipment specifications, such as scanner ppi settings or camera sensor megapixels, to ensure digital image quality.",
+        "author": "U.S. National Archives and Records Administration (NARA)",
+        "role": "Federal digitization regulation, 36 CFR Part 1236 Subpart E",
+        "source": "https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E",
+        "verbatim": true
+      },
+      {
+        "text": "If you choose PDF, you can choose a Quartz filter to apply to the image, and you can encrypt the image so that only those with the password can view it.",
+        "author": "Apple Support",
+        "role": "Preview User Guide for Mac: Convert image file types",
+        "source": "https://support.apple.com/guide/preview/convert-image-file-types-prvw1012/mac",
+        "verbatim": true
+      }
+    ]
+  },
+  "convert-color-pdf-to-black-and-white": {
+    "facts": [
+      {
+        "text": "In macOS Preview: File > Export > Quartz Filter lets you convert a color PDF to black and white (or apply other effects such as sepia).",
+        "source": "https://support.apple.com/guide/preview/add-effects-to-a-pdf-prvw1510/mac"
+      },
+      {
+        "text": "In Word (Windows) you print in grayscale or black and white via File > Print > Printer Properties; options depend on the printer driver.",
+        "source": "https://support.microsoft.com/en-us/office/print-in-black-and-white-59939d05-2f88-4712-a4e5-384be412c0bf"
+      },
+      {
+        "text": "Microsoft Edge's print dialog has a Color setting with Color or Black and White options.",
+        "source": "https://support.microsoft.com/en-us/edge/print-in-microsoft-edge"
+      },
+      {
+        "text": "Grayscale images use a range of grays between white and black, while bitonal images use only two colors, black and white; bitonal is 1-bit, grayscale 8 or 16 bits.",
+        "source": "https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf"
+      },
+      {
+        "text": "Binary (bi-level) images store each pixel in a single bit, i.e. pure black or white.",
+        "source": "https://en.wikipedia.org/wiki/Binary_image"
+      },
+      {
+        "text": "Courts often require B&W scanning because color scans take much longer to upload.",
+        "source": "https://www.ncmd.uscourts.gov/sites/ncmd/files/ecfprocman.pdf"
+      },
+      {
+        "text": "Preview's \"Reduce File Size\" Quartz filter shrinks PDFs but may lower quality.",
+        "source": "https://support.apple.com/guide/preview/reduce-a-pdfs-file-size-prvw1509/mac"
+      }
+    ],
+    "statistics": [
+      {
+        "value": "~15.7x smaller",
+        "context": "317-page document: bitonal 300 ppi = 23.86 MB vs grayscale 400 ppi = 374.47 MB (N.D. Cal. test).",
+        "source": "https://cand.uscourts.gov/cases-e-filing/cmecf-information/preparing-your-cmecf-filing"
+      },
+      {
+        "value": "8¢ vs 25¢ per page",
+        "context": "University of Utah health sciences library: black-and-white vs color print price (as of Dec 1, 2025) — color costs ~3x more.",
+        "source": "https://libanswers.med.utah.edu/faq/174028"
+      },
+      {
+        "value": "10¢ vs 25¢ per page",
+        "context": "ETSU library black-and-white vs color print price.",
+        "source": "https://libanswers.etsu.edu/faq/40850"
+      },
+      {
+        "value": "8 bits = 256 shades",
+        "context": "Grayscale bit depth; e.g. the 1989 HP ScanJet Plus raised grayscale depth to 8 bits (256 shades).",
+        "source": "https://en.wikipedia.org/wiki/Image_scanner"
+      }
+    ],
+    "expert_quotes": [
+      {
+        "text": "You can modify a PDF opened in Preview using Quartz filters that add effects or change colors.",
+        "author": "Apple Support",
+        "role": "Preview User Guide for Mac (OS built-in feature)",
+        "source": "https://support.apple.com/guide/preview/add-effects-to-a-pdf-prvw1510/mac",
+        "verbatim": true
+      },
+      {
+        "text": "For example, you can convert a color document to black and white, or apply a sepia tone.",
+        "author": "Apple Support",
+        "role": "Preview User Guide for Mac (OS built-in feature)",
+        "source": "https://support.apple.com/guide/preview/add-effects-to-a-pdf-prvw1510/mac",
+        "verbatim": true
+      },
+      {
+        "text": "Select the properties for printing in color, grayscale or black and white.",
+        "author": "Microsoft Support",
+        "role": "Print in black and white (Word)",
+        "source": "https://support.microsoft.com/en-us/office/print-in-black-and-white-59939d05-2f88-4712-a4e5-384be412c0bf",
+        "verbatim": true
+      },
+      {
+        "text": "Bitonal: Digital images produced using only two colors, black and white.",
+        "author": "Federal Agencies Digital Guidelines Initiative (FADGI), Still Image Working Group",
+        "role": "Technical Guidelines for Digitizing Cultural Heritage Materials, 3rd ed. (2023)",
+        "source": "https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf",
+        "verbatim": true
+      },
+      {
+        "text": "Grayscale: Digital images produced using a range of grays between white and black.",
+        "author": "Federal Agencies Digital Guidelines Initiative (FADGI), Still Image Working Group",
+        "role": "Technical Guidelines for Digitizing Cultural Heritage Materials, 3rd ed. (2023)",
+        "source": "https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf",
+        "verbatim": true
+      },
+      {
+        "text": "Because documents scanned in color or containing a graphic take much longer to upload, filing parties must configure their scanners to scan documents at 300 dpi and in black and white rather than in color.",
+        "author": "U.S. District Court, Middle District of North Carolina",
+        "role": "CM/ECF Administrative Procedures Manual",
+        "source": "https://www.ncmd.uscourts.gov/sites/ncmd/files/ecfprocman.pdf",
+        "verbatim": true
+      },
+      {
+        "text": "Scanning at a higher resolution can cause lagging/timeout issues while uploading.",
+        "author": "U.S. District Court, Western District of Washington",
+        "role": "CM/ECF Technical FAQ",
+        "source": "https://www.wawd.uscourts.gov/attorneys/cm-ecf-faqs/Technical",
+        "verbatim": true
+      }
+    ]
+  },
+  "scan-effect": {
+    "facts": [
+      {
+        "text": "Standard JPEG processing adds 8x8 pixel blocking artifacts; aggressive de-noising can erase natural paper texture, so FADGI flags noise values that are too low.",
+        "source": "https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf"
+      },
+      {
+        "text": "Moiré patterns commonly appear when scanning a halftone (printed) picture.",
+        "source": "https://en.wikipedia.org/wiki/Moir%C3%A9_pattern"
+      },
+      {
+        "text": "Group 3 fax standard resolution is about 200–204 lines per inch horizontally by 98–100 vertically; \"Fine\" doubles vertical resolution to 196–200.",
+        "source": "https://en.wikipedia.org/wiki/Fax"
+      },
+      {
+        "text": "Lossy pattern-matching compression (JBIG2) in some photocopiers has substituted digits such as \"6\" and \"8\".",
+        "source": "https://en.wikipedia.org/wiki/Compression_artifact"
+      },
+      {
+        "text": "Copiers and printers can be traced by imperfections in output; mechanical tolerances in toner and paper feed cause banding.",
+        "source": "https://en.wikipedia.org/wiki/Photocopier"
+      },
+      {
+        "text": "OCR pre-processing includes de-skewing, despeckling and binarization — the inverse of the skew, speckle and threshold effects of real scans.",
+        "source": "https://en.wikipedia.org/wiki/Optical_character_recognition"
+      },
+      {
+        "text": "NARA's QA checklist lists clipping, misregistration, quantization errors, skew and improper cropping as scan defects.",
+        "source": "https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E"
+      }
+    ],
+    "statistics": [
+      {
+        "value": "300 ppi text / 400 ppi photos",
+        "context": "NARA minimums for textual records and photographic prints; noise upper limit ≤2 (std dev of L*).",
+        "source": "https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E"
+      },
+      {
+        "value": "200–400 ppi",
+        "context": "FADGI star levels for unbound documents: 1-star ≥190 ppi (200−5%) through 4-star ≥396 ppi (400−1%).",
+        "source": "https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf"
+      },
+      {
+        "value": "6–15 seconds per page",
+        "context": "Typical Group 3 fax transmission time per page.",
+        "source": "https://en.wikipedia.org/wiki/Fax"
+      },
+      {
+        "value": "21.11 m → 14.13 m",
+        "context": "Room dimension altered by a JBIG2-compressed copier scan in David Kriesel's tests (BBC, 2013).",
+        "source": "https://www.bbc.com/news/technology-23588202"
+      },
+      {
+        "value": "36–48 bits",
+        "context": "Color depth of high-quality scanners (at least 24 bits on typical models).",
+        "source": "https://en.wikipedia.org/wiki/Image_scanner"
+      }
+    ],
+    "expert_quotes": [
+      {
+        "text": "Noise is one or more undesirable image artifact(s) in a digitized record that is not part of the source material.",
+        "author": "U.S. National Archives and Records Administration (NARA)",
+        "role": "Federal digitization regulation, 36 CFR Part 1236 Subpart E",
+        "source": "https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E",
+        "verbatim": true
+      },
+      {
+        "text": "For instance, standard JPEG processing introduces 8x8 pixel blocks that are clearly not part of the original content.",
+        "author": "Federal Agencies Digital Guidelines Initiative (FADGI), Still Image Working Group",
+        "role": "Technical Guidelines for Digitizing Cultural Heritage Materials, 3rd ed. (2023)",
+        "source": "https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf",
+        "verbatim": true
+      },
+      {
+        "text": "Moiré often occurs upon display of digitized halftone patterns caused by the out-of-phase interaction of the halftone pattern and sensor geometries.",
+        "author": "Federal Agencies Digital Guidelines Initiative (FADGI), Still Image Working Group",
+        "role": "Technical Guidelines for Digitizing Cultural Heritage Materials, 3rd ed. (2023)",
+        "source": "https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf",
+        "verbatim": true
+      },
+      {
+        "text": "Example – engravings need to be digitized at higher resolutions in order to avoid moiré.",
+        "author": "Federal Agencies Digital Guidelines Initiative (FADGI), Still Image Working Group",
+        "role": "Technical Guidelines for Digitizing Cultural Heritage Materials, 3rd ed. (2023)",
+        "source": "https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf",
+        "verbatim": true
+      },
+      {
+        "text": "Skew behaviors in the captured image can often be traced to lack of parallelism between the focal plane of the camera and the platen.",
+        "author": "Federal Agencies Digital Guidelines Initiative (FADGI), Still Image Working Group",
+        "role": "Technical Guidelines for Digitizing Cultural Heritage Materials, 3rd ed. (2023)",
+        "source": "https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf",
+        "verbatim": true
+      },
+      {
+        "text": "Scans made by some Xerox copiers are changing numbers on documents, a German computer scientist has discovered.",
+        "author": "BBC News",
+        "role": "Technology news report, 7 August 2013",
+        "source": "https://www.bbc.com/news/technology-23588202",
+        "verbatim": true
+      },
+      {
+        "text": "In his tests, Mr Kriesel found that often the number \"6\" would be turned into an \"8\", and vice versa, with other numbers being affected too.",
+        "author": "BBC News (reporting findings of computer scientist David Kriesel)",
+        "role": "Technology news report, 7 August 2013",
+        "source": "https://www.bbc.com/news/technology-23588202",
+        "verbatim": true
+      },
+      {
+        "text": "Quantization is a lossy compression technique that involves compressing a range of values to a single quantum value, usually to reduce file size.",
+        "author": "U.S. National Archives and Records Administration (NARA)",
+        "role": "Federal digitization regulation, 36 CFR Part 1236 Subpart E",
+        "source": "https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E",
+        "verbatim": true
+      }
+    ]
+  },
+  "home": {
+    "facts": [
+      {
+        "text": "PDF.js (Mozilla) is a web-standards platform for parsing and rendering PDFs, enabling in-browser PDF processing.",
+        "source": "https://mozilla.github.io/pdf.js/"
+      },
+      {
+        "text": "Federal courts' CM/ECF accepts only PDF because it preserves pagination, formatting and fonts across computers.",
+        "source": "https://www.uscourts.gov/court-records/file-a-case-cm-ecf/faqs-case-management-electronic-case-files-cm-ecf"
+      },
+      {
+        "text": "Printing to PDF or scanning without OCR usually yields an image-based, non-accessible file.",
+        "source": "https://www.jmu.edu/accessibility/digital-accessibility/guides/pdf/scanned-documents.shtml"
+      },
+      {
+        "text": "NARA requires at least 300 ppi for digitized modern textual records and 400 ppi for photographs/fine-detail records.",
+        "source": "https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E"
+      },
+      {
+        "text": "macOS Preview has built-in Quartz filters for black-and-white or sepia effects on PDFs.",
+        "source": "https://support.apple.com/guide/preview/add-effects-to-a-pdf-prvw1510/mac"
+      },
+      {
+        "text": "The UK Government Digital Service prefers HTML to PDF because PDF content is harder to find, use and maintain.",
+        "source": "https://gds.blog.gov.uk/2018/07/16/why-gov-uk-content-should-be-published-in-html-and-not-pdf/"
+      }
+    ],
+    "statistics": [
+      {
+        "value": "300 dpi",
+        "context": "Standard court scanning resolution (black and white).",
+        "source": "https://www.ncmd.uscourts.gov/sites/ncmd/files/ecfprocman.pdf"
+      },
+      {
+        "value": "12 MB",
+        "context": "USCIS per-file upload limit for scanned/photographed evidence.",
+        "source": "https://www.uscis.gov/file-online/tips-for-filing-forms-online"
+      },
+      {
+        "value": "317 pages ≈ 23.86 MB",
+        "context": "Size of a 300 ppi bitonal scan of a 317-page document.",
+        "source": "https://cand.uscourts.gov/cases-e-filing/cmecf-information/preparing-your-cmecf-filing"
+      },
+      {
+        "value": "72 vs 96 PPI",
+        "context": "Default display \"DPI\": Mac 72 PPI, Windows 96 PPI.",
+        "source": "https://en.wikipedia.org/wiki/Dots_per_inch"
+      }
+    ],
+    "expert_quotes": [
+      {
+        "text": "A document that consists of scanned images of text is inherently inaccessible because the content of the document is images, not searchable text.",
+        "author": "W3C Web Accessibility Initiative (WAI)",
+        "role": "WCAG 2.1 Technique PDF7 (standards body guidance)",
+        "source": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF7",
+        "verbatim": true
+      },
+      {
+        "text": "A general-purpose, web standards-based platform for parsing and rendering PDFs.",
+        "author": "Mozilla PDF.js project",
+        "role": "Official project site",
+        "source": "https://mozilla.github.io/pdf.js/",
+        "verbatim": true
+      },
+      {
+        "text": "PDF.js is community-driven and supported by Mozilla.",
+        "author": "Mozilla PDF.js project",
+        "role": "Project README (GitHub)",
+        "source": "https://github.com/mozilla/pdf.js",
+        "verbatim": true
+      },
+      {
+        "text": "This format was chosen because it allows a document to retain its pagination, formatting, and fonts no matter what type of computer is used to view or print the document.",
+        "author": "Administrative Office of the U.S. Courts (uscourts.gov)",
+        "role": "CM/ECF FAQ, federal judiciary",
+        "source": "https://www.uscourts.gov/court-records/file-a-case-cm-ecf/faqs-case-management-electronic-case-files-cm-ecf",
+        "verbatim": true
+      },
+      {
+        "text": "For these records, produce image files at a minimum of 300 ppi sized to the source document.",
+        "author": "U.S. National Archives and Records Administration (NARA)",
+        "role": "Federal digitization regulation, 36 CFR Part 1236 Subpart E",
+        "source": "https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E",
+        "verbatim": true
+      },
+      {
+        "text": "Scanned PDF documents are generally not searchable and have a larger file size.",
+        "author": "U.S. District Court, District of Massachusetts",
+        "role": "CM/ECF Administrative Procedures",
+        "source": "https://www.mad.uscourts.gov/caseinfo/pdf/ECFadminProc.pdf",
+        "verbatim": true
+      },
+      {
+        "text": "Compared with HTML content, information published in a PDF is harder to find, use and maintain.",
+        "author": "Government Digital Service (GOV.UK)",
+        "role": "GDS blog, UK Government",
+        "source": "https://gds.blog.gov.uk/2018/07/16/why-gov-uk-content-should-be-published-in-html-and-not-pdf/",
+        "verbatim": true
+      }
+    ]
+  }
+}

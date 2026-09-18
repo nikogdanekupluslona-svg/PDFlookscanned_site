@@ -1,0 +1,300 @@
+<p class="lead">To make a PDF look scanned, render each page as an image, tilt it by about 0.5–2°, add light noise and blur, switch to grayscale, and save the images back into a PDF. A free browser tool does all of this in under a minute, locally, without uploading the file or installing anything.</p>
+
+<p>Plenty of forms still ask for a "scanned copy," and a clean digital PDF can look out of place next to paper-based paperwork. This guide shows how to make a PDF look scanned in six different ways, from a one-minute browser tool to a real printer and scanner, with exact settings, five tested recipes, a checklist and honest limits.</p>
+
+<p>Resolution numbers come from U.S. federal digitization rules and court filing guides; slider values come from our own tool.</p>
+
+<nav class="toc" aria-label="Table of contents"><h2>Table of Contents</h2><ol>
+<li><a href="#quick-answer">What is the fastest way to make a PDF look scanned?</a></li>
+<li><a href="#method-1-browser-tool">Method 1: make a PDF look scanned in your browser</a></li>
+<li><a href="#method-2-chrome-extension">Method 2: make a PDF look like a scan in Chrome</a></li>
+<li><a href="#method-3-print-dialog">Method 3: can the print dialog make a PDF look scanned?</a></li>
+<li><a href="#method-4-image-editor">Method 4: make a PDF look like it was scanned by hand</a></li>
+<li><a href="#method-5-phone-photo">Method 5: make a PDF look like a scan with your phone</a></li>
+<li><a href="#method-6-print-and-scan">Method 6: print and scan the PDF for real</a></li>
+<li><a href="#recipes">Which settings make a PDF look like a scanned document?</a></li>
+<li><a href="#check-the-result">How do you check that the PDF looks scanned?</a></li>
+<li><a href="#common-mistakes">Why does a fake scanned PDF still look fake?</a></li>
+<li><a href="#when-not-to">When should you not make a PDF look scanned?</a></li>
+<li><a href="#faq">Make a PDF look scanned: FAQ</a></li>
+<li><a href="#verdict">Which method to make a PDF look scanned should you pick?</a></li>
+</ol></nav>
+
+<h2 id="quick-answer">What is the fastest way to make a PDF look scanned?</h2>
+<p>The fastest way to make a PDF look scanned is a browser-based scan-effect tool: open the page, drop in the PDF, keep or adjust the default rotation, blur and noise, and download the result. The whole job takes under a minute per file and costs nothing.</p>
+
+<p>The other five methods trade speed for control or for physical authenticity. A print dialog is fast but only half-convincing. A raster image editor gives full control but takes 10–30 minutes. A phone photo or a real printer and scanner produce genuine scan artifacts, at the cost of paper, time and hardware. The table below sums up how the six methods compare.</p>
+
+<div class="table-wrap"><table>
+<caption>Six ways to make a PDF look scanned, compared (time per 5-page document is our estimate)</caption>
+<thead><tr><th scope="col">Method</th><th scope="col">Time</th><th scope="col">Cost</th><th scope="col">What you need</th><th scope="col">Realism</th><th scope="col">Privacy</th><th scope="col">Best for</th></tr></thead>
+<tbody>
+<tr><th scope="row">1. Browser tool</th><td>Under 1 min</td><td>Free</td><td>Any modern browser</td><td>High</td><td>Local, no upload</td><td>Most people, most files</td></tr>
+<tr><th scope="row">2. Chrome extension</th><td>Under 1 min</td><td>Free</td><td>Google Chrome</td><td>High</td><td>Local, no upload</td><td>Frequent use, batches</td></tr>
+<tr><th scope="row">3. OS print dialog</th><td>1–2 min</td><td>Free</td><td>Windows or macOS</td><td>Low to medium</td><td>Local</td><td>Grayscale look only</td></tr>
+<tr><th scope="row">4. Raster image editor</th><td>10–30 min</td><td>Free to paid</td><td>Editor plus PDF export</td><td>High, if done well</td><td>Local</td><td>Custom one-off effects</td></tr>
+<tr><th scope="row">5. Phone photo of a printout</th><td>5–10 min</td><td>Paper and toner</td><td>Printer and phone</td><td>Very high</td><td>Local</td><td>A genuine phone-scan look</td></tr>
+<tr><th scope="row">6. Print and scan</th><td>5–15 min</td><td>Paper and toner</td><td>Printer and flatbed scanner</td><td>Real scan</td><td>Local</td><td>When a true scan is required</td></tr>
+</tbody></table></div>
+
+<p>If you only need one recommendation: use Method 1 for single files and its bulk mode for batches. Switch to Method 6 only when a person or office explicitly wants a document that has physically passed through a scanner.</p>
+
+<h2 id="method-1-browser-tool">Method 1: make a PDF look scanned in your browser</h2>
+<p>The Make PDF look scanned web tool renders every PDF page to an image in your browser, applies rotation, blur, noise, brightness, contrast and paper tone, then saves the images as a new PDF. The file never leaves your device, and the tool is free with no signup.</p>
+
+<p>Under the hood, the tool uses PDF.js, which Mozilla describes as <a href="https://mozilla.github.io/pdf.js/" target="_blank" rel="noopener">"a general-purpose, web standards-based platform for parsing and rendering PDFs"</a>, and draws each page on an HTML canvas. Because processing happens locally, the tool keeps working offline after the first load and runs in mobile browsers too.</p>
+
+<h3>Steps to make a PDF look scanned with the browser tool</h3>
+<ol class="step-list">
+<li><strong>Open the scanner.</strong> Go to <a href="/scan">the free scan tool</a> in Chrome, Edge, Safari or Firefox. No account or installation is needed.</li>
+<li><strong>Add your PDF.</strong> Drag the file onto the page or click to choose it. The tool also accepts JPG, PNG, WebP, SVG, GIF, BMP, DOCX, XLSX, CSV, TXT, MD and HTML files.</li>
+<li><strong>Check the live preview.</strong> The first page appears with the default effect already applied: 1° rotation, 0.5° random variance, blur 0.3, noise 0.1, grayscale, 2× resolution.</li>
+<li><strong>Set the tilt.</strong> Keep Rotate between 0.5° and 1.5° for a believable office scan. Leave Rotate variance at 0.5–1° so every page sits at a slightly different angle, as it would after hand feeding.</li>
+<li><strong>Tune blur and noise.</strong> Blur 0.2–0.4 softens the razor-sharp vector edges; noise 0.1–0.25 adds the speckle of a sensor. Zoom the preview to 100% before deciding.</li>
+<li><strong>Pick the colorspace and paper tone.</strong> Gray suits contracts and letters. Choose Color for stamps, logos or colored forms, and raise Yellowish to 0.2–0.6 for off-white paper.</li>
+<li><strong>Choose the resolution.</strong> 2× (about 144 dpi) is the balanced default; 3× (about 216 dpi) is sharper but produces a larger file.</li>
+<li><strong>Download.</strong> Click the download button and save the new PDF. Open it once to confirm every page was processed.</li>
+</ol>
+
+<h3>What does each slider in the scan tool do?</h3>
+<p>Every control maps to one physical imperfection of a real scanner. The ranges and defaults below are taken directly from the tool, so you can reproduce any recipe in this guide exactly.</p>
+
+<dl class="spec-list">
+<dt>Rotate (−10° to 10°, default 1°)</dt><dd>Tilts all pages by the same angle, imitating a sheet placed slightly off the platen edge.</dd>
+<dt>Rotate variance (0 to 10°, default 0.5°)</dt><dd>Adds a random extra tilt per page, so a multi-page document does not look perfectly uniform.</dd>
+<dt>Blur (0 to 1, default 0.3)</dt><dd>Softens edges the way scanner optics and JPEG compression do.</dd>
+<dt>Noise (0 to 1, default 0.1)</dt><dd>Adds random speckle, like sensor noise and paper texture.</dd>
+<dt>Brightness and Contrast (0 to 2, default 1)</dt><dd>Push brightness up to wash out the paper; push contrast up for a photocopy look.</dd>
+<dt>Yellowish (0 to 2, default 0)</dt><dd>Applies a warm sepia tint, from faint cream to aged paper, in both Gray and Color mode.</dd>
+<dt>Colorspace (Gray or Color, default Gray)</dt><dd>Gray mimics a typical office black-and-white scan.</dd>
+<dt>Border (on or off, default off)</dt><dd>Draws a thin 1-pixel dark frame, like the edge line some scanners capture.</dd>
+<dt>Resolution (1× to 3× in 0.5 steps, default 2×)</dt><dd>PDF pages are laid out at 72 points per inch, so 1× equals 72 dpi, 2× about 144 dpi and 3× about 216 dpi.</dd>
+</dl>
+
+<p>The 72 dpi base is not arbitrary. <a href="https://en.wikipedia.org/wiki/Dots_per_inch" target="_blank" rel="noopener">PDF and PostScript page geometry</a> follows the 72-points-per-inch typographic convention, so the multiplier tells you the effective scanning resolution of each page image.</p>
+
+<h3>Extras: watermark, stamp and metadata</h3>
+<p>Beyond the scan effect, the tool can place a text or image watermark, add a stamp or signature image with adjustable horizontal and vertical position and size, and edit PDF metadata fields: title, author, subject, keywords, producer and creator. Use a signature image only if the signature is your own.</p>
+
+<h3>How to make several PDF files look scanned at once</h3>
+<p>For batches, open <a href="/scan/bulk">bulk scan</a>, add all your files, set the effect once and download everything as a single ZIP archive. Each input file becomes its own scanned PDF, so ten invoices in give ten scanned PDFs out.</p>
+
+<div class="callout callout-tip"><strong>Word, Excel or Google Docs file? Export to PDF first</strong>The tool reads PDFs exactly as laid out, but from DOCX it extracts only the raw text and re-typesets it in Helvetica 11 pt on A4 pages, dropping fonts, tables and images. Spreadsheets become CSV text. If layout matters, save as PDF first (in Google Docs: File → Download → PDF document), then scan that PDF. Details are in our guide to <a href="/blog/make-a-document-look-scanned/">making a Word or Google Docs document look scanned</a>.</div>
+
+<h2 id="method-2-chrome-extension">Method 2: make a PDF look like a scan in Chrome</h2>
+<p>The Make PDF look scanned Chrome extension puts the same scan engine in a browser side panel, so you can make a PDF look like a scan without opening a new tab. It processes files locally, handles several files at once and downloads them together as a ZIP archive.</p>
+
+<p>The extension is the better choice if you convert documents every week, or if you often need to make a PDF file look scanned while working in web apps such as email or a document portal. The side panel stays open next to the page, so you can drop a file in, adjust the effect and download without losing your place.</p>
+
+<ol class="step-list">
+<li><strong>Install the extension.</strong> Open the <a href="https://chromewebstore.google.com/detail/make-pdf-look-scanned/ijhpnlcipgiokgignkbbbgkobdmdoila" target="_blank" rel="noopener">Make PDF look scanned page in the Chrome Web Store</a>, where it holds a 5-star rating, and click Add to Chrome.</li>
+<li><strong>Pin it.</strong> Click the puzzle-piece icon in the toolbar and pin the extension so it is one click away.</li>
+<li><strong>Open the side panel.</strong> Click the extension icon; the scanner opens in a panel on the right side of the browser window.</li>
+<li><strong>Add one or several files.</strong> Drop PDFs or images into the panel. The same formats and sliders as the web tool are available.</li>
+<li><strong>Adjust and download.</strong> Set rotation, blur, noise and colorspace, then download a single scanned PDF or, for several files, one ZIP.</li>
+</ol>
+
+<p>Chromium-based browsers such as Microsoft Edge can usually install extensions from the Chrome Web Store as well, although the side panel experience is designed and tested for Google Chrome. If you cannot install extensions on a work computer, the <a href="/scan">browser version of the tool</a> gives identical output with nothing to install.</p>
+
+<h2 id="method-3-print-dialog">Method 3: can the print dialog make a PDF look scanned?</h2>
+<p>The print dialog built into Windows and macOS can make a PDF look scanned only partly. Microsoft Print to PDF and macOS Preview can convert pages to grayscale or compress them, but neither adds tilt, blur or noise, so the result reads as a gray digital file, not a scan.</p>
+
+<p>If you are researching how to make a PDF document look scanned with nothing but your operating system, this is the route to know.</p>
+
+<p>Still, the print route is most useful in two situations: when you cannot use any web tool at all, and as a preparation step. Printing a Word, Excel or web page to PDF first preserves its layout, and that PDF can then go through a full scan effect.</p>
+
+<h3>Windows: Microsoft Print to PDF</h3>
+<p>Windows includes a virtual printer called <a href="https://support.microsoft.com/en-us/office/print-notes-in-onenote-for-windows-10-45edbbc5-fbb8-453f-99c7-aaadebe5c06a" target="_blank" rel="noopener">"Microsoft Print to PDF"</a> that appears in the Printer list of any app. Open your PDF, press Ctrl+P, choose Microsoft Print to PDF, set Color to Black and white or Grayscale if your viewer offers it, and save the new file.</p>
+
+<p>In some PDF viewers there is also a "Print as image" option under Advanced print settings. Turning it on rasterizes each page, which removes selectable text, one of the tell-tale signs of a born-digital file. The pages still sit perfectly straight and perfectly clean, though.</p>
+
+<h3>macOS: Preview Export with a Quartz filter</h3>
+<p>On a Mac, <a href="https://support.apple.com/guide/mac-help/save-a-document-as-a-pdf-on-mac-mchlp1531/mac" target="_blank" rel="noopener">any app that can print can save a PDF</a> via File → Print → PDF → Save as PDF. For a scan-like tone, open the PDF in Preview, choose File → Export, and pick a Quartz Filter such as Black &amp; White, Gray Tone or Sepia Tone.</p>
+
+<p>Apple documents that <a href="https://support.apple.com/guide/preview/add-effects-to-a-pdf-prvw1510/mac" target="_blank" rel="noopener">Preview's Quartz filters change a PDF's colors</a>, for example turning a color document black and white. The Reduce File Size filter also recompresses images, which adds mild JPEG softness to embedded pictures but not to text.</p>
+
+<h3>Why does the print dialog give only a partial scan look?</h3>
+<p>A real scanned page is a photograph of paper: it is slightly rotated, has soft edges, a gray or cream background and random speckle. The print dialog changes color and sometimes rasterizes, but it never moves or degrades the page. Compare the outcomes side by side:</p>
+
+<div class="table-wrap"><table>
+<caption>What the OS print dialog can and cannot imitate</caption>
+<thead><tr><th scope="col">Scan trait</th><th scope="col">Microsoft Print to PDF</th><th scope="col">macOS Preview Quartz filter</th><th scope="col">Browser scan tool</th></tr></thead>
+<tbody>
+<tr><th scope="row">Grayscale</th><td>Depends on the viewer</td><td>Yes</td><td>Yes</td></tr>
+<tr><th scope="row">Text no longer selectable</th><td>Only with "Print as image"</td><td>No</td><td>Yes</td></tr>
+<tr><th scope="row">Slight tilt per page</th><td>No</td><td>No</td><td>Yes, −10° to 10°</td></tr>
+<tr><th scope="row">Soft edges and noise</th><td>No</td><td>No</td><td>Yes</td></tr>
+<tr><th scope="row">Paper tone</th><td>No</td><td>Sepia only</td><td>Yes, adjustable</td></tr>
+</tbody></table></div>
+
+<p>The accessibility team at James Madison University sums up the side effect well: <a href="https://www.jmu.edu/accessibility/digital-accessibility/guides/pdf/scanned-documents.shtml" target="_blank" rel="noopener">"Simply printing a document to PDF or scanning without text recognition or OCR usually results in an image-based, non-accessible file."</a> That is exactly why rasterized output feels like a scan, and also why you should keep your original.</p>
+
+<h2 id="method-4-image-editor">Method 4: make a PDF look like it was scanned by hand</h2>
+<p>A raster image editor lets you make a PDF look like it was scanned by hand-applying each effect: export pages as images, rotate them slightly, add noise and blur, adjust levels, then reassemble a PDF. The method gives full control over every page but takes 10–30 minutes per document.</p>
+
+<p>If you want to understand how to make a PDF look like it was scanned step by step, this is the most instructive route, because you apply every effect yourself.</p>
+
+<p>Any raster editor with rotation, noise, blur and levels tools will do, free or paid. The workflow is the same in all of them; only the menu names differ. Plan on doing each page separately, or record the steps as an action or macro if your editor supports one.</p>
+
+<ol class="step-list">
+<li><strong>Export pages as images.</strong> Use your PDF viewer's Export or Save as image option. Choose PNG or high-quality JPEG at 150–300 dpi; 200 dpi is a good middle ground for text.</li>
+<li><strong>Convert to grayscale.</strong> Unless the document has colored stamps or signatures, switch the image mode to grayscale first; every later step behaves more like a real scanner.</li>
+<li><strong>Rotate by 0.5–2°.</strong> Use arbitrary rotation, not the 90° presets. Use a different angle on each page, for example 0.7°, −0.4° and 1.1°, and fill the exposed corners with white or light gray.</li>
+<li><strong>Add noise.</strong> Apply 2–5% monochromatic Gaussian noise. Anything above about 8% starts to look like film grain rather than a scanner sensor.</li>
+<li><strong>Add slight blur.</strong> A Gaussian blur with a 0.3–0.6 pixel radius at 200 dpi removes the razor-sharp edges of vector text.</li>
+<li><strong>Adjust levels.</strong> Lift the black point a little so blacks become dark gray, and pull the white point down so the paper turns faintly gray or cream.</li>
+<li><strong>Save as JPEG.</strong> Quality 75–85% adds the subtle compression softness of a real scan without visible blocks.</li>
+<li><strong>Reassemble the PDF.</strong> Put the images back in order and combine them into one PDF, for example in macOS Preview (select pages → Print → Save as PDF) or in Windows Photos (Print → Microsoft Print to PDF).</li>
+</ol>
+
+<p>The effort pays off when you need something the sliders do not offer, such as a darker left margin, a shadow along a book spine or a hand-drawn crease. For a normal office look, the result is essentially the same as Method 1 with far more clicks.</p>
+
+<h2 id="method-5-phone-photo">Method 5: make a PDF look like a scan with your phone</h2>
+<p>A phone scan of a printout produces the most natural phone-scan look: print the PDF, then capture it with the document scanner built into iPhone Notes or Files, or into many Android camera and file apps. The phone crops, flattens and saves the page as a PDF.</p>
+
+<p>On iPhone and iPad, Apple explains that you can <a href="https://support.apple.com/en-us/108963" target="_blank" rel="noopener">scan paper documents with the Notes or Files app</a> and drag the corners to fit the page before keeping the scan. Many Android phones offer a similar document mode in their built-in camera or files app; menu names vary by manufacturer.</p>
+
+<ol class="step-list">
+<li><strong>Print the PDF.</strong> Plain 80 g/m² office paper and normal print quality are enough.</li>
+<li><strong>Use soft, even light.</strong> Daylight from a window or a ceiling light behind you avoids the hard shadow of your own hand and phone.</li>
+<li><strong>Lay the page on a contrasting surface.</strong> A dark desk helps the scanner detect the corners automatically.</li>
+<li><strong>Scan each page.</strong> Keep the phone parallel to the sheet; accept the auto-crop or drag the corners yourself.</li>
+<li><strong>Choose the filter.</strong> Grayscale or "document" filters look like an office scan; the color or photo filter keeps paper texture and lighting variation.</li>
+<li><strong>Save or share as PDF.</strong> All pages end up in a single multi-page PDF.</li>
+</ol>
+
+<p>If you already have phone photos rather than a phone scan, our guide to <a href="/blog/image-to-scanned-pdf/">turning a JPG or phone photo into a scanned PDF</a> covers cropping and combining images before adding the scan effect.</p>
+
+<h2 id="method-6-print-and-scan">Method 6: print and scan the PDF for real</h2>
+<p>Printing the PDF and passing it through a flatbed or sheet-fed scanner creates a real scanned document, not an imitation. Scan at 200–300 dpi in grayscale for text, save as PDF, and expect genuine skew, dust, toner texture and slight contrast loss.</p>
+
+<p>For reference, U.S. federal rules set a floor for serious digitization. NARA's regulation says of modern textual records: <a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">"For these records, produce image files at a minimum of 300 ppi sized to the source document."</a> The same rule tolerates about 294 ppi, or 300 ppi minus 2%.</p>
+
+<p>The Federal Agencies Digital Guidelines Initiative (FADGI) grades unbound documents on a star scale from about 200 ppi at one star to 400 ppi at four stars. Everyday office scans usually sit at the low end of that range, which is why 200 dpi already looks authentic for letters and forms.</p>
+
+<dl class="spec-list">
+<dt>Resolution</dt><dd>200 dpi for a typical office look; 300 dpi when a court or agency specifies it.</dd>
+<dt>Color mode</dt><dd>Grayscale for most text; black-and-white (1-bit) for a stark fax or copier look; color only if the original has color.</dd>
+<dt>Paper</dt><dd>Standard office paper; slightly off-white or recycled paper adds a natural tone.</dd>
+<dt>Placement</dt><dd>Do not square the sheet perfectly against the platen guide; a tiny natural tilt is the point.</dd>
+</dl>
+
+<p>Tilt happens on its own. FADGI notes that <a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">"Skew behaviors in the captured image can often be traced to lack of parallelism between the focal plane of the camera and the platen."</a> The Rotate variance slider in Method 1 imitates exactly this small, page-to-page skew.</p>
+
+<h2 id="recipes">Which settings make a PDF look like a scanned document?</h2>
+<p>The settings that make a PDF look like a scanned document depend on the kind of scan you want to imitate. Five recipes cover most cases: a clean office scan, a photocopy, a fax-like page, aged paper and a phone-scan look. All values below work directly in the browser tool.</p>
+
+<p>If you are asking how to make a PDF look like a scanned document of one particular kind, pick the matching row.</p>
+
+<p>These recipes are our own starting points, tuned on typical letters, invoices and forms. Treat them as a baseline: load the recipe, zoom the preview to 100%, and change one slider at a time until the page looks right for your document.</p>
+
+<div class="table-wrap"><table>
+<caption>Five scan-look recipes with exact slider values for the Make PDF look scanned tool</caption>
+<thead><tr><th scope="col">Recipe</th><th scope="col">Rotate / variance</th><th scope="col">Blur</th><th scope="col">Noise</th><th scope="col">Brightness / contrast</th><th scope="col">Yellowish</th><th scope="col">Colorspace</th><th scope="col">Border</th><th scope="col">Resolution</th></tr></thead>
+<tbody>
+<tr><th scope="row">Office scan</th><td>0.5° / 0.5°</td><td>0.2</td><td>0.1</td><td>1.05 / 1.1</td><td>0</td><td>Gray</td><td>Off</td><td>2×</td></tr>
+<tr><th scope="row">Photocopy</th><td>1° / 1°</td><td>0.3</td><td>0.25</td><td>1.1 / 1.4</td><td>0</td><td>Gray</td><td>On</td><td>2×</td></tr>
+<tr><th scope="row">Fax-like</th><td>1.5° / 1°</td><td>0.5</td><td>0.35</td><td>1.15 / 1.6</td><td>0</td><td>Gray</td><td>On</td><td>1.5×</td></tr>
+<tr><th scope="row">Aged paper</th><td>1° / 1.5°</td><td>0.3</td><td>0.2</td><td>0.95 / 1.1</td><td>0.6</td><td>Color</td><td>Off</td><td>2×</td></tr>
+<tr><th scope="row">Phone-scan look</th><td>2° / 1.5°</td><td>0.4</td><td>0.15</td><td>1.05 / 1.2</td><td>0.2</td><td>Color</td><td>Off</td><td>2×</td></tr>
+</tbody></table></div>
+
+<h3>Office scan: the safe default</h3>
+<p>The office recipe is the one to use when a form simply says "upload a scanned copy." Low noise and a half-degree tilt read as a well-maintained office scanner; the light contrast boost keeps small print legible. At 2× the page image is about 144 dpi, enough for comfortable on-screen reading.</p>
+
+<h3>Photocopy and fax-like looks</h3>
+<p>Photocopies look harsher: higher contrast crushes gray tones into black and white, and the border line imitates the dark edge copiers often leave. The fax-like recipe goes further with more noise and the 1.5× setting, about 108 dpi, close to the roughly 100 lines per inch vertical resolution of a <a href="https://en.wikipedia.org/wiki/Fax" target="_blank" rel="noopener">standard-mode Group 3 fax</a>.</p>
+
+<h3>Aged paper and phone-scan looks</h3>
+<p>For aged paper, switch to Color and raise Yellowish to about 0.6 while dropping brightness slightly; the page takes on a warm cream tone. The phone-scan recipe uses a larger 2° tilt and a hint of warmth, like a page photographed under indoor light. For more presets, see our <a href="/blog/scan-effect/">scan effect guide</a>.</p>
+
+<div class="callout callout-tip"><strong>Keep small print readable</strong>If a document has footnotes or text below 9 pt, stay at Blur 0.3 or lower and use 2.5× or 3× resolution. Blur and noise hurt small type first, and an unreadable scan defeats the purpose.</div>
+
+<h2 id="check-the-result">How do you check that the PDF looks scanned?</h2>
+<p>To check that a PDF looks scanned, open it at 100% zoom and inspect five things: text cannot be selected, pages sit at slightly different angles, edges are soft rather than razor-sharp, the background is not pure white, and the file properties no longer name a word processor.</p>
+
+<p>Real scans contain defects that archivists try to remove. NARA's regulation defines one of them plainly: <a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">"Noise is one or more undesirable image artifact(s) in a digitized record that is not part of the source material."</a> A convincing scan look needs a small, controlled amount of that noise, not zero and not a lot.</p>
+
+<ol>
+<li><strong>Try to select text.</strong> Press Ctrl+A or Cmd+A in your PDF viewer. In a scanned-looking PDF nothing highlights, because each page is an image.</li>
+<li><strong>Search for a word.</strong> Ctrl+F or Cmd+F should find nothing unless OCR has been added on purpose.</li>
+<li><strong>Compare page angles.</strong> Scroll through several pages; with rotate variance on, each should tilt a little differently.</li>
+<li><strong>Zoom to 200%.</strong> Letter edges should look slightly soft with faint speckle, not like crisp vector outlines.</li>
+<li><strong>Look at the margins.</strong> The paper should be very light gray or cream rather than pure white.</li>
+<li><strong>Open Document Properties.</strong> Check the Producer and Creator fields; the tool lets you edit title, author, subject, keywords, producer and creator.</li>
+<li><strong>Check file size.</strong> A scanned-looking PDF is larger than the original, often several times larger, because it stores images instead of text.</li>
+<li><strong>Print one page.</strong> If the printout is readable at arm's length, the settings are fine for any upload portal.</li>
+</ol>
+
+<p>File size matters for uploads. As a rough estimate, a text page at 2× in grayscale typically lands in the low hundreds of kilobytes, while 3× in color can be several times that. If a portal has a limit, lower the resolution to 1.5× or switch to Gray. Our guide to <a href="/blog/pdf-to-scanned-pdf/">converting a PDF to a scanned PDF</a> covers DPI and size trade-offs in detail.</p>
+
+<h2 id="common-mistakes">Why does a fake scanned PDF still look fake?</h2>
+<p>A fake scanned PDF usually looks fake because one effect is overdone or one sign of a digital file survives: every page tilted identically, heavy blur, coarse noise, a pure-white background or selectable text. Fixing these five mistakes solves most of the troubleshooting cases we see.</p>
+
+<div class="table-wrap"><table>
+<caption>Troubleshooting a scanned-looking PDF: symptoms, causes and fixes</caption>
+<thead><tr><th scope="col">Symptom</th><th scope="col">Likely cause</th><th scope="col">Fix</th></tr></thead>
+<tbody>
+<tr><th scope="row">All pages lean the same way</th><td>Rotate variance set to 0</td><td>Set variance to 0.5–1.5°</td></tr>
+<tr><th scope="row">Page looks crooked, not scanned</th><td>Rotate above 3°</td><td>Stay between 0.5° and 2°</td></tr>
+<tr><th scope="row">Text is fuzzy or hard to read</th><td>Blur above 0.5 or resolution 1×</td><td>Blur 0.2–0.3, resolution 2× or higher</td></tr>
+<tr><th scope="row">Page looks like film grain</th><td>Noise above 0.4</td><td>Noise 0.1–0.25</td></tr>
+<tr><th scope="row">Page still looks digital</th><td>Pure white paper, sharp edges</td><td>Brightness 0.95–1.05, Yellowish 0.1–0.3, Blur 0.2+</td></tr>
+<tr><th scope="row">Layout of a Word file broke</th><td>DOCX uploaded directly</td><td>Export to PDF first, then scan</td></tr>
+<tr><th scope="row">File too large to upload</th><td>3× resolution in Color</td><td>Use Gray and 1.5×–2×</td></tr>
+<tr><th scope="row">Several photos became several PDFs</th><td>One image equals one PDF</td><td>Combine the images into one PDF first</td></tr>
+</tbody></table></div>
+
+<p>Two more details give away a born-digital file. The first is a color logo on an otherwise gray page, which happens when only part of a document was converted; run the whole file through the same settings. The second is metadata: a Creator field naming a word processor. Edit it in the tool before downloading.</p>
+
+<p>Do not overcorrect in the other direction either. Rotation, as FADGI puts it, <a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">"is introduced at capture by improper content alignment at capture"</a>, and a person feeding a scanner rarely misaligns a sheet by more than a degree or two. Big angles look staged.</p>
+
+<h3>Does the tool add creases, stains or shadows?</h3>
+<p>No. The tool imitates tilt, blur, noise, tone, contrast and an edge line; it does not add creases, folds, coffee stains, edge shadows or perspective warp, and it does not run OCR. If you need those physical traits, print the page and use Method 5 or Method 6, or paint them in a raster editor (Method 4).</p>
+
+<h2 id="when-not-to">When should you not make a PDF look scanned?</h2>
+<p>You should not make a PDF look scanned when the recipient needs searchable text, when rules ask for a text-based PDF, or when the scan look would misrepresent a document's origin. Courts, accessibility standards and many agencies prefer born-digital PDFs over images of text.</p>
+
+<p>Federal courts are explicit. The Northern District of California advises: <a href="https://cand.uscourts.gov/cases-e-filing/cmecf-information/preparing-your-cmecf-filing" target="_blank" rel="noopener">"Only documents that cannot be directly converted to PDF should be scanned."</a> The District of Massachusetts adds that <a href="https://www.mad.uscourts.gov/caseinfo/pdf/ECFadminProc.pdf" target="_blank" rel="noopener">"Scanned PDF documents are generally not searchable and have a larger file size."</a></p>
+
+<p>Accessibility is the other reason. The W3C's WCAG technique PDF7 states that <a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF7" target="_blank" rel="noopener">"A document that consists of scanned images of text is inherently inaccessible because the content of the document is images, not searchable text."</a> Screen reader users cannot read a scan-effect PDF unless OCR is added afterward.</p>
+
+<div class="callout callout-warn"><strong>Use the scan look honestly</strong>A scan effect changes how a file looks, not whether it is authentic. Do not use it to forge or alter official documents, IDs, certificates or signatures that are not yours. When a court, employer or agency asks for a specific format, follow its rules; some require text-searchable PDFs and will reject images of text.</div>
+
+<p>Good reasons to make a PDF look scanned include matching the style of a paper-based archive, preparing a design mockup or a training example, testing document-processing software on realistic input, or meeting a form that insists on a "scan" when you only have your own digital original.</p>
+
+<div class="expert-quote"><blockquote>We built the tool because people kept printing a PDF only to scan it straight back in. The settings that look real are small ones: a tilt of a degree or less, noise around 0.1 and a light blur. Most fake-looking results come from turning every slider up at once. And we process files locally on purpose: the documents people scan are usually private.</blockquote><cite><strong>The Make PDF look scanned team</strong> — builders of the web tool and Chrome extension</cite></div>
+
+<h2 id="faq">Make a PDF look scanned: FAQ</h2>
+<p>These are the questions people ask most often when they want to make a PDF look scanned, from privacy and cost to Word files, signatures and file size. Each answer is short and self-contained; the sections above explain the methods and settings in more depth.</p>
+
+<p>These answers cover the questions people ask most when they want to make a PDF look like it was scanned: which method to pick, whether the result is private, how to keep small print readable, and how to make PDF look like a scan on a phone, for a form or for an archive.</p>
+
+<div class="faq-item"><p class="faq-q">How do I make a PDF look like it was scanned for free?</p><p class="faq-a">Open <a href="/scan">the free scan tool</a>, drop in your PDF, keep the default settings or pick a recipe, and download the result. It costs nothing, needs no account and works in any modern browser, including on phones.</p></div>
+
+<div class="faq-item"><p class="faq-q">Is it safe to upload a private PDF to a scan-effect tool?</p><p class="faq-a">With the Make PDF look scanned tool you do not upload it: pages are rendered and processed locally in your browser with PDF.js and canvas. The file is not sent to a processing server, and the tool keeps working offline after the first load.</p></div>
+
+<div class="faq-item"><p class="faq-q">How do I make my PDF look like a scanned document without a scanner?</p><p class="faq-a">Use Method 1 or Method 2: both simulate a scanner in software by rotating, blurring and adding noise to each page. If you want genuine artifacts without a scanner, print the page and use your phone's built-in document scanner (Method 5).</p></div>
+
+<div class="faq-item"><p class="faq-q">How do I make a Word document look scanned?</p><p class="faq-a">Save the Word file as PDF first (File → Save As → PDF), then scan-effect the PDF. Uploading a DOCX directly keeps only the raw text in Helvetica 11 pt on A4 pages, so fonts, tables and images are lost.</p></div>
+
+<div class="faq-item"><p class="faq-q">What DPI should a scanned-looking PDF have?</p><p class="faq-a">About 150–200 dpi looks like a typical office scan. In the tool, 2× equals roughly 144 dpi and 3× roughly 216 dpi. Courts and archives often ask for 300 dpi in real scans, which you can match only with a physical scanner.</p></div>
+
+<div class="faq-item"><p class="faq-q">Can I make several PDFs look scanned at once?</p><p class="faq-a">Yes. The <a href="/scan/bulk">bulk scan page</a> and the Chrome extension accept several files, apply the same settings to all of them and download the results as one ZIP. Each input file becomes its own scanned PDF.</p></div>
+
+<div class="faq-item"><p class="faq-q">Will the text still be searchable after the scan effect?</p><p class="faq-a">No. Each page is saved as a JPEG image inside the new PDF, so text cannot be selected or searched. If you need searchable text, run OCR on the result with separate software, or keep the original PDF.</p></div>
+
+<div class="faq-item"><p class="faq-q">Can I add a signature or stamp to the scanned-looking PDF?</p><p class="faq-a">Yes. The tool can place a stamp or signature image, with adjustable position and size, before the scan effect is applied, so it blends into the page. Only add a signature that is yours or that you are authorized to use.</p></div>
+
+<div class="faq-item"><p class="faq-q">Why does my scanned-looking PDF look fake?</p><p class="faq-a">Usually because the tilt is too large, every page leans identically, or blur and noise are too strong. Keep Rotate at 0.5–2°, turn on Rotate variance, and keep Blur around 0.3 and Noise around 0.1–0.25.</p></div>
+
+<div class="faq-item"><p class="faq-q">Can I make a PDF look scanned on iPhone or Android?</p><p class="faq-a">Yes. The website works in mobile browsers, so you can open the tool on the phone, choose a PDF from Files and download the result. Alternatively, print the document and capture it with the phone's built-in document scanner.</p></div>
+
+<div class="faq-item"><p class="faq-q">Does the scan effect make the file bigger?</p><p class="faq-a">Usually, yes, because pages are stored as images rather than text. Gray at 1.5× or 2× keeps files smallest; Color at 3× is the largest. Lower the resolution if an upload portal has a size limit.</p></div>
+
+<div class="faq-item"><p class="faq-q">Is it legal to make a PDF look scanned?</p><p class="faq-a">Changing the appearance of your own document is generally fine. What matters is use: presenting an altered or forged document as genuine can be illegal. When a court or agency sets file rules, follow them; many prefer text-searchable PDFs.</p></div>
+
+<h2 id="verdict">Which method to make a PDF look scanned should you pick?</h2>
+<p>For most people the best method to make a PDF look scanned is the free browser tool: under a minute, local processing and exact control over tilt, blur and noise. Pick the Chrome extension for frequent batches, and a real scanner only when a true scan is required.</p>
+
+<p>Choose the print dialog only when you need a quick grayscale version, the image editor when you want a custom effect such as a spine shadow, and the phone route when a genuine phone-scan look matters more than speed. To learn how people spot the difference, read <a href="/blog/what-is-a-scanned-pdf/">what a scanned PDF is and how to tell</a>, then <a href="/scan">open the scanner</a> and try the office recipe on your file.</p>

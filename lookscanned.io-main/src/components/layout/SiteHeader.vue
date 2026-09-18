@@ -6,6 +6,7 @@
         <RouterLink to="/" :class="{ active: route.name === 'index' }">{{ t('base.nav.home') }}</RouterLink>
         <RouterLink to="/scan" :class="{ active: isScan }">{{ t('base.nav.scan') }}</RouterLink>
         <RouterLink to="/scan/bulk" :class="{ active: route.name === 'bulk' }">{{ t('base.nav.bulk') }}</RouterLink>
+        <a href="/blog/">Guides</a>
       </nav>
       <ChromeExtensionBadge />
     </div>

@@ -1,0 +1,18 @@
+{
+  "order": 4,
+  "title": "What Is a Scanned PDF? Scanned Copy vs Digital PDF",
+  "description": "What a scanned PDF is, how it differs from a digital PDF and a scanned copy, how to tell them apart in 10 seconds, and when you need OCR or a scan look.",
+  "h1": "What Is a Scanned PDF? How to Tell It Apart From a Digital PDF in 10 Seconds",
+  "tag": "Explainer",
+  "main_keyword": "scanned pdf",
+  "keywords": ["scanned pdf", "what is a scanned pdf", "scanned copy", "scanned document", "image-only pdf", "searchable pdf", "scanned pdf vs digital pdf", "how to tell if a pdf is scanned", "ocr pdf"],
+  "word_target": 3000,
+  "date_published": "2026-09-18",
+  "date_modified": "2026-09-18",
+  "about": ["Scanned PDF", "PDF", "Scanned document", "Optical character recognition", "Image scanner"],
+  "mentions": ["PDF/A", "ISO 32000", "ISO 19005", "WCAG", "W3C", "JBIG2", "Dots per inch", "Bit depth", "USCIS", "CM/ECF", "GOV.UK", "Screen reader", "Google Chrome", "macOS Preview"],
+  "howto_name": "How to tell if a PDF is scanned",
+  "related": ["pdf-to-scanned-pdf", "how-to-make-a-pdf-look-scanned", "image-to-scanned-pdf"],
+  "cta_title": "Need a PDF that looks like a scanned copy?",
+  "cta_body": "Drop a digital PDF into the free tool, set skew, noise and paper tone, and download an image-based PDF that reads like a real scan. Everything runs in your browser."
+}

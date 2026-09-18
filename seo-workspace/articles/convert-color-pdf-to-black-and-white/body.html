@@ -1,0 +1,199 @@
+<p class="lead">How to convert a color PDF to black and white: open the free <a href="/scan">browser tool</a>, keep Colorspace on Gray, set noise, blur and rotation to 0, and download. On a Mac, use Preview's File → Export with a Quartz filter; on Windows, print with a grayscale option. Grayscale keeps 256 gray levels; pure black and white keeps two.</p>
+<p>A color PDF is often the wrong file for the job: it prints expensively, uploads slowly to court and school portals, and a form may ask for a black and white copy. This guide walks through five free ways to convert PDF to black and white, what each one does to text and file size, and when grayscale hides information.</p>
+<p>Product facts come from our own tool; the rest comes from Apple and Microsoft support pages, federal digitization guidelines, U.S. courts and university libraries, all linked inline.</p>
+<nav class="toc" aria-label="Table of contents"><h2>Table of Contents</h2><ol>
+<li><a href="#quick-answer">How to convert a color PDF to black and white</a></li>
+<li><a href="#grayscale-vs-bw">Grayscale PDF vs black and white PDF: what differs?</a></li>
+<li><a href="#browser-tool">Way 1: Convert PDF to black and white in the browser</a></li>
+<li><a href="#tool-settings">Which tool settings give a clean grayscale PDF?</a></li>
+<li><a href="#mac-preview">Way 2: Convert a color PDF to black and white on Mac</a></li>
+<li><a href="#windows-print">Way 3: Convert PDF to black and white on Windows</a></li>
+<li><a href="#chrome-edge">Way 4: Save a black and white PDF from Chrome or Edge</a></li>
+<li><a href="#print-and-scan">Way 5: Print in grayscale and scan a black and white PDF</a></li>
+<li><a href="#comparison">Which way to convert a color PDF to black and white?</a></li>
+<li><a href="#file-size">Is a grayscale PDF smaller than a color PDF?</a></li>
+<li><a href="#printing-cost">Does a black and white PDF cost less to print?</a></li>
+<li><a href="#when-grayscale-fails">When does a grayscale PDF lose information?</a></li>
+<li><a href="#checks">How to check a black and white PDF before sending</a></li>
+<li><a href="#faq">Convert PDF to black and white: FAQ</a></li>
+</ol></nav>
+
+<h2 id="quick-answer">How to convert a color PDF to black and white</h2>
+<p>You convert a color PDF to black and white by re-rendering every page without color information. A browser tool, macOS Preview, a print dialog or a physical printer can each do it. The fastest free route is a grayscale conversion in the browser, which takes seconds and needs no install or account.</p>
+<p>The five ways covered below differ in three practical respects: whether the text stays selectable, whether the result is true two-tone black and white or grayscale, and how large the file ends up. Pick the route by what the recipient needs, not by habit.</p>
+<ul>
+<li><strong>Browser tool</strong> (any OS): grayscale pages, private, works offline after first load, but pages become images.</li>
+<li><strong>macOS Preview</strong>: Quartz filter on export, built into every Mac.</li>
+<li><strong>Windows print dialog</strong>: grayscale when the printer driver or app offers it.</li>
+<li><strong>Chrome or Edge print dialog</strong>: a Color setting, when the chosen destination supports it.</li>
+<li><strong>Print and scan</strong>: a real paper copy in grayscale, scanned back to PDF.</li>
+</ul>
+<div class="callout callout-tip"><strong>Short on time?</strong>Open <a href="/scan">the scanner</a>, drop your PDF, leave Colorspace on Gray, move Noise, Blur and Rotate to 0, and click download. You get a clean grayscale PDF with the original layout.</div>
+
+<h2 id="grayscale-vs-bw">Grayscale PDF vs black and white PDF: what differs?</h2>
+<p>A grayscale PDF stores each pixel as one of many gray shades, usually 256 at 8 bits. A true black and white PDF, also called bitonal or 1-bit, stores each pixel as either pure black or pure white. Most people who ask for "black and white" actually want grayscale, which keeps photos and shading readable.</p>
+<p>The Federal Agencies Digital Guidelines Initiative (FADGI) defines the two terms precisely in its <a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">Technical Guidelines for Digitizing Cultural Heritage Materials</a>: "Bitonal: Digital images produced using only two colors, black and white." and "Grayscale: Digital images produced using a range of grays between white and black."</p>
+<p>The bit depth explains the difference in plain numbers. According to <a href="https://en.wikipedia.org/wiki/Binary_image" target="_blank" rel="noopener">Wikipedia's entry on binary images</a>, a bi-level image stores each pixel in a single bit. An 8-bit grayscale pixel has 256 possible values; the <a href="https://en.wikipedia.org/wiki/Image_scanner" target="_blank" rel="noopener">history of image scanners</a> notes that 8-bit scanning, meaning 256 shades of gray, arrived on desktop scanners in 1989.</p>
+<div class="table-wrap"><table><caption>Color, grayscale and bitonal PDF pages compared</caption><thead><tr><th scope="col">Page type</th><th scope="col">Bits per pixel</th><th scope="col">Tones per pixel</th><th scope="col">Best for</th></tr></thead><tbody>
+<tr><th scope="row">Color (RGB)</th><td>24</td><td>About 16.7 million colors</td><td>Photos, charts, colored stamps</td></tr>
+<tr><th scope="row">Grayscale</th><td>8</td><td>256 grays</td><td>Mixed text and images, printing, most "black and white" requests</td></tr>
+<tr><th scope="row">Bitonal (true B&amp;W)</th><td>1</td><td>2 (black or white)</td><td>Plain typed text, court e-filing, fax-like copies</td></tr>
+</tbody></table></div>
+<p>A 24-bit color pixel is 8 bits for each of the red, green and blue channels, which is why a typical color scan is described as 24-bit in the <a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">federal records digitization rules (36 CFR 1236)</a>. Grayscale drops two of those channels. Bitonal goes further and throws away every gray tone, so thin gray lines, pencil marks and photo detail can vanish or turn into speckle.</p>
+<p>In short: if the PDF contains photos, logos, charts or light signatures, choose grayscale. If it is typed text only and the recipient demands the smallest possible file, bitonal is acceptable, but check every page after conversion.</p>
+
+<h2 id="browser-tool">Way 1: Convert PDF to black and white in the browser</h2>
+<p>Our free browser tool converts a color PDF to black and white by rendering every page in grayscale and saving the pages into a new PDF. The work happens locally with pdf.js and canvas, so the file is not uploaded to a processing server. It runs on Windows, macOS, ChromeOS, Linux and mobile browsers.</p>
+<p>The tool was built to make PDFs look scanned, which is why its default output adds light noise, blur and a small tilt. Setting those effects to zero turns the same engine into a clean grayscale converter. Keep the defaults instead if you want the copy to look like it came off an office copier.</p>
+<ol class="step-list">
+<li><strong>Open the tool.</strong> Go to <a href="/scan">pdflookscanned.com/scan</a> in Chrome, Edge, Safari or Firefox. No signup is needed, and after the first load the page also works offline.</li>
+<li><strong>Add the color PDF.</strong> Drag the file onto the page or click to choose it. A live preview of the first page appears within seconds.</li>
+<li><strong>Keep Colorspace on Gray.</strong> Gray is the default, so a fresh session already produces a grayscale PDF. Switch to Color only when you want to keep the original colors.</li>
+<li><strong>Remove the scan effects.</strong> Set Noise to 0, Blur to 0, Rotate to 0° and Rotate variance to 0°. Leave Yellowish at 0 and Border off, so the page stays neutral gray on white.</li>
+<li><strong>Adjust contrast if needed.</strong> Contrast and Brightness run from 0 to 2 with 1 as neutral. Raise Contrast to about 1.2–1.4 when faint colored text turns pale in grayscale.</li>
+<li><strong>Choose the resolution.</strong> 2× (about 144 dpi) suits screen reading and most uploads. Use 3× (about 216 dpi) for small print or a document you plan to print.</li>
+<li><strong>Download the PDF.</strong> Click download, open the result and scroll through every page before you send it.</li>
+</ol>
+<p>For a folder of files, the <a href="/scan/bulk">bulk scanner</a> applies the same settings to several PDFs and returns them in one ZIP archive. The Chrome extension offers the same engine in a side panel if you convert files often.</p>
+<div class="callout callout-info"><strong>What changes in the file</strong>The tool rasterizes each page: text, vector lines and images become one grayscale JPEG image per page inside a new PDF. The copy looks right, but its text is no longer selectable or searchable. If you need live text, use the Preview or print routes below, or keep the color original for search.</div>
+
+<h2 id="tool-settings">Which tool settings give a clean grayscale PDF?</h2>
+<p>A clean grayscale PDF comes from Colorspace Gray with every scan effect at zero: Noise 0, Blur 0, Rotate 0°, Rotate variance 0°, Yellowish 0, Border off. Brightness and Contrast stay at 1 unless faint text needs help. Resolution 2× is the balanced default for size and sharpness.</p>
+<dl class="spec-list">
+<dt>Colorspace</dt><dd>Gray (default). Produces grayscale pages, not 1-bit bitonal pages.</dd>
+<dt>Noise</dt><dd>0 for a clean copy; default 0.1 adds light scanner grain.</dd>
+<dt>Blur</dt><dd>0 for crisp text; default 0.3 softens edges like a flatbed scan.</dd>
+<dt>Rotate / Rotate variance</dt><dd>0° and 0° for straight pages; defaults are 1° and 0.5°.</dd>
+<dt>Brightness</dt><dd>1 is neutral; range 0–2. Raise slightly to whiten a gray background.</dd>
+<dt>Contrast</dt><dd>1 is neutral; range 0–2. Raise to 1.2–1.4 to darken pale colored text.</dd>
+<dt>Yellowish</dt><dd>0 keeps white paper; higher values add a warm paper tone.</dd>
+<dt>Resolution</dt><dd>1× to 3× in 0.5 steps; 2× ≈ 144 dpi, 3× ≈ 216 dpi.</dd>
+</dl>
+<p>For a copier look instead, leave the defaults: Gray, Noise 0.1, Blur 0.3, Rotate 1°, variance 0.5°. That setting is what most people mean when they want a PDF that looks printed and scanned in black and white. Our guide to the <a href="/blog/scan-effect/">scan effect</a> explains each artifact and preset in detail.</p>
+<p>The tool cannot produce a strict 1-bit file. High contrast (around 1.6–2) pushes pages toward a stark two-tone look, but the pixels are still stored as grayscale JPEG. If a portal explicitly demands bitonal images, use a scanner set to black and white mode, as described in Way 5.</p>
+
+<h2 id="mac-preview">Way 2: Convert a color PDF to black and white on Mac</h2>
+<p>On a Mac, you convert a color PDF to black and white with Preview, the built-in PDF viewer. Open the file, choose File → Export, pick a Quartz filter such as Black &amp; White or Gray Tone, and save under a new name. No download or extra app is needed, and the export takes seconds.</p>
+<p>Apple documents this directly in the <a href="https://support.apple.com/guide/preview/add-effects-to-a-pdf-prvw1510/mac" target="_blank" rel="noopener">Preview User Guide</a>: "You can modify a PDF opened in Preview using Quartz filters that add effects or change colors. For example, you can convert a color document to black and white, or apply a sepia tone."</p>
+<ol>
+<li>Open the color PDF in Preview (double-click it, or right-click → Open With → Preview).</li>
+<li>Choose File → Export. Do not use Export as PDF, because that dialog has no Quartz Filter menu.</li>
+<li>Make sure Format is set to PDF.</li>
+<li>Open the Quartz Filter pop-up menu and choose Black &amp; White or Gray Tone.</li>
+<li>Give the file a new name, such as "invoice-bw.pdf", so the color original survives, then click Save.</li>
+</ol>
+<h3>Black &amp; White or Gray Tone in Preview?</h3>
+<p>Both Preview filters remove color, but they render tones differently. Black &amp; White tends to give a harder, higher-contrast page in which pale colors can drop out, while Gray Tone keeps smoother grays that suit photos and charts. Export once with each filter and compare them side by side if the document has colored graphics.</p>
+<p>Because the filter is applied during PDF export rather than by photographing the page, typed text usually stays selectable and searchable. Confirm with Command-F on a word you can see. Preview also has a Reduce File Size filter; Apple's <a href="https://support.apple.com/guide/preview/reduce-a-pdfs-file-size-prvw1509/mac" target="_blank" rel="noopener">page on shrinking PDFs</a> notes it can lower quality, so only apply it after checking the grayscale result.</p>
+
+<h2 id="windows-print">Way 3: Convert PDF to black and white on Windows</h2>
+<p>On Windows, you convert PDF to black and white by printing it to the built-in Microsoft Print to PDF printer with a grayscale or black and white option switched on. The catch is that the option only appears when the app or printer driver offers it, so some setups print in color anyway.</p>
+<p>Microsoft's own help for <a href="https://support.microsoft.com/en-us/office/print-in-black-and-white-59939d05-2f88-4712-a4e5-384be412c0bf" target="_blank" rel="noopener">printing in black and white from Word</a> tells users to open File → Print → Printer Properties and "Select the properties for printing in color, grayscale or black and white." The same page notes that the available settings depend on the printer model and its driver.</p>
+<ol>
+<li>Open the PDF in the app you normally use to view it, or open the source document (Word, Excel) if you still have it.</li>
+<li>Press Ctrl+P and choose Microsoft Print to PDF as the printer.</li>
+<li>Look for a Color, Color mode or Grayscale setting in the dialog, or click Printer Properties / Preferences and check there.</li>
+<li>Select Black and white or Grayscale, click Print, and name the new PDF when Windows asks where to save it.</li>
+<li>Open the saved file and confirm that the colors are really gone.</li>
+</ol>
+<div class="callout callout-warn"><strong>If there is no grayscale option</strong>Microsoft Print to PDF is a basic driver, and on many PCs its properties show only orientation and paper size. When no color setting appears, the output keeps its colors. Use the Edge print dialog in Way 4 or the <a href="/scan">browser tool</a> in Way 1 instead.</div>
+<p>When the print route works, text drawn by the app is usually kept as text, so the black and white PDF stays searchable. If you started from a Word file, printing from Word keeps the layout better than printing from a PDF viewer.</p>
+
+<h2 id="chrome-edge">Way 4: Save a black and white PDF from Chrome or Edge</h2>
+<p>Chrome and Edge can open a PDF and print it again, and their print preview includes a Color setting for destinations that support it. Choose Black and white when the setting appears, then save or print. Whether the Color option shows up for a PDF destination depends on the browser version and the chosen printer.</p>
+<p>Microsoft's <a href="https://support.microsoft.com/en-us/edge/print-in-microsoft-edge" target="_blank" rel="noopener">Edge printing guide</a> lists a Color setting with Color and Black and white choices in the Edge print dialog. Chrome's print preview offers a similar Color menu for many printers. For the built-in Save as PDF destination, however, the Color menu is often missing, and nothing converts.</p>
+<ol>
+<li>Drag the color PDF into a Chrome or Edge window so it opens in the built-in viewer.</li>
+<li>Press Ctrl+P (Command-P on a Mac) to open print preview.</li>
+<li>Pick the destination: Save as PDF, or Microsoft Print to PDF on Windows.</li>
+<li>Open More settings if needed and look for Color. If it is there, choose Black and white and watch the preview turn gray.</li>
+<li>If the preview stays in color, the destination does not support the switch; use a different route.</li>
+<li>Click Save or Print and name the new file.</li>
+</ol>
+<p>The preview pane is the test: if it turns gray before you save, the saved PDF will be gray too. Browser printing also rebuilds the pages, so form fields, links and bookmarks from the original may not survive. Keep the color original if those matter.</p>
+
+<h2 id="print-and-scan">Way 5: Print in grayscale and scan a black and white PDF</h2>
+<p>The old-fashioned way is to print the color PDF in grayscale on a physical printer and scan the paper back with the scanner set to Black and white or Grayscale mode. The method is slow and uses paper and toner, but it is the only route that produces a genuine 1-bit bitonal scan.</p>
+<p>Scanners and multifunction printers usually offer three color modes: Color, Grayscale and Black and white (sometimes labeled Text or Monochrome). Black and white mode is the bitonal setting that court systems ask for.</p>
+<p>The U.S. District Court for the Middle District of North Carolina explains why in its <a href="https://www.ncmd.uscourts.gov/sites/ncmd/files/ecfprocman.pdf" target="_blank" rel="noopener">CM/ECF procedures manual</a>: "Because documents scanned in color or containing a graphic take much longer to upload, filing parties must configure their scanners to scan documents at 300 dpi and in black and white rather than in color."</p>
+<ol>
+<li>Print the PDF with the printer's Grayscale or Black and white option enabled.</li>
+<li>Place the pages in the scanner or document feeder.</li>
+<li>Set the color mode (Black and white for typed text, Grayscale for photos) and 300 dpi.</li>
+<li>Scan to PDF and check each page for skew, cut-off edges and faint areas.</li>
+</ol>
+<p>The resulting PDF is an image of paper, so its text is not searchable unless the scanner software runs OCR. It also carries real scanner traits: slight tilt, dust and uneven gray. If you only want that look without the paper, the <a href="/blog/pdf-to-scanned-pdf/">PDF to scanned PDF guide</a> shows how to reproduce it digitally.</p>
+
+<h2 id="comparison">Which way to convert a color PDF to black and white?</h2>
+<p>The best way to convert a color PDF to black and white depends on your system and on what the recipient needs. The browser tool works everywhere and gives consistent grayscale, Preview is quickest on a Mac, print routes keep text searchable when available, and print-and-scan is the only true bitonal option.</p>
+<div class="table-wrap"><table><caption>Five ways to convert a color PDF to black and white compared</caption><thead><tr><th scope="col">Way</th><th scope="col">Systems</th><th scope="col">Text stays selectable?</th><th scope="col">Grayscale or true B&amp;W</th><th scope="col">File size</th><th scope="col">Speed</th></tr></thead><tbody>
+<tr><th scope="row">1. Browser tool</th><td>Any OS with a modern browser, incl. mobile</td><td>No (pages become images)</td><td>Grayscale</td><td>Predictable; set by resolution 1×–3×</td><td>Seconds per file; bulk ZIP</td></tr>
+<tr><th scope="row">2. Preview Quartz filter</th><td>macOS only</td><td>Usually yes</td><td>Grayscale (Black &amp; White filter is high contrast)</td><td>Varies; can shrink or grow</td><td>Seconds</td></tr>
+<tr><th scope="row">3. Microsoft Print to PDF</th><td>Windows</td><td>Usually yes</td><td>Grayscale, if the driver offers it</td><td>Close to the original</td><td>Seconds, when the option exists</td></tr>
+<tr><th scope="row">4. Chrome / Edge print</th><td>Windows, macOS, ChromeOS, Linux</td><td>Usually yes</td><td>Grayscale, if the destination supports Color</td><td>Close to the original</td><td>Seconds</td></tr>
+<tr><th scope="row">5. Print and scan</th><td>Any, plus a printer and scanner</td><td>No, unless OCR runs</td><td>True 1-bit B&amp;W or grayscale</td><td>Small in B&amp;W mode, large in grayscale</td><td>Minutes per document</td></tr>
+</tbody></table></div>
+<p>"Usually yes" means the route passes existing text through, but a PDF that was already a scan contains no text to keep. Always run a quick search inside the result to be sure.</p>
+<p>A simple rule of thumb: if you need searchable text, start with Way 2, 3 or 4. If you need something that always works, on any device, with the same result each time, use Way 1. If a portal demands a bitonal image, use Way 5.</p>
+
+<h2 id="file-size">Is a grayscale PDF smaller than a color PDF?</h2>
+<p>A grayscale PDF is usually smaller than the same pages in color, and a true black and white PDF is far smaller still, because each pixel carries 8 bits or 1 bit instead of 24. For PDFs that contain mostly text rather than images, the saving from grayscale can be small.</p>
+<p>The U.S. District Court for the Northern District of California published a telling comparison in its <a href="https://cand.uscourts.gov/cases-e-filing/cmecf-information/preparing-your-cmecf-filing" target="_blank" rel="noopener">guide to preparing CM/ECF filings</a>. A 317-page document scanned as bitonal at 300 ppi came to 23.86 MB and remained legible; the same document in grayscale at 400 ppi came to 374.47 MB, about 15.7 times larger.</p>
+<div class="stats-grid">
+<div class="stat-card"><span class="stat-number">23.86 MB</span><span class="stat-label">317 pages, bitonal at 300 ppi (N.D. Cal.)</span></div>
+<div class="stat-card"><span class="stat-number">374.47 MB</span><span class="stat-label">Same pages, grayscale at 400 ppi (N.D. Cal.)</span></div>
+<div class="stat-card"><span class="stat-number">~15.7×</span><span class="stat-label">Size difference between the two scans</span></div>
+</div>
+<p>Two things drive that gap: bit depth and resolution. The court's grayscale version also used a higher resolution, so part of the difference comes from 400 versus 300 ppi. The lesson still holds: bitonal files are dramatically smaller, which is why the Western District of Washington warns in its <a href="https://www.wawd.uscourts.gov/attorneys/cm-ecf-faqs/Technical" target="_blank" rel="noopener">CM/ECF technical FAQ</a> that "Scanning at a higher resolution can cause lagging/timeout issues while uploading."</p>
+<p>With our tool, resolution matters more than color mode. A text PDF converted at 1× or 1.5× produces a much smaller file than at 3×, because each page is stored as a JPEG image whose pixel count grows with the square of the scale. If a native PDF is already small, converting it to images may make it larger, not smaller.</p>
+
+<h2 id="printing-cost">Does a black and white PDF cost less to print?</h2>
+<p>A black and white PDF usually costs less to print where printing is billed per page. University libraries publish the gap openly: color pages commonly cost around two and a half to three times the black and white rate. At home, the saving depends on your printer and cartridges, so no single figure applies.</p>
+<div class="table-wrap"><table><caption>Published per-page print prices, black and white vs color</caption><thead><tr><th scope="col">Library</th><th scope="col">Black and white</th><th scope="col">Color</th><th scope="col">Color vs B&amp;W</th></tr></thead><tbody>
+<tr><th scope="row"><a href="https://libanswers.med.utah.edu/faq/174028" target="_blank" rel="noopener">University of Utah health sciences library</a> (as of Dec 1, 2025)</th><td>8¢</td><td>25¢</td><td>About 3.1×</td></tr>
+<tr><th scope="row"><a href="https://libanswers.etsu.edu/faq/40850" target="_blank" rel="noopener">East Tennessee State University library</a></th><td>10¢</td><td>25¢</td><td>2.5×</td></tr>
+</tbody></table></div>
+<p>At those rates, a 40-page color handout costs $10.00 to print in color and $3.20 to $4.00 in black and white. Many campus and office print systems charge the color rate for any page that contains color, even a small blue logo, so a full grayscale conversion before printing avoids surprise charges.</p>
+<p>Converting the file is more reliable than ticking "black and white" at the printer when you send the PDF to someone else, a copy shop or a shared queue. The recipient's default settings no longer matter, because there is no color left to print.</p>
+
+<h2 id="when-grayscale-fails">When does a grayscale PDF lose information?</h2>
+<p>A grayscale PDF loses information whenever meaning depends on color: highlighted passages, red stamps or corrections, color-coded charts, maps and traffic-light status tables. Colors with similar brightness, such as red and green, turn into nearly identical grays, so the distinction simply disappears after conversion.</p>
+<p>The problem is brightness, not hue. Grayscale keeps only how light or dark each color is. A yellow highlighter is very light, so it often vanishes into white paper; saturated red and mid green can map to almost the same gray; a blue link may look like ordinary black text.</p>
+<h3>Contrast tips for colored highlights, stamps and charts</h3>
+<ul>
+<li><strong>Yellow highlights:</strong> raise Contrast to about 1.3 and lower Brightness slightly (0.9) in the tool so the highlight stays a visible gray band.</li>
+<li><strong>Red stamps and signatures:</strong> red often turns mid-gray. Increase Contrast and zoom in on the preview to confirm the stamp text is still legible.</li>
+<li><strong>Charts and graphs:</strong> if series are distinguished only by color, edit the source to add patterns, markers or direct labels, then export a new PDF before converting.</li>
+<li><strong>Maps and heat maps:</strong> keep a color copy, or send both versions, because gradients rarely survive grayscale.</li>
+<li><strong>Pale text:</strong> light gray or pastel text on white may fade; Contrast 1.2–1.4 usually brings it back.</li>
+</ul>
+<p>The same rule is a core accessibility principle. The W3C's <a href="https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html" target="_blank" rel="noopener">WCAG guidance on use of color</a> says color should not be the only visual means of conveying information, and the grayscale test is a quick way to find places where a document breaks that rule.</p>
+<p>Bitonal conversion is harsher still. Every pixel becomes black or white by a threshold, so light shading, gray backgrounds and photos can turn into blotches or disappear. Check photos, letterhead logos and signatures page by page when a portal forces 1-bit output.</p>
+
+<h2 id="checks">How to check a black and white PDF before sending</h2>
+<p>Check a black and white PDF by opening it at 100% zoom and scrolling every page, searching for a visible word, comparing the page count with the original and looking at the file size. Five minutes of checking prevents a rejected upload or a form with an unreadable stamp.</p>
+<ol>
+<li><strong>Page count:</strong> the converted file should have exactly as many pages as the original.</li>
+<li><strong>Legibility:</strong> zoom to 100% or more on the smallest print, footnotes and signatures.</li>
+<li><strong>Color-dependent content:</strong> look at every highlight, chart legend and stamp from the list above.</li>
+<li><strong>Search test:</strong> press Ctrl+F or Command-F and search for a word you can see. A hit means the text is live; no hit means the pages are images, as they are after the browser tool. Our <a href="/blog/what-is-a-scanned-pdf/">guide to scanned PDFs</a> explains the difference.</li>
+<li><strong>File size:</strong> compare it with the portal's limit before you upload, not after.</li>
+</ol>
+<div class="callout callout-warn"><strong>Use it honestly</strong>Converting to black and white or adding a scan look changes how a file appears, not whether it is authentic. Do not use it to alter or forge official documents, IDs or signatures that are not yours. Some courts and agencies require text-searchable PDFs, which rules out image-only pages, so check the filing rules before you submit.</div>
+<p>Text searchability matters for more than filing rules. The W3C's <a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF7" target="_blank" rel="noopener">PDF7 technique</a> states that "A document that consists of scanned images of text is inherently inaccessible because the content of the document is images, not searchable text." If accessibility is required, prefer a route that keeps text, or run OCR on the image-only result.</p>
+<div class="expert-quote"><blockquote>Most people who ask us how to convert a color PDF to black and white need grayscale, not true 1-bit black and white. We keep Gray as the default colorspace because it reads well on screen and prints cleanly, and we tell people plainly that our tool turns pages into images. If you need searchable text, use Preview or a print route; if you need the same result on any device, use the browser.</blockquote><cite><strong>The Make PDF look scanned team</strong> — builders of the web tool and Chrome extension</cite></div>
+
+<h2 id="faq">Convert PDF to black and white: FAQ</h2>
+<p>These answers cover the questions people ask most often when they convert a color PDF to black and white: free options, phones, grayscale versus bitonal output, searchable text, file size, printing and privacy. Each answer is short and points to the section above with the full steps and sources.</p>
+<div class="faq-item"><p class="faq-q">How do I convert a color PDF to black and white for free?</p><p class="faq-a">Open the free <a href="/scan">browser tool</a>, keep Colorspace on Gray, set Noise, Blur and Rotate to 0 and download the result. On a Mac, Preview's File → Export with a Quartz filter is also free. On Windows, a print dialog with a grayscale option works when your driver offers one.</p></div>
+<div class="faq-item"><p class="faq-q">Is grayscale the same as black and white?</p><p class="faq-a">No. Grayscale stores up to 256 shades of gray per pixel at 8 bits, while true black and white (bitonal) stores only black or white at 1 bit. In everyday use, "black and white PDF" usually means grayscale, which keeps photos and shading readable.</p></div>
+<div class="faq-item"><p class="faq-q">Will my text stay searchable after conversion?</p><p class="faq-a">With Preview and most print-to-PDF routes, typed text usually stays selectable and searchable. Our browser tool rasterizes pages, so the text becomes part of an image and can no longer be searched or copied. Test any result with Ctrl+F or Command-F.</p></div>
+<div class="faq-item"><p class="faq-q">How do I convert a PDF to grayscale on a Mac?</p><p class="faq-a">Open the PDF in Preview, choose File → Export, open the Quartz Filter menu and pick Gray Tone or Black &amp; White, then save under a new name. Gray Tone keeps smoother shading; Black &amp; White is higher contrast.</p></div>
+<div class="faq-item"><p class="faq-q">Why does Microsoft Print to PDF keep my colors?</p><p class="faq-a">The grayscale option depends on the app and the printer driver, and Microsoft Print to PDF often shows only orientation and paper size. Without a color setting, the output stays in color. Use the Edge print dialog or the browser tool instead.</p></div>
+<div class="faq-item"><p class="faq-q">Can I convert a color PDF to black and white on my phone?</p><p class="faq-a">Yes. The website version of our tool runs in mobile browsers on iPhone and Android, and the processing happens on the phone itself. Open the scan page, choose the PDF from Files, keep Gray and download the converted copy.</p></div>
+<div class="faq-item"><p class="faq-q">Does converting to black and white reduce PDF file size?</p><p class="faq-a">Often, but not always. Bitonal scans are far smaller than grayscale ones: a Northern District of California test measured 23.86 MB versus 374.47 MB for the same 317 pages. A native text PDF turned into page images can grow, so compare sizes after conversion.</p></div>
+<div class="faq-item"><p class="faq-q">Can the browser tool make true 1-bit black and white?</p><p class="faq-a">No. The tool outputs grayscale JPEG pages. High Contrast values make pages look stark and two-tone, but the pixels are still grayscale. For a genuine bitonal file, scan paper in the scanner's Black and white mode.</p></div>
+<div class="faq-item"><p class="faq-q">Why did my yellow highlights disappear?</p><p class="faq-a">Grayscale keeps only brightness, and yellow is almost as light as white paper, so highlights fade out. Raise Contrast to about 1.3 and lower Brightness slightly, or re-mark the key passages with underlines before converting.</p></div>
+<div class="faq-item"><p class="faq-q">Is my PDF uploaded when I use the browser tool?</p><p class="faq-a">No. Pages are rendered and converted locally in your browser with pdf.js and canvas, and files are not sent to a processing server. After the first visit, the tool also works offline.</p></div>
+<div class="faq-item"><p class="faq-q">Can I make the black and white PDF look scanned too?</p><p class="faq-a">Yes. Keep Colorspace on Gray and leave the default Noise 0.1, Blur 0.3 and a 1° rotation for a copier-style result. Our pillar guide on <a href="/blog/how-to-make-a-pdf-look-scanned/">how to make a PDF look scanned</a> compares six methods and presets.</p></div>
+<div class="faq-item"><p class="faq-q">How do I convert many color PDFs to black and white at once?</p><p class="faq-a">Use the <a href="/scan/bulk">bulk scanner</a>: add several PDFs, apply Gray with the scan effects at 0 and download all converted files in one ZIP archive. The Chrome extension accepts several files at once as well.</p></div>

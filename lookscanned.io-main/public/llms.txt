@@ -1,0 +1,18 @@
+# Make PDF look scanned
+
+> Free browser tool and Chrome extension that makes a PDF, image, Word or Excel file look like a real scan (noise, blur, tilt, paper tone, grayscale, border). Files are processed locally in the browser; nothing is uploaded for processing. Rated 5 stars in the Chrome Web Store.
+
+## Tool
+
+- [Make PDF look scanned — online tool](https://pdflookscanned.com/): upload a file, adjust the scan effect with a live preview, download a scanned-looking PDF
+- [Chrome extension](https://chromewebstore.google.com/detail/make-pdf-look-scanned/ijhpnlcipgiokgignkbbbgkobdmdoila): the same scan engine in the Chrome side panel
+
+## Guides
+
+- [How to Make a PDF Look Scanned: 6 Methods That Pass a Close Look](https://pdflookscanned.com/blog/how-to-make-a-pdf-look-scanned/): How to make a PDF look like it was scanned: 6 tested methods — browser tool, Chrome extension, print dialog, image editor, phone photo, print-and-scan.
+- [Make a Document Look Scanned in 2 Minutes — Word, Google Docs or a Photo](https://pdflookscanned.com/blog/make-a-document-look-scanned/): Make a document look scanned without a scanner: turn Word files, Google Docs and phone photos into a realistic scan with noise, skew and paper tone. Free.
+- [PDF to Scanned PDF: How to Convert, Flatten and Keep It Readable](https://pdflookscanned.com/blog/pdf-to-scanned-pdf/): Convert a PDF to a scanned PDF: flatten text into page images, pick DPI and grayscale, keep the file small and make it look scanned. Step-by-step and free.
+- [What Is a Scanned PDF? How to Tell It Apart From a Digital PDF in 10 Seconds](https://pdflookscanned.com/blog/what-is-a-scanned-pdf/): What a scanned PDF is, how it differs from a digital PDF and a scanned copy, how to tell them apart in 10 seconds, and when you need OCR or a scan look.
+- [Image to Scanned PDF: Turn a JPG, PNG or Phone Photo Into a Real-Looking Scan](https://pdflookscanned.com/blog/image-to-scanned-pdf/): Turn an image into a scanned PDF: crop and whiten a phone photo, add a realistic scan effect and save JPG or PNG pages as one PDF. Free, in your browser.
+- [How to Convert a Color PDF to Black and White: 5 Free Ways That Work](https://pdflookscanned.com/blog/convert-color-pdf-to-black-and-white/): How to convert a color PDF to black and white on Windows, Mac and online: print to PDF, Preview Quartz filter, browser tool. Grayscale vs pure B&W explained.
+- [Scan Effect Explained: What Makes a Document Look Scanned (and the Settings for 5 Looks)](https://pdflookscanned.com/blog/scan-effect/): The scan effect explained: noise, skew, blur, paper tone, edge shadows, grayscale — what makes a file look scanned, plus ready settings for 5 looks.

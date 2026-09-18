@@ -1,0 +1,243 @@
+<p class="lead">To convert an image to a scanned PDF, open the free <a href="/scan">scan tool</a>, drop in a JPG, PNG or phone photo, set a small tilt, light noise and gray color, and download the result. The image to scanned PDF conversion runs in your browser, places the picture on an A4 page and saves a scan-style PDF.</p>
+
+<p>A photo of a signed form rarely looks like an office scan: the colors are off, the edges are crooked and the file is a JPG, not a PDF. This guide covers the whole route from camera to scanned PDF: preparing the photo, pixel math, formats and combining several images. Facts come from USCIS, the U.S. National Archives (NARA), FADGI, Apple Support and our tool's source code.</p>
+
+<nav class="toc" aria-label="Table of contents"><h2>Table of Contents</h2><ol>
+<li><a href="#quick-answer">What Is the Quickest Image to Scanned PDF Method?</a></li>
+<li><a href="#how-to-convert">How Do You Convert an Image to a Scanned PDF?</a></li>
+<li><a href="#prepare-phone-photo">How Should You Take a Phone Photo of a Document?</a></li>
+<li><a href="#pixels-and-page-size">How Many Pixels Does a Scanned PDF Page Need?</a></li>
+<li><a href="#image-formats">Which Image Formats Work for JPG to Scanned PDF?</a></li>
+<li><a href="#settings">Which Scan Settings Suit Photos vs Screenshots?</a></li>
+<li><a href="#several-images">How Do You Put Several Images Into One Scanned PDF?</a></li>
+<li><a href="#file-size">How Big Will a Photo to Scanned PDF File Be?</a></li>
+<li><a href="#checking">How Do You Check the Scanned PDF Before Sending?</a></li>
+<li><a href="#mistakes">What Mistakes Ruin an Image to Scanned PDF?</a></li>
+<li><a href="#honest-use">When Is It Fine to Make an Image Look Scanned?</a></li>
+<li><a href="#faq">Image to Scanned PDF FAQ</a></li>
+</ol></nav>
+
+<h2 id="quick-answer">What Is the Quickest Image to Scanned PDF Method?</h2>
+<p>The quickest image to scanned PDF method is a browser tool that accepts the picture directly. Make PDF look scanned takes a JPG or PNG, wraps it in a PDF page, adds scanner-style tilt, blur, noise and gray tone, and exports a new PDF in about a minute, with no upload and no signup.</p>
+
+<dl class="spec-list">
+<dt>Input</dt><dd>JPG, PNG, WebP, SVG, GIF or BMP (one image file becomes one page)</dd>
+<dt>Output</dt><dd>A PDF whose page is a JPEG image with the scan effect baked in</dd>
+<dt>Page size</dt><dd>A4, portrait or landscape to match the image's orientation</dd>
+<dt>Where it runs</dt><dd>Locally in your browser; the file is not sent to a processing server</dd>
+<dt>Cost</dt><dd>Free, no account, no watermark unless you add one</dd>
+</dl>
+
+<p>If your picture is already a PDF (for example, a scan app exported one), skip the conversion talk and read our guide on <a href="/blog/pdf-to-scanned-pdf/">turning a PDF into a scanned PDF</a>. If you want the broader background on the format itself, see <a href="/blog/what-is-a-scanned-pdf/">what a scanned PDF is</a>.</p>
+
+<h2 id="how-to-convert">How Do You Convert an Image to a Scanned PDF?</h2>
+<p>To convert an image to a scanned PDF, prepare a straight, cropped photo, open the scanner page in Chrome, Edge or a mobile browser, load the file, adjust the scan effect while watching the live preview, and download the PDF. The full procedure below takes one to two minutes per image.</p>
+
+<ol class="step-list">
+<li><strong>Prepare the image.</strong> Crop the photo to the paper edges and straighten it with your phone's built-in editor or document scanner. The tool does not crop, deskew or fix perspective, so what you load is what gets scanned.</li>
+<li><strong>Export HEIC photos to JPG.</strong> iPhone photos are often HEIC files. Export or share them as JPG first, because the tool accepts JPG, PNG, WebP, SVG, GIF and BMP, not HEIC.</li>
+<li><strong>Open the scanner.</strong> Go to <a href="/scan">pdflookscanned.com/scan</a> or open the Chrome extension side panel. Both use the same engine and work offline after the first load.</li>
+<li><strong>Drop in the image.</strong> Drag the JPG or PNG onto the upload area. The tool embeds it on an A4 page, portrait for tall images and landscape for wide ones, scaled to fit and centered.</li>
+<li><strong>Set the scan look.</strong> Start with Colorspace Gray, Rotate 1°, Rotate variance 0.5°, Blur 0.3 and Noise 0.1. Raise Yellowish to 0.2 or 0.3 if you want an aged paper tone.</li>
+<li><strong>Pick a resolution.</strong> Keep 2× for normal documents; choose 2.5× or 3× when the image has small print, stamps or signatures that must stay readable.</li>
+<li><strong>Add extras if needed.</strong> Optionally place a stamp or signature image, a watermark, or edit the PDF title and author in the metadata panel.</li>
+<li><strong>Download and check.</strong> Save the scanned PDF, open it in your normal PDF viewer and zoom to 100% to confirm every line is readable.</li>
+</ol>
+
+<div class="callout callout-tip"><strong>One image, one page</strong>Each image file becomes a separate single-page PDF. To get a multi-page scanned PDF from several photos, first combine the images into one PDF with your operating system, then drop that PDF into the tool. The <a href="#several-images">several images section</a> shows the exact clicks.</div>
+
+<h2 id="prepare-phone-photo">How Should You Take a Phone Photo of a Document?</h2>
+<p>A good phone photo of a document is shot from directly above, on a flat dark surface, in even daylight without shadows, and cropped to the paper edges. That preparation matters more than any filter, because the scan effect copies whatever flaws the photo already has, including bent corners and hand shadows.</p>
+
+<p>USCIS, which accepts phone pictures as evidence in online filings, puts the minimum standard simply: <a href="https://www.uscis.gov/file-online/tips-for-filing-forms-online" target="_blank" rel="noopener">"Make sure each image you attach is clear and that all text is readable."</a> The same page tells applicants to <a href="https://www.uscis.gov/file-online/tips-for-filing-forms-online" target="_blank" rel="noopener">"Use a scanner or take pictures of each document."</a> So a careful photo is an accepted starting point, not a workaround.</p>
+
+<h3>Light, surface and angle for a photo to scanned PDF</h3>
+<ul>
+<li><strong>Light.</strong> Use indirect daylight near a window or two lamps from opposite sides. A single overhead lamp throws your phone's shadow across the page.</li>
+<li><strong>Surface.</strong> Put white paper on a darker table so the edges are easy to detect and crop. Flatten folds under a book for a minute first.</li>
+<li><strong>Angle.</strong> Hold the phone parallel to the page, straight above its center. Tilting the phone makes the far edge narrower than the near one.</li>
+<li><strong>Distance.</strong> Fill the frame with the page, leaving a thin margin. Use the main camera rather than digital zoom.</li>
+<li><strong>Flash.</strong> Turn the flash off; it creates a bright hot spot and glare on glossy paper.</li>
+</ul>
+
+<p>The angle rule has a technical basis. FADGI, the U.S. federal digitization working group, notes that <a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">"Skew behaviors in the captured image can often be traced to lack of parallelism between the focal plane of the camera and the platen."</a> In plain terms: if the phone is not parallel to the paper, the page comes out trapezoid-shaped, which no flatbed scanner would produce.</p>
+
+<h3>Use the built-in document scanner on iPhone or Android</h3>
+<p>Phones already include a free document mode that crops and straightens for you. On an iPhone or iPad, the Notes app and the Files app can scan a document with the camera, detect the page in Auto mode and let you adjust the corners. Apple's instructions say: <a href="https://support.apple.com/en-us/108963" target="_blank" rel="noopener">"Then drag the corners to adjust the scan to fit the page, then tap Keep Scan."</a></p>
+
+<p>Many Android phones offer a similar document mode inside the stock camera or the built-in file manager, which detects the page edges and flattens the perspective. Menu names vary by manufacturer, so look for a "Document" or "Scan" option. Save the result as an image or PDF, then run it through the <a href="/scan">scan effect tool</a> to make it look like a flatbed scan rather than a phone capture.</p>
+
+<h3>Crop and whiten the photo before the scan effect</h3>
+<p>If you took a regular photo, open it in your phone's photo editor, use Crop to trim the table away and the straighten slider to level the text lines. Then raise exposure or brightness slightly until the paper is close to white instead of gray-blue. The tool's own Brightness and Contrast sliders can finish the job: Brightness 1.1 and Contrast 1.2 usually whiten a dull photo without losing thin strokes.</p>
+
+<div class="callout callout-info"><strong>Why whitening matters</strong>A flatbed scanner lights the page evenly from a few millimeters away, so paper comes out nearly white. A phone photo under room light shows the paper as light gray with a color cast. Whitening the background is the single change that makes a photo read as a scan.</div>
+
+<h2 id="pixels-and-page-size">How Many Pixels Does a Scanned PDF Page Need?</h2>
+<p>A scanned PDF page needs its pixel count to match the paper size times the resolution. A US Letter page at 300 ppi is 2,550 × 3,300 pixels, and an A4 page at 300 ppi is about 2,480 × 3,508 pixels. Most phone cameras capture more than that, so resolution is rarely the weak point.</p>
+
+<p>The math is one multiplication: inches × pixels per inch = pixels. Letter paper is 8.5 × 11 inches; A4 is 210 × 297 mm, or about 8.27 × 11.69 inches. A typical 12-megapixel phone photo is 4,032 × 3,024 pixels, so a page that fills most of the frame lands somewhere around 250–350 ppi, depending on how much table is left around it.</p>
+
+<div class="table-wrap"><table>
+<caption>Pixel dimensions for full pages at common scanning resolutions</caption>
+<thead><tr><th scope="col">Resolution</th><th scope="col">US Letter (8.5 × 11 in)</th><th scope="col">A4 (8.27 × 11.69 in)</th><th scope="col">Typical use</th></tr></thead>
+<tbody>
+<tr><th scope="row">150 ppi</th><td>1,275 × 1,650 px</td><td>1,240 × 1,754 px</td><td>Screen reading, email attachments</td></tr>
+<tr><th scope="row">200 ppi</th><td>1,700 × 2,200 px</td><td>1,654 × 2,339 px</td><td>FADGI 1-star level for documents</td></tr>
+<tr><th scope="row">300 ppi</th><td>2,550 × 3,300 px</td><td>2,480 × 3,508 px</td><td>Standard office and court scans</td></tr>
+<tr><th scope="row">400 ppi</th><td>3,400 × 4,400 px</td><td>3,307 × 4,677 px</td><td>Fine print, photos, archival masters</td></tr>
+</tbody>
+</table></div>
+
+<p>Federal digitization rules use the same scale. NARA's regulation asks for image files of modern textual records at a minimum of 300 ppi, and 400 ppi for photographic prints and paper records with fine detail, according to <a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">36 CFR Part 1236, Subpart E</a>. FADGI's star system rates unbound documents at 200, 250, 300 and 400 ppi for its one- to four-star levels.</p>
+
+<p>Pixel counts alone do not guarantee quality, and NARA says so directly: <a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">"The agency cannot rely solely on equipment specifications, such as scanner ppi settings or camera sensor megapixels, to ensure digital image quality."</a> A sharp 2,000-pixel photo reads better than a blurry 4,000-pixel one, so focus and light still come first.</p>
+
+<h3>What resolution does the image to scanned PDF output have?</h3>
+<p>The tool renders each page at 72 dpi multiplied by the Resolution setting. Because every image is placed on an A4 page, the output is predictable: 1× gives about 595 × 842 pixels, 2× about 1,191 × 1,684 pixels (144 dpi), and 3× about 1,786 × 2,526 pixels (216 dpi). A source photo larger than the 3× size adds no extra detail to the result.</p>
+
+
+<h2 id="image-formats">Which Image Formats Work for JPG to Scanned PDF?</h2>
+<p>JPG to scanned PDF and PNG to scanned PDF work directly, because the tool embeds those two formats in the PDF page as they are. WebP, SVG, GIF and BMP also work, but they are first converted to JPEG with the longest edge capped at 2,200 pixels. HEIC is not supported.</p>
+
+<div class="table-wrap"><table>
+<caption>How each image format is handled on the way to a scanned PDF</caption>
+<thead><tr><th scope="col">Format</th><th scope="col">Accepted?</th><th scope="col">What happens first</th><th scope="col">Best for</th></tr></thead>
+<tbody>
+<tr><th scope="row">JPG / JPEG</th><td>Yes</td><td>Embedded without re-encoding, fitted to A4</td><td>Phone photos of paper documents</td></tr>
+<tr><th scope="row">PNG</th><td>Yes</td><td>Embedded without re-encoding, fitted to A4</td><td>Screenshots, exported forms, sharp text</td></tr>
+<tr><th scope="row">WebP</th><td>Yes</td><td>Converted to JPEG (quality 0.92), longest edge up to 2,200 px</td><td>Images saved from websites</td></tr>
+<tr><th scope="row">SVG</th><td>Yes</td><td>Rasterized to JPEG, longest edge up to 2,200 px</td><td>Logos, diagrams, vector forms</td></tr>
+<tr><th scope="row">GIF / BMP</th><td>Yes</td><td>Converted to JPEG, longest edge up to 2,200 px</td><td>Old files and legacy exports</td></tr>
+<tr><th scope="row">HEIC / HEIF</th><td>No</td><td>Export or share as JPG first</td><td>iPhone camera originals</td></tr>
+<tr><th scope="row">TIFF</th><td>No</td><td>Save as PNG or JPG first</td><td>Output from older flatbed scanners</td></tr>
+</tbody>
+</table></div>
+
+<p>Any transparent area in a converted WebP, SVG, GIF or BMP is filled with white, which matches paper. The 2,200-pixel cap is still larger than the 3× output render of an A4 page, so the conversion does not lower the final sharpness.</p>
+
+<h3>How to turn an iPhone HEIC photo into a JPG</h3>
+<p>On a Mac, open the HEIC file in Preview, choose File → Export and pick JPEG; <a href="https://support.apple.com/guide/preview/convert-image-file-types-prvw1012/mac" target="_blank" rel="noopener">Apple's Preview guide</a> lists JPEG, PNG, PDF and TIFF among the export formats. On an iPhone, set Settings → Camera → Formats to Most Compatible to shoot JPG directly.</p>
+
+<h2 id="settings">Which Scan Settings Suit Photos vs Screenshots?</h2>
+<p>Scan settings for phone photos should stay light, because a photo already has natural softness and grain. Screenshots and exported images need a little more effect, because pixel-perfect text looks digital. In both cases, gray color, a tilt under 1.5° and noise at or below 0.2 look like an ordinary office scanner.</p>
+
+<div class="table-wrap"><table>
+<caption>Starting scan settings by type of source image</caption>
+<thead><tr><th scope="col">Setting (range · default)</th><th scope="col">Phone photo of paper</th><th scope="col">Screenshot or exported PNG</th><th scope="col">Color ID or stamped form</th></tr></thead>
+<tbody>
+<tr><th scope="row">Colorspace (Gray/Color · Gray)</th><td>Gray</td><td>Gray</td><td>Color</td></tr>
+<tr><th scope="row">Rotate (−10°…10° · 1°)</th><td>0.5°</td><td>1°–1.5°</td><td>0.5°</td></tr>
+<tr><th scope="row">Rotate variance (0…10° · 0.5°)</th><td>0.5°</td><td>0.5°</td><td>0°</td></tr>
+<tr><th scope="row">Blur (0…1 · 0.3)</th><td>0.1–0.2</td><td>0.3–0.4</td><td>0.2</td></tr>
+<tr><th scope="row">Noise (0…1 · 0.1)</th><td>0.05–0.1</td><td>0.1–0.2</td><td>0.05</td></tr>
+<tr><th scope="row">Brightness (0…2 · 1)</th><td>1.05–1.15</td><td>1</td><td>1</td></tr>
+<tr><th scope="row">Contrast (0…2 · 1)</th><td>1.1–1.3</td><td>1–1.1</td><td>1.05</td></tr>
+<tr><th scope="row">Yellowish (0…2 · 0)</th><td>0–0.2</td><td>0.1–0.3</td><td>0</td></tr>
+<tr><th scope="row">Resolution (1×…3× · 2×)</th><td>2× or 2.5×</td><td>2×</td><td>3×</td></tr>
+</tbody>
+</table></div>
+
+<p>The logic behind the table is simple. A phone photo already carries sensor noise and lens softness, so adding the default blur on top can make small print mushy. Raise Contrast instead, which darkens text and pushes the gray paper toward white. A screenshot is the opposite: its edges are razor sharp, so a bit more blur and noise are what make it read as paper.</p>
+
+<p>The Border option draws a thin dark frame line around the page; use it sparingly. Each artifact is explained in our <a href="/blog/scan-effect/">scan effect guide</a>.</p>
+
+<div class="expert-quote"><blockquote>We see the same pattern in almost every image people drop into the tool: the scan effect is not the problem, the photo is. A crooked, shadowed picture with maximum noise still looks like a phone photo. A flat, cropped, whitened page with Rotate at 0.5°, Blur at 0.2 and Gray color looks like it came off a flatbed. Fix the photo first, then keep the effect subtle.</blockquote><cite><strong>The Make PDF look scanned team</strong> — builders of the web tool and Chrome extension</cite></div>
+
+<h2 id="several-images">How Do You Put Several Images Into One Scanned PDF?</h2>
+<p>To put several images into one scanned PDF, first combine them into a single ordinary PDF with the tools built into macOS or Windows, then drop that PDF into the scanner. The tool keeps the page order and applies the scan effect to every page, with a small random tilt per page.</p>
+
+<h3>Combine images into one PDF on a Mac with Preview</h3>
+<ol>
+<li>Name the images in page order (01.jpg, 02.jpg…), select them all in Finder and open them in Preview.</li>
+<li>In the Thumbnails sidebar, drag pages into order, then press Command-A.</li>
+<li>Choose File → Print, open the PDF menu in the lower-left corner and pick Save as PDF.</li>
+</ol>
+
+<h3>Combine images into one PDF on Windows</h3>
+<ol>
+<li>In File Explorer, select the images, right-click and choose Print (on Windows 11, under Show more options).</li>
+<li>Pick Microsoft Print to PDF and the Full page photo layout; clear "Fit picture to frame" so edges are not cropped.</li>
+<li>Click Print and save the PDF.</li>
+</ol>
+
+<p>Next, open <a href="/scan">the scanner</a>, drop in the combined PDF, set Rotate variance to 0.5°–1° so each page tilts slightly differently, and download. The printed PDF usually uses Letter or A4 pages, so the scanned copy will too.</p>
+
+<div class="callout callout-tip"><strong>Many images, separate files</strong>If you need one scanned PDF per image instead of one combined file, use <a href="/scan/bulk">bulk scan</a>. Drop in all the images, apply one set of settings, and download every result together as a ZIP archive, one PDF per image.</div>
+
+<h2 id="file-size">How Big Will a Photo to Scanned PDF File Be?</h2>
+<p>A photo to scanned PDF file is usually far smaller than the original photo, because the tool renders each A4 page to a JPEG at a fixed size. The default 2× gray setting typically gives a few hundred kilobytes per page, which fits upload limits such as the USCIS 12 MB cap.</p>
+
+<p>The output size depends on the render, not on the camera. A 5 MB phone photo is scaled onto an A4 page and re-rendered at 1,191 × 1,684 pixels at 2×, so most of its extra pixels are discarded. Our estimate: roughly 150–500 KB per page at 2× in gray, and two to three times more at 3× or in color.</p>
+
+<dl class="spec-list">
+<dt>USCIS online evidence</dt><dd>12 MB per file; PDF, JPG or JPEG (TIF/TIFF for some forms), per <a href="https://www.uscis.gov/file-online/tips-for-filing-forms-online" target="_blank" rel="noopener">USCIS filing tips</a></dd>
+<dt>USCIS paper filings</dt><dd>Avoid photos or documents smaller than 4 × 6 inches, because USCIS scans paper submissions, per its <a href="https://www.uscis.gov/archive/recommendations-for-paper-filings-to-avoid-scanning-delays" target="_blank" rel="noopener">scanning recommendations</a></dd>
+<dt>Federal court e-filing</dt><dd>Limits vary by court, for example 35 MB per exhibit in the District of Minnesota and 100 MB per document in the Western District of Washington</dd>
+</dl>
+
+<h3>How to make a scanned PDF from images smaller</h3>
+<ul>
+<li>Use Gray instead of Color unless color carries meaning, such as a colored stamp or ID photo.</li>
+<li>Keep Resolution at 2× unless small text breaks up; 3× roughly doubles the pixel count.</li>
+<li>Lower Noise to 0.05–0.1, since grain inflates JPEG size.</li>
+</ul>
+
+<h2 id="checking">How Do You Check the Scanned PDF Before Sending?</h2>
+<p>Check a scanned PDF by opening it in a normal PDF viewer at 100% zoom and reading the smallest text, the numbers and the signature line. Then confirm the page count, the orientation and the file size. A two-minute check catches unreadable digits before a recipient rejects the file.</p>
+
+<ol>
+<li><strong>Readability.</strong> Zoom to 100% and 200%. Every digit in dates, amounts and account numbers must be unambiguous.</li>
+<li><strong>Orientation.</strong> Wide images become landscape A4 pages and tall images portrait pages. Rotate the source photo first if the page came out sideways.</li>
+<li><strong>Margins.</strong> An image with a different shape than A4 gets white margins on two sides. That is normal for a scan, but a very narrow receipt will look small on the page, so crop it tightly.</li>
+<li><strong>File size.</strong> Compare it with the portal's limit before you start the upload.</li>
+</ol>
+
+<p>Remember that the output is image-only: the text is pixels, not selectable characters. The W3C accessibility guidance explains that <a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF7" target="_blank" rel="noopener">"A document that consists of scanned images of text is inherently inaccessible because the content of the document is images, not searchable text."</a> If the recipient needs searchable text, run OCR afterward or send the original.</p>
+
+<h2 id="mistakes">What Mistakes Ruin an Image to Scanned PDF?</h2>
+<p>The mistakes that ruin an image to scanned PDF are nearly always in the source photo or in overdone settings: shadows, a trapezoid-shaped page, a visible table edge, maximum noise, heavy blur and tilts of several degrees. Each one signals "phone photo" or "filter" instead of a scanner.</p>
+
+<div class="table-wrap"><table>
+<caption>Common image to scanned PDF mistakes and fixes</caption>
+<thead><tr><th scope="col">Mistake</th><th scope="col">Why it looks wrong</th><th scope="col">Fix</th></tr></thead>
+<tbody>
+<tr><th scope="row">Photo taken at an angle</th><td>Page is a trapezoid; scanners produce rectangles</td><td>Reshoot from above or use the phone's document mode</td></tr>
+<tr><th scope="row">Table or hand visible</th><td>Flatbeds only capture the glass area</td><td>Crop to the paper edges before loading</td></tr>
+<tr><th scope="row">Shadow across the page</th><td>Scanner light is even</td><td>Use window light or two lamps; no flash</td></tr>
+<tr><th scope="row">Rotate at 5° or more</th><td>Real feeders rarely skew that much</td><td>Stay between 0.5° and 1.5°</td></tr>
+<tr><th scope="row">Noise at 0.5 or higher</th><td>Looks like film grain, not a scan</td><td>Use 0.05–0.2</td></tr>
+<tr><th scope="row">Blur at 0.8 or higher</th><td>Small print becomes unreadable</td><td>Use 0.1–0.4 and check at 100%</td></tr>
+<tr><th scope="row">Expecting one PDF from many images</th><td>Each image becomes its own PDF</td><td>Combine images into one PDF first</td></tr>
+</tbody>
+</table></div>
+
+<h2 id="honest-use">When Is It Fine to Make an Image Look Scanned?</h2>
+<p>Making an image look scanned is fine when the document is yours and the content is true: a receipt you photographed, a form you signed, a letter you wrote. The scan look changes appearance only. It does not make a copy more official, and it must never be used to disguise edits.</p>
+
+<div class="callout callout-warn"><strong>Honest use</strong>A scan effect changes how a file looks, not whether it is authentic. Do not use it to forge or alter IDs, official records, certificates or signatures that are not yours. Some courts and agencies require text-searchable PDFs; the Southern District of Florida, for example, states that <a href="https://www.flsd.uscourts.gov/all-faqs/CMECF" target="_blank" rel="noopener">"pleadings/main documents filed electronically in CM/ECF must be in text searchable PDF format"</a>. Check the recipient's rules before sending an image-only file.</div>
+
+<p>For typed documents, export them to PDF and follow our guide to <a href="/blog/make-a-document-look-scanned/">making a document look scanned</a>; the <a href="/blog/how-to-make-a-pdf-look-scanned/">pillar guide</a> compares every method.</p>
+
+<h2 id="faq">Image to Scanned PDF FAQ</h2>
+<p>These image to scanned PDF questions cover what people ask most often after their first conversion: formats, page size, multi-page files, phones, privacy and whether the result is accepted by agencies. Each answer reflects how the free tool actually works, based on its source code and published settings.</p>
+
+<div class="faq-item"><p class="faq-q">Can I convert a JPG to a scanned PDF for free?</p><p class="faq-a">Yes. The web tool at pdflookscanned.com/scan and its Chrome extension are free, need no account and add no watermark unless you add one. Drop in the JPG, adjust the scan effect and download the PDF.</p></div>
+
+<div class="faq-item"><p class="faq-q">Is my photo uploaded to a server?</p><p class="faq-a">No. The conversion and the scan effect run locally in your browser with pdf.js and canvas. After the first visit the site also works offline, which is a simple way to confirm nothing is sent for processing.</p></div>
+
+<div class="faq-item"><p class="faq-q">What page size does the scanned PDF have?</p><p class="faq-a">Every image is placed on an A4 page, portrait for tall images and landscape for wide ones, scaled to fit and centered. If the image shape differs from A4, you get white margins on two sides, as on a real scan of smaller paper.</p></div>
+
+<div class="faq-item"><p class="faq-q">Can I turn several photos into one scanned PDF?</p><p class="faq-a">Yes, in two steps. Combine the images into one PDF with macOS Preview (Print → Save as PDF) or Windows (Print → Microsoft Print to PDF), then drop that PDF into the scanner. The tool itself makes one PDF per image.</p></div>
+
+<div class="faq-item"><p class="faq-q">Does the tool crop or straighten my photo?</p><p class="faq-a">No. It does not crop, deskew or correct perspective. Use your phone's photo editor or the built-in document scanner in iPhone Notes, iPhone Files or your Android camera first, then load the cleaned image.</p></div>
+
+<div class="faq-item"><p class="faq-q">Why is my HEIC photo not accepted?</p><p class="faq-a">HEIC is not among the supported formats, which are JPG, PNG, WebP, SVG, GIF and BMP. Export the photo as JPG from Preview on a Mac, from the Photos app on Windows, or set your iPhone camera to Most Compatible to shoot JPG.</p></div>
+
+<div class="faq-item"><p class="faq-q">What resolution should I pick for a photo to scanned PDF?</p><p class="faq-a">Keep the default 2×, which renders the A4 page at about 144 dpi. Choose 2.5× or 3× (about 216 dpi) for fine print, stamps or signatures. Higher settings make larger files.</p></div>
+
+
+<div class="faq-item"><p class="faq-q">Will USCIS accept a phone photo turned into a PDF?</p><p class="faq-a">USCIS accepts scans or photos of documents for online evidence, as long as each image is clear and all text is readable, in PDF, JPG or JPEG files up to 12 MB. A clean scanned PDF of your own original meets that format.</p></div>
+
+<div class="faq-item"><p class="faq-q">Is the text in the scanned PDF searchable?</p><p class="faq-a">No. Each page is a JPEG image inside the PDF, so the text cannot be selected or searched. Run OCR afterward if the recipient needs searchable text, or send a converted PDF when rules require one.</p></div>
+
+

@@ -45,6 +45,8 @@
       <TheFeatures />
     </section>
 
+    <HomeGuide />
+
     <footer class="footer">{{ t('base.landing.footer') }}</footer>
   </div>
 </template>
@@ -55,12 +57,20 @@ import { useHead } from '@unhead/vue'
 import { useI18n } from 'vue-i18n'
 import ScannerSvg from '@/components/Misc/ScannerSvg.vue'
 import TheFeatures from '@/components/Features/TheFeatures.vue'
+import HomeGuide from '@/components/home/HomeGuide.vue'
 
 const { t } = useI18n()
 
+// Search snippet for the home page (English market); must match index.html
 useHead({
-  title: t('base.title'),
-  meta: [{ name: 'description', content: t('base.description') }]
+  title: 'Make PDF Look Scanned Online — Free, Private, No Upload',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Make PDF look scanned: add grain, blur, a slight tilt and an aged paper tone. Free, no signup — your file never leaves the browser. Works with images and Word.'
+    }
+  ]
 })
 </script>
 

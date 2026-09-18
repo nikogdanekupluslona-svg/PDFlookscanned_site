@@ -1,0 +1,228 @@
+<p class="lead">Converting a PDF to a scanned PDF means rendering every page as an image and saving those images in a new PDF, so the text layer, links and form fields become flat pixels. For readable, compact pages choose 2× resolution and grayscale; add light noise and skew only if you also want the scan look.</p>
+
+<p>People convert a PDF to a scanned PDF because a portal wants an image-only file, a colleague asked for a flattened copy, or a form has to look like it went through an office scanner. This guide covers the trade-offs (resolution, color, file size, searchability, court rules) with exact tool settings, U.S. federal court numbers and National Archives and FADGI benchmarks.</p>
+
+<nav class="toc" aria-label="Table of contents"><h2>Table of Contents</h2><ol>
+<li><a href="#what-it-means">What does PDF to scanned PDF conversion do?</a></li>
+<li><a href="#before-after">What changes when a PDF becomes a scanned PDF?</a></li>
+<li><a href="#how-to-convert">How do you convert a PDF to scanned in the browser?</a></li>
+<li><a href="#resolution">Which resolution keeps a scanned PDF readable?</a></li>
+<li><a href="#color-and-size">Gray, color or bitonal: which keeps the file small?</a></li>
+<li><a href="#flatten-vs-scan-look">Flatten PDF cleanly or add a scan look?</a></li>
+<li><a href="#required-or-refused">When is a scanned PDF required or refused?</a></li>
+<li><a href="#privacy">Is it safe to convert a PDF to scanned PDF online?</a></li>
+<li><a href="#batch">How do you convert many PDFs to scanned PDFs at once?</a></li>
+<li><a href="#checking">How do you check the result is a scanned PDF?</a></li>
+<li><a href="#troubleshooting">How do you fix PDF to scanned PDF problems?</a></li>
+<li><a href="#faq">PDF to scanned PDF: frequently asked questions</a></li>
+</ol></nav>
+
+<h2 id="what-it-means">What does PDF to scanned PDF conversion do?</h2>
+<p>A PDF to scanned PDF conversion takes each page of a digital PDF, draws it onto a canvas at a chosen pixel density, and stores the result as a picture inside a new PDF. The output looks the same, but every word, line and logo is now part of one image per page.</p>
+
+<p>A real scanner does the same thing with paper instead of a digital page. The U.S. District Court for the Northern District of California describes the result plainly: <a href="https://cand.uscourts.gov/cases-e-filing/cmecf-information/preparing-your-cmecf-filing" target="_blank" rel="noopener">"Scanned text is a photograph of a printed page produced either by a digital camera or scanner."</a> Once a page is a photograph, selecting, copying or searching its words no longer works until someone runs optical character recognition (OCR) on it.</p>
+
+<p>Two related terms get mixed up. To <strong>flatten a PDF</strong> in the strict sense means merging interactive layers (form fields, comments, stamps) into the page content, while text can stay selectable. To <strong>rasterize</strong> a PDF means turning everything, text included, into pixels. Converting a PDF to a scanned PDF is the second, stronger operation.</p>
+
+<p>There are two flavors of result. A <em>clean</em> image-only PDF keeps the page crisp and straight. A <em>scan-look</em> PDF adds a slight tilt, soft focus, noise and a paper tint. Our <a href="/scan">free PDF to scanned PDF tool</a> produces both from the same controls. For the background on what counts as a scanned file, see <a href="/blog/what-is-a-scanned-pdf/">what is a scanned PDF</a>.</p>
+
+<h2 id="before-after">What changes when a PDF becomes a scanned PDF?</h2>
+<p>When a PDF becomes a scanned PDF, the visible page stays the same while everything machine-readable on the page is replaced by pixels. Text, fonts, links, form fields and annotations stop being separate objects. File size usually grows, and search, copy and screen reading stop working until OCR is applied.</p>
+
+<p>The table compares a typical PDF exported from a word processor with the same file after conversion to page images. Behavior of the "after" column is what you get from any rasterizing method, including our tool, because each page is saved as a JPEG image inside a fresh PDF.</p>
+
+<div class="table-wrap"><table>
+<caption>Digital PDF vs the same PDF converted to a scanned (image-only) PDF</caption>
+<thead><tr><th scope="col">Element</th><th scope="col">Original digital PDF</th><th scope="col">After PDF to scanned PDF conversion</th></tr></thead>
+<tbody>
+<tr><th scope="row">Text layer</th><td>Real characters you can select, copy and search</td><td>Gone from the page; the words exist only as pixels</td></tr>
+<tr><th scope="row">Fonts</th><td>Embedded or referenced font files</td><td>No fonts are needed; letter shapes are baked into the image</td></tr>
+<tr><th scope="row">Links</th><td>Clickable URLs and internal jumps</td><td>Link text is still visible but no longer clickable</td></tr>
+<tr><th scope="row">Form fields</th><td>Fillable boxes, checkboxes, dropdowns</td><td>No longer fillable; check the preview to see which values were drawn into the image</td></tr>
+<tr><th scope="row">Annotations</th><td>Comments, highlights, stamps as separate objects</td><td>No longer editable objects; anything that remains is part of the picture</td></tr>
+<tr><th scope="row">Document metadata</th><td>Title, author and other properties set by the creating app</td><td>A new PDF is written; title, author, subject, keywords, producer and creator can be set in the tool's extras</td></tr>
+<tr><th scope="row">File size</th><td>Small for text pages</td><td>Usually larger; depends on resolution, color mode and page count</td></tr>
+<tr><th scope="row">Searchability</th><td>Ctrl+F and screen readers work</td><td>Not searchable or accessible until OCR adds a text layer</td></tr>
+</tbody></table></div>
+
+<p>Two rows deserve a closer look. For form fields and annotations, what survives visually depends on whether the page renderer draws them; a filled field value usually appears as printed text, while a pop-up comment may vanish, so inspect the live preview. For metadata, the extras panel lets you type the properties the new PDF should carry; check them before sending the file.</p>
+
+<p>The size row surprises people most. The Middle District of North Carolina notes that <a href="https://www.ncmd.uscourts.gov/sites/ncmd/files/ecfprocman.pdf" target="_blank" rel="noopener">2 MB holds roughly forty-five pages of PDF text</a>, and adds, verbatim: "Most scanned PDFs are not searchable and have a large file size." A text PDF describes letters; a scanned PDF stores every pixel of them.</p>
+
+<h2 id="how-to-convert">How do you convert a PDF to scanned in the browser?</h2>
+<p>To convert a PDF to scanned PDF in the browser, open the free tool at pdflookscanned.com/scan, drop in the file, set resolution, color mode and scan effects, check the live preview, and download. The whole process runs locally on your device and takes longer only for long documents or high resolution.</p>
+
+<ol class="step-list">
+<li><strong>Open the scanner.</strong> Go to <a href="/scan">pdflookscanned.com/scan</a> in any modern desktop or mobile browser, or open the Chrome extension side panel. No account or signup is needed.</li>
+<li><strong>Add your PDF.</strong> Drag the file onto the drop zone or click to choose it. PDFs are used as-is, so the page layout, fonts and images you see now are exactly what gets rendered.</li>
+<li><strong>Pick the resolution.</strong> Leave Resolution at the default 2× (about 144 dpi) for ordinary letters and forms. Move it to 2.5× or 3× (about 216 dpi) if the file has footnotes, small print or dense tables.</li>
+<li><strong>Choose the color space.</strong> Keep Gray (the default) for text documents; switch to Color only when color carries meaning, such as charts, highlighted clauses or a colored logo.</li>
+<li><strong>Set the look.</strong> For a clean flatten, set Rotate, Rotate variance, Blur and Noise to 0. For a scan look, keep the defaults (Rotate 1°, Blur 0.3, Noise 0.1) or adjust them lightly.</li>
+<li><strong>Fine-tune brightness and paper tone.</strong> Brightness and Contrast default to 1; raise Contrast slightly if gray text looks weak. Yellowish adds an aged-paper tint and is 0 by default.</li>
+<li><strong>Add extras if needed.</strong> Optional: a text or image watermark, a stamp or signature image you are entitled to use, and the document metadata fields (title, author, subject, keywords, producer, creator).</li>
+<li><strong>Check the preview and download.</strong> Zoom into the smallest text on the preview. If it reads cleanly, download the new scanned PDF; if not, raise the resolution and preview again.</li>
+</ol>
+
+<p>If your source is a Word file, a Google Doc or a spreadsheet, export it to PDF first (in Word: File, Save As, PDF; in Google Docs: File, Download, PDF document). The tool can read DOCX and XLSX directly, but it extracts only the raw text and re-typesets it on A4 pages in 11-point Helvetica, so formatting, tables and images are lost.</p>
+
+<p>Exporting to PDF first keeps the layout exactly as designed. The <a href="/blog/how-to-make-a-pdf-look-scanned/">complete guide to making a PDF look scanned</a> compares this route with five other methods.</p>
+
+<h2 id="resolution">Which resolution keeps a scanned PDF readable?</h2>
+<p>A scanned PDF stays readable when each letter gets enough pixels. Our tool renders PDF pages at 72 dpi multiplied by the Resolution setting, so 1× is about 72 dpi, 2× about 144 dpi and 3× about 216 dpi. Real archival scanning targets 200 to 300 ppi, so 3× suits small print.</p>
+
+<p>The 72 comes from how PDF measures pages. PDF and PostScript geometry is built on <a href="https://en.wikipedia.org/wiki/Dots_per_inch" target="_blank" rel="noopener">72 points per inch</a>, so a US Letter page is 612 × 792 points. Rendering it at 1× gives 612 × 792 pixels, at 2× gives 1,224 × 1,584 pixels, and at 3× gives 1,836 × 2,376 pixels. Pixel count grows with the square of the scale.</p>
+
+<dl class="spec-list">
+<dt>1× (about 72 dpi)</dt><dd>Letter page 612 × 792 px. Fine for large headings and slides; body text starts to break up. Smallest files.</dd>
+<dt>1.5× (about 108 dpi)</dt><dd>Letter page 918 × 1,188 px. Acceptable for 12-point text on screen; weak for footnotes.</dd>
+<dt>2× (about 144 dpi, default)</dt><dd>Letter page 1,224 × 1,584 px. Clear body text for letters, invoices and forms; the balanced choice.</dd>
+<dt>2.5× (about 180 dpi)</dt><dd>Letter page 1,530 × 1,980 px. Use when a document mixes normal text with small labels.</dd>
+<dt>3× (about 216 dpi)</dt><dd>Letter page 1,836 × 2,376 px. Best for contracts with fine print, dense tables and signatures that must stay sharp.</dd>
+</dl>
+
+<h3>How small print behaves at each scanned PDF resolution</h3>
+<p>A simple calculation shows why small text needs more pixels. An 8-point footnote is 8/72 of an inch tall as a font size. At 1× that is about 8 pixels for the whole letter height including ascenders and descenders, which blurs lowercase "e" and "c" together. At 2× it becomes about 16 pixels, and at 3× about 24 pixels, which reads comfortably even after light blur and JPEG compression.</p>
+
+<p>For comparison, the U.S. National Archives requires at least <a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">300 ppi for digitized modern textual records and 400 ppi for photographs and fine-detail records</a> under 36 CFR 1236 Subpart E. FADGI rates unbound documents in star levels from 200 ppi (one star) through 250 and 300 up to 400 ppi (four stars) in its <a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">2023 technical guidelines</a>. Those targets protect paper originals.</p>
+
+<p>A PDF to scanned PDF conversion starts from a perfect digital page, not wrinkled paper, so it does not need archival density to look sharp. Our experience is that 2× handles normal 10–12 point text, and 3× (216 dpi) sits just above the FADGI one-star level for fine print.</p>
+
+<p>NARA adds a useful caution in the same regulation: "The agency cannot rely solely on equipment specifications, such as scanner ppi settings or camera sensor megapixels, to ensure digital image quality." In practice, judge the preview, not the number.</p>
+
+<h2 id="color-and-size">Gray, color or bitonal: which keeps the file small?</h2>
+<p>Bitonal (pure black and white) files are the smallest, grayscale sits in the middle, and color is the largest at the same resolution. For a PDF to scanned PDF conversion, grayscale is the practical default: it keeps anti-aliased letter edges smooth and stays far smaller than color. Use color only when color carries information.</p>
+
+<p>The strongest real-world numbers come from the Northern District of California, which scanned the same 317-page document two ways. As a <a href="https://cand.uscourts.gov/cases-e-filing/cmecf-information/preparing-your-cmecf-filing" target="_blank" rel="noopener">bitonal file at 300 ppi it weighed 23.86 MB and stayed legible</a>; in grayscale at 400 ppi it grew to 374.47 MB. That is roughly fifteen times larger for the same pages, driven by both the color depth and the higher resolution.</p>
+
+<div class="table-wrap"><table>
+<caption>Color modes for a scanned PDF: what each one is good for</caption>
+<thead><tr><th scope="col">Mode</th><th scope="col">Bits per pixel</th><th scope="col">Relative size</th><th scope="col">Best for</th></tr></thead>
+<tbody>
+<tr><th scope="row">Bitonal (black and white)</th><td>1</td><td>Smallest</td><td>Court filings of plain text; not a mode in our tool</td></tr>
+<tr><th scope="row">Grayscale (tool: Gray)</th><td>8</td><td>Medium</td><td>Letters, contracts, forms, anything with signatures</td></tr>
+<tr><th scope="row">Color (tool: Color)</th><td>24</td><td>Largest</td><td>Charts, colored stamps, photos, highlighted text</td></tr>
+</tbody></table></div>
+
+<p>Our tool offers Gray and Color and stores each page as a JPEG image. JPEG is efficient for gray tones but, as FADGI puts it, "standard JPEG processing introduces 8x8 pixel blocks that are clearly not part of the original content." At 2× or 3× those blocks are rarely visible on text.</p>
+
+<p>If you need true one-bit black and white, our guide to <a href="/blog/convert-color-pdf-to-black-and-white/">converting a color PDF to black and white</a> explains the difference and the options.</p>
+
+<h3>Scanned PDF file size limits you may hit</h3>
+<p>Upload caps make the color choice practical rather than cosmetic. The Western District of Washington sets a <a href="https://www.wawd.uscourts.gov/attorneys/cm-ecf-faqs/Technical" target="_blank" rel="noopener">100 MB per-document limit and asks for 300 dpi black-and-white scans</a> unless color is integral. The District of Minnesota caps each exhibit at <a href="https://www.mnd.uscourts.gov/sites/mnd/files/Criminal-ECF-Procedures-Guide.pdf" target="_blank" rel="noopener">35 MB in its criminal ECF procedures</a>. USCIS limits each <a href="https://www.uscis.gov/file-online/tips-for-filing-forms-online" target="_blank" rel="noopener">uploaded evidence file to 12 MB</a>.</p>
+
+<div class="callout callout-tip"><strong>Quick size rule</strong>Start at 2× and Gray. If the downloaded file is too large for a portal, drop to 1.5× before switching anything else, because halving resolution steps cuts pixels far more than any other setting. If it is still too large, split the PDF and convert the parts separately.</div>
+
+<h2 id="flatten-vs-scan-look">Flatten PDF cleanly or add a scan look?</h2>
+<p>Choose a clean flatten when a recipient only needs an image-only PDF with no editable text, and choose the scan look when the file must resemble paper that went through a scanner. The same tool does both: set Rotate, Rotate variance, Blur and Noise to 0 for a clean flatten, or keep them above 0 for realism.</p>
+
+<p>A clean flatten is often the right answer: sending a final contract so nobody can quietly retype a clause with a text editor, locking a filled form so its values cannot be changed field by field, or delivering pages to a system that rejects PDFs with fonts or form fields. Here a tilt or speckle adds nothing.</p>
+
+<div class="table-wrap"><table>
+<caption>Settings for a clean flatten vs a scan-look PDF to scanned PDF conversion</caption>
+<thead><tr><th scope="col">Control (range)</th><th scope="col">Clean flatten</th><th scope="col">Light scan look</th><th scope="col">Strong scan look</th></tr></thead>
+<tbody>
+<tr><th scope="row">Rotate (−10° to 10°)</th><td>0°</td><td>1° (default)</td><td>1.5°–2°</td></tr>
+<tr><th scope="row">Rotate variance (0–10°)</th><td>0</td><td>0.5</td><td>1</td></tr>
+<tr><th scope="row">Blur (0–1)</th><td>0</td><td>0.3 (default)</td><td>0.4–0.5</td></tr>
+<tr><th scope="row">Noise (0–1)</th><td>0</td><td>0.1 (default)</td><td>0.2–0.3</td></tr>
+<tr><th scope="row">Brightness / Contrast (0–2)</th><td>1 / 1</td><td>1 / 1.1</td><td>1.05 / 1.2</td></tr>
+<tr><th scope="row">Yellowish (0–2)</th><td>0</td><td>0–0.2</td><td>0.3–0.5</td></tr>
+<tr><th scope="row">Border</th><td>Off</td><td>Off</td><td>On</td></tr>
+<tr><th scope="row">Colorspace / Resolution</th><td>Gray or Color / 2×–3×</td><td>Gray / 2×</td><td>Gray / 2×</td></tr>
+</tbody></table></div>
+
+<p>The scan-look values imitate defects that archivists try to remove. NARA's regulation defines noise as "one or more undesirable image artifact(s) in a digitized record that is not part of the source material," and lists skew and improper cropping among the defects to check. A little of each looks believable; too much looks like a bad copy.</p>
+
+<p>Two cautions for the scan look. Blur above about 0.5 softens small print quickly, so raise Resolution when you raise Blur. Rotation larger than 2° clips page corners and looks careless rather than realistic. For a full tour of artifacts and ready-made combinations, see our <a href="/blog/scan-effect/">scan effect guide</a>.</p>
+
+<h2 id="required-or-refused">When is a scanned PDF required or refused?</h2>
+<p>A scanned PDF is sometimes requested (image-only uploads, flattened final copies) but often refused where text search matters. Federal courts and accessibility rules usually prefer text-searchable PDFs, so check the recipient's rules before you convert a PDF to scanned PDF, and keep the original file.</p>
+
+<p>Courts are the clearest example. The federal judiciary's FAQ states that <a href="https://www.uscourts.gov/court-records/file-a-case-cm-ecf/faqs-case-management-electronic-case-files-cm-ecf" target="_blank" rel="noopener">"CM/ECF systems are designed to accept only documents in PDF format,"</a> but the details differ by district. The Southern District of Florida is strict: <a href="https://www.flsd.uscourts.gov/all-faqs/CMECF" target="_blank" rel="noopener">"pleadings/main documents filed electronically in CM/ECF must be in text searchable PDF format"</a>, and exhibits should be searchable whenever possible.</p>
+
+<p>Other districts express a preference rather than a ban. The District of Massachusetts writes that <a href="https://www.mad.uscourts.gov/caseinfo/pdf/ECFadminProc.pdf" target="_blank" rel="noopener">"Documents converted to PDF, rather than scanned, are preferred for filing in CM/ECF."</a> The District of Minnesota says "Text-searchable scanned PDF documents are preferred, but not required." The Eastern District of Oklahoma advises creating <a href="https://www.oked.uscourts.gov/pdfa-frequently-asked-questions" target="_blank" rel="noopener">PDF/A files directly from a word processor instead of printing and scanning</a>, to keep files small and searchable.</p>
+
+<p>Accessibility is the second reason for refusal. The W3C's WCAG technique PDF7 states: <a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF7" target="_blank" rel="noopener">"A document that consists of scanned images of text is inherently inaccessible because the content of the document is images, not searchable text."</a> Public-facing documents from agencies, universities and many companies must meet WCAG, so an image-only file is the wrong format for them unless OCR is added.</p>
+
+<div class="callout callout-warn"><strong>Check the rules, and use the scan look honestly</strong>If a court, agency or employer requires text-searchable PDFs, file the original digital PDF, or run OCR on the scanned version afterwards so a hidden text layer returns. Our tool does not perform OCR. Also remember that a scan look changes appearance, not authenticity: do not use it to alter or forge official documents, IDs or signatures that are not yours.</div>
+
+<h3>Adding a text layer back with OCR</h3>
+<p>If you need both the flattened appearance and searchability, convert first and then run OCR in desktop PDF software that offers a "recognize text" or "make searchable" step. OCR places invisible text behind the page image, so the file looks scanned while Ctrl+F works again. Proofread important documents, because OCR estimates the letters.</p>
+
+<h2 id="privacy">Is it safe to convert a PDF to scanned PDF online?</h2>
+<p>Converting a PDF to scanned PDF online is safe when the processing happens in your browser. Our tool renders pages locally with pdf.js and the browser canvas, so the file is not uploaded to a processing server. After the first visit it also works offline, which lets you verify this yourself.</p>
+
+<p>Local processing matters for the kind of files people flatten: signed contracts, payroll records, medical forms, tax documents. Many online converters upload the PDF, process it on a server and send back the result, which means a copy exists, at least briefly, on hardware you do not control. With in-browser rendering the pages never leave the device that opened them.</p>
+
+<ul>
+<li><strong>Offline test.</strong> Load <a href="/scan">the scanner</a> once, disconnect from the internet, and convert a file. If it works with no connection, nothing was uploaded.</li>
+<li><strong>No account.</strong> There is no signup, so no document history is attached to your identity.</li>
+<li><strong>Same engine in Chrome.</strong> The <a href="https://chromewebstore.google.com/detail/make-pdf-look-scanned/ijhpnlcipgiokgignkbbbgkobdmdoila" target="_blank" rel="noopener">Chrome extension</a>, rated 5 stars in the Chrome Web Store, runs the identical local engine in a side panel.</li>
+</ul>
+
+
+<h2 id="batch">How do you convert many PDFs to scanned PDFs at once?</h2>
+<p>To convert many PDFs to scanned PDFs at once, open the bulk page at pdflookscanned.com/scan/bulk, add all the files, choose one set of settings, and download everything as a single ZIP archive. Each input file becomes its own scanned PDF with the same resolution, color mode and effects.</p>
+
+<ol class="step-list">
+<li><strong>Open bulk mode.</strong> Go to <a href="/scan/bulk">pdflookscanned.com/scan/bulk</a> (in the Chrome extension, simply add several files).</li>
+<li><strong>Add the files.</strong> Drop in the PDFs. Mixed inputs such as JPG or PNG also work; each image becomes a one-page PDF.</li>
+<li><strong>Choose shared settings.</strong> Set Resolution, Colorspace and the effect sliders once; they apply to every file.</li>
+<li><strong>Download the ZIP.</strong> Run the batch and download the ZIP, then spot-check a few outputs for small-print readability.</li>
+</ol>
+
+<p>Bulk mode keeps files separate on purpose; it does not merge them into one document. If you need a single combined scanned PDF, merge the source PDFs first (for example, in macOS Preview drag pages from one PDF into the sidebar of another, or print several documents together to "Microsoft Print to PDF" on Windows), then convert the merged file once.</p>
+
+<p>Batch work is also where Rotate variance helps: each page gets a slightly different random tilt, which looks more natural across a long document.</p>
+
+<h2 id="checking">How do you check the result is a scanned PDF?</h2>
+<p>Check a converted file by trying to select text, searching for a word, and zooming into the smallest print. A true scanned PDF lets you select nothing but whole-page images, finds no words with Ctrl+F, and still reads cleanly at 200 percent zoom. Also confirm the file size and page count.</p>
+
+<p>Cleveland State University's accessibility guide describes the quickest test: <a href="https://pressbooks.ulib.csuohio.edu/accessibility/chapter/chapter-4-2-the-difference-between-an-accessible-pdf-and-a-scanned-image-of-text/" target="_blank" rel="noopener">"If the word becomes highlighted on the page, then it has searchable text as opposed to being a scanned image of text."</a> After a proper conversion nothing highlights, and dragging the cursor selects the page image instead of words.</p>
+
+<div class="callout callout-info"><strong>Five-point check before you send</strong>1. Text cannot be selected or copied. 2. Ctrl+F finds nothing. 3. The smallest print reads at 200 percent zoom. 4. Page count and order match the original. 5. File size fits the recipient's upload limit, and document properties show only what you intended.</div>
+
+
+<h2 id="troubleshooting">How do you fix PDF to scanned PDF problems?</h2>
+<p>Most PDF to scanned PDF problems come from four settings: resolution too low (blurry text), resolution or color too high (huge file), a non-PDF source (wrong page size), and rotation left on (tilted pages). Each has a direct fix in the tool, listed below with the setting to change first.</p>
+
+<h3>Blurry or broken text in the scanned PDF</h3>
+<p>Raise Resolution to 2.5× or 3×, then lower Blur to 0.1–0.2 or 0 for a clean flatten. If thin gray text still fades, raise Contrast to about 1.2. Blur and noise are applied after rendering, so at 1× even a small blur value can make 9-point text unreadable.</p>
+
+<h3>The scanned PDF file is huge</h3>
+<p>Switch Colorspace to Gray if the document is text, then step Resolution down from 3× to 2× or 1.5×. Noise also costs space, because random speckles are hard for JPEG to compress, so keep Noise at 0.1 or lower on long documents. For very long files, split them and convert in parts.</p>
+
+<h3>Wrong page size after converting to scanned</h3>
+<p>PDF pages keep their original size and layout. If your output shows A4 pages with plain Helvetica text, the source was a DOCX, spreadsheet, TXT or HTML file, which the tool re-typesets as text on A4. Export the original to PDF from its own app first, then convert that PDF.</p>
+
+<h3>Pages are tilted or corners are cut off</h3>
+<p>Set Rotate and Rotate variance to 0 for a straight page. The defaults (Rotate 1°) are there for realism, but a legal filing or a form headed for automated processing should usually be straight. If you want tilt, keep it under 2° so corners stay inside the page.</p>
+
+<h3>Signature or stamp looks pixelated</h3>
+<p>Signature lines are thin and suffer first at low resolution. Use 2.5× or 3×, keep Blur at or below 0.3, and if you place a stamp or signature image through the extras, start from a high-resolution PNG. Only place signatures and stamps you are authorized to use.</p>
+
+<div class="expert-quote"><blockquote>We built the Resolution control around the PDF's own 72-point grid so the numbers stay honest: 2× is 144 dpi, 3× is 216 dpi, nothing hidden. That is why the defaults are 2× in Gray: sharp enough for normal body text, and far smaller than a color render of the same page. We keep everything local in the browser because the files people flatten are usually the ones they least want to upload.</blockquote><cite><strong>The Make PDF look scanned team</strong> — builders of the web tool and Chrome extension</cite></div>
+
+<h2 id="faq">PDF to scanned PDF: frequently asked questions</h2>
+<p>These PDF to scanned PDF answers cover the questions people ask most after converting: what happens to hidden text and metadata, whether the change can be undone, how OCR fits in, which settings to pick, and whether the tool works on phones. Each answer reflects what the tool actually does.</p>
+
+<div class="faq-item"><p class="faq-q">Does converting a PDF to a scanned PDF remove hidden text?</p><p class="faq-a">Yes, from the page content. The new pages are JPEG images of what the renderer draws, so there is no text layer left to copy, including white text or words hidden behind a black box. Treat this as a side effect, and still inspect the preview when a redaction matters.</p></div>
+
+<div class="faq-item"><p class="faq-q">What happens to the metadata of the original PDF?</p><p class="faq-a">The tool writes a new PDF and lets you set its title, author, subject, keywords, producer and creator in the extras panel. Fill those fields in the way you want them before downloading, then check the document properties of the result in your PDF viewer.</p></div>
+
+<div class="faq-item"><p class="faq-q">Can a scanned PDF be converted back to an editable PDF?</p><p class="faq-a">Not exactly. The original text layer, fonts, links and form fields are gone. OCR can recognize the letters and add a new searchable layer, and some software can rebuild editable text from it, but formatting and accuracy will not match the original. Keep the original file.</p></div>
+
+<div class="faq-item"><p class="faq-q">Can I run OCR on the scanned PDF afterwards?</p><p class="faq-a">Yes. Any OCR step in desktop PDF software will treat the output like a normal scan. Higher resolution and low noise give better recognition, so use 2× or 3× with Noise near 0 if you plan to OCR the file.</p></div>
+
+<div class="faq-item"><p class="faq-q">What is the difference between "flatten PDF" and "PDF to scanned"?</p><p class="faq-a">Flattening in the narrow sense merges form fields and annotations into the page but may keep text selectable. Converting a PDF to scanned turns the entire page, text included, into an image. The second is stronger and is what our tool does.</p></div>
+
+<div class="faq-item"><p class="faq-q">What resolution should I choose to convert a PDF to scanned PDF?</p><p class="faq-a">Use 2× (about 144 dpi) for normal documents and 3× (about 216 dpi) for fine print, dense tables or signatures. Drop to 1.5× only when the file must be very small and the text is 12 points or larger.</p></div>
+
+<div class="faq-item"><p class="faq-q">Why is my scanned PDF so much bigger than the original?</p><p class="faq-a">A text PDF stores letters as compact instructions; a scanned PDF stores every pixel of every page. Gray instead of Color, a lower Resolution and less Noise all reduce size. Courts report the same effect: one 317-page test file ranged from 23.86 MB to 374.47 MB depending on color mode and resolution.</p></div>
+
+<div class="faq-item"><p class="faq-q">Will a court accept a PDF converted to a scanned PDF?</p><p class="faq-a">It depends on the court. Some districts require text-searchable main documents, others only prefer them. Read the local CM/ECF rules first; when in doubt, file the original digital PDF or add OCR to the scanned version.</p></div>
+
+
+<div class="faq-item"><p class="faq-q">Does the PDF to scanned PDF tool work on a phone?</p><p class="faq-a">Yes. The website runs in mobile browsers, processes files locally on the phone and downloads the scanned PDF to your files. Large documents at 3× take longer and use more memory on phones, so 2× is the safer choice there.</p></div>
+
+<div class="faq-item"><p class="faq-q">Is the PDF to scanned PDF converter free?</p><p class="faq-a">Yes. The web tool and the Chrome extension are free, need no signup, and add no watermark unless you choose to add one yourself in the extras.</p></div>
