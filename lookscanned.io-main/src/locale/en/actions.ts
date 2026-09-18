@@ -1,0 +1,20 @@
+export const actions = {
+  navigateToScan: 'Start scanning',
+  navigateToHomePage: 'Home',
+  navigateToSupportMe: 'Chrome Extension',
+  backToIndex: 'Back',
+  preview: 'Preview',
+  save: 'Save',
+  generateScannedPDF: 'Generate Scanned PDF',
+  generating: 'Generating...',
+  downloadScannedPDF: 'Download Scanned PDF',
+  generateSuccess: 'Successfully generated',
+  generateError: 'Failed to generate: ',
+  addFiles: 'Add files',
+  processAll: 'Generate scanned PDFs',
+  downloadZip: 'Download all as ZIP',
+  converting: 'Preparing file…',
+  queued: 'Queued',
+  done: 'Done',
+  failed: 'Failed'
+}

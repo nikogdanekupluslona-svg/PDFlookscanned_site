@@ -1,0 +1,20 @@
+export const actions = {
+  navigateToScan: '开始扫描',
+  navigateToHomePage: '首页',
+  navigateToSupportMe: 'Chrome 扩展',
+  backToIndex: '返回',
+  preview: '预览',
+  save: '保存',
+  generateScannedPDF: '生成扫描版 PDF',
+  generating: '生成中...',
+  downloadScannedPDF: '下载扫描版 PDF',
+  generateSuccess: '生成成功',
+  generateError: '生成失败：',
+  addFiles: '添加文件',
+  processAll: '生成扫描版 PDF',
+  downloadZip: '打包下载 ZIP',
+  converting: '正在准备文件…',
+  queued: '排队中',
+  done: '完成',
+  failed: '失败'
+}
