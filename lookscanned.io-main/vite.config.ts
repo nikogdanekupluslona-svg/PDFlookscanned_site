@@ -14,6 +14,8 @@ function spaFallback() {
       const index = resolve(__dirname, 'dist/index.html')
       if (existsSync(index)) {
         copyFileSync(index, resolve(__dirname, 'dist/404.html'))
+        // GitHub Pages serves /scan from scan.html with HTTP 200 instead of the 404 fallback
+        copyFileSync(index, resolve(__dirname, 'dist/scan.html'))
       }
     }
   }

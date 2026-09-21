@@ -120,7 +120,7 @@
 
 <script lang="ts" setup>
 import { NCard, NCollapse, NCollapseItem, NSpace, NInput, NButton, NSlider, NText } from 'naive-ui'
-import { fileOpen } from 'browser-fs-access'
+import { pickFile } from '@/utils/pick-file'
 import { useI18n } from 'vue-i18n'
 import { useVModel } from '@vueuse/core'
 import type { OverlayConfig, PdfMetadata } from '@/utils/overlays/types'
@@ -148,22 +148,16 @@ function updateMeta(partial: Partial<PdfMetadata>) {
   metadata.value = { ...metadata.value, ...partial }
 }
 
+const IMAGE_ACCEPT = 'image/png,image/jpeg,image/webp,image/svg+xml,.png,.jpg,.jpeg,.webp,.svg'
+
 async function pickWatermark() {
-  const file = await fileOpen({
-    description: 'Image',
-    mimeTypes: ['image/*'],
-    extensions: ['.png', '.jpg', '.jpeg', '.webp', '.svg']
-  })
-  update({ watermarkImage: file })
+  const file = await pickFile(IMAGE_ACCEPT)
+  if (file) update({ watermarkImage: file })
 }
 
 async function pickStamp() {
-  const file = await fileOpen({
-    description: 'Image',
-    mimeTypes: ['image/*'],
-    extensions: ['.png', '.jpg', '.jpeg', '.webp', '.svg']
-  })
-  update({ stampImage: file })
+  const file = await pickFile(IMAGE_ACCEPT)
+  if (file) update({ stampImage: file })
 }
 </script>
 

@@ -3,7 +3,9 @@
     <n-grid x-gap="25" y-gap="25" :cols="12" item-responsive responsive="screen">
       <n-grid-item span="12 s:5 m:4 l:3">
         <n-space vertical>
-          <FileUpload multiple @update:files="onAddFiles" />
+          <n-card size="small">
+            <FileUpload multiple :compact="items.length > 0" @update:files="onAddFiles" />
+          </n-card>
           <ScanSettingsCard v-model:config="config" />
           <n-card>
             <n-space>
@@ -58,7 +60,7 @@ import {
   NEmpty,
   useMessage
 } from 'naive-ui'
-import { fileSave } from 'browser-fs-access'
+import { downloadFile } from '@/utils/download-file'
 import MainContainer from '@/components/MainContainer.vue'
 import FileUpload from '@/components/pdf-upload/FileUpload.vue'
 import ScanSettingsCard from '@/components/scan-settings/ScanSettingsCard.vue'
@@ -161,15 +163,8 @@ async function processAll() {
   else message.success(t('actions.generateSuccess'))
 }
 
-async function downloadOne(file: File) {
-  await fileSave(file, {
-    fileName: file.name,
-    extensions: ['.pdf'],
-    mimeTypes: ['application/pdf'],
-    startIn: 'downloads',
-    description: 'PDF File',
-    id: 'pdflookscanned'
-  })
+function downloadOne(file: File) {
+  downloadFile(file, file.name)
 }
 
 async function downloadZip() {
@@ -179,14 +174,7 @@ async function downloadZip() {
     zip.file(file.name, await file.arrayBuffer())
   }
   const blob = await zip.generateAsync({ type: 'blob' })
-  await fileSave(blob, {
-    fileName: 'scanned-pdfs.zip',
-    extensions: ['.zip'],
-    mimeTypes: ['application/zip'],
-    startIn: 'downloads',
-    description: 'ZIP File',
-    id: 'pdflookscanned-zip'
-  })
+  downloadFile(blob, 'scanned-pdfs.zip')
 }
 </script>
 

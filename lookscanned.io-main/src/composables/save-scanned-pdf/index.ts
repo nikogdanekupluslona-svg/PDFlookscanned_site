@@ -120,5 +120,5 @@ export function useSaveScannedPDF(
     }
   }
 
-  return { save, progress, saving, scannedPDF }
+  return { save, progress, finishedPages, totalPages, saving, scannedPDF }
 }
