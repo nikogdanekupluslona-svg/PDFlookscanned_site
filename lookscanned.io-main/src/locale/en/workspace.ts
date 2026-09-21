@@ -14,23 +14,45 @@ export const upload = {
   ready: 'Loaded',
   pages: '{n} page | {n} pages',
   sampleBanner:
-    'This is a sample document. Upload your own file in step 1 and its preview will appear here.'
+    'This is a sample document. Upload your own files in step 1 — you can add several at once.'
 }
 
 export const save = {
-  readyTitle: 'Your scanned PDF is ready',
-  progress: 'Scanning page {current} of {total}…',
-  generateHint: 'Tweak the settings, then create the file. It takes a few seconds per page.',
-  sampleHint: 'Upload your file first — right now this would scan the sample document.',
-  whereSaved: 'The file is saved to your Downloads folder.',
-  downloaded: 'Downloaded — look for it in your Downloads folder. Change a setting to create a new version.'
+  create: 'Create scanned PDF | Create {n} scanned PDFs',
+  readyTitle: 'Your scanned PDF is ready | Your {n} scanned PDFs are ready',
+  progress: 'page {current} of {total}',
+  fileProgress: 'File {current} of {total}',
+  autoHint:
+    'The scanned PDF downloads automatically when it is ready. | All {n} files will be scanned and downloaded automatically as one ZIP.',
+  noFileHint: 'Upload a file in step 1 to start.',
+  busyHint: 'Keep this tab open — the download starts by itself when scanning is done.',
+  downloadAgain: 'Download again',
+  downloadStarted: 'Done — the download has started',
+  whereSaved: 'Look for it in your Downloads folder.',
+  zipHint: 'To get a single file, use the download icon next to it in step 1.',
+  someFailed: '{n} file could not be scanned | {n} files could not be scanned'
+}
+
+export const files = {
+  preview: 'Show in preview',
+  previewOf: 'Preview: {name}',
+  downloadOne: 'Download this scanned PDF',
+  remove: 'Remove file',
+  hint: 'Click a file to preview it. All files use the same settings.',
+  openError: 'Could not open this file',
+  status: {
+    loading: 'Preparing…',
+    ready: 'Ready',
+    processing: 'Scanning…',
+    done: 'Scanned'
+  }
 }
 
 export const steps = {
   upload: 'Upload',
   adjust: 'Adjust',
   download: 'Download',
-  uploadTitle: 'Upload your file',
+  uploadTitle: 'Upload your files',
   adjustTitle: 'Adjust the scan look',
   downloadTitle: 'Get your scanned PDF'
 }

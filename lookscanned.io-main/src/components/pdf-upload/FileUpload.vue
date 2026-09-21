@@ -9,7 +9,7 @@
       :multiple="multiple"
       @change="onChange"
     />
-    <n-icon :component="ArrowSync16Regular" />
+    <n-icon :component="multiple ? Add16Regular : ArrowSync16Regular" />
     <span>{{ multiple ? t('upload.addMore') : t('upload.replace') }}</span>
   </label>
 
@@ -46,7 +46,11 @@
 <script lang="ts" setup>
 import { onBeforeUnmount, onMounted, ref } from 'vue'
 import { NIcon, useMessage } from 'naive-ui'
-import { ArrowSync16Regular, CloudArrowUp24Regular, LockClosed16Regular } from '@vicons/fluent'
+import {
+  Add16Regular,
+  ArrowSync16Regular,
+  CloudArrowUp24Regular, LockClosed16Regular
+} from '@vicons/fluent'
 import { useI18n } from 'vue-i18n'
 import { isSupportedSourceFile } from '@/utils/document-source/normalize-to-pdf'
 

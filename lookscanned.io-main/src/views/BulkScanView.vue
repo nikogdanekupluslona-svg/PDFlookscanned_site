@@ -61,6 +61,7 @@ import {
   useMessage
 } from 'naive-ui'
 import { downloadFile } from '@/utils/download-file'
+import { zipFiles } from '@/utils/zip-files'
 import MainContainer from '@/components/MainContainer.vue'
 import FileUpload from '@/components/pdf-upload/FileUpload.vue'
 import ScanSettingsCard from '@/components/scan-settings/ScanSettingsCard.vue'
@@ -168,13 +169,7 @@ function downloadOne(file: File) {
 }
 
 async function downloadZip() {
-  const JSZip = (await import('jszip')).default
-  const zip = new JSZip()
-  for (const file of doneFiles.value) {
-    zip.file(file.name, await file.arrayBuffer())
-  }
-  const blob = await zip.generateAsync({ type: 'blob' })
-  downloadFile(blob, 'scanned-pdfs.zip')
+  downloadFile(await zipFiles(doneFiles.value), 'scanned-pdfs.zip')
 }
 </script>
 

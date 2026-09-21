@@ -1,38 +1,38 @@
 <template>
   <div class="save">
-    <template v-if="pdf">
+    <template v-if="output && !busy">
       <div class="result">
         <n-icon class="done-icon" :component="CheckmarkCircle24Filled" />
         <div class="result-text">
-          <strong>{{ t('save.readyTitle') }}</strong>
-          <span>{{ pdf.name }} · {{ filesize(pdf.size) }}</span>
+          <strong>{{ t('save.readyTitle', output.count) }}</strong>
+          <span>{{ output.name }} · {{ filesize(output.size) }}</span>
         </div>
       </div>
-      <button type="button" class="primary" @click="download">
+      <button type="button" class="primary secondary" @click="emit('download')">
         <n-icon :component="ArrowDownload24Regular" />
-        {{ t('actions.downloadScannedPDF') }}
+        {{ t('save.downloadAgain') }}
       </button>
-      <p class="hint">{{ downloaded ? t('save.downloaded') : t('save.whereSaved') }}</p>
+      <p class="hint">
+        {{ t('save.whereSaved') }}
+        <template v-if="output.count > 1"> {{ t('save.zipHint') }}</template>
+      </p>
     </template>
 
     <template v-else>
-      <button type="button" class="primary" :disabled="saving || disabled" @click="emit('generate')">
-        <n-spin v-if="saving" :size="16" stroke="#10200a" />
+      <button type="button" class="primary" :disabled="busy || !count" @click="emit('generate')">
+        <n-spin v-if="busy" :size="16" stroke="#10200a" />
         <n-icon v-else :component="DocumentPdf24Regular" />
-        <span v-if="saving && totalPages">
-          {{ t('save.progress', { current: finishedPages, total: totalPages }) }}
-        </span>
-        <span v-else-if="saving">{{ t('actions.generating') }}</span>
-        <span v-else>{{ t('actions.generateScannedPDF') }}</span>
+        <span v-if="busy">{{ progressText || t('actions.generating') }}</span>
+        <span v-else>{{ t('save.create', { n: count }, Math.max(count, 1)) }}</span>
       </button>
-      <div v-if="saving" class="bar"><div :style="{ width: (progress ?? 0) * 100 + '%' }" /></div>
-      <p class="hint">{{ sample ? t('save.sampleHint') : t('save.generateHint') }}</p>
+      <div v-if="busy" class="bar"><div :style="{ width: (progress ?? 0) * 100 + '%' }" /></div>
+      <p class="hint">{{ hint }}</p>
     </template>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref, watch } from 'vue'
+import { computed } from 'vue'
 import { NIcon, NSpin } from 'naive-ui'
 import {
   ArrowDownload24Regular,
@@ -41,35 +41,36 @@ import {
 } from '@vicons/fluent'
 import { filesize } from 'filesize'
 import { useI18n } from 'vue-i18n'
-import { downloadFile } from '@/utils/download-file'
+
+export interface SaveOutput {
+  name: string
+  size: number
+  count: number
+}
 
 const { t } = useI18n()
 
 const props = defineProps<{
+  /** Files ready to be scanned */
+  count: number
+  loading?: boolean
+  busy?: boolean
   progress?: number
-  finishedPages?: number
-  totalPages?: number
-  saving?: boolean
-  disabled?: boolean
-  sample?: boolean
-  pdf?: File
+  progressText?: string
+  output?: SaveOutput
 }>()
 
 const emit = defineEmits<{
   (e: 'generate'): void
+  (e: 'download'): void
 }>()
 
-const downloaded = ref(false)
-watch(
-  () => props.pdf,
-  () => (downloaded.value = false)
-)
-
-const download = () => {
-  if (!props.pdf) return
-  downloadFile(props.pdf, props.pdf.name)
-  downloaded.value = true
-}
+const hint = computed(() => {
+  if (props.busy) return t('save.busyHint')
+  if (props.loading) return t('actions.converting')
+  if (!props.count) return t('save.noFileHint')
+  return t('save.autoHint', props.count)
+})
 </script>
 
 <style scoped>
@@ -106,6 +107,16 @@ const download = () => {
   background: #a3e062;
 }
 
+.primary.secondary {
+  border: 1px solid #8fd14f;
+  background: transparent;
+  color: #8fd14f;
+}
+
+.primary.secondary:hover {
+  background: rgba(143, 209, 79, 0.12);
+}
+
 .primary:focus-visible {
   outline: 2px solid #f4f4f5;
   outline-offset: 2px;
@@ -113,10 +124,11 @@ const download = () => {
 
 .primary:disabled {
   cursor: default;
-  opacity: 0.75;
+  opacity: 0.55;
 }
 
 .bar {
+  max-width: 380px;
   height: 4px;
   border-radius: 2px;
   background: #27272a;
