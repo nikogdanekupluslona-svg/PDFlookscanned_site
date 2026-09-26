@@ -1,0 +1,15 @@
+[
+  { "code": "en", "path": "", "name": "English", "ogLocale": "en_US" },
+  { "code": "de", "path": "de", "name": "Deutsch", "ogLocale": "de_DE" },
+  { "code": "fr", "path": "fr", "name": "Français", "ogLocale": "fr_FR" },
+  { "code": "es", "path": "es", "name": "Español", "ogLocale": "es_ES" },
+  { "code": "it", "path": "it", "name": "Italiano", "ogLocale": "it_IT" },
+  { "code": "pt-BR", "path": "pt-br", "name": "Português (Brasil)", "ogLocale": "pt_BR" },
+  { "code": "nl", "path": "nl", "name": "Nederlands", "ogLocale": "nl_NL" },
+  { "code": "sv", "path": "sv", "name": "Svenska", "ogLocale": "sv_SE" },
+  { "code": "da", "path": "da", "name": "Dansk", "ogLocale": "da_DK" },
+  { "code": "no", "path": "no", "name": "Norsk", "ogLocale": "nb_NO" },
+  { "code": "fi", "path": "fi", "name": "Suomi", "ogLocale": "fi_FI" },
+  { "code": "ja", "path": "ja", "name": "日本語", "ogLocale": "ja_JP" },
+  { "code": "ko", "path": "ko", "name": "한국어", "ogLocale": "ko_KR" }
+]

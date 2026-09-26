@@ -1,0 +1,212 @@
+{
+  "base": {
+    "title": "Make PDF look scanned",
+    "description": "Få en ren digital fil att se ut som en riktig skanning – papperstextur, brus, rotation och skuggor, bearbetat lokalt i din webbläsare.",
+    "scanTitle": "Skanna",
+    "bulkTitle": "Batchskanning",
+    "serviceWorker": {
+      "offlineReady": "Appen är redo att användas offline",
+      "needRefresh": "En ny version finns, klicka för att uppdatera."
+    },
+    "nav": {
+      "home": "Hem",
+      "scan": "Skanna",
+      "bulk": "Batchskanning",
+      "guides": "Guider"
+    },
+    "chrome": {
+      "label": "Chrome-tillägg",
+      "free": "GRATIS"
+    },
+    "landing": {
+      "headline": "Få PDF att se skannad ut",
+      "subhead": "Gör om PDF:er, bilder, Word- och Excel-filer till realistiska skannade kopior med oskärpa, brus, rotation, vattenstämplar och stämplar – direkt i webbläsaren. Originalfilerna stannar på din enhet.",
+      "cta": "Gör om till skannad PDF",
+      "note": "Gratis · Ingen registrering · Filerna stannar på din enhet",
+      "points": {
+        "formats": "PDF, bilder och enklare Office-format",
+        "local": "Lokal bearbetning · Originalfilerna stannar kvar",
+        "free": "Skanningen är gratis · Ingen registrering",
+        "preview": "Förhandsvisning i realtid · Det du ser är det du exporterar"
+      },
+      "stepsTitle": "Tre steg till en skannad PDF",
+      "step1Title": "Välj en fil",
+      "step1Body": "Släpp in en PDF, en bild eller ett Word- eller Excel-dokument. Filen stannar i din webbläsare.",
+      "step2Title": "Justera skanningseffekten",
+      "step2Body": "Oskärpa, brus, rotation, papperston, vattenstämplar och stämplar – med förhandsvisning i realtid.",
+      "step3Title": "Exportera PDF:en",
+      "step3Body": "Din skannade PDF skapas på några sekunder och laddas ned direkt.",
+      "featuresTitle": "Viktiga funktioner",
+      "footer": "Gör om dokument till skanningar i webbläsaren. Inget laddas upp för bearbetning."
+    },
+    "language": "Språk",
+    "seo": {
+      "homeTitle": "Få PDF att se skannad ut – gratis online, utan uppladdning",
+      "homeDescription": "Få PDF att se skannad ut med korn, oskärpa, lätt lutning och gulnad papperston. Gratis, utan konto – filen lämnar aldrig webbläsaren. Även för bilder och Word."
+    }
+  },
+  "features": {
+    "privacy": {
+      "title": "Privat, lokal bearbetning",
+      "description": "Dina filer bearbetas i den här webbläsaren. De laddas inte upp till någon server för bearbetning och sparas inte i molnet."
+    },
+    "speed": {
+      "title": "Snabb konvertering",
+      "description": "Gör om PDF:er, bilder och Office-dokument till PDF:er som ser skannade ut på några sekunder – utan skrivare och utan skanner."
+    },
+    "customization": {
+      "title": "Skanningseffekter",
+      "description": "Finjustera oskärpa, brus, rotation, ljusstyrka, kontrast och papperston med förhandsvisning i realtid. Det du ser är det du exporterar."
+    },
+    "openSource": {
+      "title": "Chrome-tillägg",
+      "description": "Samma skanningsmotor finns också som ett gratis Chrome-tillägg, så att du kan bearbeta PDF:er direkt från sidopanelen.",
+      "github": "Chrome Web Store",
+      "scanyourpdf": "Chrome-tillägg"
+    },
+    "mobileFriendly": {
+      "title": "Fungerar i mobilen",
+      "description": "Konverteraren körs i moderna mobila webbläsare. Webbplatsen kräver ingen installation."
+    },
+    "offlineUse": {
+      "title": "Fungerar offline",
+      "description": "När appens resurser har sparats i cachen fortsätter vanlig skanning att fungera utan nätverksanslutning."
+    }
+  },
+  "actions": {
+    "navigateToScan": "Börja skanna",
+    "navigateToHomePage": "Hem",
+    "navigateToSupportMe": "Chrome-tillägg",
+    "backToIndex": "Tillbaka",
+    "preview": "Förhandsgranska",
+    "save": "Spara",
+    "generateScannedPDF": "Skapa skannad PDF",
+    "generating": "Skapar...",
+    "downloadScannedPDF": "Ladda ned skannad PDF",
+    "generateSuccess": "PDF:en har skapats",
+    "generateError": "Det gick inte att skapa: ",
+    "addFiles": "Lägg till filer",
+    "processAll": "Skapa skannade PDF:er",
+    "downloadZip": "Ladda ned alla som ZIP",
+    "converting": "Förbereder filen…",
+    "queued": "I kö",
+    "done": "Klar",
+    "failed": "Misslyckades"
+  },
+  "settings": {
+    "settings": "Skanningsinställningar",
+    "attenuate": "Brus",
+    "noise": "Brus",
+    "blur": "Oskärpa",
+    "border": {
+      "label": "Kantlinje",
+      "true": "Ja",
+      "false": "Nej"
+    },
+    "colorspace": {
+      "label": "Färgrymd",
+      "colorful": "Färg",
+      "grayscale": "Gråskala"
+    },
+    "rotate": "Rotation",
+    "rotateVariance": "Rotationsvariation",
+    "pdfSelectLabel": "Välj eller släpp din fil här",
+    "pdfNoSelectMessage": "Ingen fil vald",
+    "supportedHint": "PDF, JPG, PNG, WebP, SVG, DOCX, XLSX, CSV, TXT, MD, HTML",
+    "scale": "Upplösning",
+    "yellowish": "Gulton",
+    "brightness": "Ljusstyrka",
+    "contrast": "Kontrast",
+    "extras": {
+      "watermark": "Vattenstämpel",
+      "watermarkText": "Text för vattenstämpel",
+      "watermarkImage": "Bild för vattenstämpel",
+      "stamp": "Stämpel eller signatur",
+      "stampImage": "Lägg till stämpel eller signatur",
+      "stampX": "Vågrät position",
+      "stampY": "Lodrät position",
+      "stampScale": "Storlek",
+      "metadata": "PDF-metadata",
+      "title": "Titel",
+      "author": "Författare",
+      "subject": "Ämne",
+      "keywords": "Nyckelord",
+      "producer": "Producent",
+      "creator": "Skapare",
+      "clearImage": "Ta bort"
+    }
+  },
+  "status": {
+    "notStarted": "Inte startad",
+    "error": "Fel: {error}",
+    "finished": "Klart",
+    "processsing": {
+      "default": "Bearbetar",
+      "combine": "Sammanfogar PDF-sidor",
+      "progress": "Bearbetar PDF-sidor: {current}/{total}"
+    }
+  },
+  "upload": {
+    "dropTitle": "Släpp din fil här",
+    "dropTitleMany": "Släpp dina filer här",
+    "or": "eller",
+    "choose": "Välj fil",
+    "chooseMany": "Välj filer",
+    "replace": "Välj en annan fil",
+    "addMore": "Lägg till fler filer",
+    "privacy": "Bearbetas i din webbläsare – inget laddas upp",
+    "dropOverlay": "Släpp filen för att läsa in den",
+    "dropOverlayMany": "Släpp filerna för att lägga till dem",
+    "unsupported": "Filtypen stöds inte: {name}",
+    "readError": "Det gick inte att öppna {name}: {error}",
+    "ready": "Inläst",
+    "pages": "{n} sida | {n} sidor",
+    "sampleBanner": "Det här är ett exempeldokument. Lägg till dina egna filer i steg 1 – du kan lägga till flera samtidigt."
+  },
+  "save": {
+    "create": "Skapa skannad PDF | Skapa {n} skannade PDF:er",
+    "readyTitle": "Din skannade PDF är klar | Dina {n} skannade PDF:er är klara",
+    "progress": "sida {current} av {total}",
+    "fileProgress": "Fil {current} av {total}",
+    "autoHint": "Den skannade PDF:en laddas ned automatiskt när den är klar. | Alla {n} filer skannas och laddas ned automatiskt som en ZIP-fil.",
+    "noFileHint": "Lägg till en fil i steg 1 för att börja.",
+    "busyHint": "Håll fliken öppen – nedladdningen startar av sig själv när skanningen är klar.",
+    "downloadAgain": "Ladda ned igen",
+    "downloadStarted": "Klart – nedladdningen har startat",
+    "whereSaved": "Du hittar den i mappen Hämtade filer.",
+    "zipHint": "Vill du ha en enskild fil använder du nedladdningsikonen bredvid den i steg 1.",
+    "someFailed": "{n} fil kunde inte skannas | {n} filer kunde inte skannas"
+  },
+  "files": {
+    "preview": "Visa i förhandsvisningen",
+    "previewOf": "Förhandsvisning: {name}",
+    "downloadOne": "Ladda ned den här skannade PDF:en",
+    "remove": "Ta bort filen",
+    "hint": "Klicka på en fil för att förhandsgranska den. Alla filer använder samma inställningar.",
+    "openError": "Det gick inte att öppna filen",
+    "status": {
+      "loading": "Förbereder…",
+      "ready": "Redo",
+      "processing": "Skannar…",
+      "done": "Skannad"
+    }
+  },
+  "steps": {
+    "upload": "Lägg till",
+    "adjust": "Justera",
+    "download": "Ladda ned",
+    "uploadTitle": "Lägg till dina filer",
+    "adjustTitle": "Justera skanningsutseendet",
+    "downloadTitle": "Hämta din skannade PDF"
+  },
+  "preview": {
+    "original": "Original",
+    "scanned": "Skannad förhandsvisning"
+  },
+  "errors": {
+    "wordNoText": "Word-filen innehåller ingen läsbar text",
+    "sheetEmpty": "Kalkylbladet är tomt",
+    "htmlNoText": "HTML-filen innehåller ingen läsbar text",
+    "unsupportedType": "Den här filtypen stöds inte ännu"
+  }
+}

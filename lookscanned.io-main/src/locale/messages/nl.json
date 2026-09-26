@@ -1,0 +1,212 @@
+{
+  "base": {
+    "title": "Make PDF look scanned",
+    "description": "Laat een strak digitaal bestand eruitzien als een echte scan — ruis, vervaging, kanteling en papiertint, lokaal verwerkt in je browser.",
+    "scanTitle": "Scannen",
+    "bulkTitle": "Bulkscan",
+    "serviceWorker": {
+      "offlineReady": "App is klaar om offline te werken",
+      "needRefresh": "Nieuwe versie beschikbaar, klik om te vernieuwen."
+    },
+    "nav": {
+      "home": "Home",
+      "scan": "Scannen",
+      "bulk": "Bulkscan",
+      "guides": "Handleidingen"
+    },
+    "chrome": {
+      "label": "Chrome-extensie",
+      "free": "GRATIS"
+    },
+    "landing": {
+      "headline": "PDF gescand laten lijken",
+      "subhead": "Maak van PDF's, afbeeldingen en Word- en Excel-bestanden realistische gescande kopieën met vervaging, ruis, rotatie, watermerken en stempels — gewoon in je browser. Je bronbestanden blijven op je apparaat.",
+      "cta": "Omzetten naar gescande PDF",
+      "note": "Gratis · Geen account · Bestanden blijven op je apparaat",
+      "points": {
+        "formats": "PDF, afbeeldingen en eenvoudige Office-formaten",
+        "local": "Lokale verwerking · Bronbestanden blijven waar ze zijn",
+        "free": "Scannen is gratis · Geen account",
+        "preview": "Live voorbeeld · Wat je ziet, is wat je exporteert"
+      },
+      "stepsTitle": "In drie stappen een gescande PDF",
+      "step1Title": "Kies een bestand",
+      "step1Body": "Sleep een PDF, een afbeelding of een Word- of Excel-document hierheen. Het bestand blijft in je browser.",
+      "step2Title": "Stel het scaneffect in",
+      "step2Body": "Vervaging, ruis, rotatie, papiertint, watermerken en stempels — met live voorbeeld.",
+      "step3Title": "Exporteer de PDF",
+      "step3Body": "Je gescande PDF is binnen enkele seconden klaar en wordt meteen gedownload.",
+      "featuresTitle": "Belangrijkste functies",
+      "footer": "Maak scans van je documenten in je browser. Er wordt niets geüpload voor verwerking."
+    },
+    "language": "Taal",
+    "seo": {
+      "homeTitle": "PDF gescand laten lijken — gratis online, zonder upload",
+      "homeDescription": "PDF gescand laten lijken met korrel, vervaging, kanteling en vergeeld papier. Gratis, zonder account — je bestand blijft in je browser. Ook voor foto's en Word."
+    }
+  },
+  "features": {
+    "privacy": {
+      "title": "Privé, lokale verwerking",
+      "description": "Je bestanden worden in deze browser verwerkt. Ze worden niet naar een verwerkingsserver geüpload en niet in de cloud opgeslagen."
+    },
+    "speed": {
+      "title": "Snel omzetten",
+      "description": "Maak van PDF's, afbeeldingen en Office-documenten in enkele seconden PDF's die er gescand uitzien — zonder printer en zonder scanner."
+    },
+    "customization": {
+      "title": "Scaneffecten",
+      "description": "Stel vervaging, ruis, rotatie, helderheid, contrast en papiertint precies in met een live voorbeeld. Wat je ziet, is wat je exporteert."
+    },
+    "openSource": {
+      "title": "Chrome-extensie",
+      "description": "Dezelfde scanengine is ook beschikbaar als gratis Chrome-extensie, zodat je PDF's vanuit het zijpaneel kunt verwerken.",
+      "github": "Chrome Web Store",
+      "scanyourpdf": "Chrome-extensie"
+    },
+    "mobileFriendly": {
+      "title": "Werkt op je telefoon",
+      "description": "De converter werkt in moderne mobiele browsers. Voor de website hoef je niets te installeren."
+    },
+    "offlineUse": {
+      "title": "Werkt offline",
+      "description": "Zodra de app-bestanden in de cache staan, blijft gewoon scannen werken zonder netwerkverbinding."
+    }
+  },
+  "actions": {
+    "navigateToScan": "Begin met scannen",
+    "navigateToHomePage": "Home",
+    "navigateToSupportMe": "Chrome-extensie",
+    "backToIndex": "Terug",
+    "preview": "Voorbeeld",
+    "save": "Opslaan",
+    "generateScannedPDF": "Gescande PDF maken",
+    "generating": "Bezig met maken...",
+    "downloadScannedPDF": "Gescande PDF downloaden",
+    "generateSuccess": "Gescande PDF gemaakt",
+    "generateError": "Maken mislukt: ",
+    "addFiles": "Bestanden toevoegen",
+    "processAll": "Gescande PDF's maken",
+    "downloadZip": "Alles downloaden als ZIP",
+    "converting": "Bestand voorbereiden…",
+    "queued": "In wachtrij",
+    "done": "Klaar",
+    "failed": "Mislukt"
+  },
+  "settings": {
+    "settings": "Scaninstellingen",
+    "attenuate": "Ruis",
+    "noise": "Ruis",
+    "blur": "Vervaging",
+    "border": {
+      "label": "Rand",
+      "true": "Ja",
+      "false": "Nee"
+    },
+    "colorspace": {
+      "label": "Kleurruimte",
+      "colorful": "Kleur",
+      "grayscale": "Grijs"
+    },
+    "rotate": "Rotatie",
+    "rotateVariance": "Rotatievariatie",
+    "pdfSelectLabel": "Kies je bestand of sleep het hierheen",
+    "pdfNoSelectMessage": "Geen bestand gekozen",
+    "supportedHint": "PDF, JPG, PNG, WebP, SVG, DOCX, XLSX, CSV, TXT, MD, HTML",
+    "scale": "Resolutie",
+    "yellowish": "Vergeling",
+    "brightness": "Helderheid",
+    "contrast": "Contrast",
+    "extras": {
+      "watermark": "Watermerk",
+      "watermarkText": "Watermerktekst",
+      "watermarkImage": "Watermerkafbeelding",
+      "stamp": "Stempel of handtekening",
+      "stampImage": "Stempel of handtekening toevoegen",
+      "stampX": "Horizontale positie",
+      "stampY": "Verticale positie",
+      "stampScale": "Grootte",
+      "metadata": "PDF-metadata",
+      "title": "Titel",
+      "author": "Auteur",
+      "subject": "Onderwerp",
+      "keywords": "Trefwoorden",
+      "producer": "Producent",
+      "creator": "Maker",
+      "clearImage": "Verwijderen"
+    }
+  },
+  "status": {
+    "notStarted": "Niet gestart",
+    "error": "Fout: {error}",
+    "finished": "Voltooid",
+    "processsing": {
+      "default": "Bezig met verwerken",
+      "combine": "PDF-pagina's samenvoegen",
+      "progress": "PDF-pagina's verwerken: {current}/{total}"
+    }
+  },
+  "upload": {
+    "dropTitle": "Sleep je bestand hierheen",
+    "dropTitleMany": "Sleep je bestanden hierheen",
+    "or": "of",
+    "choose": "Bestand kiezen",
+    "chooseMany": "Bestanden kiezen",
+    "replace": "Ander bestand kiezen",
+    "addMore": "Meer bestanden toevoegen",
+    "privacy": "Verwerkt in je browser — er wordt niets geüpload",
+    "dropOverlay": "Laat het bestand los om het te laden",
+    "dropOverlayMany": "Laat de bestanden los om ze toe te voegen",
+    "unsupported": "Dit bestandstype wordt niet ondersteund: {name}",
+    "readError": "Kan {name} niet openen: {error}",
+    "ready": "Geladen",
+    "pages": "{n} pagina | {n} pagina's",
+    "sampleBanner": "Dit is een voorbeelddocument. Upload je eigen bestanden in stap 1 — je kunt er meerdere tegelijk toevoegen."
+  },
+  "save": {
+    "create": "Gescande PDF maken | {n} gescande PDF's maken",
+    "readyTitle": "Je gescande PDF is klaar | Je {n} gescande PDF's zijn klaar",
+    "progress": "pagina {current} van {total}",
+    "fileProgress": "Bestand {current} van {total}",
+    "autoHint": "De gescande PDF wordt automatisch gedownload zodra hij klaar is. | Alle {n} bestanden worden gescand en automatisch gedownload als één ZIP-bestand.",
+    "noFileHint": "Upload een bestand in stap 1 om te beginnen.",
+    "busyHint": "Houd dit tabblad open — de download start vanzelf zodra het scannen klaar is.",
+    "downloadAgain": "Opnieuw downloaden",
+    "downloadStarted": "Klaar — de download is gestart",
+    "whereSaved": "Je vindt het bestand in je map Downloads.",
+    "zipHint": "Wil je één los bestand? Gebruik het downloadpictogram ernaast in stap 1.",
+    "someFailed": "{n} bestand kon niet worden gescand | {n} bestanden konden niet worden gescand"
+  },
+  "files": {
+    "preview": "Tonen in voorbeeld",
+    "previewOf": "Voorbeeld: {name}",
+    "downloadOne": "Deze gescande PDF downloaden",
+    "remove": "Bestand verwijderen",
+    "hint": "Klik op een bestand om het te bekijken. Alle bestanden gebruiken dezelfde instellingen.",
+    "openError": "Kan dit bestand niet openen",
+    "status": {
+      "loading": "Voorbereiden…",
+      "ready": "Gereed",
+      "processing": "Scannen…",
+      "done": "Gescand"
+    }
+  },
+  "steps": {
+    "upload": "Uploaden",
+    "adjust": "Aanpassen",
+    "download": "Downloaden",
+    "uploadTitle": "Upload je bestanden",
+    "adjustTitle": "Stel het scaneffect in",
+    "downloadTitle": "Download je gescande PDF"
+  },
+  "preview": {
+    "original": "Origineel",
+    "scanned": "Gescand voorbeeld"
+  },
+  "errors": {
+    "wordNoText": "Dit Word-bestand bevat geen leesbare tekst",
+    "sheetEmpty": "Deze spreadsheet is leeg",
+    "htmlNoText": "Dit HTML-bestand bevat geen leesbare tekst",
+    "unsupportedType": "Dit bestandstype wordt nog niet ondersteund"
+  }
+}

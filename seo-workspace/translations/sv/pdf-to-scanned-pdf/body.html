@@ -1,0 +1,228 @@
+<p class="lead">Att göra om en PDF till skannad PDF innebär att varje sida renderas som en bild och att bilderna sparas i en ny PDF, så att textlager, länkar och formulärfält blir platta pixlar. För läsbara och kompakta sidor väljer du 2× upplösning och gråskala; lägg bara till lätt brus och snedställning om du också vill ha det skannade utseendet.</p>
+
+<p>Folk gör om en PDF till skannad PDF för att en portal vill ha en fil med bara bilder, för att en kollega har bett om en tillplattad kopia eller för att ett formulär ska se ut som om det har gått genom en kontorsskanner. Den här guiden går igenom avvägningarna (upplösning, färg, filstorlek, sökbarhet, domstolsregler) med exakta verktygsinställningar, siffror från amerikanska federala domstolar och riktvärden från National Archives och FADGI.</p>
+
+<nav class="toc" aria-label="Innehållsförteckning"><h2>Innehåll</h2><ol>
+<li><a href="#what-it-means">Vad gör en konvertering från PDF till skannad PDF?</a></li>
+<li><a href="#before-after">Vad ändras när en PDF blir en skannad PDF?</a></li>
+<li><a href="#how-to-convert">Hur gör du om en PDF till skannad PDF i webbläsaren?</a></li>
+<li><a href="#resolution">Vilken upplösning håller en skannad PDF läsbar?</a></li>
+<li><a href="#color-and-size">Gråskala, färg eller bitonal: vad ger minst fil?</a></li>
+<li><a href="#flatten-vs-scan-look">Ska du platta till PDF:en rent eller ge den skannad look?</a></li>
+<li><a href="#required-or-refused">När krävs en skannad PDF och när avvisas den?</a></li>
+<li><a href="#privacy">Är det säkert att göra om PDF till skannad PDF online?</a></li>
+<li><a href="#batch">Hur gör du om många PDF:er till skannade PDF:er på en gång?</a></li>
+<li><a href="#checking">Hur kontrollerar du att resultatet är en skannad PDF?</a></li>
+<li><a href="#troubleshooting">Hur löser du problem med PDF till skannad PDF?</a></li>
+<li><a href="#faq">PDF till skannad PDF: vanliga frågor</a></li>
+</ol></nav>
+
+<h2 id="what-it-means">Vad gör en konvertering från PDF till skannad PDF?</h2>
+<p>En konvertering från PDF till skannad PDF tar varje sida i en digital PDF, ritar upp den på en rityta (canvas) med vald pixeltäthet och sparar resultatet som en bild i en ny PDF. Resultatet ser likadant ut, men varje ord, linje och logotyp är nu en del av en enda bild per sida.</p>
+
+<p>En riktig skanner gör samma sak med papper i stället för en digital sida. U.S. District Court for the Northern District of California beskriver resultatet rakt på sak: <a href="https://cand.uscourts.gov/cases-e-filing/cmecf-information/preparing-your-cmecf-filing" target="_blank" rel="noopener">”Skannad text är ett fotografi av en utskriven sida, taget antingen med en digitalkamera eller en skanner.”</a> När en sida väl är ett fotografi går det inte längre att markera, kopiera eller söka i orden förrän någon kör optisk teckenigenkänning (OCR) på den.</p>
+
+<p>Två närliggande begrepp blandas ofta ihop. Att <strong>platta till en PDF</strong> i strikt mening betyder att interaktiva lager (formulärfält, kommentarer, stämplar) slås ihop med sidinnehållet, medan texten kan förbli markerbar. Att <strong>rastrera</strong> en PDF betyder att allt, även texten, blir pixlar. Att göra om en PDF till skannad PDF är den andra, mer genomgripande åtgärden.</p>
+
+<p>Resultatet finns i två varianter. En <em>ren</em> PDF med bara bilder behåller sidan skarp och rak. En PDF med <em>skannad look</em> får en lätt lutning, mjuk skärpa, brus och en papperston. Vårt <a href="/scan">gratisverktyg för PDF till skannad PDF</a> skapar båda med samma reglage. Bakgrunden till vad som räknas som en skannad fil hittar du i guiden <a href="/blog/what-is-a-scanned-pdf/">vad är en skannad PDF</a>.</p>
+
+<h2 id="before-after">Vad ändras när en PDF blir en skannad PDF?</h2>
+<p>När en PDF blir en skannad PDF ser sidan likadan ut, men allt på sidan som en dator kan läsa ersätts av pixlar. Text, typsnitt, länkar, formulärfält och anteckningar slutar vara separata objekt. Filen blir oftast större, och sökning, kopiering och skärmläsning slutar fungera tills OCR körs.</p>
+
+<p>Tabellen jämför en typisk PDF som exporterats från ett ordbehandlingsprogram med samma fil efter konvertering till sidbilder. Beteendet i kolumnen ”efter” får du med alla rastreringsmetoder, även med vårt verktyg, eftersom varje sida sparas som en JPEG-bild i en helt ny PDF.</p>
+
+<div class="table-wrap"><table>
+<caption>Digital PDF jämfört med samma PDF konverterad till en skannad PDF (bara bilder)</caption>
+<thead><tr><th scope="col">Element</th><th scope="col">Ursprunglig digital PDF</th><th scope="col">Efter konvertering från PDF till skannad PDF</th></tr></thead>
+<tbody>
+<tr><th scope="row">Textlager</th><td>Riktiga tecken som du kan markera, kopiera och söka i</td><td>Borta från sidan; orden finns bara kvar som pixlar</td></tr>
+<tr><th scope="row">Typsnitt</th><td>Inbäddade eller refererade typsnittsfiler</td><td>Inga typsnitt behövs; bokstävernas former är inbakade i bilden</td></tr>
+<tr><th scope="row">Länkar</th><td>Klickbara webbadresser och interna hopp</td><td>Länktexten syns fortfarande men går inte längre att klicka på</td></tr>
+<tr><th scope="row">Formulärfält</th><td>Ifyllbara rutor, kryssrutor och rullgardinsmenyer</td><td>Går inte längre att fylla i; kontrollera förhandsvisningen för att se vilka värden som har ritats in i bilden</td></tr>
+<tr><th scope="row">Anteckningar</th><td>Kommentarer, markeringar och stämplar som separata objekt</td><td>Inte längre redigerbara objekt; det som finns kvar är en del av bilden</td></tr>
+<tr><th scope="row">Dokumentmetadata</th><td>Titel, författare och andra egenskaper som programmet som skapade filen har satt</td><td>En ny PDF skrivs; titel, författare, ämne, nyckelord, producent och skapare kan anges bland verktygets extrafunktioner</td></tr>
+<tr><th scope="row">Filstorlek</th><td>Liten för textsidor</td><td>Oftast större; beror på upplösning, färgläge och antal sidor</td></tr>
+<tr><th scope="row">Sökbarhet</th><td>Ctrl+F och skärmläsare fungerar</td><td>Inte sökbar eller tillgänglig förrän OCR lägger till ett textlager</td></tr>
+</tbody></table></div>
+
+<p>Två rader förtjänar en närmare titt. För formulärfält och anteckningar beror det som syns kvar på om sidrenderaren ritar ut dem; ett ifyllt fältvärde visas oftast som tryckt text, medan en popup-kommentar kan försvinna, så granska förhandsvisningen i realtid. För metadata kan du i extrapanelen skriva in de egenskaper som den nya PDF:en ska ha; kontrollera dem innan du skickar filen.</p>
+
+<p>Det är storleksraden som överraskar flest. Middle District of North Carolina konstaterar att <a href="https://www.ncmd.uscourts.gov/sites/ncmd/files/ecfprocman.pdf" target="_blank" rel="noopener">2 MB rymmer ungefär fyrtiofem sidor PDF-text</a> och tillägger: ”De flesta skannade PDF:er är inte sökbara och har stor filstorlek.” En text-PDF beskriver bokstäver; en skannad PDF lagrar varje pixel av dem.</p>
+
+<h2 id="how-to-convert">Hur gör du om en PDF till skannad PDF i webbläsaren?</h2>
+<p>För att göra om en PDF till skannad PDF i webbläsaren öppnar du gratisverktyget på pdflookscanned.com/scan, släpper in filen, ställer in upplösning, färgläge och skanningseffekter, kontrollerar förhandsvisningen i realtid och laddar ned. Hela processen körs lokalt på din enhet och tar bara längre tid för långa dokument eller hög upplösning.</p>
+
+<ol class="step-list">
+<li><strong>Öppna skannern.</strong> Gå till <a href="/scan">pdflookscanned.com/scan</a> i valfri modern webbläsare på datorn eller mobilen, eller öppna sidopanelen i Chrome-tillägget. Du behöver inget konto och ingen registrering.</li>
+<li><strong>Lägg till din PDF.</strong> Dra filen till släppytan eller klicka för att välja den. PDF:er används som de är, så den sidlayout, de typsnitt och de bilder du ser nu är exakt det som renderas.</li>
+<li><strong>Välj upplösning.</strong> Låt Upplösning stå kvar på standardvärdet 2× (cirka 144 dpi) för vanliga brev och formulär. Höj till 2,5× eller 3× (cirka 216 dpi) om filen har fotnoter, finstilt text eller täta tabeller.</li>
+<li><strong>Välj färgrymd.</strong> Behåll Gråskala (standard) för textdokument; byt till Färg bara när färgen bär betydelse, till exempel i diagram, markerade klausuler eller en färgad logotyp.</li>
+<li><strong>Ställ in utseendet.</strong> För en ren tillplattning sätter du Rotation, Rotationsvariation, Oskärpa och Brus till 0. För en skannad look behåller du standardvärdena (Rotation 1°, Oskärpa 0,3, Brus 0,1) eller justerar dem lätt.</li>
+<li><strong>Finjustera ljusstyrka och papperston.</strong> Ljusstyrka och Kontrast är 1 som standard; höj Kontrast något om grå text ser svag ut. Gulton ger en ton av gulnat papper och är 0 som standard.</li>
+<li><strong>Lägg till extrafunktioner vid behov.</strong> Valfritt: en vattenstämpel med text eller bild, en bild av en stämpel eller signatur som du har rätt att använda, och fälten för dokumentmetadata (titel, författare, ämne, nyckelord, producent, skapare).</li>
+<li><strong>Kontrollera förhandsvisningen och ladda ned.</strong> Zooma in på den minsta texten i förhandsvisningen. Om den går att läsa tydligt laddar du ned den nya skannade PDF:en; om inte höjer du upplösningen och förhandsgranskar igen.</li>
+</ol>
+
+<p>Om källan är en Word-fil, ett Google-dokument eller ett kalkylark exporterar du den till PDF först (i Word: Arkiv, Spara som, PDF; i Google Dokument: Arkiv, Ladda ned, PDF-dokument). Verktyget kan läsa DOCX och XLSX direkt, men det plockar bara ut den råa texten och sätter om den på A4-sidor i Helvetica 11 punkter, så formatering, tabeller och bilder går förlorade.</p>
+
+<p>När du exporterar till PDF först behålls layouten exakt som den är utformad. Den <a href="/blog/how-to-make-a-pdf-look-scanned/">kompletta guiden till att få en PDF att se skannad ut</a> jämför den här vägen med fem andra metoder.</p>
+
+<h2 id="resolution">Vilken upplösning håller en skannad PDF läsbar?</h2>
+<p>En skannad PDF förblir läsbar när varje bokstav får tillräckligt många pixlar. Vårt verktyg renderar PDF-sidor med 72 dpi gånger inställningen Upplösning, så 1× motsvarar cirka 72 dpi, 2× cirka 144 dpi och 3× cirka 216 dpi. Riktig arkivskanning siktar på 200–300 ppi, så 3× passar finstilt text.</p>
+
+<p>Talet 72 kommer från hur PDF mäter sidor. Geometrin i PDF och PostScript bygger på <a href="https://en.wikipedia.org/wiki/Dots_per_inch" target="_blank" rel="noopener">72 punkter per tum</a>, så en US Letter-sida är 612 × 792 punkter. Renderad med 1× blir den 612 × 792 pixlar, med 2× 1&nbsp;224 × 1&nbsp;584 pixlar och med 3× 1&nbsp;836 × 2&nbsp;376 pixlar. Antalet pixlar växer med kvadraten på skalan.</p>
+
+<dl class="spec-list">
+<dt>1× (cirka 72 dpi)</dt><dd>Letter-sida 612 × 792 px. Räcker för stora rubriker och presentationsbilder; brödtexten börjar falla sönder. Minst filer.</dd>
+<dt>1,5× (cirka 108 dpi)</dt><dd>Letter-sida 918 × 1&nbsp;188 px. Godtagbart för text i 12 punkter på skärm; svagt för fotnoter.</dd>
+<dt>2× (cirka 144 dpi, standard)</dt><dd>Letter-sida 1&nbsp;224 × 1&nbsp;584 px. Tydlig brödtext för brev, fakturor och formulär; det balanserade valet.</dd>
+<dt>2,5× (cirka 180 dpi)</dt><dd>Letter-sida 1&nbsp;530 × 1&nbsp;980 px. Använd när ett dokument blandar vanlig text med små etiketter.</dd>
+<dt>3× (cirka 216 dpi)</dt><dd>Letter-sida 1&nbsp;836 × 2&nbsp;376 px. Bäst för avtal med finstilt text, täta tabeller och namnteckningar som måste förbli skarpa.</dd>
+</dl>
+
+<h3>Så beter sig finstilt text vid varje upplösning i en skannad PDF</h3>
+<p>En enkel beräkning visar varför liten text behöver fler pixlar. En fotnot i 8 punkter är 8/72 tum hög som teckenstorlek. Vid 1× blir det ungefär 8 pixlar för hela bokstavshöjden, inklusive uppstaplar och nedstaplar, vilket får gemena ”e” och ”c” att flyta ihop. Vid 2× blir det cirka 16 pixlar och vid 3× cirka 24 pixlar, vilket går bekvämt att läsa även efter lätt oskärpa och JPEG-komprimering.</p>
+
+<p>Som jämförelse kräver amerikanska National Archives minst <a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">300 ppi för digitaliserade moderna textdokument och 400 ppi för fotografier och handlingar med fina detaljer</a> enligt 36 CFR 1236 Subpart E. FADGI graderar lösa dokument i stjärnnivåer från 200 ppi (en stjärna) via 250 och 300 upp till 400 ppi (fyra stjärnor) i sina <a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">tekniska riktlinjer från 2023</a>. De målen är till för att skydda pappersoriginal.</p>
+
+<p>En konvertering från PDF till skannad PDF utgår från en perfekt digital sida, inte från skrynkligt papper, så den behöver inte arkivtäthet för att se skarp ut. Vår erfarenhet är att 2× klarar vanlig text i 10–12 punkter och att 3× (216 dpi) ligger strax över FADGI:s enstjärnenivå för finstilt text.</p>
+
+<p>NARA lägger till en användbar varning i samma föreskrift: ”Myndigheten kan inte enbart förlita sig på utrustningens specifikationer, till exempel skannerns ppi-inställningar eller kamerasensorns megapixlar, för att säkerställa den digitala bildkvaliteten.” I praktiken ska du bedöma förhandsvisningen, inte siffran.</p>
+
+<h2 id="color-and-size">Gråskala, färg eller bitonal: vad ger minst fil?</h2>
+<p>Bitonala filer (rent svartvita, 1 bit per pixel) är minst, gråskala hamnar i mitten och färg är störst vid samma upplösning. För en konvertering från PDF till skannad PDF är gråskala det praktiska standardvalet: bokstävernas kantutjämnade konturer förblir mjuka och filen blir mycket mindre än i färg. Använd färg bara när färgen bär information.</p>
+
+<p>De tyngsta siffrorna från verkligheten kommer från Northern District of California, som skannade samma dokument på 317 sidor på två sätt. Som <a href="https://cand.uscourts.gov/cases-e-filing/cmecf-information/preparing-your-cmecf-filing" target="_blank" rel="noopener">bitonal fil i 300 ppi vägde det 23,86 MB och förblev läsbart</a>; i gråskala med 400 ppi växte det till 374,47 MB. Det är ungefär femton gånger större för samma sidor, och skillnaden beror både på färgdjupet och på den högre upplösningen.</p>
+
+<div class="table-wrap"><table>
+<caption>Färglägen för en skannad PDF: vad vart och ett passar till</caption>
+<thead><tr><th scope="col">Läge</th><th scope="col">Bitar per pixel</th><th scope="col">Relativ storlek</th><th scope="col">Passar bäst för</th></tr></thead>
+<tbody>
+<tr><th scope="row">Bitonal (svartvitt)</th><td>1</td><td>Minst</td><td>Inlagor till domstol med ren text; inget läge i vårt verktyg</td></tr>
+<tr><th scope="row">Gråskala (i verktyget: Gråskala)</th><td>8</td><td>Mellan</td><td>Brev, avtal, formulär och allt med namnteckningar</td></tr>
+<tr><th scope="row">Färg (i verktyget: Färg)</th><td>24</td><td>Störst</td><td>Diagram, färgade stämplar, foton och markerad text</td></tr>
+</tbody></table></div>
+
+<p>Vårt verktyg erbjuder Gråskala och Färg och sparar varje sida som en JPEG-bild. JPEG är effektivt för gråtoner, men som FADGI uttrycker det: ”standardmässig JPEG-bearbetning ger upphov till block på 8x8 pixlar som tydligt inte är en del av originalinnehållet.” Vid 2× eller 3× syns de blocken sällan på text.</p>
+
+<p>Om du behöver äkta svartvitt med 1 bit förklarar vår guide om att <a href="/blog/convert-color-pdf-to-black-and-white/">konvertera en PDF i färg till svartvitt</a> skillnaden och vilka alternativ som finns.</p>
+
+<h3>Gränser för filstorlek på skannade PDF:er som du kan stöta på</h3>
+<p>Uppladdningsgränser gör färgvalet till en praktisk fråga snarare än en kosmetisk. Western District of Washington har en <a href="https://www.wawd.uscourts.gov/attorneys/cm-ecf-faqs/Technical" target="_blank" rel="noopener">gräns på 100 MB per dokument och vill ha svartvita skanningar i 300 dpi</a> om inte färgen är nödvändig. District of Minnesota begränsar varje bilaga till <a href="https://www.mnd.uscourts.gov/sites/mnd/files/Criminal-ECF-Procedures-Guide.pdf" target="_blank" rel="noopener">35 MB i sina ECF-rutiner för brottmål</a>. USCIS begränsar varje <a href="https://www.uscis.gov/file-online/tips-for-filing-forms-online" target="_blank" rel="noopener">uppladdad bevisfil till 12 MB</a>.</p>
+
+<div class="callout callout-tip"><strong>Snabb regel för filstorlek</strong>Börja med 2× och Gråskala. Om den nedladdade filen är för stor för en portal sänker du till 1,5× innan du ändrar något annat, eftersom ett lägre upplösningssteg minskar antalet pixlar mycket mer än någon annan inställning. Om filen fortfarande är för stor delar du upp PDF:en och konverterar delarna var för sig.</div>
+
+<h2 id="flatten-vs-scan-look">Ska du platta till PDF:en rent eller ge den skannad look?</h2>
+<p>Välj en ren tillplattning när mottagaren bara behöver en PDF med bara bilder och utan redigerbar text, och välj skannad look när filen ska likna papper som har gått genom en skanner. Samma verktyg klarar båda: sätt Rotation, Rotationsvariation, Oskärpa och Brus till 0 för en ren tillplattning, eller behåll dem över 0 för realism.</p>
+
+<p>En ren tillplattning är ofta rätt svar: när du skickar ett slutligt avtal så att ingen i smyg kan skriva om en klausul i en textredigerare, när du låser ett ifyllt formulär så att värdena inte kan ändras fält för fält, eller när du levererar sidor till ett system som avvisar PDF:er med typsnitt eller formulärfält. Här tillför lutning och prickar ingenting.</p>
+
+<div class="table-wrap"><table>
+<caption>Inställningar för ren tillplattning jämfört med skannad look vid konvertering från PDF till skannad PDF</caption>
+<thead><tr><th scope="col">Reglage (intervall)</th><th scope="col">Ren tillplattning</th><th scope="col">Lätt skannad look</th><th scope="col">Kraftig skannad look</th></tr></thead>
+<tbody>
+<tr><th scope="row">Rotation (−10° till 10°)</th><td>0°</td><td>1° (standard)</td><td>1,5°–2°</td></tr>
+<tr><th scope="row">Rotationsvariation (0–10°)</th><td>0</td><td>0,5</td><td>1</td></tr>
+<tr><th scope="row">Oskärpa (0–1)</th><td>0</td><td>0,3 (standard)</td><td>0,4–0,5</td></tr>
+<tr><th scope="row">Brus (0–1)</th><td>0</td><td>0,1 (standard)</td><td>0,2–0,3</td></tr>
+<tr><th scope="row">Ljusstyrka / Kontrast (0–2)</th><td>1 / 1</td><td>1 / 1,1</td><td>1,05 / 1,2</td></tr>
+<tr><th scope="row">Gulton (0–2)</th><td>0</td><td>0–0,2</td><td>0,3–0,5</td></tr>
+<tr><th scope="row">Kantlinje</th><td>Nej</td><td>Nej</td><td>Ja</td></tr>
+<tr><th scope="row">Färgrymd / Upplösning</th><td>Gråskala eller Färg / 2×–3×</td><td>Gråskala / 2×</td><td>Gråskala / 2×</td></tr>
+</tbody></table></div>
+
+<p>Värdena för skannad look efterliknar defekter som arkivarier försöker ta bort. NARA:s föreskrift definierar brus som ”en eller flera oönskade bildartefakter i en digitaliserad handling som inte är en del av källmaterialet” och räknar upp snedställning och felaktig beskärning bland de defekter som ska kontrolleras. Lite av varje ser trovärdigt ut; för mycket ser ut som en dålig kopia.</p>
+
+<p>Två varningar gäller den skannade looken. Oskärpa över ungefär 0,5 gör finstilt text suddig snabbt, så höj Upplösning när du höjer Oskärpa. Rotation större än 2° klipper av sidhörnen och ser slarvig snarare än realistisk ut. En fullständig genomgång av artefakter och färdiga kombinationer finns i vår <a href="/blog/scan-effect/">guide om skanningseffekt</a>.</p>
+
+<h2 id="required-or-refused">När krävs en skannad PDF och när avvisas den?</h2>
+<p>En skannad PDF efterfrågas ibland (uppladdningar med bara bilder, tillplattade slutversioner) men avvisas ofta där textsökning är viktig. Federala domstolar och tillgänglighetsregler föredrar oftast textsökbara PDF:er, så kontrollera mottagarens regler innan du gör om en PDF till skannad PDF, och spara originalfilen.</p>
+
+<p>Domstolar är det tydligaste exemplet. Det federala amerikanska domstolsväsendets FAQ anger att <a href="https://www.uscourts.gov/court-records/file-a-case-cm-ecf/faqs-case-management-electronic-case-files-cm-ecf" target="_blank" rel="noopener">”CM/ECF-systemen är utformade för att bara ta emot dokument i PDF-format”</a>, men detaljerna skiljer sig mellan distrikten. Southern District of Florida är strikt: <a href="https://www.flsd.uscourts.gov/all-faqs/CMECF" target="_blank" rel="noopener">”inlagor/huvuddokument som lämnas in elektroniskt i CM/ECF måste vara i textsökbart PDF-format”</a>, och bilagor bör vara sökbara när det är möjligt.</p>
+
+<p>Andra distrikt uttrycker en preferens snarare än ett förbud. District of Massachusetts skriver att <a href="https://www.mad.uscourts.gov/caseinfo/pdf/ECFadminProc.pdf" target="_blank" rel="noopener">”dokument som har konverterats till PDF, snarare än skannats, föredras vid inlämning i CM/ECF.”</a> District of Minnesota skriver: ”Textsökbara skannade PDF-dokument föredras, men krävs inte.” Eastern District of Oklahoma rekommenderar att du skapar <a href="https://www.oked.uscourts.gov/pdfa-frequently-asked-questions" target="_blank" rel="noopener">PDF/A-filer direkt från ordbehandlingsprogrammet i stället för att skriva ut och skanna</a>, så att filerna blir små och sökbara.</p>
+
+<p>Tillgänglighet är det andra skälet till att en skannad PDF avvisas. W3C:s WCAG-teknik PDF7 slår fast: <a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF7" target="_blank" rel="noopener">”Ett dokument som består av skannade bilder av text är i sig otillgängligt, eftersom dokumentets innehåll är bilder, inte sökbar text.”</a> Dokument som myndigheter, universitet och många företag riktar till allmänheten måste uppfylla WCAG, så en fil med bara bilder är fel format för dem om inte OCR läggs till.</p>
+
+<div class="callout callout-warn"><strong>Kontrollera reglerna och använd den skannade looken ärligt</strong>Om en domstol, myndighet eller arbetsgivare kräver textsökbara PDF:er lämnar du in den ursprungliga digitala PDF:en, eller kör OCR på den skannade versionen efteråt så att ett dolt textlager kommer tillbaka. Vårt verktyg gör ingen OCR. Kom också ihåg att en skannad look ändrar utseendet, inte äktheten: använd den inte för att ändra eller förfalska officiella handlingar, id-handlingar eller namnteckningar som inte är dina.</div>
+
+<h3>Lägga tillbaka ett textlager med OCR</h3>
+<p>Om du behöver både det tillplattade utseendet och sökbarheten konverterar du först och kör sedan OCR i ett PDF-program för datorn som har ett steg för att ”känna igen text” eller ”göra sökbar”. OCR lägger osynlig text bakom sidbilden, så filen ser skannad ut samtidigt som Ctrl+F fungerar igen. Korrekturläs viktiga dokument, eftersom OCR bara uppskattar vilka bokstäverna är.</p>
+
+<h2 id="privacy">Är det säkert att göra om PDF till skannad PDF online?</h2>
+<p>Att göra om en PDF till skannad PDF online är säkert när bearbetningen sker i din webbläsare. Vårt verktyg renderar sidorna lokalt med pdf.js och webbläsarens canvas, så filen laddas inte upp till någon server för bearbetning. Efter första besöket fungerar verktyget också offline, vilket låter dig kontrollera det själv.</p>
+
+<p>Lokal bearbetning är viktig för den sortens filer som folk plattar till: signerade avtal, löneunderlag, medicinska formulär och skattehandlingar. Många onlinekonverterare laddar upp PDF:en, bearbetar den på en server och skickar tillbaka resultatet, vilket innebär att en kopia finns, åtminstone en kort stund, på hårdvara som du inte har kontroll över. Med rendering i webbläsaren lämnar sidorna aldrig enheten som öppnade dem.</p>
+
+<ul>
+<li><strong>Offlinetest.</strong> Läs in <a href="/scan">skannern</a> en gång, koppla från internet och konvertera en fil. Om det fungerar utan anslutning har ingenting laddats upp.</li>
+<li><strong>Inget konto.</strong> Det finns ingen registrering, så ingen dokumenthistorik kopplas till din identitet.</li>
+<li><strong>Samma motor i Chrome.</strong> <a href="https://chromewebstore.google.com/detail/make-pdf-look-scanned/ijhpnlcipgiokgignkbbbgkobdmdoila" target="_blank" rel="noopener">Chrome-tillägget</a>, som är betygsatt med 5 stjärnor i Chrome Web Store, kör exakt samma lokala motor i en sidopanel.</li>
+</ul>
+
+
+<h2 id="batch">Hur gör du om många PDF:er till skannade PDF:er på en gång?</h2>
+<p>För att göra om många PDF:er till skannade PDF:er på en gång öppnar du sidan för batchskanning på pdflookscanned.com/scan/bulk, lägger till alla filer, väljer en uppsättning inställningar och laddar ned allt som ett enda ZIP-arkiv. Varje fil blir en egen skannad PDF med samma upplösning, färgläge och effekter.</p>
+
+<ol class="step-list">
+<li><strong>Öppna Batchskanning.</strong> Gå till <a href="/scan/bulk">pdflookscanned.com/scan/bulk</a> (i Chrome-tillägget lägger du helt enkelt till flera filer).</li>
+<li><strong>Lägg till filerna.</strong> Släpp in PDF:erna. Blandade filtyper som JPG eller PNG fungerar också; varje bild blir en PDF på en sida.</li>
+<li><strong>Välj gemensamma inställningar.</strong> Ställ in Upplösning, Färgrymd och effektreglagen en gång; de gäller för varje fil.</li>
+<li><strong>Ladda ned ZIP-filen.</strong> Kör batchen och ladda ned ZIP-filen, och stickprovskontrollera sedan några av resultaten så att finstilt text går att läsa.</li>
+</ol>
+
+<p>Batchskanningen håller filerna åtskilda med avsikt; den slår inte ihop dem till ett dokument. Om du behöver en enda sammanslagen skannad PDF slår du ihop käll-PDF:erna först (till exempel genom att i Förhandsvisning på macOS dra sidor från en PDF till sidofältet i en annan, eller genom att skriva ut flera dokument tillsammans till ”Microsoft Print to PDF” i Windows) och konverterar sedan den sammanslagna filen en gång.</p>
+
+<p>Batcharbete är också där Rotationsvariation gör nytta: varje sida får en lite annorlunda slumpmässig lutning, vilket ser naturligare ut i ett långt dokument.</p>
+
+<h2 id="checking">Hur kontrollerar du att resultatet är en skannad PDF?</h2>
+<p>Kontrollera en konverterad fil genom att försöka markera text, söka efter ett ord och zooma in på den minsta texten. I en äkta skannad PDF går det bara att markera hela sidbilder, Ctrl+F hittar inga ord och texten går ändå att läsa tydligt vid zoomnivån 200 %. Kontrollera också filstorleken och antalet sidor.</p>
+
+<p>Cleveland State Universitys tillgänglighetsguide beskriver det snabbaste testet: <a href="https://pressbooks.ulib.csuohio.edu/accessibility/chapter/chapter-4-2-the-difference-between-an-accessible-pdf-and-a-scanned-image-of-text/" target="_blank" rel="noopener">”Om ordet markeras på sidan innehåller den sökbar text och är inte en skannad bild av text.”</a> Efter en korrekt konvertering markeras ingenting, och när du drar med markören markeras sidbilden i stället för ord.</p>
+
+<div class="callout callout-info"><strong>Fempunktskontroll innan du skickar</strong>1. Texten går inte att markera eller kopiera. 2. Ctrl+F hittar ingenting. 3. Den minsta texten går att läsa vid zoomnivån 200 %. 4. Antal sidor och ordning stämmer med originalet. 5. Filstorleken ryms inom mottagarens uppladdningsgräns, och dokumentegenskaperna visar bara det du har tänkt dig.</div>
+
+
+<h2 id="troubleshooting">Hur löser du problem med PDF till skannad PDF?</h2>
+<p>De flesta problem vid konvertering från PDF till skannad PDF beror på fyra saker: för låg upplösning (suddig text), för hög upplösning eller färg (enorm fil), en källa som inte är en PDF (fel sidstorlek) och rotation som har lämnats på (sneda sidor). Varje problem har en direkt lösning i verktyget, listad nedan med den inställning du ändrar först.</p>
+
+<h3>Suddig eller trasig text i den skannade PDF:en</h3>
+<p>Höj Upplösning till 2,5× eller 3× och sänk sedan Oskärpa till 0,1–0,2, eller till 0 för en ren tillplattning. Om tunn grå text fortfarande bleknar höjer du Kontrast till ungefär 1,2. Oskärpa och brus läggs på efter renderingen, så vid 1× kan även ett litet oskärpevärde göra text i 9 punkter oläslig.</p>
+
+<h3>Den skannade PDF-filen är enorm</h3>
+<p>Byt Färgrymd till Gråskala om dokumentet är text och sänk sedan Upplösning från 3× till 2× eller 1,5×. Brus kostar också utrymme, eftersom slumpmässiga prickar är svåra för JPEG att komprimera, så håll Brus på 0,1 eller lägre i långa dokument. Mycket långa filer delar du upp och konverterar i delar.</p>
+
+<h3>Fel sidstorlek efter konvertering till skannad</h3>
+<p>PDF-sidor behåller sin ursprungliga storlek och layout. Om resultatet visar A4-sidor med enkel Helvetica-text var källan en DOCX-fil, ett kalkylark eller en TXT- eller HTML-fil, som verktyget sätter om som text på A4. Exportera originalet till PDF från sitt eget program först och konvertera sedan den PDF:en.</p>
+
+<h3>Sidorna lutar eller hörnen är avklippta</h3>
+<p>Sätt Rotation och Rotationsvariation till 0 för en rak sida. Standardvärdena (Rotation 1°) finns där för realismens skull, men en inlaga till domstol eller ett formulär som ska behandlas automatiskt bör oftast vara rakt. Om du vill ha lutning håller du den under 2° så att hörnen stannar innanför sidan.</p>
+
+<h3>Signaturen eller stämpeln ser pixlig ut</h3>
+<p>Signaturlinjer är tunna och drabbas först vid låg upplösning. Använd 2,5× eller 3×, håll Oskärpa på högst 0,3, och om du placerar en bild av en stämpel eller signatur via extrafunktionerna utgår du från en PNG med hög upplösning. Placera bara signaturer och stämplar som du har rätt att använda.</p>
+
+<div class="expert-quote"><blockquote>Vi byggde reglaget Upplösning kring PDF:ens eget rutnät på 72 punkter så att siffrorna förblir ärliga: 2× är 144 dpi, 3× är 216 dpi, ingenting är dolt. Det är därför standardvärdena är 2× i Gråskala: tillräckligt skarpt för vanlig brödtext och mycket mindre än en färgrendering av samma sida. Vi håller allt lokalt i webbläsaren eftersom de filer som folk plattar till oftast är just de som de minst av allt vill ladda upp.</blockquote><cite><strong>Teamet bakom Make PDF look scanned</strong> – skaparna av webbverktyget och Chrome-tillägget</cite></div>
+
+<h2 id="faq">PDF till skannad PDF: vanliga frågor</h2>
+<p>De här svaren om PDF till skannad PDF täcker det som folk oftast frågar om efter en konvertering: vad som händer med dold text och metadata, om ändringen går att ångra, hur OCR passar in, vilka inställningar du ska välja och om verktyget fungerar i mobilen. Varje svar speglar vad verktyget faktiskt gör.</p>
+
+<div class="faq-item"><p class="faq-q">Tar en konvertering från PDF till skannad PDF bort dold text?</p><p class="faq-a">Ja, från sidinnehållet. De nya sidorna är JPEG-bilder av det som renderaren ritar, så det finns inget textlager kvar att kopiera, inte heller vit text eller ord som döljs bakom en svart ruta. Se det som en bieffekt, och granska ändå förhandsvisningen när en maskering är viktig.</p></div>
+
+<div class="faq-item"><p class="faq-q">Vad händer med metadata i den ursprungliga PDF:en?</p><p class="faq-a">Verktyget skriver en ny PDF och låter dig ange titel, författare, ämne, nyckelord, producent och skapare i extrapanelen. Fyll i fälten som du vill ha dem innan du laddar ned, och kontrollera sedan resultatets dokumentegenskaper i din PDF-läsare.</p></div>
+
+<div class="faq-item"><p class="faq-q">Kan en skannad PDF göras om till en redigerbar PDF igen?</p><p class="faq-a">Inte exakt. Det ursprungliga textlagret, typsnitten, länkarna och formulärfälten är borta. OCR kan känna igen bokstäverna och lägga till ett nytt sökbart lager, och vissa program kan återskapa redigerbar text utifrån det, men formateringen och träffsäkerheten blir inte som i originalet. Spara originalfilen.</p></div>
+
+<div class="faq-item"><p class="faq-q">Kan jag köra OCR på den skannade PDF:en efteråt?</p><p class="faq-a">Ja. Alla OCR-funktioner i PDF-program för datorn behandlar resultatet som en vanlig skanning. Högre upplösning och lite brus ger bättre igenkänning, så använd 2× eller 3× med Brus nära 0 om du tänker köra OCR på filen.</p></div>
+
+<div class="faq-item"><p class="faq-q">Vad är skillnaden mellan att ”platta till PDF” och ”PDF till skannad”?</p><p class="faq-a">Tillplattning i snäv mening slår ihop formulärfält och anteckningar med sidan men kan låta texten förbli markerbar. Att göra om en PDF till skannad gör hela sidan, även texten, till en bild. Det andra är mer genomgripande och är det som vårt verktyg gör.</p></div>
+
+<div class="faq-item"><p class="faq-q">Vilken upplösning ska jag välja för att göra om en PDF till skannad PDF?</p><p class="faq-a">Använd 2× (cirka 144 dpi) för vanliga dokument och 3× (cirka 216 dpi) för finstilt text, täta tabeller eller namnteckningar. Gå ned till 1,5× bara när filen måste vara mycket liten och texten är 12 punkter eller större.</p></div>
+
+<div class="faq-item"><p class="faq-q">Varför är min skannade PDF så mycket större än originalet?</p><p class="faq-a">En text-PDF lagrar bokstäver som kompakta instruktioner; en skannad PDF lagrar varje pixel på varje sida. Gråskala i stället för Färg, lägre Upplösning och mindre Brus minskar alla storleken. Domstolar rapporterar samma effekt: en testfil på 317 sidor varierade från 23,86 MB till 374,47 MB beroende på färgläge och upplösning.</p></div>
+
+<div class="faq-item"><p class="faq-q">Godtar en domstol en PDF som har gjorts om till skannad PDF?</p><p class="faq-a">Det beror på domstolen. Vissa distrikt kräver textsökbara huvuddokument, andra föredrar dem bara. Läs de lokala CM/ECF-reglerna först; om du är osäker lämnar du in den ursprungliga digitala PDF:en eller lägger till OCR på den skannade versionen.</p></div>
+
+
+<div class="faq-item"><p class="faq-q">Fungerar verktyget för PDF till skannad PDF i mobilen?</p><p class="faq-a">Ja. Webbplatsen körs i mobila webbläsare, bearbetar filerna lokalt i telefonen och laddar ned den skannade PDF:en till dina filer. Stora dokument i 3× tar längre tid och kräver mer minne i en telefon, så 2× är det säkrare valet där.</p></div>
+
+<div class="faq-item"><p class="faq-q">Är konverteraren för PDF till skannad PDF gratis?</p><p class="faq-a">Ja. Webbverktyget och Chrome-tillägget är gratis, kräver ingen registrering och lägger inte till någon vattenstämpel om du inte själv väljer att lägga till en bland extrafunktionerna.</p></div>

@@ -1,0 +1,300 @@
+<p class="lead">Per far sembrare un PDF scansionato, trasforma ogni pagina in un'immagine, inclinala di circa 0,5–2°, aggiungi un leggero rumore e un po' di sfocatura, passa alla scala di grigi e salva di nuovo le immagini in un PDF. Uno strumento gratuito nel browser fa tutto questo in meno di un minuto, in locale, senza caricare il file e senza installare nulla.</p>
+
+<p>Molti moduli chiedono ancora una «copia scansionata», e un PDF digitale perfettamente pulito può sembrare fuori posto accanto a pratiche nate su carta. Questa guida mostra sei modi diversi per far sembrare un PDF scansionato, da uno strumento nel browser che richiede un minuto a una vera stampante con scanner, con impostazioni precise, cinque ricette collaudate, una checklist e un quadro onesto dei limiti.</p>
+
+<p>I valori di risoluzione provengono dalle norme federali statunitensi sulla digitalizzazione e dalle guide per il deposito degli atti nei tribunali; i valori dei cursori provengono dal nostro strumento.</p>
+
+<nav class="toc" aria-label="Indice"><h2>Indice</h2><ol>
+<li><a href="#quick-answer">Qual è il modo più rapido per far sembrare un PDF scansionato?</a></li>
+<li><a href="#method-1-browser-tool">Metodo 1: far sembrare un PDF scansionato nel browser</a></li>
+<li><a href="#method-2-chrome-extension">Metodo 2: far sembrare un PDF una scansione in Chrome</a></li>
+<li><a href="#method-3-print-dialog">Metodo 3: la finestra di stampa può simulare un PDF scansionato?</a></li>
+<li><a href="#method-4-image-editor">Metodo 4: creare a mano un PDF come se fosse stato scansionato</a></li>
+<li><a href="#method-5-phone-photo">Metodo 5: far sembrare un PDF una scansione con lo smartphone</a></li>
+<li><a href="#method-6-print-and-scan">Metodo 6: stampare e scansionare davvero il PDF</a></li>
+<li><a href="#recipes">Quali impostazioni fanno sembrare un PDF un documento scansionato?</a></li>
+<li><a href="#check-the-result">Come verificare che il PDF sembri davvero scansionato?</a></li>
+<li><a href="#common-mistakes">Perché un finto PDF scansionato sembra ancora finto?</a></li>
+<li><a href="#when-not-to">Quando è meglio non far sembrare un PDF scansionato?</a></li>
+<li><a href="#faq">Far sembrare un PDF scansionato: domande frequenti</a></li>
+<li><a href="#verdict">Quale metodo scegliere per far sembrare un PDF scansionato?</a></li>
+</ol></nav>
+
+<h2 id="quick-answer">Qual è il modo più rapido per far sembrare un PDF scansionato?</h2>
+<p>Il modo più rapido per far sembrare un PDF scansionato è uno strumento effetto scansione nel browser: apri la pagina, trascina il PDF, mantieni o regola i valori predefiniti di rotazione, sfocatura e rumore e scarica il risultato. L'intera operazione richiede meno di un minuto per file e non costa nulla.</p>
+
+<p>Gli altri cinque metodi sacrificano la velocità in cambio di più controllo o di un'autenticità fisica. La finestra di stampa è rapida ma convince solo a metà. Un editor di immagini raster dà il pieno controllo ma richiede 10–30 minuti. Una foto con il telefono o una vera stampante con scanner producono autentici difetti di scansione, al prezzo di carta, tempo e hardware. La tabella qui sotto riassume il confronto tra i sei metodi.</p>
+
+<div class="table-wrap"><table>
+<caption>Sei modi per far sembrare un PDF scansionato a confronto (il tempo per un documento di 5 pagine è una nostra stima)</caption>
+<thead><tr><th scope="col">Metodo</th><th scope="col">Tempo</th><th scope="col">Costo</th><th scope="col">Cosa serve</th><th scope="col">Realismo</th><th scope="col">Privacy</th><th scope="col">Ideale per</th></tr></thead>
+<tbody>
+<tr><th scope="row">1. Strumento nel browser</th><td>Meno di 1 min</td><td>Gratuito</td><td>Qualsiasi browser moderno</td><td>Alto</td><td>In locale, nessun upload</td><td>La maggior parte delle persone e dei file</td></tr>
+<tr><th scope="row">2. Estensione Chrome</th><td>Meno di 1 min</td><td>Gratuito</td><td>Google Chrome</td><td>Alto</td><td>In locale, nessun upload</td><td>Uso frequente, più file insieme</td></tr>
+<tr><th scope="row">3. Finestra di stampa del sistema operativo</th><td>1–2 min</td><td>Gratuito</td><td>Windows o macOS</td><td>Da basso a medio</td><td>In locale</td><td>Solo un aspetto in scala di grigi</td></tr>
+<tr><th scope="row">4. Editor di immagini raster</th><td>10–30 min</td><td>Da gratuito a pagamento</td><td>Editor più esportazione in PDF</td><td>Alto, se fatto bene</td><td>In locale</td><td>Effetti personalizzati una tantum</td></tr>
+<tr><th scope="row">5. Foto di una stampa con il telefono</th><td>5–10 min</td><td>Carta e toner</td><td>Stampante e telefono</td><td>Molto alto</td><td>In locale</td><td>Un vero aspetto da scansione con smartphone</td></tr>
+<tr><th scope="row">6. Stampa e scansione</th><td>5–15 min</td><td>Carta e toner</td><td>Stampante e scanner piano</td><td>Vera scansione</td><td>In locale</td><td>Quando è richiesta una scansione autentica</td></tr>
+</tbody></table></div>
+
+<p>Se ti serve una sola raccomandazione: usa il Metodo 1 per i singoli file e la sua modalità di scansione multipla per i lotti. Passa al Metodo 6 solo quando una persona o un ufficio vuole esplicitamente un documento passato fisicamente attraverso uno scanner.</p>
+
+<h2 id="method-1-browser-tool">Metodo 1: far sembrare un PDF scansionato nel browser</h2>
+<p>Lo strumento web Make PDF look scanned trasforma ogni pagina del PDF in un'immagine direttamente nel browser, applica rotazione, sfocatura, rumore, luminosità, contrasto e tono della carta e poi salva le immagini in un nuovo PDF. Il file non lascia mai il tuo dispositivo e lo strumento è gratuito, senza registrazione.</p>
+
+<p>Dietro le quinte lo strumento usa PDF.js, che Mozilla descrive come <a href="https://mozilla.github.io/pdf.js/" target="_blank" rel="noopener">«una piattaforma generica, basata sugli standard web, per analizzare e visualizzare i PDF»</a>, e disegna ogni pagina su un canvas HTML. Poiché l'elaborazione avviene in locale, lo strumento continua a funzionare offline dopo il primo caricamento e gira anche nei browser mobili.</p>
+
+<h3>Come far sembrare un PDF scansionato con lo strumento nel browser</h3>
+<ol class="step-list">
+<li><strong>Apri lo scanner.</strong> Vai allo <a href="/scan">strumento di scansione gratuito</a> in Chrome, Edge, Safari o Firefox. Non servono account né installazioni.</li>
+<li><strong>Aggiungi il tuo PDF.</strong> Trascina il file sulla pagina oppure fai clic per sceglierlo. Lo strumento accetta anche file JPG, PNG, WebP, SVG, GIF, BMP, DOCX, XLSX, CSV, TXT, MD e HTML.</li>
+<li><strong>Controlla l'anteprima dal vivo.</strong> La prima pagina compare con l'effetto predefinito già applicato: rotazione di 1°, variazione casuale di 0,5°, sfocatura 0,3, rumore 0,1, scala di grigi, risoluzione 2×.</li>
+<li><strong>Imposta l'inclinazione.</strong> Tieni Rotazione tra 0,5° e 1,5° per una scansione da ufficio credibile. Lascia Variazione rotazione a 0,5–1°, così ogni pagina ha un angolo leggermente diverso, come succede quando i fogli vengono inseriti a mano.</li>
+<li><strong>Regola sfocatura e rumore.</strong> Una Sfocatura di 0,2–0,4 ammorbidisce i bordi vettoriali, taglienti come un rasoio; un Rumore di 0,1–0,25 aggiunge la puntinatura di un sensore. Porta l'anteprima al 100% prima di decidere.</li>
+<li><strong>Scegli lo spazio colore e il tono della carta.</strong> L'opzione Scala di grigi è adatta a contratti e lettere. Scegli A colori per timbri, loghi o moduli colorati e alza Ingiallimento a 0,2–0,6 per una carta non proprio bianca.</li>
+<li><strong>Scegli la risoluzione.</strong> 2× (circa 144 dpi) è il valore predefinito, equilibrato; 3× (circa 216 dpi) è più nitido ma produce un file più pesante.</li>
+<li><strong>Scarica.</strong> Fai clic sul pulsante di download e salva il nuovo PDF. Aprilo una volta per verificare che tutte le pagine siano state elaborate.</li>
+</ol>
+
+<h3>A cosa serve ogni cursore dello strumento di scansione?</h3>
+<p>Ogni controllo corrisponde a un'imperfezione fisica di un vero scanner. Gli intervalli e i valori predefiniti qui sotto sono presi direttamente dallo strumento, quindi puoi riprodurre con esattezza ogni ricetta di questa guida.</p>
+
+<dl class="spec-list">
+<dt>Rotazione (da −10° a 10°, predefinito 1°)</dt><dd>Inclina tutte le pagine dello stesso angolo, come un foglio appoggiato un po' storto rispetto al bordo del piano di scansione.</dd>
+<dt>Variazione rotazione (da 0 a 10°, predefinito 0,5°)</dt><dd>Aggiunge a ogni pagina un'inclinazione extra casuale, così un documento di più pagine non sembra perfettamente uniforme.</dd>
+<dt>Sfocatura (da 0 a 1, predefinito 0,3)</dt><dd>Ammorbidisce i bordi come fanno l'ottica dello scanner e la compressione JPEG.</dd>
+<dt>Rumore (da 0 a 1, predefinito 0,1)</dt><dd>Aggiunge una puntinatura casuale, come il rumore del sensore e la trama della carta.</dd>
+<dt>Luminosità e Contrasto (da 0 a 2, predefinito 1)</dt><dd>Alza la luminosità per sbiadire la carta; alza il contrasto per un effetto fotocopia.</dd>
+<dt>Ingiallimento (da 0 a 2, predefinito 0)</dt><dd>Applica una calda tinta seppia, da un leggero color crema fino alla carta invecchiata, sia in Scala di grigi sia in A colori.</dd>
+<dt>Spazio colore (Scala di grigi o A colori, predefinito Scala di grigi)</dt><dd>L'opzione Scala di grigi imita una tipica scansione da ufficio in bianco e nero.</dd>
+<dt>Bordo (Sì o No, predefinito No)</dt><dd>Disegna una sottile cornice scura di 1 pixel, come la linea del bordo che alcuni scanner catturano.</dd>
+<dt>Risoluzione (da 1× a 3× con passi di 0,5, predefinito 2×)</dt><dd>Le pagine PDF sono impaginate a 72 punti per pollice, quindi 1× equivale a 72 dpi, 2× a circa 144 dpi e 3× a circa 216 dpi.</dd>
+</dl>
+
+<p>La base di 72 dpi non è arbitraria. <a href="https://en.wikipedia.org/wiki/Dots_per_inch" target="_blank" rel="noopener">La geometria di pagina di PDF e PostScript</a> segue la convenzione tipografica di 72 punti per pollice, quindi il moltiplicatore indica la risoluzione di scansione effettiva di ogni immagine di pagina.</p>
+
+<h3>Extra: filigrana, timbro e metadati</h3>
+<p>Oltre all'effetto scansione, lo strumento può inserire una filigrana di testo o immagine, aggiungere l'immagine di un timbro o di una firma con posizione orizzontale e verticale e dimensione regolabili e modificare i campi dei metadati del PDF: titolo, autore, oggetto, parole chiave, produttore e creatore. Usa l'immagine di una firma solo se la firma è tua.</p>
+
+<h3>Come far sembrare scansionati più PDF contemporaneamente</h3>
+<p>Per i lotti di file apri la <a href="/scan/bulk">Scansione multipla</a>, aggiungi tutti i tuoi file, imposta l'effetto una volta sola e scarica tutto in un unico archivio ZIP. Ogni file in ingresso diventa un PDF scansionato a sé: se inserisci dieci fatture, ottieni dieci PDF scansionati.</p>
+
+<div class="callout callout-tip"><strong>File Word, Excel o Google Docs? Prima esportalo in PDF</strong>Lo strumento legge i PDF esattamente come sono impaginati, ma da un DOCX estrae solo il testo semplice e lo reimpagina in Helvetica 11 pt su pagine A4, perdendo caratteri, tabelle e immagini. I fogli di calcolo diventano testo CSV. Se l'impaginazione conta, salva prima il file in PDF (in Documenti Google: File → Scarica → Documento PDF), poi applica la scansione a quel PDF. Trovi i dettagli nella nostra guida su <a href="/blog/make-a-document-look-scanned/">come far sembrare scansionato un documento Word o Google Docs</a>.</div>
+
+<h2 id="method-2-chrome-extension">Metodo 2: far sembrare un PDF una scansione in Chrome</h2>
+<p>L'estensione Chrome Make PDF look scanned porta lo stesso motore di scansione in un pannello laterale del browser, così puoi far sembrare un PDF una scansione senza aprire una nuova scheda. Elabora i file in locale, gestisce più file contemporaneamente e li scarica tutti insieme in un archivio ZIP.</p>
+
+<p>L'estensione è la scelta migliore se converti documenti ogni settimana o se ti capita spesso di dover far sembrare scansionato un file PDF mentre lavori in applicazioni web come l'email o un portale documentale. Il pannello laterale resta aperto accanto alla pagina, quindi puoi trascinarvi un file, regolare l'effetto e scaricare il risultato senza perdere il punto in cui eri.</p>
+
+<ol class="step-list">
+<li><strong>Installa l'estensione.</strong> Apri la <a href="https://chromewebstore.google.com/detail/make-pdf-look-scanned/ijhpnlcipgiokgignkbbbgkobdmdoila" target="_blank" rel="noopener">pagina di Make PDF look scanned sul Chrome Web Store</a>, dove ha una valutazione di 5 stelle, e fai clic su Aggiungi a Chrome.</li>
+<li><strong>Fissala nella barra.</strong> Fai clic sull'icona a forma di puzzle nella barra degli strumenti e fissa l'estensione, così è sempre a un clic di distanza.</li>
+<li><strong>Apri il pannello laterale.</strong> Fai clic sull'icona dell'estensione: lo scanner si apre in un pannello sul lato destro della finestra del browser.</li>
+<li><strong>Aggiungi uno o più file.</strong> Trascina PDF o immagini nel pannello. Sono disponibili gli stessi formati e gli stessi cursori dello strumento web.</li>
+<li><strong>Regola e scarica.</strong> Imposta rotazione, sfocatura, rumore e spazio colore, poi scarica un singolo PDF scansionato oppure, se hai più file, un unico ZIP.</li>
+</ol>
+
+<p>Di solito anche i browser basati su Chromium, come Microsoft Edge, possono installare estensioni dal Chrome Web Store, anche se l'esperienza del pannello laterale è progettata e testata per Google Chrome. Se sul computer di lavoro non puoi installare estensioni, la <a href="/scan">versione dello strumento nel browser</a> produce un risultato identico senza installare nulla.</p>
+
+<h2 id="method-3-print-dialog">Metodo 3: la finestra di stampa può simulare un PDF scansionato?</h2>
+<p>La finestra di stampa integrata in Windows e macOS riesce a far sembrare un PDF scansionato solo in parte. Microsoft Print to PDF e Anteprima di macOS possono convertire le pagine in scala di grigi o comprimerle, ma nessuno dei due aggiunge inclinazione, sfocatura o rumore: il risultato sembra un file digitale grigio, non una scansione.</p>
+
+<p>Se stai cercando un modo per far sembrare scansionato un documento PDF usando soltanto il sistema operativo, questa è la strada da conoscere.</p>
+
+<p>La stampa resta comunque utile soprattutto in due situazioni: quando non puoi usare alcuno strumento web e come passaggio preparatorio. Stampare prima in PDF un file Word, Excel o una pagina web ne conserva l'impaginazione, e quel PDF può poi ricevere un effetto scansione completo.</p>
+
+<h3>Windows: Microsoft Print to PDF</h3>
+<p>Windows include una stampante virtuale chiamata <a href="https://support.microsoft.com/en-us/office/print-notes-in-onenote-for-windows-10-45edbbc5-fbb8-453f-99c7-aaadebe5c06a" target="_blank" rel="noopener">«Microsoft Print to PDF»</a>, che compare nell'elenco Stampante di qualsiasi app. Apri il PDF, premi Ctrl+P, scegli Microsoft Print to PDF, imposta Colore su Bianco e nero o su Scala di grigi, se il tuo visualizzatore lo prevede, e salva il nuovo file.</p>
+
+<p>In alcuni visualizzatori PDF esiste anche un'opzione «Stampa come immagine» tra le impostazioni di stampa avanzate. Attivandola, ogni pagina viene rasterizzata e il testo non è più selezionabile, uno dei segnali rivelatori di un file nato digitale. Le pagine, però, restano perfettamente dritte e perfettamente pulite.</p>
+
+<h3>macOS: esportazione da Anteprima con un filtro Quartz</h3>
+<p>Su un Mac, <a href="https://support.apple.com/guide/mac-help/save-a-document-as-a-pdf-on-mac-mchlp1531/mac" target="_blank" rel="noopener">qualsiasi app in grado di stampare può salvare un PDF</a> tramite File → Stampa → PDF → Salva come PDF. Per una tonalità da scansione, apri il PDF in Anteprima, scegli File → Esporta e seleziona un Filtro Quartz come Bianco e nero, Tonalità di grigio o Tonalità seppia.</p>
+
+<p>Apple spiega che <a href="https://support.apple.com/guide/preview/add-effects-to-a-pdf-prvw1510/mac" target="_blank" rel="noopener">i filtri Quartz di Anteprima modificano i colori di un PDF</a>, ad esempio trasformando un documento a colori in bianco e nero. Il filtro Riduci dimensioni file, inoltre, ricomprime le immagini incorporate: aggiunge loro una lieve morbidezza JPEG, ma non tocca il testo.</p>
+
+<h3>Perché la finestra di stampa dà solo un aspetto scansionato parziale?</h3>
+<p>Una vera pagina scansionata è una fotografia di un foglio di carta: è leggermente ruotata, ha bordi morbidi, uno sfondo grigio o color crema e una puntinatura casuale. La finestra di stampa cambia i colori e a volte rasterizza, ma non sposta né degrada mai la pagina. Confronta i risultati fianco a fianco:</p>
+
+<div class="table-wrap"><table>
+<caption>Cosa può e cosa non può imitare la finestra di stampa del sistema operativo</caption>
+<thead><tr><th scope="col">Caratteristica della scansione</th><th scope="col">Microsoft Print to PDF</th><th scope="col">Filtro Quartz di Anteprima (macOS)</th><th scope="col">Strumento di scansione nel browser</th></tr></thead>
+<tbody>
+<tr><th scope="row">Scala di grigi</th><td>Dipende dal visualizzatore</td><td>Sì</td><td>Sì</td></tr>
+<tr><th scope="row">Testo non più selezionabile</th><td>Solo con «Stampa come immagine»</td><td>No</td><td>Sì</td></tr>
+<tr><th scope="row">Leggera inclinazione per pagina</th><td>No</td><td>No</td><td>Sì, da −10° a 10°</td></tr>
+<tr><th scope="row">Bordi morbidi e rumore</th><td>No</td><td>No</td><td>Sì</td></tr>
+<tr><th scope="row">Tono della carta</th><td>No</td><td>Solo seppia</td><td>Sì, regolabile</td></tr>
+</tbody></table></div>
+
+<p>Il team per l'accessibilità della James Madison University riassume bene l'effetto collaterale: <a href="https://www.jmu.edu/accessibility/digital-accessibility/guides/pdf/scanned-documents.shtml" target="_blank" rel="noopener">«Stampare semplicemente un documento in PDF o scansionarlo senza riconoscimento del testo o OCR produce di solito un file basato su immagini e non accessibile».</a> È proprio per questo che un risultato rasterizzato sembra una scansione, ed è anche il motivo per cui conviene conservare l'originale.</p>
+
+<h2 id="method-4-image-editor">Metodo 4: creare a mano un PDF come se fosse stato scansionato</h2>
+<p>Con un editor di immagini raster puoi rendere un PDF come se fosse stato scansionato applicando a mano ogni effetto: esporti le pagine come immagini, le ruoti leggermente, aggiungi rumore e sfocatura, regoli i livelli e poi ricomponi un PDF. Il metodo dà il pieno controllo su ogni pagina, ma richiede 10–30 minuti per documento.</p>
+
+<p>Se vuoi capire passo dopo passo come far sembrare un PDF scansionato, questa è la strada più istruttiva, perché applichi tu stesso ogni singolo effetto.</p>
+
+<p>Va bene qualsiasi editor raster, gratuito o a pagamento, che abbia strumenti di rotazione, rumore, sfocatura e livelli. Il procedimento è lo stesso in tutti; cambiano solo i nomi dei menu. Metti in conto di lavorare su ogni pagina separatamente, oppure registra i passaggi come azione o macro, se il tuo editor lo consente.</p>
+
+<ol class="step-list">
+<li><strong>Esporta le pagine come immagini.</strong> Usa l'opzione Esporta o Salva come immagine del tuo visualizzatore PDF. Scegli PNG o JPEG di alta qualità a 150–300 dpi; 200 dpi è un buon compromesso per il testo.</li>
+<li><strong>Converti in scala di grigi.</strong> A meno che il documento non abbia timbri o firme a colori, imposta subito la modalità immagine su scala di grigi: ogni passaggio successivo si comporterà in modo più simile a un vero scanner.</li>
+<li><strong>Ruota di 0,5–2°.</strong> Usa la rotazione libera, non le rotazioni predefinite di 90°. Usa un angolo diverso su ogni pagina, per esempio 0,7°, −0,4° e 1,1°, e riempi gli angoli rimasti scoperti di bianco o grigio chiaro.</li>
+<li><strong>Aggiungi rumore.</strong> Applica un rumore gaussiano monocromatico del 2–5%. Oltre l'8% circa inizia a sembrare la grana di una pellicola più che il sensore di uno scanner.</li>
+<li><strong>Aggiungi una leggera sfocatura.</strong> Una sfocatura gaussiana con raggio di 0,3–0,6 pixel a 200 dpi elimina i bordi taglienti del testo vettoriale.</li>
+<li><strong>Regola i livelli.</strong> Alza un po' il punto del nero, così i neri diventano grigio scuro, e abbassa il punto del bianco, così la carta diventa leggermente grigia o color crema.</li>
+<li><strong>Salva in JPEG.</strong> Una qualità del 75–85% aggiunge la sottile morbidezza da compressione di una vera scansione, senza blocchi visibili.</li>
+<li><strong>Ricomponi il PDF.</strong> Rimetti le immagini in ordine e uniscile in un solo PDF, per esempio in Anteprima su macOS (seleziona le pagine → Stampa → Salva come PDF) o nell'app Foto di Windows (Stampa → Microsoft Print to PDF).</li>
+</ol>
+
+<p>Lo sforzo ripaga quando ti serve qualcosa che i cursori non offrono, come un margine sinistro più scuro, un'ombra lungo la rilegatura di un libro o una piega disegnata a mano. Per un normale aspetto da ufficio, il risultato è in sostanza lo stesso del Metodo 1, con molti più clic.</p>
+
+<h2 id="method-5-phone-photo">Metodo 5: far sembrare un PDF una scansione con lo smartphone</h2>
+<p>La scansione di una stampa con il telefono produce l'aspetto da scansione con smartphone più naturale: stampa il PDF, poi acquisiscilo con lo scanner di documenti integrato nelle app Note o File dell'iPhone, oppure in molte app Fotocamera e di gestione file di Android. Il telefono ritaglia la pagina, la raddrizza e la salva come PDF.</p>
+
+<p>Su iPhone e iPad, Apple spiega che puoi <a href="https://support.apple.com/en-us/108963" target="_blank" rel="noopener">scansionare documenti cartacei con l'app Note o File</a> e trascinare gli angoli per adattarli alla pagina prima di mantenere la scansione. Molti telefoni Android offrono una modalità documento simile nella fotocamera o nell'app di gestione file integrate; i nomi dei menu variano a seconda del produttore.</p>
+
+<ol class="step-list">
+<li><strong>Stampa il PDF.</strong> Bastano normale carta da ufficio da 80 g/m² e una qualità di stampa standard.</li>
+<li><strong>Usa una luce morbida e uniforme.</strong> La luce diurna di una finestra, o una lampada da soffitto alle tue spalle, evita l'ombra netta della tua mano e del telefono.</li>
+<li><strong>Appoggia la pagina su una superficie a contrasto.</strong> Una scrivania scura aiuta lo scanner a rilevare automaticamente gli angoli.</li>
+<li><strong>Scansiona ogni pagina.</strong> Tieni il telefono parallelo al foglio; accetta il ritaglio automatico o trascina tu gli angoli.</li>
+<li><strong>Scegli il filtro.</strong> I filtri in scala di grigi o «documento» sembrano una scansione da ufficio; il filtro a colori o foto conserva la trama della carta e le variazioni di luce.</li>
+<li><strong>Salva o condividi come PDF.</strong> Tutte le pagine finiscono in un unico PDF di più pagine.</li>
+</ol>
+
+<p>Se hai già delle foto scattate con il telefono invece di una scansione, la nostra guida su <a href="/blog/image-to-scanned-pdf/">come trasformare un JPG o una foto dello smartphone in un PDF scansionato</a> spiega come ritagliare e unire le immagini prima di aggiungere l'effetto scansione.</p>
+
+<h2 id="method-6-print-and-scan">Metodo 6: stampare e scansionare davvero il PDF</h2>
+<p>Stampare il PDF e farlo passare in uno scanner piano o con alimentatore di fogli crea un vero documento scansionato, non un'imitazione. Scansiona a 200–300 dpi in scala di grigi per il testo, salva in PDF e aspettati un'inclinazione autentica, polvere, la trama del toner e una leggera perdita di contrasto.</p>
+
+<p>Come riferimento, le norme federali statunitensi fissano una soglia minima per la digitalizzazione professionale. Il regolamento della NARA dice dei documenti testuali moderni: <a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">«Per questi documenti, produrre file immagine con una risoluzione minima di 300 ppi, dimensionati sul documento originale».</a> La stessa norma tollera circa 294 ppi, cioè 300 ppi meno il 2%.</p>
+
+<p>La Federal Agencies Digital Guidelines Initiative (FADGI) classifica i documenti non rilegati su una scala a stelle che va da circa 200 ppi per una stella a 400 ppi per quattro stelle. Le normali scansioni da ufficio si collocano di solito nella parte bassa di questo intervallo, ed è per questo che 200 dpi sembrano già autentici per lettere e moduli.</p>
+
+<dl class="spec-list">
+<dt>Risoluzione</dt><dd>200 dpi per un tipico aspetto da ufficio; 300 dpi quando un tribunale o un ente lo richiede.</dd>
+<dt>Modalità colore</dt><dd>Scala di grigi per la maggior parte dei testi; bianco e nero puro (1 bit) per un aspetto netto da fax o fotocopiatrice; a colori solo se l'originale ha dei colori.</dd>
+<dt>Carta</dt><dd>Normale carta da ufficio; una carta leggermente avorio o riciclata aggiunge un tono naturale.</dd>
+<dt>Posizionamento</dt><dd>Non allineare il foglio alla perfezione contro la guida del piano; una piccola inclinazione naturale è proprio ciò che cerchi.</dd>
+</dl>
+
+<p>L'inclinazione arriva da sola. La FADGI osserva che <a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">«l'inclinazione nell'immagine acquisita si può spesso ricondurre alla mancanza di parallelismo tra il piano focale della fotocamera e il piano di scansione».</a> Il cursore Variazione rotazione del Metodo 1 imita esattamente questa piccola inclinazione che cambia da una pagina all'altra.</p>
+
+<h2 id="recipes">Quali impostazioni fanno sembrare un PDF un documento scansionato?</h2>
+<p>Le impostazioni che fanno sembrare un PDF un documento scansionato dipendono dal tipo di scansione che vuoi imitare. Cinque ricette coprono la maggior parte dei casi: una scansione da ufficio pulita, una fotocopia, una pagina in stile fax, la carta invecchiata e un aspetto da scansione con smartphone. Tutti i valori qui sotto funzionano direttamente nello strumento nel browser.</p>
+
+<p>Se ti chiedi come far sembrare un PDF scansionato imitando un tipo di documento in particolare, scegli la riga corrispondente.</p>
+
+<p>Queste ricette sono nostri punti di partenza, messi a punto su lettere, fatture e moduli tipici. Considerale una base: carica la ricetta, porta l'anteprima al 100% e modifica un cursore alla volta finché la pagina non ha l'aspetto giusto per il tuo documento.</p>
+
+<div class="table-wrap"><table>
+<caption>Cinque ricette di aspetto scansionato con i valori esatti dei cursori per lo strumento Make PDF look scanned</caption>
+<thead><tr><th scope="col">Ricetta</th><th scope="col">Rotazione / variazione</th><th scope="col">Sfocatura</th><th scope="col">Rumore</th><th scope="col">Luminosità / contrasto</th><th scope="col">Ingiallimento</th><th scope="col">Spazio colore</th><th scope="col">Bordo</th><th scope="col">Risoluzione</th></tr></thead>
+<tbody>
+<tr><th scope="row">Scansione da ufficio</th><td>0,5° / 0,5°</td><td>0,2</td><td>0,1</td><td>1,05 / 1,1</td><td>0</td><td>Scala di grigi</td><td>No</td><td>2×</td></tr>
+<tr><th scope="row">Fotocopia</th><td>1° / 1°</td><td>0,3</td><td>0,25</td><td>1,1 / 1,4</td><td>0</td><td>Scala di grigi</td><td>Sì</td><td>2×</td></tr>
+<tr><th scope="row">Stile fax</th><td>1,5° / 1°</td><td>0,5</td><td>0,35</td><td>1,15 / 1,6</td><td>0</td><td>Scala di grigi</td><td>Sì</td><td>1,5×</td></tr>
+<tr><th scope="row">Carta invecchiata</th><td>1° / 1,5°</td><td>0,3</td><td>0,2</td><td>0,95 / 1,1</td><td>0,6</td><td>A colori</td><td>No</td><td>2×</td></tr>
+<tr><th scope="row">Scansione con smartphone</th><td>2° / 1,5°</td><td>0,4</td><td>0,15</td><td>1,05 / 1,2</td><td>0,2</td><td>A colori</td><td>No</td><td>2×</td></tr>
+</tbody></table></div>
+
+<h3>Scansione da ufficio: la scelta sicura</h3>
+<p>La ricetta da ufficio è quella da usare quando un modulo dice semplicemente «carica una copia scansionata». Poco rumore e un'inclinazione di mezzo grado ricordano uno scanner da ufficio ben tenuto; il leggero aumento di contrasto mantiene leggibili i caratteri piccoli. A 2× l'immagine della pagina è di circa 144 dpi, abbastanza per una lettura comoda a schermo.</p>
+
+<h3>Effetto fotocopia e stile fax</h3>
+<p>Le fotocopie hanno un aspetto più duro: un contrasto più alto schiaccia i toni di grigio verso il bianco e il nero, e la linea del bordo imita il margine scuro che spesso lasciano le fotocopiatrici. La ricetta in stile fax va oltre, con più rumore e l'impostazione 1,5×, circa 108 dpi, vicina alla risoluzione verticale di circa 100 linee per pollice di un <a href="https://en.wikipedia.org/wiki/Fax" target="_blank" rel="noopener">fax Gruppo 3 in modalità standard</a>.</p>
+
+<h3>Carta invecchiata e scansione con smartphone</h3>
+<p>Per la carta invecchiata passa ad A colori e alza Ingiallimento a circa 0,6, abbassando leggermente la luminosità: la pagina assume un caldo tono crema. La ricetta per la scansione con smartphone usa un'inclinazione più ampia di 2° e un accenno di calore, come una pagina fotografata sotto una luce da interni. Per altri preset, consulta la nostra <a href="/blog/scan-effect/">guida all'effetto scansione</a>.</p>
+
+<div class="callout callout-tip"><strong>Mantieni leggibili i caratteri piccoli</strong>Se un documento ha note a piè di pagina o testo sotto i 9 pt, resta a Sfocatura 0,3 o meno e usa una risoluzione di 2,5× o 3×. Sfocatura e rumore danneggiano per primi i caratteri piccoli, e una scansione illeggibile non serve a nulla.</div>
+
+<h2 id="check-the-result">Come verificare che il PDF sembri davvero scansionato?</h2>
+<p>Per verificare che un PDF sembri scansionato, aprilo con lo zoom al 100% e controlla cinque cose: il testo non si può selezionare, le pagine hanno angoli leggermente diversi, i bordi sono morbidi e non taglienti, lo sfondo non è bianco puro e le proprietà del file non indicano più un programma di videoscrittura.</p>
+
+<p>Le vere scansioni contengono difetti che gli archivisti cercano di eliminare. Il regolamento della NARA ne definisce uno senza giri di parole: <a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">«Il rumore è uno o più artefatti indesiderati dell'immagine in un documento digitalizzato, che non fanno parte del materiale di origine».</a> Un aspetto scansionato convincente richiede una quantità di rumore piccola e controllata: né zero né troppo.</p>
+
+<ol>
+<li><strong>Prova a selezionare il testo.</strong> Premi Ctrl+A o Cmd+A nel tuo visualizzatore PDF. In un PDF dall'aspetto scansionato non si evidenzia nulla, perché ogni pagina è un'immagine.</li>
+<li><strong>Cerca una parola.</strong> Ctrl+F o Cmd+F non dovrebbero trovare nulla, a meno che l'OCR non sia stato aggiunto di proposito.</li>
+<li><strong>Confronta gli angoli delle pagine.</strong> Scorri diverse pagine; con la variazione della rotazione attiva, ognuna dovrebbe essere inclinata in modo un po' diverso.</li>
+<li><strong>Porta lo zoom al 200%.</strong> I bordi delle lettere dovrebbero apparire leggermente morbidi, con una lieve puntinatura, e non come nitidi contorni vettoriali.</li>
+<li><strong>Guarda i margini.</strong> La carta dovrebbe essere grigio chiarissimo o color crema, non bianco puro.</li>
+<li><strong>Apri le proprietà del documento.</strong> Controlla i campi Produttore e Creatore; lo strumento ti permette di modificare titolo, autore, oggetto, parole chiave, produttore e creatore.</li>
+<li><strong>Controlla la dimensione del file.</strong> Un PDF dall'aspetto scansionato è più pesante dell'originale, spesso di parecchie volte, perché contiene immagini invece di testo.</li>
+<li><strong>Stampa una pagina.</strong> Se la stampa si legge bene a un braccio di distanza, le impostazioni vanno bene per qualsiasi portale di caricamento.</li>
+</ol>
+
+<p>La dimensione del file conta per i caricamenti. A titolo di stima approssimativa, una pagina di testo a 2× in scala di grigi di solito pesa poche centinaia di kilobyte, mentre a 3× a colori può pesare diverse volte tanto. Se un portale ha un limite, abbassa la risoluzione a 1,5× o passa a Scala di grigi. La nostra guida su <a href="/blog/pdf-to-scanned-pdf/">come convertire un PDF in PDF scansionato</a> approfondisce i compromessi tra DPI e dimensione.</p>
+
+<h2 id="common-mistakes">Perché un finto PDF scansionato sembra ancora finto?</h2>
+<p>Un finto PDF scansionato di solito sembra finto perché un effetto è esagerato o perché sopravvive un segno del file digitale: tutte le pagine inclinate in modo identico, sfocatura pesante, rumore grossolano, sfondo bianco puro o testo selezionabile. Correggere questi cinque errori risolve la maggior parte dei problemi che vediamo.</p>
+
+<div class="table-wrap"><table>
+<caption>Risoluzione dei problemi di un PDF dall'aspetto scansionato: sintomi, cause e soluzioni</caption>
+<thead><tr><th scope="col">Sintomo</th><th scope="col">Causa probabile</th><th scope="col">Soluzione</th></tr></thead>
+<tbody>
+<tr><th scope="row">Tutte le pagine pendono dallo stesso lato</th><td>Variazione rotazione impostata a 0</td><td>Imposta la variazione a 0,5–1,5°</td></tr>
+<tr><th scope="row">La pagina sembra storta, non scansionata</th><td>Rotazione oltre 3°</td><td>Resta tra 0,5° e 2°</td></tr>
+<tr><th scope="row">Il testo è sfocato o difficile da leggere</th><td>Sfocatura oltre 0,5 o risoluzione 1×</td><td>Sfocatura 0,2–0,3, risoluzione 2× o superiore</td></tr>
+<tr><th scope="row">La pagina sembra avere la grana di una pellicola</th><td>Rumore oltre 0,4</td><td>Rumore 0,1–0,25</td></tr>
+<tr><th scope="row">La pagina sembra ancora digitale</th><td>Carta bianco puro, bordi nitidi</td><td>Luminosità 0,95–1,05, Ingiallimento 0,1–0,3, Sfocatura 0,2 o più</td></tr>
+<tr><th scope="row">L'impaginazione di un file Word si è rotta</th><td>DOCX caricato direttamente</td><td>Esporta prima in PDF, poi applica la scansione</td></tr>
+<tr><th scope="row">File troppo pesante da caricare</th><td>Risoluzione 3× A colori</td><td>Usa Scala di grigi e 1,5×–2×</td></tr>
+<tr><th scope="row">Più foto sono diventate più PDF</th><td>Un'immagine equivale a un PDF</td><td>Unisci prima le immagini in un solo PDF</td></tr>
+</tbody></table></div>
+
+<p>Altri due dettagli tradiscono un file nato digitale. Il primo è un logo a colori su una pagina per il resto grigia, cosa che succede quando è stata convertita solo una parte del documento: elabora l'intero file con le stesse impostazioni. Il secondo sono i metadati: un campo Creatore che indica un programma di videoscrittura. Modificalo nello strumento prima di scaricare.</p>
+
+<p>Non correggere troppo nemmeno nella direzione opposta. La rotazione, come spiega la FADGI, <a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">«viene introdotta durante l'acquisizione da un allineamento scorretto del contenuto»</a>, e chi inserisce un foglio in uno scanner raramente lo disallinea di più di un grado o due. Angoli ampi sembrano costruiti ad arte.</p>
+
+<h3>Lo strumento aggiunge pieghe, macchie o ombre?</h3>
+<p>No. Lo strumento imita inclinazione, sfocatura, rumore, tono, contrasto e una linea di bordo; non aggiunge pieghe, piegature, macchie di caffè, ombre sui bordi o distorsioni prospettiche e non esegue l'OCR. Se ti servono queste caratteristiche fisiche, stampa la pagina e usa il Metodo 5 o il Metodo 6, oppure disegnale in un editor raster (Metodo 4).</p>
+
+<h2 id="when-not-to">Quando è meglio non far sembrare un PDF scansionato?</h2>
+<p>È meglio non far sembrare un PDF scansionato quando il destinatario ha bisogno di testo ricercabile, quando le regole chiedono un PDF basato su testo o quando l'aspetto da scansione darebbe un'idea falsa dell'origine del documento. Tribunali, standard di accessibilità e molti enti preferiscono i PDF nati digitali alle immagini di testo.</p>
+
+<p>I tribunali federali statunitensi sono espliciti. Il Northern District of California raccomanda: <a href="https://cand.uscourts.gov/cases-e-filing/cmecf-information/preparing-your-cmecf-filing" target="_blank" rel="noopener">«Vanno scansionati solo i documenti che non possono essere convertiti direttamente in PDF».</a> Il District of Massachusetts aggiunge che <a href="https://www.mad.uscourts.gov/caseinfo/pdf/ECFadminProc.pdf" target="_blank" rel="noopener">«i documenti PDF scansionati in genere non sono ricercabili e hanno una dimensione del file maggiore».</a></p>
+
+<p>L'altra ragione è l'accessibilità. La tecnica PDF7 delle WCAG del W3C afferma che <a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF7" target="_blank" rel="noopener">«un documento costituito da immagini scansionate di testo è intrinsecamente inaccessibile, perché il contenuto del documento è fatto di immagini, non di testo ricercabile».</a> Chi usa uno screen reader non può leggere un PDF con effetto scansione, a meno che non venga aggiunto l'OCR in un secondo momento.</p>
+
+<div class="callout callout-warn"><strong>Usa l'aspetto scansionato in modo onesto</strong>L'effetto scansione cambia l'aspetto di un file, non la sua autenticità. Non usarlo per falsificare o alterare documenti ufficiali, documenti d'identità, certificati o firme che non sono tuoi. Quando un tribunale, un datore di lavoro o un ente chiede un formato specifico, segui le sue regole: alcuni richiedono PDF con testo ricercabile e rifiutano le immagini di testo.</div>
+
+<p>Tra i buoni motivi per far sembrare un PDF scansionato ci sono: uniformarsi allo stile di un archivio cartaceo, preparare un mockup grafico o un esempio per un corso di formazione, testare un software di elaborazione documenti su dati realistici, oppure soddisfare un modulo che pretende una «scansione» quando hai solo il tuo originale digitale.</p>
+
+<div class="expert-quote"><blockquote>Abbiamo creato lo strumento perché le persone continuavano a stampare un PDF solo per scansionarlo subito dopo. Le impostazioni che sembrano reali sono quelle piccole: un'inclinazione di un grado o meno, un rumore intorno a 0,1 e una leggera sfocatura. La maggior parte dei risultati che sembrano finti nasce dall'alzare tutti i cursori insieme. E l'elaborazione in locale è una scelta voluta: i documenti che le persone scansionano di solito sono privati.</blockquote><cite><strong>Il team Make PDF look scanned</strong> — creatori dello strumento web e dell'estensione Chrome</cite></div>
+
+<h2 id="faq">Far sembrare un PDF scansionato: domande frequenti</h2>
+<p>Queste sono le domande più frequenti di chi vuole far sembrare un PDF scansionato, dalla privacy e dai costi fino ai file Word, alle firme e alla dimensione del file. Ogni risposta è breve e autonoma; le sezioni precedenti spiegano metodi e impostazioni in modo più approfondito.</p>
+
+<p>Le risposte coprono i dubbi più comuni di chi vuole un PDF come se fosse stato scansionato: quale metodo scegliere, se il risultato resta privato, come mantenere leggibili i caratteri piccoli e come far sembrare un PDF una scansione sullo smartphone, per un modulo o per un archivio.</p>
+
+<div class="faq-item"><p class="faq-q">Come posso far sembrare un PDF scansionato gratis?</p><p class="faq-a">Apri lo <a href="/scan">strumento di scansione gratuito</a>, trascina il tuo PDF, mantieni le impostazioni predefinite o scegli una ricetta e scarica il risultato. Non costa nulla, non richiede un account e funziona in qualsiasi browser moderno, anche sullo smartphone.</p></div>
+
+<div class="faq-item"><p class="faq-q">È sicuro caricare un PDF privato in uno strumento effetto scansione?</p><p class="faq-a">Con lo strumento Make PDF look scanned non carichi nulla: le pagine vengono visualizzate ed elaborate in locale nel browser con PDF.js e canvas. Il file non viene inviato a un server di elaborazione e lo strumento continua a funzionare offline dopo il primo caricamento.</p></div>
+
+<div class="faq-item"><p class="faq-q">Come faccio a far sembrare il mio PDF un documento scansionato senza scanner?</p><p class="faq-a">Usa il Metodo 1 o il Metodo 2: entrambi simulano uno scanner via software, ruotando ogni pagina, sfocandola e aggiungendo rumore. Se vuoi difetti autentici senza uno scanner, stampa la pagina e usa lo scanner di documenti integrato nel telefono (Metodo 5).</p></div>
+
+<div class="faq-item"><p class="faq-q">Come faccio a far sembrare scansionato un documento Word?</p><p class="faq-a">Salva prima il file Word in PDF (File → Salva con nome → PDF), poi applica l'effetto scansione al PDF. Se carichi direttamente un DOCX, resta solo il testo semplice in Helvetica 11 pt su pagine A4, quindi caratteri, tabelle e immagini vanno persi.</p></div>
+
+<div class="faq-item"><p class="faq-q">Quanti DPI deve avere un PDF dall'aspetto scansionato?</p><p class="faq-a">Circa 150–200 dpi ricordano una tipica scansione da ufficio. Nello strumento, 2× equivale a circa 144 dpi e 3× a circa 216 dpi. Tribunali e archivi chiedono spesso 300 dpi per le scansioni reali, valore che puoi raggiungere solo con uno scanner fisico.</p></div>
+
+<div class="faq-item"><p class="faq-q">Posso far sembrare scansionati più PDF contemporaneamente?</p><p class="faq-a">Sì. La pagina <a href="/scan/bulk">Scansione multipla</a> e l'estensione Chrome accettano più file, applicano a tutti le stesse impostazioni e scaricano i risultati in un unico ZIP. Ogni file in ingresso diventa un PDF scansionato a sé.</p></div>
+
+<div class="faq-item"><p class="faq-q">Il testo resterà ricercabile dopo l'effetto scansione?</p><p class="faq-a">No. Ogni pagina viene salvata come immagine JPEG all'interno del nuovo PDF, quindi il testo non si può selezionare né cercare. Se ti serve testo ricercabile, esegui l'OCR sul risultato con un software separato oppure conserva il PDF originale.</p></div>
+
+<div class="faq-item"><p class="faq-q">Posso aggiungere una firma o un timbro al PDF dall'aspetto scansionato?</p><p class="faq-a">Sì. Lo strumento può inserire l'immagine di un timbro o di una firma, con posizione e dimensione regolabili, prima di applicare l'effetto scansione, così si fonde con la pagina. Aggiungi solo una firma che sia tua o che tu sia autorizzato a usare.</p></div>
+
+<div class="faq-item"><p class="faq-q">Perché il mio PDF dall'aspetto scansionato sembra finto?</p><p class="faq-a">Di solito perché l'inclinazione è troppo ampia, tutte le pagine pendono in modo identico, oppure sfocatura e rumore sono troppo forti. Tieni Rotazione a 0,5–2°, attiva Variazione rotazione e mantieni Sfocatura intorno a 0,3 e Rumore intorno a 0,1–0,25.</p></div>
+
+<div class="faq-item"><p class="faq-q">Posso far sembrare un PDF scansionato su iPhone o Android?</p><p class="faq-a">Sì. Il sito funziona nei browser mobili, quindi puoi aprire lo strumento sul telefono, scegliere un PDF dall'app File e scaricare il risultato. In alternativa, stampa il documento e acquisiscilo con lo scanner di documenti integrato nel telefono.</p></div>
+
+<div class="faq-item"><p class="faq-q">L'effetto scansione rende il file più pesante?</p><p class="faq-a">Di solito sì, perché le pagine vengono salvate come immagini invece che come testo. Scala di grigi a 1,5× o 2× produce i file più leggeri; A colori a 3× i più pesanti. Abbassa la risoluzione se un portale di caricamento ha un limite di dimensione.</p></div>
+
+<div class="faq-item"><p class="faq-q">È legale far sembrare un PDF scansionato?</p><p class="faq-a">Modificare l'aspetto di un tuo documento in genere non è un problema. Ciò che conta è l'uso: presentare come autentico un documento alterato o falsificato può essere illegale. Quando un tribunale o un ente stabilisce regole sui file, seguile; molti preferiscono PDF con testo ricercabile.</p></div>
+
+<h2 id="verdict">Quale metodo scegliere per far sembrare un PDF scansionato?</h2>
+<p>Per la maggior parte delle persone il metodo migliore per far sembrare un PDF scansionato è lo strumento gratuito nel browser: meno di un minuto, elaborazione in locale e controllo preciso di inclinazione, sfocatura e rumore. Scegli l'estensione Chrome per lotti frequenti e un vero scanner solo quando è richiesta una scansione autentica.</p>
+
+<p>Scegli la finestra di stampa solo quando ti serve una rapida versione in scala di grigi, l'editor di immagini quando vuoi un effetto personalizzato come l'ombra della rilegatura, e lo smartphone quando un vero aspetto da scansione con il telefono conta più della velocità. Per capire come si riconosce la differenza, leggi <a href="/blog/what-is-a-scanned-pdf/">cos'è un PDF scansionato e come riconoscerlo</a>, poi <a href="/scan">apri lo scanner</a> e prova la ricetta da ufficio sul tuo file.</p>

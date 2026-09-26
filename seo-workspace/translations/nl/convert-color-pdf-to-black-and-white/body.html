@@ -1,0 +1,199 @@
+<p class="lead">Een PDF zwart-wit maken doe je zo: open de gratis <a href="/scan">browsertool</a>, laat Kleurruimte op Grijs staan, zet Ruis, Vervaging en Rotatie op 0 en download het bestand. Op een Mac gebruik je Archief → Exporteer in Voorvertoning met een Quartz-filter; op Windows druk je af met een grijstintenoptie. Grijstinten behouden 256 grijswaarden; puur zwart-wit houdt er twee over.</p>
+<p>Een kleuren-PDF is vaak niet het juiste bestand voor de klus: hij is duur om af te drukken, uploadt traag naar rechtbank- en schoolportalen, en een formulier vraagt soms om een zwart-witkopie. Deze handleiding laat vijf gratis manieren zien om een PDF zwart-wit te maken, wat elke manier doet met tekst en bestandsgrootte, en wanneer grijstinten informatie verbergen.</p>
+<p>De productfeiten komen uit onze eigen tool; de rest komt van support-pagina's van Apple en Microsoft, federale digitaliseringsrichtlijnen, Amerikaanse rechtbanken en universiteitsbibliotheken, allemaal met bronvermelding in de tekst.</p>
+<nav class="toc" aria-label="Table of contents"><h2>Inhoudsopgave</h2><ol>
+<li><a href="#quick-answer">Een kleuren-PDF zwart-wit maken</a></li>
+<li><a href="#grayscale-vs-bw">Grijstinten-PDF vs. zwart-wit-PDF: wat verschilt er?</a></li>
+<li><a href="#browser-tool">Manier 1: een PDF zwart-wit maken in de browser</a></li>
+<li><a href="#tool-settings">Welke tool-instellingen geven een schone grijstinten-PDF?</a></li>
+<li><a href="#mac-preview">Manier 2: een kleuren-PDF zwart-wit maken op de Mac</a></li>
+<li><a href="#windows-print">Manier 3: een PDF zwart-wit maken op Windows</a></li>
+<li><a href="#chrome-edge">Manier 4: een zwart-wit-PDF opslaan vanuit Chrome of Edge</a></li>
+<li><a href="#print-and-scan">Manier 5: in grijstinten afdrukken en een zwart-wit-PDF scannen</a></li>
+<li><a href="#comparison">Welke manier om een PDF zwart-wit te maken past bij jou?</a></li>
+<li><a href="#file-size">Is een grijstinten-PDF kleiner dan een kleuren-PDF?</a></li>
+<li><a href="#printing-cost">Kost een zwart-wit-PDF minder om af te drukken?</a></li>
+<li><a href="#when-grayscale-fails">Wanneer verliest een grijstinten-PDF informatie?</a></li>
+<li><a href="#checks">Zo controleer je een zwart-wit-PDF voor je hem verstuurt</a></li>
+<li><a href="#faq">PDF zwart-wit maken: veelgestelde vragen</a></li>
+</ol></nav>
+
+<h2 id="quick-answer">Een kleuren-PDF zwart-wit maken</h2>
+<p>Je maakt een kleuren-PDF zwart-wit door elke pagina opnieuw te renderen zonder kleurinformatie. Een browsertool, macOS Voorvertoning, een afdrukvenster of een fysieke printer kunnen dit allemaal. De snelste gratis route is een omzetting naar grijstinten in de browser, die seconden duurt en geen installatie of account vereist.</p>
+<p>De vijf hieronder besproken manieren verschillen op drie praktische punten: of de tekst selecteerbaar blijft, of het resultaat echt tweetonig zwart-wit is of grijstinten, en hoe groot het bestand wordt. Kies de route op basis van wat de ontvanger nodig heeft, niet uit gewoonte.</p>
+<ul>
+<li><strong>Browsertool</strong> (elk besturingssysteem): grijstintenpagina's, privé, werkt offline na de eerste keer laden, maar pagina's worden afbeeldingen.</li>
+<li><strong>macOS Voorvertoning</strong>: Quartz-filter bij exporteren, standaard aanwezig op elke Mac.</li>
+<li><strong>Windows-afdrukvenster</strong>: grijstinten wanneer de printerdriver of de app dit aanbiedt.</li>
+<li><strong>Afdrukvenster van Chrome of Edge</strong>: een kleurinstelling, als de gekozen bestemming dit ondersteunt.</li>
+<li><strong>Afdrukken en scannen</strong>: een echte papieren kopie in grijstinten, teruggescand naar PDF.</li>
+</ul>
+<div class="callout callout-tip"><strong>Weinig tijd?</strong>Open <a href="/scan">de scanner</a>, sleep je PDF erin, laat Kleurruimte op Grijs staan, zet Ruis, Vervaging en Rotatie op 0 en klik op downloaden. Je krijgt een schone grijstinten-PDF met de originele lay-out.</div>
+
+<h2 id="grayscale-vs-bw">Grijstinten-PDF vs. zwart-wit-PDF: wat verschilt er?</h2>
+<p>Een grijstinten-PDF slaat elke pixel op als een van de vele grijstinten, meestal 256 bij 8 bits. Een echte zwart-wit-PDF, ook wel bitonaal of 1-bit genoemd, slaat elke pixel op als puur zwart of puur wit. De meeste mensen die om "zwart-wit" vragen, willen eigenlijk grijstinten, waarmee foto's en schaduwpartijen leesbaar blijven.</p>
+<p>De Federal Agencies Digital Guidelines Initiative (FADGI) definieert beide termen precies in haar <a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">Technical Guidelines for Digitizing Cultural Heritage Materials</a>: "Bitonaal: digitale beelden die zijn geproduceerd met slechts twee kleuren, zwart en wit." en "Grijstinten: digitale beelden die zijn geproduceerd met een reeks grijstinten tussen wit en zwart."</p>
+<p>De bitdiepte verklaart het verschil in duidelijke cijfers. Volgens <a href="https://en.wikipedia.org/wiki/Binary_image" target="_blank" rel="noopener">Wikipedia's artikel over binaire afbeeldingen</a> slaat een bi-level afbeelding elke pixel op in één bit. Een 8-bit grijstintenpixel heeft 256 mogelijke waarden; de <a href="https://en.wikipedia.org/wiki/Image_scanner" target="_blank" rel="noopener">geschiedenis van beeldscanners</a> vermeldt dat 8-bit scannen, dus 256 grijstinten, in 1989 op desktopscanners verscheen.</p>
+<div class="table-wrap"><table><caption>Kleuren-, grijstinten- en bitonale PDF-pagina's vergeleken</caption><thead><tr><th scope="col">Paginatype</th><th scope="col">Bits per pixel</th><th scope="col">Tinten per pixel</th><th scope="col">Geschikt voor</th></tr></thead><tbody>
+<tr><th scope="row">Kleur (RGB)</th><td>24</td><td>Ongeveer 16,7 miljoen kleuren</td><td>Foto's, grafieken, gekleurde stempels</td></tr>
+<tr><th scope="row">Grijstinten</th><td>8</td><td>256 grijzen</td><td>Gemengde tekst en afbeeldingen, printen, de meeste "zwart-wit"-verzoeken</td></tr>
+<tr><th scope="row">Bitonaal (echt zwart-wit)</th><td>1</td><td>2 (zwart of wit)</td><td>Gewone getypte tekst, e-filing bij de rechtbank, faxachtige kopieën</td></tr>
+</tbody></table></div>
+<p>Een 24-bit kleurenpixel bestaat uit 8 bits voor elk van de rode, groene en blauwe kanalen, en daarom wordt een gewone kleurenscan 24-bit genoemd in de <a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">federale digitaliseringsregels (36 CFR 1236)</a>. Grijstinten laten twee van die kanalen vallen. Bitonaal gaat nog verder en gooit elke grijstint weg, waardoor dunne grijze lijnen, potloodstrepen en fotodetails kunnen verdwijnen of in ruis veranderen.</p>
+<p>Kortom: bevat de PDF foto's, logo's, grafieken of lichte handtekeningen, kies dan grijstinten. Is het puur getypte tekst en eist de ontvanger het kleinst mogelijke bestand, dan is bitonaal acceptabel, maar controleer elke pagina na het omzetten.</p>
+
+<h2 id="browser-tool">Manier 1: een PDF zwart-wit maken in de browser</h2>
+<p>Onze gratis browsertool maakt een kleuren-PDF zwart-wit door elke pagina in grijstinten te renderen en de pagina's in een nieuwe PDF op te slaan. Het werk gebeurt lokaal met pdf.js en canvas, dus het bestand wordt niet naar een verwerkingsserver geüpload. De tool werkt op Windows, macOS, ChromeOS, Linux en mobiele browsers.</p>
+<p>De tool is gebouwd om PDF's er gescand uit te laten zien, en daarom voegt de standaardinstelling wat ruis, vervaging en een kleine kanteling toe. Zet die effecten op nul en dezelfde engine wordt een schone grijstintenconverter. Laat de standaardwaarden juist staan als je wilt dat de kopie eruitziet alsof hij van een kantoorkopieerapparaat komt.</p>
+<ol class="step-list">
+<li><strong>Open de tool.</strong> Ga naar <a href="/scan">pdflookscanned.com/scan</a> in Chrome, Edge, Safari of Firefox. Je hoeft je niet aan te melden, en na de eerste keer laden werkt de pagina ook offline.</li>
+<li><strong>Voeg de kleuren-PDF toe.</strong> Sleep het bestand op de pagina of klik om het te kiezen. Binnen enkele seconden verschijnt een live voorbeeld van de eerste pagina.</li>
+<li><strong>Laat Kleurruimte op Grijs staan.</strong> Grijs is de standaardwaarde, dus een nieuwe sessie levert al een grijstinten-PDF op. Schakel alleen naar Kleur over als je de originele kleuren wilt behouden.</li>
+<li><strong>Verwijder de scaneffecten.</strong> Zet Ruis op 0, Vervaging op 0, Rotatie op 0° en Rotatievariatie op 0°. Laat Vergeling op 0 en Rand uit staan, zodat de pagina neutraal grijs op wit blijft.</li>
+<li><strong>Pas indien nodig het contrast aan.</strong> Contrast en Helderheid lopen van 0 tot 2, met 1 als neutrale waarde. Verhoog Contrast naar ongeveer 1,2–1,4 als vage gekleurde tekst bleek wordt in grijstinten.</li>
+<li><strong>Kies de resolutie.</strong> 2× (ongeveer 144 dpi) is geschikt voor lezen op een scherm en de meeste uploads. Gebruik 3× (ongeveer 216 dpi) voor kleine lettertjes of een document dat je gaat afdrukken.</li>
+<li><strong>Download de PDF.</strong> Klik op downloaden, open het resultaat en blader door elke pagina voor je het verstuurt.</li>
+</ol>
+<p>Voor een map met bestanden past de <a href="/scan/bulk">bulkscanner</a> dezelfde instellingen toe op meerdere PDF's en levert ze in één ZIP-archief. De Chrome-extensie biedt dezelfde engine in een zijpaneel als je vaak bestanden omzet.</p>
+<div class="callout callout-info"><strong>Wat er verandert in het bestand</strong>De tool rastert elke pagina: tekst, vectorlijnen en afbeeldingen worden één grijstinten-JPEG-afbeelding per pagina in een nieuwe PDF. De kopie ziet er goed uit, maar de tekst is niet meer selecteerbaar of doorzoekbaar. Heb je levende tekst nodig, gebruik dan de Voorvertoning- of afdrukroutes hieronder, of bewaar het kleurenorigineel om in te zoeken.</div>
+
+<h2 id="tool-settings">Welke tool-instellingen geven een schone grijstinten-PDF?</h2>
+<p>Een schone grijstinten-PDF krijg je met Kleurruimte op Grijs en elk scaneffect op nul: Ruis 0, Vervaging 0, Rotatie 0°, Rotatievariatie 0°, Vergeling 0, Rand uit. Helderheid en Contrast blijven op 1, tenzij vage tekst hulp nodig heeft. Resolutie 2× is de uitgebalanceerde standaard voor grootte en scherpte.</p>
+<dl class="spec-list">
+<dt>Kleurruimte</dt><dd>Grijs (standaard). Levert grijstintenpagina's op, geen 1-bit bitonale pagina's.</dd>
+<dt>Ruis</dt><dd>0 voor een schone kopie; standaard 0,1 voegt lichte scannerkorrel toe.</dd>
+<dt>Vervaging</dt><dd>0 voor scherpe tekst; standaard 0,3 verzacht randen zoals bij een flatbedscan.</dd>
+<dt>Rotatie / Rotatievariatie</dt><dd>0° en 0° voor rechte pagina's; standaardwaarden zijn 1° en 0,5°.</dd>
+<dt>Helderheid</dt><dd>1 is neutraal; bereik 0–2. Verhoog licht om een grijze achtergrond witter te maken.</dd>
+<dt>Contrast</dt><dd>1 is neutraal; bereik 0–2. Verhoog naar 1,2–1,4 om vage gekleurde tekst donkerder te maken.</dd>
+<dt>Vergeling</dt><dd>0 houdt het papier wit; hogere waarden voegen een warme papiertint toe.</dd>
+<dt>Resolutie</dt><dd>1× tot 3× in stappen van 0,5; 2× ≈ 144 dpi, 3× ≈ 216 dpi.</dd>
+</dl>
+<p>Wil je juist een kopieerapparaat-look, laat dan de standaardwaarden staan: Grijs, Ruis 0,1, Vervaging 0,3, Rotatie 1°, variatie 0,5°. Die instelling is wat de meeste mensen bedoelen als ze een PDF willen die eruitziet als afgedrukt en gescand in zwart-wit. Onze gids over het <a href="/blog/scan-effect/">scaneffect</a> legt elk artefact en elke voorinstelling in detail uit.</p>
+<p>De tool kan geen strikt 1-bit bestand maken. Hoog contrast (rond 1,6–2) duwt pagina's richting een uitgesproken tweetonige look, maar de pixels blijven opgeslagen als grijstinten-JPEG. Eist een portaal expliciet bitonale afbeeldingen, gebruik dan een scanner die op zwart-witmodus staat, zoals beschreven bij Manier 5.</p>
+
+<h2 id="mac-preview">Manier 2: een kleuren-PDF zwart-wit maken op de Mac</h2>
+<p>Op een Mac maak je een kleuren-PDF zwart-wit met Voorvertoning, de ingebouwde PDF-viewer. Open het bestand, kies Archief → Exporteer, kies een Quartz-filter zoals Black &amp; White of Gray Tone, en bewaar onder een nieuwe naam. Je hebt geen download of extra app nodig, en het exporteren duurt maar seconden.</p>
+<p>Apple documenteert dit rechtstreeks in de <a href="https://support.apple.com/guide/preview/add-effects-to-a-pdf-prvw1510/mac" target="_blank" rel="noopener">handleiding van Voorvertoning</a>: "Je kunt een PDF die in Voorvertoning is geopend, aanpassen met Quartz-filters die effecten toevoegen of kleuren wijzigen. Zo kun je bijvoorbeeld een kleurendocument omzetten naar zwart-wit, of een sepiatint toepassen."</p>
+<ol>
+<li>Open de kleuren-PDF in Voorvertoning (dubbelklik erop, of klik met de rechtermuisknop → Open met → Voorvertoning).</li>
+<li>Kies Archief → Exporteer. Gebruik niet Exporteer als PDF, want dat dialoogvenster heeft geen menu Quartz-filter.</li>
+<li>Controleer of Formaat op PDF staat.</li>
+<li>Open het pop-upmenu Quartz-filter en kies Black &amp; White of Gray Tone.</li>
+<li>Geef het bestand een nieuwe naam, zoals "factuur-zw.pdf", zodat het kleurenorigineel bewaard blijft, en klik op Bewaar.</li>
+</ol>
+<h3>Black &amp; White of Gray Tone in Voorvertoning?</h3>
+<p>Beide Voorvertoning-filters verwijderen kleur, maar ze renderen tinten verschillend. Black &amp; White geeft doorgaans een hardere pagina met meer contrast, waarbij vage kleuren kunnen wegvallen, terwijl Gray Tone vloeiendere grijstinten geeft die geschikt zijn voor foto's en grafieken. Exporteer één keer met elk filter en vergelijk ze naast elkaar als het document gekleurde afbeeldingen bevat.</p>
+<p>Omdat het filter tijdens het exporteren van de PDF wordt toegepast in plaats van door de pagina te fotograferen, blijft getypte tekst meestal selecteerbaar en doorzoekbaar. Bevestig dit met Cmd+F op een woord dat je ziet staan. Voorvertoning heeft ook een filter Verklein bestandsgrootte; Apple's <a href="https://support.apple.com/guide/preview/reduce-a-pdfs-file-size-prvw1509/mac" target="_blank" rel="noopener">pagina over het verkleinen van PDF's</a> meldt dat dit de kwaliteit kan verlagen, dus pas het pas toe nadat je het grijstintenresultaat hebt gecontroleerd.</p>
+
+<h2 id="windows-print">Manier 3: een PDF zwart-wit maken op Windows</h2>
+<p>Op Windows maak je een PDF zwart-wit door hem af te drukken naar de ingebouwde printer Microsoft Print to PDF met een grijstinten- of zwart-witoptie aan. Het addertje is dat die optie alleen verschijnt als de app of de printerdriver hem aanbiedt, dus sommige configuraties drukken toch in kleur af.</p>
+<p>De eigen hulp van Microsoft voor <a href="https://support.microsoft.com/en-us/office/print-in-black-and-white-59939d05-2f88-4712-a4e5-384be412c0bf" target="_blank" rel="noopener">in zwart-wit afdrukken vanuit Word</a> vertelt gebruikers om Bestand → Afdrukken → Printereigenschappen te openen en "de eigenschappen te selecteren voor afdrukken in kleur, grijswaarden of zwart-wit." Dezelfde pagina meldt dat de beschikbare instellingen afhangen van het printermodel en de driver ervan.</p>
+<ol>
+<li>Open de PDF in de app die je normaal gebruikt om hem te bekijken, of open het brondocument (Word, Excel) als je dat nog hebt.</li>
+<li>Druk op Ctrl+P en kies Microsoft Print to PDF als printer.</li>
+<li>Zoek naar een instelling Kleur, Kleurmodus of Grijswaarden in het dialoogvenster, of klik op Printereigenschappen / Voorkeuren en kijk daar.</li>
+<li>Kies Zwart-wit of Grijswaarden, klik op Afdrukken en geef de nieuwe PDF een naam wanneer Windows vraagt waar je hem wilt opslaan.</li>
+<li>Open het opgeslagen bestand en controleer of de kleuren echt weg zijn.</li>
+</ol>
+<div class="callout callout-warn"><strong>Geen grijstintenoptie?</strong>Microsoft Print to PDF is een eenvoudige driver, en op veel pc's tonen de eigenschappen alleen oriëntatie en papierformaat. Verschijnt er geen kleurinstelling, dan behoudt de uitvoer zijn kleuren. Gebruik dan het afdrukvenster van Edge uit Manier 4 of de <a href="/scan">browsertool</a> uit Manier 1.</div>
+<p>Werkt de afdrukroute wel, dan blijft tekst die door de app is getekend meestal bewaard als tekst, zodat de zwart-wit-PDF doorzoekbaar blijft. Kwam je van een Word-bestand, dan behoudt afdrukken vanuit Word de lay-out beter dan afdrukken vanuit een PDF-viewer.</p>
+
+<h2 id="chrome-edge">Manier 4: een zwart-wit-PDF opslaan vanuit Chrome of Edge</h2>
+<p>Chrome en Edge kunnen een PDF openen en opnieuw afdrukken, en hun afdrukvoorbeeld heeft een instelling Kleur voor bestemmingen die dit ondersteunen. Kies Zwart-wit als de instelling verschijnt, en bewaar of druk dan af. Of de optie Kleur verschijnt voor een PDF-bestemming hangt af van de browserversie en de gekozen printer.</p>
+<p>Microsoft's <a href="https://support.microsoft.com/en-us/edge/print-in-microsoft-edge" target="_blank" rel="noopener">afdrukhandleiding voor Edge</a> vermeldt een instelling Kleur met de keuzes Kleur en Zwart-wit in het afdrukvenster van Edge. Het afdrukvoorbeeld van Chrome biedt voor veel printers een vergelijkbaar menu Kleur. Voor de ingebouwde bestemming Opslaan als PDF ontbreekt het menu Kleur echter vaak, en verandert er niets.</p>
+<ol>
+<li>Sleep de kleuren-PDF in een venster van Chrome of Edge, zodat hij in de ingebouwde viewer opent.</li>
+<li>Druk op Ctrl+P (Cmd+P op een Mac) om het afdrukvoorbeeld te openen.</li>
+<li>Kies de bestemming: Opslaan als PDF, of Microsoft Print to PDF op Windows.</li>
+<li>Open indien nodig Meer instellingen en zoek naar Kleur. Staat die er, kies dan Zwart-wit en kijk hoe het voorbeeld grijs wordt.</li>
+<li>Blijft het voorbeeld in kleur, dan ondersteunt de bestemming de omschakeling niet; gebruik een andere route.</li>
+<li>Klik op Bewaar of Afdrukken en geef het nieuwe bestand een naam.</li>
+</ol>
+<p>Het voorbeeldvenster is de test: wordt het grijs voordat je bewaart, dan wordt de bewaarde PDF ook grijs. Afdrukken via de browser bouwt de pagina's ook opnieuw op, dus formuliervelden, links en bladwijzers uit het origineel overleven dit mogelijk niet. Bewaar het kleurenorigineel als die belangrijk zijn.</p>
+
+<h2 id="print-and-scan">Manier 5: in grijstinten afdrukken en een zwart-wit-PDF scannen</h2>
+<p>De ouderwetse manier is om de kleuren-PDF in grijstinten af te drukken op een fysieke printer en het papier terug te scannen met de scanner op de modus Zwart-wit of Grijswaarden. De methode is traag en verbruikt papier en toner, maar is de enige route die een echte 1-bit bitonale scan oplevert.</p>
+<p>Scanners en multifunctionele printers bieden meestal drie kleurmodi: Kleur, Grijswaarden en Zwart-wit (soms Tekst of Monochroom genoemd). Zwart-wit is de bitonale instelling die rechtbanksystemen vragen.</p>
+<p>De U.S. District Court for the Middle District of North Carolina legt uit waarom in haar <a href="https://www.ncmd.uscourts.gov/sites/ncmd/files/ecfprocman.pdf" target="_blank" rel="noopener">CM/ECF-procedurehandleiding</a>: "Omdat documenten die in kleur of met een afbeelding worden gescand veel langer duren om te uploaden, moeten indienende partijen hun scanners instellen op 300 dpi en zwart-wit in plaats van kleur."</p>
+<ol>
+<li>Druk de PDF af met de grijstinten- of zwart-witoptie van de printer ingeschakeld.</li>
+<li>Leg de pagina's in de scanner of documentinvoer.</li>
+<li>Stel de kleurmodus in (Zwart-wit voor getypte tekst, Grijswaarden voor foto's) en 300 dpi.</li>
+<li>Scan naar PDF en controleer elke pagina op scheefstand, afgesneden randen en vage plekken.</li>
+</ol>
+<p>De resulterende PDF is een afbeelding van papier, dus de tekst is niet doorzoekbaar tenzij de scannersoftware OCR uitvoert. Hij draagt ook echte scannerkenmerken: lichte kanteling, stof en ongelijke grijswaarden. Wil je alleen die look zonder het papier, dan laat de <a href="/blog/pdf-to-scanned-pdf/">gids PDF naar gescande PDF</a> zien hoe je dit digitaal nabootst.</p>
+
+<h2 id="comparison">Welke manier om een PDF zwart-wit te maken past bij jou?</h2>
+<p>De beste manier om een PDF zwart-wit te maken hangt af van je systeem en van wat de ontvanger nodig heeft. De browsertool werkt overal en levert consistente grijstinten, Voorvertoning is het snelst op een Mac, afdrukroutes houden tekst doorzoekbaar als de optie beschikbaar is, en afdrukken-en-scannen is de enige echte bitonale optie.</p>
+<div class="table-wrap"><table><caption>Vijf manieren om een kleuren-PDF zwart-wit te maken vergeleken</caption><thead><tr><th scope="col">Manier</th><th scope="col">Systemen</th><th scope="col">Blijft tekst selecteerbaar?</th><th scope="col">Grijstinten of echt zwart-wit</th><th scope="col">Bestandsgrootte</th><th scope="col">Snelheid</th></tr></thead><tbody>
+<tr><th scope="row">1. Browsertool</th><td>Elk besturingssysteem met een moderne browser, incl. mobiel</td><td>Nee (pagina's worden afbeeldingen)</td><td>Grijstinten</td><td>Voorspelbaar; bepaald door resolutie 1×–3×</td><td>Seconden per bestand; bulk als ZIP</td></tr>
+<tr><th scope="row">2. Quartz-filter in Voorvertoning</th><td>Alleen macOS</td><td>Meestal ja</td><td>Grijstinten (Black &amp; White-filter geeft hoog contrast)</td><td>Wisselend; kan krimpen of groeien</td><td>Seconden</td></tr>
+<tr><th scope="row">3. Microsoft Print to PDF</th><td>Windows</td><td>Meestal ja</td><td>Grijstinten, als de driver dit aanbiedt</td><td>Dicht bij het origineel</td><td>Seconden, als de optie bestaat</td></tr>
+<tr><th scope="row">4. Chrome-/Edge-afdrukvenster</th><td>Windows, macOS, ChromeOS, Linux</td><td>Meestal ja</td><td>Grijstinten, als de bestemming Kleur ondersteunt</td><td>Dicht bij het origineel</td><td>Seconden</td></tr>
+<tr><th scope="row">5. Afdrukken en scannen</th><td>Overal, plus een printer en scanner</td><td>Nee, tenzij OCR draait</td><td>Echt 1-bit zwart-wit of grijstinten</td><td>Klein in zwart-witmodus, groot in grijstinten</td><td>Minuten per document</td></tr>
+</tbody></table></div>
+<p>"Meestal ja" betekent dat de route bestaande tekst doorgeeft, maar een PDF die al een scan was, bevat geen tekst om te behouden. Voer altijd een korte zoekopdracht in het resultaat uit om het zeker te weten.</p>
+<p>Een simpele vuistregel: heb je doorzoekbare tekst nodig, begin dan bij Manier 2, 3 of 4. Heb je iets nodig dat altijd werkt, op elk apparaat, met hetzelfde resultaat elke keer, gebruik dan Manier 1. Eist een portaal een bitonale afbeelding, gebruik dan Manier 5.</p>
+
+<h2 id="file-size">Is een grijstinten-PDF kleiner dan een kleuren-PDF?</h2>
+<p>Een grijstinten-PDF is meestal kleiner dan dezelfde pagina's in kleur, en een echte zwart-wit-PDF is nog veel kleiner, omdat elke pixel 8 bits of 1 bit draagt in plaats van 24. Bij PDF's die vooral tekst bevatten in plaats van afbeeldingen, kan de besparing door grijstinten klein zijn.</p>
+<p>De U.S. District Court for the Northern District of California publiceerde een veelzeggende vergelijking in haar <a href="https://cand.uscourts.gov/cases-e-filing/cmecf-information/preparing-your-cmecf-filing" target="_blank" rel="noopener">gids voor het voorbereiden van CM/ECF-indieningen</a>. Een document van 317 pagina's, gescand als bitonaal op 300 ppi, kwam uit op 23,86 MB en bleef leesbaar; hetzelfde document in grijstinten op 400 ppi kwam uit op 374,47 MB, ongeveer 15,7 keer zo groot.</p>
+<div class="stats-grid">
+<div class="stat-card"><span class="stat-number">23,86 MB</span><span class="stat-label">317 pagina's, bitonaal op 300 ppi (N.D. Cal.)</span></div>
+<div class="stat-card"><span class="stat-number">374,47 MB</span><span class="stat-label">Dezelfde pagina's, grijstinten op 400 ppi (N.D. Cal.)</span></div>
+<div class="stat-card"><span class="stat-number">~15,7×</span><span class="stat-label">Verschil in grootte tussen de twee scans</span></div>
+</div>
+<p>Twee dingen bepalen dat verschil: bitdiepte en resolutie. De grijstintenversie van de rechtbank gebruikte ook een hogere resolutie, dus een deel van het verschil komt van 400 versus 300 ppi. De les blijft overeind: bitonale bestanden zijn drastisch kleiner, en daarom waarschuwt de Western District of Washington in haar <a href="https://www.wawd.uscourts.gov/attorneys/cm-ecf-faqs/Technical" target="_blank" rel="noopener">technische CM/ECF-FAQ</a> dat "scannen op een hogere resolutie vertraging of time-outs kan veroorzaken bij het uploaden."</p>
+<p>Bij onze tool telt resolutie zwaarder mee dan kleurmodus. Een tekst-PDF die op 1× of 1,5× wordt omgezet, levert een veel kleiner bestand op dan op 3×, omdat elke pagina wordt opgeslagen als een JPEG-afbeelding waarvan het aantal pixels kwadratisch meegroeit met de schaal. Is een digitale PDF al klein, dan kan omzetten naar afbeeldingen hem juist groter maken, niet kleiner.</p>
+
+<h2 id="printing-cost">Kost een zwart-wit-PDF minder om af te drukken?</h2>
+<p>Een zwart-wit-PDF kost meestal minder om af te drukken op plekken waar per pagina wordt afgerekend. Universiteitsbibliotheken maken het verschil openlijk bekend: kleurenpagina's kosten doorgaans ongeveer twee en een half tot drie keer het zwart-wittarief. Thuis hangt de besparing af van je printer en cartridges, dus daar geldt geen vast cijfer.</p>
+<div class="table-wrap"><table><caption>Gepubliceerde prijzen per pagina, zwart-wit versus kleur</caption><thead><tr><th scope="col">Bibliotheek</th><th scope="col">Zwart-wit</th><th scope="col">Kleur</th><th scope="col">Kleur t.o.v. zwart-wit</th></tr></thead><tbody>
+<tr><th scope="row"><a href="https://libanswers.med.utah.edu/faq/174028" target="_blank" rel="noopener">bibliotheek gezondheidswetenschappen University of Utah</a> (vanaf 1 dec. 2025)</th><td>$0,08</td><td>$0,25</td><td>Ongeveer 3,1×</td></tr>
+<tr><th scope="row"><a href="https://libanswers.etsu.edu/faq/40850" target="_blank" rel="noopener">bibliotheek East Tennessee State University</a></th><td>$0,10</td><td>$0,25</td><td>2,5×</td></tr>
+</tbody></table></div>
+<p>Tegen die tarieven kost een handout van 40 pagina's $10,00 om in kleur af te drukken en $3,20 tot $4,00 in zwart-wit. Veel campus- en kantoorafdruksystemen rekenen het kleurentarief voor elke pagina die kleur bevat, zelfs een klein blauw logo, dus een volledige omzetting naar grijstinten voor het afdrukken voorkomt onverwachte kosten.</p>
+<p>Het bestand omzetten is betrouwbaarder dan "zwart-wit" aanvinken bij de printer als je de PDF naar iemand anders stuurt, naar een copyshop of een gedeelde wachtrij. De standaardinstellingen van de ontvanger doen er dan niet meer toe, want er is geen kleur meer om af te drukken.</p>
+
+<h2 id="when-grayscale-fails">Wanneer verliest een grijstinten-PDF informatie?</h2>
+<p>Een grijstinten-PDF verliest informatie zodra de betekenis van kleur afhangt: gemarkeerde passages, rode stempels of correcties, kleurgecodeerde grafieken, kaarten en verkeerslichttabellen. Kleuren met een vergelijkbare helderheid, zoals rood en groen, worden bijna identieke grijstinten, waardoor het onderscheid na het omzetten simpelweg verdwijnt.</p>
+<p>Het probleem is helderheid, niet kleurtoon. Grijstinten behoudt alleen hoe licht of donker elke kleur is. Een gele markeerstift is heel licht, dus verdwijnt vaak in het witte papier; verzadigd rood en middengroen kunnen naar bijna dezelfde grijstint omslaan; een blauwe link kan eruitzien als gewone zwarte tekst.</p>
+<h3>Contrasttips voor gekleurde markeringen, stempels en grafieken</h3>
+<ul>
+<li><strong>Gele markeringen:</strong> verhoog Contrast naar ongeveer 1,3 en verlaag Helderheid licht (0,9) in de tool, zodat de markering een zichtbare grijze band blijft.</li>
+<li><strong>Rode stempels en handtekeningen:</strong> rood wordt vaak middengrijs. Verhoog Contrast en zoom in op het voorbeeld om te bevestigen dat de stempeltekst nog leesbaar is.</li>
+<li><strong>Grafieken en diagrammen:</strong> worden reeksen alleen door kleur onderscheiden, pas dan het brondocument aan met patronen, markers of directe labels, en exporteer een nieuwe PDF voordat je omzet.</li>
+<li><strong>Kaarten en heatmaps:</strong> bewaar een kleurenkopie, of stuur beide versies, want kleurverlopen overleven grijstinten zelden.</li>
+<li><strong>Vage tekst:</strong> lichtgrijze of pastelkleurige tekst op wit kan vervagen; Contrast 1,2–1,4 brengt hem meestal terug.</li>
+</ul>
+<p>Diezelfde regel is een kernprincipe van toegankelijkheid. De <a href="https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html" target="_blank" rel="noopener">WCAG-richtlijn over kleurgebruik</a> van het W3C stelt dat kleur niet het enige visuele middel mag zijn om informatie over te brengen, en de grijstintentest is een snelle manier om plekken te vinden waar een document die regel schendt.</p>
+<p>Omzetten naar bitonaal is nog harder. Elke pixel wordt zwart of wit op basis van een drempelwaarde, waardoor lichte schaduwpartijen, grijze achtergronden en foto's kunnen verworden tot vlekken of verdwijnen. Controleer foto's, briefhoofdlogo's en handtekeningen pagina voor pagina als een portaal 1-bit uitvoer eist.</p>
+
+<h2 id="checks">Zo controleer je een zwart-wit-PDF voor je hem verstuurt</h2>
+<p>Controleer een zwart-wit-PDF door hem op 100% zoom te openen en elke pagina te doorlopen, te zoeken naar een zichtbaar woord, het aantal pagina's te vergelijken met het origineel en naar de bestandsgrootte te kijken. Vijf minuten controleren voorkomt een geweigerde upload of een formulier met een onleesbare stempel.</p>
+<ol>
+<li><strong>Aantal pagina's:</strong> het omgezette bestand moet precies evenveel pagina's hebben als het origineel.</li>
+<li><strong>Leesbaarheid:</strong> zoom in op 100% of meer op de kleinste lettertjes, voetnoten en handtekeningen.</li>
+<li><strong>Kleurafhankelijke inhoud:</strong> bekijk elke markering, grafieklegenda en stempel uit de lijst hierboven.</li>
+<li><strong>Zoektest:</strong> druk op Ctrl+F of Cmd+F en zoek naar een woord dat je ziet staan. Een treffer betekent dat de tekst live is; geen treffer betekent dat de pagina's afbeeldingen zijn, zoals na de browsertool. Onze <a href="/blog/what-is-a-scanned-pdf/">gids over gescande PDF's</a> legt het verschil uit.</li>
+<li><strong>Bestandsgrootte:</strong> vergelijk hem met de limiet van het portaal voordat je uploadt, niet erna.</li>
+</ol>
+<div class="callout callout-warn"><strong>Gebruik het eerlijk</strong>Omzetten naar zwart-wit of een scaneffect toevoegen verandert hoe een bestand eruitziet, niet of het echt is. Gebruik het niet om officiële documenten, id-bewijzen of handtekeningen die niet van jou zijn te wijzigen of vervalsen. Sommige rechtbanken en instanties eisen doorzoekbare PDF's, wat pagina's die alleen afbeeldingen zijn uitsluit, dus controleer de indieningsregels voordat je iets instuurt.</div>
+<p>Doorzoekbare tekst is voor meer dan indieningsregels van belang. De <a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF7" target="_blank" rel="noopener">PDF7-techniek</a> van het W3C stelt: "Een document dat bestaat uit gescande afbeeldingen van tekst is inherent ontoegankelijk, omdat de inhoud van het document afbeeldingen zijn, geen doorzoekbare tekst." Is toegankelijkheid vereist, kies dan een route die tekst behoudt, of voer OCR uit op het resultaat dat alleen afbeeldingen bevat.</p>
+<div class="expert-quote"><blockquote>De meeste mensen die ons vragen hoe ze een kleuren-PDF zwart-wit maken, hebben grijstinten nodig, geen echt 1-bit zwart-wit. We houden Grijs als standaard kleurruimte omdat het goed leest op een scherm en netjes afdrukt, en we vertellen mensen eerlijk dat onze tool pagina's in afbeeldingen verandert. Heb je doorzoekbare tekst nodig, gebruik dan Voorvertoning of een afdrukroute; wil je hetzelfde resultaat op elk apparaat, gebruik dan de browser.</blockquote><cite><strong>Het team van Make PDF look scanned</strong> — bouwers van de webtool en de Chrome-extensie</cite></div>
+
+<h2 id="faq">PDF zwart-wit maken: veelgestelde vragen</h2>
+<p>Deze antwoorden behandelen de vragen die mensen het vaakst stellen als ze een kleuren-PDF zwart-wit maken: gratis opties, telefoons, grijstinten versus bitonale uitvoer, doorzoekbare tekst, bestandsgrootte, afdrukken en privacy. Elk antwoord is kort en verwijst naar de sectie hierboven met de volledige stappen en bronnen.</p>
+<div class="faq-item"><p class="faq-q">Hoe maak ik gratis een kleuren-PDF zwart-wit?</p><p class="faq-a">Open de gratis <a href="/scan">browsertool</a>, laat Kleurruimte op Grijs staan, zet Ruis, Vervaging en Rotatie op 0 en download het resultaat. Op een Mac is Archief → Exporteer met een Quartz-filter in Voorvertoning ook gratis. Op Windows werkt een afdrukvenster met een grijstintenoptie als je driver die aanbiedt.</p></div>
+<div class="faq-item"><p class="faq-q">Is grijstinten hetzelfde als zwart-wit?</p><p class="faq-a">Nee. Grijstinten slaat tot 256 grijstinten per pixel op bij 8 bits, terwijl echt zwart-wit (bitonaal) alleen zwart of wit opslaat bij 1 bit. In het dagelijks gebruik betekent "zwart-wit-PDF" meestal grijstinten, waarmee foto's en schaduwpartijen leesbaar blijven.</p></div>
+<div class="faq-item"><p class="faq-q">Blijft mijn tekst doorzoekbaar na het omzetten?</p><p class="faq-a">Met Voorvertoning en de meeste afdrukken-naar-PDF-routes blijft getypte tekst meestal selecteerbaar en doorzoekbaar. Onze browsertool rastert pagina's, waardoor de tekst deel wordt van een afbeelding en niet meer doorzoekbaar of kopieerbaar is. Test elk resultaat met Ctrl+F of Cmd+F.</p></div>
+<div class="faq-item"><p class="faq-q">Hoe zet ik een PDF om naar grijstinten op een Mac?</p><p class="faq-a">Open de PDF in Voorvertoning, kies Archief → Exporteer, open het menu Quartz-filter en kies Gray Tone of Black &amp; White, en bewaar dan onder een nieuwe naam. Gray Tone geeft vloeiendere schaduwpartijen; Black &amp; White geeft meer contrast.</p></div>
+<div class="faq-item"><p class="faq-q">Waarom behoudt Microsoft Print to PDF mijn kleuren?</p><p class="faq-a">De grijstintenoptie hangt af van de app en de printerdriver, en Microsoft Print to PDF toont vaak alleen oriëntatie en papierformaat. Zonder kleurinstelling blijft de uitvoer in kleur. Gebruik in plaats daarvan het afdrukvenster van Edge of de browsertool.</p></div>
+<div class="faq-item"><p class="faq-q">Kan ik een kleuren-PDF zwart-wit maken op mijn telefoon?</p><p class="faq-a">Ja. De websiteversie van onze tool werkt in mobiele browsers op iPhone en Android, en de verwerking gebeurt op de telefoon zelf. Open de scanpagina, kies de PDF uit Bestanden, laat Grijs staan en download de omgezette kopie.</p></div>
+<div class="faq-item"><p class="faq-q">Verkleint omzetten naar zwart-wit de bestandsgrootte van een PDF?</p><p class="faq-a">Vaak wel, maar niet altijd. Bitonale scans zijn veel kleiner dan grijstintenscans: een test van de Northern District of California mat 23,86 MB tegenover 374,47 MB voor dezelfde 317 pagina's. Een digitale tekst-PDF die wordt omgezet in paginabeelden kan juist groeien, dus vergelijk de bestandsgroottes na het omzetten.</p></div>
+<div class="faq-item"><p class="faq-q">Kan de browsertool echt 1-bit zwart-wit maken?</p><p class="faq-a">Nee. De tool levert grijstinten-JPEG-pagina's op. Hoge Contrastwaarden laten pagina's er uitgesproken tweetonig uitzien, maar de pixels blijven grijstinten. Voor een echt bitonaal bestand scan je papier in de zwart-witmodus van de scanner.</p></div>
+<div class="faq-item"><p class="faq-q">Waarom zijn mijn gele markeringen verdwenen?</p><p class="faq-a">Grijstinten behoudt alleen helderheid, en geel is bijna net zo licht als wit papier, dus markeringen vervagen. Verhoog Contrast naar ongeveer 1,3 en verlaag Helderheid licht, of onderstreep de belangrijke passages voordat je omzet.</p></div>
+<div class="faq-item"><p class="faq-q">Wordt mijn PDF geüpload als ik de browsertool gebruik?</p><p class="faq-a">Nee. Pagina's worden lokaal in je browser gerenderd en omgezet met pdf.js en canvas, en bestanden worden niet naar een verwerkingsserver gestuurd. Na het eerste bezoek werkt de tool ook offline.</p></div>
+<div class="faq-item"><p class="faq-q">Kan ik de zwart-wit-PDF ook er gescand uit laten zien?</p><p class="faq-a">Ja. Laat Kleurruimte op Grijs staan en houd de standaardwaarden Ruis 0,1, Vervaging 0,3 en een rotatie van 1° aan voor een kopieerapparaat-achtig resultaat. Onze pijlergids over <a href="/blog/how-to-make-a-pdf-look-scanned/">een PDF er gescand uit laten zien</a> vergelijkt zes methoden en voorinstellingen.</p></div>
+<div class="faq-item"><p class="faq-q">Hoe zet ik meerdere kleuren-PDF's tegelijk om naar zwart-wit?</p><p class="faq-a">Gebruik de <a href="/scan/bulk">bulkscanner</a>: voeg meerdere PDF's toe, pas Grijs toe met de scaneffecten op 0 en download alle omgezette bestanden in één ZIP-archief. Ook de Chrome-extensie accepteert meerdere bestanden tegelijk.</p></div>

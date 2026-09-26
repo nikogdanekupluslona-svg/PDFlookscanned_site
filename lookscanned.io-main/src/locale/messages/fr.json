@@ -1,0 +1,212 @@
+{
+  "base": {
+    "title": "Make PDF look scanned",
+    "description": "Donnez à un fichier numérique l'aspect d'un vrai scan — texture du papier, bruit, rotation et ombres, avec un traitement local dans votre navigateur.",
+    "scanTitle": "Scanner",
+    "bulkTitle": "Scan par lots",
+    "serviceWorker": {
+      "offlineReady": "Application prête à fonctionner hors ligne",
+      "needRefresh": "Nouvelle version disponible, cliquez pour actualiser."
+    },
+    "nav": {
+      "home": "Accueil",
+      "scan": "Scanner",
+      "bulk": "Scan par lots",
+      "guides": "Guides"
+    },
+    "chrome": {
+      "label": "Extension Chrome",
+      "free": "GRATUIT"
+    },
+    "landing": {
+      "headline": "Donner un effet scanné à un PDF",
+      "subhead": "Transformez vos PDF, images, fichiers Word et Excel en copies scannées réalistes avec flou, bruit, rotation, filigranes et tampons — directement dans votre navigateur. Vos fichiers source restent sur votre appareil.",
+      "cta": "Convertir en PDF scanné",
+      "note": "Gratuit · Sans inscription · Vos fichiers restent sur votre appareil",
+      "points": {
+        "formats": "PDF, images et formats bureautiques courants",
+        "local": "Traitement local · Vos fichiers restent chez vous",
+        "free": "Scan gratuit · Sans inscription",
+        "preview": "Aperçu en temps réel · Le rendu exporté est celui que vous voyez"
+      },
+      "stepsTitle": "Un PDF scanné en trois étapes",
+      "step1Title": "Choisissez un fichier",
+      "step1Body": "Déposez un PDF, une image, ou un document Word ou Excel. Le fichier reste dans votre navigateur.",
+      "step2Title": "Réglez l'effet scanné",
+      "step2Body": "Flou, bruit, rotation, teinte du papier, filigranes et tampons — avec un aperçu en direct.",
+      "step3Title": "Exportez le PDF",
+      "step3Body": "Votre PDF scanné est généré en quelques secondes et se télécharge aussitôt.",
+      "featuresTitle": "Fonctionnalités clés",
+      "footer": "Transformez vos documents en scans dans votre navigateur. Rien n'est envoyé pour le traitement."
+    },
+    "language": "Langue",
+    "seo": {
+      "homeTitle": "Donner un effet scanné à un PDF en ligne – gratuit et privé",
+      "homeDescription": "Donnez un effet scanné à un PDF : grain, flou, inclinaison, papier jauni. Gratuit, sans inscription, le fichier reste dans le navigateur. Word et images aussi."
+    }
+  },
+  "features": {
+    "privacy": {
+      "title": "Traitement local et privé",
+      "description": "Vos fichiers sont traités dans ce navigateur. Ils ne sont ni envoyés à un serveur de traitement ni stockés dans le cloud."
+    },
+    "speed": {
+      "title": "Conversion rapide",
+      "description": "Transformez PDF, images et documents Office en PDF d'aspect scanné en quelques secondes — sans imprimante ni scanner."
+    },
+    "customization": {
+      "title": "Effet scanné sur mesure",
+      "description": "Ajustez le flou, le bruit, la rotation, la luminosité, le contraste et la teinte du papier avec un aperçu en direct. Le rendu exporté est celui que vous voyez."
+    },
+    "openSource": {
+      "title": "Extension Chrome",
+      "description": "Le même moteur de scan existe aussi sous forme d'extension Chrome gratuite : vous traitez vos PDF depuis le panneau latéral.",
+      "github": "Chrome Web Store",
+      "scanyourpdf": "Extension Chrome"
+    },
+    "mobileFriendly": {
+      "title": "Fonctionne sur mobile",
+      "description": "Le convertisseur fonctionne dans les navigateurs mobiles récents. Le site ne nécessite aucune installation."
+    },
+    "offlineUse": {
+      "title": "Fonctionne hors ligne",
+      "description": "Une fois les ressources de l'application en cache, le scan standard continue de fonctionner sans connexion réseau."
+    }
+  },
+  "actions": {
+    "navigateToScan": "Commencer à scanner",
+    "navigateToHomePage": "Accueil",
+    "navigateToSupportMe": "Extension Chrome",
+    "backToIndex": "Retour",
+    "preview": "Aperçu",
+    "save": "Enregistrer",
+    "generateScannedPDF": "Générer le PDF scanné",
+    "generating": "Génération…",
+    "downloadScannedPDF": "Télécharger le PDF scanné",
+    "generateSuccess": "PDF généré avec succès",
+    "generateError": "Échec de la génération : ",
+    "addFiles": "Ajouter des fichiers",
+    "processAll": "Générer les PDF scannés",
+    "downloadZip": "Tout télécharger en ZIP",
+    "converting": "Préparation du fichier…",
+    "queued": "En attente",
+    "done": "Terminé",
+    "failed": "Échec"
+  },
+  "settings": {
+    "settings": "Réglages du scan",
+    "attenuate": "Bruit",
+    "noise": "Bruit",
+    "blur": "Flou",
+    "border": {
+      "label": "Bordure",
+      "true": "Oui",
+      "false": "Non"
+    },
+    "colorspace": {
+      "label": "Mode couleur",
+      "colorful": "Couleur",
+      "grayscale": "Niveaux de gris"
+    },
+    "rotate": "Rotation",
+    "rotateVariance": "Variation de rotation",
+    "pdfSelectLabel": "Sélectionnez ou déposez votre fichier ici",
+    "pdfNoSelectMessage": "Aucun fichier sélectionné",
+    "supportedHint": "PDF, JPG, PNG, WebP, SVG, DOCX, XLSX, CSV, TXT, MD et HTML",
+    "scale": "Résolution",
+    "yellowish": "Jaunissement",
+    "brightness": "Luminosité",
+    "contrast": "Contraste",
+    "extras": {
+      "watermark": "Filigrane",
+      "watermarkText": "Texte du filigrane",
+      "watermarkImage": "Image du filigrane",
+      "stamp": "Tampon ou signature",
+      "stampImage": "Ajouter un tampon ou une signature",
+      "stampX": "Position horizontale",
+      "stampY": "Position verticale",
+      "stampScale": "Taille",
+      "metadata": "Métadonnées PDF",
+      "title": "Titre",
+      "author": "Auteur",
+      "subject": "Objet",
+      "keywords": "Mots-clés",
+      "producer": "Producteur",
+      "creator": "Créateur",
+      "clearImage": "Supprimer"
+    }
+  },
+  "status": {
+    "notStarted": "Non démarré",
+    "error": "Erreur : {error}",
+    "finished": "Terminé",
+    "processsing": {
+      "default": "Traitement en cours",
+      "combine": "Assemblage des pages PDF",
+      "progress": "Traitement des pages PDF : {current}/{total}"
+    }
+  },
+  "upload": {
+    "dropTitle": "Déposez votre fichier ici",
+    "dropTitleMany": "Déposez vos fichiers ici",
+    "or": "ou",
+    "choose": "Choisir un fichier",
+    "chooseMany": "Choisir des fichiers",
+    "replace": "Choisir un autre fichier",
+    "addMore": "Ajouter d'autres fichiers",
+    "privacy": "Traité dans votre navigateur — rien n'est envoyé",
+    "dropOverlay": "Déposez le fichier pour le charger",
+    "dropOverlayMany": "Déposez les fichiers pour les ajouter",
+    "unsupported": "Ce type de fichier n'est pas pris en charge : {name}",
+    "readError": "Impossible d'ouvrir {name} : {error}",
+    "ready": "Chargé",
+    "pages": "{n} page | {n} pages",
+    "sampleBanner": "Ceci est un document d'exemple. Importez vos propres fichiers à l'étape 1 — vous pouvez en ajouter plusieurs à la fois."
+  },
+  "save": {
+    "create": "Créer le PDF scanné | Créer {n} PDF scannés",
+    "readyTitle": "Votre PDF scanné est prêt | Vos {n} PDF scannés sont prêts",
+    "progress": "page {current} sur {total}",
+    "fileProgress": "Fichier {current} sur {total}",
+    "autoHint": "Le PDF scanné se télécharge automatiquement dès qu'il est prêt. | Les {n} fichiers seront scannés puis téléchargés automatiquement dans un seul ZIP.",
+    "noFileHint": "Importez un fichier à l'étape 1 pour commencer.",
+    "busyHint": "Gardez cet onglet ouvert — le téléchargement démarre tout seul à la fin du scan.",
+    "downloadAgain": "Télécharger à nouveau",
+    "downloadStarted": "Terminé — le téléchargement a commencé",
+    "whereSaved": "Vous le trouverez dans votre dossier Téléchargements.",
+    "zipHint": "Pour récupérer un seul fichier, utilisez l'icône de téléchargement à côté de celui-ci à l'étape 1.",
+    "someFailed": "{n} fichier n'a pas pu être scanné | {n} fichiers n'ont pas pu être scannés"
+  },
+  "files": {
+    "preview": "Afficher l'aperçu",
+    "previewOf": "Aperçu : {name}",
+    "downloadOne": "Télécharger ce PDF scanné",
+    "remove": "Retirer le fichier",
+    "hint": "Cliquez sur un fichier pour l'afficher en aperçu. Tous les fichiers utilisent les mêmes réglages.",
+    "openError": "Impossible d'ouvrir ce fichier",
+    "status": {
+      "loading": "Préparation…",
+      "ready": "Prêt",
+      "processing": "Scan en cours…",
+      "done": "Scanné"
+    }
+  },
+  "steps": {
+    "upload": "Importer",
+    "adjust": "Régler",
+    "download": "Télécharger",
+    "uploadTitle": "Importez vos fichiers",
+    "adjustTitle": "Réglez l'aspect scanné",
+    "downloadTitle": "Récupérez votre PDF scanné"
+  },
+  "preview": {
+    "original": "Original",
+    "scanned": "Aperçu scanné"
+  },
+  "errors": {
+    "wordNoText": "Ce fichier Word ne contient aucun texte lisible",
+    "sheetEmpty": "Cette feuille de calcul est vide",
+    "htmlNoText": "Ce fichier HTML ne contient aucun texte lisible",
+    "unsupportedType": "Ce type de fichier n'est pas encore pris en charge"
+  }
+}

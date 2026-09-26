@@ -95,6 +95,13 @@ Allowed classes only: lead, toc, stats-grid, stat-card, stat-number, stat-label,
 ## Done criteria
 Run `python3 seo-workspace/qa.py <slug>` — every line must be PASS (fix and re-run until it is). Then run `python3 seo-workspace/build.py` to be sure it builds. Do not commit or push.
 
+## Translations (every published article)
+The site is multilingual: English at the root plus 12 languages under `/<lang>/` (`lookscanned.io-main/src/locale/languages.json`).
+After an English article passes qa.py, localize it into every language following
+`seo-workspace/translations/TRANSLATOR-GUIDE.md` (meta.json + body.html in `translations/<lang>/<en-slug>/`),
+run `python3 seo-workspace/qa_i18n.py <lang> <en-slug>` for each language, then build.py. When an English article
+changes, update `date_modified`; build.py warns about translations whose `source_modified` is older.
+
 ## Fact-bank caveats
 - Do not name Xerox, WordPerfect or any other brand from a quote; use an attributed paraphrase without the brand name instead (e.g. "BBC News reported in 2013 that some office copiers altered digits in scans because of JBIG2 compression").
 - Library of Congress, ISO and pdfa.org pages could not be fetched — do not quote them.

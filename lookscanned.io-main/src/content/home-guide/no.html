@@ -1,0 +1,115 @@
+<section class="home-guide" aria-labelledby="hg-what">
+  <h2 id="hg-what">Hva betyr det å få en PDF til å se skannet ut?</h2>
+  <p>Å få en PDF til å se skannet ut betyr å gjøre en ren digital fil om til sidebilder med sporene etter en ekte kontorskanner: litt skråstilling, korn, mykt fokus, en grå eller kremfarget papirtone og tekst som ikke kan merkes. Resultatet er fortsatt en vanlig PDF, men hver side er nå et bilde, akkurat som et dokument som har gått gjennom en flatbedskanner.</p>
+  <p>Dette verktøyet gjør jobben i nettleseren på under ett minutt. Du slipper inn en PDF, et foto eller en Word-fil, finjusterer skanneeffekten med forhåndsvisning i sanntid og laster ned PDF-en som ser skannet ut. Enten du søker etter «få PDF til å se skannet ut», «få en PDF til å se skannet ut på nett» eller «PDF som ser skannet ut», er oppgaven og stegene de samme.</p>
+
+  <h2 id="hg-steps">Slik får du PDF til å se skannet ut på nett i 3 steg</h2>
+  <p>Å få en PDF til å se skannet ut på nett krever tre steg og tar vanligvis 20–60 sekunder for en fil på 10 sider: velg filen, juster skanneeffekten mens du følger med i forhåndsvisningen, og eksporter. Du trenger ikke installere noe eller opprette en konto, og siden fungerer uten nett når den først er lastet inn.</p>
+  <ol class="step-list">
+    <li><strong>Velg en fil.</strong> Åpne <a href="/scan">skanneren</a> og slipp inn en PDF-, JPG-, PNG-, WebP-, SVG-, DOCX-, XLSX-, CSV-, TXT-, MD- eller HTML-fil. Word-, Excel- og tekstfiler gjøres først om til sider med ren tekst; vil du beholde nøyaktig samme oppsett, lagrer du dokumentet som PDF før du skanner det.</li>
+    <li><strong>Juster skanneeffekten.</strong> Flytt glidebryterne for støy, uskarphet, rotasjon, lysstyrke, kontrast og gultone, bytt mellom gråtoner og farge, og legg til en tynn ramme som fra en skanner. Forhåndsvisningen oppdateres mens du flytter hver glidebryter.</li>
+    <li><strong>Last ned den skannede PDF-en.</strong> Klikk på Lag skannet PDF. Hver side gjengis som et bilde med innstillingene dine og lagres i en ny PDF som lastes ned med en gang.</li>
+  </ol>
+  <p>Har du en hel bunke filer? <a href="/scan/bulk">Masseskanning</a> bruker de samme innstillingene på mange dokumenter samtidig og pakker resultatene i ett ZIP-arkiv.</p>
+
+  <h2 id="hg-settings">Hvilke innstillinger får en PDF til å se ekte skannet ut?</h2>
+  <p>En realistisk skanning kommer av små verdier, ikke kraftige. Standardverdiene – 1° rotasjon, 0,5° tilfeldig variasjon per side, uskarphet 0,3, støy 0,1, gråtoner og 2× oppløsning – ser allerede ut som en skanning fra kontoret. Drar du alle glidebryterne helt opp, ser resultatet redigert ut i stedet for skannet.</p>
+  <div class="table-wrap">
+    <table>
+      <caption>Kontrollene for skanneeffekten, verdiområdene deres og verdiene som ser naturlige ut</caption>
+      <thead><tr><th scope="col">Kontroll</th><th scope="col">Område</th><th scope="col">Standard</th><th scope="col">Naturlig verdi</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Rotasjon</th><td>−10° til 10°</td><td>1°</td><td>0,5°–2°; over 3° ser slurvete ut</td></tr>
+        <tr><th scope="row">Rotasjonsvariasjon</th><td>0°–10°</td><td>0,5°</td><td>0,3°–1°, så sidene ikke står like skjevt</td></tr>
+        <tr><th scope="row">Uskarphet</th><td>0–1</td><td>0,3</td><td>0,2–0,4; teksten må fortsatt være lett å lese</td></tr>
+        <tr><th scope="row">Støy</th><td>0–1</td><td>0,1</td><td>0,05–0,2 for korn som fra en skanner</td></tr>
+        <tr><th scope="row">Lysstyrke</th><td>0–2</td><td>1</td><td>0,95–1,1</td></tr>
+        <tr><th scope="row">Kontrast</th><td>0–2</td><td>1</td><td>1–1,2 for et skarpt kopimaskinpreg</td></tr>
+        <tr><th scope="row">Gultone</th><td>0–2</td><td>0</td><td>0,1–0,3 for eldre papir</td></tr>
+        <tr><th scope="row">Fargerom</th><td>Gråtoner eller farge</td><td>Gråtoner</td><td>Gråtoner for de fleste kontorskanninger</td></tr>
+        <tr><th scope="row">Oppløsning</th><td>1×–3×</td><td>2×</td><td>2× (omtrent 144 dpi) gir god balanse mellom skarphet og filstørrelse</td></tr>
+        <tr><th scope="row">Ramme</th><td>På eller av</td><td>Av</td><td>På for en tynn kantlinje som fra en skanner</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Oppskrifter steg for steg – kontorskanning, fotokopi, fakspreg og gammelt papir – finner du i <a href="/blog/scan-effect/">guiden til innstillinger for skanneeffekt</a>.</p>
+
+  <h2 id="hg-private">Er det privat å få PDF til å se skannet ut i nettleseren?</h2>
+  <p>Ja. Skanneeffekten lages på din egen enhet: siden leser PDF-en med en PDF-motor i nettleseren, tegner hver side på et HTML-lerret (canvas), legger på støy, uskarphet og rotasjon der og bygger den nye PDF-en lokalt. Filene lastes ikke opp til en behandlingsserver og lagres ikke i skyen.</p>
+  <p>Du kan sjekke dette selv: åpne utviklerverktøyene i nettleseren, gå til fanen Nettverk og kjør en skanning. Ingen forespørsel inneholder dokumentet ditt. Fordi appen er en progressiv nettapp (PWA), fungerer den videre med Wi-Fi slått av når den først er lastet inn.</p>
+
+  <h2 id="hg-files">Hvilke filer kan du få til å se skannet ut?</h2>
+  <p>Du kan få en PDF-fil til å se skannet ut, men også bilder, Word- og Excel-dokumenter og rene tekstformater. PDF-er med flere sider beholder siderekkefølgen, og hver side får sin egen lille, tilfeldige skråstilling, så dokumentet ser ut som en papirbunke som er matet gjennom en skanner ett ark om gangen.</p>
+  <ul>
+    <li><strong>Dokumenter:</strong> PDF, DOCX (Word), XLSX (Excel), CSV, TXT, Markdown og HTML. PDF-er beholder nøyaktig samme oppsett; Word-, Excel- og HTML-filer gjøres om til rene tekstsider, så eksporter dem til PDF først når formateringen er viktig.</li>
+    <li><strong>Bilder:</strong> JPG, PNG, WebP, SVG, GIF og BMP – hvert bilde blir én skannet PDF-side. Les mer i <a href="/blog/image-to-scanned-pdf/">bilde til skannet PDF</a>.</li>
+    <li><strong>Ekstra:</strong> et vannmerke med tekst eller bilde, ditt eget stempel- eller signaturbilde med innstillinger for posisjon og størrelse, og redigerbare PDF-metadata som tittel og forfatter.</li>
+  </ul>
+
+  <h2 id="hg-extension">Få PDF til å se skannet ut på nett eller i Chrome-utvidelsen?</h2>
+  <p>Begge bruker den samme skannemotoren og de samme kontrollene. Nettstedet krever ingen installasjon og fungerer på mobil; Chrome-utvidelsen, som er vurdert til 5 stjerner i Chrome Nettmarked, åpnes i sidepanelet i nettleseren, så du kan få en PDF til å se skannet ut uten å forlate fanen du jobber i.</p>
+  <div class="table-wrap">
+    <table>
+      <caption>Nettverktøyet sammenlignet med Chrome-utvidelsen</caption>
+      <thead><tr><th scope="col">Funksjon</th><th scope="col">Nettverktøy</th><th scope="col">Chrome-utvidelse</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Installasjon</th><td>Ingen</td><td>Ett klikk i Chrome Nettmarked</td></tr>
+        <tr><th scope="row">Fungerer på mobil</th><td>Ja</td><td>Nei (Chrome på datamaskin)</td></tr>
+        <tr><th scope="row">Skannekontroller</th><td>Støy, uskarphet, rotasjon, variasjon, lysstyrke, kontrast, gultone, gråtoner/farge, ramme, oppløsning</td><td>Samme sett</td></tr>
+        <tr><th scope="row">Flere filer til ZIP</th><td>Ja, via Masseskanning</td><td>Ja, flere filer i én ZIP</td></tr>
+        <tr><th scope="row">Behandling</th><td>Lokalt, i nettleseren</td><td>Lokalt, i sidepanelet</td></tr>
+        <tr><th scope="row">Pris</th><td>Gratis</td><td>Gratis</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="hg-uses">Hvorfor få en PDF til å se skannet ut i det hele tatt?</h2>
+  <p>Folk får en PDF til å se skannet ut når en arbeidsflyt forventer papir: en utleier, en skole eller HR ber om en «skannet kopi», et utskrevet og signert preg passer bedre i sammenhengen, eller filen skal ikke inneholde tekst som kan merkes og kopieres. Designere bruker også skanneeffekten til skisser, fanziner og utdelingsark i retrostil.</p>
+  <p>En PDF som ser skannet ut, er også flatet ut: tekst, skjemafelt og lag blir ett bilde per side, så filen åpnes likt overalt. Trenger du bare utflatingen, kan du lese <a href="/blog/pdf-to-scanned-pdf/">PDF til skannet PDF</a>; trenger du en enkel kopi i gråtoner, kan du se <a href="/blog/convert-color-pdf-to-black-and-white/">slik konverterer du en farge-PDF til svart-hvitt</a>.</p>
+  <div class="callout callout-warn"><strong>Bruk skanneutseendet ærlig</strong>En skanneeffekt endrer hvordan et dokument ser ut, ikke hva det er. Ikke bruk den til å endre eller utgi offisielle dokumenter, ID-er eller signaturer som ikke er dine. Noen domstoler og etater krever PDF-er med søkbar tekst, så sjekk innsendingsreglene før du flater ut et dokument til bilder.</div>
+
+  <h2 id="hg-methods">Få PDF til å se skannet ut: verktøy eller andre metoder?</h2>
+  <p>Det finnes fire vanlige måter å få en PDF til å se skannet ut på: et skanneeffektverktøy i nettleseren, å skrive ut og skanne fysisk, å fotografere utskriften med mobilen, eller å redigere sidebildene i et bilderedigeringsprogram. Nettleserverktøyet er raskest og mest konsekvent; de tre andre tar mer tid og gir mindre kontroll.</p>
+  <div class="table-wrap">
+    <table>
+      <caption>Fire måter å få en PDF til å se skannet ut på, sammenlignet</caption>
+      <thead><tr><th scope="col">Metode</th><th scope="col">Tid for 10 sider</th><th scope="col">Krever</th><th scope="col">Kontroll over utseendet</th><th scope="col">Personvern</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Skanneeffektverktøy i nettleseren</th><td>Under 1 minutt</td><td>En nettleser</td><td>Hver effekt har en glidebryter og forhåndsvisning i sanntid</td><td>Lokal behandling</td></tr>
+        <tr><th scope="row">Skriv ut og skann</th><td>10–20 minutter</td><td>Skriver, skanner, papir, toner</td><td>Ekte artefakter, men de kan ikke justeres</td><td>Avhenger av delte kontormaskiner</td></tr>
+        <tr><th scope="row">Mobilfoto av en utskrift</th><td>5–15 minutter</td><td>Skriver og mobilkamera</td><td>Ujevnt lys, perspektiv og skygger</td><td>Bildene kan synkroniseres til sikkerhetskopier i skyen</td></tr>
+        <tr><th scope="row">Bilderedigeringsprogram</th><td>30+ minutter</td><td>Redigeringsprogram og ferdigheter</td><td>Full, men manuelt side for side</td><td>Lokalt</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>En fullstendig gjennomgang av hver metode, med nøyaktige innstillinger i utskriftsdialogen, finner du i <a href="/blog/how-to-make-a-pdf-look-scanned/">slik får du en PDF til å se skannet ut</a>.</p>
+
+  <h2 id="hg-check">Slik sjekker du en PDF som skal se skannet ut, før du sender den</h2>
+  <p>En overbevisende PDF som ser skannet ut, består fire raske kontroller: teksten kan ikke merkes, sidene er litt og ulikt skråstilt, bakgrunnen er ikke helt digitalt hvit, og filen er merkbart større enn originalen, fordi hver side nå er et bilde i stedet for tekst.</p>
+  <ul>
+    <li><strong>Prøv å merke tekst.</strong> Dra markøren over en linje. I en ekte skanning og i resultatet fra dette verktøyet får du en boks, ikke uthevede ord.</li>
+    <li><strong>Zoom inn til 300–400 %.</strong> Bokstavkantene skal være litt myke, og papiret skal vise svakt korn. Knivskarpe vektorkanter avslører en digital fil.</li>
+    <li><strong>Sammenlign to sider.</strong> Nøyaktig lik skråstilling på hver side ser generert ut; hold rotasjonsvariasjonen over 0.</li>
+    <li><strong>Skriv ut én side.</strong> Skal kopien ut på papir, bør du sjekke at liten skrift og signaturer fortsatt er lesbare etter uskarphet og støy.</li>
+  </ul>
+  <p>Trenger mottakeren søkbar tekst, er et skannet utseende feil format; lær forskjellen i <a href="/blog/what-is-a-scanned-pdf/">hva er en skannet PDF</a>.</p>
+
+  <h2 id="hg-guides">Guider: slik får du en PDF til å se ut som om den er skannet</h2>
+  <p>Disse guidene går dypere inn i hver måte å få en PDF til å se ut som om den er skannet på, med nøyaktige innstillinger, sammenligninger av metoder og kontroller du kan kjøre på den ferdige filen før du sender den.</p>
+  <ul>
+    <li><a href="/blog/how-to-make-a-pdf-look-scanned/">Slik får du en PDF til å se skannet ut: 6 metoder sammenlignet</a></li>
+    <li><a href="/blog/make-a-document-look-scanned/">Få et dokument til å se skannet ut: Word, Google Docs og foto</a></li>
+    <li><a href="/blog/what-is-a-scanned-pdf/">Hva er en skannet PDF, og hvordan kjenner du den igjen?</a></li>
+    <li><a href="/blog/scan-effect/">Skanneeffekt: hvilke artefakter som får en fil til å se skannet ut</a></li>
+  </ul>
+
+  <h2 id="hg-faq">Få PDF til å se skannet ut: ofte stilte spørsmål</h2>
+  <div class="faq-item"><p class="faq-q">Hvordan får jeg en PDF til å se skannet ut uten skanner?</p><p class="faq-a">Åpne skanneren på dette nettstedet, slipp inn PDF-en, behold standardinnstillingene eller juster støy, uskarphet og rotasjon, og klikk på Lag skannet PDF. Hver side gjøres om til et skjevt, kornete bilde i gråtoner og lagres som en ny PDF. Du trenger verken skriver, skanner eller konto.</p></div>
+  <div class="faq-item"><p class="faq-q">Er dette skanneeffektverktøyet gratis?</p><p class="faq-a">Ja. Skanningen er gratis, det kreves ingen registrering, og det legges ikke til noe vannmerke med mindre du legger det til selv. Chrome-utvidelsen er også gratis.</p></div>
+  <div class="faq-item"><p class="faq-q">Blir filene mine lastet opp noe sted?</p><p class="faq-a">Nei. Filene behandles lokalt i nettleseren og blir verken sendt til en behandlingsserver eller lagret i skyen. Appen fungerer til og med uten nett etter første besøk.</p></div>
+  <div class="faq-item"><p class="faq-q">Kan teksten i PDF-en som ser skannet ut, fortsatt merkes?</p><p class="faq-a">Nei. Hver side blir et bilde, akkurat som i en ekte skanning, så teksten kan ikke merkes, søkes i eller kopieres. Ta vare på originalfilen hvis du trenger redigerbar tekst senere.</p></div>
+  <div class="faq-item"><p class="faq-q">Kan jeg få en PDF med flere sider til å se skannet ut?</p><p class="faq-a">Ja. Alle sidene behandles, og innstillingen Rotasjonsvariasjon gir hver side sin egen, litt forskjellige skråstilling, så dokumentet ikke ser maskinperfekt ut. Masseskanning håndterer mange filer samtidig.</p></div>
+  <div class="faq-item"><p class="faq-q">Kan jeg få et Word-dokument eller et foto til å se skannet ut?</p><p class="faq-a">Ja. DOCX, XLSX, CSV, TXT, Markdown, HTML og bilder i JPG, PNG, WebP eller SVG gjøres først om til sider og får deretter den samme skanneeffekten, slik at du får en PDF som ser skannet ut. Har Word-filen tabeller, logoer eller spesiell formatering, lagrer du den som PDF først, så oppsettet beholdes nøyaktig.</p></div>
+  <div class="faq-item"><p class="faq-q">Hvilken oppløsning bør jeg bruke?</p><p class="faq-a">Standardverdien 2× (omtrent 144 dpi for en PDF-side) er skarp nok til lesing og utskrift og holder filen liten. Bruk 3× for dokumenter med liten skrift og 1× når filstørrelsen betyr mest.</p></div>
+  <div class="faq-item"><p class="faq-q">Fungerer det på mobil?</p><p class="faq-a">Ja. Nettstedet kjører i moderne mobilnettlesere uten at du må installere noe. Chrome-utvidelsen er for Chrome på datamaskin.</p></div>
+</section>

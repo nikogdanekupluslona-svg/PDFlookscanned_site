@@ -1,0 +1,207 @@
+<p class="lead">Efeito de scanner é o conjunto de pequenas falhas que um scanner real deixa em uma página: uma leve inclinação, ruído do sensor, um foco suave, um tom quente de papel, tons de cinza e compressão JPEG. Para fazer um documento parecer escaneado, reproduza essas falhas com moderação — por exemplo, Rotação 1°, Desfoque 0,3, Ruído 0,1, Espaço de cor em Cinza e Resolução 2×.</p>
+<p>Um simples "adicione ruído e incline" geralmente parece um filtro, não um escaneamento. Esta referência separa um escaneamento real em seus artefatos, explica a causa física de cada um, relaciona cada um a um controle da nossa <a href="/scan">ferramenta de escaneamento</a> gratuita e traz cinco receitas prontas. Os dados sobre hardware vêm da NARA, da FADGI, da BBC News e da Wikipédia; os intervalos dos controles vêm do nosso próprio código-fonte.</p>
+<nav class="toc" aria-label="Sumário"><h2>Sumário</h2><ol>
+<li><a href="#what-is-a-scan-effect">O que é efeito de scanner?</a></li>
+<li><a href="#what-makes-a-document-look-scanned">O que faz um documento parecer escaneado?</a></li>
+<li><a href="#skew-and-rotation">Como a inclinação cria a aparência de escaneado?</a></li>
+<li><a href="#sensor-noise">Por que o efeito de scanner inclui ruído?</a></li>
+<li><a href="#blur-and-softness">Quanto desfoque tem um escaneamento real?</a></li>
+<li><a href="#paper-tone">Como o tom do papel muda o efeito de scanner?</a></li>
+<li><a href="#brightness-contrast-bit-depth">Como o brilho e o contraste moldam um escaneamento?</a></li>
+<li><a href="#grayscale-and-bitonal">Escala de cinza ou bitonal: qual aparência de escaneado escolher?</a></li>
+<li><a href="#jpeg-and-resolution">Os blocos de JPEG e a resolução reforçam a aparência de escaneado?</a></li>
+<li><a href="#moire">O que é o padrão moiré em um documento escaneado?</a></li>
+<li><a href="#edge-shadows-and-borders">Sombras nas bordas deixam uma página parecendo escaneada?</a></li>
+<li><a href="#fax-and-photocopy-look">Qual a diferença entre a aparência de fax e a de fotocópia?</a></li>
+<li><a href="#cheat-sheet">Guia rápido do efeito de scanner: qual controle faz o quê?</a></li>
+<li><a href="#five-presets">Configurações de efeito de scanner para 5 estilos</a></li>
+<li><a href="#apply-a-preset">Como aplicar uma predefinição de efeito de scanner passo a passo</a></li>
+<li><a href="#fake-scan-effect">O que faz um efeito de scanner parecer falso?</a></li>
+<li><a href="#honest-use">Quando uma aparência de escaneado é apropriada?</a></li>
+<li><a href="#faq">Efeito de scanner: perguntas frequentes</a></li>
+</ol></nav>
+
+<h2 id="what-is-a-scan-effect">O que é efeito de scanner?</h2>
+<p>Efeito de scanner é uma simulação digital dos vestígios visuais que um scanner óptico ou uma fotocopiadora deixam em uma página. O efeito de scanner transforma um arquivo limpo, gerado digitalmente, em um PDF baseado em imagens que mostra inclinação, ruído, suavidade, mudanças de tom e compressão — as mesmas pistas que as pessoas usam para reconhecer um documento escaneado em papel.</p>
+<p>O termo abrange vários estilos relacionados. Um "efeito de scanner" costuma significar a aparência de escâner de mesa de escritório: cinza, um pouco suave, levemente torto. Uma aparência de fotocópia é mais dura, com brancos estourados e texto escuro. Uma aparência de fax é grosseira e de baixa resolução. Uma aparência de papel envelhecido acrescenta um tom quente e amarelado. Todas elas são construídas com o mesmo pequeno conjunto de artefatos, só que em proporções diferentes.</p>
+<p>Tecnicamente, todo efeito de scanner termina da mesma forma: cada página vira uma imagem. Nossa ferramenta renderiza cada página do PDF em um canvas, aplica o efeito e salva cada página como uma imagem JPEG dentro de um novo PDF. É por isso que um PDF com aparência de escaneado, assim como um PDF escaneado de verdade, não tem texto selecionável, a menos que depois se aplique OCR. Nosso guia <a href="/blog/what-is-a-scanned-pdf/">o que é um PDF digitalizado</a> explica essa diferença em detalhe.</p>
+
+<h2 id="what-makes-a-document-look-scanned">O que faz um documento parecer escaneado?</h2>
+<p>Um documento parece escaneado quando várias imperfeições aparecem juntas: a página está levemente girada, os brancos não são branco puro, um ruído fino ocupa as áreas lisas, as bordas das letras são suaves e as cores são reduzidas a tons de cinza. Nenhum artefato convence sozinho; é a combinação que parece um escaneamento.</p>
+<p>Os Arquivos Nacionais dos EUA (NARA) listam os defeitos que seus revisores verificam em registros digitalizados. Segundo a norma federal de digitalização <a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">36 CFR Part 1236, Subpart E</a>, o controle de qualidade busca cortes de tom (clipping), desalinhamento de registro, erros de quantização, inclinação e recortes incorretos. Esses "defeitos" para um arquivista são exatamente os ingredientes da aparência que os artefatos de escaneamento criam para todo mundo.</p>
+<dl class="spec-list">
+<dt>Geometria</dt><dd>Inclinação e rotação, diferentes em cada página.</dd>
+<dt>Textura</dt><dd>Ruído do sensor e granulação do papel em áreas lisas.</dd>
+<dt>Nitidez</dt><dd>Suavidade óptica causada pela lente e pelo cabeçote de escaneamento em movimento.</dd>
+<dt>Tom</dt><dd>Cor do papel, variações de brilho e contraste.</dd>
+<dt>Profundidade de cor</dt><dd>Escala de cinza ou bitonal em vez de cor completa.</dd>
+<dt>Compressão</dt><dd>Blocos de JPEG de 8×8 e resolução limitada.</dd>
+<dt>Moldura</dt><dd>Sombras nas bordas, marcas da tampa e bordas de página.</dd>
+</dl>
+
+<h2 id="skew-and-rotation">Como a inclinação cria a aparência de escaneado?</h2>
+<p>Inclinação (skew) é a pequena rotação que uma página recebe quando é colocada no vidro do scanner ou puxada por um alimentador automático de documentos ligeiramente fora do esquadro. A inclinação é a parte mais reconhecível da aparência de escaneado, porque páginas geradas digitalmente são sempre perfeitamente retas, enquanto folhas de papel reais quase nunca ficam exatamente a 0°.</p>
+<p>A causa é mecânica. A FADGI, o grupo de trabalho federal de digitalização dos EUA, observa em suas <a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">Diretrizes Técnicas para Digitalização de Materiais do Patrimônio Cultural</a>: "Comportamentos de inclinação na imagem capturada muitas vezes podem ser rastreados até a falta de paralelismo entre o plano focal da câmera e o vidro do scanner." No escritório, a causa mais comum é mais simples: uma mão coloca a folha um ou dois graus fora da guia.</p>
+<p>Em nossa ferramenta, o controle deslizante Rotação define a inclinação base de −10° a 10° (padrão 1°). Valores negativos giram a página no sentido anti-horário. Um intervalo natural para um escaneamento de mesa é de 0,5° a 1,5°. Valores acima de 3° parecem uma foto descuidada, e acima de 5°, um efeito deliberado.</p>
+<h3>Variação por página: por que cada página escaneada se inclina de um jeito diferente</h3>
+<p>A Variação da rotação (0 a 10°, padrão 0,5°) adiciona uma inclinação extra aleatória a cada página. No nosso código-fonte, o ângulo final de cada página é a rotação base mais a variação multiplicada por um número aleatório entre 0 e 1. Com rotação 1 e variação 0,5, cada página fica em algum ponto entre 1,0° e 1,5°, nunca duas vezes exatamente no mesmo ângulo.</p>
+<p>Essa diferença entre páginas importa mais do que o ângulo em si. Uma pilha de papel alimentada folha por folha nunca repete a mesma inclinação, então uma inclinação idêntica em 20 páginas entrega o efeito. Mantenha a variação em 0,3–1° para uma aparência de escâner de mesa e 1–2° para uma aparência de escaneamento com celular na mão.</p>
+
+<h2 id="sensor-noise">Por que o efeito de scanner inclui ruído?</h2>
+<p>O efeito de scanner inclui ruído porque todo sensor de imagem registra pequenas variações aleatórias que não estão no papel original. O ruído aparece como uma granulação sutil nas margens brancas e nas áreas cinzas lisas. Sem ruído, uma página com aparência de escaneado fica limpa demais, e essa é a razão mais comum para um escaneamento simulado parecer digital.</p>
+<p>A NARA define o problema com precisão em <a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">36 CFR 1236 Subpart E</a>: "Ruído é um ou mais artefatos indesejados de imagem em um registro digitalizado que não fazem parte do material de origem." A mesma norma define um limite superior de ruído para escaneamentos de arquivo, medido como um desvio padrão de 2 ou menos na luminosidade. Escaneamentos reais, portanto, têm ruído, mas só um pouco.</p>
+<p>A FADGI acrescenta o outro lado da história: uma redução de ruído agressiva demais pode apagar a textura natural do papel, então suas diretrizes também sinalizam valores de ruído baixos demais. Uma página perfeitamente lisa é suspeita até para um arquivista.</p>
+<p>Em nossa ferramenta, o controle deslizante Ruído vai de 0 a 1 (padrão 0,1). Ele sobrepõe uma textura fractal fina em toda a página, incluindo as margens brancas, o que imita tanto o ruído do sensor quanto a granulação do papel. Um intervalo natural é 0,05–0,2. Acima de 0,3, a textura fica visível em zoom normal e começa a parecer um efeito, não um escaneamento.</p>
+
+<h2 id="blur-and-softness">Quanto desfoque tem um escaneamento real?</h2>
+<p>Um escaneamento real tem uma pequena quantidade de desfoque: as bordas das letras são suaves em vez de perfeitamente nítidas, e linhas finas perdem um pouco de contraste. A suavidade vem da lente do scanner, do cabeçote de escaneamento se movendo durante a exposição e do papel que não fica perfeitamente plano contra o vidro.</p>
+<p>PDFs digitais renderizam texto como contornos vetoriais, nítidos em qualquer zoom. Um escaneamento tem resolução fixa, e cada pixel faz a média da luz de uma pequena área do papel, o que deixa um leve halo ao redor dos caracteres.</p>
+<p>O controle deslizante Desfoque em nossa ferramenta vai de 0 a 1 (padrão 0,3). O valor é um raio de desfoque em pixels da página renderizada, então o mesmo valor parece mais suave em resolução 1× do que em 3×. Um intervalo natural é 0,2–0,4. Acima de 0,6, letras pequenas ficam difíceis de ler, e um desfoque pesado é uma das formas mais rápidas de fazer um efeito de scanner parecer falso.</p>
+<div class="callout callout-tip"><strong>Verifique o desfoque em 100% de zoom</strong>Avalie o desfoque no PDF baixado em 100% de zoom, não em uma miniatura reduzida. Uma configuração que parece nítida como miniatura pode ficar suave demais para notas de rodapé em 9 pt.</div>
+
+<h2 id="paper-tone">Como o tom do papel muda o efeito de scanner?</h2>
+<p>O tom do papel muda o efeito de scanner ao substituir o branco digital puro pelo branco levemente quente ou acinzentado do papel real. Papel de escritório escaneia num tom um pouco creme, papel reciclado fica acinzentado, e documentos antigos ficam amarelados ou acastanhados. Um tom quente é a principal pista por trás da aparência de papel envelhecido.</p>
+<p>Scanners registram o amarelamento do papel fielmente, especialmente no modo colorido, e lâmpadas e balanço de branco deslocam o tom levemente de um aparelho para outro.</p>
+<p>Nosso controle deslizante Amarelado (0 a 2, padrão 0) aplica um tom sépia. No nosso código, ele é aplicado depois da conversão para cinza, então tinge a página mesmo no Espaço de cor Cinza; no Espaço de cor Colorido, também aquece os elementos coloridos. Um intervalo natural é 0,1–0,3 para papel normal e 0,3–0,6 para uma aparência envelhecida ou de arquivo.</p>
+
+<h2 id="brightness-contrast-bit-depth">Como o brilho e o contraste moldam um escaneamento?</h2>
+<p>Brilho e contraste moldam um escaneamento ao definir o quão branco fica o papel e o quão preto fica o texto. Scanners e fotocopiadoras de escritório costumam aumentar o contraste, o que escurece o texto e estoura os fundos claros. Brilho abaixo de 1 dá um escaneamento escuro e acinzentado; acima de 1 dá uma cópia clareada e superexposta.</p>
+<p>Por trás dos dois ajustes está a profundidade de bits, o número de níveis de tom que um scanner armazena. Segundo o <a href="https://en.wikipedia.org/wiki/Image_scanner" target="_blank" rel="noopener">artigo da Wikipédia sobre scanners de imagem</a>, scanners típicos capturam pelo menos 24 bits em cores, e modelos de alta qualidade, 36–48 bits. Escaneamentos em escala de cinza costumam armazenar 8 bits, ou 256 tons. Quando um scanner comprime essa faixa, gradações finas desaparecem, o que a NARA chama de quantização.</p>
+<p>A norma da NARA coloca assim: "Quantização é uma técnica de compressão com perdas que envolve comprimir uma faixa de valores em um único valor quântico, geralmente para reduzir o tamanho do arquivo." Aumentar o contraste em nossa ferramenta imita o mesmo resultado visual: cinzas claros se fundem em branco e cinzas escuros se fundem em preto.</p>
+<dl class="spec-list">
+<dt>Brilho</dt><dd>0 a 2, padrão 1. Natural: 0,95–1,1. Fotocópia: 1,05–1,1. Papel envelhecido: cerca de 0,95.</dd>
+<dt>Contraste</dt><dd>0 a 2, padrão 1. Natural: 1–1,2. Fotocópia: 1,3–1,5. Fax: 1,5 ou mais.</dd>
+</dl>
+
+<h2 id="grayscale-and-bitonal">Escala de cinza ou bitonal: qual aparência de escaneado escolher?</h2>
+<p>A escala de cinza dá a aparência suave e uniforme de escaneado de um scanner de escritório moderno, enquanto o bitonal dá a aparência dura, preto e branco, de máquinas de fax e petições de tribunal. A escala de cinza mantém até 256 tons por pixel; o bitonal mantém apenas dois. A maioria das pessoas imagina escala de cinza quando pensa em um escaneamento de documento típico.</p>
+<p>A FADGI define os dois termos em seu glossário. "Escala de cinza: imagens digitais produzidas usando uma faixa de cinzas entre o branco e o preto." E: "Bitonal: imagens digitais produzidas usando apenas duas cores, preto e branco." Arquivos bitonais têm 1 bit por pixel; arquivos em escala de cinza, tipicamente 8 ou 16 bits, segundo as <a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">Diretrizes Técnicas da FADGI</a>.</p>
+<p>Nossa ferramenta oferece dois espaços de cor: Cinza (o padrão) e Colorido. Não existe um verdadeiro modo bitonal de 1 bit. Para se aproximar de uma aparência bitonal ou de fotocópia, mantenha Cinza e aumente o contraste para 1,4–1,6; os cinzas claros então caem para branco e o texto fica perto do preto, enquanto o arquivo continua em 8 bits. Use Colorido apenas quando um logotipo, carimbo, marca-texto ou tom de papel envelhecido precisar aparecer.</p>
+<p>Para uma conversão simples, sem artefatos de escaneamento, veja como <a href="/blog/convert-color-pdf-to-black-and-white/">converter um PDF colorido para preto e branco</a>.</p>
+
+<h2 id="jpeg-and-resolution">Os blocos de JPEG e a resolução reforçam a aparência de escaneado?</h2>
+<p>Os blocos de JPEG e a resolução limitada reforçam sim a aparência de escaneado. A maioria dos scanners salva páginas como imagens JPEG, o que deixa blocos sutis de 8×8 pixels ao redor do texto, e escaneamentos de escritório costumam ser feitos a 150–300 dpi, então uma página nunca tem a nitidez ilimitada de um PDF vetorial quando você dá zoom.</p>
+<p>A FADGI descreve o artefato de compressão diretamente: "Por exemplo, o processamento JPEG padrão introduz blocos de 8x8 pixels que claramente não fazem parte do conteúdo original." Esses blocos ficam mais visíveis ao redor de texto preto sobre papel branco e em gradientes suaves, como também mostra o <a href="https://en.wikipedia.org/wiki/Compression_artifact" target="_blank" rel="noopener">artigo da Wikipédia sobre artefatos de compressão</a>.</p>
+<p>Nossa ferramenta salva cada página processada como uma imagem JPEG dentro do novo PDF, então um leve blocking de JPEG aparece naturalmente, assim como acontece na saída de um scanner real. O ajuste Resolução controla a densidade de pixels: as páginas são renderizadas a 72 dpi multiplicado pela escala.</p>
+<div class="table-wrap"><table><caption>Ajuste de resolução na ferramenta e o que ele lembra</caption>
+<thead><tr><th scope="col">Ajuste</th><th scope="col">DPI aproximado</th><th scope="col">Lembra</th></tr></thead>
+<tbody>
+<tr><th scope="row">1×</th><td>72 dpi</td><td>Fax ou cópia de baixa qualidade, com degraus de pixel visíveis</td></tr>
+<tr><th scope="row">1,5×</th><td>108 dpi</td><td>Impressora multifuncional econômica em modo rascunho</td></tr>
+<tr><th scope="row">2× (padrão)</th><td>144 dpi</td><td>Típico "escaneamento de e-mail" de escritório</td></tr>
+<tr><th scope="row">2,5×</th><td>180 dpi</td><td>Saída de um app de scanner no celular</td></tr>
+<tr><th scope="row">3×</th><td>216 dpi</td><td>Escaneamento cuidadoso de mesa, arquivo maior</td></tr>
+</tbody></table></div>
+<p>Em comparação, a digitalização de arquivo vai muito mais alto. A NARA define mínimos de 300 ppi para registros textuais e 400 ppi para impressões fotográficas, e os níveis de estrelas da FADGI para documentos soltos variam de cerca de 200 a 400 ppi. Um efeito de scanner não precisa de resolução de arquivo; precisa parecer um escaneamento comum de escritório.</p>
+
+<h2 id="moire">O que é o padrão moiré em um documento escaneado?</h2>
+<p>O padrão moiré em um documento escaneado é um padrão de interferência ondulado que aparece quando um scanner captura uma imagem impressa com meio-tom, como uma foto de revista ou uma imagem de jornal. A grade regular de pontos da impressão e a grade regular de pixels do sensor colidem e produzem ondulações que não estavam no original.</p>
+<p>A FADGI explica: "O moiré costuma ocorrer na exibição de padrões de meio-tom digitalizados, causado pela interação fora de fase entre o padrão de meio-tom e a geometria do sensor." Suas diretrizes acrescentam um exemplo prático: "Exemplo — gravuras precisam ser digitalizadas em resoluções mais altas para evitar moiré." O <a href="https://en.wikipedia.org/wiki/Moir%C3%A9_pattern" target="_blank" rel="noopener">artigo da Wikipédia sobre o padrão moiré</a> observa o mesmo efeito ao escanear imagens impressas.</p>
+<p>Nossa ferramenta não tem um controle de moiré, e um documento de texto não precisa de um: o moiré só aparece em imagens impressas com meio-tom. Se sua fonte já contém uma foto de revista escaneada, qualquer moiré nela continua visível depois do processamento. Um leve desfoque de 0,3–0,4 o suaviza um pouco.</p>
+
+<h2 id="edge-shadows-and-borders">Sombras nas bordas deixam uma página parecendo escaneada?</h2>
+<p>Sombras nas bordas podem deixar uma página parecendo escaneada, porque a tampa de um scanner de mesa raramente fecha perfeitamente, e o vão projeta uma faixa escura ao longo de uma ou duas bordas. Fotocopiadoras e alimentadores também podem deixar linhas escuras finas onde a borda do papel encontra o vidro. Esses artefatos de moldura aparecem em muitos escaneamentos reais, mas não em todos.</p>
+<p>Seja claro sobre o que nossa ferramenta faz aqui. Ela não desenha sombras nas bordas, gradientes ou marcas de tampa. Ela oferece um interruptor Borda (desligado por padrão) que desenha uma linha escura de 1 pixel ao redor da borda da página. Essa moldura fina imita a borda do papel que uma fotocopiadora ou alimentador capta, e combina com aparências de fotocópia.</p>
+<p>Quando uma página é girada, a ferramenta preenche os cantos expostos com branco, o que corresponde a um scanner com tampa branca.</p>
+
+<h2 id="fax-and-photocopy-look">Qual a diferença entre a aparência de fax e a de fotocópia?</h2>
+<p>A aparência de fax e a aparência de fotocópia diferem principalmente na resolução e no tom. Um fax é grosseiro, de baixa resolução e quase preto e branco, com bordas de letras irregulares. Uma fotocópia é mais nítida, mas dura: os brancos são estourados, o texto é escuro e grosso, e pode aparecer granulação ou listras de toner.</p>
+<h3>O que dá ao fax sua aparência de baixa resolução?</h3>
+<p>Um fax parece grosseiro porque o padrão foi projetado para linhas telefônicas. Segundo o <a href="https://en.wikipedia.org/wiki/Fax" target="_blank" rel="noopener">artigo da Wikipédia sobre fax</a>, a resolução padrão do fax Grupo 3 é de cerca de 200–204 linhas por polegada na horizontal e apenas 98–100 na vertical; o modo "Fino" dobra a resolução vertical para 196–200. Uma página Grupo 3 típica leva de 6 a 15 segundos para ser enviada.</p>
+<p>Essa resolução vertical baixa e desigual é o motivo de o texto de fax parecer esticado e serrilhado. Para imitá-lo, use a Resolução mais baixa (1×), Espaço de cor Cinza, contraste de 1,5 ou mais para que os cinzas colapsem em direção ao preto e ao branco, e um pouco mais de desfoque e ruído do que um escaneamento de escritório.</p>
+<h3>O que dá à fotocópia sua aparência dura?</h3>
+<p>Uma fotocópia é uma cópia de um escaneamento impressa com toner, então mostra imperfeições de duas máquinas. O <a href="https://en.wikipedia.org/wiki/Photocopier" target="_blank" rel="noopener">artigo da Wikipédia sobre fotocopiadoras</a> observa que copiadoras podem ser identificadas por imperfeições em sua saída, e que tolerâncias mecânicas no toner e na alimentação de papel causam faixas (banding).</p>
+<p>Fotocopiadoras também podem alterar o conteúdo, não só a aparência. A BBC News <a href="https://www.bbc.com/news/technology-23588202" target="_blank" rel="noopener">relatou em 2013</a> que algumas fotocopiadoras de escritório alteravam dígitos em escaneamentos por causa de uma compressão de correspondência de padrões com perdas (JBIG2): "Em seus testes, o Sr. Kriesel descobriu que, com frequência, o número '6' era transformado em '8', e vice-versa, com outros números também sendo afetados." Nossa ferramenta não usa esse tipo de compressão; ela só muda a aparência, nunca os caracteres.</p>
+<p>Para imitar uma fotocópia, aumente o contraste para 1,3–1,5, aumente o brilho para 1,05–1,1 para clarear o papel, mantenha Cinza, adicione ruído em torno de 0,15 e ative a Borda para uma linha fina na borda.</p>
+
+<h2 id="cheat-sheet">Guia rápido do efeito de scanner: qual controle faz o quê?</h2>
+<p>O guia rápido do efeito de scanner abaixo relaciona cada artefato real de scanner à sua causa física, ao controle correspondente em nossa ferramenta e ao intervalo que ainda parece natural. Use-o como referência rápida quando um resultado parecer estranho: encontre o artefato que parece errado e ajuste só esse controle.</p>
+<div class="table-wrap"><table><caption>Artefatos de escaneamento, causas reais e controles da ferramenta</caption>
+<thead><tr><th scope="col">Artefato</th><th scope="col">Causa real</th><th scope="col">Controle da ferramenta</th><th scope="col">Intervalo natural</th></tr></thead>
+<tbody>
+<tr><th scope="row">Inclinação</th><td>Folha colocada ou alimentada fora do esquadro; vidro não paralelo ao sensor</td><td>Rotação (−10° a 10°)</td><td>0,5°–1,5° (celular: 1,5°–2,5°)</td></tr>
+<tr><th scope="row">Inclinação irregular</th><td>Cada folha fica de um jeito diferente</td><td>Variação da rotação (0–10°)</td><td>0,3°–1°</td></tr>
+<tr><th scope="row">Ruído e granulação</th><td>Ruído do sensor, textura do papel</td><td>Ruído (0–1)</td><td>0,05–0,2</td></tr>
+<tr><th scope="row">Suavidade</th><td>Lente, cabeçote de escaneamento em movimento, papel não plano</td><td>Desfoque (0–1)</td><td>0,2–0,4</td></tr>
+<tr><th scope="row">Tom do papel</th><td>Cor do papel, envelhecimento, lâmpada e balanço de branco</td><td>Amarelado (0–2)</td><td>0,1–0,3 (envelhecido: 0,3–0,6)</td></tr>
+<tr><th scope="row">Exposição</th><td>Força da lâmpada, exposição automática</td><td>Brilho (0–2)</td><td>0,95–1,1</td></tr>
+<tr><th scope="row">Tons duros</th><td>Contraste de fotocopiadora, quantização</td><td>Contraste (0–2)</td><td>1–1,2 (cópia/fax: 1,3–1,6)</td></tr>
+<tr><th scope="row">Tons de cinza</th><td>Captura em escala de cinza ou bitonal</td><td>Espaço de cor (Cinza/Colorido)</td><td>Cinza para a maioria dos documentos</td></tr>
+<tr><th scope="row">Densidade de pixels</th><td>Ajuste de dpi do escaneamento</td><td>Resolução (1×–3×)</td><td>2× escritório, 1× fax</td></tr>
+<tr><th scope="row">Blocos de JPEG</th><td>Salvamento com perdas em JPEG</td><td>Automático (páginas salvas como JPEG)</td><td>Não ajustável</td></tr>
+<tr><th scope="row">Linha de borda</th><td>Borda do papel captada por fotocopiadora ou alimentador</td><td>Borda (linha de 1 px)</td><td>Ligado para cópias, desligado para escaneamentos</td></tr>
+<tr><th scope="row">Sombra de borda</th><td>Vão da tampa em um scanner de mesa</td><td>Não simulado</td><td>Não disponível</td></tr>
+<tr><th scope="row">Moiré</th><td>Impressão de meio-tom encontra a grade do sensor</td><td>Não simulado</td><td>Só em imagens impressas</td></tr>
+</tbody></table></div>
+
+<h2 id="five-presets">Configurações de efeito de scanner para 5 estilos</h2>
+<p>As cinco receitas de efeito de scanner abaixo são nossos pontos de partida recomendados para os estilos mais comuns: escaneamento de escritório, fotocópia, tipo fax, papel envelhecido e escaneamento com celular. Cada uma usa apenas controles reais da nossa ferramenta. Insira os valores, confira a prévia ao vivo e depois ajuste um controle de cada vez.</p>
+<div class="table-wrap"><table><caption>Configurações iniciais recomendadas para 5 estilos de escaneamento</caption>
+<thead><tr><th scope="col">Controle</th><th scope="col">Escaneamento de escritório</th><th scope="col">Fotocópia</th><th scope="col">Tipo fax</th><th scope="col">Papel envelhecido</th><th scope="col">Estilo escaneamento com celular</th></tr></thead>
+<tbody>
+<tr><th scope="row">Rotação</th><td>1°</td><td>0,5°</td><td>0,5°</td><td>1°</td><td>1,5°–2,5°</td></tr>
+<tr><th scope="row">Variação da rotação</th><td>0,5°</td><td>0,5°</td><td>0,5°</td><td>0,5°</td><td>1°</td></tr>
+<tr><th scope="row">Desfoque</th><td>0,3</td><td>0,2</td><td>0,4</td><td>0,3</td><td>0,35</td></tr>
+<tr><th scope="row">Ruído</th><td>0,1</td><td>0,15</td><td>0,2</td><td>0,12</td><td>0,15</td></tr>
+<tr><th scope="row">Brilho</th><td>1</td><td>1,05–1,1</td><td>1</td><td>0,95</td><td>1</td></tr>
+<tr><th scope="row">Contraste</th><td>1</td><td>1,3–1,5</td><td>1,5 ou mais</td><td>1</td><td>1,1</td></tr>
+<tr><th scope="row">Amarelado</th><td>0</td><td>0</td><td>0</td><td>0,3–0,6</td><td>0–0,1</td></tr>
+<tr><th scope="row">Espaço de cor</th><td>Cinza</td><td>Cinza</td><td>Cinza</td><td>Colorido</td><td>Colorido</td></tr>
+<tr><th scope="row">Borda</th><td>Não</td><td>Sim</td><td>Não</td><td>Não</td><td>Não</td></tr>
+<tr><th scope="row">Resolução</th><td>2×</td><td>2×</td><td>1×</td><td>2×</td><td>2,5×</td></tr>
+</tbody></table></div>
+<p>Esses valores são nossas sugestões, não padrões medidos. Quando usar cada estilo:</p>
+<dl class="spec-list">
+<dt>Escaneamento de escritório</dt><dd>O escaneamento de mesa ou alimentador do dia a dia. Próximo aos padrões da ferramenta; ideal para contratos, cartas, formulários e a maioria dos documentos que as pessoas esperam receber "como um escaneamento".</dd>
+<dt>Fotocópia</dt><dd>Papel claro, texto escuro, uma linha fina na borda. Combina com documentos que devem parecer copiados várias vezes, como apostilas ou memorandos internos antigos.</dd>
+<dt>Tipo fax</dt><dd>Resolução grosseira de 1× e alto contraste. Combina com adereços, designs retrô e formulários que tradicionalmente chegavam por fax. Mantenha o corpo do texto em 10 pt ou maior, ou ele fica difícil de ler.</dd>
+<dt>Papel envelhecido</dt><dd>Modo colorido com um tom sépia quente e brilho um pouco mais baixo. Combina com apostilas em estilo de arquivo, adereços de jogos, projetos históricos e designs vintage.</dd>
+<dt>Estilo escaneamento com celular</dt><dd>Uma inclinação maior e menos uniforme, e captura em cor, como se um app de scanner no celular tivesse fotografado a página na mão. Combina com recibos e documentos de uma página.</dd>
+</dl>
+<div class="callout callout-info"><strong>Por que o estilo celular usa mais inclinação</strong>Um celular na mão raramente fica perfeitamente paralelo ao papel, então escaneamentos reais feitos com celular mostram mais rotação e mais variação entre as páginas do que um escâner de mesa. Nossa ferramenta gira a página, mas não adiciona distorção de perspectiva, então mantenha a inclinação abaixo de 3°.</div>
+
+<h2 id="apply-a-preset">Como aplicar uma predefinição de efeito de scanner passo a passo</h2>
+<p>Para aplicar uma predefinição de efeito de scanner, abra nossa ferramenta gratuita no navegador, carregue seu PDF ou imagem, insira os valores da receita no painel de configurações, compare a prévia ao vivo com o original e baixe o PDF escaneado. Todo o processo roda no seu navegador e geralmente leva menos de um minuto para um documento curto.</p>
+<ol class="step-list">
+<li><strong>Prepare um PDF.</strong> Exporte arquivos do Word, Google Docs ou planilhas para PDF primeiro (por exemplo, Arquivo → Fazer o download → Documento PDF no Google Docs). A ferramenta aceita DOCX diretamente, mas mantém só o texto, então exportar para PDF preserva o layout.</li>
+<li><strong>Abra a ferramenta.</strong> Acesse <a href="/scan">pdflookscanned.com/scan</a> e solte o PDF, JPG ou PNG na área de upload. Nada é enviado a um servidor; o processamento acontece localmente.</li>
+<li><strong>Escolha um estilo.</strong> Pegue uma das cinco receitas acima, por exemplo o escaneamento de escritório: rotação 1, variação 0,5, desfoque 0,3, ruído 0,1.</li>
+<li><strong>Defina o espaço de cor e a resolução.</strong> Selecione Cinza ou Colorido e a escala de Resolução (2× para a maioria dos estilos, 1× para fax, 2,5× para o estilo celular).</li>
+<li><strong>Ajuste o tom.</strong> Defina brilho, contraste e amarelado nos valores da receita; ative a Borda só para o estilo fotocópia.</li>
+<li><strong>Confira a prévia.</strong> Dê zoom para 100% em uma página com letra pequena. Se o texto ficar difícil de ler, reduza primeiro o desfoque, depois o contraste.</li>
+<li><strong>Baixe e confira.</strong> Baixe o PDF, abra-o no seu visualizador e percorra todas as páginas para confirmar que cada uma tem uma inclinação levemente diferente.</li>
+</ol>
+<p>Para vários arquivos de uma vez, a página de lote em <a href="/scan/bulk">/scan/bulk</a> aplica as mesmas configurações a cada arquivo e baixa tudo em um ZIP. Entradas de imagem viram um PDF de página única cada, como explicado em nosso guia sobre transformar uma <a href="/blog/image-to-scanned-pdf/">imagem em PDF digitalizado</a>.</p>
+
+<h2 id="fake-scan-effect">O que faz um efeito de scanner parecer falso?</h2>
+<p>Um efeito de scanner parece falso quando é exagerado ou uniforme demais: uma página girada 5° ou mais, a mesma inclinação em cada página, desfoque pesado que borra o texto, ruído forte em uma página quase em branco, ou margens que continuam no branco digital puro. Escaneamentos reais são imperfeitos de formas pequenas e irregulares.</p>
+<dl class="spec-list">
+<dt>Rotação excessiva</dt><dd>Escaneamentos de escritório raramente passam de 2°. Mantenha a Rotação em 0,5–1,5°, a menos que você queira o estilo celular, e mesmo assim fique abaixo de 3°.</dd>
+<dt>Inclinação idêntica</dt><dd>Cada página no mesmo ângulo exato entrega o filtro. Mantenha a Variação da rotação acima de 0, de preferência 0,3–1°.</dd>
+<dt>Desfoque pesado</dt><dd>Desfoque acima de 0,6 torna letras pequenas ilegíveis, o que um scanner de escritório funcionando não faria. Fique em 0,2–0,4.</dd>
+<dt>Ruído só em páginas brancas</dt><dd>O ruído cobre a página inteira, então em uma página quase vazia a textura vira a principal coisa que se vê. Para páginas esparsas, reduza o Ruído para 0,05–0,08.</dd>
+<dt>Branco digital puro</dt><dd>Papel nunca é branco RGB 255. Um brilho de 0,97–0,99 ou um valor de amarelado de 0,05–0,15 remove o branco clínico.</dd>
+<dt>Logotipos nítidos como vetor</dt><dd>Se uma página mistura um escaneamento suave com uma assinatura colada nítida, o contraste entrega. Adicione carimbos ou assinaturas na ferramenta antes de processar, para que recebam o mesmo efeito.</dd>
+</dl>
+<p>Um teste útil é colocar sua saída ao lado de um escaneamento real do seu próprio scanner de escritório ou celular. Compare o cinza das margens, a borda de uma letra pequena em 100% de zoom e a inclinação de três páginas diferentes. Se um desses claramente for diferente, ajuste só esse controle. O mesmo princípio percorre nosso guia principal sobre <a href="/blog/how-to-make-a-pdf-look-scanned/">como fazer um PDF parecer escaneado</a>.</p>
+<div class="callout callout-tip"><strong>Menos é mais</strong>Se uma aparência de escaneado parece "quase certa", reduza os efeitos em vez de adicionar novos. A aparência convincente que os artefatos de escaneamento criam vem de várias pistas fracas, não de uma única pista forte.</div>
+
+<h2 id="honest-use">Quando uma aparência de escaneado é apropriada?</h2>
+<p>Uma aparência de escaneado é apropriada quando você precisa que um documento corresponda ao formato que as pessoas esperam, como uma cópia estilo papel para registros, um pacote consistente de páginas, um design ou adereço, ou um arquivo achatado que fica mais difícil de editar casualmente. A aparência de escaneado muda só a aparência, nunca o que um documento prova.</p>
+<div class="callout callout-warn"><strong>Use o efeito de scanner com honestidade</strong>Um efeito de scanner muda como um arquivo parece, não se ele é autêntico. Não use para forjar ou alterar documentos oficiais, documentos de identidade, certidões ou assinaturas que não são suas. Alguns tribunais e órgãos públicos exigem PDFs com texto pesquisável em vez de escaneamentos de imagem, então confira as regras de protocolo antes de enviar um arquivo com aparência de escaneado.</div>
+<p>A compensação de acessibilidade também é real. Um PDF com aparência de escaneado é feito de imagens, então leitores de tela não conseguem ler o texto, a menos que se adicione OCR. Se um documento precisar ser acessível ou pesquisável, mantenha o PDF digital original junto com a cópia com aparência de escaneado.</p>
+<div class="expert-quote"><blockquote>Construímos os controles em torno dos artefatos que scanners reais realmente produzem, e deixamos o padrão deliberadamente sutil: rotação 1°, desfoque 0,3, ruído 0,1, Cinza. A maioria das pessoas que acha um resultado pouco convincente exagerou em um controle. Também rodamos tudo no navegador, porque os documentos que precisam de uma aparência de escaneado costumam ser exatamente os que as pessoas menos querem enviar para um servidor.</blockquote><cite><strong>Equipe Make PDF look scanned</strong> — criadores da ferramenta web e da extensão do Chrome</cite></div>
+
+<h2 id="faq">Efeito de scanner: perguntas frequentes</h2>
+<p>Essas perguntas sobre efeito de scanner são as mais comuns quando as pessoas tentam fazer um PDF ou imagem parecer escaneado. Cada resposta é curta e independente, e os valores se referem aos controles reais da nossa ferramenta gratuita, que funciona em navegadores de computador, navegadores de celular e como extensão do Chrome.</p>
+<div class="faq-item"><p class="faq-q">Qual é a melhor configuração de efeito de scanner para um documento normal?</p><p class="faq-a">Comece com a receita de escaneamento de escritório: rotação 1°, variação da rotação 0,5°, desfoque 0,3, ruído 0,1, Espaço de cor Cinza e resolução 2×. Esses também são os padrões da ferramenta, e combinam com contratos, cartas e formulários. Ajuste só se a prévia parecer limpa demais ou suave demais.</p></div>
+<div class="faq-item"><p class="faq-q">Qual é a diferença entre efeito de scanner e efeito escaneado?</p><p class="faq-a">Os termos significam a mesma coisa na prática. Os dois descrevem artefatos simulados de scanner, como inclinação, ruído, desfoque e tons de cinza. "Efeito de scanner" é usado um pouco mais para a aparência de escâner de mesa de escritório, enquanto "efeito escaneado" também cobre os estilos fax, fotocópia e escaneamento com celular.</p></div>
+<div class="faq-item"><p class="faq-q">Um efeito de scanner torna o texto não pesquisável?</p><p class="faq-a">Sim. Cada página é salva como uma imagem JPEG dentro do novo PDF, então o texto não pode mais ser selecionado, copiado ou pesquisado. Se precisar de texto pesquisável, rode OCR no resultado ou mantenha o PDF original.</p></div>
+<div class="faq-item"><p class="faq-q">Posso adicionar manchas de café, dobras ou vincos?</p><p class="faq-a">Não. Nossa ferramenta não gera manchas, dobras, vincos, distorção de perspectiva ou sombras nas bordas. Ela simula inclinação, ruído, desfoque, tom do papel, brilho, contraste, profundidade de cor, resolução e uma linha de borda de 1 px, o que cobre a aparência de escaneado do dia a dia.</p></div>
+<div class="faq-item"><p class="faq-q">Como faço um PDF parecer uma fotocópia?</p><p class="faq-a">Use Espaço de cor Cinza, contraste 1,3–1,5, brilho 1,05–1,1, ruído em torno de 0,15 e ative a Borda. Mantenha o desfoque baixo, em torno de 0,2, porque fotocópias são duras, não suaves.</p></div>
+<div class="faq-item"><p class="faq-q">Como consigo uma aparência de fax?</p><p class="faq-a">Defina a Resolução para 1× (72 dpi), mantenha Cinza, aumente o contraste para 1,5 ou mais, e use desfoque 0,4 e ruído 0,2. Faxes reais no padrão Grupo 3 rodam a cerca de 204 × 98 linhas por polegada no modo padrão, e é por isso que parecem grosseiros.</p></div>
+<div class="faq-item"><p class="faq-q">Por que minha aparência de escaneado parece falsa?</p><p class="faq-a">As causas mais comuns são rotação excessiva, a mesma inclinação em cada página, desfoque pesado ou ruído forte em uma página quase vazia. Reduza a rotação para cerca de 1°, mantenha a variação acima de 0 e mantenha o desfoque e o ruído abaixo de 0,4 e 0,2.</p></div>
+<div class="faq-item"><p class="faq-q">A ferramenta consegue criar um verdadeiro escaneamento preto e branco (bitonal)?</p><p class="faq-a">Não um arquivo de 1 bit verdadeiro. O Espaço de cor Cinza produz escala de cinza; aumentar o contraste para 1,4–1,6 empurra a página para perto de uma aparência preto e branco. Para uma saída bitonal rigorosa, veja nosso guia sobre como converter um PDF colorido para preto e branco.</p></div>
+<div class="faq-item"><p class="faq-q">Qual resolução devo escolher?</p><p class="faq-a">Use 2× (cerca de 144 dpi) para a maioria dos documentos, 2,5× (180 dpi) para o estilo celular e 3× (216 dpi) quando letras pequenas precisarem continuar nítidas. Uma resolução maior gera arquivos maiores, então use 1× ou 1,5× quando houver limites rígidos de tamanho.</p></div>
+<div class="faq-item"><p class="faq-q">Meu arquivo é enviado quando aplico um efeito de scanner?</p><p class="faq-a">Não. A ferramenta web e a extensão do Chrome processam arquivos localmente no seu navegador com pdf.js e canvas. Os arquivos não são enviados a um servidor de processamento, e o site funciona offline depois do primeiro carregamento.</p></div>
+<div class="faq-item"><p class="faq-q">Posso fazer um documento parecer escaneado em cores?</p><p class="faq-a">Sim. Mude o Espaço de cor para Colorido para manter logotipos, carimbos e realces. Colorido funciona melhor para os estilos papel envelhecido e escaneamento com celular; Cinza continua sendo o mais típico para um escaneamento de escritório.</p></div>

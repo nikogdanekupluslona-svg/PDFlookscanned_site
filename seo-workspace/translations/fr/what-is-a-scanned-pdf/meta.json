@@ -1,0 +1,47 @@
+{
+  "slug": "pdf-scanne-definition",
+  "title": "PDF scanné : définition et différence avec un PDF natif",
+  "description": "Qu'est-ce qu'un PDF scanné, en quoi diffère-t-il d'un PDF natif et d'une copie scannée, comment les distinguer en 10 secondes et quand recourir à l'OCR.",
+  "h1": "Qu'est-ce qu'un PDF scanné ? Le distinguer d'un PDF natif en 10 secondes",
+  "tag": "Comprendre",
+  "main_keyword": "pdf scanné",
+  "keywords": [
+    "pdf scanné",
+    "qu'est-ce qu'un pdf scanné",
+    "copie scannée",
+    "document scanné",
+    "pdf numérisé",
+    "pdf image",
+    "pdf interrogeable",
+    "pdf scanné ou pdf natif",
+    "savoir si un pdf est scanné",
+    "ocr pdf"
+  ],
+  "howto_name": "Comment savoir si un PDF est scanné",
+  "cta_title": "Besoin d'un PDF qui ressemble à une copie scannée ?",
+  "cta_body": "Déposez un PDF natif dans l'outil gratuit, réglez l'inclinaison, le bruit et la teinte du papier, puis téléchargez un PDF en images qui a l'air d'un vrai scan. Tout se passe dans votre navigateur.",
+  "about": [
+    "PDF numérisé",
+    "PDF",
+    "Document numérisé",
+    "Reconnaissance optique de caractères",
+    "Numériseur"
+  ],
+  "mentions": [
+    "PDF/A",
+    "ISO 32000",
+    "ISO 19005",
+    "Web Content Accessibility Guidelines",
+    "World Wide Web Consortium",
+    "JBIG2",
+    "Point par pouce",
+    "Profondeur de couleur",
+    "USCIS",
+    "CM/ECF",
+    "GOV.UK",
+    "Lecteur d'écran",
+    "Google Chrome",
+    "Aperçu (macOS)"
+  ],
+  "source_modified": "2026-09-18"
+}

@@ -1,0 +1,241 @@
+<p class="lead">Um PDF digitalizado é um PDF cujas páginas são fotografias de papel, capturadas por um scanner ou pela câmera de um celular, em vez de texto e formas vetoriais digitadas em um computador. A menos que um OCR tenha adicionado uma camada de texto oculta, você não consegue selecionar, pesquisar ou copiar as palavras, e um leitor de tela não ouve nada na página.</p>
+
+<p>Você recebeu um PDF e precisa saber o que ele realmente é: um arquivo exportado de um editor de texto, um escaneamento de papel, ou um escaneamento com texto reconhecido. A resposta decide se você consegue pesquisar nele, se um tribunal ou órgão público vai aceitá-lo, e se ele precisa de OCR.</p>
+
+<p>Este guia dá uma definição precisa, um teste de 10 segundos, uma comparação dos três tipos de PDF e um glossário. Os fatos vêm de orientações de acessibilidade do W3C, tribunais federais dos EUA, USCIS, NARA e normas de digitalização da FADGI, do GOV.UK e de equipes de acessibilidade universitárias, além do que aprendemos construindo uma ferramenta de efeito de scanner.</p>
+
+<nav class="toc" aria-label="Sumário"><h2>Sumário</h2><ol>
+<li><a href="#what-is-a-scanned-pdf">O Que É um PDF Digitalizado, Exatamente?</a></li>
+<li><a href="#scanned-pdf-vs-digital-pdf">Como um PDF Digitalizado Difere de um PDF Digital?</a></li>
+<li><a href="#scanned-copy-meaning">O Que Significa uma Cópia Digitalizada em Relação a uma Fotocópia?</a></li>
+<li><a href="#how-to-tell-if-a-pdf-is-scanned">Como Saber se um PDF É Digitalizado?</a></li>
+<li><a href="#accessibility-and-search">Por Que Documentos Digitalizados São Difíceis de Pesquisar e Ler?</a></li>
+<li><a href="#ocr-explained">O Que o OCR Faz a um PDF Digitalizado?</a></li>
+<li><a href="#when-you-need-a-scanned-copy">Quando as Organizações Pedem uma Cópia Digitalizada?</a></li>
+<li><a href="#scanned-pdf-and-pdf-a">Um PDF Digitalizado Pode Ser Arquivado como PDF/A?</a></li>
+<li><a href="#digital-pdf-to-scanned-look">Como um PDF Digital Ganha uma Aparência de PDF Digitalizado?</a></li>
+<li><a href="#scanned-document-glossary">Glossário de Documentos Digitalizados: Quais Termos Importam?</a></li>
+<li><a href="#faq">PDF Digitalizado: O Que Mais as Pessoas Perguntam?</a></li>
+<li><a href="#verdict">Qual É a Resposta Curta Sobre PDFs Digitalizados?</a></li>
+</ol></nav>
+
+<h2 id="what-is-a-scanned-pdf">O Que É um PDF Digitalizado, Exatamente?</h2>
+<p>Um PDF digitalizado é um contêiner PDF que guarda uma imagem rasterizada por página, produzida ao fotografar ou escanear uma folha física. As letras que você vê são pixels, não caracteres. O software trata cada página como uma foto, então a pesquisa de texto simples, a cópia e o refluxo do texto não funcionam sem OCR.</p>
+
+<p>O Tribunal Distrital dos EUA para o Distrito Norte da Califórnia, citando orientações de transferência do Arquivo Nacional, resume em uma frase: "Texto digitalizado é uma fotografia de uma página impressa, produzida por uma câmera digital ou um scanner" (<a href="https://cand.uscourts.gov/cases-e-filing/cmecf-information/preparing-your-cmecf-filing" target="_blank" rel="noopener">N.D. Cal., Preparing Your CM/ECF Filing</a>). O formato PDF em si não muda: um PDF digitalizado continua sendo um arquivo ISO 32000 válido. O que muda é o que fica dentro de cada página.</p>
+
+<p>A equipe de acessibilidade da James Madison University descreve o resultado do ponto de vista de quem lê: "PDFs de documentos digitalizados costumam ser só imagens de documentos, parecidas com fotografias digitais, e tipicamente não contêm texto legível" (<a href="https://www.jmu.edu/accessibility/digital-accessibility/guides/pdf/scanned-documents.shtml" target="_blank" rel="noopener">JMU Digital Accessibility</a>). Esse único fato explica quase todas as diferenças práticas abordadas abaixo.</p>
+
+<p>Aqui está a definição dividida em partes verificáveis, do mesmo jeito que um funcionário de arquivo ou um auditor de acessibilidade analisaria um arquivo.</p>
+
+<dl class="spec-list">
+<dt>Conteúdo da página</dt><dd>Uma imagem bitmap por página (compressão JPEG, JBIG2, CCITT ou similar), não glifos de fonte e caminhos vetoriais.</dd>
+<dt>Camada de texto</dt><dd>Nenhuma em um PDF só com imagens; uma camada invisível de OCR em um PDF digitalizado pesquisável.</dd>
+<dt>Origem</dt><dd>Um scanner de mesa ou de alimentação de folhas, uma copiadora multifuncional, ou a câmera de um celular com um aplicativo de escaneamento embutido no sistema operacional.</dd>
+<dt>Resolução típica</dt><dd>De 200 a 400 ppi; 300 ppi é a exigência mais comum para texto de escritório.</dd>
+<dt>Modo de cor</dt><dd>Bitonal (preto e branco, 1 bit), escala de cinza (8 bits) ou colorido (24 bits).</dd>
+<dt>Comportamento no zoom</dt><dd>As bordas viram blocos de pixels visíveis em alta ampliação.</dd>
+<dt>Tamanho do arquivo</dt><dd>Geralmente maior por página que um PDF de texto, especialmente em escala de cinza ou colorido.</dd>
+</dl>
+
+<h2 id="scanned-pdf-vs-digital-pdf">Como um PDF Digitalizado Difere de um PDF Digital?</h2>
+<p>Um PDF digitalizado armazena imagens das páginas, enquanto um PDF digital (nativamente digital) armazena caracteres reais, fontes e gráficos vetoriais exportados de um software. Um terceiro tipo, o PDF digitalizado com OCR, mantém a imagem da página, mas adiciona texto oculto e legível por máquina embaixo dela, o que o transforma em um PDF pesquisável.</p>
+
+<p>O Distrito de Massachusetts traça a mesma linha em suas regras de peticionamento eletrônico: um PDF digitalizado vem de papel passado por um scanner óptico, enquanto um PDF "convertido eletronicamente" é criado a partir de um editor de texto e é pesquisável (<a href="https://www.mad.uscourts.gov/caseinfo/pdf/ECFadminProc.pdf" target="_blank" rel="noopener">D. Mass. CM/ECF Administrative Procedures</a>). A tabela coloca os três tipos lado a lado.</p>
+
+<div class="table-wrap"><table><caption>Três tipos de PDF: nativamente digital, digitalizado só com imagem e digitalizado com OCR</caption>
+<thead><tr><th scope="col">Propriedade</th><th scope="col">PDF nativamente digital</th><th scope="col">PDF digitalizado só com imagem</th><th scope="col">PDF digitalizado + OCR (pesquisável)</th></tr></thead>
+<tbody>
+<tr><th scope="row">Como é feito</th><td>Exportado ou impresso em PDF a partir do Word, Google Docs, um navegador ou qualquer app</td><td>Scanner, copiadora ou câmera de celular</td><td>Primeiro escaneado, depois um software de OCR adiciona texto</td></tr>
+<tr><th scope="row">O que uma página contém</th><td>Caracteres, fontes incorporadas, linhas vetoriais, imagens</td><td>Uma imagem rasterizada</td><td>Uma imagem rasterizada mais texto invisível</td></tr>
+<tr><th scope="row">Selecionar e copiar texto</th><td>Sim, exato</td><td>Não</td><td>Sim, mas só tão preciso quanto o OCR</td></tr>
+<tr><th scope="row">Pesquisa Ctrl/Cmd+F</th><td>Funciona</td><td>Não encontra nada</td><td>Funciona, pode perder palavras mal reconhecidas</td></tr>
+<tr><th scope="row">Leitores de tela</th><td>Legível, melhor quando marcado</td><td>Silencioso</td><td>Legível, muitas vezes sem estrutura</td></tr>
+<tr><th scope="row">Zoom para 400%</th><td>Bordas nítidas em qualquer tamanho</td><td>Pixelado</td><td>Pixelado</td></tr>
+<tr><th scope="row">Tamanho típico por página</th><td>Dezenas de KB</td><td>Cerca de 75 KB (bitonal) a mais de 1 MB (escala de cinza ou colorido)</td><td>Igual ao só-imagem mais uma pequena camada de texto</td></tr>
+<tr><th scope="row">Parece papel</th><td>Não</td><td>Sim</td><td>Sim</td></tr>
+</tbody></table></div>
+
+<p>Os tamanhos por página na tabela vêm de testes de tribunais, não de suposições. O Distrito Norte da Califórnia escaneou um documento de 317 páginas: bitonal a 300 ppi chegou a 23,86 MB, cerca de 75 KB por página, e escala de cinza a 400 ppi chegou a 374,47 MB, cerca de 1,2 MB por página. O <a href="https://www.ncmd.uscourts.gov/sites/ncmd/files/ecfprocman.pdf" target="_blank" rel="noopener">Distrito Central da Carolina do Norte</a> observa que 2 MB comportam cerca de quarenta e cinco páginas de texto em PDF, menos de 50 KB por página.</p>
+
+<h2 id="scanned-copy-meaning">O Que Significa uma Cópia Digitalizada em Relação a uma Fotocópia?</h2>
+<p>Uma cópia digitalizada é um arquivo de imagem digital de um original em papel, geralmente entregue como um PDF digitalizado ou um JPEG. Uma fotocópia é uma segunda folha de papel impressa por uma copiadora. Uma cópia autenticada é qualquer cópia que uma pessoa autorizada conferiu contra o original e assinou.</p>
+
+<p>As pessoas usam "cópia digitalizada" de forma solta, e os três termos se misturam em formulários, e-mails de RH e listas de documentos de imigração. As diferenças importam, porque um pedido de um deles não é satisfeito pelos outros.</p>
+
+<div class="table-wrap"><table><caption>Cópia digitalizada, fotocópia e cópia autenticada comparadas</caption>
+<thead><tr><th scope="col">Termo</th><th scope="col">Meio</th><th scope="col">Quem faz</th><th scope="col">O que prova</th></tr></thead>
+<tbody>
+<tr><th scope="row">Cópia digitalizada</th><td>Arquivo digital (PDF, JPEG, TIFF)</td><td>Qualquer pessoa com um scanner ou celular</td><td>Que existe uma imagem do documento; nada sobre autenticidade</td></tr>
+<tr><th scope="row">Fotocópia</th><td>Papel</td><td>Qualquer pessoa com uma copiadora</td><td>O mesmo: é uma reprodução, não o original</td></tr>
+<tr><th scope="row">Cópia autenticada (fiel)</th><td>Papel, às vezes digitalizado depois</td><td>Um profissional que viu o original</td><td>Que a cópia corresponde ao original, sob a palavra dessa pessoa</td></tr>
+<tr><th scope="row">Original</th><td>Papel ou arquivo digital nativo</td><td>O emissor</td><td>O próprio documento</td></tr>
+</tbody></table></div>
+
+<p>O governo do Reino Unido explica a autenticação de forma direta: "Você pode autenticar um documento como cópia fiel fazendo com que ele seja assinado e datado por um profissional, como um advogado" (<a href="https://www.gov.uk/certifying-a-document" target="_blank" rel="noopener">GOV.UK, Certifying a document</a>). Uma cópia digitalizada dessa página autenticada continua sendo uma cópia digitalizada; a autenticação vive no papel, com a assinatura e a data.</p>
+
+<p>Então, quando um locador, empregador ou escola pede para "enviar uma cópia digitalizada", quase sempre eles querem dizer "uma imagem digital nítida do papel, em PDF". Quando dizem "cópia autenticada", um escaneamento sozinho não basta, por mais realista que pareça.</p>
+
+<h2 id="how-to-tell-if-a-pdf-is-scanned">Como Saber se um PDF É Digitalizado?</h2>
+<p>Para saber se um PDF é digitalizado, tente selecionar uma palavra na página e pesquise por uma palavra que você consiga ver. Se nada é destacado, o PDF é só imagem. O zoom, as propriedades do documento, a lista de fontes e o tamanho do arquivo então confirmam se o arquivo é digitalizado, digital, ou digitalizado com OCR.</p>
+
+<p>As duas primeiras verificações levam menos de 10 segundos e funcionam em qualquer visualizador de PDF, incluindo o embutido no Google Chrome, no Microsoft Edge e na Pré-Visualização do macOS. O resto leva um minuto e resolve os casos duvidosos.</p>
+
+<ol class="step-list">
+<li><strong>Tente selecionar o texto.</strong> Arraste o cursor por uma linha. Em um PDF nativamente digital ou com OCR, palavras individuais se destacam. Em um PDF só com imagem, nada se destaca, ou alguns visualizadores desenham um retângulo em volta da página inteira.</li>
+<li><strong>Pesquise com Ctrl+F ou Cmd+F.</strong> Digite uma palavra bem visível na primeira página. Zero resultados para uma palavra que claramente está ali significa que não há camada de texto. Um resultado significa texto real ou uma camada de OCR.</li>
+<li><strong>Aumente o zoom para 400%.</strong> Observe a borda de uma letra. Texto vetorial permanece perfeitamente nítido em qualquer zoom. Uma página digitalizada mostra degraus de pixels, franjas cinza suaves, granulado e às vezes padrões de blocos JPEG ao redor das letras.</li>
+<li><strong>Abra as propriedades do documento.</strong> No visualizador de PDF do Chrome, use o menu de três pontos e escolha Propriedades do documento; na Pré-Visualização do macOS, use Ferramentas e depois Mostrar Inspetor. O campo de produtor ou aplicativo muitas vezes cita um modelo de scanner, copiadora, recurso de escaneamento do celular ou mecanismo de OCR. Um editor de texto ou "Print to PDF" sugere um arquivo nativamente digital.</li>
+<li><strong>Confira a lista de fontes.</strong> Programas de PDF para computador mostram uma aba de Fontes nas propriedades do documento. Um PDF nativamente digital lista as fontes que usa. Um escaneamento só com imagem não lista nenhuma. Um escaneamento com OCR muitas vezes lista uma única fonte usada só para a camada invisível.</li>
+<li><strong>Compare o tamanho por página.</strong> Divida o tamanho do arquivo pelo número de páginas. Um PDF de texto costuma ficar abaixo de 50 KB por página. Um escaneamento em escala de cinza ou colorido costuma variar de várias centenas de KB a mais de 1 MB por página. Escaneamentos bitonais são compactos, então o tamanho é a pista mais fraca.</li>
+</ol>
+
+<p>O livro de acessibilidade da Cleveland State University recomenda o mesmo teste rápido de pesquisa: "Se a palavra fica destacada na página, então ela tem texto pesquisável, ao contrário de ser uma imagem digitalizada de texto" (<a href="https://pressbooks.ulib.csuohio.edu/accessibility/chapter/chapter-4-2-the-difference-between-an-accessible-pdf-and-a-scanned-image-of-text/" target="_blank" rel="noopener">Heather Caprette, Cleveland State University</a>).</p>
+
+<div class="callout callout-tip"><strong>Interpretando resultados mistos</strong>Texto se seleciona, mas o zoom mostra pixels: um PDF digitalizado com OCR. Texto se seleciona e o zoom continua nítido: nativamente digital. Nada se seleciona e o zoom mostra pixels: só imagem. Nada se seleciona, mas as bordas continuam nítidas: texto convertido em contornos vetoriais, um quarto caso raro que se comporta como um escaneamento para pesquisa.</div>
+
+<p>Os metadados são uma pista, não uma prova. Os campos de produtor e criador podem ser editados por muitas ferramentas, incluindo a nossa, então confie no que o conteúdo da página faz sob seleção e zoom, mais do que no que o painel de propriedades diz.</p>
+
+<h2 id="accessibility-and-search">Por Que Documentos Digitalizados São Difíceis de Pesquisar e Ler?</h2>
+<p>Documentos digitalizados são difíceis de pesquisar e ler porque um PDF só com imagem não contém caracteres para o software indexar. Mecanismos de busca, busca no computador, copiar e colar, ferramentas de tradução e leitores de tela precisam de texto. Sem uma camada de OCR, o PDF digitalizado é uma imagem que só leitores com visão conseguem usar.</p>
+
+<p>A W3C Web Accessibility Initiative é direta sobre isso na técnica PDF7 das diretrizes WCAG: "Um documento composto por imagens digitalizadas de texto é inerentemente inacessível, porque o conteúdo do documento são imagens, não texto pesquisável" (<a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF7" target="_blank" rel="noopener">W3C WAI, WCAG Technique PDF7</a>).</p>
+
+<p>A mesma página do W3C lista o que se perde: "Tecnologias assistivas não conseguem ler ou extrair as palavras; usuários não conseguem selecionar, editar, redimensionar ou refluir o texto, nem mudar as cores do texto e do fundo; e os autores não conseguem manipular o PDF para acessibilidade." Seu remédio é o OCR, para que exista texto real por trás da imagem.</p>
+
+<p>O escritório de acessibilidade da Georgetown University acrescenta a consequência prática para quem depende de tecnologia assistiva: "PDFs digitalizados são uma coleção de imagens, portanto são ilegíveis para a maioria dos leitores de tela comuns" (<a href="https://accessibility.georgetown.edu/digital-accessibility/pdf-accessibility/" target="_blank" rel="noopener">Accessibility at Georgetown</a>).</p>
+
+<p>Órgãos do setor público foram além. O Government Digital Service do Reino Unido argumenta que, em comparação com HTML, informações publicadas em PDF são mais difíceis de encontrar, usar e manter (<a href="https://gds.blog.gov.uk/2018/07/16/why-gov-uk-content-should-be-published-in-html-and-not-pdf/" target="_blank" rel="noopener">GDS blog, GOV.UK</a>). Um PDF digitalizado só com imagem é a versão extrema desse problema: nem mesmo as palavras são legíveis por máquina.</p>
+
+<div class="table-wrap"><table><caption>O que funciona em cada tipo de PDF</caption>
+<thead><tr><th scope="col">Tarefa</th><th scope="col">Nativamente digital</th><th scope="col">Digitalizado só com imagem</th><th scope="col">Digitalizado + OCR</th></tr></thead>
+<tbody>
+<tr><th scope="row">Saída no leitor de tela</th><td>Texto completo</td><td>Nenhuma</td><td>Texto, muitas vezes fora de ordem</td></tr>
+<tr><th scope="row">Refluir no celular</th><td>Possível se marcado</td><td>Não</td><td>Raramente</td></tr>
+<tr><th scope="row">Copiar uma citação</th><td>Exato</td><td>Redigitar à mão</td><td>Pode conter erros de OCR</td></tr>
+<tr><th scope="row">Encontrado pela busca do computador</th><td>Sim</td><td>Só pelo nome do arquivo</td><td>Sim</td></tr>
+<tr><th scope="row">Tradução automática</th><td>Sim</td><td>Precisa de OCR primeiro</td><td>Sim</td></tr>
+</tbody></table></div>
+
+<h2 id="ocr-explained">O Que o OCR Faz a um PDF Digitalizado?</h2>
+<p>OCR, reconhecimento ótico de caracteres, lê as formas das letras em um PDF digitalizado e escreve o texto correspondente em uma camada invisível atrás da imagem de cada página. A página parece exatamente igual, mas ela se torna um PDF pesquisável: as palavras podem ser encontradas, selecionadas, copiadas e lidas em voz alta.</p>
+
+<p>A Federal Agencies Digital Guidelines Initiative define isso com precisão: "Optical Character Recognition (OCR) é o processo de converter uma imagem rasterizada de texto em texto eletrônico pesquisável" (<a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">FADGI Technical Guidelines, 3ª ed., 2023</a>). O OCR funciona em texto datilografado, impresso e, de forma menos confiável, manuscrito.</p>
+
+<h3>O que o OCR corrige em um documento digitalizado</h3>
+<ul>
+<li>A pesquisa Ctrl/Cmd+F e a indexação de texto completo passam a funcionar.</li>
+<li>O texto pode ser selecionado, copiado e colado em outros documentos.</li>
+<li>Leitores de tela passam a ter palavras para falar, o que atende ao remédio básico do W3C na PDF7.</li>
+<li>Sistemas de tribunais que exigem peticionamento pesquisável passam a aceitar o arquivo.</li>
+</ul>
+
+<h3>O que o OCR não corrige</h3>
+<ul>
+<li><strong>Qualidade da imagem.</strong> A página continua sendo uma foto, então o zoom ainda pixela. A JMU observa que, para quem aumenta o zoom, "o resultado fica pixelado e distorcido porque o texto eletrônico está por baixo da imagem do texto."</li>
+<li><strong>Precisão.</strong> Desfoque, inclinação, baixa resolução e ruído granulado causam erros de leitura, como "rn" em vez de "m" ou "1" em vez de "l". O texto oculto pode estar errado mesmo quando a imagem parece certa.</li>
+<li><strong>Estrutura.</strong> Títulos, ordem de leitura, células de tabela e texto alternativo para imagens ainda precisam de marcação manual para acessibilidade completa.</li>
+<li><strong>Tamanho do arquivo.</strong> As imagens das páginas continuam lá, então um PDF digitalizado com OCR é quase tão grande quanto a versão só com imagem.</li>
+</ul>
+
+<div class="callout callout-info"><strong>O OCR roda na imagem, não no papel</strong>A qualidade do reconhecimento depende do escaneamento. Uma página limpa a 300 ppi com linhas retas é reconhecida muito melhor do que uma foto de celular inclinada e cheia de ruído. Se um escaneamento vai passar por OCR, escaneie-o reto e nítido primeiro.</div>
+
+<h2 id="when-you-need-a-scanned-copy">Quando as Organizações Pedem uma Cópia Digitalizada?</h2>
+<p>As organizações pedem uma cópia digitalizada quando o original existe em papel e elas precisam de um registro digital: evidências de imigração, provas em processos judiciais, arquivos de admissão de RH, contratos assinados e recibos. Cada uma define suas próprias regras de formato, resolução e tamanho de arquivo, e alguns tribunais exigem PDFs pesquisáveis em vez de arquivos só com imagem.</p>
+
+<h3>Evidências de imigração (USCIS)</h3>
+<p>O United States Citizenship and Immigration Services (USCIS, o serviço de imigração dos EUA) aceita evidências digitalizadas ou fotografadas para peticionamento on-line. A instrução é curta: "Use um scanner ou tire fotos de cada documento", e "Certifique-se de que cada imagem anexada esteja nítida e que todo o texto esteja legível" (<a href="https://www.uscis.gov/file-online/tips-for-filing-forms-online" target="_blank" rel="noopener">USCIS, Tips for Filing Forms Online</a>). Cada arquivo pode ter até 12 MB, em PDF, JPG ou JPEG, com TIF ou TIFF aceito para alguns formulários.</p>
+
+<h3>Peticionamento em tribunais federais (CM/ECF)</h3>
+<p>Os sistemas federais de peticionamento eletrônico aceitam só PDF, e muitos tribunais preferem arquivos nativamente digitais. O Distrito Sul da Flórida afirma que "peças/documentos principais protocolados eletronicamente no CM/ECF devem estar em formato PDF pesquisável" (<a href="https://www.flsd.uscourts.gov/all-faqs/CMECF" target="_blank" rel="noopener">S.D. Fla. CM/ECF FAQ</a>). PDFs digitalizados servem principalmente para anexos e papéis assinados que não têm original digital.</p>
+
+<p>Os ajustes de escaneamento e os limites de tamanho variam por tribunal. O Distrito Oeste de Washington exige escaneamento a 300 dpi, preto e branco a menos que a cor seja essencial, e limita cada documento a 100 MB (<a href="https://www.wawd.uscourts.gov/attorneys/cm-ecf-faqs/Technical" target="_blank" rel="noopener">W.D. Wash. technical FAQ</a>). O <a href="https://www.mnd.uscourts.gov/sites/mnd/files/Criminal-ECF-Procedures-Guide.pdf" target="_blank" rel="noopener">Distrito de Minnesota</a> limita cada anexo a 35 MB em seus procedimentos criminais de peticionamento eletrônico.</p>
+
+<h3>RH, locadores, escolas e bancos</h3>
+<p>Empregadores e locadores geralmente querem uma cópia digitalizada de um documento de identidade, um diploma, uma carta de oferta assinada ou uma página de contrato de locação. Raramente publicam regras técnicas; a maioria menciona um limite de anexo de e-mail e pede que toda palavra esteja legível. Quando um portal não lista limites, um PDF em escala de cinza a 300 dpi com menos de 10 MB é uma estimativa razoável, não uma regra declarada.</p>
+
+<div class="table-wrap"><table><caption>Exigências comuns de cópia digitalizada por solicitante</caption>
+<thead><tr><th scope="col">Solicitante</th><th scope="col">Formato</th><th scope="col">Regra de tamanho ou resolução</th><th scope="col">Texto pesquisável exigido?</th></tr></thead>
+<tbody>
+<tr><th scope="row">Peticionamento on-line do USCIS</th><td>PDF, JPG, JPEG (TIF/TIFF para alguns formulários)</td><td>12 MB por arquivo</td><td>Não; o texto precisa ser legível</td></tr>
+<tr><th scope="row">Tribunal do W.D. Wash.</th><td>PDF</td><td>300 dpi, P&amp;B; 100 MB por documento</td><td>Depende do tipo de documento</td></tr>
+<tr><th scope="row">Tribunal do S.D. Fla.</th><td>PDF</td><td>Limites do tribunal aplicam-se</td><td>Sim para documentos principais</td></tr>
+<tr><th scope="row">Peticionamento criminal do D. Minn.</th><td>PDF</td><td>35 MB por anexo</td><td>Confira as regras locais</td></tr>
+<tr><th scope="row">Empregador ou locador</th><td>PDF ou imagem</td><td>Geralmente um limite de e-mail</td><td>Raramente</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-tip"><strong>Mantenha o tamanho baixo</strong>Para documentos de texto, escala de cinza ou bitonal a 300 dpi costuma ser a opção legível mais leve. Escaneamentos coloridos de texto simples podem ficar muitas vezes maiores sem acrescentar informação. Nosso guia sobre <a href="/blog/convert-color-pdf-to-black-and-white/">converter um PDF colorido para preto e branco</a> cobre essas trocas.</div>
+
+<h2 id="scanned-pdf-and-pdf-a">Um PDF Digitalizado Pode Ser Arquivado como PDF/A?</h2>
+<p>Um PDF digitalizado pode ser salvo como PDF/A, a versão arquivística ISO 19005 do PDF, porque o PDF/A permite imagens de página. O PDF/A adiciona regras para leitura de longo prazo, como fontes incorporadas e ausência de criptografia, mas não torna uma página só com imagem pesquisável. O OCR é uma etapa separada.</p>
+
+<p>O PDF/A foi lançado pela primeira vez em 1º de outubro de 2005, e proíbe recursos que dificultam a abertura de arquivos décadas depois, como vinculação de fontes e criptografia (<a href="https://en.wikipedia.org/wiki/PDF/A" target="_blank" rel="noopener">Wikipédia, PDF/A</a>). O Microsoft Office consegue exportar arquivos compatíveis com a ISO 19005-1 diretamente pelas opções de Salvar como PDF.</p>
+
+<p>Tribunais que exigem PDF/A muitas vezes afastam os peticionantes do escaneamento por completo. O Distrito Leste de Oklahoma recomenda que, para manter o tamanho dos arquivos baixo e garantir arquivos pesquisáveis, os documentos PDF/A sejam criados em um editor de texto, em vez de impressos e depois digitalizados (<a href="https://www.oked.uscourts.gov/pdfa-frequently-asked-questions" target="_blank" rel="noopener">E.D. Okla. PDF/A FAQ</a>).</p>
+
+<dl class="spec-list">
+<dt>PDF/A nativamente digital</dt><dd>O menor e totalmente pesquisável; melhor quando existe um original digital.</dd>
+<dt>PDF/A digitalizado com OCR</dt><dd>Arquivístico e pesquisável; a escolha certa para registros só em papel.</dd>
+<dt>PDF/A só com imagem</dt><dd>Válido para preservação, mas não pesquisável nem acessível.</dd>
+</dl>
+
+<h2 id="digital-pdf-to-scanned-look">Como um PDF Digital Ganha uma Aparência de PDF Digitalizado?</h2>
+<p>Um PDF digital ganha uma aparência de PDF digitalizado quando cada página é rasterizada em uma imagem e recebe as imperfeições de um scanner real: leve rotação, desfoque, ruído, tom cinza ou de papel. O resultado é um PDF só com imagem que se comporta como um escaneamento, sem imprimir nada nem precisar de um scanner.</p>
+
+<p>É exatamente isso que a nossa <a href="/scan">ferramenta gratuita de efeito de scanner</a> faz. Ela renderiza cada página do PDF no seu navegador, aplica os efeitos que você escolher e salva cada página como uma imagem JPEG dentro de um novo PDF. Os arquivos são processados localmente e não são enviados para nenhum servidor.</p>
+
+<dl class="spec-list">
+<dt>Rotação</dt><dd>−10° a 10°, padrão 1°, mais uma variação aleatória por página de até 10°.</dd>
+<dt>Desfoque</dt><dd>0 a 1, padrão 0,3, suaviza as bordas vetoriais do jeito que a óptica de um scanner faz.</dd>
+<dt>Ruído</dt><dd>0 a 1, padrão 0,1, adiciona granulado estilo sensor.</dd>
+<dt>Brilho e contraste</dt><dd>0 a 2 cada, padrão 1.</dd>
+<dt>Amarelado</dt><dd>0 a 2, padrão 0, tinge a página como papel envelhecido.</dd>
+<dt>Espaço de cor</dt><dd>Cinza (padrão) ou Colorido.</dd>
+<dt>Resolução</dt><dd>1× a 3×; as páginas do PDF são renderizadas a 72 dpi vezes a escala, então 2× é cerca de 144 dpi e 3× cerca de 216 dpi.</dd>
+</dl>
+
+<p>Como o resultado é só imagem, ele herda todas as propriedades descritas acima: nenhum texto selecionável, nenhuma pesquisa, arquivos maiores, nenhuma saída de leitor de tela. É exatamente isso que quem precisa que um documento pareça uma cópia digitalizada busca, e uma desvantagem para quem precisa que ele seja pesquisável. Guarde o arquivo digital original.</p>
+
+<p>Para o fluxo de trabalho completo, incluindo as trocas entre resolução e tamanho de arquivo, leia <a href="/blog/pdf-to-scanned-pdf/">como converter um PDF em PDF digitalizado</a>. Para os seis métodos, do imprimir-e-escanear a opções nativas do sistema operacional, veja <a href="/blog/how-to-make-a-pdf-look-scanned/">como fazer um PDF parecer escaneado</a>. Começando com uma foto de celular em vez disso? O guia sobre <a href="/blog/image-to-scanned-pdf/">transformar uma imagem em PDF digitalizado</a> cobre JPG e PNG.</p>
+
+<div class="callout callout-warn"><strong>Use a aparência de escaneado com honestidade</strong>Um efeito de scanner muda a aparência de um arquivo, não a sua autenticidade. Não use isso para forjar ou alterar documentos oficiais, identidades ou assinaturas que não sejam suas. Alguns tribunais e órgãos públicos exigem PDFs pesquisáveis, então um arquivo só com imagem pode ser rejeitado; confira as regras antes de enviar.</div>
+
+<div class="expert-quote"><blockquote>Criamos nossa ferramenta para adicionar uma aparência de escaneado, e a pergunta mais comum que recebemos é, na verdade, "o que eu acabei de criar?". A resposta honesta é um PDF só com imagem. Ele parece papel, mas as palavras são pixels. Se um leitor precisar pesquisá-lo ou ouvi-lo em voz alta, guarde o original digital ao lado, ou rode um OCR depois. Preferimos que as pessoas saibam disso antes de clicar em Baixar.</blockquote><cite><strong>Equipe Make PDF look scanned</strong> — criadores da ferramenta web e da extensão do Chrome</cite></div>
+
+<h2 id="scanned-document-glossary">Glossário de Documentos Digitalizados: Quais Termos Importam?</h2>
+<p>Um documento digitalizado vem com seu próprio vocabulário: dpi e ppi, profundidade de bits, bitonal, OCR, rasterizar, PDF/A e JBIG2. Conhecer esses sete termos já é suficiente para ler qualquer exigência de escaneamento de um tribunal, órgão público ou empregador, e para avaliar um PDF digitalizado que você recebe.</p>
+
+<dl class="spec-list">
+<dt>dpi / ppi</dt><dd>Pontos ou pixels por polegada: quantas amostras de imagem cobrem uma polegada de papel. A NARA exige no mínimo 300 ppi para registros textuais modernos e 400 ppi para fotografias e registros de detalhe fino. A geometria de página do PDF usa 72 pontos por polegada, por isso uma renderização em 1× equivale a 72 dpi.</dd>
+<dt>Profundidade de bits</dt><dd>Bits armazenados por pixel. Bitonal é 1 bit, escala de cinza é 8 bits (256 tons), e um escaneamento colorido típico é 24 bits (8 bits em cada um dos três canais).</dd>
+<dt>Bitonal</dt><dd>Definição da FADGI: "Imagens digitais produzidas usando apenas duas cores, preto e branco." O menor formato legível para texto simples.</dd>
+<dt>OCR</dt><dd>Reconhecimento ótico de caracteres: software que transforma as formas das letras em uma imagem em texto de máquina, criando um PDF pesquisável.</dd>
+<dt>Rasterizar</dt><dd>Converter texto vetorial e formas em uma grade de pixels. Rasterizar um PDF digital o transforma em um PDF só com imagem.</dd>
+<dt>PDF/A</dt><dd>ISO 19005, o subconjunto arquivístico do PDF, lançado em 2005; proíbe recursos como criptografia e vinculação de fontes.</dd>
+<dt>JBIG2</dt><dd>Um método de compressão para escaneamentos bitonais que armazena símbolos repetidos apenas uma vez. A BBC News noticiou em 2013 que algumas copiadoras de escritório usando um modo JBIG2 com perdas alteravam dígitos em escaneamentos, muitas vezes transformando um 6 em um 8; em um teste, uma dimensão de sala de 21,11 m virou 14,13 m.</dd>
+<dt>PDF só com imagem</dt><dd>Um PDF digitalizado sem nenhuma camada de texto.</dd>
+<dt>PDF pesquisável</dt><dd>Um PDF com texto real ou de OCR que pode ser pesquisado e selecionado.</dd>
+</dl>
+
+<p>O caso do JBIG2 é o argumento mais forte para guardar os originais. Uma cópia digitalizada é uma imagem, e imagens podem ser alteradas pela compressão sem que ninguém perceba (<a href="https://www.bbc.com/news/technology-23588202" target="_blank" rel="noopener">BBC News, 2013</a>). A NARA também trata o ruído como um artefato indesejável "que não faz parte do material de origem" (<a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">36 CFR 1236 Subpart E</a>).</p>
+
+<h2 id="faq">PDF Digitalizado: O Que Mais as Pessoas Perguntam?</h2>
+<p>Estas perguntas sobre PDF digitalizado aparecem com mais frequência de pessoas que receberam um arquivo, precisam enviar uma cópia digitalizada, ou precisam atender a uma regra de tribunal ou órgão público. Cada resposta é independente, então você pode ir direto à que combina com a sua situação e agir com base nela.</p>
+
+<div class="faq-item"><p class="faq-q">O que é um PDF digitalizado em termos simples?</p><p class="faq-a">Um PDF digitalizado é um PDF feito de fotos de páginas de papel. O texto que você vê faz parte de uma imagem, então você não consegue selecioná-lo nem pesquisá-lo, a menos que um OCR tenha sido aplicado.</p></div>
+<div class="faq-item"><p class="faq-q">Um PDF digitalizado é o mesmo que uma cópia digitalizada?</p><p class="faq-a">Quase. Uma cópia digitalizada é qualquer imagem digital de um documento em papel, e um PDF digitalizado é o formato de arquivo mais comum para entregar uma. Uma cópia digitalizada também pode ser um JPEG ou TIFF.</p></div>
+<div class="faq-item"><p class="faq-q">Como posso saber se um PDF é digitalizado em 10 segundos?</p><p class="faq-a">Tente selecionar uma palavra, depois pressione Ctrl+F ou Cmd+F e pesquise uma palavra que você consiga ver. Se nada é destacado e a pesquisa não encontra nada, o PDF é um escaneamento só com imagem. Aumente o zoom para 400% para confirmar: texto digitalizado parece pixelado.</p></div>
+<div class="faq-item"><p class="faq-q">Um PDF digitalizado pode ser pesquisável?</p><p class="faq-a">Sim. O OCR adiciona uma camada de texto invisível atrás das imagens das páginas, transformando um PDF digitalizado em um PDF pesquisável. A página continua parecendo um escaneamento, e palavras mal reconhecidas podem aparecer no texto oculto.</p></div>
+<div class="faq-item"><p class="faq-q">Por que não consigo copiar texto do meu PDF?</p><p class="faq-a">O PDF provavelmente é um escaneamento sem OCR, então não há caracteres para copiar. O FAQ do tribunal do Distrito Sul da Flórida observa a mesma coisa: se um PDF não é pesquisável, seu texto não pode ser copiado. Rode um OCR ou peça o original digital.</p></div>
+<div class="faq-item"><p class="faq-q">PDFs digitalizados são acessíveis a leitores de tela?</p><p class="faq-a">Não sem OCR. As orientações do W3C chamam escaneamentos só com imagem de inerentemente inacessíveis. Depois do OCR, os leitores de tela conseguem falar o texto, mas a acessibilidade completa também exige marcação de títulos, ordem de leitura e tabelas.</p></div>
+<div class="faq-item"><p class="faq-q">Por que um PDF digitalizado é tão grande?</p><p class="faq-a">Cada página é uma imagem completa. Uma página em escala de cinza a 400 ppi pode passar de 1 MB, enquanto uma página de texto de um editor de texto costuma ficar abaixo de 50 KB. Escanear a 300 ppi em escala de cinza ou preto e branco mantém o tamanho baixo.</p></div>
+<div class="faq-item"><p class="faq-q">Qual resolução um documento digitalizado deve ter?</p><p class="faq-a">Para texto datilografado ou impresso, 300 dpi é a exigência padrão nos tribunais federais dos EUA e o mínimo da NARA para registros textuais. Fotos e detalhes finos pedem 400 ppi.</p></div>
+<div class="faq-item"><p class="faq-q">Uma cópia digitalizada é uma cópia legal ou autenticada?</p><p class="faq-a">Não, uma cópia digitalizada sozinha não prova nada sobre autenticidade. Uma cópia autenticada é assinada e datada por um profissional que viu o original, como explica o GOV.UK. Pergunte ao solicitante qual tipo ele precisa.</p></div>
+<div class="faq-item"><p class="faq-q">Posso fazer um PDF digital parecer um PDF digitalizado?</p><p class="faq-a">Sim. A ferramenta gratuita <a href="/scan">Make PDF look scanned</a> rasteriza cada página e adiciona rotação, desfoque, ruído e tom de papel no seu navegador. O resultado é um PDF só com imagem, então guarde o original se precisar de pesquisa.</p></div>
+<div class="faq-item"><p class="faq-q">Um PDF digitalizado precisa ser PDF/A?</p><p class="faq-a">Só se o solicitante disser isso. Alguns tribunais e arquivos exigem PDF/A para armazenamento de longo prazo. Um PDF digitalizado pode ser salvo como PDF/A, idealmente com OCR para que também seja pesquisável.</p></div>
+<div class="faq-item"><p class="faq-q">Posso digitalizar vários PDFs de uma vez?</p><p class="faq-a">Com a nossa ferramenta, sim: <a href="/scan/bulk">escaneamento em lote</a> processa vários arquivos e baixa tudo como um único ZIP, com um PDF escaneado para cada arquivo de entrada.</p></div>
+
+<h2 id="verdict">Qual É a Resposta Curta Sobre PDFs Digitalizados?</h2>
+<p>Um PDF digitalizado é uma imagem de papel embrulhada em um PDF. Teste-o selecionando e pesquisando texto, adicione OCR quando precisar de pesquisa ou acessibilidade, envie um PDF nativamente digital quando um tribunal preferir, e use uma aparência de escaneado só quando a aparência, não a autenticidade, for o que o leitor precisa.</p>
+
+<p>Se a aparência é o que você precisa, abra a <a href="/scan">ferramenta gratuita de escaneamento</a>, mantenha o espaço de cor Cinza padrão e a resolução 2×, e confira a prévia antes de baixar.</p>

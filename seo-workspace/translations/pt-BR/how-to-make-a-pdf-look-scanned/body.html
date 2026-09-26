@@ -1,0 +1,300 @@
+<p class="lead">Para fazer um PDF parecer escaneado, transforme cada página em uma imagem, incline-a entre 0,5° e 2°, adicione um pouco de ruído e desfoque, mude para escala de cinza e salve as imagens de volta em um PDF. Uma ferramenta gratuita no navegador faz tudo isso em menos de um minuto, localmente, sem enviar o arquivo para nenhum servidor nem instalar nada.</p>
+
+<p>Muitos formulários ainda pedem uma "cópia digitalizada", e um PDF digital limpo pode destoar ao lado de documentos baseados em papel. Este guia mostra como fazer um PDF parecer escaneado de seis formas diferentes, de uma ferramenta de um minuto no navegador a uma impressora e um scanner de verdade, com ajustes exatos, cinco receitas testadas, uma lista de verificação e limites honestos.</p>
+
+<p>Os números de resolução vêm de normas federais americanas de digitalização e de guias de peticionamento em tribunais; os valores dos controles deslizantes vêm da nossa própria ferramenta.</p>
+
+<nav class="toc" aria-label="Sumário"><h2>Sumário</h2><ol>
+<li><a href="#quick-answer">Qual é a forma mais rápida de fazer um PDF parecer escaneado?</a></li>
+<li><a href="#method-1-browser-tool">Método 1: fazer um PDF parecer escaneado no navegador</a></li>
+<li><a href="#method-2-chrome-extension">Método 2: fazer um PDF parecer um escaneamento no Chrome</a></li>
+<li><a href="#method-3-print-dialog">Método 3: a impressão consegue fazer um PDF parecer escaneado?</a></li>
+<li><a href="#method-4-image-editor">Método 4: fazer um PDF parecer que foi escaneado à mão</a></li>
+<li><a href="#method-5-phone-photo">Método 5: fazer um PDF parecer um escaneamento com o celular</a></li>
+<li><a href="#method-6-print-and-scan">Método 6: imprimir e escanear o PDF de verdade</a></li>
+<li><a href="#recipes">Quais ajustes fazem um PDF parecer um documento escaneado?</a></li>
+<li><a href="#check-the-result">Como conferir se o PDF parece escaneado?</a></li>
+<li><a href="#common-mistakes">Por que um PDF escaneado falso ainda parece falso?</a></li>
+<li><a href="#when-not-to">Quando você não deve fazer um PDF parecer escaneado?</a></li>
+<li><a href="#faq">Fazer um PDF parecer escaneado: perguntas frequentes</a></li>
+<li><a href="#verdict">Qual método para fazer um PDF parecer escaneado você deve escolher?</a></li>
+</ol></nav>
+
+<h2 id="quick-answer">Qual é a forma mais rápida de fazer um PDF parecer escaneado?</h2>
+<p>A forma mais rápida de fazer um PDF parecer escaneado é uma ferramenta de efeito de scanner no navegador: abra a página, solte o PDF, mantenha ou ajuste a rotação, o desfoque e o ruído padrão, e baixe o resultado. O trabalho todo leva menos de um minuto por arquivo e não custa nada.</p>
+
+<p>Os outros cinco métodos trocam velocidade por controle ou por autenticidade física. A caixa de diálogo de impressão é rápida, mas só meio convincente. Um editor de imagens rasterizadas dá controle total, mas leva de 10 a 30 minutos. Uma foto de celular ou uma impressora e um scanner de verdade produzem artefatos reais de escaneamento, ao custo de papel, tempo e hardware. A tabela abaixo resume como os seis métodos se comparam.</p>
+
+<div class="table-wrap"><table>
+<caption>Seis formas de fazer um PDF parecer escaneado, comparadas (o tempo por documento de 5 páginas é uma estimativa nossa)</caption>
+<thead><tr><th scope="col">Método</th><th scope="col">Tempo</th><th scope="col">Custo</th><th scope="col">O que você precisa</th><th scope="col">Realismo</th><th scope="col">Privacidade</th><th scope="col">Melhor para</th></tr></thead>
+<tbody>
+<tr><th scope="row">1. Ferramenta no navegador</th><td>Menos de 1 min</td><td>Grátis</td><td>Qualquer navegador moderno</td><td>Alto</td><td>Local, sem upload</td><td>A maioria das pessoas, a maioria dos arquivos</td></tr>
+<tr><th scope="row">2. Extensão do Chrome</th><td>Menos de 1 min</td><td>Grátis</td><td>Google Chrome</td><td>Alto</td><td>Local, sem upload</td><td>Uso frequente, lotes</td></tr>
+<tr><th scope="row">3. Caixa de diálogo de impressão do sistema</th><td>1–2 min</td><td>Grátis</td><td>Windows ou macOS</td><td>Baixo a médio</td><td>Local</td><td>Só o visual em escala de cinza</td></tr>
+<tr><th scope="row">4. Editor de imagens rasterizadas</th><td>10–30 min</td><td>Grátis a pago</td><td>Editor mais exportação para PDF</td><td>Alto, se bem-feito</td><td>Local</td><td>Efeitos personalizados e pontuais</td></tr>
+<tr><th scope="row">5. Foto de celular de um impresso</th><td>5–10 min</td><td>Papel e toner</td><td>Impressora e celular</td><td>Muito alto</td><td>Local</td><td>Um visual genuíno de escaneamento por celular</td></tr>
+<tr><th scope="row">6. Imprimir e escanear</th><td>5–15 min</td><td>Papel e toner</td><td>Impressora e scanner de mesa</td><td>Escaneamento real</td><td>Local</td><td>Quando um escaneamento verdadeiro é exigido</td></tr>
+</tbody></table></div>
+
+<p>Se você só precisa de uma recomendação: use o Método 1 para arquivos individuais e o modo em lote dele para lotes. Mude para o Método 6 somente quando uma pessoa ou uma empresa pedir explicitamente um documento que tenha passado fisicamente por um scanner.</p>
+
+<h2 id="method-1-browser-tool">Método 1: fazer um PDF parecer escaneado no navegador</h2>
+<p>A ferramenta web Make PDF look scanned transforma cada página do PDF em uma imagem no seu navegador, aplica rotação, desfoque, ruído, brilho, contraste e tom de papel, e depois salva as imagens como um novo PDF. O arquivo nunca sai do seu dispositivo, e a ferramenta é grátis, sem cadastro.</p>
+
+<p>Por trás dos panos, a ferramenta usa o PDF.js, que a Mozilla descreve como <a href="https://mozilla.github.io/pdf.js/" target="_blank" rel="noopener">"uma plataforma de uso geral, baseada em padrões da web, para analisar e renderizar PDFs"</a>, e desenha cada página em um canvas HTML. Como o processamento acontece localmente, a ferramenta continua funcionando offline depois do primeiro carregamento e também roda em navegadores de celular.</p>
+
+<h3>Passos para fazer um PDF parecer escaneado com a ferramenta do navegador</h3>
+<ol class="step-list">
+<li><strong>Abra o scanner.</strong> Acesse <a href="/scan">a ferramenta gratuita de escaneamento</a> no Chrome, Edge, Safari ou Firefox. Não é preciso conta nem instalação.</li>
+<li><strong>Adicione seu PDF.</strong> Arraste o arquivo para a página ou clique para escolhê-lo. A ferramenta também aceita arquivos JPG, PNG, WebP, SVG, GIF, BMP, DOCX, XLSX, CSV, TXT, MD e HTML.</li>
+<li><strong>Confira a prévia ao vivo.</strong> A primeira página aparece com o efeito padrão já aplicado: rotação de 1°, variação aleatória de 0,5°, desfoque 0,3, ruído 0,1, escala de cinza, resolução 2×.</li>
+<li><strong>Ajuste a inclinação.</strong> Mantenha a Rotação entre 0,5° e 1,5° para um escaneamento de escritório convincente. Deixe a Variação da rotação em 0,5–1° para que cada página fique em um ângulo levemente diferente, como aconteceria ao alimentar o scanner à mão.</li>
+<li><strong>Ajuste o desfoque e o ruído.</strong> Desfoque 0,2–0,4 suaviza as bordas vetoriais muito nítidas; ruído 0,1–0,25 adiciona o granulado de um sensor. Aumente o zoom da prévia para 100% antes de decidir.</li>
+<li><strong>Escolha o espaço de cor e o tom do papel.</strong> Cinza combina com contratos e cartas. Escolha Colorido para carimbos, logotipos ou formulários coloridos, e aumente o Amarelado para 0,2–0,6 para um papel fora do branco.</li>
+<li><strong>Escolha a resolução.</strong> 2× (cerca de 144 dpi) é o padrão equilibrado; 3× (cerca de 216 dpi) é mais nítido, mas gera um arquivo maior.</li>
+<li><strong>Baixe.</strong> Clique no botão de download e salve o novo PDF. Abra-o uma vez para confirmar que todas as páginas foram processadas.</li>
+</ol>
+
+<h3>O que cada controle deslizante da ferramenta de escaneamento faz?</h3>
+<p>Cada controle corresponde a uma imperfeição física de um scanner real. Os intervalos e valores padrão abaixo vêm diretamente da ferramenta, então você pode reproduzir qualquer receita deste guia exatamente.</p>
+
+<dl class="spec-list">
+<dt>Rotação (−10° a 10°, padrão 1°)</dt><dd>Inclina todas as páginas no mesmo ângulo, imitando uma folha colocada um pouco fora da borda do vidro do scanner.</dd>
+<dt>Variação da rotação (0 a 10°, padrão 0,5°)</dt><dd>Adiciona uma inclinação extra aleatória por página, para que um documento de várias páginas não pareça perfeitamente uniforme.</dd>
+<dt>Desfoque (0 a 1, padrão 0,3)</dt><dd>Suaviza as bordas do jeito que a óptica do scanner e a compressão JPEG fazem.</dd>
+<dt>Ruído (0 a 1, padrão 0,1)</dt><dd>Adiciona granulado aleatório, como o ruído do sensor e a textura do papel.</dd>
+<dt>Brilho e Contraste (0 a 2, padrão 1)</dt><dd>Aumente o brilho para clarear o papel; aumente o contraste para um visual de fotocópia.</dd>
+<dt>Amarelado (0 a 2, padrão 0)</dt><dd>Aplica um tom sépia quente, de um creme suave a um papel envelhecido, tanto no modo Cinza quanto no Colorido.</dd>
+<dt>Espaço de cor (Cinza ou Colorido, padrão Cinza)</dt><dd>Cinza imita um escaneamento típico de escritório em preto e branco.</dd>
+<dt>Borda (ativada ou desativada, padrão desativada)</dt><dd>Desenha uma moldura escura fina de 1 pixel, como a linha de borda que alguns scanners capturam.</dd>
+<dt>Resolução (1× a 3× em passos de 0,5, padrão 2×)</dt><dd>As páginas do PDF são dispostas a 72 pontos por polegada, então 1× equivale a 72 dpi, 2× a cerca de 144 dpi e 3× a cerca de 216 dpi.</dd>
+</dl>
+
+<p>A base de 72 dpi não é arbitrária. A <a href="https://en.wikipedia.org/wiki/Dots_per_inch" target="_blank" rel="noopener">geometria de página do PDF e do PostScript</a> segue a convenção tipográfica de 72 pontos por polegada, então o multiplicador indica a resolução efetiva de escaneamento de cada imagem de página.</p>
+
+<h3>Extras: marca d'água, carimbo e metadados</h3>
+<p>Além do efeito de scanner, a ferramenta pode colocar uma marca d'água de texto ou imagem, adicionar uma imagem de carimbo ou assinatura com posição horizontal e vertical e tamanho ajustáveis, e editar os campos de metadados do PDF: título, autor, assunto, palavras-chave, produtor e criador. Use uma imagem de assinatura somente se a assinatura for sua.</p>
+
+<h3>Como fazer vários arquivos PDF parecerem escaneados de uma vez</h3>
+<p>Para lotes, abra o <a href="/scan/bulk">escaneamento em lote</a>, adicione todos os seus arquivos, defina o efeito uma vez e baixe tudo em um único arquivo ZIP. Cada arquivo de entrada vira seu próprio PDF escaneado, então dez notas fiscais na entrada geram dez PDFs escaneados na saída.</p>
+
+<div class="callout callout-tip"><strong>Arquivo do Word, Excel ou Google Docs? Exporte para PDF primeiro</strong>A ferramenta lê PDFs exatamente como estão formatados, mas de um DOCX ela extrai só o texto puro e o retipografa em Helvetica 11 pt em páginas A4, descartando fontes, tabelas e imagens. Planilhas viram texto em CSV. Se o layout importa, salve como PDF primeiro (no Google Docs: Arquivo → Fazer o download → Documento PDF), e depois escaneie esse PDF. Os detalhes estão no nosso guia sobre <a href="/blog/make-a-document-look-scanned/">como deixar um documento do Word ou do Google Docs com cara de escaneado</a>.</div>
+
+<h2 id="method-2-chrome-extension">Método 2: fazer um PDF parecer um escaneamento no Chrome</h2>
+<p>A extensão do Chrome Make PDF look scanned coloca o mesmo mecanismo de escaneamento em um painel lateral do navegador, para você fazer um PDF parecer um escaneamento sem abrir uma nova aba. Ela processa os arquivos localmente, lida com vários arquivos de uma vez e baixa todos juntos em um arquivo ZIP.</p>
+
+<p>A extensão é a melhor escolha se você converte documentos toda semana, ou se costuma precisar fazer um arquivo PDF parecer escaneado enquanto trabalha em aplicativos web, como e-mail ou um portal de documentos. O painel lateral fica aberto ao lado da página, então você pode soltar um arquivo, ajustar o efeito e baixar sem perder o lugar onde estava.</p>
+
+<ol class="step-list">
+<li><strong>Instale a extensão.</strong> Abra a <a href="https://chromewebstore.google.com/detail/make-pdf-look-scanned/ijhpnlcipgiokgignkbbbgkobdmdoila" target="_blank" rel="noopener">página da Make PDF look scanned na Chrome Web Store</a>, onde ela tem nota 5 estrelas, e clique em Usar no Chrome.</li>
+<li><strong>Fixe a extensão.</strong> Clique no ícone de quebra-cabeça na barra de ferramentas e fixe a extensão para tê-la a um clique de distância.</li>
+<li><strong>Abra o painel lateral.</strong> Clique no ícone da extensão; o scanner abre em um painel do lado direito da janela do navegador.</li>
+<li><strong>Adicione um ou vários arquivos.</strong> Solte PDFs ou imagens no painel. Os mesmos formatos e controles deslizantes da ferramenta web estão disponíveis.</li>
+<li><strong>Ajuste e baixe.</strong> Defina rotação, desfoque, ruído e espaço de cor, depois baixe um único PDF escaneado ou, para vários arquivos, um ZIP.</li>
+</ol>
+
+<p>Navegadores baseados em Chromium, como o Microsoft Edge, geralmente também conseguem instalar extensões da Chrome Web Store, embora a experiência do painel lateral seja projetada e testada para o Google Chrome. Se você não pode instalar extensões em um computador de trabalho, a <a href="/scan">versão do navegador da ferramenta</a> dá um resultado idêntico sem nada para instalar.</p>
+
+<h2 id="method-3-print-dialog">Método 3: a impressão consegue fazer um PDF parecer escaneado?</h2>
+<p>A caixa de diálogo de impressão do Windows e do macOS consegue fazer um PDF parecer escaneado só parcialmente. O Microsoft Print to PDF e a Pré-Visualização do macOS conseguem converter páginas para escala de cinza ou comprimi-las, mas nenhum dos dois adiciona inclinação, desfoque ou ruído, então o resultado parece um arquivo digital cinza, não um escaneamento.</p>
+
+<p>Se você está pesquisando como fazer um documento PDF parecer escaneado usando só o sistema operacional, esse é o caminho a conhecer.</p>
+
+<p>Ainda assim, o caminho da impressão é mais útil em duas situações: quando você não pode usar nenhuma ferramenta web, e como etapa de preparação. Imprimir um arquivo do Word, do Excel ou uma página web em PDF primeiro preserva o layout, e esse PDF pode então passar por um efeito de scanner completo.</p>
+
+<h3>Windows: Microsoft Print to PDF</h3>
+<p>O Windows inclui uma impressora virtual chamada <a href="https://support.microsoft.com/en-us/office/print-notes-in-onenote-for-windows-10-45edbbc5-fbb8-453f-99c7-aaadebe5c06a" target="_blank" rel="noopener">"Microsoft Print to PDF"</a> que aparece na lista de impressoras de qualquer aplicativo. Abra seu PDF, pressione Ctrl+P, escolha Microsoft Print to PDF, defina a Cor como Preto e branco ou Escala de cinza se o seu visualizador oferecer essa opção, e salve o novo arquivo.</p>
+
+<p>Em alguns visualizadores de PDF também existe uma opção "Imprimir como imagem" nas configurações avançadas de impressão. Ativá-la rasteriza cada página, o que remove o texto selecionável, um dos sinais reveladores de um arquivo nativamente digital. Ainda assim, as páginas continuam perfeitamente retas e perfeitamente limpas.</p>
+
+<h3>macOS: exportar na Pré-Visualização com um Filtro Quartz</h3>
+<p>No Mac, <a href="https://support.apple.com/guide/mac-help/save-a-document-as-a-pdf-on-mac-mchlp1531/mac" target="_blank" rel="noopener">qualquer aplicativo que consiga imprimir consegue salvar um PDF</a> pelo caminho Arquivo → Imprimir → PDF → Salvar como PDF. Para um tom parecido com escaneamento, abra o PDF na Pré-Visualização, escolha Arquivo → Exportar, e selecione um Filtro Quartz como Preto e Branco, Tom de Cinza ou Sépia.</p>
+
+<p>A Apple documenta que <a href="https://support.apple.com/guide/preview/add-effects-to-a-pdf-prvw1510/mac" target="_blank" rel="noopener">os filtros Quartz da Pré-Visualização mudam as cores de um PDF</a>, por exemplo transformando um documento colorido em preto e branco. O filtro Reduzir Tamanho do Arquivo também recomprime as imagens, o que adiciona uma leve suavização JPEG às imagens incorporadas, mas não ao texto.</p>
+
+<h3>Por que a caixa de diálogo de impressão dá só um visual de escaneamento parcial?</h3>
+<p>Uma página realmente escaneada é uma fotografia de papel: está levemente rotacionada, tem bordas suaves, um fundo cinza ou creme e um granulado aleatório. A caixa de diálogo de impressão muda a cor e às vezes rasteriza, mas nunca move nem degrada a página. Compare os resultados lado a lado:</p>
+
+<div class="table-wrap"><table>
+<caption>O que a caixa de diálogo de impressão do sistema consegue e não consegue imitar</caption>
+<thead><tr><th scope="col">Característica de escaneamento</th><th scope="col">Microsoft Print to PDF</th><th scope="col">Filtro Quartz da Pré-Visualização do macOS</th><th scope="col">Ferramenta de escaneamento no navegador</th></tr></thead>
+<tbody>
+<tr><th scope="row">Escala de cinza</th><td>Depende do visualizador</td><td>Sim</td><td>Sim</td></tr>
+<tr><th scope="row">Texto deixa de ser selecionável</th><td>Só com "Imprimir como imagem"</td><td>Não</td><td>Sim</td></tr>
+<tr><th scope="row">Leve inclinação por página</th><td>Não</td><td>Não</td><td>Sim, −10° a 10°</td></tr>
+<tr><th scope="row">Bordas suaves e ruído</th><td>Não</td><td>Não</td><td>Sim</td></tr>
+<tr><th scope="row">Tom do papel</th><td>Não</td><td>Só sépia</td><td>Sim, ajustável</td></tr>
+</tbody></table></div>
+
+<p>A equipe de acessibilidade da James Madison University resume bem esse efeito colateral: <a href="https://www.jmu.edu/accessibility/digital-accessibility/guides/pdf/scanned-documents.shtml" target="_blank" rel="noopener">"Simplesmente imprimir um documento em PDF ou escanear sem reconhecimento de texto ou OCR geralmente resulta em um arquivo baseado em imagem, não acessível."</a> É exatamente por isso que um resultado rasterizado parece um escaneamento, e também por isso que você deve guardar seu original.</p>
+
+<h2 id="method-4-image-editor">Método 4: fazer um PDF parecer que foi escaneado à mão</h2>
+<p>Um editor de imagens rasterizadas permite fazer um PDF parecer que foi escaneado aplicando cada efeito manualmente: exporte as páginas como imagens, rotacione-as levemente, adicione ruído e desfoque, ajuste os níveis, depois remonte um PDF. O método dá controle total sobre cada página, mas leva de 10 a 30 minutos por documento.</p>
+
+<p>Se você quer entender como fazer um PDF parecer que foi escaneado passo a passo, esse é o caminho mais instrutivo, porque você aplica cada efeito você mesmo.</p>
+
+<p>Qualquer editor rasterizado com ferramentas de rotação, ruído, desfoque e níveis serve, grátis ou pago. O fluxo de trabalho é o mesmo em todos eles; só os nomes dos menus mudam. Planeje fazer cada página separadamente, ou grave os passos como uma ação ou macro, se o seu editor tiver esse recurso.</p>
+
+<ol class="step-list">
+<li><strong>Exporte as páginas como imagens.</strong> Use a opção Exportar ou Salvar como imagem do seu visualizador de PDF. Escolha PNG ou JPEG de alta qualidade a 150–300 dpi; 200 dpi é um bom meio-termo para texto.</li>
+<li><strong>Converta para escala de cinza.</strong> A menos que o documento tenha carimbos ou assinaturas coloridas, mude o modo da imagem para escala de cinza primeiro; cada passo seguinte se comporta mais como um scanner real.</li>
+<li><strong>Rotacione de 0,5° a 2°.</strong> Use rotação livre, não os predefinidos de 90°. Use um ângulo diferente em cada página, por exemplo 0,7°, −0,4° e 1,1°, e preencha os cantos que ficarem expostos com branco ou cinza claro.</li>
+<li><strong>Adicione ruído.</strong> Aplique de 2% a 5% de ruído gaussiano monocromático. Acima de cerca de 8% já começa a parecer granulado de filme, não sensor de scanner.</li>
+<li><strong>Adicione um leve desfoque.</strong> Um desfoque gaussiano com raio de 0,3–0,6 pixel a 200 dpi remove as bordas muito nítidas do texto vetorial.</li>
+<li><strong>Ajuste os níveis.</strong> Suba um pouco o ponto de preto para que os pretos virem cinza-escuro, e desça o ponto de branco para que o papel fique levemente cinza ou creme.</li>
+<li><strong>Salve como JPEG.</strong> Qualidade de 75% a 85% adiciona a suave compressão de um escaneamento real sem blocos visíveis.</li>
+<li><strong>Remonte o PDF.</strong> Coloque as imagens de volta em ordem e combine-as em um único PDF, por exemplo na Pré-Visualização do macOS (selecione as páginas → Imprimir → Salvar como PDF) ou no Fotos do Windows (Imprimir → Microsoft Print to PDF).</li>
+</ol>
+
+<p>O esforço vale a pena quando você precisa de algo que os controles deslizantes não oferecem, como uma margem esquerda mais escura, uma sombra ao longo da lombada de um livro ou um vinco desenhado à mão. Para um visual normal de escritório, o resultado é essencialmente o mesmo do Método 1, só que com muito mais cliques.</p>
+
+<h2 id="method-5-phone-photo">Método 5: fazer um PDF parecer um escaneamento com o celular</h2>
+<p>Um escaneamento por celular de um impresso produz o visual mais natural de escaneamento por celular: imprima o PDF, depois capture-o com o scanner de documentos embutido no Notas ou no Arquivos do iPhone, ou em muitos aplicativos de câmera e arquivos do Android. O celular recorta, achata e salva a página como um PDF.</p>
+
+<p>No iPhone e no iPad, a Apple explica que você pode <a href="https://support.apple.com/en-us/108963" target="_blank" rel="noopener">escanear documentos em papel com o app Notas ou Arquivos</a> e arrastar os cantos para ajustar a página antes de manter o escaneamento. Muitos celulares Android oferecem um modo de documento parecido na câmera nativa ou no app de arquivos; os nomes dos menus variam por fabricante.</p>
+
+<ol class="step-list">
+<li><strong>Imprima o PDF.</strong> Papel de escritório comum de 80 g/m² e qualidade de impressão normal são suficientes.</li>
+<li><strong>Use luz suave e uniforme.</strong> A luz do dia vinda de uma janela ou uma luz de teto atrás de você evita a sombra dura da sua mão e do celular.</li>
+<li><strong>Coloque a página sobre uma superfície contrastante.</strong> Uma mesa escura ajuda o scanner a detectar os cantos automaticamente.</li>
+<li><strong>Escaneie cada página.</strong> Mantenha o celular paralelo à folha; aceite o recorte automático ou arraste os cantos você mesmo.</li>
+<li><strong>Escolha o filtro.</strong> Filtros de escala de cinza ou "documento" parecem um escaneamento de escritório; o filtro colorido ou de foto mantém a textura do papel e a variação de iluminação.</li>
+<li><strong>Salve ou compartilhe como PDF.</strong> Todas as páginas acabam em um único PDF de várias páginas.</li>
+</ol>
+
+<p>Se você já tem fotos do celular em vez de um escaneamento pelo celular, nosso guia sobre <a href="/blog/image-to-scanned-pdf/">transformar uma foto do celular ou um JPG em PDF digitalizado</a> cobre o recorte e a combinação de imagens antes de adicionar o efeito de scanner.</p>
+
+<h2 id="method-6-print-and-scan">Método 6: imprimir e escanear o PDF de verdade</h2>
+<p>Imprimir o PDF e passá-lo por um scanner de mesa ou de alimentação de folhas cria um documento realmente escaneado, não uma imitação. Escaneie a 200–300 dpi em escala de cinza para texto, salve como PDF, e espere inclinação genuína, poeira, textura de toner e uma leve perda de contraste.</p>
+
+<p>Como referência, as normas federais dos EUA estabelecem um piso para digitalização séria. O regulamento da NARA (National Archives and Records Administration, o arquivo nacional dos EUA) diz sobre registros textuais modernos: <a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">"Para esses registros, produza arquivos de imagem com no mínimo 300 ppi, no tamanho do documento de origem."</a> A mesma norma tolera cerca de 294 ppi, ou 300 ppi menos 2%.</p>
+
+<p>A Federal Agencies Digital Guidelines Initiative (FADGI, a iniciativa de diretrizes digitais das agências federais dos EUA) classifica documentos soltos em uma escala de estrelas, de cerca de 200 ppi para uma estrela a 400 ppi para quatro estrelas. Escaneamentos comuns de escritório costumam ficar na ponta mais baixa dessa faixa, por isso 200 dpi já parece autêntico para cartas e formulários.</p>
+
+<dl class="spec-list">
+<dt>Resolução</dt><dd>200 dpi para um visual típico de escritório; 300 dpi quando um tribunal ou órgão público exige.</dd>
+<dt>Modo de cor</dt><dd>Escala de cinza para a maioria dos textos; preto e branco (1 bit) para um visual áspero de fax ou copiadora; colorido só se o original tiver cor.</dd>
+<dt>Papel</dt><dd>Papel de escritório comum; papel levemente fora do branco ou reciclado adiciona um tom natural.</dd>
+<dt>Posicionamento</dt><dd>Não alinhe a folha perfeitamente contra a guia do vidro; uma pequena inclinação natural é o objetivo.</dd>
+</dl>
+
+<p>A inclinação acontece por conta própria. A FADGI observa que <a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">"comportamentos de inclinação na imagem capturada muitas vezes podem ser atribuídos à falta de paralelismo entre o plano focal da câmera e o vidro de exposição."</a> O controle de Variação da rotação do Método 1 imita exatamente essa pequena inclinação, diferente de página para página.</p>
+
+<h2 id="recipes">Quais ajustes fazem um PDF parecer um documento escaneado?</h2>
+<p>Os ajustes que fazem um PDF parecer um documento escaneado dependem do tipo de escaneamento que você quer imitar. Cinco receitas cobrem a maioria dos casos: um escaneamento de escritório limpo, uma fotocópia, uma página estilo fax, papel envelhecido e um visual de escaneamento por celular. Todos os valores abaixo funcionam diretamente na ferramenta do navegador.</p>
+
+<p>Se você está se perguntando como fazer um PDF parecer um documento escaneado de um tipo específico, escolha a linha correspondente.</p>
+
+<p>Essas receitas são pontos de partida nossos, ajustados em cartas, notas fiscais e formulários típicos. Trate-as como base: carregue a receita, aumente o zoom da prévia para 100% e mude um controle de cada vez até a página ficar do jeito certo para o seu documento.</p>
+
+<div class="table-wrap"><table>
+<caption>Cinco receitas de visual de escaneamento com valores exatos de controles para a ferramenta Make PDF look scanned</caption>
+<thead><tr><th scope="col">Receita</th><th scope="col">Rotação / variação</th><th scope="col">Desfoque</th><th scope="col">Ruído</th><th scope="col">Brilho / contraste</th><th scope="col">Amarelado</th><th scope="col">Espaço de cor</th><th scope="col">Borda</th><th scope="col">Resolução</th></tr></thead>
+<tbody>
+<tr><th scope="row">Escaneamento de escritório</th><td>0,5° / 0,5°</td><td>0,2</td><td>0,1</td><td>1,05 / 1,1</td><td>0</td><td>Cinza</td><td>Desativada</td><td>2×</td></tr>
+<tr><th scope="row">Fotocópia</th><td>1° / 1°</td><td>0,3</td><td>0,25</td><td>1,1 / 1,4</td><td>0</td><td>Cinza</td><td>Ativada</td><td>2×</td></tr>
+<tr><th scope="row">Estilo fax</th><td>1,5° / 1°</td><td>0,5</td><td>0,35</td><td>1,15 / 1,6</td><td>0</td><td>Cinza</td><td>Ativada</td><td>1,5×</td></tr>
+<tr><th scope="row">Papel envelhecido</th><td>1° / 1,5°</td><td>0,3</td><td>0,2</td><td>0,95 / 1,1</td><td>0,6</td><td>Colorido</td><td>Desativada</td><td>2×</td></tr>
+<tr><th scope="row">Visual de escaneamento por celular</th><td>2° / 1,5°</td><td>0,4</td><td>0,15</td><td>1,05 / 1,2</td><td>0,2</td><td>Colorido</td><td>Desativada</td><td>2×</td></tr>
+</tbody></table></div>
+
+<h3>Escaneamento de escritório: o padrão seguro</h3>
+<p>A receita de escritório é a que você usa quando um formulário simplesmente pede para "enviar uma cópia digitalizada". O ruído baixo e a inclinação de meio grau parecem um scanner de escritório bem cuidado; o leve aumento de contraste mantém a letra pequena legível. A 2× a imagem da página fica com cerca de 144 dpi, o suficiente para uma leitura confortável na tela.</p>
+
+<h3>Visuais de fotocópia e estilo fax</h3>
+<p>Fotocópias parecem mais ásperas: o contraste mais alto esmaga os tons de cinza em preto e branco, e a linha de borda imita a margem escura que muitas copiadoras deixam. A receita estilo fax vai mais longe, com mais ruído e o ajuste de 1,5×, cerca de 108 dpi, perto da resolução vertical de aproximadamente 100 linhas por polegada de um <a href="https://en.wikipedia.org/wiki/Fax" target="_blank" rel="noopener">fax padrão Grupo 3</a>.</p>
+
+<h3>Visuais de papel envelhecido e escaneamento por celular</h3>
+<p>Para papel envelhecido, mude para Colorido e aumente o Amarelado para cerca de 0,6 enquanto baixa um pouco o brilho; a página ganha um tom creme quente. A receita de escaneamento por celular usa uma inclinação maior, de 2°, e um toque de calor, como uma página fotografada sob luz interna. Para mais predefinições, veja nosso <a href="/blog/scan-effect/">guia de efeito de scanner</a>.</p>
+
+<div class="callout callout-tip"><strong>Mantenha a letra pequena legível</strong>Se um documento tiver notas de rodapé ou texto abaixo de 9 pt, fique com Desfoque 0,3 ou menos e use resolução 2,5× ou 3×. Desfoque e ruído prejudicam primeiro a letra pequena, e um escaneamento ilegível não cumpre o objetivo.</div>
+
+<h2 id="check-the-result">Como conferir se o PDF parece escaneado?</h2>
+<p>Para conferir se um PDF parece escaneado, abra-o com 100% de zoom e verifique cinco coisas: o texto não pode ser selecionado, as páginas ficam em ângulos levemente diferentes, as bordas são suaves em vez de perfeitamente nítidas, o fundo não é branco puro e as propriedades do arquivo não citam mais um editor de texto.</p>
+
+<p>Escaneamentos reais contêm defeitos que arquivistas tentam remover. O regulamento da NARA define um deles claramente: <a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">"Ruído é um ou mais artefatos indesejáveis de imagem em um registro digitalizado que não fazem parte do material de origem."</a> Um visual de escaneamento convincente precisa de uma quantidade pequena e controlada desse ruído, nem zero, nem muito.</p>
+
+<ol>
+<li><strong>Tente selecionar o texto.</strong> Pressione Ctrl+A ou Cmd+A no seu visualizador de PDF. Em um PDF com cara de escaneado, nada é destacado, porque cada página é uma imagem.</li>
+<li><strong>Procure uma palavra.</strong> Ctrl+F ou Cmd+F não deve encontrar nada, a menos que um OCR tenha sido adicionado de propósito.</li>
+<li><strong>Compare os ângulos das páginas.</strong> Percorra várias páginas; com a variação da rotação ativada, cada uma deve inclinar um pouco diferente.</li>
+<li><strong>Aumente o zoom para 200%.</strong> As bordas das letras devem parecer levemente suaves, com um granulado sutil, e não como contornos vetoriais nítidos.</li>
+<li><strong>Observe as margens.</strong> O papel deve ser cinza bem claro ou creme, em vez de branco puro.</li>
+<li><strong>Abra as Propriedades do documento.</strong> Confira os campos Produtor e Criador; a ferramenta permite editar título, autor, assunto, palavras-chave, produtor e criador.</li>
+<li><strong>Confira o tamanho do arquivo.</strong> Um PDF com cara de escaneado é maior que o original, muitas vezes várias vezes maior, porque armazena imagens em vez de texto.</li>
+<li><strong>Imprima uma página.</strong> Se o impresso ficar legível a uma distância de braço, os ajustes estão bons para qualquer portal de upload.</li>
+</ol>
+
+<p>O tamanho do arquivo importa para uploads. Como estimativa aproximada, uma página de texto a 2× em escala de cinza costuma ficar na casa de algumas centenas de kilobytes, enquanto 3× em cores pode ser várias vezes maior. Se um portal tiver um limite, reduza a resolução para 1,5× ou mude para Cinza. Nosso guia sobre <a href="/blog/pdf-to-scanned-pdf/">converter um PDF em PDF digitalizado</a> cobre em detalhes as trocas entre DPI e tamanho.</p>
+
+<h2 id="common-mistakes">Por que um PDF escaneado falso ainda parece falso?</h2>
+<p>Um PDF escaneado falso geralmente parece falso porque um efeito está exagerado ou um sinal de arquivo digital sobrevive: todas as páginas inclinadas de forma idêntica, desfoque pesado, ruído grosseiro, um fundo branco puro ou texto selecionável. Corrigir esses cinco erros resolve a maioria dos casos de solução de problemas que vemos.</p>
+
+<div class="table-wrap"><table>
+<caption>Solucionando problemas de um PDF com cara de escaneado: sintomas, causas e correções</caption>
+<thead><tr><th scope="col">Sintoma</th><th scope="col">Causa provável</th><th scope="col">Correção</th></tr></thead>
+<tbody>
+<tr><th scope="row">Todas as páginas inclinam para o mesmo lado</th><td>Variação da rotação definida como 0</td><td>Defina a variação entre 0,5° e 1,5°</td></tr>
+<tr><th scope="row">A página parece torta, não escaneada</th><td>Rotação acima de 3°</td><td>Fique entre 0,5° e 2°</td></tr>
+<tr><th scope="row">O texto está borrado ou difícil de ler</th><td>Desfoque acima de 0,5 ou resolução 1×</td><td>Desfoque 0,2–0,3, resolução 2× ou mais</td></tr>
+<tr><th scope="row">A página parece granulado de filme</th><td>Ruído acima de 0,4</td><td>Ruído 0,1–0,25</td></tr>
+<tr><th scope="row">A página ainda parece digital</th><td>Papel branco puro, bordas nítidas</td><td>Brilho 0,95–1,05, Amarelado 0,1–0,3, Desfoque 0,2+</td></tr>
+<tr><th scope="row">O layout de um arquivo do Word quebrou</th><td>DOCX enviado diretamente</td><td>Exporte para PDF primeiro, depois escaneie</td></tr>
+<tr><th scope="row">Arquivo grande demais para enviar</th><td>Resolução 3× em Colorido</td><td>Use Cinza e 1,5×–2×</td></tr>
+<tr><th scope="row">Várias fotos viraram vários PDFs</th><td>Uma imagem equivale a um PDF</td><td>Combine as imagens em um único PDF primeiro</td></tr>
+</tbody></table></div>
+
+<p>Dois outros detalhes denunciam um arquivo nativamente digital. O primeiro é um logotipo colorido em uma página que, fora isso, é cinza, o que acontece quando só parte de um documento foi convertida; processe o arquivo inteiro com os mesmos ajustes. O segundo é o metadado: um campo Criador citando um editor de texto. Edite-o na ferramenta antes de baixar.</p>
+
+<p>Também não exagere na direção oposta. A rotação, como a FADGI coloca, <a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">"é introduzida na captura por um alinhamento inadequado do conteúdo no momento da captura"</a>, e uma pessoa alimentando um scanner raramente desalinha uma folha em mais de um ou dois graus. Ângulos grandes parecem forçados.</p>
+
+<h3>A ferramenta adiciona vincos, manchas ou sombras?</h3>
+<p>Não. A ferramenta imita inclinação, desfoque, ruído, tom, contraste e uma linha de borda; ela não adiciona vincos, dobras, manchas de café, sombras nas bordas ou distorção de perspectiva, e não roda OCR. Se você precisar desses traços físicos, imprima a página e use o Método 5 ou o Método 6, ou pinte-os em um editor rasterizado (Método 4).</p>
+
+<h2 id="when-not-to">Quando você não deve fazer um PDF parecer escaneado?</h2>
+<p>Você não deve fazer um PDF parecer escaneado quando o destinatário precisa de texto pesquisável, quando as regras pedem um PDF baseado em texto, ou quando o visual de escaneamento distorceria a origem de um documento. Tribunais, normas de acessibilidade e muitos órgãos públicos preferem PDFs nativamente digitais a imagens de texto.</p>
+
+<p>Os tribunais federais são explícitos. O Distrito Norte da Califórnia orienta: <a href="https://cand.uscourts.gov/cases-e-filing/cmecf-information/preparing-your-cmecf-filing" target="_blank" rel="noopener">"Somente documentos que não podem ser convertidos diretamente em PDF devem ser escaneados."</a> O Distrito de Massachusetts acrescenta que <a href="https://www.mad.uscourts.gov/caseinfo/pdf/ECFadminProc.pdf" target="_blank" rel="noopener">"Documentos PDF escaneados geralmente não são pesquisáveis e têm um tamanho de arquivo maior."</a></p>
+
+<p>A acessibilidade é o outro motivo. A técnica PDF7 do WCAG (Web Content Accessibility Guidelines, as diretrizes de acessibilidade de conteúdo web) do W3C afirma que <a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF7" target="_blank" rel="noopener">"Um documento composto por imagens escaneadas de texto é inerentemente inacessível, porque o conteúdo do documento são imagens, não texto pesquisável."</a> Usuários de leitores de tela não conseguem ler um PDF com efeito de scanner, a menos que um OCR seja adicionado depois.</p>
+
+<div class="callout callout-warn"><strong>Use a aparência de escaneado com honestidade</strong>Um efeito de scanner muda a aparência de um arquivo, não a sua autenticidade. Não use isso para forjar ou alterar documentos oficiais, identidades, certificados ou assinaturas que não sejam suas. Quando um tribunal, empregador ou órgão público pede um formato específico, siga as regras dele; alguns exigem PDFs pesquisáveis e vão rejeitar imagens de texto.</div>
+
+<p>Bons motivos para fazer um PDF parecer escaneado incluem combinar com o estilo de um arquivo baseado em papel, preparar uma maquete de design ou um exemplo de treinamento, testar um software de processamento de documentos com uma entrada realista, ou atender a um formulário que insiste em um "escaneamento" quando você só tem o seu próprio original digital.</p>
+
+<div class="expert-quote"><blockquote>Criamos a ferramenta porque as pessoas ficavam imprimindo um PDF só para escaneá-lo de volta. Os ajustes que parecem reais são pequenos: uma inclinação de um grau ou menos, ruído perto de 0,1 e um desfoque leve. A maioria dos resultados que parecem falsos vem de aumentar todos os controles ao mesmo tempo. E processamos os arquivos localmente de propósito: os documentos que as pessoas escaneiam costumam ser privados.</blockquote><cite><strong>Equipe Make PDF look scanned</strong> — criadores da ferramenta web e da extensão do Chrome</cite></div>
+
+<h2 id="faq">Fazer um PDF parecer escaneado: perguntas frequentes</h2>
+<p>Estas são as perguntas que as pessoas mais fazem quando querem fazer um PDF parecer escaneado, de privacidade e custo a arquivos do Word, assinaturas e tamanho do arquivo. Cada resposta é curta e independente; as seções acima explicam os métodos e ajustes com mais profundidade.</p>
+
+<p>Estas respostas cobrem as perguntas que as pessoas mais fazem quando querem fazer um PDF parecer que foi escaneado: qual método escolher, se o resultado é privado, como manter a letra pequena legível, e como fazer o PDF parecer um escaneamento no celular, para um formulário ou para um arquivo.</p>
+
+<div class="faq-item"><p class="faq-q">Como faço um PDF parecer que foi escaneado de graça?</p><p class="faq-a">Abra <a href="/scan">a ferramenta gratuita de escaneamento</a>, solte seu PDF, mantenha os ajustes padrão ou escolha uma receita, e baixe o resultado. Não custa nada, não precisa de conta e funciona em qualquer navegador moderno, inclusive no celular.</p></div>
+
+<div class="faq-item"><p class="faq-q">É seguro enviar um PDF privado para uma ferramenta de efeito de scanner?</p><p class="faq-a">Com a ferramenta Make PDF look scanned você não faz upload: as páginas são renderizadas e processadas localmente no seu navegador com PDF.js e canvas. O arquivo não é enviado para nenhum servidor de processamento, e a ferramenta continua funcionando offline depois do primeiro carregamento.</p></div>
+
+<div class="faq-item"><p class="faq-q">Como faço meu PDF parecer um documento escaneado sem um scanner?</p><p class="faq-a">Use o Método 1 ou o Método 2: os dois simulam um scanner por software, rotacionando, desfocando e adicionando ruído a cada página. Se você quer artefatos genuínos sem um scanner, imprima a página e use o scanner de documentos embutido no celular (Método 5).</p></div>
+
+<div class="faq-item"><p class="faq-q">Como faço um documento do Word parecer escaneado?</p><p class="faq-a">Salve o arquivo do Word como PDF primeiro (Arquivo → Salvar como → PDF), depois aplique o efeito de scanner no PDF. Enviar um DOCX diretamente mantém só o texto puro em Helvetica 11 pt em páginas A4, então fontes, tabelas e imagens se perdem.</p></div>
+
+<div class="faq-item"><p class="faq-q">Qual dpi um PDF com cara de escaneado deve ter?</p><p class="faq-a">Cerca de 150–200 dpi parece um escaneamento de escritório típico. Na ferramenta, 2× equivale a aproximadamente 144 dpi e 3× a aproximadamente 216 dpi. Tribunais e arquivos costumam pedir 300 dpi em escaneamentos reais, o que você só consegue igualar com um scanner físico.</p></div>
+
+<div class="faq-item"><p class="faq-q">Posso fazer vários PDFs parecerem escaneados de uma vez?</p><p class="faq-a">Sim. A <a href="/scan/bulk">página de escaneamento em lote</a> e a extensão do Chrome aceitam vários arquivos, aplicam os mesmos ajustes a todos eles e baixam os resultados como um único ZIP. Cada arquivo de entrada vira seu próprio PDF escaneado.</p></div>
+
+<div class="faq-item"><p class="faq-q">O texto continuará pesquisável depois do efeito de scanner?</p><p class="faq-a">Não. Cada página é salva como uma imagem JPEG dentro do novo PDF, então o texto não pode ser selecionado nem pesquisado. Se você precisar de texto pesquisável, rode um OCR no resultado com outro software, ou guarde o PDF original.</p></div>
+
+<div class="faq-item"><p class="faq-q">Posso adicionar uma assinatura ou carimbo ao PDF com cara de escaneado?</p><p class="faq-a">Sim. A ferramenta pode colocar uma imagem de carimbo ou assinatura, com posição e tamanho ajustáveis, antes de aplicar o efeito de scanner, para que ela se misture à página. Adicione só uma assinatura que seja sua ou que você esteja autorizado a usar.</p></div>
+
+<div class="faq-item"><p class="faq-q">Por que meu PDF com cara de escaneado parece falso?</p><p class="faq-a">Geralmente porque a inclinação está grande demais, todas as páginas inclinam de forma idêntica, ou o desfoque e o ruído estão fortes demais. Mantenha a Rotação entre 0,5° e 2°, ative a Variação da rotação, e mantenha o Desfoque perto de 0,3 e o Ruído perto de 0,1–0,25.</p></div>
+
+<div class="faq-item"><p class="faq-q">Posso fazer um PDF parecer escaneado no iPhone ou Android?</p><p class="faq-a">Sim. O site funciona em navegadores de celular, então você pode abrir a ferramenta no celular, escolher um PDF nos Arquivos e baixar o resultado. Outra opção é imprimir o documento e capturá-lo com o scanner de documentos embutido do celular.</p></div>
+
+<div class="faq-item"><p class="faq-q">O efeito de scanner deixa o arquivo maior?</p><p class="faq-a">Geralmente sim, porque as páginas são armazenadas como imagens em vez de texto. Cinza a 1,5× ou 2× mantém os arquivos menores; Colorido a 3× é o maior. Reduza a resolução se um portal de upload tiver um limite de tamanho.</p></div>
+
+<div class="faq-item"><p class="faq-q">É legal fazer um PDF parecer escaneado?</p><p class="faq-a">Mudar a aparência do seu próprio documento geralmente não é problema. O que importa é o uso: apresentar um documento alterado ou forjado como genuíno pode ser ilegal. Quando um tribunal ou órgão público define regras de arquivo, siga-as; muitos preferem PDFs pesquisáveis.</p></div>
+
+<h2 id="verdict">Qual método para fazer um PDF parecer escaneado você deve escolher?</h2>
+<p>Para a maioria das pessoas, o melhor método para fazer um PDF parecer escaneado é a ferramenta gratuita no navegador: menos de um minuto, processamento local e controle exato sobre inclinação, desfoque e ruído. Escolha a extensão do Chrome para lotes frequentes, e um scanner de verdade só quando um escaneamento real for exigido.</p>
+
+<p>Escolha a caixa de diálogo de impressão só quando precisar de uma versão rápida em escala de cinza, o editor de imagens quando quiser um efeito personalizado, como uma sombra de lombada, e o caminho do celular quando um visual genuíno de escaneamento por celular importar mais que a velocidade. Para saber como as pessoas percebem a diferença, leia <a href="/blog/what-is-a-scanned-pdf/">o que é um PDF escaneado e como identificar</a>, depois <a href="/scan">abra o scanner</a> e experimente a receita de escritório no seu arquivo.</p>

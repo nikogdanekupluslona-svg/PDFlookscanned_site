@@ -1,0 +1,212 @@
+{
+  "base": {
+    "title": "Make PDF look scanned",
+    "description": "きれいなデジタルファイルを本物のスキャンのように加工。紙の質感、ノイズ、傾きをブラウザ内でローカル処理します。",
+    "scanTitle": "スキャン",
+    "bulkTitle": "一括スキャン",
+    "serviceWorker": {
+      "offlineReady": "オフラインで使えるようになりました",
+      "needRefresh": "新しいバージョンがあります。クリックして更新してください。"
+    },
+    "nav": {
+      "home": "ホーム",
+      "scan": "スキャン",
+      "bulk": "一括スキャン",
+      "guides": "ガイド"
+    },
+    "chrome": {
+      "label": "Chrome拡張機能",
+      "free": "無料"
+    },
+    "landing": {
+      "headline": "PDFをスキャン風に変換",
+      "subhead": "PDF、画像、Word・Excelファイルに、ぼかし・ノイズ・傾き・透かし・スタンプを加えて、本物らしいスキャン風コピーに変換。すべてブラウザ上で完結し、元のファイルは端末の外に出ません。",
+      "cta": "スキャン風PDFに変換",
+      "note": "無料・登録不要・ファイルは端末内で処理",
+      "points": {
+        "formats": "PDF、画像、主なOffice形式に対応",
+        "local": "ローカル処理・元のファイルは手元に",
+        "free": "スキャンは無料・登録不要",
+        "preview": "リアルタイムプレビュー・見たままを書き出し"
+      },
+      "stepsTitle": "3ステップでスキャン風PDFに",
+      "step1Title": "ファイルを選ぶ",
+      "step1Body": "PDF、画像、Word・Excel文書をドロップします。ファイルはブラウザ内にとどまります。",
+      "step2Title": "スキャン効果を調整",
+      "step2Body": "ぼかし、ノイズ、傾き、紙の色味、透かし、スタンプをライブプレビューで確認しながら調整できます。",
+      "step3Title": "PDFを書き出す",
+      "step3Body": "スキャン風PDFが数秒で作成され、すぐにダウンロードされます。",
+      "featuresTitle": "主な機能",
+      "footer": "書類をブラウザ上でスキャン風に。処理のためにアップロードされるものはありません。"
+    },
+    "language": "言語",
+    "seo": {
+      "homeTitle": "PDFをスキャン風に無料変換｜登録・アップロード不要",
+      "homeDescription": "PDFをスキャンしたように見せる無料ツール。ノイズ、ぼかし、わずかな傾き、紙の黄ばみを加えてスキャン風PDFに変換します。登録不要で、ファイルはブラウザの外に出ません。画像やWordにも対応。"
+    }
+  },
+  "features": {
+    "privacy": {
+      "title": "端末内で安全に処理",
+      "description": "ファイルはこのブラウザ内で処理されます。処理用サーバーへのアップロードや、クラウドへの保存は行いません。"
+    },
+    "speed": {
+      "title": "すばやく変換",
+      "description": "PDF、画像、Office文書を数秒でスキャン風PDFに。プリンターもスキャナーも必要ありません。"
+    },
+    "customization": {
+      "title": "スキャン効果",
+      "description": "ぼかし、ノイズ、回転、明るさ、コントラスト、紙の色味をライブプレビューで細かく調整。見たままの仕上がりで書き出せます。"
+    },
+    "openSource": {
+      "title": "Chrome拡張機能",
+      "description": "同じスキャンエンジンを無料のChrome拡張機能でも利用でき、サイドパネルからPDFを処理できます。",
+      "github": "Chrome ウェブストア",
+      "scanyourpdf": "Chrome拡張機能"
+    },
+    "mobileFriendly": {
+      "title": "スマホでも使える",
+      "description": "変換ツールは最新のモバイルブラウザで動作します。ウェブサイト版はインストール不要です。"
+    },
+    "offlineUse": {
+      "title": "オフラインでも使える",
+      "description": "アプリのリソースがキャッシュされたあとは、通常のスキャン処理をネット接続なしで行えます。"
+    }
+  },
+  "actions": {
+    "navigateToScan": "スキャンを始める",
+    "navigateToHomePage": "ホーム",
+    "navigateToSupportMe": "Chrome拡張機能",
+    "backToIndex": "戻る",
+    "preview": "プレビュー",
+    "save": "保存",
+    "generateScannedPDF": "スキャン風PDFを作成",
+    "generating": "作成中…",
+    "downloadScannedPDF": "スキャン風PDFをダウンロード",
+    "generateSuccess": "作成しました",
+    "generateError": "作成に失敗しました：",
+    "addFiles": "ファイルを追加",
+    "processAll": "スキャン風PDFを一括作成",
+    "downloadZip": "ZIPで一括ダウンロード",
+    "converting": "ファイルを準備中…",
+    "queued": "待機中",
+    "done": "完了",
+    "failed": "失敗"
+  },
+  "settings": {
+    "settings": "スキャン設定",
+    "attenuate": "ノイズ",
+    "noise": "ノイズ",
+    "blur": "ぼかし",
+    "border": {
+      "label": "枠線",
+      "true": "あり",
+      "false": "なし"
+    },
+    "colorspace": {
+      "label": "カラーモード",
+      "colorful": "カラー",
+      "grayscale": "グレー"
+    },
+    "rotate": "回転",
+    "rotateVariance": "回転のばらつき",
+    "pdfSelectLabel": "ファイルを選択するか、ここにドロップ",
+    "pdfNoSelectMessage": "ファイルが選択されていません",
+    "supportedHint": "PDF, JPG, PNG, WebP, SVG, DOCX, XLSX, CSV, TXT, MD, HTML",
+    "scale": "解像度",
+    "yellowish": "黄ばみ",
+    "brightness": "明るさ",
+    "contrast": "コントラスト",
+    "extras": {
+      "watermark": "透かし",
+      "watermarkText": "透かしのテキスト",
+      "watermarkImage": "透かしの画像",
+      "stamp": "スタンプ・署名",
+      "stampImage": "スタンプ・署名を追加",
+      "stampX": "横位置",
+      "stampY": "縦位置",
+      "stampScale": "サイズ",
+      "metadata": "PDFメタデータ",
+      "title": "タイトル",
+      "author": "作成者",
+      "subject": "件名",
+      "keywords": "キーワード",
+      "producer": "PDF変換ソフト",
+      "creator": "作成アプリケーション",
+      "clearImage": "削除"
+    }
+  },
+  "status": {
+    "notStarted": "未開始",
+    "error": "エラー：{error}",
+    "finished": "完了",
+    "processsing": {
+      "default": "処理中",
+      "combine": "PDFページを結合中",
+      "progress": "PDFページを処理中：{current}/{total}"
+    }
+  },
+  "upload": {
+    "dropTitle": "ここにファイルをドロップ",
+    "dropTitleMany": "ここにファイルをまとめてドロップ",
+    "or": "または",
+    "choose": "ファイルを選択",
+    "chooseMany": "ファイルを選択",
+    "replace": "別のファイルを選択",
+    "addMore": "ファイルを追加",
+    "privacy": "ブラウザ内で処理・アップロードは一切なし",
+    "dropOverlay": "ドロップして読み込み",
+    "dropOverlayMany": "ドロップして追加",
+    "unsupported": "このファイル形式には対応していません：{name}",
+    "readError": "{name}を開けませんでした：{error}",
+    "ready": "読み込み完了",
+    "pages": "{n}ページ | {n}ページ",
+    "sampleBanner": "これはサンプル文書です。ステップ1でご自身のファイルをアップロードしてください。複数のファイルをまとめて追加できます。"
+  },
+  "save": {
+    "create": "スキャン風PDFを作成 | スキャン風PDFを{n}件作成",
+    "readyTitle": "スキャン風PDFができました | {n}件のスキャン風PDFができました",
+    "progress": "{current}/{total}ページ",
+    "fileProgress": "{current}/{total}件目",
+    "autoHint": "スキャン風PDFは完成すると自動でダウンロードされます。 | {n}件のファイルをすべてスキャンし、1つのZIPとして自動でダウンロードします。",
+    "noFileHint": "ステップ1でファイルをアップロードすると開始できます。",
+    "busyHint": "このタブは開いたままにしてください。スキャンが終わるとダウンロードが自動で始まります。",
+    "downloadAgain": "もう一度ダウンロード",
+    "downloadStarted": "完了しました。ダウンロードが始まりました",
+    "whereSaved": "「ダウンロード」フォルダを確認してください。",
+    "zipHint": "1件だけ保存したい場合は、ステップ1で各ファイルの横にあるダウンロードアイコンを使ってください。",
+    "someFailed": "{n}件のファイルをスキャンできませんでした | {n}件のファイルをスキャンできませんでした"
+  },
+  "files": {
+    "preview": "プレビューに表示",
+    "previewOf": "プレビュー：{name}",
+    "downloadOne": "このスキャン風PDFをダウンロード",
+    "remove": "ファイルを削除",
+    "hint": "ファイルをクリックするとプレビューできます。すべてのファイルに同じ設定が適用されます。",
+    "openError": "このファイルを開けませんでした",
+    "status": {
+      "loading": "準備中…",
+      "ready": "準備完了",
+      "processing": "スキャン中…",
+      "done": "スキャン済み"
+    }
+  },
+  "steps": {
+    "upload": "アップロード",
+    "adjust": "調整",
+    "download": "ダウンロード",
+    "uploadTitle": "ファイルをアップロード",
+    "adjustTitle": "スキャンの見た目を調整",
+    "downloadTitle": "スキャン風PDFを保存"
+  },
+  "preview": {
+    "original": "元のファイル",
+    "scanned": "スキャン風プレビュー"
+  },
+  "errors": {
+    "wordNoText": "このWordファイルには読み取れるテキストがありません",
+    "sheetEmpty": "このスプレッドシートは空です",
+    "htmlNoText": "このHTMLファイルには読み取れるテキストがありません",
+    "unsupportedType": "このファイル形式にはまだ対応していません"
+  }
+}

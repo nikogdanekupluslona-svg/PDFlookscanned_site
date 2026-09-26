@@ -7,7 +7,7 @@
         </div>
         <h1>{{ t('base.landing.headline') }}</h1>
         <p class="subhead">{{ t('base.landing.subhead') }}</p>
-        <RouterLink class="cta" to="/scan">{{ t('base.landing.cta') }}</RouterLink>
+        <RouterLink class="cta" :to="localePath('/scan')">{{ t('base.landing.cta') }}</RouterLink>
         <p class="note">{{ t('base.landing.note') }}</p>
       </div>
     </section>
@@ -52,25 +52,22 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useHead } from '@unhead/vue'
 import { useI18n } from 'vue-i18n'
+import { useLanguage } from '@/composables/use-language'
 import ScannerSvg from '@/components/Misc/ScannerSvg.vue'
 import TheFeatures from '@/components/Features/TheFeatures.vue'
 import HomeGuide from '@/components/home/HomeGuide.vue'
 
 const { t } = useI18n()
+const { localePath } = useLanguage()
 
-// Search snippet for the home page (English market); must match index.html
+// Search snippet of the home page; the static copy in index.html is written per language by vite.config.ts
 useHead({
-  title: 'Make PDF Look Scanned Online — Free, Private, No Upload',
-  meta: [
-    {
-      name: 'description',
-      content:
-        'Make PDF look scanned: add grain, blur, a slight tilt and an aged paper tone. Free, no signup — your file never leaves the browser. Works with images and Word.'
-    }
-  ]
+  title: computed(() => t('base.seo.homeTitle')),
+  meta: [{ name: 'description', content: computed(() => t('base.seo.homeDescription')) }]
 })
 </script>
 

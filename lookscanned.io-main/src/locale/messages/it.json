@@ -1,0 +1,212 @@
+{
+  "base": {
+    "title": "Make PDF look scanned",
+    "description": "Fai sembrare un file digitale una vera scansione: texture della carta, rumore, rotazione e ombre, con elaborazione locale nel tuo browser.",
+    "scanTitle": "Scansiona",
+    "bulkTitle": "Scansione multipla",
+    "serviceWorker": {
+      "offlineReady": "App pronta per funzionare offline",
+      "needRefresh": "Nuova versione disponibile, fai clic per aggiornare."
+    },
+    "nav": {
+      "home": "Home",
+      "scan": "Scansiona",
+      "bulk": "Scansione multipla",
+      "guides": "Guide"
+    },
+    "chrome": {
+      "label": "Estensione Chrome",
+      "free": "GRATIS"
+    },
+    "landing": {
+      "headline": "Far sembrare un PDF scansionato",
+      "subhead": "Trasforma PDF, immagini, file Word ed Excel in copie scansionate realistiche con sfocatura, rumore, rotazione, filigrane e timbri, direttamente nel browser. I file originali restano sul tuo dispositivo.",
+      "cta": "Converti in PDF scansionato",
+      "note": "Gratis · Senza registrazione · I file restano sul tuo dispositivo",
+      "points": {
+        "formats": "PDF, immagini e formati Office di base",
+        "local": "Elaborazione locale · I file originali restano dove sono",
+        "free": "Scansione gratuita · Senza registrazione",
+        "preview": "Anteprima in tempo reale · Esporti esattamente ciò che vedi"
+      },
+      "stepsTitle": "Tre passaggi per un PDF scansionato",
+      "step1Title": "Scegli un file",
+      "step1Body": "Trascina un PDF, un'immagine o un documento Word o Excel. Il file resta nel tuo browser.",
+      "step2Title": "Regola l'effetto scansione",
+      "step2Body": "Sfocatura, rumore, rotazione, tono della carta, filigrane e timbri, con anteprima dal vivo.",
+      "step3Title": "Esporta il PDF",
+      "step3Body": "Il PDF scansionato viene generato in pochi secondi e si scarica subito.",
+      "featuresTitle": "Funzionalità principali",
+      "footer": "Trasforma i documenti in scansioni nel browser. Nulla viene caricato per l'elaborazione."
+    },
+    "language": "Lingua",
+    "seo": {
+      "homeTitle": "Far sembrare un PDF scansionato online: gratis e privato",
+      "homeDescription": "Fai sembrare un PDF scansionato: grana, sfocatura, lieve inclinazione e carta ingiallita. Gratis, senza registrazione e senza upload. Anche per foto e Word."
+    }
+  },
+  "features": {
+    "privacy": {
+      "title": "Elaborazione privata e locale",
+      "description": "I tuoi file vengono elaborati in questo browser. Non vengono caricati su un server di elaborazione né salvati nel cloud."
+    },
+    "speed": {
+      "title": "Conversione rapida",
+      "description": "Trasforma PDF, immagini e documenti Office in PDF dall'aspetto scansionato in pochi secondi, senza stampante né scanner."
+    },
+    "customization": {
+      "title": "Effetti scansione",
+      "description": "Regola sfocatura, rumore, rotazione, luminosità, contrasto e tono della carta con l'anteprima dal vivo. Esporti esattamente ciò che vedi."
+    },
+    "openSource": {
+      "title": "Estensione Chrome",
+      "description": "Lo stesso motore di scansione è disponibile anche come estensione Chrome gratuita, per elaborare i PDF dal pannello laterale.",
+      "github": "Chrome Web Store",
+      "scanyourpdf": "Estensione Chrome"
+    },
+    "mobileFriendly": {
+      "title": "Funziona su smartphone",
+      "description": "Il convertitore funziona nei browser mobili moderni. Il sito web non richiede alcuna installazione."
+    },
+    "offlineUse": {
+      "title": "Funziona offline",
+      "description": "Dopo che le risorse dell'app sono state salvate nella cache, la scansione standard continua a funzionare senza connessione."
+    }
+  },
+  "actions": {
+    "navigateToScan": "Inizia la scansione",
+    "navigateToHomePage": "Home",
+    "navigateToSupportMe": "Estensione Chrome",
+    "backToIndex": "Indietro",
+    "preview": "Anteprima",
+    "save": "Salva",
+    "generateScannedPDF": "Genera PDF scansionato",
+    "generating": "Generazione in corso...",
+    "downloadScannedPDF": "Scarica PDF scansionato",
+    "generateSuccess": "Generato correttamente",
+    "generateError": "Generazione non riuscita: ",
+    "addFiles": "Aggiungi file",
+    "processAll": "Genera PDF scansionati",
+    "downloadZip": "Scarica tutto come ZIP",
+    "converting": "Preparazione del file…",
+    "queued": "In coda",
+    "done": "Completato",
+    "failed": "Non riuscito"
+  },
+  "settings": {
+    "settings": "Impostazioni di scansione",
+    "attenuate": "Rumore",
+    "noise": "Rumore",
+    "blur": "Sfocatura",
+    "border": {
+      "label": "Bordo",
+      "true": "Sì",
+      "false": "No"
+    },
+    "colorspace": {
+      "label": "Spazio colore",
+      "colorful": "A colori",
+      "grayscale": "Scala di grigi"
+    },
+    "rotate": "Rotazione",
+    "rotateVariance": "Variazione rotazione",
+    "pdfSelectLabel": "Seleziona o trascina qui il tuo file",
+    "pdfNoSelectMessage": "Nessun file selezionato",
+    "supportedHint": "PDF, JPG, PNG, WebP, SVG, DOCX, XLSX, CSV, TXT, MD, HTML",
+    "scale": "Risoluzione",
+    "yellowish": "Ingiallimento",
+    "brightness": "Luminosità",
+    "contrast": "Contrasto",
+    "extras": {
+      "watermark": "Filigrana",
+      "watermarkText": "Testo della filigrana",
+      "watermarkImage": "Immagine della filigrana",
+      "stamp": "Timbro o firma",
+      "stampImage": "Aggiungi timbro o firma",
+      "stampX": "Posizione orizzontale",
+      "stampY": "Posizione verticale",
+      "stampScale": "Dimensione",
+      "metadata": "Metadati PDF",
+      "title": "Titolo",
+      "author": "Autore",
+      "subject": "Oggetto",
+      "keywords": "Parole chiave",
+      "producer": "Produttore",
+      "creator": "Creatore",
+      "clearImage": "Rimuovi"
+    }
+  },
+  "status": {
+    "notStarted": "Non avviato",
+    "error": "Errore: {error}",
+    "finished": "Completato",
+    "processsing": {
+      "default": "Elaborazione",
+      "combine": "Unione delle pagine PDF",
+      "progress": "Elaborazione pagine PDF: {current}/{total}"
+    }
+  },
+  "upload": {
+    "dropTitle": "Trascina qui il tuo file",
+    "dropTitleMany": "Trascina qui i tuoi file",
+    "or": "oppure",
+    "choose": "Scegli file",
+    "chooseMany": "Scegli i file",
+    "replace": "Scegli un altro file",
+    "addMore": "Aggiungi altri file",
+    "privacy": "Elaborato nel tuo browser: nulla viene caricato",
+    "dropOverlay": "Rilascia il file per caricarlo",
+    "dropOverlayMany": "Rilascia i file per aggiungerli",
+    "unsupported": "Tipo di file non supportato: {name}",
+    "readError": "Impossibile aprire {name}: {error}",
+    "ready": "Caricato",
+    "pages": "{n} pagina | {n} pagine",
+    "sampleBanner": "Questo è un documento di esempio. Carica i tuoi file al passaggio 1: puoi aggiungerne diversi insieme."
+  },
+  "save": {
+    "create": "Crea PDF scansionato | Crea {n} PDF scansionati",
+    "readyTitle": "Il tuo PDF scansionato è pronto | I tuoi {n} PDF scansionati sono pronti",
+    "progress": "pagina {current} di {total}",
+    "fileProgress": "File {current} di {total}",
+    "autoHint": "Il PDF scansionato si scarica automaticamente quando è pronto. | Tutti i {n} file verranno scansionati e scaricati automaticamente in un unico ZIP.",
+    "noFileHint": "Carica un file al passaggio 1 per iniziare.",
+    "busyHint": "Tieni aperta questa scheda: il download parte da solo al termine della scansione.",
+    "downloadAgain": "Scarica di nuovo",
+    "downloadStarted": "Fatto: il download è iniziato",
+    "whereSaved": "Lo trovi nella cartella Download.",
+    "zipHint": "Per ottenere un singolo file, usa l'icona di download accanto al file nel passaggio 1.",
+    "someFailed": "{n} file non è stato scansionato | {n} file non sono stati scansionati"
+  },
+  "files": {
+    "preview": "Mostra nell'anteprima",
+    "previewOf": "Anteprima: {name}",
+    "downloadOne": "Scarica questo PDF scansionato",
+    "remove": "Rimuovi file",
+    "hint": "Fai clic su un file per vederne l'anteprima. Tutti i file usano le stesse impostazioni.",
+    "openError": "Impossibile aprire questo file",
+    "status": {
+      "loading": "Preparazione…",
+      "ready": "Pronto",
+      "processing": "Scansione…",
+      "done": "Scansionato"
+    }
+  },
+  "steps": {
+    "upload": "Carica",
+    "adjust": "Regola",
+    "download": "Scarica",
+    "uploadTitle": "Carica i tuoi file",
+    "adjustTitle": "Regola l'aspetto della scansione",
+    "downloadTitle": "Ottieni il tuo PDF scansionato"
+  },
+  "preview": {
+    "original": "Originale",
+    "scanned": "Anteprima scansione"
+  },
+  "errors": {
+    "wordNoText": "Questo file Word non contiene testo leggibile",
+    "sheetEmpty": "Questo foglio di calcolo è vuoto",
+    "htmlNoText": "Questo file HTML non contiene testo leggibile",
+    "unsupportedType": "Questo tipo di file non è ancora supportato"
+  }
+}

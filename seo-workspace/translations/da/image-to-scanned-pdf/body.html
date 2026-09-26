@@ -1,0 +1,242 @@
+<p class="lead">For at konvertere et billede til en scannet PDF skal du åbne det gratis <a href="/scan">scanningsværktøj</a>, trække en JPG, PNG eller et mobilfoto ind, indstille en let hældning, let støj og gråfarve, og downloade resultatet. Konverteringen fra billede til scannet PDF kører i din browser, placerer billedet på en A4-side og gemmer en PDF i scan-stil.</p>
+
+<p>Et foto af en underskrevet formular ligner sjældent en kontorscanning: farverne er skæve, kanterne er skæve, og filen er en JPG, ikke en PDF. Denne guide dækker hele vejen fra kamera til scannet PDF: forberedelse af fotoet, pixelmatematik, formater og at samle flere billeder. Fakta kommer fra USCIS, det amerikanske National Archives (NARA), FADGI, Apple Support og vores værktøjs kildekode.</p>
+
+<nav class="toc" aria-label="Table of contents"><h2>Table of Contents</h2><ol>
+<li><a href="#quick-answer">Hvad er den hurtigste metode fra billede til scannet PDF?</a></li>
+<li><a href="#how-to-convert">Hvordan konverterer du et billede til en scannet PDF?</a></li>
+<li><a href="#prepare-phone-photo">Hvordan tager du det bedste mobilfoto af et dokument?</a></li>
+<li><a href="#pixels-and-page-size">Hvor mange pixels har en scannet PDF-side brug for?</a></li>
+<li><a href="#image-formats">Hvilke billedformater virker til JPG til scannet PDF?</a></li>
+<li><a href="#settings">Hvilke scanningsindstillinger passer til fotos over for skærmbilleder?</a></li>
+<li><a href="#several-images">Hvordan samler du flere billeder i én scannet PDF?</a></li>
+<li><a href="#file-size">Hvor stor bliver en fil fra foto til scannet PDF?</a></li>
+<li><a href="#checking">Hvordan tjekker du den scannede PDF, før du sender den?</a></li>
+<li><a href="#mistakes">Hvilke fejl ødelægger et billede til scannet PDF?</a></li>
+<li><a href="#honest-use">Hvornår er det fint at få et billede til at se scannet ud?</a></li>
+<li><a href="#faq">Billede til scannet PDF: ofte stillede spørgsmål</a></li>
+</ol></nav>
+
+<h2 id="quick-answer">Hvad er den hurtigste metode fra billede til scannet PDF?</h2>
+<p>Den hurtigste metode fra billede til scannet PDF er et browserværktøj, der tager imod billedet direkte. Make PDF look scanned tager en JPG eller PNG, pakker den ind i en PDF-side, tilføjer scanner-lignende hældning, sløring, støj og gråtone og eksporterer en ny PDF på omkring et minut, uden upload og uden tilmelding.</p>
+
+<dl class="spec-list">
+<dt>Input</dt><dd>JPG, PNG, WebP, SVG, GIF eller BMP (én billedfil bliver til én side)</dd>
+<dt>Output</dt><dd>En PDF, hvis side er et JPEG-billede med scanningseffekten bagt ind</dd>
+<dt>Sidestørrelse</dt><dd>A4, stående eller liggende, alt efter billedets retning</dd>
+<dt>Hvor det kører</dt><dd>Lokalt i din browser; filen sendes ikke til en behandlingsserver</dd>
+<dt>Pris</dt><dd>Gratis, ingen konto, intet vandmærke, medmindre du selv tilføjer ét</dd>
+</dl>
+
+<p>Hvis dit billede allerede er en PDF (for eksempel eksporteret fra en scanner-app), kan du springe konverteringssnakken over og læse vores guide til <a href="/blog/pdf-to-scanned-pdf/">at gøre en PDF til en scannet PDF</a>. Hvis du vil have den bredere baggrund om selve formatet, se <a href="/blog/what-is-a-scanned-pdf/">hvad en scannet PDF er</a>.</p>
+
+<h2 id="how-to-convert">Hvordan konverterer du et billede til en scannet PDF?</h2>
+<p>For at konvertere et billede til en scannet PDF skal du forberede et lige, beskåret foto, åbne scannersiden i Chrome, Edge eller en mobilbrowser, indlæse filen, justere scanningseffekten, mens du følger med i den live forhåndsvisning, og downloade PDF'en. Hele proceduren nedenfor tager et til to minutter pr. billede.</p>
+
+<ol class="step-list">
+<li><strong>Forbered billedet.</strong> Beskær fotoet til papirets kanter, og ret det op med mobilens indbyggede billedredigering eller dokumentscanner. Værktøjet beskærer ikke, retter ikke skævhed op og korrigerer ikke perspektiv, så det, du indlæser, er det, der bliver scannet.</li>
+<li><strong>Eksportér HEIC-fotos til JPG.</strong> iPhone-fotos er ofte HEIC-filer. Eksportér eller del dem først som JPG, fordi værktøjet accepterer JPG, PNG, WebP, SVG, GIF og BMP, men ikke HEIC.</li>
+<li><strong>Åbn scanneren.</strong> Gå til <a href="/scan">pdflookscanned.com/scan</a>, eller åbn Chrome-udvidelsens sidepanel. Begge bruger den samme motor og virker offline efter første indlæsning.</li>
+<li><strong>Træk billedet ind.</strong> Træk JPG'en eller PNG'en ind i uploadområdet. Værktøjet indlejrer det på en A4-side, stående til høje billeder og liggende til brede, skaleret til at passe og centreret.</li>
+<li><strong>Indstil det scannede look.</strong> Start med Farverum Gråtoner, Rotation 1°, Rotationsvariation 0,5°, Sløring 0,3 og Støj 0,1. Hæv Gulning til 0,2 eller 0,3, hvis du vil have en ældet papirtone.</li>
+<li><strong>Vælg en opløsning.</strong> Behold 2× til normale dokumenter; vælg 2,5× eller 3×, når billedet har småt tryk, stempler eller underskrifter, der skal forblive læselige.</li>
+<li><strong>Tilføj ekstra, hvis nødvendigt.</strong> Placér eventuelt et stempel- eller underskriftsbillede, et vandmærke, eller redigér PDF'ens titel og forfatter i metadata-panelet.</li>
+<li><strong>Download, og tjek.</strong> Gem den scannede PDF, åbn den i din normale PDF-læser, og zoom til 100 % for at bekræfte, at hver linje er læselig.</li>
+</ol>
+
+<div class="callout callout-tip"><strong>Ét billede, én side</strong>Hver billedfil bliver til sin egen PDF med én side. For at få en scannet PDF med flere sider ud af flere fotos skal du først samle billederne i én PDF med dit operativsystem og derefter trække den PDF ind i værktøjet. Afsnittet om <a href="#several-images">flere billeder</a> viser de præcise klik.</div>
+
+<h2 id="prepare-phone-photo">Hvordan tager du det bedste mobilfoto af et dokument?</h2>
+<p>Et godt mobilfoto af et dokument bliver taget lige oppefra, på en flad, mørk overflade, i jævnt dagslys uden skygger, og beskåret til papirets kanter. Den forberedelse betyder mere end noget filter, fordi scanningseffekten kopierer de fejl, fotoet allerede har, inklusive bøjede hjørner og håndskygger.</p>
+
+<p>USCIS, som accepterer mobilbilleder som bevismateriale i online-indgivelser, formulerer minimumsstandarden enkelt: <a href="https://www.uscis.gov/file-online/tips-for-filing-forms-online" target="_blank" rel="noopener">»Sørg for, at hvert billede, du vedhæfter, er skarpt, og at al tekst er læselig.«</a> Samme side beder ansøgere om at <a href="https://www.uscis.gov/file-online/tips-for-filing-forms-online" target="_blank" rel="noopener">»bruge en scanner eller tage billeder af hvert dokument.«</a> Så et omhyggeligt foto er et accepteret udgangspunkt, ikke en omvej.</p>
+
+<h3>Lys, overflade og vinkel til foto til scannet PDF</h3>
+<ul>
+<li><strong>Lys.</strong> Brug indirekte dagslys nær et vindue eller to lamper fra hver sin side. Én lampe ovenfra kaster mobilens skygge hen over siden.</li>
+<li><strong>Overflade.</strong> Læg hvidt papir på et mørkere bord, så kanterne er nemme at finde og beskære. Glat først folder ud under en bog i et minut.</li>
+<li><strong>Vinkel.</strong> Hold mobilen parallelt med siden, lige over dens midte. Hvis du vipper mobilen, bliver den fjerne kant smallere end den nære.</li>
+<li><strong>Afstand.</strong> Fyld rammen med siden, og lad en tynd margen være tilbage. Brug hovedkameraet frem for digital zoom.</li>
+<li><strong>Blitz.</strong> Sluk blitzen; den skaber en lys plet og genskin på blankt papir.</li>
+</ul>
+
+<p>Vinkelreglen har en teknisk begrundelse. FADGI, den amerikanske føderale digitaliseringsarbejdsgruppe, bemærker, at <a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">»Skæve gengivelser i det optagede billede kan ofte spores tilbage til manglende parallelitet mellem kameraets fokalplan og pladen.«</a> Sagt enkelt: hvis mobilen ikke er parallel med papiret, kommer siden ud som en trapez, hvilket ingen flatbedscanner ville producere.</p>
+
+<h3>Brug den indbyggede dokumentscanner på iPhone eller Android</h3>
+<p>Mobiler har allerede en gratis dokumenttilstand, der beskærer og retter op for dig. På en iPhone eller iPad kan appen Noter og appen Arkiver scanne et dokument med kameraet, finde siden automatisk i Auto-tilstand og lade dig justere hjørnerne. Apples vejledning siger: <a href="https://support.apple.com/en-us/108963" target="_blank" rel="noopener">»Træk derefter i hjørnerne for at tilpasse scanningen til siden, og tryk på Behold scanning.«</a></p>
+
+<p>Mange Android-mobiler har en lignende dokumenttilstand i standardkameraet eller den indbyggede filhåndtering, som finder sidens kanter og retter perspektivet op. Menunavne varierer fra producent til producent, så led efter en »Dokument«- eller »Scan«-mulighed. Gem resultatet som et billede eller en PDF, og kør det derefter igennem <a href="/scan">scanningseffekt-værktøjet</a> for at få det til at ligne en flatbedscanning frem for en mobiloptagelse.</p>
+
+<h3>Beskær og hvidgør fotoet før scanningseffekten</h3>
+<p>Hvis du har taget et almindeligt foto, skal du åbne det i mobilens billedredigering, bruge Beskær til at fjerne bordet og retteskyderen til at gøre tekstlinjerne lige. Hæv derefter eksponering eller lysstyrke en smule, indtil papiret er tæt på hvidt i stedet for gråblåt. Værktøjets egne skydere for Lysstyrke og Kontrast kan gøre resten af arbejdet: Lysstyrke 1,1 og Kontrast 1,2 gør som regel et mat foto hvidere uden at miste tynde streger.</p>
+
+<div class="callout callout-info"><strong>Hvorfor hvidgøring betyder noget</strong>En flatbedscanner lyser siden jævnt op fra få millimeters afstand, så papiret kommer ud næsten hvidt. Et mobilfoto i rumbelysning viser papiret som lysegråt med et farveskær. At hvidgøre baggrunden er den ene ændring, der får et foto til at læses som en scanning.</div>
+
+<h2 id="pixels-and-page-size">Hvor mange pixels har en scannet PDF-side brug for?</h2>
+<p>En scannet PDF-side har brug for et antal pixels, der matcher papirstørrelsen ganget med opløsningen. En amerikansk Letter-side ved 300 ppi er 2.550 × 3.300 pixels, og en A4-side ved 300 ppi er ca. 2.480 × 3.508 pixels. De fleste mobilkameraer optager mere end det, så opløsning er sjældent det svage punkt.</p>
+
+<p>Matematikken er én multiplikation: tommer × pixels pr. tomme = pixels. Letter-papir er 8,5 × 11 tommer; A4 er 210 × 297 mm, eller ca. 8,27 × 11,69 tommer. Et typisk 12-megapixel mobilfoto er 4.032 × 3.024 pixels, så en side, der fylder det meste af billedet, lander et sted omkring 250-350 ppi, afhængigt af hvor meget bord der er tilbage omkring den.</p>
+
+<div class="table-wrap"><table>
+<caption>Pixeldimensioner for hele sider ved almindelige scanningsopløsninger</caption>
+<thead><tr><th scope="col">Opløsning</th><th scope="col">Amerikansk Letter (8,5 × 11 tommer)</th><th scope="col">A4 (8,27 × 11,69 tommer)</th><th scope="col">Typisk brug</th></tr></thead>
+<tbody>
+<tr><th scope="row">150 ppi</th><td>1.275 × 1.650 px</td><td>1.240 × 1.754 px</td><td>Skærmlæsning, e-mailvedhæftninger</td></tr>
+<tr><th scope="row">200 ppi</th><td>1.700 × 2.200 px</td><td>1.654 × 2.339 px</td><td>FADGI's 1-stjerne-niveau for dokumenter</td></tr>
+<tr><th scope="row">300 ppi</th><td>2.550 × 3.300 px</td><td>2.480 × 3.508 px</td><td>Standard kontor- og domstolsscanninger</td></tr>
+<tr><th scope="row">400 ppi</th><td>3.400 × 4.400 px</td><td>3.307 × 4.677 px</td><td>Småt tryk, fotos, arkivmastere</td></tr>
+</tbody>
+</table></div>
+
+<p>Amerikanske føderale digitaliseringsregler bruger den samme skala. NARA's regulativ kræver billedfiler af moderne tekstdokumenter ved mindst 300 ppi og 400 ppi for fotografiske aftryk og papirdokumenter med fine detaljer, ifølge <a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">36 CFR Part 1236, Subpart E</a>. FADGI's stjernesystem bedømmer uindbundne dokumenter ved 200, 250, 300 og 400 ppi for sine niveauer fra én til fire stjerner.</p>
+
+<p>Pixeltal alene garanterer ikke kvalitet, og det siger NARA direkte: <a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">»Myndigheden kan ikke udelukkende basere sig på udstyrsspecifikationer, som scanner-ppi-indstillinger eller kameraets megapixel-sensor, for at sikre den digitale billedkvalitet.«</a> Et skarpt foto på 2.000 pixels læses bedre end et sløret på 4.000 pixels, så fokus og lys kommer stadig først.</p>
+
+<h3>Hvilken opløsning har outputtet fra billede til scannet PDF?</h3>
+<p>Værktøjet gengiver hver side ved 72 dpi ganget med indstillingen Opløsning. Fordi hvert billede placeres på en A4-side, er outputtet forudsigeligt: 1× giver ca. 595 × 842 pixels, 2× ca. 1.191 × 1.684 pixels (144 dpi), og 3× ca. 1.786 × 2.526 pixels (216 dpi). En kildefoto, der er større end 3×-størrelsen, tilføjer ingen ekstra detalje til resultatet.</p>
+
+
+<h2 id="image-formats">Hvilke billedformater virker til JPG til scannet PDF?</h2>
+<p>JPG til scannet PDF og PNG til scannet PDF virker direkte, fordi værktøjet indlejrer de to formater i PDF-siden, som de er. WebP, SVG, GIF og BMP virker også, men de bliver først konverteret til JPEG med den længste kant begrænset til 2.200 pixels. HEIC understøttes ikke.</p>
+
+<div class="table-wrap"><table>
+<caption>Sådan bliver hvert billedformat behandlet på vejen til en scannet PDF</caption>
+<thead><tr><th scope="col">Format</th><th scope="col">Accepteret?</th><th scope="col">Hvad sker der først</th><th scope="col">Bedst til</th></tr></thead>
+<tbody>
+<tr><th scope="row">JPG / JPEG</th><td>Ja</td><td>Indlejres uden genkodning, tilpasset A4</td><td>Mobilfotos af papirdokumenter</td></tr>
+<tr><th scope="row">PNG</th><td>Ja</td><td>Indlejres uden genkodning, tilpasset A4</td><td>Skærmbilleder, eksporterede formularer, skarp tekst</td></tr>
+<tr><th scope="row">WebP</th><td>Ja</td><td>Konverteres til JPEG (kvalitet 0,92), længste kant op til 2.200 px</td><td>Billeder gemt fra websteder</td></tr>
+<tr><th scope="row">SVG</th><td>Ja</td><td>Rasteriseres til JPEG, længste kant op til 2.200 px</td><td>Logoer, diagrammer, vektorformularer</td></tr>
+<tr><th scope="row">GIF / BMP</th><td>Ja</td><td>Konverteres til JPEG, længste kant op til 2.200 px</td><td>Gamle filer og forældede eksporter</td></tr>
+<tr><th scope="row">HEIC / HEIF</th><td>Nej</td><td>Eksportér eller del først som JPG</td><td>iPhone-kameraoriginaler</td></tr>
+<tr><th scope="row">TIFF</th><td>Nej</td><td>Gem først som PNG eller JPG</td><td>Output fra ældre flatbedscannere</td></tr>
+</tbody>
+</table></div>
+
+<p>Ethvert gennemsigtigt område i en konverteret WebP, SVG, GIF eller BMP fyldes med hvid, hvilket matcher papir. Grænsen på 2.200 pixels er stadig større end 3×-outputgengivelsen af en A4-side, så konverteringen sænker ikke den endelige skarphed.</p>
+
+<h3>Sådan gør du et iPhone HEIC-foto til en JPG</h3>
+<p>På en Mac skal du åbne HEIC-filen i Eksempel, vælge Arkiv → Eksportér og vælge JPEG; <a href="https://support.apple.com/guide/preview/convert-image-file-types-prvw1012/mac" target="_blank" rel="noopener">Apples Eksempel-guide</a> nævner JPEG, PNG, PDF og TIFF blandt eksportformaterne. På en iPhone skal du sætte Indstillinger → Kamera → Formater til Mest kompatibel for at tage JPG direkte.</p>
+
+<h2 id="settings">Hvilke scanningsindstillinger passer til fotos over for skærmbilleder?</h2>
+<p>Scanningsindstillinger til mobilfotos bør holdes lette, fordi et foto allerede har naturlig blødhed og korn. Skærmbilleder og eksporterede billeder har brug for lidt mere effekt, fordi pixelperfekt tekst ser digital ud. I begge tilfælde ligner gråfarve, en hældning under 1,5° og støj på eller under 0,2 en almindelig kontorscanner.</p>
+
+<div class="table-wrap"><table>
+<caption>Udgangsindstillinger for scanning efter kildebilledets type</caption>
+<thead><tr><th scope="col">Indstilling (interval · standard)</th><th scope="col">Mobilfoto af papir</th><th scope="col">Skærmbillede eller eksporteret PNG</th><th scope="col">Farve-ID eller stemplet formular</th></tr></thead>
+<tbody>
+<tr><th scope="row">Farverum (Gråtoner/Farver · Gråtoner)</th><td>Gråtoner</td><td>Gråtoner</td><td>Farver</td></tr>
+<tr><th scope="row">Rotation (−10°…10° · 1°)</th><td>0,5°</td><td>1°–1,5°</td><td>0,5°</td></tr>
+<tr><th scope="row">Rotationsvariation (0…10° · 0,5°)</th><td>0,5°</td><td>0,5°</td><td>0°</td></tr>
+<tr><th scope="row">Sløring (0…1 · 0,3)</th><td>0,1–0,2</td><td>0,3–0,4</td><td>0,2</td></tr>
+<tr><th scope="row">Støj (0…1 · 0,1)</th><td>0,05–0,1</td><td>0,1–0,2</td><td>0,05</td></tr>
+<tr><th scope="row">Lysstyrke (0…2 · 1)</th><td>1,05–1,15</td><td>1</td><td>1</td></tr>
+<tr><th scope="row">Kontrast (0…2 · 1)</th><td>1,1–1,3</td><td>1–1,1</td><td>1,05</td></tr>
+<tr><th scope="row">Gulning (0…2 · 0)</th><td>0–0,2</td><td>0,1–0,3</td><td>0</td></tr>
+<tr><th scope="row">Opløsning (1×…3× · 2×)</th><td>2× eller 2,5×</td><td>2×</td><td>3×</td></tr>
+</tbody>
+</table></div>
+
+<p>Logikken bag tabellen er enkel. Et mobilfoto bærer allerede på sensorstøj og linjeblødhed, så at lægge standardsløringen oveni kan gøre småt tryk grødet. Hæv i stedet Kontrast, hvilket gør teksten mørkere og skubber det grå papir mod hvidt. Et skærmbillede er det modsatte: dets kanter er knivskarpe, så lidt mere sløring og støj er det, der får det til at læses som papir.</p>
+
+<p>Muligheden Ramme tegner en tynd, mørk kantstreg omkring siden; brug den sparsomt. Hvert artefakt er forklaret i vores <a href="/blog/scan-effect/">guide til scanningseffekten</a>.</p>
+
+<div class="expert-quote"><blockquote>Vi ser det samme mønster i næsten hvert billede, folk trækker ind i værktøjet: det er ikke scanningseffekten, der er problemet, det er fotoet. Et skævt, skygget billede med maksimal støj ligner stadig et mobilfoto. En flad, beskåret, hvidgjort side med Rotation på 0,5°, Sløring på 0,2 og Gråtoner ligner, at den kommer fra en flatbedscanner. Ret først fotoet, og hold derefter effekten diskret.</blockquote><cite><strong>Holdet bag Make PDF look scanned</strong> — står bag webværktøjet og Chrome-udvidelsen</cite></div>
+
+<h2 id="several-images">Hvordan samler du flere billeder i én scannet PDF?</h2>
+<p>For at samle flere billeder i én scannet PDF skal du først samle dem i én almindelig PDF med værktøjerne, der er indbygget i macOS eller Windows, og derefter trække den PDF ind i scanneren. Værktøjet bevarer siderækkefølgen og tilføjer scanningseffekten til hver side, med en lille, tilfældig hældning pr. side.</p>
+
+<h3>Saml billeder i én PDF på en Mac med Eksempel</h3>
+<ol>
+<li>Navngiv billederne i siderækkefølge (01.jpg, 02.jpg…), vælg dem alle i Finder, og åbn dem i Eksempel.</li>
+<li>I sidepanelet Miniaturer skal du trække siderne i rækkefølge og derefter trykke Command-A.</li>
+<li>Vælg Arkiv → Udskriv, åbn PDF-menuen i nederste venstre hjørne, og vælg Gem som PDF.</li>
+</ol>
+
+<h3>Saml billeder i én PDF på Windows</h3>
+<ol>
+<li>I Stifinder skal du vælge billederne, højreklikke og vælge Udskriv (på Windows 11 under Vis flere valgmuligheder).</li>
+<li>Vælg Microsoft Print to PDF og layoutet Fuld side-foto; fjern fluebenet ved »Tilpas billede til ramme«, så kanterne ikke bliver beskåret.</li>
+<li>Klik på Udskriv, og gem PDF'en.</li>
+</ol>
+
+<p>Åbn derefter <a href="/scan">scanneren</a>, træk den samlede PDF ind, sæt Rotationsvariation til 0,5°–1°, så hver side hælder lidt forskelligt, og download. Den printede PDF bruger som regel Letter- eller A4-sider, så det vil den scannede kopi også gøre.</p>
+
+<div class="callout callout-tip"><strong>Mange billeder, separate filer</strong>Hvis du har brug for én scannet PDF pr. billede i stedet for én samlet fil, kan du bruge <a href="/scan/bulk">massescanning</a>. Træk alle billederne ind, brug ét sæt indstillinger, og download alle resultater samlet som et ZIP-arkiv, én PDF pr. billede.</div>
+
+<h2 id="file-size">Hvor stor bliver en fil fra foto til scannet PDF?</h2>
+<p>En fil fra foto til scannet PDF er som regel langt mindre end originalfotoet, fordi værktøjet gengiver hver A4-side som en JPEG i en fast størrelse. Standardindstillingen 2× i gråtoner giver typisk et par hundrede kilobyte pr. side, hvilket passer til uploadgrænser som USCIS's loft på 12 MB.</p>
+
+<p>Outputstørrelsen afhænger af gengivelsen, ikke af kameraet. Et 5 MB mobilfoto bliver skaleret ned på en A4-side og gengivet igen ved 1.191 × 1.684 pixels ved 2×, så de fleste af dets ekstra pixels bliver kasseret. Vores estimat: ca. 150-500 KB pr. side ved 2× i gråtoner, og to til tre gange mere ved 3× eller i farver.</p>
+
+<dl class="spec-list">
+<dt>USCIS online bevismateriale</dt><dd>12 MB pr. fil; PDF, JPG eller JPEG (TIF/TIFF til nogle formularer), ifølge <a href="https://www.uscis.gov/file-online/tips-for-filing-forms-online" target="_blank" rel="noopener">USCIS' råd til indgivelse</a></dd>
+<dt>USCIS papirindgivelser</dt><dd>Undgå fotos eller dokumenter mindre end 4 × 6 tommer, fordi USCIS scanner papirindsendelser, ifølge deres <a href="https://www.uscis.gov/archive/recommendations-for-paper-filings-to-avoid-scanning-delays" target="_blank" rel="noopener">anbefalinger til scanning</a></dd>
+<dt>Føderal domstols e-indgivelse</dt><dd>Grænserne varierer fra domstol til domstol, for eksempel 35 MB pr. bilag i distriktet Minnesota og 100 MB pr. dokument i det vestlige distrikt i Washington</dd>
+</dl>
+
+<h3>Sådan gør du en scannet PDF fra billeder mindre</h3>
+<ul>
+<li>Brug Gråtoner i stedet for Farver, medmindre farven bærer betydning, som et farvet stempel eller ID-foto.</li>
+<li>Behold Opløsning på 2×, medmindre småt tryk går i opløsning; 3× fordobler nogenlunde antallet af pixels.</li>
+<li>Sænk Støj til 0,05–0,1, da korn øger JPEG-størrelsen.</li>
+</ul>
+
+<h2 id="checking">Hvordan tjekker du den scannede PDF, før du sender den?</h2>
+<p>Tjek en scannet PDF ved at åbne den i en normal PDF-læser ved 100 % zoom og læse den mindste tekst, tallene og underskriftslinjen. Bekræft derefter sidetal, retning og filstørrelse. Et to-minutters tjek fanger ulæselige cifre, før en modtager afviser filen.</p>
+
+<ol>
+<li><strong>Læsbarhed.</strong> Zoom til 100 % og 200 %. Hvert ciffer i datoer, beløb og kontonumre skal være entydigt.</li>
+<li><strong>Retning.</strong> Brede billeder bliver til liggende A4-sider, og høje billeder til stående sider. Rotér kildefotoet først, hvis siden kom ud på siden.</li>
+<li><strong>Margener.</strong> Et billede med en anden form end A4 får hvide margener på to sider. Det er normalt for en scanning, men en meget smal kvittering vil se lille ud på siden, så beskær den tæt.</li>
+<li><strong>Filstørrelse.</strong> Sammenlign den med portalens grænse, før du starter uploaden.</li>
+</ol>
+
+<p>Husk, at outputtet kun er billedbaseret: teksten er pixels, ikke markerbare tegn. W3C's tilgængelighedsvejledning forklarer, at <a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF7" target="_blank" rel="noopener">»Et dokument, der består af scannede billeder af tekst, er grundlæggende utilgængeligt, fordi dokumentets indhold er billeder, ikke søgbar tekst.«</a> Hvis modtageren har brug for søgbar tekst, så kør OCR bagefter, eller send originalen.</p>
+
+<h2 id="mistakes">Hvilke fejl ødelægger et billede til scannet PDF?</h2>
+<p>De fejl, der ødelægger et billede til scannet PDF, ligger næsten altid i kildefotoet eller i overdrevne indstillinger: skygger, en trapezformet side, en synlig bordkant, maksimal støj, kraftig sløring og hældninger på flere grader. Hver af dem signalerer »mobilfoto« eller »filter« i stedet for en scanner.</p>
+
+<div class="table-wrap"><table>
+<caption>Almindelige fejl og løsninger for billede til scannet PDF</caption>
+<thead><tr><th scope="col">Fejl</th><th scope="col">Hvorfor det ser forkert ud</th><th scope="col">Løsning</th></tr></thead>
+<tbody>
+<tr><th scope="row">Foto taget fra en vinkel</th><td>Siden er en trapez; scannere producerer rektangler</td><td>Tag billedet igen oppefra, eller brug mobilens dokumenttilstand</td></tr>
+<tr><th scope="row">Bord eller hånd er synlig</th><td>Flatbeds fanger kun glasarealet</td><td>Beskær til papirets kanter, før du indlæser</td></tr>
+<tr><th scope="row">Skygge hen over siden</th><td>Scannerlys er jævnt</td><td>Brug vindueslys eller to lamper; ingen blitz</td></tr>
+<tr><th scope="row">Rotation på 5° eller mere</th><td>Rigtige arkindfødere skæver sjældent så meget</td><td>Hold dig mellem 0,5° og 1,5°</td></tr>
+<tr><th scope="row">Støj på 0,5 eller højere</th><td>Ligner filmkorn, ikke en scanning</td><td>Brug 0,05–0,2</td></tr>
+<tr><th scope="row">Sløring på 0,8 eller højere</th><td>Småt tryk bliver ulæseligt</td><td>Brug 0,1–0,4, og tjek ved 100 %</td></tr>
+<tr><th scope="row">At forvente én PDF fra mange billeder</th><td>Hvert billede bliver til sin egen PDF</td><td>Saml først billederne i én PDF</td></tr>
+</tbody>
+</table></div>
+
+<h2 id="honest-use">Hvornår er det fint at få et billede til at se scannet ud?</h2>
+<p>Det er fint at få et billede til at se scannet ud, når dokumentet er dit eget, og indholdet er sandt: en kvittering, du har fotograferet, en formular, du har underskrevet, et brev, du har skrevet. Det scannede look ændrer kun udseendet. Det gør ikke en kopi mere officiel, og det må aldrig bruges til at skjule redigeringer.</p>
+
+<div class="callout callout-warn"><strong>Ærlig brug</strong>En scanningseffekt ændrer, hvordan en fil ser ud, ikke om den er ægte. Brug den ikke til at forfalske eller ændre ID'er, officielle dokumenter, attester eller underskrifter, der ikke er dine egne. Nogle domstole og myndigheder kræver tekstsøgbare PDF'er; det sydlige distrikt i Florida fastslår for eksempel, at <a href="https://www.flsd.uscourts.gov/all-faqs/CMECF" target="_blank" rel="noopener">»processkrifter/hoveddokumenter, der indgives elektronisk i CM/ECF, skal være i tekstsøgbart PDF-format«</a>. Tjek modtagerens regler, før du sender en billedbaseret fil.</div>
+
+<p>Til maskinskrevne dokumenter skal du eksportere dem til PDF og følge vores guide til <a href="/blog/make-a-document-look-scanned/">at få et dokument til at se scannet ud</a>; <a href="/blog/how-to-make-a-pdf-look-scanned/">hovedguiden</a> sammenligner alle metoderne.</p>
+
+<h2 id="faq">Billede til scannet PDF: ofte stillede spørgsmål</h2>
+<p>Disse spørgsmål om billede til scannet PDF dækker det, folk oftest spørger om efter deres første konvertering: formater, sidestørrelse, filer med flere sider, mobiler, privatliv og om resultatet accepteres af myndigheder. Hvert svar afspejler, hvordan det gratis værktøj rent faktisk fungerer, baseret på dets kildekode og offentliggjorte indstillinger.</p>
+
+<div class="faq-item"><p class="faq-q">Kan jeg konvertere en JPG til en scannet PDF gratis?</p><p class="faq-a">Ja. Webværktøjet på pdflookscanned.com/scan og dets Chrome-udvidelse er gratis, kræver ingen konto og tilføjer intet vandmærke, medmindre du selv tilføjer ét. Træk JPG'en ind, justér scanningseffekten, og download PDF'en.</p></div>
+
+<div class="faq-item"><p class="faq-q">Bliver mit foto uploadet til en server?</p><p class="faq-a">Nej. Konverteringen og scanningseffekten kører lokalt i din browser med pdf.js og canvas. Efter det første besøg virker webstedet også offline, hvilket er en enkel måde at bekræfte, at intet bliver sendt til behandling.</p></div>
+
+<div class="faq-item"><p class="faq-q">Hvilken sidestørrelse har den scannede PDF?</p><p class="faq-a">Hvert billede placeres på en A4-side, stående til høje billeder og liggende til brede, skaleret til at passe og centreret. Hvis billedets form afviger fra A4, får du hvide margener på to sider, ligesom ved en rigtig scanning af mindre papir.</p></div>
+
+<div class="faq-item"><p class="faq-q">Kan jeg gøre flere fotos til én scannet PDF?</p><p class="faq-a">Ja, i to trin. Saml billederne i én PDF med macOS Eksempel (Udskriv → Gem som PDF) eller Windows (Udskriv → Microsoft Print to PDF), og træk derefter den PDF ind i scanneren. Værktøjet selv laver én PDF pr. billede.</p></div>
+
+<div class="faq-item"><p class="faq-q">Beskærer eller retter værktøjet mit foto op?</p><p class="faq-a">Nej. Det beskærer ikke, retter ikke skævhed op og korrigerer ikke perspektiv. Brug først mobilens billedredigering eller den indbyggede dokumentscanner i iPhone Noter, iPhone Arkiver eller dit Android-kamera, og indlæs derefter det rensede billede.</p></div>
+
+<div class="faq-item"><p class="faq-q">Hvorfor bliver mit HEIC-foto ikke accepteret?</p><p class="faq-a">HEIC er ikke blandt de understøttede formater, som er JPG, PNG, WebP, SVG, GIF og BMP. Eksportér fotoet som JPG fra Eksempel på en Mac, fra Fotos-appen på Windows, eller sæt dit iPhone-kamera til Mest kompatibel for at tage JPG.</p></div>
+
+<div class="faq-item"><p class="faq-q">Hvilken opløsning skal jeg vælge til foto til scannet PDF?</p><p class="faq-a">Behold standardværdien 2×, som gengiver A4-siden ved ca. 144 dpi. Vælg 2,5× eller 3× (ca. 216 dpi) til småt tryk, stempler eller underskrifter. Højere indstillinger giver større filer.</p></div>
+
+
+<div class="faq-item"><p class="faq-q">Vil USCIS acceptere et mobilfoto, der er lavet om til en PDF?</p><p class="faq-a">USCIS accepterer scanninger eller fotos af dokumenter som online bevismateriale, så længe hvert billede er skarpt, og al tekst er læselig, i PDF-, JPG- eller JPEG-filer op til 12 MB. En ren scannet PDF af din egen original opfylder det format.</p></div>
+
+<div class="faq-item"><p class="faq-q">Er teksten i den scannede PDF søgbar?</p><p class="faq-a">Nej. Hver side er et JPEG-billede i PDF'en, så teksten kan ikke markeres eller søges i. Kør OCR bagefter, hvis modtageren har brug for søgbar tekst, eller send en konverteret PDF, når reglerne kræver det.</p></div>
+

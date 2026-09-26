@@ -11,4 +11,5 @@ app.use(router)
 app.use(head)
 app.use(i18n)
 
-app.mount('#app')
+// Mount only after the first route has loaded its language, so the prerendered page is not replaced by English text
+router.isReady().then(() => app.mount('#app'))

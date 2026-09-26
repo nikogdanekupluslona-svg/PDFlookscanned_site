@@ -1,0 +1,241 @@
+<p class="lead">Un PDF scansionato è un PDF le cui pagine sono immagini di fogli di carta, acquisite da uno scanner o dalla fotocamera di un telefono, invece che testo e forme vettoriali creati al computer. Se l'OCR non ha aggiunto un livello di testo nascosto, non puoi selezionarne, cercarne o copiarne le parole, e uno screen reader sulla pagina non legge nulla.</p>
+
+<p>Hai ricevuto un PDF e devi capire che cosa sia davvero: un file esportato da un programma di videoscrittura, la scansione di un foglio di carta oppure una scansione con testo riconosciuto. La risposta stabilisce se puoi cercarci dentro, se un tribunale o un ente lo accetterà e se ha bisogno dell'OCR.</p>
+
+<p>Questa guida ti offre una definizione precisa, un test da 10 secondi, un confronto tra i tre tipi di PDF e un glossario. I fatti provengono dalle linee guida sull'accessibilità del W3C, dai tribunali federali statunitensi, dall'USCIS, dalle norme di digitalizzazione di NARA e FADGI, da GOV.UK e dai team per l'accessibilità di alcune università, oltre che da ciò che abbiamo imparato costruendo uno strumento effetto scansione.</p>
+
+<nav class="toc" aria-label="Indice"><h2>Indice</h2><ol>
+<li><a href="#what-is-a-scanned-pdf">Che cos'è esattamente un PDF scansionato?</a></li>
+<li><a href="#scanned-pdf-vs-digital-pdf">In cosa un PDF scansionato è diverso da un PDF digitale?</a></li>
+<li><a href="#scanned-copy-meaning">Che differenza c'è tra copia scansionata e fotocopia?</a></li>
+<li><a href="#how-to-tell-if-a-pdf-is-scanned">Come capire se un PDF è scansionato?</a></li>
+<li><a href="#accessibility-and-search">Perché i documenti scansionati sono difficili da cercare e leggere?</a></li>
+<li><a href="#ocr-explained">Che cosa fa l'OCR a un PDF scansionato?</a></li>
+<li><a href="#when-you-need-a-scanned-copy">Quando enti e aziende chiedono una copia scansionata?</a></li>
+<li><a href="#scanned-pdf-and-pdf-a">Un PDF scansionato si può archiviare come PDF/A?</a></li>
+<li><a href="#digital-pdf-to-scanned-look">Come si dà a un PDF digitale l'aspetto di un PDF scansionato?</a></li>
+<li><a href="#scanned-document-glossary">Glossario del documento scansionato: quali termini contano?</a></li>
+<li><a href="#faq">Domande frequenti sul PDF scansionato: cos'altro si chiede?</a></li>
+<li><a href="#verdict">PDF scansionato: qual è la risposta in breve?</a></li>
+</ol></nav>
+
+<h2 id="what-is-a-scanned-pdf">Che cos'è esattamente un PDF scansionato?</h2>
+<p>Un PDF scansionato è un contenitore PDF che racchiude un'immagine raster per ogni pagina, ottenuta fotografando o scansionando un foglio fisico. Le lettere che vedi sono pixel, non caratteri. I programmi trattano ogni pagina come una foto, quindi la normale ricerca nel testo, la copia e la reimpaginazione non funzionano senza OCR.</p>
+
+<p>Il tribunale distrettuale degli Stati Uniti per il Northern District of California, citando le indicazioni dei National Archives sul trasferimento dei documenti, lo dice in una riga: «Il testo scansionato è una fotografia di una pagina stampata, prodotta da una fotocamera digitale o da uno scanner» (<a href="https://cand.uscourts.gov/cases-e-filing/cmecf-information/preparing-your-cmecf-filing" target="_blank" rel="noopener">N.D. Cal., Preparing Your CM/ECF Filing</a>). Il formato PDF in sé non cambia: un PDF scansionato resta un file ISO 32000 valido. Cambia ciò che si trova all'interno di ogni pagina.</p>
+
+<p>Il team per l'accessibilità della James Madison University descrive il risultato dal punto di vista di chi legge: «I PDF di documenti scansionati sono spesso solo immagini dei documenti, simili a fotografie digitali, e di solito non contengono testo leggibile» (<a href="https://www.jmu.edu/accessibility/digital-accessibility/guides/pdf/scanned-documents.shtml" target="_blank" rel="noopener">JMU Digital Accessibility</a>). Questo solo fatto spiega quasi tutte le differenze pratiche descritte più avanti.</p>
+
+<p>Ecco la definizione scomposta nelle sue parti verificabili, nello stesso modo in cui un addetto all'archivio o un revisore dell'accessibilità esaminerebbe un file.</p>
+
+<dl class="spec-list">
+<dt>Contenuto della pagina</dt><dd>Un'immagine bitmap per pagina (compressione JPEG, JBIG2, CCITT o simile), non glifi di caratteri e tracciati vettoriali.</dd>
+<dt>Livello di testo</dt><dd>Assente in un PDF di sole immagini; un livello OCR invisibile in un PDF scansionato ricercabile.</dd>
+<dt>Origine</dt><dd>Uno scanner piano o con alimentatore di fogli, una fotocopiatrice multifunzione o la fotocamera di un telefono con una funzione di scansione integrata nel sistema operativo.</dd>
+<dt>Risoluzione tipica</dt><dd>Da 200 a 400 ppi; 300 ppi è il requisito più comune per i testi d'ufficio.</dd>
+<dt>Modalità colore</dt><dd>Bitonale (bianco e nero a 1 bit), scala di grigi (8 bit) o colore (24 bit).</dd>
+<dt>Comportamento con lo zoom</dt><dd>Con un forte ingrandimento i bordi si trasformano in blocchi di pixel visibili.</dd>
+<dt>Dimensione del file</dt><dd>Di solito più pesante per pagina rispetto a un PDF di testo, soprattutto in scala di grigi o a colori.</dd>
+</dl>
+
+<h2 id="scanned-pdf-vs-digital-pdf">In cosa un PDF scansionato è diverso da un PDF digitale?</h2>
+<p>Un PDF scansionato contiene immagini delle pagine, mentre un PDF digitale (nato digitale) contiene veri caratteri, font e grafica vettoriale esportati da un programma. Un terzo tipo, il PDF scansionato con OCR, conserva l'immagine della pagina ma aggiunge sotto di essa un testo nascosto leggibile dalla macchina, che lo rende un PDF ricercabile.</p>
+
+<p>Il District of Massachusetts traccia la stessa distinzione nelle sue regole sul deposito telematico: un PDF scansionato nasce da un foglio di carta passato in uno scanner ottico, mentre un PDF «convertito elettronicamente» viene creato da un programma di videoscrittura ed è ricercabile nel testo (<a href="https://www.mad.uscourts.gov/caseinfo/pdf/ECFadminProc.pdf" target="_blank" rel="noopener">D. Mass. CM/ECF Administrative Procedures</a>). La tabella mette a confronto i tre tipi.</p>
+
+<div class="table-wrap"><table><caption>Tre tipi di PDF: nato digitale, scansionato di sole immagini e scansionato con OCR</caption>
+<thead><tr><th scope="col">Proprietà</th><th scope="col">PDF nato digitale</th><th scope="col">PDF scansionato di sole immagini</th><th scope="col">PDF scansionato + OCR (ricercabile)</th></tr></thead>
+<tbody>
+<tr><th scope="row">Come viene creato</th><td>Esportazione o stampa in PDF da Word, Documenti Google, un browser o qualsiasi app</td><td>Scanner, fotocopiatrice o fotocamera del telefono</td><td>Prima la scansione, poi un software OCR aggiunge il testo</td></tr>
+<tr><th scope="row">Cosa contiene una pagina</th><td>Caratteri, font incorporati, linee vettoriali, immagini</td><td>Un'immagine raster</td><td>Un'immagine raster più testo invisibile</td></tr>
+<tr><th scope="row">Selezionare e copiare il testo</th><td>Sì, in modo esatto</td><td>No</td><td>Sì, ma solo con la precisione dell'OCR</td></tr>
+<tr><th scope="row">Ricerca con Ctrl/Cmd+F</th><td>Funziona</td><td>Non trova nulla</td><td>Funziona, ma può perdere parole lette male</td></tr>
+<tr><th scope="row">Screen reader</th><td>Leggibile, al meglio se con tag</td><td>Muto</td><td>Leggibile, spesso senza struttura</td></tr>
+<tr><th scope="row">Zoom al 400%</th><td>Bordi nitidi a qualsiasi dimensione</td><td>Pixelato</td><td>Pixelato</td></tr>
+<tr><th scope="row">Dimensione tipica per pagina</th><td>Decine di KB</td><td>Da circa 75 KB (bitonale) a oltre 1 MB (scala di grigi o colore)</td><td>Come quello di sole immagini, più un piccolo livello di testo</td></tr>
+<tr><th scope="row">Sembra carta</th><td>No</td><td>Sì</td><td>Sì</td></tr>
+</tbody></table></div>
+
+<p>Le dimensioni per pagina nella tabella derivano da test dei tribunali, non da supposizioni. Il Northern District of California ha scansionato un documento di 317 pagine: in bitonale a 300 ppi il file pesava 23,86 MB, circa 75 KB a pagina, mentre in scala di grigi a 400 ppi arrivava a 374,47 MB, circa 1,2 MB a pagina. Il <a href="https://www.ncmd.uscourts.gov/sites/ncmd/files/ecfprocman.pdf" target="_blank" rel="noopener">Middle District of North Carolina</a> osserva che 2 MB contengono circa quarantacinque pagine di testo PDF, meno di 50 KB a pagina.</p>
+
+<h2 id="scanned-copy-meaning">Che differenza c'è tra copia scansionata e fotocopia?</h2>
+<p>Una copia scansionata è un file immagine digitale di un originale cartaceo, di solito consegnato come PDF scansionato o JPEG. Una fotocopia è un secondo foglio di carta stampato da una fotocopiatrice. Una copia autenticata è qualsiasi copia che una persona autorizzata ha confrontato con l'originale e ha firmato.</p>
+
+<p>Le persone usano «copia scansionata» in modo generico, e i tre termini si confondono in moduli, email delle risorse umane ed elenchi di documenti per il visto. Le differenze contano, perché chi chiede l'una non si accontenta delle altre.</p>
+
+<div class="table-wrap"><table><caption>Copia scansionata, fotocopia e copia autenticata a confronto</caption>
+<thead><tr><th scope="col">Termine</th><th scope="col">Supporto</th><th scope="col">Chi la produce</th><th scope="col">Cosa dimostra</th></tr></thead>
+<tbody>
+<tr><th scope="row">Copia scansionata</th><td>File digitale (PDF, JPEG, TIFF)</td><td>Chiunque abbia uno scanner o un telefono</td><td>Che esiste un'immagine del documento; nulla sulla sua autenticità</td></tr>
+<tr><th scope="row">Fotocopia</th><td>Carta</td><td>Chiunque abbia una fotocopiatrice</td><td>Lo stesso: è una riproduzione, non l'originale</td></tr>
+<tr><th scope="row">Copia autenticata (conforme)</th><td>Carta, a volte scansionata in seguito</td><td>Un professionista che ha visto l'originale</td><td>Che la copia corrisponde all'originale, sulla parola di quella persona</td></tr>
+<tr><th scope="row">Originale</th><td>Carta o file digitale nativo</td><td>Chi lo emette</td><td>Il documento stesso</td></tr>
+</tbody></table></div>
+
+<p>Il governo britannico spiega la certificazione in modo semplice: «Puoi certificare un documento come copia conforme facendolo firmare e datare da un professionista, per esempio un avvocato» (<a href="https://www.gov.uk/certifying-a-document" target="_blank" rel="noopener">GOV.UK, Certifying a document</a>). La copia scansionata di quella pagina certificata resta una copia scansionata; la certificazione vive sulla carta, con la firma e la data.</p>
+
+<p>Quindi, quando un proprietario di casa, un datore di lavoro o una scuola ti dice «mandami una copia scansionata», intende quasi sempre «un'immagine digitale nitida del foglio, in PDF». Quando invece parla di «copia autenticata», una scansione da sola non basta, per quanto realistica possa sembrare.</p>
+
+<h2 id="how-to-tell-if-a-pdf-is-scanned">Come capire se un PDF è scansionato?</h2>
+<p>Per capire se un PDF è scansionato, prova a selezionare una parola sulla pagina e a cercare una parola che vedi. Se non si evidenzia nulla, il PDF è di sole immagini. Zoom, proprietà del documento, elenco dei font e dimensione del file confermano poi se il file è scansionato, digitale o scansionato con OCR.</p>
+
+<p>I primi due controlli richiedono meno di 10 secondi e funzionano in qualsiasi visualizzatore PDF, compresi il visualizzatore integrato in Google Chrome e Microsoft Edge e Anteprima di macOS. Gli altri richiedono un minuto e risolvono i casi dubbi.</p>
+
+<ol class="step-list">
+<li><strong>Prova a selezionare il testo.</strong> Trascina il cursore lungo una riga. In un PDF nato digitale o con OCR, le singole parole si evidenziano. In un PDF di sole immagini non si evidenzia nulla, oppure alcuni visualizzatori disegnano un rettangolo intorno all'intera immagine della pagina.</li>
+<li><strong>Cerca con Ctrl+F o Cmd+F.</strong> Digita una parola caratteristica che vedi chiaramente a pagina uno. Zero risultati per una parola che è lì, ben visibile, significa che non c'è un livello di testo. Un risultato indica testo vero o un livello OCR.</li>
+<li><strong>Porta lo zoom al 400%.</strong> Osserva il bordo di una lettera. Il testo vettoriale resta nitidissimo a qualsiasi ingrandimento. Una pagina scansionata mostra scalini di pixel, sfumature grigie morbide, puntini e a volte i blocchi tipici del JPEG intorno alle lettere.</li>
+<li><strong>Apri le proprietà del documento.</strong> Nel visualizzatore PDF di Chrome usa il menu con i tre puntini e scegli Proprietà del documento; in Anteprima di macOS usa Strumenti, poi Mostra Inspector. Il campo del produttore o dell'applicazione indica spesso uno scanner, il modello di una fotocopiatrice, una funzione di scansione del telefono o un motore OCR. Un programma di videoscrittura o «Print to PDF» fa pensare a un file nato digitale.</li>
+<li><strong>Controlla l'elenco dei font.</strong> I software PDF per desktop mostrano una scheda Font nelle proprietà del documento. Un PDF nato digitale elenca i caratteri che usa. Una scansione di sole immagini non ne elenca nessuno. Una scansione con OCR spesso ne elenca uno solo, usato unicamente per il livello invisibile.</li>
+<li><strong>Confronta la dimensione per pagina.</strong> Dividi la dimensione del file per il numero di pagine. Un PDF di testo di solito resta sotto i 50 KB a pagina. Una scansione in scala di grigi o a colori va spesso da diverse centinaia di KB a oltre 1 MB a pagina. Le scansioni bitonali sono compatte, quindi la dimensione è l'indizio più debole.</li>
+</ol>
+
+<p>Il manuale sull'accessibilità della Cleveland State University consiglia lo stesso rapido test di ricerca: «Se la parola viene evidenziata sulla pagina, allora il documento contiene testo ricercabile e non è un'immagine scansionata di testo» (<a href="https://pressbooks.ulib.csuohio.edu/accessibility/chapter/chapter-4-2-the-difference-between-an-accessible-pdf-and-a-scanned-image-of-text/" target="_blank" rel="noopener">Heather Caprette, Cleveland State University</a>).</p>
+
+<div class="callout callout-tip"><strong>Come leggere risultati contrastanti</strong>Il testo si seleziona ma lo zoom mostra i pixel: PDF scansionato con OCR. Il testo si seleziona e lo zoom resta nitido: nato digitale. Non si seleziona nulla e lo zoom mostra i pixel: sole immagini. Non si seleziona nulla ma i bordi restano nitidi: testo convertito in contorni vettoriali, un raro quarto caso che, per la ricerca, si comporta come una scansione.</div>
+
+<p>I metadati sono un indizio, non una prova. I campi produttore e creatore si possono modificare con molti strumenti, compreso il nostro, quindi fidati più di come si comporta il contenuto della pagina con la selezione e lo zoom che di ciò che dice il pannello delle proprietà.</p>
+
+<h2 id="accessibility-and-search">Perché i documenti scansionati sono difficili da cercare e leggere?</h2>
+<p>I documenti scansionati sono difficili da cercare e leggere perché un PDF di sole immagini non contiene caratteri che un programma possa indicizzare. Motori di ricerca, ricerca sul computer, copia e incolla, strumenti di traduzione e screen reader hanno tutti bisogno di testo. Senza un livello OCR, il PDF scansionato è un'immagine utilizzabile solo da chi vede.</p>
+
+<p>La Web Accessibility Initiative del W3C è netta nella tecnica PDF7 delle linee guida WCAG: «Un documento costituito da immagini scansionate di testo è intrinsecamente inaccessibile, perché il contenuto del documento è fatto di immagini, non di testo ricercabile» (<a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF7" target="_blank" rel="noopener">W3C WAI, WCAG Technique PDF7</a>).</p>
+
+<p>La stessa pagina del W3C elenca ciò che si perde: «Le tecnologie assistive non possono leggere né estrarre le parole; gli utenti non possono selezionare, modificare, ridimensionare o reimpaginare il testo, né cambiare i colori del testo e dello sfondo; e gli autori non possono intervenire sul PDF per renderlo accessibile». Il rimedio indicato è l'OCR, così che dietro l'immagine esista un testo vero.</p>
+
+<p>L'ufficio per l'accessibilità della Georgetown University aggiunge la conseguenza pratica per chiunque si affidi alle tecnologie assistive: «I PDF scansionati sono una raccolta di immagini, quindi risultano illeggibili per la maggior parte degli screen reader standard» (<a href="https://accessibility.georgetown.edu/digital-accessibility/pdf-accessibility/" target="_blank" rel="noopener">Accessibility at Georgetown</a>).</p>
+
+<p>Nel settore pubblico c'è chi si è spinto oltre. Il Government Digital Service britannico sostiene che, rispetto all'HTML, le informazioni pubblicate in PDF sono più difficili da trovare, usare e mantenere aggiornate (<a href="https://gds.blog.gov.uk/2018/07/16/why-gov-uk-content-should-be-published-in-html-and-not-pdf/" target="_blank" rel="noopener">blog del GDS, GOV.UK</a>). Un PDF scansionato di sole immagini è la versione estrema di questo problema: nemmeno le parole sono leggibili dalla macchina.</p>
+
+<div class="table-wrap"><table><caption>Cosa funziona in ciascun tipo di PDF</caption>
+<thead><tr><th scope="col">Attività</th><th scope="col">Nato digitale</th><th scope="col">Scansione di sole immagini</th><th scope="col">Scansione + OCR</th></tr></thead>
+<tbody>
+<tr><th scope="row">Lettura con screen reader</th><td>Testo completo</td><td>Nessuna</td><td>Testo, spesso fuori ordine</td></tr>
+<tr><th scope="row">Reimpaginazione sul telefono</th><td>Possibile se con tag</td><td>No</td><td>Raramente</td></tr>
+<tr><th scope="row">Copiare una citazione</th><td>Esatta</td><td>Da ribattere a mano</td><td>Può contenere errori di OCR</td></tr>
+<tr><th scope="row">Trovato dalla ricerca sul computer</th><td>Sì</td><td>Solo per nome del file</td><td>Sì</td></tr>
+<tr><th scope="row">Traduzione automatica</th><td>Sì</td><td>Serve prima l'OCR</td><td>Sì</td></tr>
+</tbody></table></div>
+
+<h2 id="ocr-explained">Che cosa fa l'OCR a un PDF scansionato?</h2>
+<p>L'OCR, il riconoscimento ottico dei caratteri, legge le forme delle lettere in un PDF scansionato e scrive il testo corrispondente in un livello invisibile dietro ogni immagine di pagina. La pagina ha esattamente lo stesso aspetto, ma diventa un PDF ricercabile: le parole si possono trovare, selezionare, copiare e leggere ad alta voce.</p>
+
+<p>La Federal Agencies Digital Guidelines Initiative lo definisce con precisione: «Il riconoscimento ottico dei caratteri (OCR) è il processo di conversione di un'immagine raster di testo in testo elettronico ricercabile» (<a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">FADGI Technical Guidelines, 3ª ed., 2023</a>). L'OCR funziona sul testo dattiloscritto e stampato e, in modo meno affidabile, su quello scritto a mano.</p>
+
+<h3>Cosa risolve l'OCR in un documento scansionato</h3>
+<ul>
+<li>La ricerca con Ctrl/Cmd+F e l'indicizzazione del testo completo iniziano a funzionare.</li>
+<li>Il testo si può selezionare, copiare e incollare in altri documenti.</li>
+<li>Gli screen reader hanno parole da pronunciare, il che soddisfa il rimedio di base indicato dalla tecnica PDF7 del W3C.</li>
+<li>I sistemi dei tribunali che richiedono atti con testo ricercabile possono accettare il file.</li>
+</ul>
+
+<h3>Cosa l'OCR non risolve</h3>
+<ul>
+<li><strong>Qualità dell'immagine.</strong> La pagina resta un'immagine, quindi con lo zoom si vedono ancora i pixel. La JMU osserva che, per chi ingrandisce, «il risultato diventa pixelato e distorto, perché l'eText si trova sotto l'immagine del testo».</li>
+<li><strong>Precisione.</strong> Sfocatura, inclinazione, bassa risoluzione e rumore a puntini causano errori di lettura come «rn» al posto di «m» o «1» al posto di «l». Il testo nascosto può essere sbagliato mentre l'immagine sembra corretta.</li>
+<li><strong>Struttura.</strong> Titoli, ordine di lettura, celle delle tabelle e testo alternativo delle immagini richiedono comunque tag inseriti a mano per un'accessibilità completa.</li>
+<li><strong>Dimensione del file.</strong> Le immagini delle pagine restano, quindi un PDF scansionato con OCR è pesante quasi quanto la versione di sole immagini.</li>
+</ul>
+
+<div class="callout callout-info"><strong>L'OCR lavora sull'immagine, non sulla carta</strong>La qualità del riconoscimento dipende dalla scansione. Una pagina pulita a 300 ppi con righe dritte viene riconosciuta molto meglio di una foto fatta con il telefono, storta e piena di rumore. Se una scansione dovrà passare per l'OCR, acquisiscila prima dritta e nitida.</div>
+
+<h2 id="when-you-need-a-scanned-copy">Quando enti e aziende chiedono una copia scansionata?</h2>
+<p>Enti e aziende chiedono una copia scansionata quando l'originale esiste su carta e serve loro una registrazione digitale: prove per pratiche di immigrazione, allegati per il tribunale, fascicoli di assunzione, contratti firmati e ricevute. Ognuno fissa le proprie regole su formato, risoluzione e dimensione del file, e alcuni tribunali richiedono PDF ricercabili invece di PDF di sole immagini.</p>
+
+<h3>Prove per l'immigrazione (USCIS)</h3>
+<p>L'U.S. Citizenship and Immigration Services accetta prove scansionate o fotografate per le domande online. Le sue istruzioni sono brevi: «Usa uno scanner o scatta una foto di ogni documento» e «Assicurati che ogni immagine allegata sia nitida e che tutto il testo sia leggibile» (<a href="https://www.uscis.gov/file-online/tips-for-filing-forms-online" target="_blank" rel="noopener">USCIS, Tips for Filing Forms Online</a>). Ogni file può pesare fino a 12 MB, in formato PDF, JPG o JPEG, con TIF o TIFF accettati per alcuni moduli.</p>
+
+<h3>Atti depositati nei tribunali federali (CM/ECF)</h3>
+<p>I sistemi federali di deposito telematico accettano solo PDF, e molti tribunali preferiscono i file nati digitali. Il Southern District of Florida stabilisce che «gli atti e i documenti principali depositati elettronicamente in CM/ECF devono essere in formato PDF con testo ricercabile» (<a href="https://www.flsd.uscourts.gov/all-faqs/CMECF" target="_blank" rel="noopener">S.D. Fla. CM/ECF FAQ</a>). I PDF scansionati servono soprattutto per gli allegati e per i documenti cartacei firmati che non hanno un originale digitale.</p>
+
+<p>Impostazioni di scansione e limiti di dimensione variano da un tribunale all'altro. Il Western District of Washington richiede una scansione a 300 dpi, in bianco e nero a meno che il colore non sia essenziale, e fissa un limite di 100 MB per documento (<a href="https://www.wawd.uscourts.gov/attorneys/cm-ecf-faqs/Technical" target="_blank" rel="noopener">FAQ tecniche del W.D. Wash.</a>). Il <a href="https://www.mnd.uscourts.gov/sites/mnd/files/Criminal-ECF-Procedures-Guide.pdf" target="_blank" rel="noopener">District of Minnesota</a> limita ogni allegato a 35 MB nelle sue procedure ECF per i procedimenti penali.</p>
+
+<h3>Risorse umane, proprietari di casa, scuole e banche</h3>
+<p>Datori di lavoro e proprietari di casa di solito vogliono una copia scansionata di un documento d'identità, di un diploma, di una lettera di assunzione firmata o di una pagina del contratto d'affitto. Raramente pubblicano regole tecniche; la maggior parte cita un limite per gli allegati email e chiede che ogni parola sia leggibile. Quando un portale non indica limiti, un PDF in scala di grigi a 300 dpi sotto i 10 MB è un valore predefinito ragionevole secondo la nostra stima, non una regola ufficiale.</p>
+
+<div class="table-wrap"><table><caption>Requisiti comuni per la copia scansionata, per richiedente</caption>
+<thead><tr><th scope="col">Richiedente</th><th scope="col">Formato</th><th scope="col">Regola su dimensione o risoluzione</th><th scope="col">Testo ricercabile richiesto?</th></tr></thead>
+<tbody>
+<tr><th scope="row">USCIS, domande online</th><td>PDF, JPG, JPEG (TIF/TIFF per alcuni moduli)</td><td>12 MB per file</td><td>No; il testo deve essere leggibile</td></tr>
+<tr><th scope="row">Tribunale W.D. Wash.</th><td>PDF</td><td>300 dpi, B/N; 100 MB per documento</td><td>Dipende dal tipo di documento</td></tr>
+<tr><th scope="row">Tribunale S.D. Fla.</th><td>PDF</td><td>Si applicano i limiti del tribunale</td><td>Sì, per i documenti principali</td></tr>
+<tr><th scope="row">D. Minn., ECF penale</th><td>PDF</td><td>35 MB per allegato</td><td>Verifica le regole locali</td></tr>
+<tr><th scope="row">Datore di lavoro o proprietario di casa</th><td>PDF o immagine</td><td>Di solito un limite per le email</td><td>Raramente</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-tip"><strong>Riduci il peso del file</strong>Per i documenti di testo, la scala di grigi o il bitonale a 300 dpi sono di solito l'opzione leggibile più leggera. Le scansioni a colori di un semplice testo possono pesare molte volte tanto senza aggiungere informazioni. La nostra guida su <a href="/blog/convert-color-pdf-to-black-and-white/">come convertire un PDF a colori in bianco e nero</a> spiega i compromessi.</div>
+
+<h2 id="scanned-pdf-and-pdf-a">Un PDF scansionato si può archiviare come PDF/A?</h2>
+<p>Un PDF scansionato si può salvare come PDF/A, la versione di archiviazione del PDF definita dalla norma ISO 19005, perché il PDF/A ammette immagini di pagina. Il PDF/A aggiunge regole per la leggibilità a lungo termine, come i font incorporati e l'assenza di cifratura, ma non rende ricercabile una pagina di sole immagini. L'OCR è un passaggio separato.</p>
+
+<p>Il PDF/A è stato pubblicato per la prima volta il 1° ottobre 2005 e vieta le funzioni che rendono i file difficili da aprire a distanza di decenni, come il collegamento ai font esterni e la cifratura (<a href="https://en.wikipedia.org/wiki/PDF/A" target="_blank" rel="noopener">Wikipedia, PDF/A</a>). Microsoft Office può esportare direttamente file conformi alla ISO 19005-1 dalle opzioni di salvataggio in PDF.</p>
+
+<p>I tribunali che richiedono il PDF/A spesso scoraggiano del tutto la scansione. L'Eastern District of Oklahoma raccomanda che, per contenere la dimensione dei file e garantire un testo ricercabile, i documenti PDF/A vengano creati con un programma di videoscrittura invece di essere stampati e poi scansionati (<a href="https://www.oked.uscourts.gov/pdfa-frequently-asked-questions" target="_blank" rel="noopener">FAQ sul PDF/A dell'E.D. Okla.</a>).</p>
+
+<dl class="spec-list">
+<dt>PDF/A nato digitale</dt><dd>Il più leggero e completamente ricercabile; la scelta migliore quando esiste un originale digitale.</dd>
+<dt>PDF/A scansionato con OCR</dt><dd>Adatto all'archiviazione e ricercabile; la scelta giusta per i documenti che esistono solo su carta.</dd>
+<dt>PDF/A di sole immagini</dt><dd>Valido per la conservazione, ma non ricercabile né accessibile.</dd>
+</dl>
+
+<h2 id="digital-pdf-to-scanned-look">Come si dà a un PDF digitale l'aspetto di un PDF scansionato?</h2>
+<p>Un PDF digitale assume l'aspetto di un PDF scansionato quando ogni pagina viene rasterizzata in un'immagine e riceve le imperfezioni di un vero scanner: una leggera rotazione, sfocatura, rumore, un tono grigio o da carta. Il risultato è un PDF di sole immagini che si comporta come una scansione, senza stampare nulla e senza possedere uno scanner.</p>
+
+<p>È esattamente ciò che fa il nostro <a href="/scan">strumento effetto scansione</a> gratuito. Visualizza ogni pagina del PDF nel tuo browser, applica gli effetti che scegli e salva ogni pagina come immagine JPEG all'interno di un nuovo PDF. I file vengono elaborati in locale e non vengono caricati su un server.</p>
+
+<dl class="spec-list">
+<dt>Rotazione</dt><dd>Da −10° a 10°, predefinito 1°, più una variazione casuale per pagina fino a 10°.</dd>
+<dt>Sfocatura</dt><dd>Da 0 a 1, predefinito 0,3: ammorbidisce i bordi vettoriali come fa l'ottica di uno scanner.</dd>
+<dt>Rumore</dt><dd>Da 0 a 1, predefinito 0,1: aggiunge una puntinatura simile a quella di un sensore.</dd>
+<dt>Luminosità e contrasto</dt><dd>Da 0 a 2 ciascuno, predefinito 1.</dd>
+<dt>Ingiallimento</dt><dd>Da 0 a 2, predefinito 0: dà alla pagina la tinta della carta invecchiata.</dd>
+<dt>Spazio colore</dt><dd>Scala di grigi (predefinito) o A colori.</dd>
+<dt>Risoluzione</dt><dd>Da 1× a 3×; le pagine PDF vengono visualizzate a 72 dpi moltiplicati per il fattore di scala, quindi 2× corrisponde a circa 144 dpi e 3× a circa 216 dpi.</dd>
+</dl>
+
+<p>Poiché il risultato è di sole immagini, eredita tutte le proprietà descritte sopra: niente testo selezionabile, niente ricerca, file più pesanti, nessuna lettura con lo screen reader. È proprio ciò che serve a chi vuole che un documento sembri una copia scansionata, ed è uno svantaggio per chi ha bisogno di poterci cercare dentro. Conserva il file digitale originale.</p>
+
+<p>Per il procedimento completo, compresi i compromessi tra risoluzione e dimensione del file, leggi <a href="/blog/pdf-to-scanned-pdf/">come convertire un PDF in PDF scansionato</a>. Per tutti e sei i metodi, dalla stampa con successiva scansione alle opzioni integrate nel sistema operativo, consulta <a href="/blog/how-to-make-a-pdf-look-scanned/">come far sembrare un PDF scansionato</a>. Parti invece da una foto fatta con il telefono? La guida su <a href="/blog/image-to-scanned-pdf/">come trasformare un'immagine in un PDF scansionato</a> tratta JPG e PNG.</p>
+
+<div class="callout callout-warn"><strong>Usa l'aspetto scansionato in modo onesto</strong>L'effetto scansione cambia l'aspetto di un file, non la sua autenticità. Non usarlo per falsificare o alterare documenti ufficiali, documenti d'identità o firme che non sono tuoi. Alcuni tribunali ed enti richiedono PDF con testo ricercabile, quindi un file di sole immagini può essere respinto: verifica le regole prima dell'invio.</div>
+
+<div class="expert-quote"><blockquote>Abbiamo creato il nostro strumento per aggiungere un aspetto scansionato, e la domanda che riceviamo più spesso in realtà è: «Che cosa ho appena creato?». La risposta onesta è un PDF di sole immagini. Sembra carta, ma le parole sono pixel. Se chi legge deve poterci cercare dentro o ascoltarlo letto ad alta voce, tieni accanto l'originale digitale, oppure esegui l'OCR in un secondo momento. Preferiamo che le persone lo sappiano prima di premere Scarica.</blockquote><cite><strong>Il team Make PDF look scanned</strong> — creatori dello strumento web e dell'estensione Chrome</cite></div>
+
+<h2 id="scanned-document-glossary">Glossario del documento scansionato: quali termini contano?</h2>
+<p>Un documento scansionato ha un suo vocabolario: dpi e ppi, profondità di colore, bitonale, OCR, rasterizzare, PDF/A e JBIG2. Conoscere questi sette termini basta per capire qualsiasi requisito di scansione di un tribunale, di un ente o di un datore di lavoro e per valutare un PDF scansionato che ricevi.</p>
+
+<dl class="spec-list">
+<dt>dpi / ppi</dt><dd>Punti o pixel per pollice: quanti campioni dell'immagine coprono un pollice di carta. La NARA richiede almeno 300 ppi per i documenti testuali moderni e 400 ppi per le fotografie e i documenti con dettagli fini. La geometria di pagina del PDF usa 72 punti per pollice, ed è per questo che una visualizzazione a 1× equivale a 72 dpi.</dd>
+<dt>Profondità di colore</dt><dd>I bit memorizzati per ogni pixel. Il bitonale è a 1 bit, la scala di grigi a 8 bit (256 tonalità) e una tipica scansione a colori a 24 bit (8 bit per ciascuno dei tre canali).</dd>
+<dt>Bitonale</dt><dd>La definizione della FADGI: «Immagini digitali prodotte usando solo due colori, il bianco e il nero». È il formato leggibile più leggero per il semplice testo.</dd>
+<dt>OCR</dt><dd>Riconoscimento ottico dei caratteri: un software che trasforma le forme delle lettere di un'immagine in testo leggibile dalla macchina, creando un PDF ricercabile.</dd>
+<dt>Rasterizzare</dt><dd>Convertire testo e forme vettoriali in una griglia di pixel. Rasterizzare un PDF digitale lo trasforma in un PDF di sole immagini.</dd>
+<dt>PDF/A</dt><dd>La norma ISO 19005, il sottoinsieme del PDF pensato per l'archiviazione, pubblicato nel 2005; vieta funzioni come la cifratura e il collegamento ai font esterni.</dd>
+<dt>JBIG2</dt><dd>Un metodo di compressione per scansioni bitonali che memorizza una sola volta i simboli ripetuti. Nel 2013 BBC News ha riferito che alcune fotocopiatrici da ufficio che usavano una modalità JBIG2 con perdita alteravano le cifre nelle scansioni, spesso trasformando un 6 in un 8; in un test la misura di una stanza di 21,11 m era diventata 14,13 m.</dd>
+<dt>PDF di sole immagini</dt><dd>Un PDF scansionato senza alcun livello di testo.</dd>
+<dt>PDF ricercabile</dt><dd>Un PDF con testo vero o testo OCR che si può cercare e selezionare.</dd>
+</dl>
+
+<p>Il caso JBIG2 è l'argomento più forte a favore della conservazione degli originali. Una copia scansionata è un'immagine, e le immagini possono essere alterate dalla compressione senza che nessuno se ne accorga (<a href="https://www.bbc.com/news/technology-23588202" target="_blank" rel="noopener">BBC News, 2013</a>). Anche la NARA considera il rumore un artefatto indesiderato che «non fa parte del materiale di origine» (<a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">36 CFR 1236 Subpart E</a>).</p>
+
+<h2 id="faq">Domande frequenti sul PDF scansionato: cos'altro si chiede?</h2>
+<p>Queste domande sul PDF scansionato arrivano soprattutto da chi ha ricevuto un file, deve inviare una copia scansionata o deve rispettare una regola di un tribunale o di un ente. Ogni risposta è autonoma, quindi puoi passare direttamente a quella che corrisponde alla tua situazione e agire di conseguenza.</p>
+
+<div class="faq-item"><p class="faq-q">Che cos'è un PDF scansionato, in parole semplici?</p><p class="faq-a">Un PDF scansionato è un PDF composto da foto di pagine di carta. Il testo che vedi fa parte di un'immagine, quindi non puoi selezionarlo né cercarlo, a meno che non sia stato applicato l'OCR.</p></div>
+<div class="faq-item"><p class="faq-q">Un PDF scansionato è la stessa cosa di una copia scansionata?</p><p class="faq-a">Quasi. Una copia scansionata è qualsiasi immagine digitale di un documento cartaceo, e il PDF scansionato è il formato di file più comune per consegnarla. Una copia scansionata può anche essere un JPEG o un TIFF.</p></div>
+<div class="faq-item"><p class="faq-q">Come capisco in 10 secondi se un PDF è scansionato?</p><p class="faq-a">Prova a selezionare una parola, poi premi Ctrl+F o Cmd+F e cerca una parola che vedi. Se non si evidenzia nulla e la ricerca non trova niente, il PDF è una scansione di sole immagini. Porta lo zoom al 400% per averne conferma: il testo scansionato appare pixelato.</p></div>
+<div class="faq-item"><p class="faq-q">Un PDF scansionato può essere ricercabile?</p><p class="faq-a">Sì. L'OCR aggiunge un livello di testo invisibile dietro le immagini delle pagine e trasforma un PDF scansionato in un PDF ricercabile. La pagina continua a sembrare una scansione, e nel testo nascosto possono comparire parole lette male.</p></div>
+<div class="faq-item"><p class="faq-q">Perché non riesco a copiare il testo dal mio PDF?</p><p class="faq-a">Molto probabilmente il PDF è una scansione senza OCR, quindi non ci sono caratteri da copiare. Le FAQ del tribunale del Southern District of Florida dicono la stessa cosa: se un PDF non ha testo ricercabile, il suo testo non si può copiare. Esegui l'OCR o chiedi l'originale digitale.</p></div>
+<div class="faq-item"><p class="faq-q">I PDF scansionati sono accessibili agli screen reader?</p><p class="faq-a">Non senza OCR. Le linee guida del W3C definiscono le scansioni di sole immagini intrinsecamente inaccessibili. Dopo l'OCR gli screen reader possono leggere il testo, ma un'accessibilità completa richiede anche i tag per titoli, ordine di lettura e tabelle.</p></div>
+<div class="faq-item"><p class="faq-q">Perché un PDF scansionato è così pesante?</p><p class="faq-a">Ogni pagina è un'immagine completa. Una pagina in scala di grigi a 400 ppi può superare 1 MB, mentre una pagina di testo creata con un programma di videoscrittura spesso pesa meno di 50 KB. Scansionare a 300 ppi in scala di grigi o in bianco e nero contiene la dimensione.</p></div>
+<div class="faq-item"><p class="faq-q">Che risoluzione deve avere un documento scansionato?</p><p class="faq-a">Per il testo dattiloscritto o stampato, 300 dpi è il requisito standard nei tribunali federali statunitensi e il minimo fissato dalla NARA per i documenti testuali. Foto e dettagli fini richiedono 400 ppi.</p></div>
+<div class="faq-item"><p class="faq-q">Una copia scansionata è una copia legale o autenticata?</p><p class="faq-a">No, una copia scansionata da sola non dimostra nulla sull'autenticità. Una copia autenticata viene firmata e datata da un professionista che ha visto l'originale, come spiega GOV.UK. Chiedi a chi la richiede di quale tipo ha bisogno.</p></div>
+<div class="faq-item"><p class="faq-q">Posso far sembrare un PDF digitale un PDF scansionato?</p><p class="faq-a">Sì. Lo <a href="/scan">strumento gratuito Make PDF look scanned</a> rasterizza ogni pagina e aggiunge rotazione, sfocatura, rumore e tono della carta nel tuo browser. Il risultato è un PDF di sole immagini, quindi conserva l'originale se ti serve la ricerca.</p></div>
+<div class="faq-item"><p class="faq-q">Un PDF scansionato deve essere per forza in PDF/A?</p><p class="faq-a">Solo se lo chiede il destinatario. Alcuni tribunali e archivi richiedono il PDF/A per la conservazione a lungo termine. Un PDF scansionato si può salvare come PDF/A, idealmente con OCR, così è anche ricercabile.</p></div>
+<div class="faq-item"><p class="faq-q">Posso scansionare più PDF contemporaneamente?</p><p class="faq-a">Con il nostro strumento sì: la <a href="/scan/bulk">Scansione multipla</a> elabora più file e li scarica in un unico ZIP, con un PDF scansionato per ogni file in ingresso.</p></div>
+
+<h2 id="verdict">PDF scansionato: qual è la risposta in breve?</h2>
+<p>Un PDF scansionato è l'immagine di un foglio di carta racchiusa in un PDF. Verificalo selezionando e cercando il testo, aggiungi l'OCR quando ti servono ricerca o accessibilità, invia un PDF nato digitale quando un tribunale lo preferisce e usa un aspetto scansionato solo quando al lettore serve l'aspetto, non l'autenticità.</p>
+
+<p>Se ti serve proprio l'aspetto, apri lo <a href="/scan">strumento di scansione gratuito</a>, mantieni lo Spazio colore predefinito Scala di grigi e la Risoluzione 2× e controlla l'anteprima prima di scaricare.</p>

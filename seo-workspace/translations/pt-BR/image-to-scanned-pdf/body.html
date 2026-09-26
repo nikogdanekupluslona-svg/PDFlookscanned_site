@@ -1,0 +1,242 @@
+<p class="lead">Para transformar uma imagem em PDF digitalizado, abra a <a href="/scan">ferramenta de escaneamento gratuita</a>, solte um JPG, PNG ou foto do celular, defina uma leve inclinação, ruído suave e cor cinza, e baixe o resultado. A conversão de imagem em PDF digitalizado roda no seu navegador, posiciona a imagem em uma página A4 e salva um PDF com estilo de escaneado.</p>
+
+<p>Uma foto de um formulário assinado raramente parece um escaneamento de escritório: as cores ficam erradas, as bordas ficam tortas e o arquivo é um JPG, não um PDF. Este guia cobre toda a rota, da câmera ao PDF digitalizado: preparar a foto, a matemática dos pixels, os formatos e a combinação de várias imagens. Os fatos vêm do USCIS, do National Archives dos EUA (NARA), da FADGI, do suporte da Apple e do código-fonte da nossa ferramenta.</p>
+
+<nav class="toc" aria-label="Sumário"><h2>Sumário</h2><ol>
+<li><a href="#quick-answer">Qual é o jeito mais rápido de transformar imagem em PDF digitalizado?</a></li>
+<li><a href="#how-to-convert">Como transformar uma imagem em PDF digitalizado?</a></li>
+<li><a href="#prepare-phone-photo">Como você deve fotografar um documento com o celular?</a></li>
+<li><a href="#pixels-and-page-size">Quantos pixels uma página de PDF digitalizado precisa?</a></li>
+<li><a href="#image-formats">Quais formatos de imagem funcionam para JPG em PDF digitalizado?</a></li>
+<li><a href="#settings">Quais ajustes de escaneamento combinam com fotos x capturas de tela?</a></li>
+<li><a href="#several-images">Como colocar várias imagens em um único PDF digitalizado?</a></li>
+<li><a href="#file-size">Qual será o tamanho de um PDF digitalizado a partir de uma foto?</a></li>
+<li><a href="#checking">Como verificar o PDF digitalizado antes de enviar?</a></li>
+<li><a href="#mistakes">Quais erros estragam a conversão de imagem em PDF digitalizado?</a></li>
+<li><a href="#honest-use">Quando é adequado deixar uma imagem com cara de escaneado?</a></li>
+<li><a href="#faq">Transformar imagem em PDF digitalizado: perguntas frequentes</a></li>
+</ol></nav>
+
+<h2 id="quick-answer">Qual é o jeito mais rápido de transformar imagem em PDF digitalizado?</h2>
+<p>O jeito mais rápido de transformar imagem em PDF digitalizado é uma ferramenta no navegador que aceita a imagem diretamente. O Make PDF look scanned pega um JPG ou PNG, coloca-o em uma página de PDF, adiciona inclinação, desfoque, ruído e tom cinza no estilo de scanner, e exporta um novo PDF em cerca de um minuto, sem upload e sem cadastro.</p>
+
+<dl class="spec-list">
+<dt>Entrada</dt><dd>JPG, PNG, WebP, SVG, GIF ou BMP (um arquivo de imagem vira uma página)</dd>
+<dt>Saída</dt><dd>Um PDF cuja página é uma imagem JPEG com o efeito de scanner incorporado</dd>
+<dt>Tamanho da página</dt><dd>A4, retrato ou paisagem, conforme a orientação da imagem</dd>
+<dt>Onde roda</dt><dd>Localmente no seu navegador; o arquivo não é enviado a um servidor de processamento</dd>
+<dt>Custo</dt><dd>Grátis, sem conta, sem marca d'água a menos que você adicione uma</dd>
+</dl>
+
+<p>Se a sua imagem já é um PDF (por exemplo, um app de escaneamento exportou uma), pule a conversão e leia nosso guia sobre <a href="/blog/pdf-to-scanned-pdf/">transformar um PDF em PDF digitalizado</a>. Se você quiser o contexto mais amplo sobre o próprio formato, veja <a href="/blog/what-is-a-scanned-pdf/">o que é um PDF digitalizado</a>.</p>
+
+<h2 id="how-to-convert">Como transformar uma imagem em PDF digitalizado?</h2>
+<p>Para transformar uma imagem em PDF digitalizado, prepare uma foto reta e recortada, abra a página do scanner no Chrome, no Edge ou em um navegador de celular, carregue o arquivo, ajuste o efeito de scanner observando a prévia ao vivo e baixe o PDF. O procedimento completo abaixo leva de um a dois minutos por imagem.</p>
+
+<ol class="step-list">
+<li><strong>Prepare a imagem.</strong> Corte a foto até as bordas do papel e endireite-a com o editor nativo do celular ou o scanner de documentos. A ferramenta não corta, não corrige inclinação nem perspectiva, então o que você carrega é o que será escaneado.</li>
+<li><strong>Exporte fotos HEIC para JPG.</strong> Fotos de iPhone costumam ser arquivos HEIC. Exporte-as ou compartilhe-as como JPG primeiro, porque a ferramenta aceita JPG, PNG, WebP, SVG, GIF e BMP, mas não HEIC.</li>
+<li><strong>Abra o scanner.</strong> Acesse <a href="/scan">pdflookscanned.com/scan</a> ou abra o painel lateral da extensão do Chrome. Os dois usam o mesmo motor e funcionam offline depois do primeiro carregamento.</li>
+<li><strong>Solte a imagem.</strong> Arraste o JPG ou o PNG até a área de upload. A ferramenta incorpora a imagem em uma página A4, retrato para imagens altas e paisagem para imagens largas, redimensionada para caber e centralizada.</li>
+<li><strong>Defina a aparência de escaneado.</strong> Comece com Espaço de cor Cinza, Rotação 1°, Variação da rotação 0,5°, Desfoque 0,3 e Ruído 0,1. Aumente o Amarelado para 0,2 ou 0,3 se quiser um tom de papel envelhecido.</li>
+<li><strong>Escolha uma resolução.</strong> Mantenha 2× para documentos normais; escolha 2,5× ou 3× quando a imagem tiver letras pequenas, carimbos ou assinaturas que precisem continuar legíveis.</li>
+<li><strong>Adicione extras se precisar.</strong> Opcionalmente, posicione uma imagem de carimbo ou assinatura, uma marca d'água, ou edite o título e o autor do PDF no painel de metadados.</li>
+<li><strong>Baixe e confira.</strong> Salve o PDF digitalizado, abra-o no seu leitor de PDF habitual e dê zoom até 100% para confirmar que cada linha está legível.</li>
+</ol>
+
+<div class="callout callout-tip"><strong>Uma imagem, uma página</strong>Cada arquivo de imagem vira um PDF separado de uma única página. Para obter um PDF digitalizado com várias páginas a partir de várias fotos, primeiro combine as imagens em um único PDF com o sistema operacional, depois solte esse PDF na ferramenta. A <a href="#several-images">seção sobre várias imagens</a> mostra os cliques exatos.</div>
+
+<h2 id="prepare-phone-photo">Como você deve fotografar um documento com o celular?</h2>
+<p>Uma boa foto de celular de um documento é tirada diretamente de cima, sobre uma superfície escura e plana, com luz do dia uniforme e sem sombras, e recortada até as bordas do papel. Esse preparo importa mais do que qualquer filtro, porque o efeito de scanner copia qualquer falha que a foto já tenha, incluindo cantos dobrados e sombras de mãos.</p>
+
+<p>O USCIS, que aceita fotos de celular como evidência em protocolos online, define o padrão mínimo de forma simples: <a href="https://www.uscis.gov/file-online/tips-for-filing-forms-online" target="_blank" rel="noopener">"Certifique-se de que cada imagem anexada esteja nítida e que todo o texto esteja legível."</a> A mesma página orienta os requerentes a <a href="https://www.uscis.gov/file-online/tips-for-filing-forms-online" target="_blank" rel="noopener">"usar um scanner ou tirar fotos de cada documento."</a> Ou seja, uma foto cuidadosa é um ponto de partida aceito, não uma alternativa improvisada.</p>
+
+<h3>Luz, superfície e ângulo para transformar foto em PDF digitalizado</h3>
+<ul>
+<li><strong>Luz.</strong> Use luz do dia indireta perto de uma janela, ou duas lâmpadas em lados opostos. Uma única lâmpada no teto projeta a sombra do seu celular sobre a página.</li>
+<li><strong>Superfície.</strong> Coloque o papel branco sobre uma mesa mais escura para que as bordas fiquem fáceis de detectar e cortar. Achate as dobras sob um livro por um minuto antes.</li>
+<li><strong>Ângulo.</strong> Segure o celular paralelo à página, exatamente acima do centro dela. Inclinar o celular deixa a borda mais distante mais estreita do que a mais próxima.</li>
+<li><strong>Distância.</strong> Preencha o quadro com a página, deixando uma margem fina. Use a câmera principal, não o zoom digital.</li>
+<li><strong>Flash.</strong> Desligue o flash; ele cria um ponto de brilho intenso e reflexo em papel liso.</li>
+</ul>
+
+<p>A regra do ângulo tem uma base técnica. A FADGI, o grupo de trabalho federal de digitalização dos EUA, observa que <a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">"os comportamentos de inclinação na imagem capturada muitas vezes podem ser atribuídos à falta de paralelismo entre o plano focal da câmera e a base."</a> Em termos simples: se o celular não estiver paralelo ao papel, a página sai com formato trapezoidal, algo que nenhum scanner de mesa produziria.</p>
+
+<h3>Use o scanner de documentos nativo do iPhone ou do Android</h3>
+<p>Os celulares já incluem um modo de documento gratuito que corta e endireita para você. No iPhone ou iPad, o aplicativo Notas e o aplicativo Arquivos conseguem escanear um documento com a câmera, detectar a página no modo Automático e permitir que você ajuste os cantos. As instruções da Apple dizem: <a href="https://support.apple.com/en-us/108963" target="_blank" rel="noopener">"Depois, arraste os cantos para ajustar o escaneamento ao tamanho da página e toque em Manter Escaneamento."</a></p>
+
+<p>Muitos celulares Android oferecem um modo de documento semelhante dentro da câmera padrão ou do gerenciador de arquivos nativo, que detecta as bordas da página e corrige a perspectiva. Os nomes dos menus variam por fabricante, então procure uma opção "Documento" ou "Escanear". Salve o resultado como imagem ou PDF, depois passe-o pela <a href="/scan">ferramenta de efeito de scanner</a> para que ele pareça um escaneamento de mesa, em vez de uma captura de celular.</p>
+
+<h3>Corte e clareie a foto antes do efeito de scanner</h3>
+<p>Se você tirou uma foto comum, abra-a no editor de fotos do celular, use Cortar para remover a mesa e o controle de endireitar para nivelar as linhas de texto. Depois, aumente ligeiramente a exposição ou o brilho até o papel ficar próximo do branco, em vez de cinza-azulado. Os próprios controles deslizantes de Brilho e Contraste da ferramenta podem terminar o trabalho: Brilho 1,1 e Contraste 1,2 costumam clarear uma foto opaca sem perder traços finos.</p>
+
+<div class="callout callout-info"><strong>Por que clarear importa</strong>Um scanner de mesa ilumina a página de forma uniforme, a poucos milímetros de distância, então o papel sai quase branco. Uma foto de celular sob luz ambiente mostra o papel como cinza claro com um matiz de cor. Clarear o fundo é a única mudança que faz uma foto parecer um escaneamento.</div>
+
+<h2 id="pixels-and-page-size">Quantos pixels uma página de PDF digitalizado precisa?</h2>
+<p>Uma página de PDF digitalizado precisa que sua contagem de pixels corresponda ao tamanho do papel multiplicado pela resolução. Uma página no formato Carta (Letter) a 300 ppi tem 2.550 × 3.300 pixels, e uma página A4 a 300 ppi tem cerca de 2.480 × 3.508 pixels. A maioria das câmeras de celular captura mais que isso, então a resolução raramente é o ponto fraco.</p>
+
+<p>A matemática é uma única multiplicação: polegadas × pixels por polegada = pixels. O papel Carta tem 8,5 × 11 polegadas; o A4 tem 210 × 297 mm, ou cerca de 8,27 × 11,69 polegadas. Uma foto de celular típica de 12 megapixels tem 4.032 × 3.024 pixels, então uma página que preenche a maior parte do quadro fica em algo entre 250 e 350 ppi, dependendo de quanta mesa sobra ao redor dela.</p>
+
+<div class="table-wrap"><table>
+<caption>Dimensões em pixels para páginas inteiras nas resoluções de escaneamento mais comuns</caption>
+<thead><tr><th scope="col">Resolução</th><th scope="col">Carta dos EUA (8,5 × 11 pol.)</th><th scope="col">A4 (8,27 × 11,69 pol.)</th><th scope="col">Uso típico</th></tr></thead>
+<tbody>
+<tr><th scope="row">150 ppi</th><td>1.275 × 1.650 px</td><td>1.240 × 1.754 px</td><td>Leitura na tela, anexos de e-mail</td></tr>
+<tr><th scope="row">200 ppi</th><td>1.700 × 2.200 px</td><td>1.654 × 2.339 px</td><td>Nível de uma estrela da FADGI para documentos</td></tr>
+<tr><th scope="row">300 ppi</th><td>2.550 × 3.300 px</td><td>2.480 × 3.508 px</td><td>Escaneamentos padrão de escritório e tribunais</td></tr>
+<tr><th scope="row">400 ppi</th><td>3.400 × 4.400 px</td><td>3.307 × 4.677 px</td><td>Letras finas, fotos, arquivos-mestre de acervo</td></tr>
+</tbody>
+</table></div>
+
+<p>As regras federais de digitalização usam a mesma escala. O regulamento do NARA pede arquivos de imagem de registros textuais modernos com no mínimo 300 ppi, e 400 ppi para impressões fotográficas e registros em papel com detalhes finos, de acordo com o <a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">36 CFR Part 1236, Subpart E</a>. O sistema de estrelas da FADGI classifica documentos soltos em 200, 250, 300 e 400 ppi para seus níveis de uma a quatro estrelas.</p>
+
+<p>A contagem de pixels sozinha não garante qualidade, e o NARA diz isso diretamente: <a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">"A agência não pode depender apenas de especificações de equipamento, como os ajustes de ppi do scanner ou os megapixels do sensor da câmera, para garantir a qualidade da imagem digital."</a> Uma foto nítida de 2.000 pixels fica melhor do que uma foto borrada de 4.000 pixels, então o foco e a luz continuam vindo primeiro.</p>
+
+<h3>Qual resolução tem a saída de transformar imagem em PDF digitalizado?</h3>
+<p>A ferramenta renderiza cada página a 72 dpi multiplicados pelo ajuste de Resolução. Como cada imagem é colocada em uma página A4, o resultado é previsível: 1× dá cerca de 595 × 842 pixels, 2× cerca de 1.191 × 1.684 pixels (144 dpi), e 3× cerca de 1.786 × 2.526 pixels (216 dpi). Uma foto de origem maior que o tamanho em 3× não acrescenta detalhe extra ao resultado.</p>
+
+
+<h2 id="image-formats">Quais formatos de imagem funcionam para JPG em PDF digitalizado?</h2>
+<p>Transformar JPG em PDF digitalizado e PNG em PDF digitalizado funciona diretamente, porque a ferramenta incorpora esses dois formatos na página do PDF como eles são. WebP, SVG, GIF e BMP também funcionam, mas são convertidos primeiro para JPEG com a borda mais longa limitada a 2.200 pixels. HEIC não é suportado.</p>
+
+<div class="table-wrap"><table>
+<caption>Como cada formato de imagem é tratado no caminho até um PDF digitalizado</caption>
+<thead><tr><th scope="col">Formato</th><th scope="col">Aceito?</th><th scope="col">O que acontece primeiro</th><th scope="col">Melhor para</th></tr></thead>
+<tbody>
+<tr><th scope="row">JPG / JPEG</th><td>Sim</td><td>Incorporado sem recodificação, ajustado ao A4</td><td>Fotos de celular de documentos em papel</td></tr>
+<tr><th scope="row">PNG</th><td>Sim</td><td>Incorporado sem recodificação, ajustado ao A4</td><td>Capturas de tela, formulários exportados, texto nítido</td></tr>
+<tr><th scope="row">WebP</th><td>Sim</td><td>Convertido para JPEG (qualidade 0,92), borda mais longa até 2.200 px</td><td>Imagens salvas de sites</td></tr>
+<tr><th scope="row">SVG</th><td>Sim</td><td>Rasterizado para JPEG, borda mais longa até 2.200 px</td><td>Logotipos, diagramas, formulários vetoriais</td></tr>
+<tr><th scope="row">GIF / BMP</th><td>Sim</td><td>Convertido para JPEG, borda mais longa até 2.200 px</td><td>Arquivos antigos e exportações legadas</td></tr>
+<tr><th scope="row">HEIC / HEIF</th><td>Não</td><td>Exporte ou compartilhe como JPG primeiro</td><td>Originais da câmera do iPhone</td></tr>
+<tr><th scope="row">TIFF</th><td>Não</td><td>Salve como PNG ou JPG primeiro</td><td>Saída de scanners de mesa mais antigos</td></tr>
+</tbody>
+</table></div>
+
+<p>Qualquer área transparente em um WebP, SVG, GIF ou BMP convertido é preenchida com branco, o que combina com o papel. O limite de 2.200 pixels ainda é maior que a renderização de saída em 3× de uma página A4, então a conversão não reduz a nitidez final.</p>
+
+<h3>Como transformar uma foto HEIC do iPhone em JPG</h3>
+<p>No Mac, abra o arquivo HEIC no Pré-Visualização, escolha Arquivo → Exportar e selecione JPEG; o <a href="https://support.apple.com/guide/preview/convert-image-file-types-prvw1012/mac" target="_blank" rel="noopener">guia do Pré-Visualização da Apple</a> lista JPEG, PNG, PDF e TIFF entre os formatos de exportação. No iPhone, defina Ajustes → Câmera → Formatos como Mais Compatível para fotografar diretamente em JPG.</p>
+
+<h2 id="settings">Quais ajustes de escaneamento combinam com fotos x capturas de tela?</h2>
+<p>Os ajustes de escaneamento para fotos de celular devem ficar leves, porque uma foto já tem suavidade e granulação naturais. Capturas de tela e imagens exportadas precisam de um pouco mais de efeito, porque texto perfeitamente nítido parece digital demais. Em ambos os casos, cor cinza, inclinação abaixo de 1,5° e ruído em 0,2 ou menos parecem um scanner de escritório comum.</p>
+
+<div class="table-wrap"><table>
+<caption>Ajustes de escaneamento iniciais por tipo de imagem de origem</caption>
+<thead><tr><th scope="col">Ajuste (intervalo · padrão)</th><th scope="col">Foto de celular de papel</th><th scope="col">Captura de tela ou PNG exportado</th><th scope="col">ID colorido ou formulário carimbado</th></tr></thead>
+<tbody>
+<tr><th scope="row">Espaço de cor (Cinza/Colorido · Cinza)</th><td>Cinza</td><td>Cinza</td><td>Colorido</td></tr>
+<tr><th scope="row">Rotação (−10°…10° · 1°)</th><td>0,5°</td><td>1°–1,5°</td><td>0,5°</td></tr>
+<tr><th scope="row">Variação da rotação (0…10° · 0,5°)</th><td>0,5°</td><td>0,5°</td><td>0°</td></tr>
+<tr><th scope="row">Desfoque (0…1 · 0,3)</th><td>0,1–0,2</td><td>0,3–0,4</td><td>0,2</td></tr>
+<tr><th scope="row">Ruído (0…1 · 0,1)</th><td>0,05–0,1</td><td>0,1–0,2</td><td>0,05</td></tr>
+<tr><th scope="row">Brilho (0…2 · 1)</th><td>1,05–1,15</td><td>1</td><td>1</td></tr>
+<tr><th scope="row">Contraste (0…2 · 1)</th><td>1,1–1,3</td><td>1–1,1</td><td>1,05</td></tr>
+<tr><th scope="row">Amarelado (0…2 · 0)</th><td>0–0,2</td><td>0,1–0,3</td><td>0</td></tr>
+<tr><th scope="row">Resolução (1×…3× · 2×)</th><td>2× ou 2,5×</td><td>2×</td><td>3×</td></tr>
+</tbody>
+</table></div>
+
+<p>A lógica por trás da tabela é simples. Uma foto de celular já carrega ruído do sensor e suavidade da lente, então adicionar o desfoque padrão em cima disso pode deixar o texto pequeno mole. Aumente o Contraste em vez disso, o que escurece o texto e empurra o papel cinza em direção ao branco. Uma captura de tela é o oposto: suas bordas são perfeitamente nítidas, então um pouco mais de desfoque e ruído são o que fazem ela parecer papel.</p>
+
+<p>A opção Borda desenha uma fina linha escura ao redor da página; use-a com moderação. Cada artefato é explicado no nosso <a href="/blog/scan-effect/">guia de efeito de scanner</a>.</p>
+
+<div class="expert-quote"><blockquote>Vemos o mesmo padrão em quase toda imagem que as pessoas soltam na ferramenta: o efeito de scanner não é o problema, a foto é. Uma foto torta, com sombra e ruído no máximo ainda parece uma foto de celular. Uma página plana, cortada e clareada, com Rotação em 0,5°, Desfoque em 0,2 e cor Cinza, parece que saiu de um scanner de mesa. Ajuste a foto primeiro e mantenha o efeito sutil.</blockquote><cite><strong>Equipe Make PDF look scanned</strong> — criadores da ferramenta web e da extensão do Chrome</cite></div>
+
+<h2 id="several-images">Como colocar várias imagens em um único PDF digitalizado?</h2>
+<p>Para colocar várias imagens em um único PDF digitalizado, primeiro combine-as em um único PDF comum com as ferramentas nativas do macOS ou do Windows, depois solte esse PDF no scanner. A ferramenta mantém a ordem das páginas e aplica o efeito de scanner a cada página, com uma pequena inclinação aleatória por página.</p>
+
+<h3>Combine imagens em um único PDF no Mac com o Pré-Visualização</h3>
+<ol>
+<li>Nomeie as imagens na ordem das páginas (01.jpg, 02.jpg…), selecione todas no Finder e abra-as no Pré-Visualização.</li>
+<li>Na barra lateral de Miniaturas, arraste as páginas na ordem certa, depois pressione Command-A.</li>
+<li>Escolha Arquivo → Imprimir, abra o menu PDF no canto inferior esquerdo e escolha Salvar como PDF.</li>
+</ol>
+
+<h3>Combine imagens em um único PDF no Windows</h3>
+<ol>
+<li>No Explorador de Arquivos, selecione as imagens, clique com o botão direito e escolha Imprimir (no Windows 11, em Mostrar mais opções).</li>
+<li>Escolha Microsoft Print to PDF e o layout de foto de página inteira; desmarque "Ajustar imagem ao quadro" para que as bordas não sejam cortadas.</li>
+<li>Clique em Imprimir e salve o PDF.</li>
+</ol>
+
+<p>Em seguida, abra <a href="/scan">o scanner</a>, solte o PDF combinado, defina a Variação da rotação em 0,5°–1° para que cada página incline de forma levemente diferente, e baixe. O PDF impresso costuma usar páginas Carta ou A4, então o resultado escaneado também usará.</p>
+
+<div class="callout callout-tip"><strong>Várias imagens, arquivos separados</strong>Se você precisar de um PDF digitalizado por imagem, em vez de um único arquivo combinado, use o <a href="/scan/bulk">escaneamento em lote</a>. Solte todas as imagens, aplique um único conjunto de ajustes e baixe todos os resultados juntos em um arquivo ZIP, um PDF por imagem.</div>
+
+<h2 id="file-size">Qual será o tamanho de um PDF digitalizado a partir de uma foto?</h2>
+<p>Um PDF digitalizado a partir de uma foto costuma ser bem menor que a foto original, porque a ferramenta renderiza cada página A4 para um JPEG em tamanho fixo. O ajuste padrão de 2× em cinza normalmente resulta em algumas centenas de kilobytes por página, o que cabe em limites de upload como o teto de 12 MB do USCIS.</p>
+
+<p>O tamanho da saída depende da renderização, não da câmera. Uma foto de celular de 5 MB é redimensionada para uma página A4 e re-renderizada em 1.191 × 1.684 pixels em 2×, então a maior parte dos pixels extras é descartada. Nossa estimativa: cerca de 150–500 KB por página em 2× em cinza, e duas a três vezes mais em 3× ou em cores.</p>
+
+<dl class="spec-list">
+<dt>Evidência online do USCIS</dt><dd>12 MB por arquivo; PDF, JPG ou JPEG (TIF/TIFF para alguns formulários), conforme as <a href="https://www.uscis.gov/file-online/tips-for-filing-forms-online" target="_blank" rel="noopener">dicas de protocolo do USCIS</a></dd>
+<dt>Protocolos em papel do USCIS</dt><dd>Evite fotos ou documentos menores que 4 × 6 polegadas, porque o USCIS digitaliza os envios em papel, conforme suas <a href="https://www.uscis.gov/archive/recommendations-for-paper-filings-to-avoid-scanning-delays" target="_blank" rel="noopener">recomendações de escaneamento</a></dd>
+<dt>Protocolo eletrônico em tribunais federais</dt><dd>Os limites variam por tribunal, por exemplo 35 MB por anexo no Distrito de Minnesota e 100 MB por documento no Distrito Oeste de Washington</dd>
+</dl>
+
+<h3>Como deixar um PDF digitalizado a partir de imagens menor</h3>
+<ul>
+<li>Use Cinza em vez de Colorido, a menos que a cor carregue significado, como um carimbo colorido ou uma foto de identidade.</li>
+<li>Mantenha a Resolução em 2×, a menos que o texto pequeno se desfaça; 3× praticamente dobra a contagem de pixels.</li>
+<li>Reduza o Ruído para 0,05–0,1, já que a granulação aumenta o tamanho do JPEG.</li>
+</ul>
+
+<h2 id="checking">Como verificar o PDF digitalizado antes de enviar?</h2>
+<p>Verifique um PDF digitalizado abrindo-o em um leitor de PDF comum com 100% de zoom e lendo o texto menor, os números e a linha de assinatura. Depois confirme o número de páginas, a orientação e o tamanho do arquivo. Uma checagem de dois minutos evita que dígitos ilegíveis façam um destinatário rejeitar o arquivo.</p>
+
+<ol>
+<li><strong>Legibilidade.</strong> Dê zoom até 100% e 200%. Cada dígito em datas, valores e números de referência precisa ser inequívoco.</li>
+<li><strong>Orientação.</strong> Imagens largas viram páginas A4 em paisagem, e imagens altas viram páginas em retrato. Gire a foto de origem primeiro se a página saiu de lado.</li>
+<li><strong>Margens.</strong> Uma imagem com um formato diferente do A4 recebe margens brancas em dois lados. Isso é normal para um escaneamento, mas um recibo bem estreito vai parecer pequeno na página, então corte-o de perto.</li>
+<li><strong>Tamanho do arquivo.</strong> Compare com o limite do portal antes de começar o upload.</li>
+</ol>
+
+<p>Lembre-se de que a saída é só imagem: o texto é feito de pixels, não de caracteres selecionáveis. A orientação de acessibilidade do W3C explica que <a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF7" target="_blank" rel="noopener">"Um documento que consiste em imagens digitalizadas de texto é inerentemente inacessível porque o conteúdo do documento são imagens, não texto pesquisável."</a> Se o destinatário precisar de texto pesquisável, rode o OCR depois ou envie o original.</p>
+
+<h2 id="mistakes">Quais erros estragam a conversão de imagem em PDF digitalizado?</h2>
+<p>Os erros que estragam uma conversão de imagem em PDF digitalizado quase sempre estão na foto de origem ou em ajustes exagerados: sombras, uma página com formato trapezoidal, uma borda de mesa visível, ruído no máximo, desfoque pesado e inclinações de vários graus. Cada um deles denuncia "foto de celular" ou "filtro", em vez de um scanner.</p>
+
+<div class="table-wrap"><table>
+<caption>Erros comuns ao transformar imagem em PDF digitalizado e como corrigi-los</caption>
+<thead><tr><th scope="col">Erro</th><th scope="col">Por que parece errado</th><th scope="col">Correção</th></tr></thead>
+<tbody>
+<tr><th scope="row">Foto tirada em ângulo</th><td>A página fica trapezoidal; scanners produzem retângulos</td><td>Fotografe de novo de cima ou use o modo de documento do celular</td></tr>
+<tr><th scope="row">Mesa ou mão visível</th><td>Scanners de mesa só capturam a área do vidro</td><td>Corte até as bordas do papel antes de carregar</td></tr>
+<tr><th scope="row">Sombra sobre a página</th><td>A luz de um scanner é uniforme</td><td>Use luz de janela ou duas lâmpadas; sem flash</td></tr>
+<tr><th scope="row">Rotação de 5° ou mais</th><td>Alimentadores reais raramente inclinam tanto</td><td>Fique entre 0,5° e 1,5°</td></tr>
+<tr><th scope="row">Ruído em 0,5 ou mais</th><td>Parece granulação de filme, não um escaneamento</td><td>Use 0,05–0,2</td></tr>
+<tr><th scope="row">Desfoque em 0,8 ou mais</th><td>O texto pequeno fica ilegível</td><td>Use 0,1–0,4 e confira em 100%</td></tr>
+<tr><th scope="row">Esperar um único PDF a partir de várias imagens</th><td>Cada imagem vira seu próprio PDF</td><td>Combine as imagens em um único PDF antes</td></tr>
+</tbody>
+</table></div>
+
+<h2 id="honest-use">Quando é adequado deixar uma imagem com cara de escaneado?</h2>
+<p>Deixar uma imagem com cara de escaneado é adequado quando o documento é seu e o conteúdo é verdadeiro: um recibo que você fotografou, um formulário que você assinou, uma carta que você escreveu. A aparência de escaneado muda só a aparência. Ela não torna uma cópia mais oficial e nunca deve ser usada para disfarçar alterações.</p>
+
+<div class="callout callout-warn"><strong>Uso honesto</strong>Um efeito de scanner muda a aparência de um arquivo, não se ele é autêntico. Não o use para falsificar ou alterar identidades, registros oficiais, certificados ou assinaturas que não sejam suas. Alguns tribunais e órgãos exigem PDFs pesquisáveis por texto; o Distrito Sul da Flórida, por exemplo, afirma que <a href="https://www.flsd.uscourts.gov/all-faqs/CMECF" target="_blank" rel="noopener">"petições/documentos principais protocolados eletronicamente no CM/ECF devem estar em formato PDF pesquisável por texto"</a>. Confira as regras do destinatário antes de enviar um arquivo só com imagens.</div>
+
+<p>Para documentos digitados, exporte-os para PDF e siga nosso guia sobre <a href="/blog/make-a-document-look-scanned/">deixar um documento com cara de escaneado</a>; o <a href="/blog/how-to-make-a-pdf-look-scanned/">guia principal</a> compara todos os métodos.</p>
+
+<h2 id="faq">Transformar imagem em PDF digitalizado: perguntas frequentes</h2>
+<p>Estas perguntas sobre transformar imagem em PDF digitalizado cobrem o que as pessoas mais perguntam depois da primeira conversão: formatos, tamanho de página, arquivos com várias páginas, celulares, privacidade e se o resultado é aceito por órgãos públicos. Cada resposta reflete como a ferramenta gratuita realmente funciona, com base no código-fonte e nos ajustes publicados.</p>
+
+<div class="faq-item"><p class="faq-q">Posso converter um JPG em PDF digitalizado de graça?</p><p class="faq-a">Sim. A ferramenta web em pdflookscanned.com/scan e sua extensão do Chrome são gratuitas, não precisam de conta e não adicionam marca d'água, a menos que você adicione uma. Solte o JPG, ajuste o efeito de scanner e baixe o PDF.</p></div>
+
+<div class="faq-item"><p class="faq-q">Minha foto é enviada para um servidor?</p><p class="faq-a">Não. A conversão e o efeito de scanner rodam localmente no seu navegador com pdf.js e canvas. Depois da primeira visita, o site também funciona offline, o que é uma forma simples de confirmar que nada é enviado para processamento.</p></div>
+
+<div class="faq-item"><p class="faq-q">Qual tamanho de página o PDF digitalizado tem?</p><p class="faq-a">Cada imagem é colocada em uma página A4, retrato para imagens altas e paisagem para imagens largas, redimensionada para caber e centralizada. Se o formato da imagem for diferente do A4, você recebe margens brancas em dois lados, como em um escaneamento real de um papel menor.</p></div>
+
+<div class="faq-item"><p class="faq-q">Posso transformar várias fotos em um único PDF digitalizado?</p><p class="faq-a">Sim, em duas etapas. Combine as imagens em um único PDF com o Pré-Visualização do macOS (Imprimir → Salvar como PDF) ou no Windows (Imprimir → Microsoft Print to PDF), depois solte esse PDF no scanner. A ferramenta em si cria um PDF por imagem.</p></div>
+
+<div class="faq-item"><p class="faq-q">A ferramenta corta ou endireita minha foto?</p><p class="faq-a">Não. Ela não corta, não corrige inclinação nem perspectiva. Use o editor de fotos do celular ou o scanner de documentos nativo do Notas do iPhone, do Arquivos do iPhone ou da câmera do Android primeiro, e depois carregue a imagem já tratada.</p></div>
+
+<div class="faq-item"><p class="faq-q">Por que minha foto HEIC não é aceita?</p><p class="faq-a">O HEIC não está entre os formatos suportados, que são JPG, PNG, WebP, SVG, GIF e BMP. Exporte a foto como JPG pelo Pré-Visualização no Mac, pelo aplicativo Fotos no Windows, ou defina a câmera do iPhone para Mais Compatível para fotografar direto em JPG.</p></div>
+
+<div class="faq-item"><p class="faq-q">Qual resolução devo escolher para transformar uma foto em PDF digitalizado?</p><p class="faq-a">Mantenha o padrão 2×, que renderiza a página A4 a cerca de 144 dpi. Escolha 2,5× ou 3× (cerca de 216 dpi) para letras finas, carimbos ou assinaturas. Ajustes mais altos geram arquivos maiores.</p></div>
+
+
+<div class="faq-item"><p class="faq-q">O USCIS vai aceitar uma foto de celular transformada em PDF?</p><p class="faq-a">O USCIS aceita escaneamentos ou fotos de documentos como evidência online, desde que cada imagem esteja nítida e todo o texto legível, em arquivos PDF, JPG ou JPEG de até 12 MB. Um PDF digitalizado bem-feito do seu próprio original atende a esse formato.</p></div>
+
+<div class="faq-item"><p class="faq-q">O texto do PDF digitalizado é pesquisável?</p><p class="faq-a">Não. Cada página é uma imagem JPEG dentro do PDF, então o texto não pode ser selecionado nem pesquisado. Rode o OCR depois se o destinatário precisar de texto pesquisável, ou envie um PDF convertido quando as regras exigirem um.</p></div>
+

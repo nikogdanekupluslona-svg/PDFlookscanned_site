@@ -1,0 +1,241 @@
+<p class="lead">Bild in gescanntes PDF umwandeln: Öffnen Sie dazu das kostenlose <a href="/scan">Scan-Tool</a>, legen Sie ein JPG, PNG oder Handyfoto ab, stellen Sie eine leichte Schräglage, wenig Rauschen und Graustufen ein und laden Sie das Ergebnis herunter. Die Umwandlung von Bild in gescanntes PDF läuft in Ihrem Browser, platziert das Bild auf einer A4-Seite und speichert ein PDF im Scan-Look.</p>
+
+<p>Ein Foto eines unterschriebenen Formulars sieht selten wie ein Büro-Scan aus: Die Farben stimmen nicht, die Kanten sind schief, und die Datei ist ein JPG, kein PDF. Diese Anleitung behandelt den gesamten Weg von der Kamera zum gescannten PDF: Foto vorbereiten, Pixel-Mathematik, Formate und das Kombinieren mehrerer Bilder. Die Fakten stammen von USCIS, den U.S. National Archives (NARA), FADGI, Apple Support und dem Quellcode unseres Tools.</p>
+
+<nav class="toc" aria-label="Table of contents"><h2>Table of Contents</h2><ol>
+<li><a href="#quick-answer">Was ist die schnellste Methode, ein Bild in ein gescanntes PDF umzuwandeln?</a></li>
+<li><a href="#how-to-convert">Wie können Sie ein Bild in ein gescanntes PDF umwandeln?</a></li>
+<li><a href="#prepare-phone-photo">Wie sollten Sie ein Handyfoto eines Dokuments aufnehmen?</a></li>
+<li><a href="#pixels-and-page-size">Wie viele Pixel braucht eine Seite im gescannten PDF?</a></li>
+<li><a href="#image-formats">Welche Bildformate funktionieren für JPG in gescanntes PDF?</a></li>
+<li><a href="#settings">Welche Scan-Einstellungen passen zu Fotos vs. Screenshots?</a></li>
+<li><a href="#several-images">Wie können Sie mehrere Bilder in ein gescanntes PDF umwandeln?</a></li>
+<li><a href="#file-size">Wie groß wird eine Datei bei Foto zu gescanntem PDF?</a></li>
+<li><a href="#checking">Wie prüfen Sie das gescannte PDF vor dem Versand?</a></li>
+<li><a href="#mistakes">Welche Fehler ruinieren die Umwandlung von Bild in gescanntes PDF?</a></li>
+<li><a href="#honest-use">Wann ist es in Ordnung, ein Bild wie gescannt aussehen zu lassen?</a></li>
+<li><a href="#faq">Bild in gescanntes PDF umwandeln: FAQ</a></li>
+</ol></nav>
+
+<h2 id="quick-answer">Was ist die schnellste Methode, ein Bild in ein gescanntes PDF umzuwandeln?</h2>
+<p>Die schnellste Methode, ein Bild in ein gescanntes PDF umzuwandeln, ist ein Browser-Tool, das das Bild direkt annimmt. Make PDF look scanned nimmt ein JPG oder PNG, packt es in eine PDF-Seite, fügt scannertypische Schräglage, Unschärfe, Rauschen und Grauton hinzu und exportiert in rund einer Minute ein neues PDF – ohne Upload und ohne Anmeldung.</p>
+
+<dl class="spec-list">
+<dt>Eingabe</dt><dd>JPG, PNG, WebP, SVG, GIF oder BMP (eine Bilddatei wird zu einer Seite)</dd>
+<dt>Ausgabe</dt><dd>Ein PDF, dessen Seite ein JPEG-Bild mit eingebranntem Scan-Effekt ist</dd>
+<dt>Seitengröße</dt><dd>A4, Hoch- oder Querformat passend zur Ausrichtung des Bildes</dd>
+<dt>Wo es läuft</dt><dd>Lokal in Ihrem Browser; die Datei wird nicht an einen Verarbeitungsserver gesendet</dd>
+<dt>Kosten</dt><dd>Kostenlos, kein Konto, kein Wasserzeichen, außer Sie fügen selbst eines hinzu</dd>
+</dl>
+
+<p>Ist Ihr Bild bereits ein PDF (zum Beispiel weil eine Scan-App eines exportiert hat), überspringen Sie das Thema Umwandlung und lesen Sie unsere Anleitung zum <a href="/blog/pdf-to-scanned-pdf/">Umwandeln eines PDFs in ein gescanntes PDF</a>. Wollen Sie den breiteren Hintergrund zum Format selbst, siehe <a href="/blog/what-is-a-scanned-pdf/">was ein gescanntes PDF ist</a>.</p>
+
+<h2 id="how-to-convert">Wie können Sie ein Bild in ein gescanntes PDF umwandeln?</h2>
+<p>Um ein Bild in ein gescanntes PDF umzuwandeln, bereiten Sie ein gerades, zugeschnittenes Foto vor, öffnen die Scanner-Seite in Chrome, Edge oder einem mobilen Browser, laden die Datei, passen den Scan-Effekt an, während Sie die Live-Vorschau beobachten, und laden das PDF herunter. Der gesamte Ablauf unten dauert ein bis zwei Minuten pro Bild.</p>
+
+<ol class="step-list">
+<li><strong>Bild vorbereiten.</strong> Schneiden Sie das Foto auf die Papierkanten zu und richten Sie es mit dem eingebauten Editor oder Dokumentenscanner Ihres Handys gerade. Das Tool schneidet nicht zu, richtet nicht gerade und korrigiert keine Perspektive – was Sie laden, wird auch gescannt.</li>
+<li><strong>HEIC-Fotos zu JPG exportieren.</strong> iPhone-Fotos sind oft HEIC-Dateien. Exportieren oder teilen Sie sie zuerst als JPG, denn das Tool akzeptiert JPG, PNG, WebP, SVG, GIF und BMP, aber kein HEIC.</li>
+<li><strong>Scanner öffnen.</strong> Gehen Sie zu <a href="/scan">pdflookscanned.com/scan</a> oder öffnen Sie die Seitenleiste der Chrome-Erweiterung. Beide nutzen dieselbe Engine und funktionieren nach dem ersten Laden offline.</li>
+<li><strong>Bild ablegen.</strong> Ziehen Sie das JPG oder PNG auf die Upload-Fläche. Das Tool bettet es auf einer A4-Seite ein, Hochformat für hohe Bilder und Querformat für breite, skaliert und zentriert.</li>
+<li><strong>Scan-Look einstellen.</strong> Beginnen Sie mit Farbraum Graustufen, Drehung 1°, Drehvarianz 0,5°, Unschärfe 0,3 und Rauschen 0,1. Erhöhen Sie die Vergilbung auf 0,2 oder 0,3, wenn Sie einen gealterten Papierton wollen.</li>
+<li><strong>Auflösung wählen.</strong> Behalten Sie 2× für normale Dokumente bei; wählen Sie 2,5× oder 3×, wenn das Bild Kleingedrucktes, Stempel oder Unterschriften enthält, die lesbar bleiben müssen.</li>
+<li><strong>Bei Bedarf Extras hinzufügen.</strong> Optional ein Stempel- oder Unterschriftsbild platzieren, ein Wasserzeichen hinzufügen oder PDF-Titel und Autor im Metadaten-Panel bearbeiten.</li>
+<li><strong>Herunterladen und prüfen.</strong> Speichern Sie das gescannte PDF, öffnen Sie es in Ihrem normalen PDF-Betrachter und zoomen Sie auf 100 %, um zu bestätigen, dass jede Zeile lesbar ist.</li>
+</ol>
+
+<div class="callout callout-tip"><strong>Ein Bild, eine Seite</strong>Jede Bilddatei wird zu einer eigenen einseitigen PDF. Um ein mehrseitiges gescanntes PDF aus mehreren Fotos zu erhalten, kombinieren Sie die Bilder zuerst mit Ihrem Betriebssystem zu einem PDF und legen dieses PDF dann ins Tool. Der <a href="#several-images">Abschnitt zu mehreren Bildern</a> zeigt die genauen Klicks.</div>
+
+<h2 id="prepare-phone-photo">Wie sollten Sie ein Handyfoto eines Dokuments aufnehmen?</h2>
+<p>Ein gutes Handyfoto eines Dokuments wird direkt von oben aufgenommen, auf einer flachen, dunklen Unterlage, bei gleichmäßigem Tageslicht ohne Schatten, und auf die Papierkanten zugeschnitten. Diese Vorbereitung zählt mehr als jeder Filter, weil der Scan-Effekt jeden Makel kopiert, den das Foto schon hat, einschließlich verbogener Ecken und Handschatten.</p>
+
+<p>USCIS, das Handyfotos als Beweismittel bei Online-Einreichungen akzeptiert, formuliert den Mindeststandard einfach: <a href="https://www.uscis.gov/file-online/tips-for-filing-forms-online" target="_blank" rel="noopener">„Stellen Sie sicher, dass jedes angehängte Bild klar ist und der gesamte Text lesbar ist.“</a> Dieselbe Seite rät Antragstellern: <a href="https://www.uscis.gov/file-online/tips-for-filing-forms-online" target="_blank" rel="noopener">„Nutzen Sie einen Scanner oder fotografieren Sie jedes Dokument.“</a> Ein sorgfältiges Foto ist also ein akzeptierter Ausgangspunkt, kein Behelf.</p>
+
+<h3>Licht, Unterlage und Winkel für Foto zu gescanntem PDF</h3>
+<ul>
+<li><strong>Licht.</strong> Nutzen Sie indirektes Tageslicht in Fensternähe oder zwei Lampen von gegenüberliegenden Seiten. Eine einzelne Deckenlampe wirft den Schatten Ihres Handys über die Seite.</li>
+<li><strong>Unterlage.</strong> Legen Sie weißes Papier auf einen dunkleren Tisch, damit die Kanten leicht zu erkennen und zuzuschneiden sind. Glätten Sie Knicke kurz unter einem Buch.</li>
+<li><strong>Winkel.</strong> Halten Sie das Handy parallel zur Seite, direkt über deren Mitte. Ein geneigtes Handy macht die entfernte Kante schmaler als die nahe.</li>
+<li><strong>Abstand.</strong> Füllen Sie den Rahmen mit der Seite, lassen Sie nur einen schmalen Rand. Nutzen Sie die Hauptkamera statt des digitalen Zooms.</li>
+<li><strong>Blitz.</strong> Schalten Sie den Blitz aus; er erzeugt auf glänzendem Papier einen hellen Lichtfleck und Blendung.</li>
+</ul>
+
+<p>Die Winkelregel hat einen technischen Hintergrund. FADGI, die US-Bundesarbeitsgruppe für Digitalisierung, merkt an: <a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">„Schräglage im aufgenommenen Bild lässt sich oft auf fehlende Parallelität zwischen der Brennebene der Kamera und der Auflagefläche zurückführen.“</a> Einfach gesagt: Steht das Handy nicht parallel zum Papier, kommt die Seite trapezförmig heraus, was kein Flachbettscanner erzeugen würde.</p>
+
+<h3>Den eingebauten Dokumentenscanner auf iPhone oder Android nutzen</h3>
+<p>Handys enthalten bereits einen kostenlosen Dokumentmodus, der für Sie zuschneidet und gerade richtet. Auf einem iPhone oder iPad können die Notizen-App und die Dateien-App ein Dokument mit der Kamera scannen, die Seite im Auto-Modus erkennen und Sie die Ecken anpassen lassen. Apples Anleitung sagt: <a href="https://support.apple.com/en-us/108963" target="_blank" rel="noopener">„Ziehen Sie dann die Ecken, um den Scan an die Seite anzupassen, und tippen Sie auf Scan behalten.“</a></p>
+
+<p>Viele Android-Handys bieten einen ähnlichen Dokumentmodus in der Standardkamera oder im eingebauten Dateimanager, der die Seitenränder erkennt und die Perspektive begradigt. Menünamen unterscheiden sich je nach Hersteller, suchen Sie also nach einer Option „Dokument“ oder „Scannen“. Speichern Sie das Ergebnis als Bild oder PDF und lassen Sie es dann durch das <a href="/scan">Scan-Effekt-Tool</a> laufen, damit es eher wie ein Flachbett-Scan als wie eine Handyaufnahme wirkt.</p>
+
+<h3>Foto vor dem Scan-Effekt zuschneiden und aufhellen</h3>
+<p>Haben Sie ein gewöhnliches Foto aufgenommen, öffnen Sie es im Fotoeditor Ihres Handys, nutzen Sie Zuschneiden, um den Tisch zu entfernen, und den Geraderichten-Regler, um die Textzeilen auszurichten. Erhöhen Sie dann Belichtung oder Helligkeit leicht, bis das Papier nahezu weiß statt graublau wirkt. Die eigenen Helligkeits- und Kontrastregler des Tools können den Rest erledigen: Helligkeit 1,1 und Kontrast 1,2 hellen ein stumpfes Foto meist auf, ohne feine Striche zu verlieren.</p>
+
+<div class="callout callout-info"><strong>Warum das Aufhellen zählt</strong>Ein Flachbettscanner beleuchtet die Seite gleichmäßig aus wenigen Millimetern Abstand, sodass Papier fast weiß herauskommt. Ein Handyfoto bei Zimmerlicht zeigt das Papier hellgrau mit Farbstich. Den Hintergrund aufzuhellen ist die eine Änderung, die ein Foto wie einen Scan wirken lässt.</div>
+
+<h2 id="pixels-and-page-size">Wie viele Pixel braucht eine Seite im gescannten PDF?</h2>
+<p>Eine Seite im gescannten PDF braucht eine Pixelzahl, die dem Papierformat mal der Auflösung entspricht. Eine US-Letter-Seite bei 300 ppi hat 2.550 × 3.300 Pixel, und eine A4-Seite bei 300 ppi hat rund 2.480 × 3.508 Pixel. Die meisten Handykameras nehmen mehr auf, sodass die Auflösung selten der Schwachpunkt ist.</p>
+
+<p>Die Rechnung ist eine einzige Multiplikation: Zoll × Pixel pro Zoll = Pixel. Letter-Papier misst 8,5 × 11 Zoll; A4 misst 210 × 297 mm, also rund 8,27 × 11,69 Zoll. Ein typisches 12-Megapixel-Handyfoto hat 4.032 × 3.024 Pixel, sodass eine Seite, die den Großteil des Bildes füllt, irgendwo bei 250–350 ppi landet, je nachdem, wie viel Tisch drumherum sichtbar bleibt.</p>
+
+<div class="table-wrap"><table>
+<caption>Pixelmaße für volle Seiten bei gängigen Scan-Auflösungen</caption>
+<thead><tr><th scope="col">Auflösung</th><th scope="col">US Letter (8,5 × 11 in)</th><th scope="col">A4 (8,27 × 11,69 in)</th><th scope="col">Typische Nutzung</th></tr></thead>
+<tbody>
+<tr><th scope="row">150 ppi</th><td>1.275 × 1.650 px</td><td>1.240 × 1.754 px</td><td>Lesen am Bildschirm, E-Mail-Anhänge</td></tr>
+<tr><th scope="row">200 ppi</th><td>1.700 × 2.200 px</td><td>1.654 × 2.339 px</td><td>FADGI-Ein-Stern-Niveau für Dokumente</td></tr>
+<tr><th scope="row">300 ppi</th><td>2.550 × 3.300 px</td><td>2.480 × 3.508 px</td><td>Standard-Büro- und Gerichtsscans</td></tr>
+<tr><th scope="row">400 ppi</th><td>3.400 × 4.400 px</td><td>3.307 × 4.677 px</td><td>Kleingedrucktes, Fotos, archivische Masterdateien</td></tr>
+</tbody>
+</table></div>
+
+<p>Bundesweite Digitalisierungsregeln nutzen dieselbe Skala. Die NARA-Regelung verlangt Bilddateien moderner Textunterlagen mit mindestens 300 ppi und 400 ppi für Fotoabzüge und Papierunterlagen mit feinen Details, gemäß <a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">36 CFR Teil 1236, Subpart E</a>. FADGIs Sternesystem bewertet ungebundene Dokumente bei 200, 250, 300 und 400 ppi für die Ein- bis Vier-Sterne-Stufen.</p>
+
+<p>Pixelzahlen allein garantieren keine Qualität, und NARA sagt das direkt: <a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">„Die Behörde kann sich nicht allein auf Geräteangaben wie Scanner-ppi-Einstellungen oder Kamerasensor-Megapixel verlassen, um die digitale Bildqualität sicherzustellen.“</a> Ein scharfes 2.000-Pixel-Foto liest sich besser als ein unscharfes 4.000-Pixel-Foto, also zählen Fokus und Licht weiterhin zuerst.</p>
+
+<h3>Welche Auflösung hat die Ausgabe bei Bild zu gescanntem PDF?</h3>
+<p>Das Tool rendert jede Seite mit 72 dpi multipliziert mit der Auflösungseinstellung. Weil jedes Bild auf einer A4-Seite platziert wird, ist die Ausgabe vorhersehbar: 1× ergibt rund 595 × 842 Pixel, 2× rund 1.191 × 1.684 Pixel (144 dpi), und 3× rund 1.786 × 2.526 Pixel (216 dpi). Ein Quellfoto größer als die 3×-Größe fügt dem Ergebnis kein zusätzliches Detail hinzu.</p>
+
+
+<h2 id="image-formats">Welche Bildformate funktionieren für JPG in gescanntes PDF?</h2>
+<p>JPG in gescanntes PDF und PNG in gescanntes PDF funktionieren direkt, weil das Tool diese beiden Formate unverändert in die PDF-Seite einbettet. WebP, SVG, GIF und BMP funktionieren ebenfalls, werden aber zuerst in JPEG umgewandelt, mit einer längeren Kante von höchstens 2.200 Pixeln. HEIC wird nicht unterstützt.</p>
+
+<div class="table-wrap"><table>
+<caption>Wie jedes Bildformat auf dem Weg zum gescannten PDF behandelt wird</caption>
+<thead><tr><th scope="col">Format</th><th scope="col">Akzeptiert?</th><th scope="col">Was zuerst passiert</th><th scope="col">Am besten für</th></tr></thead>
+<tbody>
+<tr><th scope="row">JPG / JPEG</th><td>Ja</td><td>Eingebettet ohne erneute Kodierung, an A4 angepasst</td><td>Handyfotos von Papierdokumenten</td></tr>
+<tr><th scope="row">PNG</th><td>Ja</td><td>Eingebettet ohne erneute Kodierung, an A4 angepasst</td><td>Screenshots, exportierte Formulare, scharfer Text</td></tr>
+<tr><th scope="row">WebP</th><td>Ja</td><td>In JPEG umgewandelt (Qualität 0,92), längere Kante bis 2.200 px</td><td>Von Websites gespeicherte Bilder</td></tr>
+<tr><th scope="row">SVG</th><td>Ja</td><td>In JPEG gerastert, längere Kante bis 2.200 px</td><td>Logos, Diagramme, Vektorformulare</td></tr>
+<tr><th scope="row">GIF / BMP</th><td>Ja</td><td>In JPEG umgewandelt, längere Kante bis 2.200 px</td><td>Alte Dateien und Legacy-Exporte</td></tr>
+<tr><th scope="row">HEIC / HEIF</th><td>Nein</td><td>Zuerst als JPG exportieren oder teilen</td><td>iPhone-Kamera-Originale</td></tr>
+<tr><th scope="row">TIFF</th><td>Nein</td><td>Zuerst als PNG oder JPG speichern</td><td>Ausgabe älterer Flachbettscanner</td></tr>
+</tbody>
+</table></div>
+
+<p>Jeder transparente Bereich in einem umgewandelten WebP, SVG, GIF oder BMP wird weiß gefüllt, passend zu Papier. Die 2.200-Pixel-Obergrenze ist immer noch größer als das 3×-Render einer A4-Seite, sodass die Umwandlung die endgültige Schärfe nicht verringert.</p>
+
+<h3>Wie Sie ein iPhone-HEIC-Foto in ein JPG umwandeln</h3>
+<p>Öffnen Sie auf einem Mac die HEIC-Datei in der Vorschau, wählen Sie Ablage → Exportieren und wählen Sie JPEG; <a href="https://support.apple.com/guide/preview/convert-image-file-types-prvw1012/mac" target="_blank" rel="noopener">Apples Vorschau-Anleitung</a> listet JPEG, PNG, PDF und TIFF unter den Exportformaten. Stellen Sie auf einem iPhone Einstellungen → Kamera → Formate auf „Kompatibelste“, um direkt JPG aufzunehmen.</p>
+
+<h2 id="settings">Welche Scan-Einstellungen passen zu Fotos vs. Screenshots?</h2>
+<p>Scan-Einstellungen für Handyfotos sollten dezent bleiben, weil ein Foto bereits natürliche Weichheit und Körnung hat. Screenshots und exportierte Bilder brauchen etwas mehr Effekt, weil pixelgenauer Text digital wirkt. In beiden Fällen wirken Graustufen, eine Neigung unter 1,5° und Rauschen bei oder unter 0,2 wie ein gewöhnlicher Büroscanner.</p>
+
+<div class="table-wrap"><table>
+<caption>Ausgangs-Scan-Einstellungen nach Art des Quellbilds</caption>
+<thead><tr><th scope="col">Einstellung (Bereich · Standard)</th><th scope="col">Handyfoto von Papier</th><th scope="col">Screenshot oder exportiertes PNG</th><th scope="col">Farbiger Ausweis oder gestempeltes Formular</th></tr></thead>
+<tbody>
+<tr><th scope="row">Farbraum (Graustufen/Farbe · Graustufen)</th><td>Graustufen</td><td>Graustufen</td><td>Farbe</td></tr>
+<tr><th scope="row">Drehung (−10°…10° · 1°)</th><td>0,5°</td><td>1°–1,5°</td><td>0,5°</td></tr>
+<tr><th scope="row">Drehvarianz (0…10° · 0,5°)</th><td>0,5°</td><td>0,5°</td><td>0°</td></tr>
+<tr><th scope="row">Unschärfe (0…1 · 0,3)</th><td>0,1–0,2</td><td>0,3–0,4</td><td>0,2</td></tr>
+<tr><th scope="row">Rauschen (0…1 · 0,1)</th><td>0,05–0,1</td><td>0,1–0,2</td><td>0,05</td></tr>
+<tr><th scope="row">Helligkeit (0…2 · 1)</th><td>1,05–1,15</td><td>1</td><td>1</td></tr>
+<tr><th scope="row">Kontrast (0…2 · 1)</th><td>1,1–1,3</td><td>1–1,1</td><td>1,05</td></tr>
+<tr><th scope="row">Vergilbung (0…2 · 0)</th><td>0–0,2</td><td>0,1–0,3</td><td>0</td></tr>
+<tr><th scope="row">Auflösung (1×…3× · 2×)</th><td>2× oder 2,5×</td><td>2×</td><td>3×</td></tr>
+</tbody></table></div>
+
+<p>Die Logik hinter der Tabelle ist einfach. Ein Handyfoto trägt bereits Sensorrauschen und Linsenweichheit, sodass zusätzliche Standard-Unschärfe Kleingedrucktes matschig machen kann. Erhöhen Sie stattdessen den Kontrast, der Text abdunkelt und graues Papier Richtung Weiß schiebt. Ein Screenshot ist das Gegenteil: Seine Kanten sind messerscharf, sodass etwas mehr Unschärfe und Rauschen ihn wie Papier wirken lassen.</p>
+
+<p>Die Option Rand zeichnet eine dünne dunkle Rahmenlinie um die Seite; nutzen Sie sie sparsam. Jedes Artefakt erklärt unsere <a href="/blog/scan-effect/">Scan-Effekt-Anleitung</a>.</p>
+
+<div class="expert-quote"><blockquote>Wir sehen bei fast jedem Bild, das Menschen ins Tool legen, dasselbe Muster: Nicht der Scan-Effekt ist das Problem, sondern das Foto. Ein schiefes, verschattetes Bild mit maximalem Rauschen sieht immer noch wie ein Handyfoto aus. Eine flache, zugeschnittene, aufgehellte Seite mit Drehung bei 0,5°, Unschärfe bei 0,2 und Farbraum Graustufen wirkt, als käme sie von einem Flachbett-Scanner. Fixen Sie zuerst das Foto, halten Sie dann den Effekt dezent.</blockquote><cite><strong>Das Team von Make PDF look scanned</strong> — Entwickler des Web-Tools und der Chrome-Erweiterung</cite></div>
+
+<h2 id="several-images">Wie können Sie mehrere Bilder in ein gescanntes PDF umwandeln?</h2>
+<p>Um mehrere Bilder in ein gescanntes PDF zu bringen, kombinieren Sie sie zuerst mit den in macOS oder Windows eingebauten Werkzeugen zu einem einzigen gewöhnlichen PDF und legen dieses PDF dann in den Scanner. Das Tool behält die Seitenreihenfolge bei und wendet den Scan-Effekt auf jede Seite an, mit einer kleinen zufälligen Neigung pro Seite.</p>
+
+<h3>Bilder auf einem Mac mit der Vorschau zu einem PDF kombinieren</h3>
+<ol>
+<li>Benennen Sie die Bilder in Seitenreihenfolge (01.jpg, 02.jpg…), wählen Sie sie alle im Finder aus und öffnen Sie sie in der Vorschau.</li>
+<li>Ziehen Sie die Seiten in der Miniaturen-Seitenleiste in die richtige Reihenfolge und drücken Sie Cmd-A.</li>
+<li>Wählen Sie Ablage → Drucken, öffnen Sie das PDF-Menü unten links und wählen Sie Als PDF sichern.</li>
+</ol>
+
+<h3>Bilder unter Windows zu einem PDF kombinieren</h3>
+<ol>
+<li>Wählen Sie im Explorer die Bilder aus, klicken Sie mit der rechten Maustaste und wählen Sie Drucken (unter Windows 11 unter Weitere Optionen anzeigen).</li>
+<li>Wählen Sie Microsoft Print to PDF und das Layout „Vollbild-Foto“; deaktivieren Sie „Bild an Rahmen anpassen“, damit Ränder nicht abgeschnitten werden.</li>
+<li>Klicken Sie auf Drucken und speichern Sie das PDF.</li>
+</ol>
+
+<p>Öffnen Sie als Nächstes <a href="/scan">den Scanner</a>, legen Sie das kombinierte PDF ab, stellen Sie die Drehvarianz auf 0,5°–1°, damit jede Seite leicht anders geneigt ist, und laden Sie herunter. Das gedruckte PDF nutzt meist Letter- oder A4-Seiten, also wird es auch die gescannte Kopie tun.</p>
+
+<div class="callout callout-tip"><strong>Viele Bilder, getrennte Dateien</strong>Brauchen Sie statt einer kombinierten Datei ein gescanntes PDF pro Bild, nutzen Sie <a href="/scan/bulk">Stapelscan</a>. Legen Sie alle Bilder ab, wenden Sie einen Satz Einstellungen an und laden Sie alle Ergebnisse gemeinsam als ZIP-Archiv herunter, ein PDF pro Bild.</div>
+
+<h2 id="file-size">Wie groß wird eine Datei bei Foto zu gescanntem PDF?</h2>
+<p>Eine Datei bei Foto zu gescanntem PDF ist meist weit kleiner als das Originalfoto, weil das Tool jede A4-Seite in einer festen Größe als JPEG rendert. Die Standardeinstellung 2× in Graustufen ergibt typischerweise einige hundert Kilobyte pro Seite, was zu Upload-Limits wie der USCIS-Obergrenze von 12 MB passt.</p>
+
+<p>Die Ausgabegröße hängt vom Rendering ab, nicht von der Kamera. Ein 5-MB-Handyfoto wird auf eine A4-Seite skaliert und bei 2× mit 1.191 × 1.684 Pixeln neu gerendert, sodass die meisten seiner zusätzlichen Pixel verworfen werden. Unsere Schätzung: rund 150–500 KB pro Seite bei 2× in Graustufen, und zwei- bis dreimal mehr bei 3× oder in Farbe.</p>
+
+<dl class="spec-list">
+<dt>USCIS-Online-Beweismittel</dt><dd>12 MB pro Datei; PDF, JPG oder JPEG (TIF/TIFF für manche Formulare), laut <a href="https://www.uscis.gov/file-online/tips-for-filing-forms-online" target="_blank" rel="noopener">USCIS-Einreichungstipps</a></dd>
+<dt>USCIS-Papiereinreichungen</dt><dd>Vermeiden Sie Fotos oder Dokumente kleiner als 4 × 6 Zoll, weil USCIS Papiereinreichungen scannt, laut den <a href="https://www.uscis.gov/archive/recommendations-for-paper-filings-to-avoid-scanning-delays" target="_blank" rel="noopener">Scan-Empfehlungen</a> der Behörde</dd>
+<dt>Elektronische Einreichung bei US-Bundesgerichten</dt><dd>Limits variieren je nach Gericht, zum Beispiel 35 MB pro Beweisstück im District of Minnesota und 100 MB pro Dokument im Western District of Washington</dd>
+</dl>
+
+<h3>Wie Sie ein gescanntes PDF aus Bildern kleiner machen</h3>
+<ul>
+<li>Nutzen Sie Graustufen statt Farbe, außer Farbe trägt Bedeutung, etwa bei einem farbigen Stempel oder Ausweisfoto.</li>
+<li>Halten Sie die Auflösung bei 2×, außer kleiner Text zerfällt; 3× verdoppelt die Pixelzahl in etwa.</li>
+<li>Senken Sie das Rauschen auf 0,05–0,1, weil Körnung die JPEG-Größe aufbläht.</li>
+</ul>
+
+<h2 id="checking">Wie prüfen Sie das gescannte PDF vor dem Versand?</h2>
+<p>Prüfen Sie ein gescanntes PDF, indem Sie es in einem normalen PDF-Betrachter bei 100 % Zoom öffnen und den kleinsten Text, die Zahlen und die Unterschriftslinie lesen. Kontrollieren Sie dann Seitenzahl, Ausrichtung und Dateigröße. Eine zweiminütige Kontrolle fängt unleserliche Ziffern ab, bevor ein Empfänger die Datei ablehnt.</p>
+
+<ol>
+<li><strong>Lesbarkeit.</strong> Zoomen Sie auf 100 % und 200 %. Jede Ziffer in Daten, Beträgen und Kontonummern muss eindeutig sein.</li>
+<li><strong>Ausrichtung.</strong> Breite Bilder werden zu A4-Seiten im Querformat, hohe Bilder zu Seiten im Hochformat. Drehen Sie das Quellfoto zuerst, wenn die Seite seitlich herauskam.</li>
+<li><strong>Ränder.</strong> Ein Bild mit einer anderen Form als A4 bekommt an zwei Seiten weiße Ränder. Das ist normal für einen Scan, aber ein sehr schmaler Kassenbon wirkt klein auf der Seite, schneiden Sie ihn also eng zu.</li>
+<li><strong>Dateigröße.</strong> Vergleichen Sie sie mit dem Limit des Portals, bevor Sie den Upload starten.</li>
+</ol>
+
+<p>Denken Sie daran, dass die Ausgabe reines Bild ist: Der Text besteht aus Pixeln, nicht aus markierbaren Zeichen. Die W3C-Barrierefreiheitsrichtlinie erklärt: <a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF7" target="_blank" rel="noopener">„Ein Dokument, das aus gescannten Bildern von Text besteht, ist grundsätzlich unzugänglich, weil der Inhalt des Dokuments aus Bildern, nicht aus durchsuchbarem Text besteht.“</a> Braucht der Empfänger durchsuchbaren Text, lassen Sie anschließend OCR laufen oder senden Sie das Original.</p>
+
+<h2 id="mistakes">Welche Fehler ruinieren die Umwandlung von Bild in gescanntes PDF?</h2>
+<p>Die Fehler, die eine Umwandlung von Bild in gescanntes PDF ruinieren, liegen fast immer im Quellfoto oder in übertriebenen Einstellungen: Schatten, eine trapezförmige Seite, eine sichtbare Tischkante, maximales Rauschen, starke Unschärfe und Neigungen von mehreren Grad. Jeder signalisiert „Handyfoto“ oder „Filter“ statt Scanner.</p>
+
+<div class="table-wrap"><table>
+<caption>Häufige Fehler bei Bild zu gescanntem PDF und ihre Lösungen</caption>
+<thead><tr><th scope="col">Fehler</th><th scope="col">Warum es falsch wirkt</th><th scope="col">Lösung</th></tr></thead>
+<tbody>
+<tr><th scope="row">Foto im Winkel aufgenommen</th><td>Seite ist ein Trapez; Scanner erzeugen Rechtecke</td><td>Erneut von oben fotografieren oder den Dokumentmodus des Handys nutzen</td></tr>
+<tr><th scope="row">Tisch oder Hand sichtbar</th><td>Flachbettscanner erfassen nur die Glasfläche</td><td>Vor dem Laden auf die Papierkanten zuschneiden</td></tr>
+<tr><th scope="row">Schatten über der Seite</th><td>Scannerlicht ist gleichmäßig</td><td>Fensterlicht oder zwei Lampen nutzen; kein Blitz</td></tr>
+<tr><th scope="row">Drehung bei 5° oder mehr</th><td>Echte Einzüge schrägen selten so stark</td><td>Zwischen 0,5° und 1,5° bleiben</td></tr>
+<tr><th scope="row">Rauschen bei 0,5 oder höher</th><td>Wirkt wie Filmkorn, nicht wie ein Scan</td><td>0,05–0,2 nutzen</td></tr>
+<tr><th scope="row">Unschärfe bei 0,8 oder höher</th><td>Kleingedrucktes wird unlesbar</td><td>0,1–0,4 nutzen und bei 100 % prüfen</td></tr>
+<tr><th scope="row">Ein PDF aus vielen Bildern erwartet</th><td>Jedes Bild wird zu seiner eigenen PDF</td><td>Bilder zuerst zu einem PDF kombinieren</td></tr>
+</tbody></table></div>
+
+<h2 id="honest-use">Wann ist es in Ordnung, ein Bild wie gescannt aussehen zu lassen?</h2>
+<p>Ein Bild wie gescannt aussehen zu lassen ist in Ordnung, wenn das Dokument Ihnen gehört und der Inhalt wahr ist: ein Kassenbon, den Sie fotografiert haben, ein Formular, das Sie unterschrieben haben, ein Brief, den Sie geschrieben haben. Der Scan-Look verändert nur die Optik. Er macht eine Kopie nicht offizieller, und er darf niemals dazu genutzt werden, Änderungen zu verschleiern.</p>
+
+<div class="callout callout-warn"><strong>Ehrlicher Einsatz</strong>Ein Scan-Effekt verändert, wie eine Datei aussieht, nicht ob sie echt ist. Nutzen Sie ihn nicht, um Ausweise, offizielle Aufzeichnungen, Zertifikate oder Unterschriften zu fälschen oder zu verändern, die nicht Ihre eigenen sind. Manche Gerichte und Behörden verlangen durchsuchbare PDFs; der Southern District of Florida etwa erklärt, dass <a href="https://www.flsd.uscourts.gov/all-faqs/CMECF" target="_blank" rel="noopener">„elektronisch über CM/ECF eingereichte Schriftsätze/Hauptdokumente im durchsuchbaren PDF-Format vorliegen müssen“</a>. Prüfen Sie die Regeln des Empfängers, bevor Sie eine reine Bilddatei versenden.</div>
+
+<p>Für getippte Dokumente exportieren Sie diese als PDF und folgen unserer Anleitung zum <a href="/blog/make-a-document-look-scanned/">Dokument wie gescannt aussehen lassen</a>; die <a href="/blog/how-to-make-a-pdf-look-scanned/">Pillar-Anleitung</a> vergleicht jede Methode.</p>
+
+<h2 id="faq">Bild in gescanntes PDF umwandeln: FAQ</h2>
+<p>Diese Fragen zur Umwandlung von Bild in gescanntes PDF behandeln das, was Menschen nach ihrer ersten Umwandlung am häufigsten fragen: Formate, Seitengröße, mehrseitige Dateien, Handys, Datenschutz und ob das Ergebnis von Behörden akzeptiert wird. Jede Antwort spiegelt wider, wie das kostenlose Tool tatsächlich funktioniert, basierend auf seinem Quellcode und den veröffentlichten Einstellungen.</p>
+
+<div class="faq-item"><p class="faq-q">Kann ich ein JPG kostenlos in ein gescanntes PDF umwandeln?</p><p class="faq-a">Ja. Das Web-Tool unter pdflookscanned.com/scan und seine Chrome-Erweiterung sind kostenlos, brauchen kein Konto und fügen kein Wasserzeichen hinzu, außer Sie fügen selbst eines hinzu. Legen Sie das JPG ab, passen Sie den Scan-Effekt an und laden Sie das PDF herunter.</p></div>
+
+<div class="faq-item"><p class="faq-q">Wird mein Foto auf einen Server hochgeladen?</p><p class="faq-a">Nein. Die Umwandlung und der Scan-Effekt laufen lokal in Ihrem Browser mit pdf.js und Canvas. Nach dem ersten Besuch funktioniert die Seite auch offline, was eine einfache Möglichkeit ist zu bestätigen, dass nichts zur Verarbeitung gesendet wird.</p></div>
+
+<div class="faq-item"><p class="faq-q">Welche Seitengröße hat das gescannte PDF?</p><p class="faq-a">Jedes Bild wird auf einer A4-Seite platziert, Hochformat für hohe Bilder und Querformat für breite, skaliert und zentriert. Weicht die Bildform von A4 ab, erhalten Sie an zwei Seiten weiße Ränder, wie beim echten Scan kleineren Papiers.</p></div>
+
+<div class="faq-item"><p class="faq-q">Kann ich mehrere Fotos in ein gescanntes PDF verwandeln?</p><p class="faq-a">Ja, in zwei Schritten. Kombinieren Sie die Bilder mit der macOS Vorschau (Drucken → Als PDF sichern) oder unter Windows (Drucken → Microsoft Print to PDF) zu einem PDF, und legen Sie dieses PDF dann in den Scanner. Das Tool selbst erzeugt ein PDF pro Bild.</p></div>
+
+<div class="faq-item"><p class="faq-q">Schneidet oder begradigt das Tool mein Foto?</p><p class="faq-a">Nein. Es schneidet nicht zu, richtet nicht gerade und korrigiert keine Perspektive. Nutzen Sie zuerst den Fotoeditor Ihres Handys oder den eingebauten Dokumentenscanner in iPhone Notizen, iPhone Dateien oder Ihrer Android-Kamera, und laden Sie dann das bereinigte Bild.</p></div>
+
+<div class="faq-item"><p class="faq-q">Warum wird mein HEIC-Foto nicht akzeptiert?</p><p class="faq-a">HEIC gehört nicht zu den unterstützten Formaten, das sind JPG, PNG, WebP, SVG, GIF und BMP. Exportieren Sie das Foto als JPG aus der Vorschau auf einem Mac, aus der Fotos-App unter Windows, oder stellen Sie die iPhone-Kamera auf „Kompatibelste“, um JPG aufzunehmen.</p></div>
+
+<div class="faq-item"><p class="faq-q">Welche Auflösung sollte ich für Foto zu gescanntem PDF wählen?</p><p class="faq-a">Behalten Sie die Standardeinstellung 2× bei, die die A4-Seite bei rund 144 dpi rendert. Wählen Sie 2,5× oder 3× (rund 216 dpi) für Kleingedrucktes, Stempel oder Unterschriften. Höhere Einstellungen ergeben größere Dateien.</p></div>
+
+
+<div class="faq-item"><p class="faq-q">Akzeptiert USCIS ein zu einem PDF gewandeltes Handyfoto?</p><p class="faq-a">USCIS akzeptiert Scans oder Fotos von Dokumenten als Online-Beweismittel, solange jedes Bild klar und aller Text lesbar ist, in PDF-, JPG- oder JPEG-Dateien bis 12 MB. Ein sauberes gescanntes PDF Ihres eigenen Originals erfüllt dieses Format.</p></div>
+
+<div class="faq-item"><p class="faq-q">Ist der Text im gescannten PDF durchsuchbar?</p><p class="faq-a">Nein. Jede Seite ist ein JPEG-Bild im PDF, sodass der Text nicht markiert oder durchsucht werden kann. Lassen Sie anschließend OCR laufen, wenn der Empfänger durchsuchbaren Text braucht, oder senden Sie ein umgewandeltes PDF, wenn Regeln eines verlangen.</p></div>
+
+

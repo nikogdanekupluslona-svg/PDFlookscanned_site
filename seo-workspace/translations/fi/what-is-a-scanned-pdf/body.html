@@ -1,0 +1,241 @@
+<p class="lead">Skannattu PDF on PDF, jonka sivut ovat kuvia paperista – kuvattuna skannerilla tai puhelimen kameralla – eikä tietokoneella kirjoitettua tekstiä ja vektorimuotoja. Ellei OCR ole lisännyt piilotettua tekstikerrosta, et voi valita, hakea tai kopioida sen sanoja, eikä ruudunlukuohjelma lue sivulta mitään.</p>
+
+<p>Sait PDF:n ja haluat tietää, mikä se oikeasti on: tekstinkäsittelyohjelmasta viety tiedosto, skannaus paperista, vai skannaus tunnistetulla tekstillä. Vastaus ratkaisee, voitko hakea siitä tekstiä, hyväksyykö tuomioistuin tai viranomainen sen, ja tarvitseeko se OCR:ää.</p>
+
+<p>Tämä selitys antaa tarkan määritelmän, 10 sekunnin testin, kolmen PDF-tyypin vertailun ja sanaston. Tiedot perustuvat W3C:n saavutettavuusohjeisiin, Yhdysvaltain liittovaltion tuomioistuimiin, USCIS:ään, NARA:han ja FADGI:n digitointisääntöihin, GOV.UK:hon ja yliopistojen saavutettavuustiimeihin, sekä siihen, mitä tiedämme skannausefektityökalun rakentamisesta.</p>
+
+<nav class="toc" aria-label="Sisällysluettelo"><h2>Sisällys</h2><ol>
+<li><a href="#what-is-a-scanned-pdf">Mikä skannattu PDF tarkalleen on?</a></li>
+<li><a href="#scanned-pdf-vs-digital-pdf">Miten skannattu PDF eroaa digitaalisesta PDF:stä?</a></li>
+<li><a href="#scanned-copy-meaning">Mitä skannattu kopio tarkoittaa verrattuna valokopioon?</a></li>
+<li><a href="#how-to-tell-if-a-pdf-is-scanned">Miten tunnistat, onko PDF skannattu?</a></li>
+<li><a href="#accessibility-and-search">Miksi skannatut asiakirjat ovat vaikeita hakea ja lukea?</a></li>
+<li><a href="#ocr-explained">Mitä OCR tekee skannatulle PDF:lle?</a></li>
+<li><a href="#when-you-need-a-scanned-copy">Milloin organisaatiot pyytävät skannattua kopiota?</a></li>
+<li><a href="#scanned-pdf-and-pdf-a">Voiko skannatun PDF:n arkistoida PDF/A-muodossa?</a></li>
+<li><a href="#digital-pdf-to-scanned-look">Miten digitaalinen PDF muunnetaan skannatuksi PDF:ksi?</a></li>
+<li><a href="#scanned-document-glossary">Skannatun asiakirjan sanasto: mitkä termit ovat tärkeitä?</a></li>
+<li><a href="#faq">Skannattu PDF: mitä muuta kysytään?</a></li>
+<li><a href="#verdict">Mikä on lyhyt vastaus skannatuista PDF-tiedostoista?</a></li>
+</ol></nav>
+
+<h2 id="what-is-a-scanned-pdf">Mikä skannattu PDF tarkalleen on?</h2>
+<p>Skannattu PDF on PDF-säiliö, joka sisältää yhden rasterikuvan sivua kohden, tuotettuna kuvaamalla tai skannaamalla fyysinen paperiarkki. Näkemäsi kirjaimet ovat pikseleitä, eivät merkkejä. Ohjelmisto käsittelee jokaista sivua kuin valokuvaa, joten pelkkä tekstihaku, kopiointi ja uudelleentaitto eivät toimi ilman OCR:ää.</p>
+
+<p>Yhdysvaltain Kalifornian pohjoisen piirikunnan käräjäoikeus toteaa National Archivesin siirto-ohjeisiin viitaten yhdellä lauseella: ”Skannattu teksti on valokuva tulostetusta sivusta, tuotettuna joko digitaalikameralla tai skannerilla” (<a href="https://cand.uscourts.gov/cases-e-filing/cmecf-information/preparing-your-cmecf-filing" target="_blank" rel="noopener">N.D. Cal., Preparing Your CM/ECF Filing</a>). PDF-muoto itsessään ei muutu: skannattu PDF on yhä kelvollinen ISO 32000 -tiedosto. Se, mikä muuttuu, on sisältö jokaisen sivun sisällä.</p>
+
+<p>James Madisonin yliopiston saavutettavuustiimi kuvailee lopputulosta lukijan näkökulmasta: ”Skannattujen asiakirjojen PDF:t ovat usein vain kuvia asiakirjoista, digitaalisten valokuvien tapaan, eivätkä yleensä sisällä luettavaa tekstiä” (<a href="https://www.jmu.edu/accessibility/digital-accessibility/guides/pdf/scanned-documents.shtml" target="_blank" rel="noopener">JMU Digital Accessibility</a>). Tuo yksi tosiasia selittää lähes jokaisen alla käsitellyn käytännön eron.</p>
+
+<p>Tässä on määritelmä pilkottuna tarkastettaviin osiin, samaan tapaan kuin arkistovirkailija tai saavutettavuustarkastaja tarkastelisi tiedostoa.</p>
+
+<dl class="spec-list">
+<dt>Sivun sisältö</dt><dd>Yksi bittikarttakuva sivua kohden (JPEG-, JBIG2-, CCITT- tai vastaava pakkaus), ei fonttimerkkejä ja vektoripolkuja.</dd>
+<dt>Tekstikerros</dt><dd>Ei mitään pelkästä kuvasta koostuvassa PDF:ssä; näkymätön OCR-kerros haettavassa skannatussa PDF:ssä.</dd>
+<dt>Lähde</dt><dd>Tasoskanneri tai arkinsyöttöskanneri, monitoimikopiokone, tai puhelimen kamera käyttöjärjestelmään sisäänrakennetulla skannaussovelluksella.</dd>
+<dt>Tyypillinen tarkkuus</dt><dd>200–400 ppi; 300 ppi on yleisin vaatimus toimistotekstille.</dd>
+<dt>Väritila</dt><dd>Kaksisävyinen (1-bittinen mustavalkoinen), harmaasävy (8-bittinen) tai värillinen (24-bittinen).</dd>
+<dt>Zoomauskäyttäytyminen</dt><dd>Reunat muuttuvat näkyviksi pikselilohkoiksi suurella suurennoksella.</dd>
+<dt>Tiedostokoko</dt><dd>Yleensä suurempi sivua kohden kuin tekstipohjaisessa PDF:ssä, varsinkin harmaasävynä tai värillisenä.</dd>
+</dl>
+
+<h2 id="scanned-pdf-vs-digital-pdf">Miten skannattu PDF eroaa digitaalisesta PDF:stä?</h2>
+<p>Skannattu PDF tallentaa kuvia sivuista, kun taas digitaalinen (alun perin sähköinen) PDF tallentaa oikeita merkkejä, fontteja ja vektorigrafiikkaa, jotka on viety ohjelmistosta. Kolmas laji, skannattu PDF OCR:llä, säilyttää sivun kuvana mutta lisää piilotetun koneluettavan tekstin sen alle, mikä tekee siitä haettavan PDF:n.</p>
+
+<p>Massachusettsin piirikunta vetää saman rajan sähköisen arkistoinnin säännöissään: skannattu PDF syntyy paperista, joka on ajettu optisen skannerin läpi, kun taas ”sähköisesti muunnettu” PDF luodaan tekstinkäsittelyohjelmasta ja on tekstihaettava (<a href="https://www.mad.uscourts.gov/caseinfo/pdf/ECFadminProc.pdf" target="_blank" rel="noopener">D. Mass. CM/ECF Administrative Procedures</a>). Taulukko asettaa kolme lajia rinnakkain.</p>
+
+<div class="table-wrap"><table><caption>Kolme PDF-lajia: digitaalisesti syntynyt, pelkästä kuvasta koostuva skannaus ja skannaus OCR:llä</caption>
+<thead><tr><th scope="col">Ominaisuus</th><th scope="col">Digitaalisesti syntynyt PDF</th><th scope="col">Kuvapohjainen skannattu PDF</th><th scope="col">Skannattu PDF + OCR (haettava)</th></tr></thead>
+<tbody>
+<tr><th scope="row">Miten se syntyy</th><td>Vienti tai tulostus PDF:ksi Wordista, Google Docsista, selaimesta tai mistä tahansa sovelluksesta</td><td>Skanneri, kopiokone tai puhelimen kamera</td><td>Ensin skannaus, sitten OCR-ohjelmisto lisää tekstin</td></tr>
+<tr><th scope="row">Mitä sivu sisältää</th><td>Merkkejä, upotettuja fontteja, vektoriviivoja, kuvia</td><td>Yksi rasterikuva</td><td>Yksi rasterikuva ja näkymätön teksti</td></tr>
+<tr><th scope="row">Tekstin valinta ja kopiointi</th><td>Kyllä, tarkasti</td><td>Ei</td><td>Kyllä, mutta vain yhtä tarkasti kuin OCR</td></tr>
+<tr><th scope="row">Ctrl/Cmd+F-haku</th><td>Toimii</td><td>Ei löydä mitään</td><td>Toimii, saattaa jättää huonosti tunnistetut sanat väliin</td></tr>
+<tr><th scope="row">Ruudunlukuohjelmat</th><td>Luettava, parhaimmillaan merkittynä</td><td>Hiljainen</td><td>Luettava, usein ilman rakennetta</td></tr>
+<tr><th scope="row">Zoomaus 400 %:iin</th><td>Terävät reunat missä tahansa koossa</td><td>Pikseloitunut</td><td>Pikseloitunut</td></tr>
+<tr><th scope="row">Tyypillinen koko sivua kohden</th><td>Kymmeniä kilotavuja</td><td>Noin 75 kt (kaksisävyinen) – yli 1 Mt (harmaasävy tai väri)</td><td>Sama kuin kuvapohjainen plus pieni tekstikerros</td></tr>
+<tr><th scope="row">Näyttää paperilta</th><td>Ei</td><td>Kyllä</td><td>Kyllä</td></tr>
+</tbody></table></div>
+
+<p>Taulukon sivukohtaiset koot on johdettu oikeuslaitosten testeistä, ei arvauksista. Kalifornian pohjoinen piirikunta skannasi 317-sivuisen asiakirjan: kaksisävyisenä 300 ppi:llä tuloksena oli 23,86 Mt, noin 75 kt sivua kohden, ja harmaasävynä 400 ppi:llä 374,47 Mt, noin 1,2 Mt sivua kohden. <a href="https://www.ncmd.uscourts.gov/sites/ncmd/files/ecfprocman.pdf" target="_blank" rel="noopener">Pohjois-Carolinan keskinen piirikunta</a> huomauttaa, että 2 Mt vastaa noin 45 sivua PDF-tekstiä, alle 50 kt sivua kohden.</p>
+
+<h2 id="scanned-copy-meaning">Mitä skannattu kopio tarkoittaa verrattuna valokopioon?</h2>
+<p>Skannattu kopio on paperisen alkuperäiskappaleen digitaalinen kuvatiedosto, yleensä toimitettuna skannattuna PDF:nä tai JPEG-kuvana. Valokopio on kopiokoneella tulostettu toinen paperiarkki. Oikeaksi todistettu kopio on mikä tahansa kopio, jonka valtuutettu henkilö on tarkistanut alkuperäistä vasten ja allekirjoittanut.</p>
+
+<p>Ihmiset käyttävät ilmaisua ”skannattu kopio” väljästi, ja nämä kolme termiä menevät sekaisin lomakkeissa, HR-sähköposteissa ja viisumitarkistuslistoissa. Erot ovat tärkeitä, koska yhden pyytäminen ei täyty muilla.</p>
+
+<div class="table-wrap"><table><caption>Skannattu kopio, valokopio ja oikeaksi todistettu kopio vertailtuna</caption>
+<thead><tr><th scope="col">Termi</th><th scope="col">Väline</th><th scope="col">Kuka sen tekee</th><th scope="col">Mitä se todistaa</th></tr></thead>
+<tbody>
+<tr><th scope="row">Skannattu kopio</th><td>Digitaalinen tiedosto (PDF, JPEG, TIFF)</td><td>Kuka tahansa, jolla on skanneri tai puhelin</td><td>Että kuva asiakirjasta on olemassa; ei mitään aitoudesta</td></tr>
+<tr><th scope="row">Valokopio</th><td>Paperi</td><td>Kuka tahansa, jolla on kopiokone</td><td>Sama: se on jäljennös, ei alkuperäinen</td></tr>
+<tr><th scope="row">Oikeaksi todistettu (aito) kopio</th><td>Paperi, joskus skannattu jälkikäteen</td><td>Ammattilainen, joka on nähnyt alkuperäisen</td><td>Että kopio vastaa alkuperäistä, kyseisen henkilön sanan mukaan</td></tr>
+<tr><th scope="row">Alkuperäinen</th><td>Paperi tai alun perin digitaalinen tiedosto</td><td>Asiakirjan antaja</td><td>Itse asiakirja</td></tr>
+</tbody></table></div>
+
+<p>Britannian hallitus selittää oikeaksi todistamisen suoraan: ”Voit todistaa asiakirjan oikeaksi kopioksi hankkimalla siihen ammattihenkilön, kuten lakimiehen, allekirjoituksen ja päiväyksen” (<a href="https://www.gov.uk/certifying-a-document" target="_blank" rel="noopener">GOV.UK, Certifying a document</a>). Skannattu kopio tuosta oikeaksi todistetusta sivusta on yhä skannattu kopio; todistus elää paperilla, allekirjoituksineen ja päiväyksineen.</p>
+
+<p>Kun vuokranantaja, työnantaja tai koulu sanoo ”lähetä skannattu kopio”, he tarkoittavat lähes aina ”selkeä digitaalinen kuva paperista, PDF-muodossa”. Kun he sanovat ”oikeaksi todistettu kopio”, pelkkä skannaus ei riitä, vaikka se näyttäisi kuinka aidolta tahansa.</p>
+
+<h2 id="how-to-tell-if-a-pdf-is-scanned">Miten tunnistat, onko PDF skannattu?</h2>
+<p>Tunnistaaksesi, onko PDF skannattu, yritä valita sivulta sana ja hae sanaa, jonka näet. Jos mikään ei korostu, PDF on kuvapohjainen. Zoomaus, asiakirjan ominaisuudet, fonttiluettelo ja tiedostokoko vahvistavat sitten, onko tiedosto skannattu, digitaalinen vai skannattu OCR:llä.</p>
+
+<p>Kaksi ensimmäistä tarkistusta vievät alle 10 sekuntia ja toimivat missä tahansa PDF-katseluohjelmassa, mukaan lukien Google Chromen, Microsoft Edgen ja macOS Esikatselun sisäänrakennetut katseluohjelmat. Loput vievät minuutin ja ratkaisevat epäselvät tapaukset.</p>
+
+<ol class="step-list">
+<li><strong>Yritä valita tekstiä.</strong> Vedä kohdistinta rivin yli. Digitaalisesti syntyneessä tai OCR:llä käsitellyssä PDF:ssä yksittäiset sanat korostuvat. Kuvapohjaisessa PDF:ssä mikään ei korostu, tai jotkin katseluohjelmat piirtävät suorakulmion koko sivukuvan ympärille.</li>
+<li><strong>Hae Ctrl+F:llä tai Cmd+F:llä.</strong> Kirjoita erottuva sana, jonka näet selvästi sivulla yksi. Nolla osumaa sanaan, joka selvästi on siellä, tarkoittaa, ettei tekstikerrosta ole. Osuma tarkoittaa oikeaa tekstiä tai OCR-kerrosta.</li>
+<li><strong>Zoomaa 400 %:iin.</strong> Katso kirjaimen reunaa. Vektoriteksti pysyy partaveitsenterävänä millä tahansa zoomilla. Skannattu sivu näyttää pikseliportaat, himmeät harmaat reunukset, rakeisuuden ja joskus JPEG-lohkokuviot kirjainten ympärillä.</li>
+<li><strong>Avaa asiakirjan ominaisuudet.</strong> Chromen PDF-katseluohjelmassa käytä kolmen pisteen valikkoa ja valitse Asiakirjan ominaisuudet; macOS Esikatselussa käytä Työkalut, sitten Näytä tarkastaja. Tuottaja- tai sovelluskenttä nimeää usein skannerin, kopiokonemallin, puhelimen skannaustoiminnon tai OCR-moottorin. Tekstinkäsittelyohjelma tai ”Print to PDF” viittaa digitaalisesti syntyneeseen tiedostoon.</li>
+<li><strong>Tarkista fonttiluettelo.</strong> Tietokoneen PDF-ohjelma näyttää Fontit-välilehden asiakirjan ominaisuuksissa. Digitaalisesti syntynyt PDF luettelee käyttämänsä kirjasintyypit. Kuvapohjainen skannaus ei luettele yhtään. OCR-käsitelty skannaus luettelee usein yhden fontin, jota käytetään vain näkymättömässä kerroksessa.</li>
+<li><strong>Vertaa kokoa sivua kohden.</strong> Jaa tiedostokoko sivumäärällä. Tekstipohjainen PDF pysyy yleensä alle 50 kt:ssa sivua kohden. Harmaasävy- tai värillinen skannaus on usein useita satoja kilotavuja tai yli 1 Mt sivua kohden. Kaksisävyiset skannaukset ovat kompakteja, joten koko on heikoin vihje.</li>
+</ol>
+
+<p>Clevelandin osavaltionyliopiston saavutettavuusoppikirja suosittelee samaa nopeaa hakutestiä: ”Jos sana korostuu sivulla, siinä on haettavaa tekstiä sen sijaan, että se olisi tekstin skannattu kuva” (<a href="https://pressbooks.ulib.csuohio.edu/accessibility/chapter/chapter-4-2-the-difference-between-an-accessible-pdf-and-a-scanned-image-of-text/" target="_blank" rel="noopener">Heather Caprette, Cleveland State University</a>).</p>
+
+<div class="callout callout-tip"><strong>Sekalaisten tulosten tulkinta</strong>Teksti valikoituu, mutta zoomaus näyttää pikseleitä: skannattu PDF OCR:llä. Teksti valikoituu ja zoomaus pysyy terävänä: digitaalisesti syntynyt. Mikään ei valikoidu ja zoomaus näyttää pikseleitä: kuvapohjainen. Mikään ei valikoidu, mutta reunat pysyvät terävinä: teksti muunnettu vektoriääriviivoiksi, harvinainen neljäs tapaus, joka käyttäytyy haussa kuin skannaus.</div>
+
+<p>Metadata on vihje, ei todiste. Tuottaja- ja luoja-kenttiä voi muokata monella työkalulla, myös omallamme, joten luota siihen, mitä sivun sisältö tekee valinnan ja zoomauksen alla, ennemmin kuin siihen, mitä ominaisuuspaneeli kertoo.</p>
+
+<h2 id="accessibility-and-search">Miksi skannatut asiakirjat ovat vaikeita hakea ja lukea?</h2>
+<p>Skannatut asiakirjat ovat vaikeita hakea ja lukea, koska kuvapohjainen PDF ei sisällä merkkejä, joita ohjelmisto voisi indeksoida. Hakukoneet, työpöytähaku, kopiointi ja liittäminen, käännöstyökalut ja ruudunlukuohjelmat tarvitsevat kaikki tekstiä. Ilman OCR-kerrosta skannattu PDF on kuva, jota vain näkevät lukijat voivat käyttää.</p>
+
+<p>W3C:n Web Accessibility Initiative sanoo asian suoraan WCAG-ohjeiston tekniikassa PDF7: ”Asiakirja, joka koostuu skannatuista tekstikuvista, on lähtökohtaisesti saavuttamaton, koska asiakirjan sisältö on kuvia, ei haettavaa tekstiä” (<a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF7" target="_blank" rel="noopener">W3C WAI, WCAG Technique PDF7</a>).</p>
+
+<p>Sama W3C-sivu listaa, mikä menetetään: ”Avustavat teknologiat eivät voi lukea tai poimia sanoja; käyttäjät eivät voi valita, muokata, muuttaa kokoa tai taittaa tekstiä uudelleen eivätkä muuttaa tekstin ja taustan värejä; ja tekijät eivät voi muokata PDF:ää saavutettavuuden vuoksi.” Sen korjauskeino on OCR, jotta kuvan takana olisi oikeaa tekstiä.</p>
+
+<p>Georgetownin yliopiston saavutettavuustoimisto lisää käytännön seurauksen kaikille, jotka luottavat avustavaan teknologiaan: ”Skannatut PDF:t ovat kuvien kokoelmia, minkä vuoksi ne ovat useimmille tavallisille ruudunlukuohjelmille lukukelvottomia” (<a href="https://accessibility.georgetown.edu/digital-accessibility/pdf-accessibility/" target="_blank" rel="noopener">Accessibility at Georgetown</a>).</p>
+
+<p>Julkisen sektorin julkaisijat ovat menneet pidemmälle. Britannian hallituksen digitaalipalvelu (GDS) toteaa, että verrattuna HTML:ään PDF-muodossa julkaistu tieto on vaikeampi löytää, käyttää ja ylläpitää (<a href="https://gds.blog.gov.uk/2018/07/16/why-gov-uk-content-should-be-published-in-html-and-not-pdf/" target="_blank" rel="noopener">GDS blog, GOV.UK</a>). Kuvapohjainen skannattu PDF on tämän ongelman äärimmäinen versio: edes sanat eivät ole koneluettavia.</p>
+
+<div class="table-wrap"><table><caption>Mikä toimii kussakin PDF-lajissa</caption>
+<thead><tr><th scope="col">Tehtävä</th><th scope="col">Digitaalisesti syntynyt</th><th scope="col">Kuvapohjainen skannaus</th><th scope="col">Skannaus + OCR</th></tr></thead>
+<tbody>
+<tr><th scope="row">Ruudunlukuohjelman tuloste</th><td>Koko teksti</td><td>Ei mitään</td><td>Teksti, usein väärässä järjestyksessä</td></tr>
+<tr><th scope="row">Uudelleentaitto puhelimella</th><td>Mahdollista, jos merkitty</td><td>Ei</td><td>Harvoin</td></tr>
+<tr><th scope="row">Lainauksen kopiointi</th><td>Tarkasti</td><td>Kirjoita käsin uudelleen</td><td>Voi sisältää OCR-virheitä</td></tr>
+<tr><th scope="row">Löytyy työpöytähaulla</th><td>Kyllä</td><td>Vain tiedostonimi</td><td>Kyllä</td></tr>
+<tr><th scope="row">Konekäännös</th><td>Kyllä</td><td>Vaatii ensin OCR:n</td><td>Kyllä</td></tr>
+</tbody></table></div>
+
+<h2 id="ocr-explained">Mitä OCR tekee skannatulle PDF:lle?</h2>
+<p>OCR, optinen merkintunnistus, lukee kirjainmuodot skannatussa PDF:ssä ja kirjoittaa vastaavan konetekstin näkymättömään kerrokseen jokaisen sivukuvan taakse. Sivu näyttää täsmälleen samalta, mutta siitä tulee haettava PDF: sanat voidaan löytää, valita, kopioida ja lukea ääneen.</p>
+
+<p>Federal Agencies Digital Guidelines Initiative määrittelee sen tarkasti: ”Optinen merkintunnistus (OCR) on prosessi, jossa tekstin rasterikuva muunnetaan haettavaksi sähköiseksi tekstiksi” (<a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">FADGI Technical Guidelines, 3rd ed., 2023</a>). OCR toimii kirjoitetulle, painetulle ja, epäluotettavammin, käsinkirjoitetulle tekstille.</p>
+
+<h3>Mitä OCR korjaa skannatussa asiakirjassa</h3>
+<ul>
+<li>Ctrl/Cmd+F-haku ja kokotekstihakemisto alkavat toimia.</li>
+<li>Tekstin voi valita, kopioida ja liittää muihin asiakirjoihin.</li>
+<li>Ruudunlukuohjelmat saavat sanoja luettavakseen, mikä täyttää W3C:n PDF7-perusvaatimuksen.</li>
+<li>Tekstihaettavia jättöjä vaativat tuomioistuinjärjestelmät voivat hyväksyä tiedoston.</li>
+</ul>
+
+<h3>Mitä OCR ei korjaa</h3>
+<ul>
+<li><strong>Kuvanlaatu.</strong> Sivu on yhä kuva, joten zoomaus edelleen pikseloi. JMU huomauttaa, että kun käyttäjä zoomaa sisään, ”tuloste muuttuu pikseloituneeksi ja vääristyneeksi, koska sähköinen teksti on tekstikuvan alla.”</li>
+<li><strong>Tarkkuus.</strong> Sumennus, vinous, matala tarkkuus ja rakeisuus aiheuttavat väärintunnistuksia, kuten ”rn” tulkitaan ”m”:ksi tai ”1” ”l”:ksi. Piilotettu teksti voi olla väärin, vaikka kuva näyttää oikealta.</li>
+<li><strong>Rakenne.</strong> Otsikot, lukujärjestys, taulukoiden solut ja kuvien vaihtoehtoinen teksti tarvitsevat yhä manuaalisen merkinnän täyttä saavutettavuutta varten.</li>
+<li><strong>Tiedostokoko.</strong> Sivukuvat pysyvät ennallaan, joten OCR:llä varustettu skannattu PDF on lähes yhtä suuri kuin pelkkä kuvaversio.</li>
+</ul>
+
+<div class="callout callout-info"><strong>OCR toimii kuvalle, ei paperille</strong>Tunnistuslaatu riippuu skannauksesta. Puhdas 300 ppi:n sivu suorilla riveillä tunnistuu paljon paremmin kuin vino, kohiseva puhelinkuva. Jos skannaus aiotaan käsitellä OCR:llä, skannaa se ensin suorana ja terävänä.</div>
+
+<h2 id="when-you-need-a-scanned-copy">Milloin organisaatiot pyytävät skannattua kopiota?</h2>
+<p>Organisaatiot pyytävät skannattua kopiota, kun alkuperäinen on olemassa paperilla ja he tarvitsevat digitaalisen tallenteen: maahanmuuttotodisteet, oikeuden todistusaineiston, HR:n perehdytystiedostot, allekirjoitetut sopimukset ja kuitit. Jokainen asettaa omat sääntönsä muodolle, tarkkuudelle ja tiedostokoolle, ja jotkin tuomioistuimet vaativat haettavia PDF-tiedostoja kuvapohjaisten sijaan.</p>
+
+<h3>Maahanmuuttotodisteet (USCIS)</h3>
+<p>Yhdysvaltain kansalaisuus- ja maahanmuuttopalvelu hyväksyy skannattua tai kuvattua todistusaineistoa verkkohakemuksissa. Sen ohje on lyhyt: ”Käytä skanneria tai ota kuvia jokaisesta asiakirjasta”, ja ”Varmista, että jokainen liittämäsi kuva on selkeä ja kaikki teksti on luettavissa” (<a href="https://www.uscis.gov/file-online/tips-for-filing-forms-online" target="_blank" rel="noopener">USCIS, Tips for Filing Forms Online</a>). Jokainen tiedosto voi olla enintään 12 Mt, PDF-, JPG- tai JPEG-muodossa, TIF tai TIFF hyväksytään joissakin lomakkeissa.</p>
+
+<h3>Liittovaltion oikeuden jätöt (CM/ECF)</h3>
+<p>Liittovaltion sähköiset jättöjärjestelmät hyväksyvät vain PDF:n, ja monet tuomioistuimet suosivat digitaalisesti syntyneitä tiedostoja. Floridan eteläinen piirikunta toteaa, että ”sähköisesti CM/ECF:ään jätettyjen asiakirjojen/pääasiakirjojen on oltava tekstihaettavassa PDF-muodossa” (<a href="https://www.flsd.uscourts.gov/all-faqs/CMECF" target="_blank" rel="noopener">S.D. Fla. CM/ECF FAQ</a>). Skannatut PDF:t ovat pääosin todistusaineistoa ja allekirjoitettua paperia, jolla ei ole digitaalista alkuperäistä.</p>
+
+<p>Skannausasetukset ja kokorajat vaihtelevat tuomioistuimittain. Washingtonin läntinen piirikunta vaatii 300 dpi:n skannausta, mustavalkoisena ellei väri ole olennainen, ja rajaa jokaisen asiakirjan 100 Mt:iin (<a href="https://www.wawd.uscourts.gov/attorneys/cm-ecf-faqs/Technical" target="_blank" rel="noopener">W.D. Wash. technical FAQ</a>). <a href="https://www.mnd.uscourts.gov/sites/mnd/files/Criminal-ECF-Procedures-Guide.pdf" target="_blank" rel="noopener">Minnesotan piirikunta</a> rajaa jokaisen todisteen 35 Mt:iin rikosasioiden ECF-ohjeissaan.</p>
+
+<h3>HR, vuokranantajat, koulut ja pankit</h3>
+<p>Työnantajat ja vuokranantajat haluavat yleensä skannatun kopion henkilöllisyystodistuksesta, tutkintotodistuksesta, allekirjoitetusta työtarjouksesta tai vuokrasopimuksen sivusta. He harvoin julkaisevat teknisiä sääntöjä; useimmat mainitsevat sähköpostin liitetiedostorajan ja pyytävät, että jokainen sana on luettavissa. Kun portaali ei listaa rajoja, 300 dpi:n harmaasävy-PDF alle 10 Mt:n koossa on järkevä oletusarvio, ei ilmoitettu sääntö.</p>
+
+<div class="table-wrap"><table><caption>Yleiset skannatun kopion vaatimukset pyytäjän mukaan</caption>
+<thead><tr><th scope="col">Pyytäjä</th><th scope="col">Muoto</th><th scope="col">Koko- tai tarkkuussääntö</th><th scope="col">Haettava teksti vaaditaan?</th></tr></thead>
+<tbody>
+<tr><th scope="row">USCIS-verkkohakemus</th><td>PDF, JPG, JPEG (TIF/TIFF joihinkin lomakkeisiin)</td><td>12 Mt tiedostoa kohden</td><td>Ei; tekstin tulee olla luettavissa</td></tr>
+<tr><th scope="row">W.D. Wash. -tuomioistuin</th><td>PDF</td><td>300 dpi, mustavalkoinen; 100 Mt asiakirjaa kohden</td><td>Riippuu asiakirjatyypistä</td></tr>
+<tr><th scope="row">S.D. Fla. -tuomioistuin</th><td>PDF</td><td>Tuomioistuimen rajat pätevät</td><td>Kyllä, pääasiakirjoille</td></tr>
+<tr><th scope="row">D. Minn. rikosasioiden ECF</th><td>PDF</td><td>35 Mt todistetta kohden</td><td>Tarkista paikalliset säännöt</td></tr>
+<tr><th scope="row">Työnantaja tai vuokranantaja</th><td>PDF tai kuva</td><td>Yleensä sähköpostin raja</td><td>Harvoin</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-tip"><strong>Pidä koko pienenä</strong>Tekstiasiakirjoille harmaasävy tai kaksisävyinen 300 dpi:llä on yleensä pienin luettavissa oleva vaihtoehto. Pelkän tekstin värilliset skannaukset voivat olla moninkertaisesti suurempia lisäämättä tietoa. Oppaamme <a href="/blog/convert-color-pdf-to-black-and-white/">värillisen PDF:n muuttamisesta mustavalkoiseksi</a> käsittelee kompromisseja.</div>
+
+<h2 id="scanned-pdf-and-pdf-a">Voiko skannatun PDF:n arkistoida PDF/A-muodossa?</h2>
+<p>Skannatun PDF:n voi tallentaa PDF/A-muodossa, PDF:n ISO 19005 -arkistoversiona, koska PDF/A sallii sivukuvat. PDF/A lisää sääntöjä pitkäaikaista lukemista varten, kuten upotetut fontit ja salauksen kiellon, mutta se ei tee kuvapohjaisesta sivusta haettavaa. OCR on erillinen vaihe.</p>
+
+<p>PDF/A julkaistiin ensimmäisen kerran 1. lokakuuta 2005, ja se kieltää ominaisuudet, jotka vaikeuttavat tiedostojen avaamista vuosikymmenten päästä, kuten fonttien linkittämisen ja salauksen (<a href="https://en.wikipedia.org/wiki/PDF/A" target="_blank" rel="noopener">Wikipedia, PDF/A</a>). Microsoft Office voi viedä ISO 19005-1 -yhteensopivia tiedostoja suoraan Tallenna PDF:ksi -valinnoistaan.</p>
+
+<p>Tuomioistuimet, jotka vaativat PDF/A:ta, ohjaavat usein jättäjiä pois skannaamisesta kokonaan. Oklahoman itäinen piirikunta neuvoo, että tiedostokokojen pitämiseksi pienenä ja tekstihaettavuuden varmistamiseksi PDF/A-asiakirjat tulisi luoda tekstinkäsittelyohjelmassa sen sijaan, että ne tulostetaan ja skannataan (<a href="https://www.oked.uscourts.gov/pdfa-frequently-asked-questions" target="_blank" rel="noopener">E.D. Okla. PDF/A FAQ</a>).</p>
+
+<dl class="spec-list">
+<dt>Digitaalisesti syntynyt PDF/A</dt><dd>Pienin ja täysin haettava; paras vaihtoehto, kun digitaalinen alkuperäinen on olemassa.</dd>
+<dt>Skannattu PDF/A OCR:llä</dt><dd>Arkistollinen ja haettava; oikea valinta pelkästään paperilla oleville tallenteille.</dd>
+<dt>Kuvapohjainen PDF/A</dt><dd>Kelvollinen säilytykseen, mutta ei haettava tai saavutettava.</dd>
+</dl>
+
+<h2 id="digital-pdf-to-scanned-look">Miten digitaalinen PDF muunnetaan skannatuksi PDF:ksi?</h2>
+<p>Digitaalinen PDF muuttuu skannatun PDF:n näköiseksi, kun jokainen sivu rasteroidaan kuvaksi ja siihen lisätään oikean skannerin epätarkkuudet: lievä kierto, sumennus, kohina, harmaa tai paperin sävy. Lopputulos on kuvapohjainen PDF, joka käyttäytyy kuin skannaus, ilman tulostamista tai skannerin omistamista.</p>
+
+<p>Juuri niin ilmainen <a href="/scan">skannausefektityökalumme</a> toimii. Se piirtää jokaisen PDF-sivun selaimessasi, käyttää valitsemasi efektit ja tallentaa jokaisen sivun JPEG-kuvana uuden PDF:n sisään. Tiedostot käsitellään paikallisesti eikä niitä lähetetä palvelimelle.</p>
+
+<dl class="spec-list">
+<dt>Kierto</dt><dd>−10°…10°, oletus 1°, plus satunnainen sivukohtainen vaihtelu enintään 10°.</dd>
+<dt>Sumennus</dt><dd>0…1, oletus 0,3, pehmentää vektorireunoja samaan tapaan kuin skannerin optiikka.</dd>
+<dt>Kohina</dt><dd>0…1, oletus 0,1, lisää anturimaista rakeisuutta.</dd>
+<dt>Kirkkaus ja kontrasti</dt><dd>0…2 kumpikin, oletus 1.</dd>
+<dt>Kellertävyys</dt><dd>0…2, oletus 0, sävyttää sivun vanhentuneen paperin näköiseksi.</dd>
+<dt>Väriavaruus</dt><dd>Harmaasävy (oletus) tai Värillinen.</dd>
+<dt>Tarkkuus</dt><dd>1×–3×; PDF-sivut renderöidään 72 dpi kertaa kerroin, joten 2× on noin 144 dpi ja 3× noin 216 dpi.</dd>
+</dl>
+
+<p>Koska tuloste on kuvapohjainen, se perii kaikki edellä kuvatut ominaisuudet: ei valittavaa tekstiä, ei hakua, suurempi tiedosto, ei ruudunlukuohjelman tulostetta. Se on juuri se, mitä henkilö tarvitsee, jos asiakirjan pitää näyttää skannatulta kopiolta, ja haitta sille, joka tarvitsee sen haettavaksi. Säilytä alkuperäinen digitaalinen tiedosto.</p>
+
+<p>Koko työnkulkua varten, mukaan lukien tarkkuuden ja tiedostokoon kompromissit, lue <a href="/blog/pdf-to-scanned-pdf/">miten PDF muunnetaan skannatuksi PDF:ksi</a>. Kaikki kuusi tapaa, tulostuksesta ja skannauksesta sisäänrakennettuihin käyttöjärjestelmävaihtoehtoihin, löydät oppaasta <a href="/blog/how-to-make-a-pdf-look-scanned/">miten PDF tehdään skannatun näköiseksi</a>. Aloitatko puhelinkuvasta? Opas <a href="/blog/image-to-scanned-pdf/">kuvan muuntamisesta skannatuksi PDF:ksi</a> käsittelee JPG- ja PNG-tiedostoja.</p>
+
+<div class="callout callout-warn"><strong>Käytä skannausilmettä rehellisesti</strong>Skannausefekti muuttaa sitä, miltä tiedosto näyttää, ei sitä, onko se aito. Älä käytä sitä väärentääksesi tai muuttaaksesi virallisia asiakirjoja, henkilöllisyystodistuksia tai allekirjoituksia, jotka eivät ole omiasi. Jotkin tuomioistuimet ja viranomaiset vaativat tekstihaettavia PDF-tiedostoja, joten kuvapohjainen tiedosto voidaan hylätä; tarkista säännöt ennen lähettämistä.</div>
+
+<div class="expert-quote"><blockquote>Rakensimme työkalumme lisäämään skannausilmeen, ja yleisin kysymys, jonka saamme, on oikeastaan ”mitä minä juuri tein?” Rehellinen vastaus on kuvapohjainen PDF. Se näyttää paperilta, mutta sanat ovat pikseleitä. Jos lukijan pitää hakea siitä tekstiä tai kuulla se luettuna, säilytä digitaalinen alkuperäinen sen rinnalla, tai aja OCR jälkikäteen. Haluaisimme mieluummin, että ihmiset tietävät sen ennen kuin he painavat Lataa.</blockquote><cite><strong>Make PDF look scanned -tiimi</strong> — verkkotyökalun ja Chrome-laajennuksen tekijät</cite></div>
+
+<h2 id="scanned-document-glossary">Skannatun asiakirjan sanasto: mitkä termit ovat tärkeitä?</h2>
+<p>Skannattu asiakirja tuo mukanaan oman sanastonsa: dpi ja ppi, bittisyvyys, kaksisävyinen, OCR, rasterointi, PDF/A ja JBIG2. Näiden seitsemän termin tunteminen riittää lukemaan minkä tahansa tuomioistuimen, viranomaisen tai työnantajan skannausvaatimuksen ja arvioimaan vastaanottamasi skannatun PDF:n.</p>
+
+<dl class="spec-list">
+<dt>dpi / ppi</dt><dd>Pistettä tai pikseliä tuumaa kohden: kuinka monta kuvanäytettä peittää yhden tuuman paperia. NARA vaatii vähintään 300 ppi:tä nykyaikaisille tekstiasiakirjoille ja 400 ppi:tä valokuville ja hienoja yksityiskohtia sisältäville tallenteille. PDF-sivugeometria käyttää 72 pistettä tuumaa kohden, minkä vuoksi 1×-renderöinti vastaa 72 dpi:tä.</dd>
+<dt>Bittisyvyys</dt><dd>Pikseliä kohden tallennettujen bittien määrä. Kaksisävyinen on 1 bitti, harmaasävy 8 bittiä (256 sävyä), ja tyypillinen värillinen skannaus 24 bittiä (8 bittiä kutakin kolmea kanavaa kohden).</dd>
+<dt>Kaksisävyinen</dt><dd>FADGI:n määritelmä: ”Digitaalisia kuvia, jotka on tuotettu käyttäen vain kahta väriä, mustaa ja valkoista.” Pienin luettavissa oleva muoto pelkälle tekstille.</dd>
+<dt>OCR</dt><dd>Optinen merkintunnistus: ohjelmisto, joka muuttaa kuvan kirjainmuodot konetekstiksi, tehden haettavan PDF:n.</dd>
+<dt>Rasterointi</dt><dd>Vektoritekstin ja -muotojen muuntaminen pikseliruudukoksi. Digitaalisen PDF:n rasterointi muuttaa sen kuvapohjaiseksi PDF:ksi.</dd>
+<dt>PDF/A</dt><dd>ISO 19005, PDF:n arkistollinen osajoukko, julkaistu 2005; se kieltää ominaisuudet kuten salauksen ja fonttien linkittämisen.</dd>
+<dt>JBIG2</dt><dd>Pakkausmenetelmä kaksisävyisille skannauksille, joka tallentaa toistuvat symbolit vain kerran. BBC News raportoi vuonna 2013, että jotkin toimistokopiokoneet, jotka käyttivät häviöllistä JBIG2-tilaa, muuttivat numeroita skannauksissa, usein kääntäen 6:n 8:ksi; yhdessä testissä huoneen 21,11 m:n mitta muuttui 14,13 m:ksi.</dd>
+<dt>Kuvapohjainen PDF</dt><dd>Skannattu PDF ilman tekstikerrosta lainkaan.</dd>
+<dt>Haettava PDF</dt><dd>PDF, jossa on oikeaa tai OCR-tekstiä, jota voi hakea ja valita.</dd>
+</dl>
+
+<p>JBIG2-tapaus on vahvin peruste alkuperäiskappaleiden säilyttämiselle. Skannattu kopio on kuva, ja kuvia voi muuttaa pakkaus ilman että kukaan huomaa (<a href="https://www.bbc.com/news/technology-23588202" target="_blank" rel="noopener">BBC News, 2013</a>). NARA käsittelee myös kohinaa ei-toivottuna artefaktina, joka ”ei kuulu lähdemateriaaliin” (<a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">36 CFR 1236 Subpart E</a>).</p>
+
+<h2 id="faq">Skannattu PDF: mitä muuta kysytään?</h2>
+<p>Nämä skannattua PDF:ää koskevat kysymykset nousevat useimmin esiin ihmisiltä, jotka ovat saaneet tiedoston, tarvitsevat lähettää skannatun kopion, tai joiden pitää täyttää tuomioistuimen tai viranomaisen sääntö. Jokainen vastaus toimii itsenäisesti, joten voit hypätä suoraan siihen, joka vastaa omaa tilannettasi ja toimia sen mukaan.</p>
+
+<div class="faq-item"><p class="faq-q">Mikä on skannattu PDF yksinkertaisesti selitettynä?</p><p class="faq-a">Skannattu PDF on PDF, joka koostuu valokuvista paperisivuista. Näkemäsi teksti on osa kuvaa, joten et voi valita tai hakea sitä, ellei OCR:ää ole käytetty.</p></div>
+<div class="faq-item"><p class="faq-q">Onko skannattu PDF sama asia kuin skannattu kopio?</p><p class="faq-a">Lähes. Skannattu kopio on mikä tahansa digitaalinen kuva paperisesta asiakirjasta, ja skannattu PDF on yleisin tiedostomuoto sen toimittamiseen. Skannattu kopio voi olla myös JPEG tai TIFF.</p></div>
+<div class="faq-item"><p class="faq-q">Miten voin tunnistaa, onko PDF skannattu, 10 sekunnissa?</p><p class="faq-a">Yritä valita sana, paina sitten Ctrl+F tai Cmd+F ja hae sanaa, jonka näet. Jos mikään ei korostu eikä haku löydä mitään, PDF on kuvapohjainen skannaus. Zoomaa 400 %:iin varmistaaksesi: skannattu teksti näyttää pikseloituneelta.</p></div>
+<div class="faq-item"><p class="faq-q">Voiko skannattu PDF olla haettava?</p><p class="faq-a">Kyllä. OCR lisää näkymättömän tekstikerroksen sivukuvien taakse, muuttaen skannatun PDF:n haettavaksi PDF:ksi. Sivu näyttää yhä skannaukselta, ja väärin tunnistettuja sanoja voi esiintyä piilotetussa tekstissä.</p></div>
+<div class="faq-item"><p class="faq-q">Miksi en voi kopioida tekstiä PDF:stäni?</p><p class="faq-a">PDF on todennäköisesti skannaus ilman OCR:ää, joten siinä ei ole kopioitavia merkkejä. Floridan eteläisen piirikunnan tuomioistuimen FAQ toteaa saman: jos PDF ei ole tekstihaettava, sen tekstiä ei voi kopioida. Aja OCR tai pyydä digitaalinen alkuperäinen.</p></div>
+<div class="faq-item"><p class="faq-q">Ovatko skannatut PDF:t ruudunlukuohjelmille saavutettavia?</p><p class="faq-a">Eivät ilman OCR:ää. W3C:n ohjeisto kutsuu kuvapohjaisia skannauksia lähtökohtaisesti saavuttamattomiksi. OCR:n jälkeen ruudunlukuohjelmat voivat lukea tekstin ääneen, mutta täysi saavutettavuus vaatii myös merkinnät otsikoille, lukujärjestykselle ja taulukoille.</p></div>
+<div class="faq-item"><p class="faq-q">Miksi skannattu PDF on niin suuri?</p><p class="faq-a">Jokainen sivu on täysi kuva. Harmaasävysivu 400 ppi:llä voi ylittää 1 Mt, kun taas tekstinkäsittelyohjelmasta viety tekstisivu on usein alle 50 kt. Skannaaminen 300 ppi:llä harmaasävynä tai mustavalkoisena pitää koon pienenä.</p></div>
+<div class="faq-item"><p class="faq-q">Millainen tarkkuuden pitäisi olla skannatussa asiakirjassa?</p><p class="faq-a">Kirjoitetulle tai painetulle tekstille 300 dpi on vakiovaatimus Yhdysvaltain liittovaltion tuomioistuimissa ja NARA:n vähimmäisvaatimus tekstiasiakirjoille. Valokuvat ja hienot yksityiskohdat vaativat 400 ppi:tä.</p></div>
+<div class="faq-item"><p class="faq-q">Onko skannattu kopio laillinen tai oikeaksi todistettu kopio?</p><p class="faq-a">Ei, skannattu kopio itsessään ei todista mitään aitoudesta. Oikeaksi todistettu kopio on ammattilaisen allekirjoittama ja päiväämä henkilön toimesta, joka on nähnyt alkuperäisen, kuten GOV.UK selittää. Kysy pyytäjältä, kumpaa hän tarvitsee.</p></div>
+<div class="faq-item"><p class="faq-q">Voinko tehdä digitaalisesta PDF:stä skannatun PDF:n näköisen?</p><p class="faq-a">Kyllä. Ilmainen <a href="/scan">Make PDF look scanned -työkalu</a> rasteroi jokaisen sivun ja lisää kierron, sumennuksen, kohinan ja paperin sävyn selaimessasi. Tuloste on kuvapohjainen PDF, joten säilytä alkuperäinen, jos tarvitset hakua.</p></div>
+<div class="faq-item"><p class="faq-q">Pitääkö skannatun PDF:n olla PDF/A-muodossa?</p><p class="faq-a">Vain jos pyytäjä niin sanoo. Jotkin tuomioistuimet ja arkistot vaativat PDF/A:ta pitkäaikaista säilytystä varten. Skannatun PDF:n voi tallentaa PDF/A-muodossa, mielellään OCR:n kanssa, jotta se on myös haettava.</p></div>
+<div class="faq-item"><p class="faq-q">Voinko skannata useita PDF:iä kerralla?</p><p class="faq-a">Työkalullamme kyllä: <a href="/scan/bulk">joukkoskannaus</a> käsittelee useita tiedostoja ja lataa ne yhtenä ZIP-arkistona, yksi skannattu PDF per syötetiedosto.</p></div>
+
+<h2 id="verdict">Mikä on lyhyt vastaus skannatuista PDF-tiedostoista?</h2>
+<p>Skannattu PDF on kuva paperista PDF:n sisään käärittynä. Testaa se valitsemalla ja hakemalla tekstiä, lisää OCR, kun tarvitset hakua tai saavutettavuutta, lähetä digitaalisesti syntynyt PDF, kun tuomioistuin suosii sitä, ja käytä skannausilmettä vain, kun lukija tarvitsee ulkonäköä, ei aitoutta.</p>
+
+<p>Jos tarvitset ulkonäköä, avaa <a href="/scan">ilmainen skannaustyökalu</a>, pidä oletusarvoinen Harmaasävy-väriavaruus ja 2× tarkkuus, ja tarkista esikatselu ennen lataamista.</p>

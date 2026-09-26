@@ -1,0 +1,212 @@
+{
+  "base": {
+    "title": "Make PDF look scanned",
+    "description": "Make a clean digital file look like a real scan — paper texture, noise, rotation and shadows, processed locally in your browser.",
+    "scanTitle": "Scan",
+    "bulkTitle": "Bulk Scan",
+    "serviceWorker": {
+      "offlineReady": "App ready to work offline",
+      "needRefresh": "New version available, click to refresh."
+    },
+    "nav": {
+      "home": "Home",
+      "scan": "Scan",
+      "bulk": "Bulk Scan",
+      "guides": "Guides"
+    },
+    "chrome": {
+      "label": "Chrome Extension",
+      "free": "FREE"
+    },
+    "landing": {
+      "headline": "Make PDF look scanned",
+      "subhead": "Turn PDFs, images, Word and Excel files into realistic scanned copies with blur, noise, rotation, watermarks and stamps — right in your browser. Source files stay on your device.",
+      "cta": "Convert to Scanned PDF",
+      "note": "Free · No signup · Files stay on your device",
+      "points": {
+        "formats": "PDF, images and Office-lite formats",
+        "local": "Local processing · Source files stay put",
+        "free": "Scanning is free · No signup",
+        "preview": "Real-time preview · What you see is what you export"
+      },
+      "stepsTitle": "Three steps to a scanned PDF",
+      "step1Title": "Choose a file",
+      "step1Body": "Drop in a PDF, an image, or a Word or Excel document. The file stays in your browser.",
+      "step2Title": "Adjust the scan effect",
+      "step2Body": "Blur, noise, rotation, paper tone, watermarks and stamps — with a live preview.",
+      "step3Title": "Export the PDF",
+      "step3Body": "Your scanned PDF is generated in seconds and downloads straight away.",
+      "featuresTitle": "Key features",
+      "footer": "Turn documents into scans in your browser. Nothing is uploaded for processing."
+    },
+    "language": "Language",
+    "seo": {
+      "homeTitle": "Make PDF Look Scanned Online — Free, Private, No Upload",
+      "homeDescription": "Make PDF look scanned: add grain, blur, a slight tilt and an aged paper tone. Free, no signup — your file never leaves the browser. Works with images and Word."
+    }
+  },
+  "features": {
+    "privacy": {
+      "title": "Private, local processing",
+      "description": "Your files are processed in this browser. They are not uploaded to a processing server and are not stored in the cloud."
+    },
+    "speed": {
+      "title": "Fast conversion",
+      "description": "Turn PDFs, images and Office documents into scanned-looking PDFs in seconds — no printer and no scanner."
+    },
+    "customization": {
+      "title": "Scan effects",
+      "description": "Fine-tune blur, noise, rotation, brightness, contrast and paper tone with a live preview. What you see is what you export."
+    },
+    "openSource": {
+      "title": "Chrome extension",
+      "description": "The same scan engine is also available as a free Chrome extension, so you can process PDFs from the side panel.",
+      "github": "Chrome Web Store",
+      "scanyourpdf": "Chrome extension"
+    },
+    "mobileFriendly": {
+      "title": "Works on phones",
+      "description": "The converter runs in modern mobile browsers. No installation is required for the website."
+    },
+    "offlineUse": {
+      "title": "Works offline",
+      "description": "Once the app resources are cached, standard scanning keeps working without a network connection."
+    }
+  },
+  "actions": {
+    "navigateToScan": "Start scanning",
+    "navigateToHomePage": "Home",
+    "navigateToSupportMe": "Chrome Extension",
+    "backToIndex": "Back",
+    "preview": "Preview",
+    "save": "Save",
+    "generateScannedPDF": "Generate Scanned PDF",
+    "generating": "Generating...",
+    "downloadScannedPDF": "Download Scanned PDF",
+    "generateSuccess": "Successfully generated",
+    "generateError": "Failed to generate: ",
+    "addFiles": "Add files",
+    "processAll": "Generate scanned PDFs",
+    "downloadZip": "Download all as ZIP",
+    "converting": "Preparing file…",
+    "queued": "Queued",
+    "done": "Done",
+    "failed": "Failed"
+  },
+  "settings": {
+    "settings": "Scan Settings",
+    "attenuate": "Noise",
+    "noise": "Noise",
+    "blur": "Blur",
+    "border": {
+      "label": "Border",
+      "true": "Yes",
+      "false": "No"
+    },
+    "colorspace": {
+      "label": "Colorspace",
+      "colorful": "Colorful",
+      "grayscale": "Gray"
+    },
+    "rotate": "Rotate",
+    "rotateVariance": "Rotate Variance",
+    "pdfSelectLabel": "Select or drop your file here",
+    "pdfNoSelectMessage": "No file selected",
+    "supportedHint": "PDF, JPG, PNG, WebP, SVG, DOCX, XLSX, CSV, TXT, MD, HTML",
+    "scale": "Resolution",
+    "yellowish": "Yellowish",
+    "brightness": "Brightness",
+    "contrast": "Contrast",
+    "extras": {
+      "watermark": "Watermark",
+      "watermarkText": "Watermark text",
+      "watermarkImage": "Watermark image",
+      "stamp": "Stamp or signature",
+      "stampImage": "Add stamp or signature",
+      "stampX": "Horizontal position",
+      "stampY": "Vertical position",
+      "stampScale": "Size",
+      "metadata": "PDF metadata",
+      "title": "Title",
+      "author": "Author",
+      "subject": "Subject",
+      "keywords": "Keywords",
+      "producer": "Producer",
+      "creator": "Creator",
+      "clearImage": "Remove"
+    }
+  },
+  "status": {
+    "notStarted": "Not started",
+    "error": "Error: {error}",
+    "finished": "Finished",
+    "processsing": {
+      "default": "Processing",
+      "combine": "Combining PDF pages",
+      "progress": "Processing PDF pages: {current}/{total}"
+    }
+  },
+  "upload": {
+    "dropTitle": "Drop your file here",
+    "dropTitleMany": "Drop your files here",
+    "or": "or",
+    "choose": "Choose file",
+    "chooseMany": "Choose files",
+    "replace": "Choose another file",
+    "addMore": "Add more files",
+    "privacy": "Processed in your browser — nothing is uploaded",
+    "dropOverlay": "Drop the file to load it",
+    "dropOverlayMany": "Drop the files to add them",
+    "unsupported": "This file type is not supported: {name}",
+    "readError": "Could not open {name}: {error}",
+    "ready": "Loaded",
+    "pages": "{n} page | {n} pages",
+    "sampleBanner": "This is a sample document. Upload your own files in step 1 — you can add several at once."
+  },
+  "save": {
+    "create": "Create scanned PDF | Create {n} scanned PDFs",
+    "readyTitle": "Your scanned PDF is ready | Your {n} scanned PDFs are ready",
+    "progress": "page {current} of {total}",
+    "fileProgress": "File {current} of {total}",
+    "autoHint": "The scanned PDF downloads automatically when it is ready. | All {n} files will be scanned and downloaded automatically as one ZIP.",
+    "noFileHint": "Upload a file in step 1 to start.",
+    "busyHint": "Keep this tab open — the download starts by itself when scanning is done.",
+    "downloadAgain": "Download again",
+    "downloadStarted": "Done — the download has started",
+    "whereSaved": "Look for it in your Downloads folder.",
+    "zipHint": "To get a single file, use the download icon next to it in step 1.",
+    "someFailed": "{n} file could not be scanned | {n} files could not be scanned"
+  },
+  "files": {
+    "preview": "Show in preview",
+    "previewOf": "Preview: {name}",
+    "downloadOne": "Download this scanned PDF",
+    "remove": "Remove file",
+    "hint": "Click a file to preview it. All files use the same settings.",
+    "openError": "Could not open this file",
+    "status": {
+      "loading": "Preparing…",
+      "ready": "Ready",
+      "processing": "Scanning…",
+      "done": "Scanned"
+    }
+  },
+  "steps": {
+    "upload": "Upload",
+    "adjust": "Adjust",
+    "download": "Download",
+    "uploadTitle": "Upload your files",
+    "adjustTitle": "Adjust the scan look",
+    "downloadTitle": "Get your scanned PDF"
+  },
+  "preview": {
+    "original": "Original",
+    "scanned": "Scanned preview"
+  },
+  "errors": {
+    "wordNoText": "This Word file has no readable text",
+    "sheetEmpty": "This spreadsheet is empty",
+    "htmlNoText": "This HTML file has no readable text",
+    "unsupportedType": "This file type is not supported yet"
+  }
+}

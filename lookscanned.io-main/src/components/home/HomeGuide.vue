@@ -4,7 +4,27 @@
 </template>
 
 <script setup lang="ts">
-import guideHtml from '@/content/home-guide.html?raw'
+import { ref, watch } from 'vue'
+import { localizeLinks } from '@/locale'
+import { useLanguage } from '@/composables/use-language'
+import englishGuide from '@/content/home-guide/en.html?raw'
+
+const guides = import.meta.glob<string>(['../../content/home-guide/*.html', '!../../content/home-guide/en.html'], {
+  query: '?raw',
+  import: 'default'
+})
+
+const { language } = useLanguage()
+const guideHtml = ref('')
+
+watch(
+  language,
+  async (lang) => {
+    const load = guides[`../../content/home-guide/${lang.code}.html`]
+    guideHtml.value = localizeLinks(load ? await load() : englishGuide, lang)
+  },
+  { immediate: true }
+)
 </script>
 
 <style>

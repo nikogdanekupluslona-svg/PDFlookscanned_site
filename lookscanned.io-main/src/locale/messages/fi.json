@@ -1,0 +1,212 @@
+{
+  "base": {
+    "title": "Make PDF look scanned",
+    "description": "Muuta puhdas digitaalinen tiedosto aidon skannauksen näköiseksi – paperin sävy, kohina, kallistus ja sumennus, käsittely paikallisesti selaimessasi.",
+    "scanTitle": "Skannaa",
+    "bulkTitle": "Joukkoskannaus",
+    "serviceWorker": {
+      "offlineReady": "Sovellus toimii nyt myös ilman verkkoyhteyttä",
+      "needRefresh": "Uusi versio saatavilla, päivitä napsauttamalla."
+    },
+    "nav": {
+      "home": "Etusivu",
+      "scan": "Skannaa",
+      "bulk": "Joukkoskannaus",
+      "guides": "Oppaat"
+    },
+    "chrome": {
+      "label": "Chrome-laajennus",
+      "free": "ILMAINEN"
+    },
+    "landing": {
+      "headline": "Muuta PDF skannatun näköiseksi",
+      "subhead": "Muuta PDF:t, kuvat sekä Word- ja Excel-tiedostot aidon näköisiksi skannatuiksi kopioiksi sumennuksen, kohinan, kierron, vesileimojen ja leimojen avulla – suoraan selaimessa. Alkuperäiset tiedostot pysyvät laitteellasi.",
+      "cta": "Muunna skannatuksi PDF:ksi",
+      "note": "Ilmainen · Ei rekisteröitymistä · Tiedostot pysyvät laitteellasi",
+      "points": {
+        "formats": "PDF, kuvat ja yleisimmät Office-muodot",
+        "local": "Paikallinen käsittely · Tiedostot pysyvät laitteella",
+        "free": "Skannaus on ilmaista · Ei rekisteröitymistä",
+        "preview": "Reaaliaikainen esikatselu · Saat juuri sen, minkä näet"
+      },
+      "stepsTitle": "Kolme vaihetta skannattuun PDF:ään",
+      "step1Title": "Valitse tiedosto",
+      "step1Body": "Pudota tähän PDF, kuva tai Word- tai Excel-asiakirja. Tiedosto pysyy selaimessasi.",
+      "step2Title": "Säädä skannausefektiä",
+      "step2Body": "Sumennus, kohina, kierto, paperin sävy, vesileimat ja leimat – reaaliaikaisella esikatselulla.",
+      "step3Title": "Tallenna PDF",
+      "step3Body": "Skannattu PDF valmistuu sekunneissa ja latautuu heti koneellesi.",
+      "featuresTitle": "Tärkeimmät ominaisuudet",
+      "footer": "Muuta asiakirjat skannauksiksi selaimessa. Mitään ei lähetetä palvelimelle käsiteltäväksi."
+    },
+    "language": "Kieli",
+    "seo": {
+      "homeTitle": "PDF skannatun näköiseksi verkossa – ilmainen ja yksityinen",
+      "homeDescription": "Muuta PDF skannatun näköiseksi: lisää rakeisuutta, sumennusta, pieni kallistus ja kellertävä sävy. Ilmainen, tiedosto ei lähde selaimesta. Myös kuvat ja Word."
+    }
+  },
+  "features": {
+    "privacy": {
+      "title": "Yksityinen, paikallinen käsittely",
+      "description": "Tiedostot käsitellään tässä selaimessa. Niitä ei lähetetä käsittelypalvelimelle eikä tallenneta pilveen."
+    },
+    "speed": {
+      "title": "Nopea muunnos",
+      "description": "Muuta PDF:t, kuvat ja Office-asiakirjat skannatun näköisiksi PDF-tiedostoiksi sekunneissa – ilman tulostinta ja skanneria."
+    },
+    "customization": {
+      "title": "Skannausefektit",
+      "description": "Hienosäädä sumennusta, kohinaa, kiertoa, kirkkautta, kontrastia ja paperin sävyä reaaliaikaisen esikatselun avulla. Saat juuri sen, minkä näet."
+    },
+    "openSource": {
+      "title": "Chrome-laajennus",
+      "description": "Sama skannausmoottori on saatavilla myös ilmaisena Chrome-laajennuksena, joten voit käsitellä PDF-tiedostoja selaimen sivupaneelissa.",
+      "github": "Chrome Web Store",
+      "scanyourpdf": "Chrome-laajennus"
+    },
+    "mobileFriendly": {
+      "title": "Toimii puhelimessa",
+      "description": "Muunnin toimii nykyaikaisissa mobiiliselaimissa. Verkkosivusto ei vaadi asennusta."
+    },
+    "offlineUse": {
+      "title": "Toimii ilman verkkoa",
+      "description": "Kun sovelluksen tiedostot on tallennettu välimuistiin, tavallinen skannaus toimii myös ilman verkkoyhteyttä."
+    }
+  },
+  "actions": {
+    "navigateToScan": "Aloita skannaus",
+    "navigateToHomePage": "Etusivu",
+    "navigateToSupportMe": "Chrome-laajennus",
+    "backToIndex": "Takaisin",
+    "preview": "Esikatselu",
+    "save": "Tallenna",
+    "generateScannedPDF": "Luo skannattu PDF",
+    "generating": "Luodaan...",
+    "downloadScannedPDF": "Lataa skannattu PDF",
+    "generateSuccess": "Luonti onnistui",
+    "generateError": "Luonti epäonnistui: ",
+    "addFiles": "Lisää tiedostoja",
+    "processAll": "Luo skannatut PDF:t",
+    "downloadZip": "Lataa kaikki ZIP-tiedostona",
+    "converting": "Valmistellaan tiedostoa…",
+    "queued": "Jonossa",
+    "done": "Valmis",
+    "failed": "Epäonnistui"
+  },
+  "settings": {
+    "settings": "Skannausasetukset",
+    "attenuate": "Kohina",
+    "noise": "Kohina",
+    "blur": "Sumennus",
+    "border": {
+      "label": "Reunus",
+      "true": "Kyllä",
+      "false": "Ei"
+    },
+    "colorspace": {
+      "label": "Väriavaruus",
+      "colorful": "Värillinen",
+      "grayscale": "Harmaasävy"
+    },
+    "rotate": "Kierto",
+    "rotateVariance": "Kierron vaihtelu",
+    "pdfSelectLabel": "Valitse tiedosto tai pudota se tähän",
+    "pdfNoSelectMessage": "Tiedostoa ei ole valittu",
+    "supportedHint": "PDF, JPG, PNG, WebP, SVG, DOCX, XLSX, CSV, TXT, MD, HTML",
+    "scale": "Tarkkuus",
+    "yellowish": "Kellertävyys",
+    "brightness": "Kirkkaus",
+    "contrast": "Kontrasti",
+    "extras": {
+      "watermark": "Vesileima",
+      "watermarkText": "Vesileiman teksti",
+      "watermarkImage": "Vesileimakuva",
+      "stamp": "Leima tai allekirjoitus",
+      "stampImage": "Lisää leima tai allekirjoitus",
+      "stampX": "Vaakasijainti",
+      "stampY": "Pystysijainti",
+      "stampScale": "Koko",
+      "metadata": "PDF-metatiedot",
+      "title": "Otsikko",
+      "author": "Tekijä",
+      "subject": "Aihe",
+      "keywords": "Avainsanat",
+      "producer": "Tuottaja",
+      "creator": "Luoja",
+      "clearImage": "Poista"
+    }
+  },
+  "status": {
+    "notStarted": "Ei aloitettu",
+    "error": "Virhe: {error}",
+    "finished": "Valmis",
+    "processsing": {
+      "default": "Käsitellään",
+      "combine": "Yhdistetään PDF-sivuja",
+      "progress": "Käsitellään PDF-sivuja: {current}/{total}"
+    }
+  },
+  "upload": {
+    "dropTitle": "Pudota tiedosto tähän",
+    "dropTitleMany": "Pudota tiedostot tähän",
+    "or": "tai",
+    "choose": "Valitse tiedosto",
+    "chooseMany": "Valitse tiedostot",
+    "replace": "Valitse toinen tiedosto",
+    "addMore": "Lisää muita tiedostoja",
+    "privacy": "Käsitellään selaimessasi – mitään ei lähetetä palvelimelle",
+    "dropOverlay": "Avaa tiedosto pudottamalla se tähän",
+    "dropOverlayMany": "Lisää tiedostot pudottamalla ne tähän",
+    "unsupported": "Tiedostotyyppiä ei tueta: {name}",
+    "readError": "Tiedostoa {name} ei voitu avata: {error}",
+    "ready": "Ladattu",
+    "pages": "{n} sivu | {n} sivua",
+    "sampleBanner": "Tämä on esimerkkiasiakirja. Lisää omat tiedostosi vaiheessa 1 – voit lisätä useita kerralla."
+  },
+  "save": {
+    "create": "Luo skannattu PDF | Luo {n} skannattua PDF:ää",
+    "readyTitle": "Skannattu PDF on valmis | {n} skannattua PDF:ää on valmiina",
+    "progress": "sivu {current}/{total}",
+    "fileProgress": "Tiedosto {current}/{total}",
+    "autoHint": "Skannattu PDF latautuu automaattisesti, kun se on valmis. | Kaikki {n} tiedostoa skannataan ja ladataan automaattisesti yhtenä ZIP-tiedostona.",
+    "noFileHint": "Aloita lisäämällä tiedosto vaiheessa 1.",
+    "busyHint": "Pidä tämä välilehti auki – lataus alkaa itsestään, kun skannaus on valmis.",
+    "downloadAgain": "Lataa uudelleen",
+    "downloadStarted": "Valmis – lataus on alkanut",
+    "whereSaved": "Löydät tiedoston latauskansiostasi.",
+    "zipHint": "Jos haluat yksittäisen tiedoston, käytä sen vieressä olevaa latauskuvaketta vaiheessa 1.",
+    "someFailed": "{n} tiedoston skannaus epäonnistui | {n} tiedoston skannaus epäonnistui"
+  },
+  "files": {
+    "preview": "Näytä esikatselussa",
+    "previewOf": "Esikatselu: {name}",
+    "downloadOne": "Lataa tämä skannattu PDF",
+    "remove": "Poista tiedosto",
+    "hint": "Esikatsele tiedostoa napsauttamalla sitä. Kaikkiin tiedostoihin käytetään samoja asetuksia.",
+    "openError": "Tiedostoa ei voitu avata",
+    "status": {
+      "loading": "Valmistellaan…",
+      "ready": "Valmis",
+      "processing": "Skannataan…",
+      "done": "Skannattu"
+    }
+  },
+  "steps": {
+    "upload": "Lisää",
+    "adjust": "Säädä",
+    "download": "Lataa",
+    "uploadTitle": "Lisää tiedostosi",
+    "adjustTitle": "Säädä skannauksen ulkoasua",
+    "downloadTitle": "Lataa skannattu PDF-tiedostosi"
+  },
+  "preview": {
+    "original": "Alkuperäinen",
+    "scanned": "Skannauksen esikatselu"
+  },
+  "errors": {
+    "wordNoText": "Tässä Word-tiedostossa ei ole luettavaa tekstiä",
+    "sheetEmpty": "Tämä laskentataulukko on tyhjä",
+    "htmlNoText": "Tässä HTML-tiedostossa ei ole luettavaa tekstiä",
+    "unsupportedType": "Tätä tiedostotyyppiä ei vielä tueta"
+  }
+}

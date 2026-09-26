@@ -1,0 +1,43 @@
+{
+  "slug": "skanningseffekt-installningar",
+  "title": "Skanningseffekt: det som får ett dokument att se skannat ut",
+  "description": "Skanningseffekten förklarad: brus, lutning, oskärpa, papperston, kantskuggor, gråskala – vad som får en fil att se skannad ut, plus inställningar för 5 stilar.",
+  "h1": "Skanningseffekt förklarad: det som får ett dokument att se skannat ut (och inställningar för 5 stilar)",
+  "tag": "Skanningseffekt",
+  "main_keyword": "skanningseffekt",
+  "keywords": [
+    "skanningseffekt",
+    "skannereffekt",
+    "se skannad ut",
+    "skannat utseende",
+    "skannad look",
+    "inställningar för skanningseffekt",
+    "kopieringseffekt",
+    "faxeffekt",
+    "få en pdf att se skannad ut"
+  ],
+  "howto_name": "Så lägger du en realistisk skanningseffekt på en PDF",
+  "cta_title": "Testa de 5 förinställningarna för skanningseffekt nu",
+  "cta_body": "Öppna gratisverktyget, ange ett av recepten från guiden och se resultatet i förhandsvisningen. Filen bearbetas i din webbläsare och laddas aldrig upp.",
+  "about": [
+    "Bildläsare",
+    "Skannat dokument",
+    "Bildbrus",
+    "Snedställning (bild)",
+    "Kompressionsartefakt"
+  ],
+  "mentions": [
+    "Moaré",
+    "Telefax",
+    "Kopiator",
+    "JPEG",
+    "Gråskala",
+    "Binär bild",
+    "Halvton",
+    "OCR",
+    "National Archives and Records Administration",
+    "Federal Agencies Digital Guidelines Initiative",
+    "Portable Document Format"
+  ],
+  "source_modified": "2026-09-18"
+}

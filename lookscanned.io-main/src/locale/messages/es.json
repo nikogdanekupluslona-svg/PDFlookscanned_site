@@ -1,0 +1,212 @@
+{
+  "base": {
+    "title": "Make PDF look scanned",
+    "description": "Haz que un archivo digital limpio parezca un escaneo real: textura de papel, ruido, rotación y sombras, procesado localmente en tu navegador.",
+    "scanTitle": "Escanear",
+    "bulkTitle": "Escaneo por lotes",
+    "serviceWorker": {
+      "offlineReady": "La aplicación ya funciona sin conexión",
+      "needRefresh": "Hay una nueva versión disponible. Haz clic para actualizar."
+    },
+    "nav": {
+      "home": "Inicio",
+      "scan": "Escanear",
+      "bulk": "Escaneo por lotes",
+      "guides": "Guías"
+    },
+    "chrome": {
+      "label": "Extensión de Chrome",
+      "free": "GRATIS"
+    },
+    "landing": {
+      "headline": "Hacer que un PDF parezca escaneado",
+      "subhead": "Convierte PDF, imágenes y archivos de Word y Excel en copias escaneadas realistas con desenfoque, ruido, rotación, marcas de agua y sellos, directamente en tu navegador. Los archivos originales no salen de tu dispositivo.",
+      "cta": "Convertir a PDF escaneado",
+      "note": "Gratis · Sin registro · Los archivos no salen de tu dispositivo",
+      "points": {
+        "formats": "PDF, imágenes y formatos de Office básicos",
+        "local": "Procesamiento local · Los originales no se mueven",
+        "free": "Escanear es gratis · Sin registro",
+        "preview": "Vista previa en tiempo real · Lo que ves es lo que exportas"
+      },
+      "stepsTitle": "Tres pasos para un PDF escaneado",
+      "step1Title": "Elige un archivo",
+      "step1Body": "Suelta un PDF, una imagen o un documento de Word o Excel. El archivo se queda en tu navegador.",
+      "step2Title": "Ajusta el efecto escaneado",
+      "step2Body": "Desenfoque, ruido, rotación, tono del papel, marcas de agua y sellos, con vista previa en directo.",
+      "step3Title": "Exporta el PDF",
+      "step3Body": "Tu PDF escaneado se genera en segundos y se descarga al momento.",
+      "featuresTitle": "Funciones principales",
+      "footer": "Convierte documentos en escaneos desde tu navegador. No se sube nada para procesarlo."
+    },
+    "language": "Idioma",
+    "seo": {
+      "homeTitle": "Hacer que un PDF parezca escaneado online, gratis y privado",
+      "homeDescription": "Haz que un PDF parezca escaneado: grano, desenfoque, leve inclinación y papel envejecido. Gratis, sin registro y sin subir el archivo. Admite imágenes y Word."
+    }
+  },
+  "features": {
+    "privacy": {
+      "title": "Procesamiento local y privado",
+      "description": "Tus archivos se procesan en este navegador. No se suben a ningún servidor de procesamiento ni se guardan en la nube."
+    },
+    "speed": {
+      "title": "Conversión rápida",
+      "description": "Convierte PDF, imágenes y documentos de Office en PDF con aspecto escaneado en segundos, sin impresora ni escáner."
+    },
+    "customization": {
+      "title": "Efectos de escaneado",
+      "description": "Ajusta el desenfoque, el ruido, la rotación, el brillo, el contraste y el tono del papel con vista previa en directo. Lo que ves es lo que exportas."
+    },
+    "openSource": {
+      "title": "Extensión de Chrome",
+      "description": "El mismo motor de escaneo está disponible como extensión gratuita de Chrome, para procesar PDF desde el panel lateral.",
+      "github": "Chrome Web Store",
+      "scanyourpdf": "Extensión de Chrome"
+    },
+    "mobileFriendly": {
+      "title": "Funciona en el móvil",
+      "description": "El conversor funciona en navegadores móviles modernos. La web no necesita instalación."
+    },
+    "offlineUse": {
+      "title": "Funciona sin conexión",
+      "description": "Una vez guardados en caché los recursos de la aplicación, el escaneo estándar sigue funcionando sin conexión a internet."
+    }
+  },
+  "actions": {
+    "navigateToScan": "Empezar a escanear",
+    "navigateToHomePage": "Inicio",
+    "navigateToSupportMe": "Extensión de Chrome",
+    "backToIndex": "Volver",
+    "preview": "Vista previa",
+    "save": "Guardar",
+    "generateScannedPDF": "Generar PDF escaneado",
+    "generating": "Generando...",
+    "downloadScannedPDF": "Descargar PDF escaneado",
+    "generateSuccess": "Generado correctamente",
+    "generateError": "Error al generar: ",
+    "addFiles": "Añadir archivos",
+    "processAll": "Generar PDF escaneados",
+    "downloadZip": "Descargar todo en ZIP",
+    "converting": "Preparando archivo…",
+    "queued": "En cola",
+    "done": "Hecho",
+    "failed": "Error"
+  },
+  "settings": {
+    "settings": "Ajustes de escaneo",
+    "attenuate": "Ruido",
+    "noise": "Ruido",
+    "blur": "Desenfoque",
+    "border": {
+      "label": "Borde",
+      "true": "Sí",
+      "false": "No"
+    },
+    "colorspace": {
+      "label": "Espacio de color",
+      "colorful": "Color",
+      "grayscale": "Gris"
+    },
+    "rotate": "Rotación",
+    "rotateVariance": "Variación de rotación",
+    "pdfSelectLabel": "Selecciona o suelta tu archivo aquí",
+    "pdfNoSelectMessage": "Ningún archivo seleccionado",
+    "supportedHint": "PDF, JPG, PNG, WebP, SVG, DOCX, XLSX, CSV, TXT, MD, HTML",
+    "scale": "Resolución",
+    "yellowish": "Amarillento",
+    "brightness": "Brillo",
+    "contrast": "Contraste",
+    "extras": {
+      "watermark": "Marca de agua",
+      "watermarkText": "Texto de la marca de agua",
+      "watermarkImage": "Imagen de la marca de agua",
+      "stamp": "Sello o firma",
+      "stampImage": "Añadir sello o firma",
+      "stampX": "Posición horizontal",
+      "stampY": "Posición vertical",
+      "stampScale": "Tamaño",
+      "metadata": "Metadatos del PDF",
+      "title": "Título",
+      "author": "Autor",
+      "subject": "Asunto",
+      "keywords": "Palabras clave",
+      "producer": "Productor",
+      "creator": "Creador",
+      "clearImage": "Quitar"
+    }
+  },
+  "status": {
+    "notStarted": "Sin empezar",
+    "error": "Error al procesar: {error}",
+    "finished": "Terminado",
+    "processsing": {
+      "default": "Procesando",
+      "combine": "Combinando las páginas del PDF",
+      "progress": "Procesando páginas del PDF: {current}/{total}"
+    }
+  },
+  "upload": {
+    "dropTitle": "Suelta tu archivo aquí",
+    "dropTitleMany": "Suelta tus archivos aquí",
+    "or": "o",
+    "choose": "Elegir archivo",
+    "chooseMany": "Elegir archivos",
+    "replace": "Elegir otro archivo",
+    "addMore": "Añadir más archivos",
+    "privacy": "Se procesa en tu navegador: no se sube nada",
+    "dropOverlay": "Suelta el archivo para cargarlo",
+    "dropOverlayMany": "Suelta los archivos para añadirlos",
+    "unsupported": "Este tipo de archivo no es compatible: {name}",
+    "readError": "No se pudo abrir {name}: {error}",
+    "ready": "Cargado",
+    "pages": "{n} página | {n} páginas",
+    "sampleBanner": "Este es un documento de ejemplo. Sube tus propios archivos en el paso 1; puedes añadir varios a la vez."
+  },
+  "save": {
+    "create": "Crear PDF escaneado | Crear {n} PDF escaneados",
+    "readyTitle": "Tu PDF escaneado está listo | Tus {n} PDF escaneados están listos",
+    "progress": "página {current} de {total}",
+    "fileProgress": "Archivo {current} de {total}",
+    "autoHint": "El PDF escaneado se descarga automáticamente cuando está listo. | Los {n} archivos se escanearán y se descargarán automáticamente en un único ZIP.",
+    "noFileHint": "Sube un archivo en el paso 1 para empezar.",
+    "busyHint": "Mantén esta pestaña abierta: la descarga empieza sola cuando termina el escaneo.",
+    "downloadAgain": "Descargar de nuevo",
+    "downloadStarted": "Listo: la descarga ha comenzado",
+    "whereSaved": "Búscalo en tu carpeta Descargas.",
+    "zipHint": "Para obtener un solo archivo, usa el icono de descarga que tiene al lado en el paso 1.",
+    "someFailed": "{n} archivo no se pudo escanear | {n} archivos no se pudieron escanear"
+  },
+  "files": {
+    "preview": "Ver en la vista previa",
+    "previewOf": "Vista previa: {name}",
+    "downloadOne": "Descargar este PDF escaneado",
+    "remove": "Quitar archivo",
+    "hint": "Haz clic en un archivo para verlo en la vista previa. Todos los archivos usan los mismos ajustes.",
+    "openError": "No se pudo abrir este archivo",
+    "status": {
+      "loading": "Preparando…",
+      "ready": "Listo",
+      "processing": "Escaneando…",
+      "done": "Escaneado"
+    }
+  },
+  "steps": {
+    "upload": "Subir",
+    "adjust": "Ajustar",
+    "download": "Descargar",
+    "uploadTitle": "Sube tus archivos",
+    "adjustTitle": "Ajusta el aspecto escaneado",
+    "downloadTitle": "Obtén tu PDF escaneado"
+  },
+  "preview": {
+    "original": "Original",
+    "scanned": "Vista previa escaneada"
+  },
+  "errors": {
+    "wordNoText": "Este archivo de Word no tiene texto legible",
+    "sheetEmpty": "Esta hoja de cálculo está vacía",
+    "htmlNoText": "Este archivo HTML no tiene texto legible",
+    "unsupportedType": "Este tipo de archivo aún no es compatible"
+  }
+}

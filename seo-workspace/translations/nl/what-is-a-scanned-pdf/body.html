@@ -1,0 +1,241 @@
+<p class="lead">Een gescande PDF is een PDF waarvan de pagina's foto's van papier zijn, vastgelegd door een scanner of een telefooncamera, in plaats van tekst en vectorvormen die op een computer zijn getypt. Tenzij OCR een verborgen tekstlaag heeft toegevoegd, kun je de woorden niet selecteren, doorzoeken of kopiëren, en een schermlezer hoort niets op de pagina.</p>
+
+<p>Je hebt een PDF ontvangen en wilt weten wat het precies is: een bestand geëxporteerd vanuit een tekstverwerker, een scan van papier, of een scan met herkende tekst. Het antwoord bepaalt of je hem kunt doorzoeken, of een rechtbank of instantie hem accepteert, en of hij OCR nodig heeft.</p>
+
+<p>Deze uitleg geeft een precieze definitie, een test van 10 seconden, een vergelijking van de drie soorten PDF en een verklarende woordenlijst. De feiten komen uit W3C-toegankelijkheidsrichtlijnen, Amerikaanse federale rechtbanken, USCIS, NARA en FADGI-digitaliseringsregels, GOV.UK en toegankelijkheidsteams van universiteiten, plus wat we weten uit het bouwen van een scaneffect-tool.</p>
+
+<nav class="toc" aria-label="Table of contents"><h2>Inhoudsopgave</h2><ol>
+<li><a href="#what-is-a-scanned-pdf">Wat Is Een Gescande PDF Precies?</a></li>
+<li><a href="#scanned-pdf-vs-digital-pdf">Hoe Verschilt Een Gescande PDF Van Een Digitale PDF?</a></li>
+<li><a href="#scanned-copy-meaning">Wat Betekent Een Gescande Kopie Versus Een Fotokopie?</a></li>
+<li><a href="#how-to-tell-if-a-pdf-is-scanned">Hoe Zie Je Of Een PDF Gescand Is?</a></li>
+<li><a href="#accessibility-and-search">Waarom Zijn Gescande Documenten Moeilijk Te Doorzoeken En Te Lezen?</a></li>
+<li><a href="#ocr-explained">Wat Doet OCR Met Een Gescande PDF?</a></li>
+<li><a href="#when-you-need-a-scanned-copy">Wanneer Vragen Organisaties Om Een Gescande Kopie?</a></li>
+<li><a href="#scanned-pdf-and-pdf-a">Kan Een Gescande PDF Worden Gearchiveerd Als PDF/A?</a></li>
+<li><a href="#digital-pdf-to-scanned-look">Hoe Krijgt Een Digitale PDF Een Gescande-PDF-look?</a></li>
+<li><a href="#scanned-document-glossary">Woordenlijst Gescand Document: Welke Termen Doen Ertoe?</a></li>
+<li><a href="#faq">Veelgestelde Vragen Over Gescande PDF's</a></li>
+<li><a href="#verdict">Wat Is Het Korte Antwoord Over Gescande PDF's?</a></li>
+</ol></nav>
+
+<h2 id="what-is-a-scanned-pdf">Wat Is Een Gescande PDF Precies?</h2>
+<p>Een gescande PDF is een PDF-container met één rasterafbeelding per pagina, gemaakt door een fysiek vel te fotograferen of te scannen. De letters die je ziet zijn pixels, geen tekens. Software behandelt elke pagina als een foto, dus gewoon zoeken naar tekst, kopiëren en herstromen werken niet zonder OCR.</p>
+
+<p>De U.S. District Court for the Northern District of California verwoordt het, met verwijzing naar overdrachtsrichtlijnen van de National Archives, in één zin: "Gescande tekst is een foto van een gedrukte pagina, gemaakt met een digitale camera of een scanner" (<a href="https://cand.uscourts.gov/cases-e-filing/cmecf-information/preparing-your-cmecf-filing" target="_blank" rel="noopener">N.D. Cal., Preparing Your CM/ECF Filing</a>). Het PDF-formaat zelf verandert niet: een gescande PDF is nog altijd een geldig ISO 32000-bestand. Wat verandert, is wat er in elke pagina zit.</p>
+
+<p>Het toegankelijkheidsteam van James Madison University beschrijft het resultaat vanuit het perspectief van een lezer: "PDF's van gescande documenten zijn vaak niets meer dan afbeeldingen van documenten, vergelijkbaar met digitale foto's, en bevatten doorgaans geen leesbare tekst" (<a href="https://www.jmu.edu/accessibility/digital-accessibility/guides/pdf/scanned-documents.shtml" target="_blank" rel="noopener">JMU Digital Accessibility</a>). Dat ene feit verklaart bijna elk praktisch verschil dat hieronder aan bod komt.</p>
+
+<p>Hier is de definitie opgesplitst in controleerbare onderdelen, zoals een archiefmedewerker of een toegankelijkheidsauditor naar een bestand zou kijken.</p>
+
+<dl class="spec-list">
+<dt>Paginainhoud</dt><dd>Eén bitmapafbeelding per pagina (JPEG, JBIG2, CCITT of vergelijkbare compressie), geen lettertypeglyphs en vectorpaden.</dd>
+<dt>Tekstlaag</dt><dd>Geen in een PDF met alleen afbeeldingen; een onzichtbare OCR-laag in een doorzoekbare gescande PDF.</dd>
+<dt>Bron</dt><dd>Een flatbed- of documentinvoerscanner, een multifunctionele kopieermachine, of een telefooncamera met een scanfunctie die in het besturingssysteem is ingebouwd.</dd>
+<dt>Typische resolutie</dt><dd>200 tot 400 ppi; 300 ppi is de meest voorkomende vereiste voor kantoortekst.</dd>
+<dt>Kleurmodus</dt><dd>Bitonaal (1-bit zwart-wit), grijstinten (8-bit) of kleur (24-bit).</dd>
+<dt>Zoomgedrag</dt><dd>Randen worden bij sterke vergroting zichtbare pixelblokken.</dd>
+<dt>Bestandsgrootte</dt><dd>Meestal groter per pagina dan een tekst-PDF, vooral in grijstinten of kleur.</dd>
+</dl>
+
+<h2 id="scanned-pdf-vs-digital-pdf">Hoe Verschilt Een Gescande PDF Van Een Digitale PDF?</h2>
+<p>Een gescande PDF slaat afbeeldingen van pagina's op, terwijl een digitale (digitaal geboren) PDF echte tekens, lettertypen en vectorafbeeldingen opslaat die vanuit software zijn geëxporteerd. Een derde soort, de gescande PDF met OCR, behoudt de pagina-afbeelding maar voegt daaronder verborgen machineleesbare tekst toe, waardoor het een doorzoekbare PDF wordt.</p>
+
+<p>Het District of Massachusetts trekt in zijn regels voor elektronisch indienen dezelfde grens: een gescande PDF komt van papier dat door een optische scanner is gehaald, terwijl een "elektronisch omgezette" PDF wordt gemaakt vanuit een tekstverwerker en doorzoekbaar is (<a href="https://www.mad.uscourts.gov/caseinfo/pdf/ECFadminProc.pdf" target="_blank" rel="noopener">D. Mass. CM/ECF Administrative Procedures</a>). De tabel zet de drie soorten naast elkaar.</p>
+
+<div class="table-wrap"><table><caption>Drie soorten PDF: digitaal geboren, gescand met alleen afbeeldingen en gescand met OCR</caption>
+<thead><tr><th scope="col">Eigenschap</th><th scope="col">Digitaal geboren PDF</th><th scope="col">Gescande PDF met alleen afbeeldingen</th><th scope="col">Gescande PDF + OCR (doorzoekbaar)</th></tr></thead>
+<tbody>
+<tr><th scope="row">Hoe wordt hij gemaakt</th><td>Exporteren of afdrukken naar PDF vanuit Word, Google Docs, een browser of een andere app</td><td>Scanner, kopieerapparaat of telefooncamera</td><td>Eerst scannen, dan voegt OCR-software tekst toe</td></tr>
+<tr><th scope="row">Wat een pagina bevat</th><td>Tekens, ingesloten lettertypen, vectorlijnen, afbeeldingen</td><td>Eén rasterafbeelding</td><td>Eén rasterafbeelding plus onzichtbare tekst</td></tr>
+<tr><th scope="row">Tekst selecteren en kopiëren</th><td>Ja, exact</td><td>Nee</td><td>Ja, maar alleen zo nauwkeurig als de OCR</td></tr>
+<tr><th scope="row">Ctrl/Cmd+F zoeken</th><td>Werkt</td><td>Vindt niets</td><td>Werkt, kan verkeerd gelezen woorden missen</td></tr>
+<tr><th scope="row">Schermlezers</th><td>Leesbaar, het best als hij getagd is</td><td>Stil</td><td>Leesbaar, vaak zonder structuur</td></tr>
+<tr><th scope="row">Zoomen naar 400%</th><td>Scherpe randen op elke grootte</td><td>Gepixeld</td><td>Gepixeld</td></tr>
+<tr><th scope="row">Typische grootte per pagina</th><td>Tientallen KB</td><td>Ongeveer 75 KB (bitonaal) tot meer dan 1 MB (grijstinten of kleur)</td><td>Hetzelfde als alleen-afbeelding plus een kleine tekstlaag</td></tr>
+<tr><th scope="row">Ziet eruit als papier</th><td>Nee</td><td>Ja</td><td>Ja</td></tr>
+</tbody></table></div>
+
+<p>De groottes per pagina in de tabel komen uit rechtbanktests, niet uit schattingen. Het Northern District of California scande een document van 317 pagina's: bitonaal op 300 ppi kwam uit op 23,86 MB, ongeveer 75 KB per pagina, en grijstinten op 400 ppi kwam uit op 374,47 MB, ongeveer 1,2 MB per pagina. Het <a href="https://www.ncmd.uscourts.gov/sites/ncmd/files/ecfprocman.pdf" target="_blank" rel="noopener">Middle District of North Carolina</a> merkt op dat 2 MB ruimte biedt aan ongeveer vijfenveertig pagina's PDF-tekst, onder de 50 KB per pagina.</p>
+
+<h2 id="scanned-copy-meaning">Wat Betekent Een Gescande Kopie Versus Een Fotokopie?</h2>
+<p>Een gescande kopie is een digitaal afbeeldingsbestand van een papieren origineel, meestal geleverd als gescande PDF of JPEG. Een fotokopie is een tweede vel papier dat door een kopieerapparaat is geprint. Een gewaarmerkte kopie is elke kopie die door een bevoegd persoon tegen het origineel is gecontroleerd en ondertekend.</p>
+
+<p>Mensen gebruiken "gescande kopie" losjes, en de drie termen raken door elkaar in formulieren, hr-e-mails en visumchecklists. De verschillen doen ertoe, want een verzoek om het ene wordt niet vervuld door het andere.</p>
+
+<div class="table-wrap"><table><caption>Gescande kopie, fotokopie en gewaarmerkte kopie vergeleken</caption>
+<thead><tr><th scope="col">Term</th><th scope="col">Medium</th><th scope="col">Wie maakt hem</th><th scope="col">Wat hij bewijst</th></tr></thead>
+<tbody>
+<tr><th scope="row">Gescande kopie</th><td>Digitaal bestand (PDF, JPEG, TIFF)</td><td>Iedereen met een scanner of telefoon</td><td>Dat er een afbeelding van het document bestaat; niets over echtheid</td></tr>
+<tr><th scope="row">Fotokopie</th><td>Papier</td><td>Iedereen met een kopieerapparaat</td><td>Hetzelfde: het is een reproductie, niet het origineel</td></tr>
+<tr><th scope="row">Gewaarmerkte (echte) kopie</th><td>Papier, soms achteraf gescand</td><td>Een professional die het origineel heeft gezien</td><td>Dat de kopie overeenkomt met het origineel, op het woord van die persoon</td></tr>
+<tr><th scope="row">Origineel</th><td>Papier of digitaal geboren bestand</td><td>De uitgever</td><td>Het document zelf</td></tr>
+</tbody></table></div>
+
+<p>De Britse overheid legt certificering eenvoudig uit: "Je kunt een document als een ware kopie laten waarmerken door het te laten ondertekenen en dateren door een professional, zoals een advocaat" (<a href="https://www.gov.uk/certifying-a-document" target="_blank" rel="noopener">GOV.UK, Certifying a document</a>). Een gescande kopie van die gewaarmerkte pagina is nog steeds een gescande kopie; de waarmerking bestaat op het papier, met de handtekening en de datum.</p>
+
+<p>Dus als een verhuurder, werkgever of school om een "gescande kopie" vraagt, bedoelen ze bijna altijd "een duidelijke digitale afbeelding van het papier, als PDF". Als ze "gewaarmerkte kopie" zeggen, volstaat een scan alleen niet, hoe realistisch hij er ook uitziet.</p>
+
+<h2 id="how-to-tell-if-a-pdf-is-scanned">Hoe Zie Je Of Een PDF Gescand Is?</h2>
+<p>Om te zien of een PDF gescand is, probeer je een woord op de pagina te selecteren en zoek je naar een woord dat je kunt zien. Licht er niets op, dan bestaat de PDF alleen uit afbeeldingen. Inzoomen, documenteigenschappen, de lettertypelijst en de bestandsgrootte bevestigen daarna of het bestand gescand, digitaal of gescand met OCR is.</p>
+
+<p>De eerste twee controles kosten minder dan 10 seconden en werken in elke PDF-viewer, inclusief die ingebouwd in Google Chrome, Microsoft Edge en macOS Voorvertoning. De rest kost een minuut en beslecht de onduidelijke gevallen.</p>
+
+<ol class="step-list">
+<li><strong>Probeer tekst te selecteren.</strong> Sleep de cursor over een regel. In een digitaal geboren of OCR'de PDF lichten losse woorden op. In een PDF met alleen afbeeldingen licht niets op, of sommige viewers tekenen een rechthoek om de hele pagina-afbeelding.</li>
+<li><strong>Zoek met Ctrl+F of Cmd+F.</strong> Typ een opvallend woord dat je duidelijk op pagina één ziet staan. Nul resultaten voor een woord dat er duidelijk staat, betekent dat er geen tekstlaag is. Een treffer betekent echte tekst of een OCR-laag.</li>
+<li><strong>Zoom naar 400%.</strong> Bekijk de rand van een letter. Vectortekst blijft messcherp op elke zoomstand. Een gescande pagina toont pixelstapjes, vage grijze randjes, spikkels en soms JPEG-blokpatronen rond de letters.</li>
+<li><strong>Open de documenteigenschappen.</strong> Gebruik in de PDF-viewer van Chrome het menu met de drie puntjes en kies Documenteigenschappen; gebruik in macOS Voorvertoning Extra, en dan Toon inspector. Het veld producent of applicatie noemt vaak een scanner, kopieermodel, telefoonscanfunctie of OCR-engine. Een tekstverwerker of "Print to PDF" wijst op een digitaal geboren bestand.</li>
+<li><strong>Controleer de lettertypelijst.</strong> PDF-software voor de desktop toont een tabblad Lettertypen in zijn documenteigenschappen. Een digitaal geboren PDF vermeldt de gebruikte lettertypen. Een scan met alleen afbeeldingen vermeldt er geen. Een OCR'de scan vermeldt vaak één lettertype dat alleen voor de onzichtbare laag wordt gebruikt.</li>
+<li><strong>Vergelijk de grootte per pagina.</strong> Deel de bestandsgrootte door het aantal pagina's. Een tekst-PDF blijft meestal onder de 50 KB per pagina. Een grijstinten- of kleurenscan komt vaak uit op enkele honderden KB tot meer dan 1 MB per pagina. Bitonale scans zijn compact, dus grootte is hier de zwakste aanwijzing.</li>
+</ol>
+
+<p>Het toegankelijkheidshandboek van Cleveland State University beveelt dezelfde snelle zoektest aan: "Licht het woord op de pagina op, dan heeft ze doorzoekbare tekst in plaats van een gescande afbeelding van tekst te zijn" (<a href="https://pressbooks.ulib.csuohio.edu/accessibility/chapter/chapter-4-2-the-difference-between-an-accessible-pdf-and-a-scanned-image-of-text/" target="_blank" rel="noopener">Heather Caprette, Cleveland State University</a>).</p>
+
+<div class="callout callout-tip"><strong>Gemengde resultaten lezen</strong>Tekst is selecteerbaar maar bij inzoomen zie je pixels: een gescande PDF met OCR. Tekst is selecteerbaar en blijft scherp bij inzoomen: digitaal geboren. Niets is selecteerbaar en bij inzoomen zie je pixels: alleen afbeeldingen. Niets is selecteerbaar maar randen blijven scherp: tekst omgezet naar vectorcontouren, een zeldzaam vierde geval dat zich bij zoeken gedraagt als een scan.</div>
+
+<p>Metadata is een aanwijzing, geen bewijs. Producent- en makervelden kunnen door veel tools worden bewerkt, ook door de onze, dus vertrouw op wat de pagina-inhoud doet bij selectie en zoomen, meer dan op wat het eigenschappenpaneel zegt.</p>
+
+<h2 id="accessibility-and-search">Waarom Zijn Gescande Documenten Moeilijk Te Doorzoeken En Te Lezen?</h2>
+<p>Gescande documenten zijn moeilijk te doorzoeken en te lezen omdat een PDF met alleen afbeeldingen geen tekens bevat die software kan indexeren. Zoekmachines, desktopzoekfuncties, kopiëren en plakken, vertaaltools en schermlezers hebben allemaal tekst nodig. Zonder OCR-laag is de gescande PDF een plaatje dat alleen ziende lezers kunnen gebruiken.</p>
+
+<p>Het W3C Web Accessibility Initiative is daar botweg over in techniek PDF7 van de WCAG-richtlijn: "Een document dat bestaat uit gescande afbeeldingen van tekst is inherent ontoegankelijk, omdat de inhoud van het document uit afbeeldingen bestaat, niet uit doorzoekbare tekst" (<a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF7" target="_blank" rel="noopener">W3C WAI, WCAG Technique PDF7</a>).</p>
+
+<p>Diezelfde W3C-pagina somt op wat er verloren gaat: "Hulptechnologie kan de woorden niet lezen of extraheren; gebruikers kunnen tekst niet selecteren, bewerken, aanpassen in grootte of laten herstromen, en ook tekst- en achtergrondkleuren niet wijzigen; en auteurs kunnen de PDF niet aanpassen voor toegankelijkheid." De remedie die het voorstelt, is OCR, zodat er echte tekst achter de afbeelding bestaat.</p>
+
+<p>Het toegankelijkheidsbureau van Georgetown University voegt het praktische gevolg toe voor iedereen die op hulptechnologie vertrouwt: "Gescande PDF's zijn een verzameling afbeeldingen en daardoor onleesbaar voor de meeste standaard schermlezers" (<a href="https://accessibility.georgetown.edu/digital-accessibility/pdf-accessibility/" target="_blank" rel="noopener">Accessibility at Georgetown</a>).</p>
+
+<p>Publieke uitgevers zijn nog verder gegaan. De UK Government Digital Service stelt dat informatie die als PDF wordt gepubliceerd, vergeleken met HTML, moeilijker te vinden, te gebruiken en te onderhouden is (<a href="https://gds.blog.gov.uk/2018/07/16/why-gov-uk-content-should-be-published-in-html-and-not-pdf/" target="_blank" rel="noopener">GDS blog, GOV.UK</a>). Een gescande PDF met alleen afbeeldingen is de extreme versie van dat probleem: zelfs de woorden zijn niet machineleesbaar.</p>
+
+<div class="table-wrap"><table><caption>Wat werkt in elk soort PDF</caption>
+<thead><tr><th scope="col">Taak</th><th scope="col">Digitaal geboren</th><th scope="col">Scan met alleen afbeeldingen</th><th scope="col">Scan + OCR</th></tr></thead>
+<tbody>
+<tr><th scope="row">Uitvoer schermlezer</th><td>Volledige tekst</td><td>Geen</td><td>Tekst, vaak in verkeerde volgorde</td></tr>
+<tr><th scope="row">Herstromen op een telefoon</th><td>Mogelijk als getagd</td><td>Nee</td><td>Zelden</td></tr>
+<tr><th scope="row">Een citaat kopiëren</th><td>Exact</td><td>Met de hand overtypen</td><td>Kan OCR-fouten bevatten</td></tr>
+<tr><th scope="row">Gevonden door desktopzoekfunctie</th><td>Ja</td><td>Alleen bestandsnaam</td><td>Ja</td></tr>
+<tr><th scope="row">Machinevertaling</th><td>Ja</td><td>Heeft eerst OCR nodig</td><td>Ja</td></tr>
+</tbody></table></div>
+
+<h2 id="ocr-explained">Wat Doet OCR Met Een Gescande PDF?</h2>
+<p>OCR, optische tekenherkenning, leest de lettervormen in een gescande PDF en schrijft bijpassende machinetekst in een onzichtbare laag achter elke pagina-afbeelding. De pagina ziet er precies hetzelfde uit, maar wordt een doorzoekbare PDF: woorden kunnen worden gevonden, geselecteerd, gekopieerd en voorgelezen.</p>
+
+<p>Het Federal Agencies Digital Guidelines Initiative definieert het precies: "Optische tekenherkenning (OCR) is het proces waarbij een rasterafbeelding van tekst wordt omgezet in doorzoekbare elektronische tekst" (<a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">FADGI Technical Guidelines, 3rd ed., 2023</a>). OCR werkt op getypte, gedrukte en, minder betrouwbaar, handgeschreven tekst.</p>
+
+<h3>Wat OCR oplost in een gescand document</h3>
+<ul>
+<li>Ctrl/Cmd+F zoeken en volledige tekstindexering beginnen te werken.</li>
+<li>Tekst kan worden geselecteerd, gekopieerd en in andere documenten geplakt.</li>
+<li>Schermlezers krijgen woorden om uit te spreken, wat voldoet aan de basisoplossing van W3C PDF7.</li>
+<li>Rechtbanksystemen die doorzoekbare indieningen vereisen, kunnen het bestand accepteren.</li>
+</ul>
+
+<h3>Wat OCR niet oplost</h3>
+<ul>
+<li><strong>Beeldkwaliteit.</strong> De pagina blijft een plaatje, dus inzoomen blijft pixels tonen. JMU merkt op dat voor mensen die inzoomen, "de uitvoer gepixeld en vervormd raakt, omdat de eText onder de afbeelding van de tekst zit."</li>
+<li><strong>Nauwkeurigheid.</strong> Vervaging, scheefstand, lage resolutie en spikkelruis veroorzaken verkeerde herkenningen zoals "rn" in plaats van "m" of "1" in plaats van "l". De verborgen tekst kan fout zijn terwijl de afbeelding er goed uitziet.</li>
+<li><strong>Structuur.</strong> Koppen, leesvolgorde, tabelcellen en alt-tekst voor afbeeldingen hebben nog altijd handmatige tagging nodig voor volledige toegankelijkheid.</li>
+<li><strong>Bestandsgrootte.</strong> De pagina-afbeeldingen blijven bestaan, dus een gescande PDF met OCR is bijna even groot als de versie met alleen afbeeldingen.</li>
+</ul>
+
+<div class="callout callout-info"><strong>OCR werkt op de afbeelding, niet op het papier</strong>De herkenningskwaliteit hangt af van de scan. Een schone pagina van 300 ppi met rechte regels wordt veel beter herkend dan een scheve, ruisende telefoonfoto. Wordt een scan geOCR'd, scan hem dan eerst recht en scherp.</div>
+
+<h2 id="when-you-need-a-scanned-copy">Wanneer Vragen Organisaties Om Een Gescande Kopie?</h2>
+<p>Organisaties vragen om een gescande kopie wanneer het origineel op papier bestaat en ze een digitaal document nodig hebben: immigratiebewijs, rechtbankstukken, hr-onboardingdossiers, ondertekende contracten en bonnetjes. Elke organisatie stelt zijn eigen regels op voor formaat, resolutie en bestandsgrootte, en sommige rechtbanken vereisen doorzoekbare PDF's in plaats van PDF's met alleen afbeeldingen.</p>
+
+<h3>Immigratiebewijs (USCIS)</h3>
+<p>U.S. Citizenship and Immigration Services accepteert gescand of gefotografeerd bewijsmateriaal voor online indiening. De instructie is kort: "Gebruik een scanner of maak foto's van elk document," en "Zorg dat elke bijgevoegde afbeelding duidelijk is en dat alle tekst leesbaar is" (<a href="https://www.uscis.gov/file-online/tips-for-filing-forms-online" target="_blank" rel="noopener">USCIS, Tips for Filing Forms Online</a>). Elk bestand mag maximaal 12 MB zijn, als PDF, JPG of JPEG, met TIF of TIFF geaccepteerd voor sommige formulieren.</p>
+
+<h3>Federale rechtbankindieningen (CM/ECF)</h3>
+<p>Federale systemen voor elektronisch indienen accepteren alleen PDF, en veel rechtbanken geven de voorkeur aan digitaal geboren bestanden. Het Southern District of Florida stelt dat "processtukken en hoofddocumenten die elektronisch bij CM/ECF worden ingediend, in een doorzoekbaar PDF-formaat moeten zijn" (<a href="https://www.flsd.uscourts.gov/all-faqs/CMECF" target="_blank" rel="noopener">S.D. Fla. CM/ECF FAQ</a>). Gescande PDF's zijn vooral bedoeld voor bewijsstukken en ondertekend papier zonder digitaal origineel.</p>
+
+<p>Scaninstellingen en groottelimieten verschillen per rechtbank. Het Western District of Washington vereist scannen op 300 dpi, zwart-wit tenzij kleur essentieel is, en stelt een limiet van 100 MB per document (<a href="https://www.wawd.uscourts.gov/attorneys/cm-ecf-faqs/Technical" target="_blank" rel="noopener">W.D. Wash. technical FAQ</a>). Het <a href="https://www.mnd.uscourts.gov/sites/mnd/files/Criminal-ECF-Procedures-Guide.pdf" target="_blank" rel="noopener">District of Minnesota</a> beperkt elk bewijsstuk tot 35 MB in zijn strafrechtelijke ECF-procedures.</p>
+
+<h3>Hr, verhuurders, scholen en banken</h3>
+<p>Werkgevers en verhuurders willen meestal een gescande kopie van een identiteitsbewijs, een diploma, een ondertekende aanbiedingsbrief of een huurpagina. Ze publiceren zelden technische regels; de meesten noemen een limiet voor e-mailbijlagen en vragen dat elk woord leesbaar is. Vermeldt een portaal geen limieten, dan is een grijstinten-PDF van 300 dpi onder de 10 MB een verstandige inschatting, geen vastgestelde regel.</p>
+
+<div class="table-wrap"><table><caption>Veelvoorkomende eisen voor een gescande kopie per aanvrager</caption>
+<thead><tr><th scope="col">Aanvrager</th><th scope="col">Formaat</th><th scope="col">Grootte- of resolutieregel</th><th scope="col">Doorzoekbare tekst vereist?</th></tr></thead>
+<tbody>
+<tr><th scope="row">USCIS online indienen</th><td>PDF, JPG, JPEG (TIF/TIFF voor sommige formulieren)</td><td>12 MB per bestand</td><td>Nee; tekst moet leesbaar zijn</td></tr>
+<tr><th scope="row">Rechtbank W.D. Wash.</th><td>PDF</td><td>300 dpi, zwart-wit; 100 MB per document</td><td>Hangt af van documenttype</td></tr>
+<tr><th scope="row">Rechtbank S.D. Fla.</th><td>PDF</td><td>Rechtbanklimieten gelden</td><td>Ja voor hoofddocumenten</td></tr>
+<tr><th scope="row">D. Minn. strafrechtelijke ECF</th><td>PDF</td><td>35 MB per bewijsstuk</td><td>Controleer lokale regels</td></tr>
+<tr><th scope="row">Werkgever of verhuurder</th><td>PDF of afbeelding</td><td>Meestal een e-maillimiet</td><td>Zelden</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-tip"><strong>Houd de grootte laag</strong>Voor tekstdocumenten is grijstinten of bitonaal op 300 dpi meestal de kleinste leesbare optie. Kleurenscans van gewone tekst kunnen veel groter zijn zonder extra informatie toe te voegen. Onze gids over <a href="/blog/convert-color-pdf-to-black-and-white/">een kleuren-PDF omzetten naar zwart-wit</a> behandelt de afwegingen.</div>
+
+<h2 id="scanned-pdf-and-pdf-a">Kan Een Gescande PDF Worden Gearchiveerd Als PDF/A?</h2>
+<p>Een gescande PDF kan worden opgeslagen als PDF/A, de ISO 19005-archiefversie van PDF, omdat PDF/A pagina-afbeeldingen toestaat. PDF/A voegt regels toe voor langdurig lezen, zoals ingesloten lettertypen en geen versleuteling, maar maakt een pagina met alleen afbeeldingen niet doorzoekbaar. OCR is een aparte stap.</p>
+
+<p>PDF/A werd voor het eerst uitgebracht op 1 oktober 2005, en verbiedt functies die bestanden na tientallen jaren moeilijk te openen maken, zoals lettertypekoppeling en versleuteling (<a href="https://en.wikipedia.org/wiki/PDF/A" target="_blank" rel="noopener">Wikipedia, PDF/A</a>). Microsoft Office kan rechtstreeks ISO 19005-1-conforme bestanden exporteren via zijn opties Opslaan als PDF.</p>
+
+<p>Rechtbanken die PDF/A vereisen, sturen indieners vaak weg van scannen. Het Eastern District of Oklahoma adviseert dat, om bestandsgroottes laag te houden en doorzoekbare bestanden te garanderen, PDF/A-documenten in een tekstverwerker moeten worden gemaakt in plaats van afgedrukt en gescand (<a href="https://www.oked.uscourts.gov/pdfa-frequently-asked-questions" target="_blank" rel="noopener">E.D. Okla. PDF/A FAQ</a>).</p>
+
+<dl class="spec-list">
+<dt>Digitaal geboren PDF/A</dt><dd>Kleinst en volledig doorzoekbaar; het beste als er een digitaal origineel bestaat.</dd>
+<dt>Gescande PDF/A met OCR</dt><dd>Archiefwaardig en doorzoekbaar; de juiste keuze voor documenten die alleen op papier bestaan.</dd>
+<dt>PDF/A met alleen afbeeldingen</dt><dd>Geldig voor bewaring, maar niet doorzoekbaar of toegankelijk.</dd>
+</dl>
+
+<h2 id="digital-pdf-to-scanned-look">Hoe Krijgt Een Digitale PDF Een Gescande-PDF-look?</h2>
+<p>Een digitale PDF krijgt een gescande-PDF-look wanneer elke pagina wordt gerasterd tot een afbeelding en de onvolkomenheden van een echte scanner krijgt: lichte rotatie, vervaging, ruis, een grijze of papiertint. Het resultaat is een PDF met alleen afbeeldingen die zich gedraagt als een scan, zonder dat je iets afdrukt of een scanner bezit.</p>
+
+<p>Dat is precies wat onze gratis <a href="/scan">scaneffect-tool</a> doet. Hij rendert elke PDF-pagina in je browser, past de effecten toe die je kiest en slaat elke pagina op als JPEG-afbeelding in een nieuwe PDF. Bestanden worden lokaal verwerkt en niet naar een server geüpload.</p>
+
+<dl class="spec-list">
+<dt>Rotatie</dt><dd>−10° tot 10°, standaard 1°, plus willekeurige variatie per pagina tot 10°.</dd>
+<dt>Vervaging</dt><dd>0 tot 1, standaard 0,3, verzacht vectorranden zoals scanneroptiek dat doet.</dd>
+<dt>Ruis</dt><dd>0 tot 1, standaard 0,1, voegt spikkels toe zoals sensorruis.</dd>
+<dt>Helderheid en contrast</dt><dd>0 tot 2 elk, standaard 1.</dd>
+<dt>Vergeling</dt><dd>0 tot 2, standaard 0, tint de pagina als oud papier.</dd>
+<dt>Kleurruimte</dt><dd>Grijs (standaard) of Kleur.</dd>
+<dt>Resolutie</dt><dd>1× tot 3×; PDF-pagina's renderen op 72 dpi maal de schaal, dus 2× is ongeveer 144 dpi en 3× ongeveer 216 dpi.</dd>
+</dl>
+
+<p>Omdat de uitvoer alleen afbeeldingen bevat, erft hij elke hierboven beschreven eigenschap: geen selecteerbare tekst, geen zoekfunctie, grotere bestanden, geen output voor schermlezers. Dat is precies de bedoeling voor iemand die een document als gescande kopie wil laten ogen, en een nadeel voor wie het doorzoekbaar nodig heeft. Bewaar het originele digitale bestand.</p>
+
+<p>Lees voor de volledige werkwijze, inclusief de afweging tussen resolutie en bestandsgrootte, <a href="/blog/pdf-to-scanned-pdf/">hoe je een PDF omzet naar een gescande PDF</a>. Voor alle zes methoden, van afdrukken-en-scannen tot ingebouwde opties van het besturingssysteem, zie <a href="/blog/how-to-make-a-pdf-look-scanned/">hoe je een PDF er gescand uit laat zien</a>. Begin je bij een telefoonfoto in plaats van een PDF? De gids over <a href="/blog/image-to-scanned-pdf/">een afbeelding omzetten naar een gescande PDF</a> behandelt JPG en PNG.</p>
+
+<div class="callout callout-warn"><strong>Gebruik een scanlook eerlijk</strong>Een scaneffect verandert hoe een bestand eruitziet, niet of het authentiek is. Gebruik het niet om officiële documenten, identiteitsbewijzen of handtekeningen die niet van jou zijn, na te maken of te wijzigen. Sommige rechtbanken en instanties vereisen doorzoekbare PDF's, dus een bestand met alleen afbeeldingen kan worden afgewezen; controleer de regels voordat je indient.</div>
+
+<div class="expert-quote"><blockquote>We hebben onze tool gebouwd om een scanlook toe te voegen, en de vraag die we het vaakst krijgen is eigenlijk "wat heb ik nu precies gemaakt?" Het eerlijke antwoord is een PDF met alleen afbeeldingen. Hij ziet eruit als papier, maar de woorden zijn pixels. Moet een lezer hem doorzoeken of laten voorlezen, bewaar dan het digitale origineel ernaast, of voer achteraf OCR uit. We willen liever dat mensen dat weten voordat ze op Downloaden klikken.</blockquote><cite><strong>Het team van Make PDF look scanned</strong> — bouwers van de webtool en de Chrome-extensie</cite></div>
+
+<h2 id="scanned-document-glossary">Woordenlijst Gescand Document: Welke Termen Doen Ertoe?</h2>
+<p>Een gescand document komt met zijn eigen vocabulaire: dpi en ppi, kleurendiepte, bitonaal, OCR, rasteren, PDF/A en JBIG2. Deze zeven termen kennen is genoeg om elke scaneis van een rechtbank, instantie of werkgever te begrijpen en een gescande PDF die je ontvangt te beoordelen.</p>
+
+<dl class="spec-list">
+<dt>dpi / ppi</dt><dd>Punten of pixels per inch: hoeveel beeldsamples één inch papier bedekken. NARA vereist minstens 300 ppi voor moderne tekstdocumenten en 400 ppi voor foto's en documenten met fijne details. PDF-paginageometrie gebruikt 72 punten per inch, en daarom komt een render op 1× overeen met 72 dpi.</dd>
+<dt>Kleurendiepte</dt><dd>Bits opgeslagen per pixel. Bitonaal is 1 bit, grijstinten is 8 bits (256 tinten), en een typische kleurenscan is 24 bits (8 bits in elk van drie kanalen).</dd>
+<dt>Bitonaal</dt><dd>De definitie van FADGI: "Digitale afbeeldingen die met slechts twee kleuren zijn geproduceerd, zwart en wit." Het kleinste leesbare formaat voor gewone tekst.</dd>
+<dt>OCR</dt><dd>Optische tekenherkenning: software die de lettervormen in een afbeelding omzet in machinetekst, waardoor een doorzoekbare PDF ontstaat.</dd>
+<dt>Rasteren</dt><dd>Vectortekst en -vormen omzetten in een raster van pixels. Het rasteren van een digitale PDF maakt er een PDF met alleen afbeeldingen van.</dd>
+<dt>PDF/A</dt><dd>ISO 19005, de archiefsubset van PDF, uitgebracht in 2005; verbiedt functies zoals versleuteling en lettertypekoppeling.</dd>
+<dt>JBIG2</dt><dd>Een compressiemethode voor bitonale scans die herhaalde symbolen één keer opslaat. BBC News meldde in 2013 dat sommige kantoorkopieerapparaten met een lossy JBIG2-modus cijfers in scans wijzigden, waarbij een 6 vaak een 8 werd; in één test werd een kamerafmeting van 21,11 m 14,13 m.</dd>
+<dt>PDF met alleen afbeeldingen</dt><dd>Een gescande PDF zonder enige tekstlaag.</dd>
+<dt>Doorzoekbare PDF</dt><dd>Een PDF met echte of OCR-tekst die kan worden doorzocht en geselecteerd.</dd>
+</dl>
+
+<p>De JBIG2-zaak is het sterkste argument om originelen te bewaren. Een gescande kopie is een plaatje, en plaatjes kunnen door compressie worden gewijzigd zonder dat iemand het merkt (<a href="https://www.bbc.com/news/technology-23588202" target="_blank" rel="noopener">BBC News, 2013</a>). NARA behandelt ruis ook als een ongewenst artefact dat "geen deel uitmaakt van het bronmateriaal" (<a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">36 CFR 1236 Subpart E</a>).</p>
+
+<h2 id="faq">Veelgestelde Vragen Over Gescande PDF's</h2>
+<p>Deze vragen over gescande PDF's komen het vaakst van mensen die een bestand hebben ontvangen, een gescande kopie moeten opsturen, of aan een regel van een rechtbank of instantie moeten voldoen. Elk antwoord staat op zichzelf, zodat je meteen naar het antwoord kunt springen dat bij jouw situatie past en ernaar kunt handelen.</p>
+
+<div class="faq-item"><p class="faq-q">Wat is een gescande PDF in simpele woorden?</p><p class="faq-a">Een gescande PDF is een PDF gemaakt van foto's van papieren pagina's. De tekst die je ziet, maakt deel uit van een afbeelding, dus je kunt hem niet selecteren of doorzoeken tenzij er OCR is toegepast.</p></div>
+<div class="faq-item"><p class="faq-q">Is een gescande PDF hetzelfde als een gescande kopie?</p><p class="faq-a">Bijna. Een gescande kopie is elke digitale afbeelding van een papieren document, en een gescande PDF is het meest gebruikte bestandsformaat om er een te leveren. Een gescande kopie kan ook een JPEG of TIFF zijn.</p></div>
+<div class="faq-item"><p class="faq-q">Hoe zie ik in 10 seconden of een PDF gescand is?</p><p class="faq-a">Probeer een woord te selecteren, druk dan op Ctrl+F of Cmd+F en zoek naar een woord dat je ziet. Licht er niets op en vindt de zoekfunctie niets, dan is de PDF een scan met alleen afbeeldingen. Zoom naar 400% om het te bevestigen: gescande tekst oogt gepixeld.</p></div>
+<div class="faq-item"><p class="faq-q">Kan een gescande PDF doorzoekbaar zijn?</p><p class="faq-a">Ja. OCR voegt een onzichtbare tekstlaag toe achter de pagina-afbeeldingen, waardoor een gescande PDF een doorzoekbare PDF wordt. De pagina blijft eruitzien als een scan, en verkeerd gelezen woorden kunnen in de verborgen tekst voorkomen.</p></div>
+<div class="faq-item"><p class="faq-q">Waarom kan ik geen tekst uit mijn PDF kopiëren?</p><p class="faq-a">De PDF is waarschijnlijk een scan zonder OCR, dus er zijn geen tekens om te kopiëren. De FAQ van de rechtbank van het Southern District of Florida vermeldt hetzelfde: is een PDF niet doorzoekbaar, dan kan de tekst niet worden gekopieerd. Voer OCR uit of vraag om het digitale origineel.</p></div>
+<div class="faq-item"><p class="faq-q">Zijn gescande PDF's toegankelijk voor schermlezers?</p><p class="faq-a">Niet zonder OCR. W3C-richtlijnen noemen scans met alleen afbeeldingen inherent ontoegankelijk. Na OCR kunnen schermlezers de tekst uitspreken, maar volledige toegankelijkheid vereist ook tags voor koppen, leesvolgorde en tabellen.</p></div>
+<div class="faq-item"><p class="faq-q">Waarom is een gescande PDF zo groot?</p><p class="faq-a">Elke pagina is een volledige afbeelding. Een grijstintenpagina op 400 ppi kan groter zijn dan 1 MB, terwijl een tekstpagina uit een tekstverwerker vaak onder de 50 KB blijft. Scannen op 300 ppi in grijstinten of zwart-wit houdt de grootte laag.</p></div>
+<div class="faq-item"><p class="faq-q">Welke resolutie moet een gescand document hebben?</p><p class="faq-a">Voor getypte of gedrukte tekst is 300 dpi de standaardvereiste bij Amerikaanse federale rechtbanken en het NARA-minimum voor tekstdocumenten. Foto's en fijne details vragen om 400 ppi.</p></div>
+<div class="faq-item"><p class="faq-q">Is een gescande kopie een wettelijke of gewaarmerkte kopie?</p><p class="faq-a">Nee, een gescande kopie bewijst op zichzelf niets over echtheid. Een gewaarmerkte kopie is ondertekend en gedateerd door een professional die het origineel heeft gezien, zoals GOV.UK uitlegt. Vraag de aanvrager welk type ze nodig hebben.</p></div>
+<div class="faq-item"><p class="faq-q">Kan ik een digitale PDF laten lijken op een gescande PDF?</p><p class="faq-a">Ja. De gratis <a href="/scan">Make PDF look scanned-tool</a> rastert elke pagina en voegt rotatie, vervaging, ruis en papiertint toe in je browser. De uitvoer is een PDF met alleen afbeeldingen, dus bewaar het origineel als je een zoekfunctie nodig hebt.</p></div>
+<div class="faq-item"><p class="faq-q">Moet een gescande PDF wel PDF/A zijn?</p><p class="faq-a">Alleen als de aanvrager dat zegt. Sommige rechtbanken en archieven vereisen PDF/A voor langdurige opslag. Een gescande PDF kan als PDF/A worden opgeslagen, idealiter met OCR zodat hij ook doorzoekbaar is.</p></div>
+<div class="faq-item"><p class="faq-q">Kan ik meerdere PDF's tegelijk scannen?</p><p class="faq-a">Met onze tool wel: <a href="/scan/bulk">Bulkscan</a> verwerkt meerdere bestanden en downloadt ze als één ZIP, met één gescande PDF per invoerbestand.</p></div>
+
+<h2 id="verdict">Wat Is Het Korte Antwoord Over Gescande PDF's?</h2>
+<p>Een gescande PDF is een plaatje van papier verpakt in een PDF. Test hem door tekst te selecteren en te doorzoeken, voeg OCR toe als je zoekfunctie of toegankelijkheid nodig hebt, stuur een digitaal geboren PDF als een rechtbank die verkiest, en gebruik een scanlook alleen als de lezer om uiterlijk vraagt, niet om echtheid.</p>
+
+<p>Is uiterlijk wat je nodig hebt, open dan de <a href="/scan">gratis scantool</a>, houd de standaard Grijs-kleurruimte en resolutie 2× aan, en bekijk het voorbeeld voordat je downloadt.</p>

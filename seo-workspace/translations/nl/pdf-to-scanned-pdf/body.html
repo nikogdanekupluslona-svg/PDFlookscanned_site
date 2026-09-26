@@ -1,0 +1,228 @@
+<p class="lead">Een pdf naar gescande pdf omzetten betekent dat je elke pagina als afbeelding weergeeft en die afbeeldingen opslaat in een nieuwe pdf, zodat de tekstlaag, links en formuliervelden platte pixels worden. Kies voor leesbare, compacte pagina's een resolutie van 2× en grijstinten; voeg alleen lichte ruis en scheefstand toe als je ook het scaneffect wilt.</p>
+
+<p>Mensen zetten een pdf om naar een gescande pdf omdat een portal een bestand met alleen afbeeldingen wil, een collega om een afgevlakte kopie vraagt, of een formulier eruit moet zien alsof het door een kantoorscanner is gegaan. Deze gids behandelt de afwegingen (resolutie, kleur, bestandsgrootte, doorzoekbaarheid, rechtbankregels) met exacte tool-instellingen, cijfers van Amerikaanse federale rechtbanken en benchmarks van de National Archives en FADGI.</p>
+
+<nav class="toc" aria-label="Table of contents"><h2>Table of Contents</h2><ol>
+<li><a href="#what-it-means">Wat houdt een pdf naar gescande pdf-conversie in?</a></li>
+<li><a href="#before-after">Wat verandert er als een pdf een gescande pdf wordt?</a></li>
+<li><a href="#how-to-convert">Hoe zet je een pdf om naar een gescande pdf in de browser?</a></li>
+<li><a href="#resolution">Welke resolutie houdt een gescande pdf leesbaar?</a></li>
+<li><a href="#color-and-size">Grijs, kleur of bitonaal: wat houdt het bestand klein?</a></li>
+<li><a href="#flatten-vs-scan-look">Pdf schoon afvlakken of een scaneffect toevoegen?</a></li>
+<li><a href="#required-or-refused">Wanneer is een gescande pdf verplicht of juist geweigerd?</a></li>
+<li><a href="#privacy">Is het veilig om een pdf online naar gescande pdf om te zetten?</a></li>
+<li><a href="#batch">Hoe zet je meerdere pdf's tegelijk om naar gescande pdf's?</a></li>
+<li><a href="#checking">Hoe controleer je of het resultaat een gescande pdf is?</a></li>
+<li><a href="#troubleshooting">Hoe los je problemen op bij pdf naar gescande pdf?</a></li>
+<li><a href="#faq">Pdf naar gescande pdf: veelgestelde vragen</a></li>
+</ol></nav>
+
+<h2 id="what-it-means">Wat houdt een pdf naar gescande pdf-conversie in?</h2>
+<p>Een pdf-naar-gescande-pdf-conversie neemt elke pagina van een digitale pdf, tekent die op een canvas met een gekozen pixeldichtheid, en slaat het resultaat op als afbeelding in een nieuwe pdf. Het resultaat ziet er hetzelfde uit, maar elk woord, elke lijn en elk logo maakt nu deel uit van één afbeelding per pagina.</p>
+
+<p>Een echte scanner doet hetzelfde, maar dan met papier in plaats van een digitale pagina. Het Amerikaanse District Court voor het Northern District of California omschrijft het resultaat simpel: <a href="https://cand.uscourts.gov/cases-e-filing/cmecf-information/preparing-your-cmecf-filing" target="_blank" rel="noopener">"Gescande tekst is een foto van een afgedrukte pagina, gemaakt door een digitale camera of scanner."</a> Zodra een pagina een foto is, werkt selecteren, kopiëren of doorzoeken van de woorden niet meer, totdat iemand er optische tekenherkenning (OCR) op loslaat.</p>
+
+<p>Twee verwante termen worden vaak door elkaar gehaald. Een pdf <strong>afvlakken</strong> betekent in strikte zin dat interactieve lagen (formuliervelden, opmerkingen, stempels) worden samengevoegd met de pagina-inhoud, terwijl tekst selecteerbaar kan blijven. Een pdf <strong>rasteren</strong> betekent dat alles, inclusief tekst, wordt omgezet in pixels. Een pdf omzetten naar een gescande pdf is de tweede, ingrijpendere bewerking.</p>
+
+<p>Er zijn twee soorten resultaat. Een schone pdf met alleen afbeeldingen houdt de pagina scherp en recht. Een pdf met scaneffect voegt een lichte kanteling, zachte focus, ruis en een papiertint toe. Onze <a href="/scan">gratis tool om een pdf naar gescande pdf om te zetten</a> maakt beide met dezelfde instellingen. Voor de achtergrond over wat telt als een gescand bestand, zie <a href="/blog/what-is-a-scanned-pdf/">wat is een gescande pdf</a>.</p>
+
+<h2 id="before-after">Wat verandert er als een pdf een gescande pdf wordt?</h2>
+<p>Als een pdf een gescande pdf wordt, blijft de zichtbare pagina hetzelfde, terwijl alles wat machineleesbaar is op de pagina wordt vervangen door pixels. Tekst, lettertypen, links, formuliervelden en annotaties zijn niet langer aparte objecten. De bestandsgrootte neemt meestal toe, en zoeken, kopiëren en voorlezen door een schermlezer werken niet meer totdat er OCR wordt toegepast.</p>
+
+<p>De tabel vergelijkt een typische pdf, geëxporteerd vanuit een tekstverwerker, met datzelfde bestand na omzetting naar paginabeelden. Het gedrag in de kolom "na" krijg je met elke rastermethode, ook met onze tool, omdat elke pagina wordt opgeslagen als een JPEG-afbeelding in een nieuwe pdf.</p>
+
+<div class="table-wrap"><table>
+<caption>Digitale pdf versus dezelfde pdf omgezet naar een gescande pdf (alleen afbeeldingen)</caption>
+<thead><tr><th scope="col">Element</th><th scope="col">Originele digitale pdf</th><th scope="col">Na pdf naar gescande pdf-conversie</th></tr></thead>
+<tbody>
+<tr><th scope="row">Tekstlaag</th><td>Echte tekens die je kunt selecteren, kopiëren en doorzoeken</td><td>Verdwenen van de pagina; de woorden bestaan alleen nog als pixels</td></tr>
+<tr><th scope="row">Lettertypen</th><td>Ingesloten of gerefereerde lettertypebestanden</td><td>Geen lettertypen meer nodig; lettervormen zitten vast gebakken in de afbeelding</td></tr>
+<tr><th scope="row">Links</th><td>Klikbare URL's en interne sprongen</td><td>Linktekst is nog zichtbaar maar niet meer klikbaar</td></tr>
+<tr><th scope="row">Formuliervelden</th><td>Invulbare vakken, selectievakjes, keuzelijsten</td><td>Niet meer invulbaar; controleer het voorbeeld om te zien welke waarden in de afbeelding zijn getekend</td></tr>
+<tr><th scope="row">Annotaties</th><td>Opmerkingen, markeringen, stempels als aparte objecten</td><td>Niet meer bewerkbaar als object; alles wat overblijft maakt deel uit van de afbeelding</td></tr>
+<tr><th scope="row">PDF-metadata</th><td>Titel, auteur en andere eigenschappen ingesteld door de makende app</td><td>Er wordt een nieuwe pdf geschreven; titel, auteur, onderwerp, trefwoorden, producent en maker kun je instellen bij de extra's van de tool</td></tr>
+<tr><th scope="row">Bestandsgrootte</th><td>Klein bij tekstpagina's</td><td>Meestal groter; hangt af van resolutie, kleurmodus en aantal pagina's</td></tr>
+<tr><th scope="row">Doorzoekbaarheid</th><td>Ctrl+F en schermlezers werken</td><td>Niet doorzoekbaar of toegankelijk totdat OCR een tekstlaag toevoegt</td></tr>
+</tbody></table></div>
+
+<p>Twee rijen verdienen een nadere blik. Bij formuliervelden en annotaties hangt het ervan af of de pagina-renderer ze tekent; een ingevulde veldwaarde verschijnt meestal als gedrukte tekst, terwijl een pop-upopmerking kan verdwijnen, dus bekijk het live voorbeeld. Bij metadata kun je in het extra's-paneel typen welke eigenschappen de nieuwe pdf moet krijgen; controleer ze voordat je het bestand verstuurt.</p>
+
+<p>De rij over bestandsgrootte verrast de meeste mensen. Het Middle District of North Carolina merkt op dat <a href="https://www.ncmd.uscourts.gov/sites/ncmd/files/ecfprocman.pdf" target="_blank" rel="noopener">2 MB ruimte biedt aan zo'n vijfenveertig pagina's pdf-tekst</a>, en voegt er letterlijk aan toe: "De meeste gescande pdf's zijn niet doorzoekbaar en hebben een grote bestandsgrootte." Een tekst-pdf beschrijft letters; een gescande pdf slaat elke pixel ervan op.</p>
+
+<h2 id="how-to-convert">Hoe zet je een pdf om naar een gescande pdf in de browser?</h2>
+<p>Om een pdf om te zetten naar gescande pdf in de browser, open je de gratis tool op pdflookscanned.com/scan, sleep je het bestand erin, stel je resolutie, kleurmodus en scaneffecten in, controleer je het live voorbeeld en download je het resultaat. Het hele proces draait lokaal op je apparaat en duurt alleen langer bij lange documenten of een hoge resolutie.</p>
+
+<ol class="step-list">
+<li><strong>Open de scanner.</strong> Ga naar <a href="/scan">pdflookscanned.com/scan</a> in elke moderne desktop- of mobiele browser, of open het zijpaneel van de Chrome-extensie. Er is geen account of registratie nodig.</li>
+<li><strong>Voeg je pdf toe.</strong> Sleep het bestand naar de dropzone of klik om het te kiezen. Pdf's worden ongewijzigd gebruikt, dus de pagina-indeling, lettertypen en afbeeldingen die je nu ziet, zijn precies wat er wordt weergegeven.</li>
+<li><strong>Kies de resolutie.</strong> Laat Resolutie op de standaard 2× (ongeveer 144 dpi) staan voor gewone brieven en formulieren. Zet het op 2,5× of 3× (ongeveer 216 dpi) als het bestand voetnoten, kleine letters of dichte tabellen bevat.</li>
+<li><strong>Kies de kleurruimte.</strong> Houd Kleurruimte op Grijs (de standaard) voor tekstdocumenten; schakel alleen over naar Kleur als kleur betekenis draagt, zoals grafieken, gemarkeerde clausules of een gekleurd logo.</li>
+<li><strong>Stel de look in.</strong> Voor een schone afvlakking zet je Rotatie, Rotatievariatie, Vervaging en Ruis op 0. Voor een scaneffect houd je de standaardwaarden aan (Rotatie 1°, Vervaging 0,3, Ruis 0,1) of pas je ze licht aan.</li>
+<li><strong>Stel helderheid en papiertint bij.</strong> Helderheid en Contrast staan standaard op 1; verhoog Contrast licht als grijze tekst zwak oogt. Vergeling voegt een verouderde papiertint toe en staat standaard op 0.</li>
+<li><strong>Voeg indien nodig extra's toe.</strong> Optioneel: een tekst- of afbeeldingswatermerk, een stempel- of handtekeningafbeelding die je gerechtigd bent te gebruiken, en de metadatavelden van het document (titel, auteur, onderwerp, trefwoorden, producent, maker).</li>
+<li><strong>Controleer het voorbeeld en download.</strong> Zoom in op de kleinste tekst in het voorbeeld. Als die goed leesbaar is, download je de nieuwe gescande pdf; zo niet, verhoog dan de resolutie en bekijk het voorbeeld opnieuw.</li>
+</ol>
+
+<p>Is je bron een Word-bestand, een Google-document of een spreadsheet, exporteer het dan eerst naar pdf (in Word: Bestand, Opslaan als, PDF; in Google Docs: Bestand, Downloaden, PDF-document). De tool kan DOCX- en XLSX-bestanden direct lezen, maar haalt dan alleen de platte tekst eruit en zet die opnieuw op in A4-pagina's in 11-punts Helvetica, waardoor opmaak, tabellen en afbeeldingen verloren gaan.</p>
+
+<p>Eerst exporteren naar pdf houdt de opmaak precies zoals ontworpen. De <a href="/blog/how-to-make-a-pdf-look-scanned/">complete gids om een pdf gescand te laten lijken</a> vergelijkt deze route met vijf andere methoden.</p>
+
+<h2 id="resolution">Welke resolutie houdt een gescande pdf leesbaar?</h2>
+<p>Een gescande pdf blijft leesbaar zolang elke letter genoeg pixels krijgt. Onze tool rendert pdf-pagina's op 72 dpi vermenigvuldigd met de instelling Resolutie, dus 1× is ongeveer 72 dpi, 2× ongeveer 144 dpi en 3× ongeveer 216 dpi. Echte archiefscans mikken op 200 tot 300 ppi, dus 3× is geschikt voor kleine letters.</p>
+
+<p>Die 72 komt voort uit hoe pdf pagina's meet. De geometrie van pdf en PostScript is gebaseerd op <a href="https://en.wikipedia.org/wiki/Dots_per_inch" target="_blank" rel="noopener">72 punten per inch</a>, dus een Letter-pagina (VS) is 612 × 792 punten. Op 1× gerenderd geeft dat 612 × 792 pixels, op 2× 1.224 × 1.584 pixels, en op 3× 1.836 × 2.376 pixels. Het aantal pixels groeit met het kwadraat van de schaal.</p>
+
+<dl class="spec-list">
+<dt>1× (ongeveer 72 dpi)</dt><dd>Letter-pagina 612 × 792 px. Prima voor grote koppen en dia's; lopende tekst begint uiteen te vallen. Kleinste bestanden.</dd>
+<dt>1,5× (ongeveer 108 dpi)</dt><dd>Letter-pagina 918 × 1.188 px. Acceptabel voor 12-punts tekst op het scherm; zwak voor voetnoten.</dd>
+<dt>2× (ongeveer 144 dpi, standaard)</dt><dd>Letter-pagina 1.224 × 1.584 px. Heldere lopende tekst voor brieven, facturen en formulieren; de gebalanceerde keuze.</dd>
+<dt>2,5× (ongeveer 180 dpi)</dt><dd>Letter-pagina 1.530 × 1.980 px. Gebruik dit wanneer een document normale tekst combineert met kleine labels.</dd>
+<dt>3× (ongeveer 216 dpi)</dt><dd>Letter-pagina 1.836 × 2.376 px. Het beste voor contracten met kleine lettertjes, dichte tabellen en handtekeningen die scherp moeten blijven.</dd>
+</dl>
+
+<h3>Hoe kleine letters zich gedragen bij elke resolutie van een gescande pdf</h3>
+<p>Een simpele rekensom laat zien waarom kleine tekst meer pixels nodig heeft. Een voetnoot van 8 punten is als lettergrootte 8/72 inch hoog. Op 1× is dat ongeveer 8 pixels voor de hele letterhoogte inclusief stok- en staartletters, waardoor een kleine "e" en "c" in elkaar overlopen. Op 2× wordt dat ongeveer 16 pixels, en op 3× ongeveer 24 pixels, wat prettig leesbaar blijft, zelfs na lichte vervaging en JPEG-compressie.</p>
+
+<p>Ter vergelijking: de Amerikaanse National Archives eisen minimaal <a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">300 ppi voor gedigitaliseerde moderne tekstdocumenten en 400 ppi voor foto's en documenten met veel detail</a> onder 36 CFR 1236 Subpart E. FADGI beoordeelt losse documenten in sterniveaus van 200 ppi (één ster) via 250 en 300 tot 400 ppi (vier sterren) in zijn <a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">technische richtlijnen uit 2023</a>. Die doelen beschermen papieren originelen.</p>
+
+<p>Een pdf-naar-gescande-pdf-conversie begint bij een perfecte digitale pagina, niet bij gekreukt papier, dus is archiefdichtheid niet nodig om er scherp uit te zien. Onze ervaring is dat 2× goed werkt voor normale tekst van 10-12 punten, en dat 3× (216 dpi) net boven het FADGI-één-sterniveau zit voor kleine lettertjes.</p>
+
+<p>NARA voegt in diezelfde regelgeving een nuttige waarschuwing toe: "Het agentschap kan niet uitsluitend vertrouwen op apparatuurspecificaties, zoals de ppi-instelling van een scanner of het aantal megapixels van een camerasensor, om de digitale beeldkwaliteit te waarborgen." In de praktijk beoordeel je dus het voorbeeld, niet het getal.</p>
+
+<h2 id="color-and-size">Grijs, kleur of bitonaal: wat houdt het bestand klein?</h2>
+<p>Bitonale bestanden (puur zwart-wit) zijn het kleinst, grijstinten zitten er middenin, en kleur is bij dezelfde resolutie het grootst. Bij een pdf-naar-gescande-pdf-conversie is grijstinten de praktische standaard: het houdt anti-aliased letterranden vloeiend en blijft veel kleiner dan kleur. Gebruik kleur alleen wanneer kleur informatie draagt.</p>
+
+<p>De sterkste cijfers uit de praktijk komen van het Northern District of California, dat hetzelfde document van 317 pagina's op twee manieren scande. Als bitonaal bestand op 300 ppi woog het <a href="https://cand.uscourts.gov/cases-e-filing/cmecf-information/preparing-your-cmecf-filing" target="_blank" rel="noopener">23,86 MB en bleef leesbaar</a>; in grijstinten op 400 ppi liep dat op tot 374,47 MB. Dat is ongeveer vijftien keer groter voor dezelfde pagina's, veroorzaakt door zowel de kleurdiepte als de hogere resolutie.</p>
+
+<div class="table-wrap"><table>
+<caption>Kleurmodi voor een gescande pdf: waar elke modus goed voor is</caption>
+<thead><tr><th scope="col">Modus</th><th scope="col">Bits per pixel</th><th scope="col">Relatieve grootte</th><th scope="col">Het beste voor</th></tr></thead>
+<tbody>
+<tr><th scope="row">Bitonaal (zwart-wit)</th><td>1</td><td>Kleinst</td><td>Rechtbankindiening van platte tekst; geen modus in onze tool</td></tr>
+<tr><th scope="row">Grijstinten (tool: Grijs)</th><td>8</td><td>Gemiddeld</td><td>Brieven, contracten, formulieren, alles met handtekeningen</td></tr>
+<tr><th scope="row">Kleur (tool: Kleur)</th><td>24</td><td>Grootst</td><td>Grafieken, gekleurde stempels, foto's, gemarkeerde tekst</td></tr>
+</tbody></table></div>
+
+<p>Onze tool biedt Grijs en Kleur en slaat elke pagina op als JPEG-afbeelding. JPEG is efficiënt voor grijstinten, maar zoals FADGI het stelt: "standaard JPEG-verwerking introduceert blokken van 8×8 pixels die duidelijk geen deel uitmaken van de oorspronkelijke inhoud." Op 2× of 3× zijn die blokken bij tekst zelden zichtbaar.</p>
+
+<p>Heb je echt 1-bit zwart-wit nodig, dan legt onze gids over <a href="/blog/convert-color-pdf-to-black-and-white/">een kleuren-pdf zwart-wit maken</a> het verschil en de opties uit.</p>
+
+<h3>Limieten voor de bestandsgrootte van een gescande pdf waar je tegenaan kunt lopen</h3>
+<p>Uploadlimieten maken de kleurkeuze praktisch in plaats van alleen cosmetisch. Het Western District of Washington hanteert een <a href="https://www.wawd.uscourts.gov/attorneys/cm-ecf-faqs/Technical" target="_blank" rel="noopener">limiet van 100 MB per document en vraagt om zwart-witscans op 300 dpi</a> tenzij kleur essentieel is. Het District of Minnesota legt elk bewijsstuk aan banden op <a href="https://www.mnd.uscourts.gov/sites/mnd/files/Criminal-ECF-Procedures-Guide.pdf" target="_blank" rel="noopener">35 MB in zijn strafrechtelijke ECF-procedures</a>. USCIS beperkt elk <a href="https://www.uscis.gov/file-online/tips-for-filing-forms-online" target="_blank" rel="noopener">geüpload bewijsbestand tot 12 MB</a>.</p>
+
+<div class="callout callout-tip"><strong>Snelle vuistregel voor bestandsgrootte</strong>Begin met 2× en Grijs. Is het gedownloade bestand te groot voor een portal, ga dan eerst naar 1,5× voordat je iets anders wijzigt, want een stap terug in resolutie snijdt veel meer pixels weg dan elke andere instelling. Is het nog steeds te groot, splits de pdf dan en zet de delen apart om.</div>
+
+<h2 id="flatten-vs-scan-look">Pdf schoon afvlakken of een scaneffect toevoegen?</h2>
+<p>Kies voor een schone afvlakking wanneer de ontvanger alleen een pdf met alleen afbeeldingen nodig heeft, zonder bewerkbare tekst, en kies voor het scaneffect wanneer het bestand eruit moet zien als papier dat door een scanner is gegaan. Dezelfde tool doet beide: zet Rotatie, Rotatievariatie, Vervaging en Ruis op 0 voor een schone afvlakking, of houd ze boven 0 voor realisme.</p>
+
+<p>Een schone afvlakking is vaak het juiste antwoord: een definitief contract versturen zodat niemand stiekem een clausule kan herschrijven met een teksteditor, een ingevuld formulier vergrendelen zodat de waarden niet veld voor veld kunnen worden gewijzigd, of pagina's aanleveren bij een systeem dat pdf's met lettertypen of formuliervelden weigert. Hier voegt een kanteling of spikkel niets toe.</p>
+
+<div class="table-wrap"><table>
+<caption>Instellingen voor een schone afvlakking versus een pdf-naar-gescande-pdf-conversie met scaneffect</caption>
+<thead><tr><th scope="col">Instelling (bereik)</th><th scope="col">Schone afvlakking</th><th scope="col">Licht scaneffect</th><th scope="col">Sterk scaneffect</th></tr></thead>
+<tbody>
+<tr><th scope="row">Rotatie (−10° tot 10°)</th><td>0°</td><td>1° (standaard)</td><td>1,5°–2°</td></tr>
+<tr><th scope="row">Rotatievariatie (0–10°)</th><td>0</td><td>0,5</td><td>1</td></tr>
+<tr><th scope="row">Vervaging (0–1)</th><td>0</td><td>0,3 (standaard)</td><td>0,4–0,5</td></tr>
+<tr><th scope="row">Ruis (0–1)</th><td>0</td><td>0,1 (standaard)</td><td>0,2–0,3</td></tr>
+<tr><th scope="row">Helderheid / Contrast (0–2)</th><td>1 / 1</td><td>1 / 1,1</td><td>1,05 / 1,2</td></tr>
+<tr><th scope="row">Vergeling (0–2)</th><td>0</td><td>0–0,2</td><td>0,3–0,5</td></tr>
+<tr><th scope="row">Rand</th><td>Uit</td><td>Uit</td><td>Aan</td></tr>
+<tr><th scope="row">Kleurruimte / Resolutie</th><td>Grijs of Kleur / 2×–3×</td><td>Grijs / 2×</td><td>Grijs / 2×</td></tr>
+</tbody></table></div>
+
+<p>De waarden voor het scaneffect bootsen gebreken na die archivarissen juist proberen te verwijderen. NARA's regelgeving definieert ruis als "een of meer ongewenste beeldartefacten in een gedigitaliseerd document die geen deel uitmaken van het bronmateriaal," en noemt scheefstand en verkeerd bijsnijden als gebreken om op te controleren. Een klein beetje van elk oogt geloofwaardig; te veel oogt als een slechte kopie.</p>
+
+<p>Twee waarschuwingen voor het scaneffect. Vervaging boven ongeveer 0,5 vervaagt kleine letters snel, dus verhoog de Resolutie als je de Vervaging verhoogt. Een rotatie groter dan 2° snijdt paginahoeken af en oogt slordig in plaats van realistisch. Voor een volledig overzicht van artefacten en kant-en-klare combinaties, zie onze <a href="/blog/scan-effect/">gids over het scaneffect</a>.</p>
+
+<h2 id="required-or-refused">Wanneer is een gescande pdf verplicht of juist geweigerd?</h2>
+<p>Een gescande pdf wordt soms gevraagd (uploads met alleen afbeeldingen, afgevlakte definitieve kopieën), maar vaak geweigerd waar doorzoekbare tekst telt. Federale rechtbanken en toegankelijkheidsregels geven meestal de voorkeur aan doorzoekbare pdf's, dus controleer de regels van de ontvanger voordat je een pdf omzet naar gescande pdf, en bewaar het originele bestand.</p>
+
+<p>Rechtbanken zijn het duidelijkste voorbeeld. De FAQ van de federale rechterlijke macht stelt dat <a href="https://www.uscourts.gov/court-records/file-a-case-cm-ecf/faqs-case-management-electronic-case-files-cm-ecf" target="_blank" rel="noopener">"CM/ECF-systemen zijn ontworpen om alleen documenten in pdf-formaat te accepteren,"</a> maar de details verschillen per district. Het Southern District of Florida is streng: <a href="https://www.flsd.uscourts.gov/all-faqs/CMECF" target="_blank" rel="noopener">"processtukken/hoofddocumenten die elektronisch worden ingediend in CM/ECF moeten in doorzoekbaar pdf-formaat zijn"</a>, en bewijsstukken moeten waar mogelijk doorzoekbaar zijn.</p>
+
+<p>Andere districten spreken eerder een voorkeur uit dan een verbod. Het District of Massachusetts schrijft dat <a href="https://www.mad.uscourts.gov/caseinfo/pdf/ECFadminProc.pdf" target="_blank" rel="noopener">"documenten die naar pdf zijn omgezet, in plaats van gescand, de voorkeur hebben voor indiening in CM/ECF."</a> Het District of Minnesota zegt: "Doorzoekbare gescande pdf-documenten hebben de voorkeur, maar zijn niet verplicht." Het Eastern District of Oklahoma adviseert om <a href="https://www.oked.uscourts.gov/pdfa-frequently-asked-questions" target="_blank" rel="noopener">PDF/A-bestanden rechtstreeks vanuit een tekstverwerker te maken in plaats van af te drukken en te scannen</a>, om bestanden klein en doorzoekbaar te houden.</p>
+
+<p>Toegankelijkheid is de tweede reden voor weigering. De WCAG-techniek PDF7 van het W3C stelt: <a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF7" target="_blank" rel="noopener">"Een document dat bestaat uit gescande afbeeldingen van tekst is inherent ontoegankelijk omdat de inhoud van het document afbeeldingen zijn, geen doorzoekbare tekst."</a> Publieksgerichte documenten van overheidsinstanties, universiteiten en veel bedrijven moeten aan WCAG voldoen, dus een bestand met alleen afbeeldingen is voor hen het verkeerde formaat, tenzij er OCR wordt toegevoegd.</p>
+
+<div class="callout callout-warn"><strong>Controleer de regels, en gebruik het scaneffect eerlijk</strong>Als een rechtbank, instantie of werkgever doorzoekbare pdf's vereist, dien dan de originele digitale pdf in, of laat achteraf OCR op de gescande versie los zodat er weer een verborgen tekstlaag ontstaat. Onze tool voert geen OCR uit. Bedenk ook dat een scaneffect het uiterlijk verandert, niet de echtheid: gebruik het niet om officiële documenten, identiteitsbewijzen of handtekeningen die niet van jou zijn te wijzigen of te vervalsen.</div>
+
+<h3>Een tekstlaag terugbrengen met OCR</h3>
+<p>Heb je zowel de afgevlakte weergave als doorzoekbaarheid nodig, zet dan eerst om en laat daarna OCR los in pdf-software voor de desktop die een stap "tekst herkennen" of "doorzoekbaar maken" biedt. OCR plaatst onzichtbare tekst achter de pagina-afbeelding, zodat het bestand er gescand uitziet terwijl Ctrl+F weer werkt. Controleer belangrijke documenten goed, want OCR schat de letters.</p>
+
+<h2 id="privacy">Is het veilig om een pdf online naar gescande pdf om te zetten?</h2>
+<p>Een pdf online omzetten naar gescande pdf is veilig wanneer de verwerking in je browser plaatsvindt. Onze tool rendert pagina's lokaal met pdf.js en het canvas van de browser, zodat het bestand niet wordt geüpload naar een verwerkingsserver. Na het eerste bezoek werkt de tool ook offline, waarmee je dit zelf kunt controleren.</p>
+
+<p>Lokale verwerking is belangrijk voor het soort bestanden dat mensen afvlakken: ondertekende contracten, salarisgegevens, medische formulieren, belastingdocumenten. Veel online converters uploaden de pdf, verwerken die op een server en sturen het resultaat terug, wat betekent dat er, in elk geval kortstondig, een kopie bestaat op hardware waar je geen controle over hebt. Met rendering in de browser verlaten de pagina's nooit het apparaat waarop ze geopend werden.</p>
+
+<ul>
+<li><strong>Offline test.</strong> Laad <a href="/scan">de scanner</a> één keer, koppel de internetverbinding los en zet een bestand om. Werkt het zonder verbinding, dan is er niets geüpload.</li>
+<li><strong>Geen account.</strong> Er is geen registratie, dus er is geen documentgeschiedenis gekoppeld aan je identiteit.</li>
+<li><strong>Dezelfde engine in Chrome.</strong> De <a href="https://chromewebstore.google.com/detail/make-pdf-look-scanned/ijhpnlcipgiokgignkbbbgkobdmdoila" target="_blank" rel="noopener">Chrome-extensie</a>, beoordeeld met 5 sterren in de Chrome Web Store, gebruikt dezelfde lokale engine in een zijpaneel.</li>
+</ul>
+
+
+<h2 id="batch">Hoe zet je meerdere pdf's tegelijk om naar gescande pdf's?</h2>
+<p>Om veel pdf's tegelijk om te zetten naar gescande pdf's, open je de bulkpagina op pdflookscanned.com/scan/bulk, voeg je alle bestanden toe, kies je één set instellingen en download je alles als één ZIP-archief. Elk invoerbestand wordt zijn eigen gescande pdf met dezelfde resolutie, kleurmodus en effecten.</p>
+
+<ol class="step-list">
+<li><strong>Open bulkmodus.</strong> Ga naar <a href="/scan/bulk">pdflookscanned.com/scan/bulk</a> (voeg in de Chrome-extensie gewoon meerdere bestanden toe).</li>
+<li><strong>Voeg de bestanden toe.</strong> Sleep de pdf's erin. Gemengde invoer zoals JPG of PNG werkt ook; elke afbeelding wordt een pdf van één pagina.</li>
+<li><strong>Kies gedeelde instellingen.</strong> Stel Resolutie, Kleurruimte en de effectschuiven één keer in; ze gelden voor elk bestand.</li>
+<li><strong>Download de ZIP.</strong> Voer de batch uit en download de ZIP, en controleer daarna steekproefsgewijs een paar resultaten op de leesbaarheid van kleine letters.</li>
+</ol>
+
+<p>Bulkmodus houdt bestanden bewust apart; het voegt ze niet samen tot één document. Heb je één gecombineerde gescande pdf nodig, voeg dan eerst de bronbestanden samen (bijvoorbeeld in macOS Voorvertoning door pagina's van de ene pdf naar de zijbalk van een andere te slepen, of meerdere documenten samen af te drukken naar "Microsoft Print to PDF" op Windows), en zet daarna het samengevoegde bestand in één keer om.</p>
+
+<p>Bij batchwerk komt Rotatievariatie ook goed van pas: elke pagina krijgt een net iets andere willekeurige kanteling, wat er over een lang document natuurlijker uitziet.</p>
+
+<h2 id="checking">Hoe controleer je of het resultaat een gescande pdf is?</h2>
+<p>Controleer een omgezet bestand door tekst te proberen selecteren, op een woord te zoeken en in te zoomen op de kleinste letters. Een echte gescande pdf laat je niets selecteren behalve hele paginabeelden, vindt geen woorden met Ctrl+F, en blijft goed leesbaar bij 200 procent zoom. Controleer ook de bestandsgrootte en het aantal pagina's.</p>
+
+<p>De toegankelijkheidsgids van Cleveland State University beschrijft de snelste test: <a href="https://pressbooks.ulib.csuohio.edu/accessibility/chapter/chapter-4-2-the-difference-between-an-accessible-pdf-and-a-scanned-image-of-text/" target="_blank" rel="noopener">"Als het woord wordt gemarkeerd op de pagina, heeft het doorzoekbare tekst, in tegenstelling tot een gescande afbeelding van tekst."</a> Na een correcte conversie wordt er niets gemarkeerd, en selecteert het slepen van de cursor het paginabeeld in plaats van woorden.</p>
+
+<div class="callout callout-info"><strong>Vijfpuntscontrole voordat je verstuurt</strong>1. Tekst kan niet worden geselecteerd of gekopieerd. 2. Ctrl+F vindt niets. 3. De kleinste letters zijn leesbaar bij 200 procent zoom. 4. Aantal pagina's en volgorde komen overeen met het origineel. 5. De bestandsgrootte past binnen de uploadlimiet van de ontvanger, en de documenteigenschappen tonen alleen wat je bedoelde.</div>
+
+
+<h2 id="troubleshooting">Hoe los je problemen op bij pdf naar gescande pdf?</h2>
+<p>De meeste problemen bij pdf naar gescande pdf komen voort uit vier instellingen: resolutie te laag (wazige tekst), resolutie of kleur te hoog (enorm bestand), een niet-pdf-bron (verkeerd paginaformaat), en rotatie die aan blijft staan (scheve pagina's). Elk probleem heeft een directe oplossing in de tool, hieronder op volgorde van de instelling die je als eerste moet wijzigen.</p>
+
+<h3>Wazige of kapotte tekst in de gescande pdf</h3>
+<p>Verhoog Resolutie naar 2,5× of 3×, en verlaag daarna Vervaging naar 0,1–0,2 of 0 voor een schone afvlakking. Vervaagt dunne grijze tekst nog steeds, verhoog dan Contrast naar ongeveer 1,2. Vervaging en ruis worden toegepast na het renderen, dus op 1× kan zelfs een kleine vervagingswaarde tekst van 9 punten onleesbaar maken.</p>
+
+<h3>De gescande pdf is enorm</h3>
+<p>Zet Kleurruimte op Grijs als het document tekst bevat, en verlaag daarna Resolutie van 3× naar 2× of 1,5×. Ruis kost ook ruimte, omdat willekeurige spikkels moeilijk te comprimeren zijn voor JPEG, dus houd Ruis op 0,1 of lager bij lange documenten. Splits bij zeer lange bestanden het document en zet de delen apart om.</p>
+
+<h3>Verkeerd paginaformaat na het omzetten naar gescand</h3>
+<p>Pdf-pagina's behouden hun originele formaat en opmaak. Toont je resultaat A4-pagina's met platte Helvetica-tekst, dan was de bron een DOCX-, spreadsheet-, TXT- of HTML-bestand, dat de tool als tekst opnieuw opmaakt op A4. Exporteer het origineel eerst naar pdf vanuit de eigen app, en zet daarna die pdf om.</p>
+
+<h3>Pagina's staan scheef of hoeken zijn afgesneden</h3>
+<p>Zet Rotatie en Rotatievariatie op 0 voor een rechte pagina. De standaardwaarden (Rotatie 1°) zijn er voor realisme, maar een juridische indiening of een formulier dat voor automatische verwerking is bestemd, moet meestal recht zijn. Wil je wel kanteling, houd die dan onder 2° zodat de hoeken binnen de pagina blijven.</p>
+
+<h3>Handtekening of stempel oogt gepixeld</h3>
+<p>Handtekeningregels zijn dun en lijden als eerste onder een lage resolutie. Gebruik 2,5× of 3×, houd Vervaging op of onder 0,3, en gebruik, als je een stempel- of handtekeningafbeelding via de extra's plaatst, een PNG met hoge resolutie als basis. Plaats alleen handtekeningen en stempels die je gerechtigd bent te gebruiken.</p>
+
+<div class="expert-quote"><blockquote>We hebben de instelling Resolutie gebouwd rond het eigen 72-punts raster van de pdf, zodat de getallen eerlijk blijven: 2× is 144 dpi, 3× is 216 dpi, niets verborgen. Daarom staan de standaardwaarden op 2× in Grijs: scherp genoeg voor normale lopende tekst, en veel kleiner dan een kleurenrender van dezelfde pagina. We houden alles lokaal in de browser, omdat de bestanden die mensen afvlakken meestal juist de bestanden zijn die ze het minst willen uploaden.</blockquote><cite><strong>Het team van Make PDF look scanned</strong> — bouwers van de webtool en de Chrome-extensie</cite></div>
+
+<h2 id="faq">Pdf naar gescande pdf: veelgestelde vragen</h2>
+<p>Deze antwoorden over pdf naar gescande pdf behandelen de vragen die mensen het vaakst stellen na het omzetten: wat er gebeurt met verborgen tekst en metadata, of de wijziging kan worden teruggedraaid, hoe OCR erin past, welke instellingen je moet kiezen, en of de tool op telefoons werkt. Elk antwoord weerspiegelt wat de tool daadwerkelijk doet.</p>
+
+<div class="faq-item"><p class="faq-q">Verwijdert het omzetten van een pdf naar een gescande pdf verborgen tekst?</p><p class="faq-a">Ja, uit de pagina-inhoud. De nieuwe pagina's zijn JPEG-afbeeldingen van wat de renderer tekent, dus er blijft geen tekstlaag over om te kopiëren, ook geen witte tekst of woorden die achter een zwart vlak zijn verborgen. Zie dit als bijwerking, en bekijk het voorbeeld toch altijd wanneer een redactie ertoe doet.</p></div>
+
+<div class="faq-item"><p class="faq-q">Wat gebeurt er met de metadata van de originele pdf?</p><p class="faq-a">De tool schrijft een nieuwe pdf en laat je de titel, auteur, onderwerp, trefwoorden, producent en maker instellen in het extra's-paneel. Vul die velden in zoals je ze wilt hebben voordat je downloadt, en controleer daarna de documenteigenschappen van het resultaat in je pdf-viewer.</p></div>
+
+<div class="faq-item"><p class="faq-q">Kan een gescande pdf worden teruggezet naar een bewerkbare pdf?</p><p class="faq-a">Niet precies. De originele tekstlaag, lettertypen, links en formuliervelden zijn verdwenen. OCR kan de letters herkennen en een nieuwe doorzoekbare laag toevoegen, en sommige software kan daaruit bewerkbare tekst opbouwen, maar de opmaak en nauwkeurigheid zullen niet overeenkomen met het origineel. Bewaar het originele bestand.</p></div>
+
+<div class="faq-item"><p class="faq-q">Kan ik achteraf OCR loslaten op de gescande pdf?</p><p class="faq-a">Ja. Elke OCR-stap in pdf-software voor de desktop behandelt het resultaat als een normale scan. Een hogere resolutie en lage ruis geven een betere herkenning, dus gebruik 2× of 3× met Ruis dicht bij 0 als je van plan bent OCR op het bestand toe te passen.</p></div>
+
+<div class="faq-item"><p class="faq-q">Wat is het verschil tussen "pdf afvlakken" en "pdf naar gescand"?</p><p class="faq-a">Afvlakken in enge zin voegt formuliervelden en annotaties samen met de pagina, maar tekst kan selecteerbaar blijven. Een pdf omzetten naar gescand maakt van de hele pagina, inclusief tekst, een afbeelding. Dat tweede is ingrijpender en is wat onze tool doet.</p></div>
+
+<div class="faq-item"><p class="faq-q">Welke resolutie moet ik kiezen om een pdf om te zetten naar gescande pdf?</p><p class="faq-a">Gebruik 2× (ongeveer 144 dpi) voor normale documenten en 3× (ongeveer 216 dpi) voor kleine lettertjes, dichte tabellen of handtekeningen. Ga alleen naar 1,5× wanneer het bestand heel klein moet zijn en de tekst 12 punten of groter is.</p></div>
+
+<div class="faq-item"><p class="faq-q">Waarom is mijn gescande pdf zo veel groter dan het origineel?</p><p class="faq-a">Een tekst-pdf slaat letters op als compacte instructies; een gescande pdf slaat elke pixel van elke pagina op. Grijs in plaats van Kleur, een lagere Resolutie en minder Ruis verkleinen allemaal de bestandsgrootte. Rechtbanken melden hetzelfde effect: één testbestand van 317 pagina's varieerde van 23,86 MB tot 374,47 MB, afhankelijk van kleurmodus en resolutie.</p></div>
+
+<div class="faq-item"><p class="faq-q">Accepteert een rechtbank een pdf die is omgezet naar een gescande pdf?</p><p class="faq-a">Dat hangt af van de rechtbank. Sommige districten eisen doorzoekbare hoofddocumenten, andere geven er alleen de voorkeur aan. Lees eerst de lokale CM/ECF-regels; dien bij twijfel de originele digitale pdf in of voeg OCR toe aan de gescande versie.</p></div>
+
+
+<div class="faq-item"><p class="faq-q">Werkt de pdf-naar-gescande-pdf-tool op een telefoon?</p><p class="faq-a">Ja. De website werkt in mobiele browsers, verwerkt bestanden lokaal op de telefoon en downloadt de gescande pdf naar je bestanden. Grote documenten op 3× duren langer en gebruiken meer geheugen op telefoons, dus is 2× daar de veiligere keuze.</p></div>
+
+<div class="faq-item"><p class="faq-q">Is de pdf-naar-gescande-pdf-converter gratis?</p><p class="faq-a">Ja. De webtool en de Chrome-extensie zijn gratis, hebben geen registratie nodig en voegen geen watermerk toe, tenzij je er zelf een toevoegt via de extra's.</p></div>

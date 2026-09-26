@@ -1,0 +1,228 @@
+<p class="lead">Converter PDF para PDF digitalizado significa renderizar cada página como uma imagem e salvar essas imagens em um novo PDF, de modo que a camada de texto, os links e os campos de formulário viram pixels sem volta. Para páginas legíveis e leves, escolha resolução 2× e escala de cinza; adicione ruído e inclinação leves só se você também quiser a aparência de escaneado.</p>
+
+<p>As pessoas convertem um PDF em PDF digitalizado porque um portal exige um arquivo só com imagens, um colega pediu uma cópia achatada, ou um formulário precisa parecer que passou por um scanner de escritório. Este guia cobre as vantagens e desvantagens (resolução, cor, tamanho do arquivo, pesquisabilidade, regras de tribunais) com ajustes exatos da ferramenta, números de tribunais federais dos EUA e parâmetros do National Archives e da FADGI.</p>
+
+<nav class="toc" aria-label="Sumário"><h2>Sumário</h2><ol>
+<li><a href="#what-it-means">O que faz a conversão de PDF para PDF digitalizado?</a></li>
+<li><a href="#before-after">O que muda quando um PDF vira um PDF digitalizado?</a></li>
+<li><a href="#how-to-convert">Como converter PDF para PDF digitalizado no navegador?</a></li>
+<li><a href="#resolution">Qual resolução mantém um PDF digitalizado legível?</a></li>
+<li><a href="#color-and-size">Cinza, colorido ou bitonal: qual mantém o arquivo pequeno?</a></li>
+<li><a href="#flatten-vs-scan-look">Achatar o PDF de forma limpa ou adicionar aparência de escaneado?</a></li>
+<li><a href="#required-or-refused">Quando um PDF digitalizado é exigido ou recusado?</a></li>
+<li><a href="#privacy">É seguro converter um PDF para PDF digitalizado online?</a></li>
+<li><a href="#batch">Como converter vários PDFs para PDF digitalizado de uma vez?</a></li>
+<li><a href="#checking">Como verificar se o resultado é um PDF digitalizado?</a></li>
+<li><a href="#troubleshooting">Como resolver problemas ao converter PDF para PDF digitalizado?</a></li>
+<li><a href="#faq">Converter PDF para PDF digitalizado: perguntas frequentes</a></li>
+</ol></nav>
+
+<h2 id="what-it-means">O que faz a conversão de PDF para PDF digitalizado?</h2>
+<p>Uma conversão de PDF para PDF digitalizado pega cada página de um PDF digital, desenha essa página em um canvas em uma densidade de pixels escolhida e grava o resultado como uma figura dentro de um novo PDF. O resultado visual é o mesmo, mas cada palavra, linha e logotipo agora faz parte de uma única imagem por página.</p>
+
+<p>Um scanner de verdade faz a mesma coisa com papel em vez de uma página digital. O Tribunal Distrital dos EUA para o Distrito Norte da Califórnia descreve o resultado com clareza: <a href="https://cand.uscourts.gov/cases-e-filing/cmecf-information/preparing-your-cmecf-filing" target="_blank" rel="noopener">"Texto escaneado é uma fotografia de uma página impressa, produzida por uma câmera digital ou por um scanner."</a> Depois que uma página vira uma fotografia, selecionar, copiar ou pesquisar as palavras dela não funciona mais até que alguém rode o reconhecimento ótico de caracteres (OCR) nela.</p>
+
+<p>Dois termos relacionados costumam ser confundidos. <strong>Achatar um PDF</strong>, no sentido estrito, significa juntar camadas interativas (campos de formulário, comentários, carimbos) ao conteúdo da página, enquanto o texto pode continuar selecionável. <strong>Rasterizar</strong> um PDF significa transformar tudo, inclusive o texto, em pixels. Converter um PDF em PDF digitalizado é a segunda operação, mais radical.</p>
+
+<p>Existem dois tipos de resultado. Um PDF <em>limpo</em>, só com imagens, mantém a página nítida e reta. Um PDF com <em>aparência de escaneado</em> adiciona uma leve inclinação, foco suave, ruído e um tom de papel. Nossa <a href="/scan">ferramenta gratuita de PDF para PDF digitalizado</a> produz os dois a partir dos mesmos controles. Para entender o que conta como um arquivo digitalizado, veja <a href="/blog/what-is-a-scanned-pdf/">o que é um PDF digitalizado</a>.</p>
+
+<h2 id="before-after">O que muda quando um PDF vira um PDF digitalizado?</h2>
+<p>Quando um PDF vira um PDF digitalizado, a página visível continua a mesma, enquanto tudo o que é legível por máquina na página é substituído por pixels. Texto, fontes, links, campos de formulário e anotações deixam de ser objetos separados. O tamanho do arquivo costuma aumentar, e a pesquisa, a cópia e a leitura por leitor de tela param de funcionar até que o OCR seja aplicado.</p>
+
+<p>A tabela compara um PDF típico exportado de um editor de texto com o mesmo arquivo depois da conversão para imagens de página. O comportamento da coluna "depois" é o que você obtém com qualquer método de rasterização, inclusive a nossa ferramenta, porque cada página é salva como uma imagem JPEG dentro de um PDF novo.</p>
+
+<div class="table-wrap"><table>
+<caption>PDF digital x o mesmo PDF convertido para PDF digitalizado (só com imagens)</caption>
+<thead><tr><th scope="col">Elemento</th><th scope="col">PDF digital original</th><th scope="col">Depois da conversão de PDF para PDF digitalizado</th></tr></thead>
+<tbody>
+<tr><th scope="row">Camada de texto</th><td>Caracteres reais que você pode selecionar, copiar e pesquisar</td><td>Desaparece da página; as palavras existem só como pixels</td></tr>
+<tr><th scope="row">Fontes</th><td>Arquivos de fonte incorporados ou referenciados</td><td>Nenhuma fonte é necessária; o formato das letras fica gravado na imagem</td></tr>
+<tr><th scope="row">Links</th><td>URLs clicáveis e saltos internos</td><td>O texto do link continua visível, mas não é mais clicável</td></tr>
+<tr><th scope="row">Campos de formulário</th><td>Caixas preenchíveis, caixas de seleção, listas suspensas</td><td>Não são mais preenchíveis; confira a prévia para ver quais valores foram desenhados na imagem</td></tr>
+<tr><th scope="row">Anotações</th><td>Comentários, marcações e carimbos como objetos separados</td><td>Não são mais objetos editáveis; o que restar passa a fazer parte da imagem</td></tr>
+<tr><th scope="row">Metadados do documento</th><td>Título, autor e outras propriedades definidas pelo aplicativo criador</td><td>Um novo PDF é gravado; título, autor, assunto, palavras-chave, produtor e criador podem ser definidos nos extras da ferramenta</td></tr>
+<tr><th scope="row">Tamanho do arquivo</th><td>Pequeno para páginas de texto</td><td>Geralmente maior; depende da resolução, do modo de cor e do número de páginas</td></tr>
+<tr><th scope="row">Pesquisabilidade</th><td>Ctrl+F e leitores de tela funcionam</td><td>Não é pesquisável nem acessível até que o OCR adicione uma camada de texto</td></tr>
+</tbody></table></div>
+
+<p>Duas linhas merecem atenção especial. Para campos de formulário e anotações, o que sobrevive visualmente depende de o renderizador da página desenhá-los ou não; o valor de um campo preenchido costuma aparecer como texto impresso, enquanto um comentário do tipo pop-up pode sumir, então inspecione a prévia ao vivo. Para os metadados, o painel de extras permite digitar as propriedades que o novo PDF deve carregar; confira-as antes de enviar o arquivo.</p>
+
+<p>A linha do tamanho é a que mais surpreende. O Distrito Central da Carolina do Norte observa que <a href="https://www.ncmd.uscourts.gov/sites/ncmd/files/ecfprocman.pdf" target="_blank" rel="noopener">2 MB comportam cerca de quarenta e cinco páginas de PDF em texto</a>, e completa, na íntegra: "A maioria dos PDFs digitalizados não é pesquisável e tem um tamanho de arquivo grande." Um PDF em texto descreve letras; um PDF digitalizado armazena cada pixel delas.</p>
+
+<h2 id="how-to-convert">Como converter PDF para PDF digitalizado no navegador?</h2>
+<p>Para converter PDF para PDF digitalizado no navegador, abra a ferramenta gratuita em pdflookscanned.com/scan, solte o arquivo, ajuste a resolução, o modo de cor e os efeitos de scanner, confira a prévia ao vivo e baixe o resultado. Todo o processo roda localmente no seu dispositivo e só demora mais em documentos longos ou com resolução alta.</p>
+
+<ol class="step-list">
+<li><strong>Abra o scanner.</strong> Acesse <a href="/scan">pdflookscanned.com/scan</a> em qualquer navegador moderno de computador ou celular, ou abra o painel lateral da extensão do Chrome. Não é preciso conta nem cadastro.</li>
+<li><strong>Adicione seu PDF.</strong> Arraste o arquivo até a área de soltar ou clique para escolhê-lo. Os PDFs são usados como estão, então o layout da página, as fontes e as imagens que você vê agora são exatamente o que será renderizado.</li>
+<li><strong>Escolha a resolução.</strong> Deixe a Resolução no padrão 2× (cerca de 144 dpi) para cartas e formulários comuns. Mude para 2,5× ou 3× (cerca de 216 dpi) se o arquivo tiver notas de rodapé, letras pequenas ou tabelas densas.</li>
+<li><strong>Escolha o espaço de cor.</strong> Mantenha Cinza (o padrão) para documentos de texto; mude para Colorido só quando a cor tiver significado, como em gráficos, cláusulas destacadas ou um logotipo colorido.</li>
+<li><strong>Defina a aparência.</strong> Para um achatamento limpo, deixe Rotação, Variação da rotação, Desfoque e Ruído em 0. Para a aparência de escaneado, mantenha os padrões (Rotação 1°, Desfoque 0,3, Ruído 0,1) ou ajuste-os levemente.</li>
+<li><strong>Ajuste o brilho e o tom do papel.</strong> Brilho e Contraste vêm em 1 por padrão; aumente o Contraste um pouco se o texto cinza parecer fraco. Amarelado adiciona um tom de papel envelhecido e vem em 0 por padrão.</li>
+<li><strong>Adicione extras se precisar.</strong> Opcional: uma marca d'água de texto ou imagem, uma imagem de carimbo ou assinatura que você tenha o direito de usar, e os campos de metadados do documento (título, autor, assunto, palavras-chave, produtor, criador).</li>
+<li><strong>Confira a prévia e baixe.</strong> Dê zoom no menor texto da prévia. Se ele estiver legível, baixe o novo PDF digitalizado; se não, aumente a resolução e veja a prévia de novo.</li>
+</ol>
+
+<p>Se sua fonte é um arquivo do Word, um Google Doc ou uma planilha, exporte-o para PDF primeiro (no Word: Arquivo, Salvar como, PDF; no Google Docs: Arquivo, Fazer o download, Documento PDF). A ferramenta consegue ler DOCX e XLSX diretamente, mas ela extrai só o texto puro e o retipografa em páginas A4 com Helvetica 11 pt, então a formatação, as tabelas e as imagens se perdem.</p>
+
+<p>Exportar para PDF primeiro mantém o layout exatamente como projetado. O <a href="/blog/how-to-make-a-pdf-look-scanned/">guia completo para fazer um PDF parecer escaneado</a> compara essa rota com outros cinco métodos.</p>
+
+<h2 id="resolution">Qual resolução mantém um PDF digitalizado legível?</h2>
+<p>Um PDF digitalizado continua legível quando cada letra recebe pixels suficientes. Nossa ferramenta renderiza as páginas do PDF a 72 dpi multiplicados pelo ajuste de Resolução, então 1× equivale a cerca de 72 dpi, 2× a cerca de 144 dpi e 3× a cerca de 216 dpi. A digitalização arquivística real costuma mirar 200 a 300 ppi, então 3× é adequado para letras pequenas.</p>
+
+<p>O número 72 vem de como o PDF mede as páginas. A geometria do PDF e do PostScript é construída sobre <a href="https://en.wikipedia.org/wiki/Dots_per_inch" target="_blank" rel="noopener">72 pontos por polegada</a>, então uma página no formato Carta (Letter) tem 612 × 792 pontos. Renderizá-la em 1× dá 612 × 792 pixels, em 2× dá 1.224 × 1.584 pixels, e em 3× dá 1.836 × 2.376 pixels. A quantidade de pixels cresce com o quadrado da escala.</p>
+
+<dl class="spec-list">
+<dt>1× (cerca de 72 dpi)</dt><dd>Página Carta em 612 × 792 px. Boa para títulos grandes e slides; o texto do corpo começa a se desfazer. Arquivos menores.</dd>
+<dt>1,5× (cerca de 108 dpi)</dt><dd>Página Carta em 918 × 1.188 px. Aceitável para texto de 12 pontos na tela; fraca para notas de rodapé.</dd>
+<dt>2× (cerca de 144 dpi, padrão)</dt><dd>Página Carta em 1.224 × 1.584 px. Texto do corpo nítido para cartas, faturas e formulários; a escolha equilibrada.</dd>
+<dt>2,5× (cerca de 180 dpi)</dt><dd>Página Carta em 1.530 × 1.980 px. Use quando um documento mistura texto normal com rótulos pequenos.</dd>
+<dt>3× (cerca de 216 dpi)</dt><dd>Página Carta em 1.836 × 2.376 px. Ideal para contratos com letras miúdas, tabelas densas e assinaturas que precisam continuar nítidas.</dd>
+</dl>
+
+<h3>Como o texto pequeno se comporta em cada resolução de PDF digitalizado</h3>
+<p>Um cálculo simples mostra por que o texto pequeno precisa de mais pixels. Uma nota de rodapé de 8 pontos tem 8/72 de polegada de altura como tamanho de fonte. Em 1× isso equivale a cerca de 8 pixels para a letra inteira, incluindo ascendentes e descendentes, o que borra o "e" e o "c" minúsculos até se misturarem. Em 2× isso vira cerca de 16 pixels, e em 3× cerca de 24 pixels, o que se lê com conforto mesmo depois de um leve desfoque e da compressão JPEG.</p>
+
+<p>Para comparação, o National Archives dos EUA exige pelo menos <a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">300 ppi para registros textuais modernos digitalizados e 400 ppi para fotografias e registros com detalhes finos</a>, conforme o 36 CFR 1236 Subpart E. A FADGI classifica documentos soltos em níveis de estrelas, de 200 ppi (uma estrela) passando por 250 e 300 até 400 ppi (quatro estrelas), em suas <a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">diretrizes técnicas de 2023</a>. Essas metas protegem os originais em papel.</p>
+
+<p>Uma conversão de PDF para PDF digitalizado parte de uma página digital perfeita, não de um papel amassado, então ela não precisa da densidade arquivística para parecer nítida. Nossa experiência mostra que 2× dá conta do texto normal de 10 a 12 pontos, e 3× (216 dpi) fica logo acima do nível de uma estrela da FADGI para letras finas.</p>
+
+<p>O NARA acrescenta um alerta útil no mesmo regulamento: "A agência não pode depender apenas de especificações de equipamento, como os ajustes de ppi do scanner ou os megapixels do sensor da câmera, para garantir a qualidade da imagem digital." Na prática, julgue pela prévia, não pelo número.</p>
+
+<h2 id="color-and-size">Cinza, colorido ou bitonal: qual mantém o arquivo pequeno?</h2>
+<p>Arquivos bitonais (preto e branco puro) são os menores, a escala de cinza fica no meio, e o colorido é o maior na mesma resolução. Para uma conversão de PDF para PDF digitalizado, a escala de cinza é o padrão prático: ela mantém as bordas suavizadas das letras nítidas e continua bem menor que o colorido. Use colorido só quando a cor carregar informação.</p>
+
+<p>Os números mais fortes do mundo real vêm do Distrito Norte da Califórnia, que digitalizou o mesmo documento de 317 páginas de duas formas. Como <a href="https://cand.uscourts.gov/cases-e-filing/cmecf-information/preparing-your-cmecf-filing" target="_blank" rel="noopener">arquivo bitonal a 300 ppi, ele pesou 23,86 MB e continuou legível</a>; em escala de cinza a 400 ppi, ele cresceu para 374,47 MB. Isso é cerca de quinze vezes maior para as mesmas páginas, resultado tanto da profundidade de cor quanto da resolução mais alta.</p>
+
+<div class="table-wrap"><table>
+<caption>Modos de cor para um PDF digitalizado: para que serve cada um</caption>
+<thead><tr><th scope="col">Modo</th><th scope="col">Bits por pixel</th><th scope="col">Tamanho relativo</th><th scope="col">Melhor para</th></tr></thead>
+<tbody>
+<tr><th scope="row">Bitonal (preto e branco)</th><td>1</td><td>Menor</td><td>Petições de texto simples nos tribunais; não é um modo da nossa ferramenta</td></tr>
+<tr><th scope="row">Escala de cinza (ferramenta: Cinza)</th><td>8</td><td>Médio</td><td>Cartas, contratos, formulários, qualquer coisa com assinaturas</td></tr>
+<tr><th scope="row">Colorido (ferramenta: Colorido)</th><td>24</td><td>Maior</td><td>Gráficos, carimbos coloridos, fotos, texto destacado</td></tr>
+</tbody></table></div>
+
+<p>Nossa ferramenta oferece Cinza e Colorido e armazena cada página como uma imagem JPEG. O JPEG é eficiente para tons de cinza, mas, como a FADGI coloca, "o processamento JPEG padrão introduz blocos de 8x8 pixels que claramente não fazem parte do conteúdo original." Em 2× ou 3× esses blocos raramente ficam visíveis no texto.</p>
+
+<p>Se você precisar de um preto e branco verdadeiro de 1 bit, nosso guia sobre <a href="/blog/convert-color-pdf-to-black-and-white/">converter PDF colorido para preto e branco</a> explica a diferença e as opções.</p>
+
+<h3>Limites de tamanho de arquivo de PDF digitalizado que você pode encontrar</h3>
+<p>Os limites de upload tornam a escolha da cor uma questão prática, não estética. O Distrito Oeste de Washington define um <a href="https://www.wawd.uscourts.gov/attorneys/cm-ecf-faqs/Technical" target="_blank" rel="noopener">limite de 100 MB por documento e pede digitalizações em preto e branco a 300 dpi</a>, a menos que a cor seja essencial. O Distrito de Minnesota limita cada anexo a <a href="https://www.mnd.uscourts.gov/sites/mnd/files/Criminal-ECF-Procedures-Guide.pdf" target="_blank" rel="noopener">35 MB em seus procedimentos de ECF criminal</a>. O USCIS limita cada <a href="https://www.uscis.gov/file-online/tips-for-filing-forms-online" target="_blank" rel="noopener">arquivo de evidência enviado a 12 MB</a>.</p>
+
+<div class="callout callout-tip"><strong>Regra rápida de tamanho</strong>Comece com 2× e Cinza. Se o arquivo baixado ficar grande demais para um portal, reduza para 1,5× antes de mudar qualquer outra coisa, porque diminuir a resolução pela metade corta muito mais pixels do que qualquer outro ajuste. Se ainda ficar grande demais, divida o PDF e converta as partes separadamente.</div>
+
+<h2 id="flatten-vs-scan-look">Achatar o PDF de forma limpa ou adicionar aparência de escaneado?</h2>
+<p>Escolha um achatamento limpo quando o destinatário só precisa de um PDF só com imagens, sem texto editável, e escolha a aparência de escaneado quando o arquivo precisa se parecer com um papel que passou por um scanner. A mesma ferramenta faz as duas coisas: deixe Rotação, Variação da rotação, Desfoque e Ruído em 0 para um achatamento limpo, ou mantenha-os acima de 0 para realismo.</p>
+
+<p>Um achatamento limpo costuma ser a resposta certa: enviar um contrato final para que ninguém consiga discretamente redigitar uma cláusula com um editor de texto, travar um formulário preenchido para que seus valores não possam ser alterados campo por campo, ou entregar páginas a um sistema que rejeita PDFs com fontes ou campos de formulário. Aqui, uma inclinação ou um respingo de ruído não acrescenta nada.</p>
+
+<div class="table-wrap"><table>
+<caption>Ajustes para um achatamento limpo x uma conversão de PDF para PDF digitalizado com aparência de escaneado</caption>
+<thead><tr><th scope="col">Controle (intervalo)</th><th scope="col">Achatamento limpo</th><th scope="col">Aparência de escaneado leve</th><th scope="col">Aparência de escaneado forte</th></tr></thead>
+<tbody>
+<tr><th scope="row">Rotação (−10° a 10°)</th><td>0°</td><td>1° (padrão)</td><td>1,5°–2°</td></tr>
+<tr><th scope="row">Variação da rotação (0–10°)</th><td>0</td><td>0,5</td><td>1</td></tr>
+<tr><th scope="row">Desfoque (0–1)</th><td>0</td><td>0,3 (padrão)</td><td>0,4–0,5</td></tr>
+<tr><th scope="row">Ruído (0–1)</th><td>0</td><td>0,1 (padrão)</td><td>0,2–0,3</td></tr>
+<tr><th scope="row">Brilho / Contraste (0–2)</th><td>1 / 1</td><td>1 / 1,1</td><td>1,05 / 1,2</td></tr>
+<tr><th scope="row">Amarelado (0–2)</th><td>0</td><td>0–0,2</td><td>0,3–0,5</td></tr>
+<tr><th scope="row">Borda</th><td>Não</td><td>Não</td><td>Sim</td></tr>
+<tr><th scope="row">Espaço de cor / Resolução</th><td>Cinza ou Colorido / 2×–3×</td><td>Cinza / 2×</td><td>Cinza / 2×</td></tr>
+</tbody></table></div>
+
+<p>Os valores de aparência de escaneado imitam defeitos que os arquivistas tentam eliminar. O regulamento do NARA define ruído como "um ou mais artefatos indesejáveis de imagem em um registro digitalizado que não fazem parte do material de origem," e lista a inclinação e o corte incorreto entre os defeitos a verificar. Um pouco de cada parece verossímil; demais parece uma cópia malfeita.</p>
+
+<p>Dois cuidados para a aparência de escaneado. Desfoque acima de cerca de 0,5 amolece rapidamente o texto pequeno, então aumente a Resolução quando aumentar o Desfoque. Rotação maior que 2° corta os cantos da página e parece descuido em vez de realismo. Para um tour completo pelos artefatos e combinações prontas, veja nosso <a href="/blog/scan-effect/">guia de efeito de scanner</a>.</p>
+
+<h2 id="required-or-refused">Quando um PDF digitalizado é exigido ou recusado?</h2>
+<p>Um PDF digitalizado às vezes é solicitado (uploads só com imagens, cópias finais achatadas), mas costuma ser recusado onde a pesquisa de texto importa. Tribunais federais e regras de acessibilidade geralmente preferem PDFs pesquisáveis por texto, então confira as regras do destinatário antes de converter um PDF para PDF digitalizado, e guarde o arquivo original.</p>
+
+<p>Os tribunais são o exemplo mais claro. O FAQ do judiciário federal afirma que <a href="https://www.uscourts.gov/court-records/file-a-case-cm-ecf/faqs-case-management-electronic-case-files-cm-ecf" target="_blank" rel="noopener">"os sistemas CM/ECF são projetados para aceitar somente documentos em formato PDF,"</a> mas os detalhes variam por distrito. O Distrito Sul da Flórida é rigoroso: <a href="https://www.flsd.uscourts.gov/all-faqs/CMECF" target="_blank" rel="noopener">"petições/documentos principais protocolados eletronicamente no CM/ECF devem estar em formato PDF pesquisável por texto"</a>, e os anexos devem ser pesquisáveis sempre que possível.</p>
+
+<p>Outros distritos expressam uma preferência, não uma proibição. O Distrito de Massachusetts escreve que <a href="https://www.mad.uscourts.gov/caseinfo/pdf/ECFadminProc.pdf" target="_blank" rel="noopener">"documentos convertidos em PDF, em vez de digitalizados, são preferidos para protocolo no CM/ECF."</a> O Distrito de Minnesota diz "PDFs digitalizados pesquisáveis por texto são preferidos, mas não obrigatórios." O Distrito Leste de Oklahoma recomenda criar <a href="https://www.oked.uscourts.gov/pdfa-frequently-asked-questions" target="_blank" rel="noopener">arquivos PDF/A diretamente do editor de texto em vez de imprimir e digitalizar</a>, para manter os arquivos pequenos e pesquisáveis.</p>
+
+<p>A acessibilidade é o segundo motivo para a recusa. A técnica PDF7 do WCAG, do W3C, afirma: <a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF7" target="_blank" rel="noopener">"Um documento que consiste em imagens digitalizadas de texto é inerentemente inacessível porque o conteúdo do documento são imagens, não texto pesquisável."</a> Documentos públicos de órgãos, universidades e muitas empresas precisam atender ao WCAG, então um arquivo só com imagens é o formato errado para eles, a menos que o OCR seja adicionado.</p>
+
+<div class="callout callout-warn"><strong>Confira as regras e use a aparência de escaneado com honestidade</strong>Se um tribunal, órgão público ou empregador exigir PDFs pesquisáveis por texto, protocole o PDF digital original, ou rode o OCR na versão digitalizada depois, para que uma camada de texto oculta volte a existir. Nossa ferramenta não faz OCR. Lembre-se também de que a aparência de escaneado muda a aparência, não a autenticidade: não a use para alterar ou falsificar documentos oficiais, identidades ou assinaturas que não sejam suas.</div>
+
+<h3>Adicionando uma camada de texto de volta com OCR</h3>
+<p>Se você precisar da aparência achatada e da pesquisabilidade ao mesmo tempo, converta primeiro e depois rode o OCR em um programa de PDF para computador que ofereça uma etapa de "reconhecer texto" ou "tornar pesquisável". O OCR coloca um texto invisível atrás da imagem da página, então o arquivo parece digitalizado enquanto o Ctrl+F volta a funcionar. Revise documentos importantes, porque o OCR estima as letras.</p>
+
+<h2 id="privacy">É seguro converter um PDF para PDF digitalizado online?</h2>
+<p>Converter um PDF para PDF digitalizado online é seguro quando o processamento acontece no seu navegador. Nossa ferramenta renderiza as páginas localmente com pdf.js e o canvas do navegador, então o arquivo não é enviado a um servidor de processamento. Depois da primeira visita, ela também funciona offline, o que permite que você mesmo confirme isso.</p>
+
+<p>O processamento local importa para o tipo de arquivo que as pessoas costumam achatar: contratos assinados, registros de folha de pagamento, formulários médicos, documentos fiscais. Muitos conversores online enviam o PDF, processam-no em um servidor e devolvem o resultado, o que significa que uma cópia existe, ao menos brevemente, em um hardware que você não controla. Com a renderização no navegador, as páginas nunca saem do dispositivo que as abriu.</p>
+
+<ul>
+<li><strong>Teste offline.</strong> Carregue <a href="/scan">o scanner</a> uma vez, desconecte da internet e converta um arquivo. Se funcionar sem conexão, nada foi enviado.</li>
+<li><strong>Sem cadastro.</strong> Não existe cadastro, então nenhum histórico de documentos fica vinculado à sua identidade.</li>
+<li><strong>Mesmo motor no Chrome.</strong> A <a href="https://chromewebstore.google.com/detail/make-pdf-look-scanned/ijhpnlcipgiokgignkbbbgkobdmdoila" target="_blank" rel="noopener">extensão do Chrome</a>, avaliada com nota 5 estrelas na Chrome Web Store, roda o mesmo motor local em um painel lateral.</li>
+</ul>
+
+
+<h2 id="batch">Como converter vários PDFs para PDF digitalizado de uma vez?</h2>
+<p>Para converter vários PDFs para PDF digitalizado de uma vez, abra a página de lote em pdflookscanned.com/scan/bulk, adicione todos os arquivos, escolha um único conjunto de ajustes e baixe tudo como um único arquivo ZIP. Cada arquivo de entrada vira seu próprio PDF digitalizado, com a mesma resolução, modo de cor e efeitos.</p>
+
+<ol class="step-list">
+<li><strong>Abra o modo em lote.</strong> Acesse <a href="/scan/bulk">pdflookscanned.com/scan/bulk</a> (na extensão do Chrome, basta adicionar vários arquivos).</li>
+<li><strong>Adicione os arquivos.</strong> Solte os PDFs. Entradas mistas, como JPG ou PNG, também funcionam; cada imagem vira um PDF de uma página.</li>
+<li><strong>Escolha os ajustes compartilhados.</strong> Defina Resolução, Espaço de cor e os controles deslizantes de efeito uma única vez; eles se aplicam a todos os arquivos.</li>
+<li><strong>Baixe o ZIP.</strong> Execute o lote e baixe o ZIP, depois confira alguns resultados para checar a legibilidade do texto pequeno.</li>
+</ol>
+
+<p>O modo em lote mantém os arquivos separados de propósito; ele não os junta em um único documento. Se você precisar de um único PDF digitalizado combinado, junte os PDFs de origem primeiro (por exemplo, no Pré-Visualização do macOS, arraste páginas de um PDF para a barra lateral de outro, ou imprima vários documentos juntos em "Microsoft Print to PDF" no Windows), e então converta o arquivo combinado de uma vez.</p>
+
+<p>O trabalho em lote também é onde a Variação da rotação ajuda: cada página recebe uma pequena inclinação aleatória diferente, o que parece mais natural ao longo de um documento extenso.</p>
+
+<h2 id="checking">Como verificar se o resultado é um PDF digitalizado?</h2>
+<p>Verifique um arquivo convertido tentando selecionar o texto, pesquisando por uma palavra e dando zoom no texto menor. Um PDF digitalizado de verdade não permite selecionar nada além de imagens de página inteira, não encontra nenhuma palavra com Ctrl+F, e continua legível mesmo com 200% de zoom. Confirme também o tamanho do arquivo e o número de páginas.</p>
+
+<p>O guia de acessibilidade da Cleveland State University descreve o teste mais rápido: <a href="https://pressbooks.ulib.csuohio.edu/accessibility/chapter/chapter-4-2-the-difference-between-an-accessible-pdf-and-a-scanned-image-of-text/" target="_blank" rel="noopener">"Se a palavra ficar destacada na página, então ela tem texto pesquisável, em vez de ser uma imagem digitalizada de texto."</a> Depois de uma conversão correta, nada é destacado, e arrastar o cursor seleciona a imagem da página em vez de palavras.</p>
+
+<div class="callout callout-info"><strong>Verificação de cinco pontos antes de enviar</strong>1. O texto não pode ser selecionado nem copiado. 2. O Ctrl+F não encontra nada. 3. O texto menor é legível com 200% de zoom. 4. O número e a ordem das páginas correspondem ao original. 5. O tamanho do arquivo cabe no limite de upload do destinatário, e as propriedades do documento mostram só o que você pretendia.</div>
+
+
+<h2 id="troubleshooting">Como resolver problemas ao converter PDF para PDF digitalizado?</h2>
+<p>A maioria dos problemas ao converter PDF para PDF digitalizado vem de quatro ajustes: resolução baixa demais (texto borrado), resolução ou cor altas demais (arquivo enorme), uma fonte que não é PDF (tamanho de página errado) e rotação deixada ligada (páginas inclinadas). Cada um tem uma correção direta na ferramenta, listada abaixo com o ajuste a mudar primeiro.</p>
+
+<h3>Texto borrado ou quebrado no PDF digitalizado</h3>
+<p>Aumente a Resolução para 2,5× ou 3×, depois reduza o Desfoque para 0,1–0,2 ou 0 para um achatamento limpo. Se um texto cinza fino ainda parecer apagado, aumente o Contraste para cerca de 1,2. O desfoque e o ruído são aplicados depois da renderização, então em 1× até um valor pequeno de desfoque pode deixar um texto de 9 pontos ilegível.</p>
+
+<h3>O arquivo do PDF digitalizado ficou enorme</h3>
+<p>Mude o Espaço de cor para Cinza se o documento for de texto, depois reduza a Resolução de 3× para 2× ou 1,5×. O Ruído também custa espaço, porque respingos aleatórios são difíceis de comprimir para o JPEG, então mantenha o Ruído em 0,1 ou menos em documentos longos. Para arquivos muito longos, divida-os e converta em partes.</p>
+
+<h3>Tamanho de página errado depois de converter para digitalizado</h3>
+<p>As páginas do PDF mantêm o tamanho e o layout originais. Se o seu resultado mostra páginas A4 com texto simples em Helvetica, a fonte era um arquivo DOCX, uma planilha, um TXT ou um HTML, que a ferramenta retipografa como texto em A4. Exporte o original para PDF a partir do próprio aplicativo primeiro, depois converta esse PDF.</p>
+
+<h3>Páginas inclinadas ou cantos cortados</h3>
+<p>Defina Rotação e Variação da rotação como 0 para uma página reta. Os padrões (Rotação 1°) existem para dar realismo, mas uma petição judicial ou um formulário destinado a processamento automatizado geralmente deve ficar reto. Se você quiser inclinação, mantenha-a abaixo de 2° para que os cantos fiquem dentro da página.</p>
+
+<h3>Assinatura ou carimbo parecem pixelados</h3>
+<p>Linhas de assinatura são finas e sofrem primeiro em resolução baixa. Use 2,5× ou 3×, mantenha o Desfoque em 0,3 ou menos, e, se você colocar uma imagem de carimbo ou assinatura pelos extras, comece com um PNG de alta resolução. Só coloque assinaturas e carimbos que você esteja autorizado a usar.</p>
+
+<div class="expert-quote"><blockquote>Construímos o controle de Resolução em torno da própria grade de 72 pontos do PDF para que os números continuem honestos: 2× são 144 dpi, 3× são 216 dpi, nada escondido. É por isso que os padrões são 2× em Cinza: nítido o suficiente para o texto normal do corpo, e bem menor que uma renderização colorida da mesma página. Mantemos tudo local no navegador porque os arquivos que as pessoas costumam achatar geralmente são os que elas menos querem enviar.</blockquote><cite><strong>Equipe Make PDF look scanned</strong> — criadores da ferramenta web e da extensão do Chrome</cite></div>
+
+<h2 id="faq">Converter PDF para PDF digitalizado: perguntas frequentes</h2>
+<p>Estas respostas sobre converter PDF para PDF digitalizado cobrem as perguntas mais comuns depois da conversão: o que acontece com o texto oculto e os metadados, se dá para desfazer a mudança, como o OCR se encaixa, quais ajustes escolher e se a ferramenta funciona no celular. Cada resposta reflete o que a ferramenta realmente faz.</p>
+
+<div class="faq-item"><p class="faq-q">Converter um PDF em PDF digitalizado remove o texto oculto?</p><p class="faq-a">Sim, do conteúdo da página. As novas páginas são imagens JPEG do que o renderizador desenha, então não sobra nenhuma camada de texto para copiar, incluindo texto branco ou palavras escondidas atrás de uma caixa preta. Trate isso como um efeito colateral, e ainda assim inspecione a prévia quando uma redação importar.</p></div>
+
+<div class="faq-item"><p class="faq-q">O que acontece com os metadados do PDF original?</p><p class="faq-a">A ferramenta grava um novo PDF e permite definir título, autor, assunto, palavras-chave, produtor e criador no painel de extras. Preencha esses campos do jeito que você quiser antes de baixar, depois confira as propriedades do documento do resultado no seu leitor de PDF.</p></div>
+
+<div class="faq-item"><p class="faq-q">Um PDF digitalizado pode voltar a ser um PDF editável?</p><p class="faq-a">Não exatamente. A camada de texto original, as fontes, os links e os campos de formulário se foram. O OCR pode reconhecer as letras e adicionar uma nova camada pesquisável, e alguns programas conseguem reconstruir texto editável a partir dela, mas a formatação e a precisão não vão corresponder ao original. Guarde o arquivo original.</p></div>
+
+<div class="faq-item"><p class="faq-q">Posso rodar o OCR no PDF digitalizado depois?</p><p class="faq-a">Sim. Qualquer etapa de OCR em um programa de PDF para computador vai tratar o resultado como uma digitalização comum. Resolução mais alta e ruído baixo dão um reconhecimento melhor, então use 2× ou 3× com Ruído perto de 0 se você planeja rodar o OCR no arquivo.</p></div>
+
+<div class="faq-item"><p class="faq-q">Qual é a diferença entre "achatar PDF" e "PDF para digitalizado"?</p><p class="faq-a">Achatar, no sentido restrito, junta campos de formulário e anotações ao conteúdo da página, mas pode manter o texto selecionável. Converter um PDF para digitalizado transforma a página inteira, texto incluído, em uma imagem. A segunda opção é mais radical e é o que a nossa ferramenta faz.</p></div>
+
+<div class="faq-item"><p class="faq-q">Qual resolução devo escolher para converter um PDF em PDF digitalizado?</p><p class="faq-a">Use 2× (cerca de 144 dpi) para documentos normais e 3× (cerca de 216 dpi) para letras finas, tabelas densas ou assinaturas. Reduza para 1,5× só quando o arquivo precisar ser bem pequeno e o texto tiver 12 pontos ou mais.</p></div>
+
+<div class="faq-item"><p class="faq-q">Por que meu PDF digitalizado ficou tão maior que o original?</p><p class="faq-a">Um PDF em texto armazena letras como instruções compactas; um PDF digitalizado armazena cada pixel de cada página. Cinza em vez de Colorido, uma Resolução mais baixa e menos Ruído reduzem o tamanho. Os tribunais relatam o mesmo efeito: um arquivo de teste de 317 páginas variou de 23,86 MB a 374,47 MB dependendo do modo de cor e da resolução.</p></div>
+
+<div class="faq-item"><p class="faq-q">Um tribunal vai aceitar um PDF convertido para PDF digitalizado?</p><p class="faq-a">Depende do tribunal. Alguns distritos exigem que os documentos principais sejam pesquisáveis por texto, outros apenas preferem que sejam. Leia antes as regras locais do CM/ECF; na dúvida, protocole o PDF digital original ou adicione OCR à versão digitalizada.</p></div>
+
+
+<div class="faq-item"><p class="faq-q">A ferramenta de PDF para PDF digitalizado funciona no celular?</p><p class="faq-a">Sim. O site funciona em navegadores de celular, processa os arquivos localmente no aparelho e baixa o PDF digitalizado para os seus arquivos. Documentos grandes em 3× demoram mais e usam mais memória no celular, então 2× é a escolha mais segura ali.</p></div>
+
+<div class="faq-item"><p class="faq-q">O conversor de PDF para PDF digitalizado é gratuito?</p><p class="faq-a">Sim. A ferramenta web e a extensão do Chrome são gratuitas, não precisam de cadastro e não adicionam nenhuma marca d'água, a menos que você escolha adicionar uma pelos extras.</p></div>

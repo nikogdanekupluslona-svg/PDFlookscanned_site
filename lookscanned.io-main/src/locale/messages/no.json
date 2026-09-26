@@ -1,0 +1,212 @@
+{
+  "base": {
+    "title": "Make PDF look scanned",
+    "description": "Få en ren digital fil til å se ut som en ekte skanning – papirtekstur, støy, rotasjon og skygger, behandlet lokalt i nettleseren.",
+    "scanTitle": "Skann",
+    "bulkTitle": "Masseskanning",
+    "serviceWorker": {
+      "offlineReady": "Appen er klar til bruk uten nett",
+      "needRefresh": "En ny versjon er tilgjengelig. Klikk for å oppdatere."
+    },
+    "nav": {
+      "home": "Hjem",
+      "scan": "Skann",
+      "bulk": "Masseskanning",
+      "guides": "Guider"
+    },
+    "chrome": {
+      "label": "Chrome-utvidelse",
+      "free": "GRATIS"
+    },
+    "landing": {
+      "headline": "Få PDF til å se skannet ut",
+      "subhead": "Gjør PDF-er, bilder, Word- og Excel-filer om til realistiske skannede kopier med uskarphet, støy, rotasjon, vannmerker og stempler – rett i nettleseren. Kildefilene blir på enheten din.",
+      "cta": "Konverter til skannet PDF",
+      "note": "Gratis · Ingen registrering · Filene blir på enheten din",
+      "points": {
+        "formats": "PDF, bilder og enkle Office-formater",
+        "local": "Lokal behandling · Kildefilene blir der de er",
+        "free": "Skanning er gratis · Ingen registrering",
+        "preview": "Forhåndsvisning i sanntid · Det du ser, er det du eksporterer"
+      },
+      "stepsTitle": "Tre steg til en skannet PDF",
+      "step1Title": "Velg en fil",
+      "step1Body": "Slipp inn en PDF, et bilde eller et Word- eller Excel-dokument. Filen blir i nettleseren.",
+      "step2Title": "Juster skanneeffekten",
+      "step2Body": "Uskarphet, støy, rotasjon, papirtone, vannmerker og stempler – med forhåndsvisning i sanntid.",
+      "step3Title": "Eksporter PDF-en",
+      "step3Body": "Den skannede PDF-en lages på sekunder og lastes ned med en gang.",
+      "featuresTitle": "Hovedfunksjoner",
+      "footer": "Gjør dokumenter om til skanninger i nettleseren. Ingenting lastes opp for behandling."
+    },
+    "language": "Språk",
+    "seo": {
+      "homeTitle": "Få PDF til å se skannet ut på nett – gratis og privat",
+      "homeDescription": "Få PDF til å se skannet ut: korn, uskarphet, litt skråstilling og gulnet papir. Gratis, uten registrering – filen blir i nettleseren. Virker med bilder og Word."
+    }
+  },
+  "features": {
+    "privacy": {
+      "title": "Privat, lokal behandling",
+      "description": "Filene dine behandles i denne nettleseren. De lastes ikke opp til en behandlingsserver og lagres ikke i skyen."
+    },
+    "speed": {
+      "title": "Rask konvertering",
+      "description": "Gjør PDF-er, bilder og Office-dokumenter om til PDF-er som ser skannet ut, på sekunder – uten skriver og uten skanner."
+    },
+    "customization": {
+      "title": "Skanneeffekter",
+      "description": "Finjuster uskarphet, støy, rotasjon, lysstyrke, kontrast og papirtone med forhåndsvisning i sanntid. Det du ser, er det du eksporterer."
+    },
+    "openSource": {
+      "title": "Chrome-utvidelse",
+      "description": "Den samme skannemotoren finnes også som en gratis Chrome-utvidelse, så du kan behandle PDF-er fra sidepanelet.",
+      "github": "Chrome Nettmarked",
+      "scanyourpdf": "Chrome-utvidelse"
+    },
+    "mobileFriendly": {
+      "title": "Fungerer på mobil",
+      "description": "Konverteringsverktøyet kjører i moderne mobilnettlesere. Nettstedet krever ingen installasjon."
+    },
+    "offlineUse": {
+      "title": "Fungerer uten nett",
+      "description": "Når appens ressurser er lagret i hurtigbufferen, fungerer vanlig skanning videre uten nettverkstilkobling."
+    }
+  },
+  "actions": {
+    "navigateToScan": "Start skanning",
+    "navigateToHomePage": "Hjem",
+    "navigateToSupportMe": "Chrome-utvidelse",
+    "backToIndex": "Tilbake",
+    "preview": "Forhåndsvis",
+    "save": "Lagre",
+    "generateScannedPDF": "Lag skannet PDF",
+    "generating": "Lager …",
+    "downloadScannedPDF": "Last ned skannet PDF",
+    "generateSuccess": "PDF-en er laget",
+    "generateError": "Kunne ikke lage PDF-en: ",
+    "addFiles": "Legg til filer",
+    "processAll": "Lag skannede PDF-er",
+    "downloadZip": "Last ned alle som ZIP",
+    "converting": "Klargjør filen …",
+    "queued": "I kø",
+    "done": "Ferdig",
+    "failed": "Mislyktes"
+  },
+  "settings": {
+    "settings": "Skanneinnstillinger",
+    "attenuate": "Støy",
+    "noise": "Støy",
+    "blur": "Uskarphet",
+    "border": {
+      "label": "Ramme",
+      "true": "Ja",
+      "false": "Nei"
+    },
+    "colorspace": {
+      "label": "Fargerom",
+      "colorful": "Farge",
+      "grayscale": "Gråtoner"
+    },
+    "rotate": "Rotasjon",
+    "rotateVariance": "Rotasjonsvariasjon",
+    "pdfSelectLabel": "Velg eller slipp filen her",
+    "pdfNoSelectMessage": "Ingen fil valgt",
+    "supportedHint": "PDF, JPG, PNG, WebP, SVG, DOCX, XLSX, CSV, TXT, MD, HTML",
+    "scale": "Oppløsning",
+    "yellowish": "Gultone",
+    "brightness": "Lysstyrke",
+    "contrast": "Kontrast",
+    "extras": {
+      "watermark": "Vannmerke",
+      "watermarkText": "Vannmerketekst",
+      "watermarkImage": "Vannmerkebilde",
+      "stamp": "Stempel eller signatur",
+      "stampImage": "Legg til stempel eller signatur",
+      "stampX": "Vannrett posisjon",
+      "stampY": "Loddrett posisjon",
+      "stampScale": "Størrelse",
+      "metadata": "PDF-metadata",
+      "title": "Tittel",
+      "author": "Forfatter",
+      "subject": "Emne",
+      "keywords": "Nøkkelord",
+      "producer": "Produsent",
+      "creator": "Program",
+      "clearImage": "Fjern"
+    }
+  },
+  "status": {
+    "notStarted": "Ikke startet",
+    "error": "Feil: {error}",
+    "finished": "Ferdig",
+    "processsing": {
+      "default": "Behandler",
+      "combine": "Slår sammen PDF-sider",
+      "progress": "Behandler PDF-sider: {current}/{total}"
+    }
+  },
+  "upload": {
+    "dropTitle": "Slipp filen her",
+    "dropTitleMany": "Slipp filene her",
+    "or": "eller",
+    "choose": "Velg fil",
+    "chooseMany": "Velg filer",
+    "replace": "Velg en annen fil",
+    "addMore": "Legg til flere filer",
+    "privacy": "Behandles i nettleseren – ingenting lastes opp",
+    "dropOverlay": "Slipp filen for å åpne den",
+    "dropOverlayMany": "Slipp filene for å legge dem til",
+    "unsupported": "Denne filtypen støttes ikke: {name}",
+    "readError": "Kunne ikke åpne {name}: {error}",
+    "ready": "Lastet inn",
+    "pages": "{n} side | {n} sider",
+    "sampleBanner": "Dette er et eksempeldokument. Last opp dine egne filer i steg 1 – du kan legge til flere samtidig."
+  },
+  "save": {
+    "create": "Lag skannet PDF | Lag {n} skannede PDF-er",
+    "readyTitle": "Den skannede PDF-en er klar | De {n} skannede PDF-ene er klare",
+    "progress": "side {current} av {total}",
+    "fileProgress": "Fil {current} av {total}",
+    "autoHint": "Den skannede PDF-en lastes ned automatisk når den er klar. | Alle {n} filene skannes og lastes ned automatisk som én ZIP-fil.",
+    "noFileHint": "Last opp en fil i steg 1 for å starte.",
+    "busyHint": "La denne fanen være åpen – nedlastingen starter av seg selv når skanningen er ferdig.",
+    "downloadAgain": "Last ned igjen",
+    "downloadStarted": "Ferdig – nedlastingen har startet",
+    "whereSaved": "Du finner den i mappen Nedlastinger.",
+    "zipHint": "Vil du ha én enkelt fil, bruker du nedlastingsikonet ved siden av den i steg 1.",
+    "someFailed": "{n} fil kunne ikke skannes | {n} filer kunne ikke skannes"
+  },
+  "files": {
+    "preview": "Vis i forhåndsvisningen",
+    "previewOf": "Forhåndsvisning: {name}",
+    "downloadOne": "Last ned denne skannede PDF-en",
+    "remove": "Fjern filen",
+    "hint": "Klikk på en fil for å forhåndsvise den. Alle filene bruker de samme innstillingene.",
+    "openError": "Kunne ikke åpne denne filen",
+    "status": {
+      "loading": "Klargjør …",
+      "ready": "Klar",
+      "processing": "Skanner …",
+      "done": "Skannet"
+    }
+  },
+  "steps": {
+    "upload": "Last opp",
+    "adjust": "Juster",
+    "download": "Last ned",
+    "uploadTitle": "Last opp filene dine",
+    "adjustTitle": "Juster skanneutseendet",
+    "downloadTitle": "Hent den skannede PDF-en"
+  },
+  "preview": {
+    "original": "Original",
+    "scanned": "Skannet forhåndsvisning"
+  },
+  "errors": {
+    "wordNoText": "Denne Word-filen har ingen lesbar tekst",
+    "sheetEmpty": "Dette regnearket er tomt",
+    "htmlNoText": "Denne HTML-filen har ingen lesbar tekst",
+    "unsupportedType": "Denne filtypen støttes ikke ennå"
+  }
+}

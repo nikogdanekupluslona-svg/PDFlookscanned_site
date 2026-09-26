@@ -1,0 +1,241 @@
+<p class="lead">Ein gescanntes PDF ist ein PDF, dessen Seiten Fotos von Papier sind, aufgenommen von einem Scanner oder einer Handykamera, statt Text und Vektorformen, die am Computer getippt wurden. Solange keine OCR eine unsichtbare Textebene hinzugefügt hat, können Sie die Wörter nicht auswählen, durchsuchen oder kopieren, und ein Screenreader liest auf der Seite nichts vor.</p>
+
+<p>Sie haben ein PDF erhalten und müssen wissen, was es wirklich ist: eine aus einer Textverarbeitung exportierte Datei, ein Scan von Papier, oder ein Scan mit erkanntem Text. Die Antwort entscheidet, ob Sie es durchsuchen können, ob ein Gericht oder eine Behörde es akzeptiert, und ob es OCR braucht.</p>
+
+<p>Dieser Ratgeber liefert eine präzise Definition, einen 10-Sekunden-Test, einen Vergleich der drei PDF-Arten und ein Glossar. Die Fakten stammen aus W3C-Barrierefreiheitsrichtlinien, US-Bundesgerichten, USCIS, NARA und den FADGI-Digitalisierungsregeln, GOV.UK und Barrierefreiheits-Teams von Universitäten, dazu unserem eigenen Wissen aus dem Bau eines Scan-Effekt-Tools.</p>
+
+<nav class="toc" aria-label="Inhaltsverzeichnis"><h2>Inhaltsverzeichnis</h2><ol>
+<li><a href="#what-is-a-scanned-pdf">Was ist ein gescanntes PDF genau?</a></li>
+<li><a href="#scanned-pdf-vs-digital-pdf">Wie unterscheidet sich ein gescanntes PDF von einem digitalen PDF?</a></li>
+<li><a href="#scanned-copy-meaning">Was bedeutet eingescannte Kopie im Vergleich zur Fotokopie?</a></li>
+<li><a href="#how-to-tell-if-a-pdf-is-scanned">Wie erkennen Sie, ob ein PDF gescannt ist?</a></li>
+<li><a href="#accessibility-and-search">Warum sind gescannte Dokumente schwer zu durchsuchen und zu lesen?</a></li>
+<li><a href="#ocr-explained">Was macht OCR mit einem gescannten PDF?</a></li>
+<li><a href="#when-you-need-a-scanned-copy">Wann verlangen Organisationen eine eingescannte Kopie?</a></li>
+<li><a href="#scanned-pdf-and-pdf-a">Kann ein gescanntes PDF als PDF/A archiviert werden?</a></li>
+<li><a href="#digital-pdf-to-scanned-look">Wie bekommt ein digitales PDF einen gescannten PDF-Look?</a></li>
+<li><a href="#scanned-document-glossary">Glossar für gescannte Dokumente: Welche Begriffe zählen?</a></li>
+<li><a href="#faq">Gescanntes PDF: Was fragen Menschen sonst noch?</a></li>
+<li><a href="#verdict">Was ist die kurze Antwort zu gescannten PDFs?</a></li>
+</ol></nav>
+
+<h2 id="what-is-a-scanned-pdf">Was ist ein gescanntes PDF genau?</h2>
+<p>Ein gescanntes PDF ist ein PDF-Container, der pro Seite ein Rasterbild enthält, entstanden durch das Fotografieren oder Scannen eines physischen Blatts. Die Buchstaben, die Sie sehen, sind Pixel, keine Zeichen. Software behandelt jede Seite wie ein Foto, sodass reine Textsuche, Kopieren und Neuformatieren ohne OCR nicht funktionieren.</p>
+
+<p>Das US-Bezirksgericht für den Nördlichen Bezirk von Kalifornien bringt es unter Berufung auf Hinweise der National Archives in einer Zeile auf den Punkt: „Gescannter Text ist die Fotografie einer gedruckten Seite, aufgenommen entweder mit einer Digitalkamera oder einem Scanner“ (<a href="https://cand.uscourts.gov/cases-e-filing/cmecf-information/preparing-your-cmecf-filing" target="_blank" rel="noopener">N.D. Cal., Preparing Your CM/ECF Filing</a>). Das PDF-Format selbst ändert sich dabei nicht: Ein gescanntes PDF ist weiterhin eine gültige ISO-32000-Datei. Was sich ändert, ist das, was auf jeder Seite steckt.</p>
+
+<p>Das Barrierefreiheits-Team der James Madison University beschreibt das Ergebnis aus Sicht einer Leserin oder eines Lesers: „PDFs gescannter Dokumente sind oft nur Bilder von Dokumenten, ähnlich digitalen Fotografien, und enthalten in der Regel keinen lesbaren Text“ (<a href="https://www.jmu.edu/accessibility/digital-accessibility/guides/pdf/scanned-documents.shtml" target="_blank" rel="noopener">JMU Digital Accessibility</a>). Diese eine Tatsache erklärt fast jeden praktischen Unterschied, der im Folgenden behandelt wird.</p>
+
+<p>Hier ist die Definition in ihre prüfbaren Teile zerlegt, so wie es auch eine Aktenverwalterin oder ein Barrierefreiheits-Auditor tun würde.</p>
+
+<dl class="spec-list">
+<dt>Seiteninhalt</dt><dd>Ein Bitmap-Bild pro Seite (JPEG, JBIG2, CCITT oder ähnliche Kompression), keine Schriftglyphen und Vektorpfade.</dd>
+<dt>Textebene</dt><dd>Keine bei einem reinen Bild-PDF; eine unsichtbare OCR-Ebene bei einem durchsuchbaren gescannten PDF.</dd>
+<dt>Quelle</dt><dd>Ein Flachbett- oder Einzugsscanner, ein Multifunktionskopierer, oder eine Handykamera mit einer im Betriebssystem eingebauten Scan-App.</dd>
+<dt>Typische Auflösung</dt><dd>200 bis 400 ppi; 300 ppi ist die häufigste Anforderung für Bürotext.</dd>
+<dt>Farbmodus</dt><dd>Bitonal (1 Bit Schwarz-Weiß), Graustufen (8 Bit) oder Farbe (24 Bit).</dd>
+<dt>Zoom-Verhalten</dt><dd>Kanten werden bei starker Vergrößerung zu sichtbaren Pixelblöcken.</dd>
+<dt>Dateigröße</dt><dd>Meist größer pro Seite als ein Text-PDF, besonders in Graustufen oder Farbe.</dd>
+</dl>
+
+<h2 id="scanned-pdf-vs-digital-pdf">Wie unterscheidet sich ein gescanntes PDF von einem digitalen PDF?</h2>
+<p>Ein gescanntes PDF speichert Bilder von Seiten, während ein digitales (digital erstelltes) PDF echte Zeichen, Schriftarten und Vektorgrafiken speichert, exportiert aus Software. Eine dritte Art, das gescannte PDF mit OCR, behält das Seitenbild, fügt aber darunter unsichtbaren, maschinenlesbaren Text hinzu, wodurch es zu einem durchsuchbaren PDF wird.</p>
+
+<p>Der Bezirk Massachusetts zieht in seinen Regeln zur elektronischen Einreichung dieselbe Grenze: Ein gescanntes PDF stammt von Papier, das durch einen optischen Scanner gelaufen ist, während ein „elektronisch umgewandeltes“ PDF aus einer Textverarbeitung erstellt und textdurchsuchbar ist (<a href="https://www.mad.uscourts.gov/caseinfo/pdf/ECFadminProc.pdf" target="_blank" rel="noopener">D. Mass. CM/ECF Administrative Procedures</a>). Die Tabelle stellt die drei Arten nebeneinander.</p>
+
+<div class="table-wrap"><table><caption>Drei Arten von PDF: digital erstellt, nur-Bild gescannt und gescannt mit OCR</caption>
+<thead><tr><th scope="col">Eigenschaft</th><th scope="col">Digital erstelltes PDF</th><th scope="col">Reines Bild-PDF (gescannt)</th><th scope="col">Gescanntes PDF + OCR (durchsuchbar)</th></tr></thead>
+<tbody>
+<tr><th scope="row">Wie es entsteht</th><td>Export oder Druck nach PDF aus Word, Google Docs, einem Browser oder einer beliebigen App</td><td>Scanner, Kopierer oder Handykamera</td><td>Erst scannen, dann fügt OCR-Software Text hinzu</td></tr>
+<tr><th scope="row">Was eine Seite enthält</th><td>Zeichen, eingebettete Schriftarten, Vektorlinien, Bilder</td><td>Ein Rasterbild</td><td>Ein Rasterbild plus unsichtbaren Text</td></tr>
+<tr><th scope="row">Text auswählen und kopieren</th><td>Ja, exakt</td><td>Nein</td><td>Ja, aber nur so genau wie die OCR</td></tr>
+<tr><th scope="row">Strg/Cmd+F-Suche</th><td>Funktioniert</td><td>Findet nichts</td><td>Funktioniert, kann falsch erkannte Wörter übersehen</td></tr>
+<tr><th scope="row">Screenreader</th><td>Lesbar, am besten mit Tags</td><td>Stumm</td><td>Lesbar, oft ohne Struktur</td></tr>
+<tr><th scope="row">Zoom auf 400 %</th><td>Scharfe Kanten in jeder Größe</td><td>Pixelig</td><td>Pixelig</td></tr>
+<tr><th scope="row">Typische Größe pro Seite</th><td>Wenige zehn KB</td><td>Etwa 75 KB (bitonal) bis über 1 MB (Graustufen oder Farbe)</td><td>Wie nur-Bild plus kleine Textebene</td></tr>
+<tr><th scope="row">Wirkt wie Papier</th><td>Nein</td><td>Ja</td><td>Ja</td></tr>
+</tbody></table></div>
+
+<p>Die Seitengrößen in der Tabelle stammen aus Gerichtstests, nicht aus Schätzungen. Der Nördliche Bezirk von Kalifornien scannte ein 317-seitiges Dokument: bitonal bei 300 ppi kam auf 23,86 MB, etwa 75 KB pro Seite, und Graustufen bei 400 ppi erreichte 374,47 MB, etwa 1,2 MB pro Seite. Der <a href="https://www.ncmd.uscourts.gov/sites/ncmd/files/ecfprocman.pdf" target="_blank" rel="noopener">Mittlere Bezirk von North Carolina</a> merkt an, dass 2 MB etwa fünfundvierzig Seiten PDF-Text fassen, unter 50 KB pro Seite.</p>
+
+<h2 id="scanned-copy-meaning">Was bedeutet eingescannte Kopie im Vergleich zur Fotokopie?</h2>
+<p>Eine eingescannte Kopie ist eine digitale Bilddatei eines Papieroriginals, meist als gescanntes PDF oder JPEG geliefert. Eine Fotokopie ist ein zweites Blatt Papier, gedruckt von einem Kopierer. Eine beglaubigte Kopie ist jede Kopie, die eine autorisierte Person mit dem Original verglichen und unterschrieben hat.</p>
+
+<p>Menschen verwenden „eingescannte Kopie“ locker, und die drei Begriffe geraten in Formularen, HR-E-Mails und Visa-Checklisten durcheinander. Die Unterschiede sind wichtig, denn eine Anfrage nach dem einen wird durch die anderen nicht erfüllt.</p>
+
+<div class="table-wrap"><table><caption>Eingescannte Kopie, Fotokopie und beglaubigte Kopie im Vergleich</caption>
+<thead><tr><th scope="col">Begriff</th><th scope="col">Medium</th><th scope="col">Wer erstellt sie</th><th scope="col">Was sie beweist</th></tr></thead>
+<tbody>
+<tr><th scope="row">Eingescannte Kopie</th><td>Digitale Datei (PDF, JPEG, TIFF)</td><td>Jeder mit Scanner oder Handy</td><td>Dass ein Bild des Dokuments existiert; nichts über Echtheit</td></tr>
+<tr><th scope="row">Fotokopie</th><td>Papier</td><td>Jeder mit einem Kopierer</td><td>Dasselbe: eine Reproduktion, nicht das Original</td></tr>
+<tr><th scope="row">Beglaubigte (echte) Kopie</th><td>Papier, manchmal später gescannt</td><td>Eine Fachperson, die das Original gesehen hat</td><td>Dass die Kopie dem Original entspricht, nach dem Wort dieser Person</td></tr>
+<tr><th scope="row">Original</th><td>Papier oder digital erstellte Datei</td><td>Der Aussteller</td><td>Das Dokument selbst</td></tr>
+</tbody></table></div>
+
+<p>Die britische Regierung erklärt die Beglaubigung schlicht: „Sie können ein Dokument als beglaubigte Kopie bestätigen lassen, indem Sie es von einer Fachperson, etwa einem Rechtsanwalt, unterschreiben und datieren lassen“ (<a href="https://www.gov.uk/certifying-a-document" target="_blank" rel="noopener">GOV.UK, Certifying a document</a>). Eine eingescannte Kopie dieser beglaubigten Seite ist immer noch eine eingescannte Kopie; die Beglaubigung steckt im Papier, mit Unterschrift und Datum.</p>
+
+<p>Wenn also ein Vermieter, Arbeitgeber oder eine Schule „eine eingescannte Kopie senden“ verlangt, meinen sie fast immer „ein klares digitales Bild des Papiers, als PDF“. Wenn sie „beglaubigte Kopie“ sagen, reicht ein Scan allein nicht aus, egal wie echt er aussieht.</p>
+
+<h2 id="how-to-tell-if-a-pdf-is-scanned">Wie erkennen Sie, ob ein PDF gescannt ist?</h2>
+<p>Um zu erkennen, ob ein PDF gescannt ist, versuchen Sie, ein Wort auf der Seite auszuwählen, und suchen Sie nach einem Wort, das Sie sehen können. Markiert sich nichts, ist das PDF reines Bild. Zoomen, Dokumenteigenschaften, die Schriftliste und die Dateigröße bestätigen dann, ob die Datei gescannt, digital oder gescannt mit OCR ist.</p>
+
+<p>Die ersten beiden Prüfungen dauern unter 10 Sekunden und funktionieren in jedem PDF-Betrachter, einschließlich dem eingebauten in Google Chrome, Microsoft Edge und macOS Vorschau. Der Rest dauert eine Minute und klärt die unklaren Fälle.</p>
+
+<ol class="step-list">
+<li><strong>Text auswählen versuchen.</strong> Ziehen Sie den Cursor über eine Zeile. In einem digital erstellten oder OCR-behandelten PDF markieren sich einzelne Wörter. In einem reinen Bild-PDF markiert sich nichts, oder manche Betrachter zeichnen ein Rechteck um das gesamte Seitenbild.</li>
+<li><strong>Mit Strg+F oder Cmd+F suchen.</strong> Tippen Sie ein markantes Wort, das Sie klar auf Seite eins sehen. Null Treffer bei einem Wort, das offensichtlich da ist, bedeutet, es gibt keine Textebene. Ein Treffer bedeutet echten Text oder eine OCR-Ebene.</li>
+<li><strong>Auf 400 % zoomen.</strong> Betrachten Sie die Kante eines Buchstabens. Vektortext bleibt bei jeder Vergrößerung messerscharf. Eine gescannte Seite zeigt Pixelstufen, weiche graue Ränder, Körnung und manchmal JPEG-Blockmuster rund um die Buchstaben.</li>
+<li><strong>Dokumenteigenschaften öffnen.</strong> Nutzen Sie im PDF-Betrachter von Chrome das Drei-Punkte-Menü und wählen Sie Dokumenteigenschaften; in macOS Vorschau nutzen Sie Werkzeuge, dann Inspektor einblenden. Das Feld PDF-Erzeuger oder Anwendung nennt oft einen Scanner, ein Kopierer-Modell, eine Handy-Scan-Funktion oder eine OCR-Engine. Eine Textverarbeitung oder „Print to PDF“ deutet auf eine digital erstellte Datei hin.</li>
+<li><strong>Schriftliste prüfen.</strong> PDF-Software für den Desktop zeigt in den Dokumenteigenschaften einen Reiter Schriftarten. Ein digital erstelltes PDF listet die verwendeten Schriftarten auf. Ein reiner Bild-Scan listet keine. Ein OCR-behandelter Scan listet oft eine einzelne Schriftart, die nur für die unsichtbare Ebene genutzt wird.</li>
+<li><strong>Größe pro Seite vergleichen.</strong> Teilen Sie die Dateigröße durch die Seitenzahl. Ein Text-PDF bleibt meist unter 50 KB pro Seite. Ein Graustufen- oder Farbscan liegt oft bei mehreren hundert KB bis über 1 MB pro Seite. Bitonale Scans sind kompakt, daher ist die Größe der schwächste Hinweis.</li>
+</ol>
+
+<p>Das Barrierefreiheits-Lehrbuch der Cleveland State University empfiehlt denselben schnellen Such-Test: „Wird das Wort auf der Seite markiert, hat sie durchsuchbaren Text und ist kein gescanntes Bild von Text“ (<a href="https://pressbooks.ulib.csuohio.edu/accessibility/chapter/chapter-4-2-the-difference-between-an-accessible-pdf-and-a-scanned-image-of-text/" target="_blank" rel="noopener">Heather Caprette, Cleveland State University</a>).</p>
+
+<div class="callout callout-tip"><strong>Gemischte Ergebnisse lesen</strong>Text markiert sich, aber der Zoom zeigt Pixel: ein gescanntes PDF mit OCR. Text markiert sich und der Zoom bleibt scharf: digital erstellt. Nichts markiert sich, und der Zoom zeigt Pixel: reines Bild. Nichts markiert sich, aber die Kanten bleiben scharf: Text, der in Vektorumrisse umgewandelt wurde, ein seltener vierter Fall, der sich bei der Suche wie ein Scan verhält.</div>
+
+<p>Metadaten sind ein Hinweis, kein Beweis. Die Felder PDF-Erzeuger und Anwendung lassen sich mit vielen Tools bearbeiten, auch mit unserem, vertrauen Sie also eher dem, was der Seiteninhalt beim Markieren und Zoomen tut, als dem, was das Eigenschaften-Fenster angibt.</p>
+
+<h2 id="accessibility-and-search">Warum sind gescannte Dokumente schwer zu durchsuchen und zu lesen?</h2>
+<p>Gescannte Dokumente sind schwer zu durchsuchen und zu lesen, weil ein reines Bild-PDF keine Zeichen enthält, die Software indexieren könnte. Suchmaschinen, Desktop-Suche, Kopieren und Einfügen, Übersetzungstools und Screenreader brauchen alle Text. Ohne OCR-Ebene ist das gescannte PDF ein Bild, das nur sehende Leserinnen und Leser nutzen können.</p>
+
+<p>Die W3C Web Accessibility Initiative sagt es in Technik PDF7 der WCAG-Richtlinie unverblümt: „Ein Dokument aus gescannten Bildern von Text ist von Natur aus nicht barrierefrei, weil sein Inhalt aus Bildern besteht, nicht aus durchsuchbarem Text“ (<a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF7" target="_blank" rel="noopener">W3C WAI, WCAG Technique PDF7</a>).</p>
+
+<p>Dieselbe W3C-Seite listet auf, was verloren geht: „Assistive Technologien können die Wörter nicht lesen oder extrahieren; Nutzer können Text nicht auswählen, bearbeiten, in der Größe ändern oder neu fließen lassen, noch Text- und Hintergrundfarben ändern; und Autoren können das PDF nicht für Barrierefreiheit anpassen.“ Die Abhilfe ist OCR, damit echter Text hinter dem Bild existiert.</p>
+
+<p>Das Barrierefreiheits-Büro der Georgetown University fügt die praktische Konsequenz für alle hinzu, die auf assistive Technologie angewiesen sind: „Gescannte PDFs sind eine Sammlung von Bildern und daher für die meisten Standard-Screenreader unlesbar“ (<a href="https://accessibility.georgetown.edu/digital-accessibility/pdf-accessibility/" target="_blank" rel="noopener">Accessibility at Georgetown</a>).</p>
+
+<p>Öffentliche Herausgeber gehen noch weiter. Der britische Government Digital Service argumentiert, dass in PDF veröffentlichte Informationen im Vergleich zu HTML schwerer zu finden, zu nutzen und zu pflegen sind (<a href="https://gds.blog.gov.uk/2018/07/16/why-gov-uk-content-should-be-published-in-html-and-not-pdf/" target="_blank" rel="noopener">GDS-Blog, GOV.UK</a>). Ein reines Bild-PDF ist die extreme Version dieses Problems: nicht einmal die Wörter sind maschinenlesbar.</p>
+
+<div class="table-wrap"><table><caption>Was in jeder PDF-Art funktioniert</caption>
+<thead><tr><th scope="col">Aufgabe</th><th scope="col">Digital erstellt</th><th scope="col">Reiner Bild-Scan</th><th scope="col">Scan + OCR</th></tr></thead>
+<tbody>
+<tr><th scope="row">Screenreader-Ausgabe</th><td>Vollständiger Text</td><td>Keine</td><td>Text, oft in falscher Reihenfolge</td></tr>
+<tr><th scope="row">Neu fließen auf dem Handy</th><td>Möglich, wenn getaggt</td><td>Nein</td><td>Selten</td></tr>
+<tr><th scope="row">Ein Zitat kopieren</th><td>Exakt</td><td>Von Hand abtippen</td><td>Kann OCR-Fehler enthalten</td></tr>
+<tr><th scope="row">Von Desktop-Suche gefunden</th><td>Ja</td><td>Nur Dateiname</td><td>Ja</td></tr>
+<tr><th scope="row">Maschinelle Übersetzung</th><td>Ja</td><td>Braucht zuerst OCR</td><td>Ja</td></tr>
+</tbody></table></div>
+
+<h2 id="ocr-explained">Was macht OCR mit einem gescannten PDF?</h2>
+<p>OCR, die optische Zeichenerkennung, liest die Buchstabenformen in einem gescannten PDF und schreibt passenden Maschinentext in eine unsichtbare Ebene hinter jedem Seitenbild. Die Seite sieht genau gleich aus, wird aber zu einem durchsuchbaren PDF: Wörter lassen sich finden, auswählen, kopieren und vorlesen.</p>
+
+<p>Die Federal Agencies Digital Guidelines Initiative definiert es präzise: „Optische Zeichenerkennung (OCR) ist der Prozess, ein Rasterbild von Text in durchsuchbaren elektronischen Text umzuwandeln“ (<a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">FADGI Technical Guidelines, 3. Ausgabe, 2023</a>). OCR funktioniert bei getipptem, gedrucktem und, weniger zuverlässig, handgeschriebenem Text.</p>
+
+<h3>Was OCR an einem gescannten Dokument behebt</h3>
+<ul>
+<li>Strg/Cmd+F-Suche und Volltextindexierung beginnen zu funktionieren.</li>
+<li>Text lässt sich auswählen, kopieren und in andere Dokumente einfügen.</li>
+<li>Screenreader bekommen Wörter zum Vorlesen, was die grundlegende W3C-PDF7-Abhilfe erfüllt.</li>
+<li>Gerichtssysteme, die textdurchsuchbare Einreichungen verlangen, können die Datei akzeptieren.</li>
+</ul>
+
+<h3>Was OCR nicht behebt</h3>
+<ul>
+<li><strong>Bildqualität.</strong> Die Seite bleibt ein Bild, daher pixelt sie beim Zoomen weiterhin. JMU merkt an, dass für Menschen, die hineinzoomen, „die Ausgabe pixelig und verzerrt wird, weil der eText unter dem Bild des Textes liegt“.</li>
+<li><strong>Genauigkeit.</strong> Unschärfe, Schräglage, niedrige Auflösung und Rausch-Körnung verursachen Fehllesungen wie „rn“ statt „m“ oder „1“ statt „l“. Der versteckte Text kann falsch sein, während das Bild richtig aussieht.</li>
+<li><strong>Struktur.</strong> Überschriften, Lesereihenfolge, Tabellenzellen und Alt-Text für Bilder brauchen für volle Barrierefreiheit weiterhin manuelles Taggen.</li>
+<li><strong>Dateigröße.</strong> Die Seitenbilder bleiben, daher ist ein gescanntes PDF mit OCR fast so groß wie die reine Bildversion.</li>
+</ul>
+
+<div class="callout callout-info"><strong>OCR arbeitet mit dem Bild, nicht mit dem Papier</strong>Die Erkennungsqualität hängt vom Scan ab. Eine saubere 300-ppi-Seite mit geraden Zeilen wird weit besser erkannt als ein schiefes, verrauschtes Handyfoto. Soll ein Scan per OCR bearbeitet werden, scannen Sie zuerst gerade und scharf.</div>
+
+<h2 id="when-you-need-a-scanned-copy">Wann verlangen Organisationen eine eingescannte Kopie?</h2>
+<p>Organisationen verlangen eine eingescannte Kopie, wenn das Original auf Papier existiert und sie einen digitalen Nachweis brauchen: Einwanderungsbelege, Gerichtsbeweismittel, HR-Onboarding-Akten, unterschriebene Verträge und Quittungen. Jede setzt eigene Regeln für Format, Auflösung und Dateigröße, und manche Gerichte verlangen durchsuchbare PDFs statt reiner Bilder.</p>
+
+<h3>Einwanderungsbelege (USCIS)</h3>
+<p>Die US-Einwanderungsbehörde USCIS akzeptiert gescannte oder fotografierte Belege für Online-Einreichungen. Ihre Anweisung ist kurz: „Nutzen Sie einen Scanner oder fotografieren Sie jedes Dokument“, und „stellen Sie sicher, dass jedes angehängte Bild klar ist und aller Text lesbar ist“ (<a href="https://www.uscis.gov/file-online/tips-for-filing-forms-online" target="_blank" rel="noopener">USCIS, Tips for Filing Forms Online</a>). Jede Datei darf bis zu 12 MB groß sein, als PDF, JPG oder JPEG, mit TIF oder TIFF für manche Formulare akzeptiert.</p>
+
+<h3>Bundesgerichts-Einreichungen (CM/ECF)</h3>
+<p>Föderale Systeme zur elektronischen Einreichung akzeptieren nur PDF, und viele Gerichte bevorzugen digital erstellte Dateien. Der Südliche Bezirk von Florida erklärt, dass „Schriftsätze bzw. Hauptdokumente, die elektronisch bei CM/ECF eingereicht werden, müssen im textdurchsuchbaren PDF-Format vorliegen“ (<a href="https://www.flsd.uscourts.gov/all-faqs/CMECF" target="_blank" rel="noopener">S.D. Fla. CM/ECF FAQ</a>). Gescannte PDFs sind vor allem für Beweisstücke und unterschriebenes Papier ohne digitales Original gedacht.</p>
+
+<p>Scan-Einstellungen und Größenlimits unterscheiden sich je nach Gericht. Der Westliche Bezirk von Washington verlangt 300 dpi Scan-Auflösung, Schwarz-Weiß außer Farbe ist wesentlich, und begrenzt jedes Dokument auf 100 MB (<a href="https://www.wawd.uscourts.gov/attorneys/cm-ecf-faqs/Technical" target="_blank" rel="noopener">W.D. Wash. technisches FAQ</a>). Der <a href="https://www.mnd.uscourts.gov/sites/mnd/files/Criminal-ECF-Procedures-Guide.pdf" target="_blank" rel="noopener">Bezirk Minnesota</a> begrenzt in seinen Strafverfahrens-ECF-Regeln jedes Beweisstück auf 35 MB.</p>
+
+<h3>HR, Vermieter, Schulen und Banken</h3>
+<p>Arbeitgeber und Vermieter wollen meist eine eingescannte Kopie eines Ausweises, eines Diploms, eines unterschriebenen Angebotsschreibens oder einer Mietvertragsseite. Sie veröffentlichen selten technische Regeln; die meisten nennen nur ein E-Mail-Anhangslimit und verlangen, dass jedes Wort lesbar ist. Nennt ein Portal keine Grenzen, ist ein 300-dpi-Graustufen-PDF unter 10 MB eine sinnvolle Schätzung, keine festgelegte Regel.</p>
+
+<div class="table-wrap"><table><caption>Übliche Anforderungen an eingescannte Kopien nach Anforderer</caption>
+<thead><tr><th scope="col">Anforderer</th><th scope="col">Format</th><th scope="col">Größen- oder Auflösungsregel</th><th scope="col">Durchsuchbarer Text nötig?</th></tr></thead>
+<tbody>
+<tr><th scope="row">USCIS-Online-Einreichung</th><td>PDF, JPG, JPEG (TIF/TIFF für manche Formulare)</td><td>12 MB pro Datei</td><td>Nein; Text muss lesbar sein</td></tr>
+<tr><th scope="row">Gericht W.D. Wash.</th><td>PDF</td><td>300 dpi, Schwarz-Weiß; 100 MB pro Dokument</td><td>Abhängig vom Dokumenttyp</td></tr>
+<tr><th scope="row">Gericht S.D. Fla.</th><td>PDF</td><td>Gerichtslimits gelten</td><td>Ja, für Hauptdokumente</td></tr>
+<tr><th scope="row">D. Minn. Straf-ECF</th><td>PDF</td><td>35 MB pro Beweisstück</td><td>Örtliche Regeln prüfen</td></tr>
+<tr><th scope="row">Arbeitgeber oder Vermieter</th><td>PDF oder Bild</td><td>Meist ein E-Mail-Limit</td><td>Selten</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-tip"><strong>Größe klein halten</strong>Für Textdokumente ist Graustufen oder bitonal bei 300 dpi meist die kleinste noch lesbare Option. Farbscans von reinem Text können um ein Vielfaches größer sein, ohne mehr Information zu liefern. Unsere Anleitung zum <a href="/blog/convert-color-pdf-to-black-and-white/">Umwandeln eines farbigen PDFs in Schwarz-Weiß</a> behandelt die Abwägungen.</div>
+
+<h2 id="scanned-pdf-and-pdf-a">Kann ein gescanntes PDF als PDF/A archiviert werden?</h2>
+<p>Ein gescanntes PDF kann als PDF/A gespeichert werden, der ISO-19005-Archivversion von PDF, weil PDF/A Seitenbilder erlaubt. PDF/A fügt Regeln für langfristiges Lesen hinzu, etwa eingebettete Schriftarten und keine Verschlüsselung, macht aber eine reine Bildseite nicht durchsuchbar. OCR ist ein separater Schritt.</p>
+
+<p>PDF/A wurde erstmals am 1. Oktober 2005 veröffentlicht und verbietet Funktionen, die Dateien Jahrzehnte später schwer zu öffnen machen, etwa Schriftverknüpfung und Verschlüsselung (<a href="https://en.wikipedia.org/wiki/PDF/A" target="_blank" rel="noopener">Wikipedia, PDF/A</a>). Microsoft Office kann direkt aus seinen „Als PDF speichern“-Optionen ISO-19005-1-konforme Dateien exportieren.</p>
+
+<p>Gerichte, die PDF/A verlangen, lenken Einreicher oft ganz vom Scannen weg. Der Östliche Bezirk von Oklahoma rät, dass PDF/A-Dokumente in einer Textverarbeitung erstellt werden sollten statt ausgedruckt und gescannt zu werden, um die Dateigröße klein zu halten und textdurchsuchbare Dateien sicherzustellen (<a href="https://www.oked.uscourts.gov/pdfa-frequently-asked-questions" target="_blank" rel="noopener">E.D. Okla. PDF/A FAQ</a>).</p>
+
+<dl class="spec-list">
+<dt>Digital erstelltes PDF/A</dt><dd>Am kleinsten und vollständig durchsuchbar; am besten, wenn ein digitales Original existiert.</dd>
+<dt>Gescanntes PDF/A mit OCR</dt><dd>Archivfähig und durchsuchbar; die richtige Wahl für Unterlagen, die nur auf Papier existieren.</dd>
+<dt>Reines Bild-PDF/A</dt><dd>Gültig für die Archivierung, aber nicht durchsuchbar oder barrierefrei.</dd>
+</dl>
+
+<h2 id="digital-pdf-to-scanned-look">Wie bekommt ein digitales PDF einen gescannten PDF-Look?</h2>
+<p>Ein digitales PDF bekommt einen gescannten PDF-Look, wenn jede Seite in ein Bild gerastert und mit den Unregelmäßigkeiten eines echten Scanners versehen wird: leichte Drehung, Unschärfe, Rauschen, Grau- oder Papierton. Das Ergebnis ist ein reines Bild-PDF, das sich wie ein Scan verhält, ohne dass Sie etwas ausdrucken oder einen Scanner besitzen müssen.</p>
+
+<p>Genau das macht unser kostenloses <a href="/scan">Scan-Effekt-Tool</a>. Es rendert jede PDF-Seite in Ihrem Browser, wendet die von Ihnen gewählten Effekte an und speichert jede Seite als JPEG-Bild in einem neuen PDF. Dateien werden lokal verarbeitet und nicht an einen Server hochgeladen.</p>
+
+<dl class="spec-list">
+<dt>Drehung</dt><dd>−10° bis 10°, Standard 1°, plus zufällige Drehvarianz pro Seite bis zu 10°.</dd>
+<dt>Unschärfe</dt><dd>0 bis 1, Standard 0,3, weicht Vektorkanten so auf, wie es Scanner-Optik tut.</dd>
+<dt>Rauschen</dt><dd>0 bis 1, Standard 0,1, fügt sensorartige Körnung hinzu.</dd>
+<dt>Helligkeit und Kontrast</dt><dd>Je 0 bis 2, Standard 1.</dd>
+<dt>Vergilbung</dt><dd>0 bis 2, Standard 0, tönt die Seite wie altes Papier.</dd>
+<dt>Farbraum</dt><dd>Graustufen (Standard) oder Farbe.</dd>
+<dt>Auflösung</dt><dd>1× bis 3×; PDF-Seiten rendern mit 72 dpi mal dem Faktor, sodass 2× etwa 144 dpi und 3× etwa 216 dpi entspricht.</dd>
+</dl>
+
+<p>Weil die Ausgabe reines Bild ist, erbt sie jede oben beschriebene Eigenschaft: kein auswählbarer Text, keine Suche, größere Dateien, keine Screenreader-Ausgabe. Das ist genau der Punkt für jemanden, der ein Dokument braucht, das wie eine eingescannte Kopie aussieht, und ein Nachteil für alle, die es durchsuchbar brauchen. Behalten Sie die digitale Originaldatei.</p>
+
+<p>Den vollständigen Ablauf mit Auflösungs- und Dateigrößen-Abwägungen finden Sie in <a href="/blog/pdf-to-scanned-pdf/">wie Sie ein PDF in ein gescanntes PDF umwandeln</a>. Alle sechs Methoden, vom Ausdrucken und Einscannen bis zu eingebauten Betriebssystem-Optionen, zeigt <a href="/blog/how-to-make-a-pdf-look-scanned/">wie Sie ein PDF wie gescannt aussehen lassen</a>. Starten Sie stattdessen von einem Handyfoto? Die Anleitung zum <a href="/blog/image-to-scanned-pdf/">Umwandeln eines Bildes in ein gescanntes PDF</a> behandelt JPG und PNG.</p>
+
+<div class="callout callout-warn"><strong>Scan-Look ehrlich einsetzen</strong>Ein Scan-Effekt ändert, wie eine Datei aussieht, nicht ob sie echt ist. Nutzen Sie ihn nicht, um offizielle Dokumente, Ausweise oder Unterschriften zu fälschen oder zu verändern, die nicht Ihre eigenen sind. Manche Gerichte und Behörden verlangen textdurchsuchbare PDFs, sodass eine reine Bilddatei abgelehnt werden kann; prüfen Sie die Regeln, bevor Sie einreichen.</div>
+
+<div class="expert-quote"><blockquote>Wir haben unser Tool gebaut, um einen Scan-Look hinzuzufügen, und die häufigste Frage, die wir bekommen, lautet eigentlich: „Was habe ich gerade erzeugt?“ Die ehrliche Antwort ist ein reines Bild-PDF. Es sieht aus wie Papier, aber die Wörter sind Pixel. Wenn ein Leser es durchsuchen oder vorlesen lassen muss, behalten Sie das digitale Original daneben, oder führen Sie danach OCR aus. Wir möchten lieber, dass Menschen das wissen, bevor sie auf Herunterladen klicken.</blockquote><cite><strong>Das Team von Make PDF look scanned</strong> — Entwickler des Web-Tools und der Chrome-Erweiterung</cite></div>
+
+<h2 id="scanned-document-glossary">Glossar für gescannte Dokumente: Welche Begriffe zählen?</h2>
+<p>Ein gescanntes Dokument bringt sein eigenes Vokabular mit: dpi und ppi, Farbtiefe, bitonal, OCR, rastern, PDF/A und JBIG2. Diese sieben Begriffe zu kennen, reicht aus, um jede Scan-Anforderung von einem Gericht, einer Behörde oder einem Arbeitgeber zu lesen und ein erhaltenes gescanntes PDF einzuschätzen.</p>
+
+<dl class="spec-list">
+<dt>dpi / ppi</dt><dd>Punkte oder Pixel pro Zoll: wie viele Bildproben einen Zoll Papier abdecken. NARA verlangt mindestens 300 ppi für moderne Textdokumente und 400 ppi für Fotografien und Aufnahmen mit feinen Details. Die PDF-Seitengeometrie nutzt 72 Punkte pro Zoll, weshalb ein 1×-Render 72 dpi entspricht.</dd>
+<dt>Farbtiefe</dt><dd>Bits pro Pixel. Bitonal ist 1 Bit, Graustufen sind 8 Bit (256 Abstufungen), und ein typischer Farbscan hat 24 Bit (8 Bit in jedem der drei Kanäle).</dd>
+<dt>Bitonal</dt><dd>FADGIs Definition: „Digitale Bilder, die nur mit zwei Farben erzeugt werden, Schwarz und Weiß.“ Das kleinste noch lesbare Format für reinen Text.</dd>
+<dt>OCR</dt><dd>Optische Zeichenerkennung: Software, die die Buchstabenformen in einem Bild in Maschinentext umwandelt und so ein durchsuchbares PDF erzeugt.</dd>
+<dt>Rastern</dt><dd>Vektortext und -formen in ein Pixelraster umwandeln. Ein digitales PDF zu rastern macht daraus ein reines Bild-PDF.</dd>
+<dt>PDF/A</dt><dd>ISO 19005, die Archiv-Teilmenge von PDF, veröffentlicht 2005; sie verbietet Funktionen wie Verschlüsselung und Schriftverknüpfung.</dd>
+<dt>JBIG2</dt><dd>Eine Kompressionsmethode für bitonale Scans, die wiederholte Symbole nur einmal speichert. BBC News berichtete 2013, dass manche Bürokopierer mit einem verlustbehafteten JBIG2-Modus Ziffern in Scans veränderten, oft eine 6 zu einer 8; in einem Test wurde aus einer Raumbreite von 21,11 m 14,13 m.</dd>
+<dt>Reines Bild-PDF</dt><dd>Ein gescanntes PDF ganz ohne Textebene.</dd>
+<dt>Durchsuchbares PDF</dt><dd>Ein PDF mit echtem oder OCR-Text, das durchsucht und ausgewählt werden kann.</dd>
+</dl>
+
+<p>Der JBIG2-Fall ist das stärkste Argument dafür, Originale zu behalten. Eine eingescannte Kopie ist ein Bild, und Bilder können durch Kompression verändert werden, ohne dass es jemand bemerkt (<a href="https://www.bbc.com/news/technology-23588202" target="_blank" rel="noopener">BBC News, 2013</a>). NARA behandelt Rauschen ebenfalls als unerwünschtes Artefakt, „nicht Teil des Quellmaterials“ (<a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">36 CFR 1236 Subpart E</a>).</p>
+
+<h2 id="faq">Gescanntes PDF: Was fragen Menschen sonst noch?</h2>
+<p>Diese Fragen zu gescannten PDFs kommen am häufigsten von Menschen, die eine Datei erhalten haben, eine eingescannte Kopie senden müssen oder eine Gerichts- oder Behördenregel erfüllen müssen. Jede Antwort steht für sich, sodass Sie direkt zu der springen können, die zu Ihrer Situation passt, und danach handeln.</p>
+
+<div class="faq-item"><p class="faq-q">Was ist ein gescanntes PDF einfach erklärt?</p><p class="faq-a">Ein gescanntes PDF ist ein PDF aus Fotos von Papierseiten. Der Text, den Sie sehen, ist Teil eines Bildes, sodass Sie ihn nicht auswählen oder durchsuchen können, außer OCR wurde angewendet.</p></div>
+<div class="faq-item"><p class="faq-q">Ist ein gescanntes PDF dasselbe wie eine eingescannte Kopie?</p><p class="faq-a">Fast. Eine eingescannte Kopie ist jedes digitale Bild eines Papierdokuments, und ein gescanntes PDF ist das gängigste Dateiformat, um eine zu liefern. Eine eingescannte Kopie kann auch ein JPEG oder TIFF sein.</p></div>
+<div class="faq-item"><p class="faq-q">Wie erkenne ich in 10 Sekunden, ob ein PDF gescannt ist?</p><p class="faq-a">Versuchen Sie, ein Wort auszuwählen, drücken Sie dann Strg+F oder Cmd+F und suchen Sie nach einem Wort, das Sie sehen. Markiert sich nichts und findet die Suche nichts, ist das PDF ein reiner Bild-Scan. Zoomen Sie zur Bestätigung auf 400 %: gescannter Text wirkt pixelig.</p></div>
+<div class="faq-item"><p class="faq-q">Kann ein gescanntes PDF durchsuchbar sein?</p><p class="faq-a">Ja. OCR fügt hinter den Seitenbildern eine unsichtbare Textebene hinzu und macht so aus einem gescannten PDF ein durchsuchbares PDF. Die Seite sieht weiterhin wie ein Scan aus, und im versteckten Text können falsch erkannte Wörter auftauchen.</p></div>
+<div class="faq-item"><p class="faq-q">Warum kann ich aus meinem PDF keinen Text kopieren?</p><p class="faq-a">Das PDF ist höchstwahrscheinlich ein Scan ohne OCR, es gibt also keine Zeichen zum Kopieren. Das FAQ des Gerichts im Südlichen Bezirk von Florida stellt dasselbe fest: Ist ein PDF nicht textdurchsuchbar, kann sein Text nicht kopiert werden. Führen Sie OCR aus oder fragen Sie nach dem digitalen Original.</p></div>
+<div class="faq-item"><p class="faq-q">Sind gescannte PDFs für Screenreader zugänglich?</p><p class="faq-a">Nicht ohne OCR. Die W3C-Richtlinie nennt reine Bild-Scans von Natur aus nicht barrierefrei. Nach OCR können Screenreader den Text vorlesen, aber volle Barrierefreiheit braucht zusätzlich Tags für Überschriften, Lesereihenfolge und Tabellen.</p></div>
+<div class="faq-item"><p class="faq-q">Warum ist ein gescanntes PDF so groß?</p><p class="faq-a">Jede Seite ist ein vollständiges Bild. Eine Graustufenseite bei 400 ppi kann über 1 MB liegen, während eine Textseite aus einer Textverarbeitung oft unter 50 KB liegt. Scannen bei 300 ppi in Graustufen oder Schwarz-Weiß hält die Größe niedrig.</p></div>
+<div class="faq-item"><p class="faq-q">Welche Auflösung sollte ein gescanntes Dokument haben?</p><p class="faq-a">Für getippten oder gedruckten Text sind 300 dpi die Standardanforderung bei US-Bundesgerichten und das NARA-Minimum für Textdokumente. Fotos und feine Details verlangen 400 ppi.</p></div>
+<div class="faq-item"><p class="faq-q">Ist eine eingescannte Kopie eine rechtsgültige oder beglaubigte Kopie?</p><p class="faq-a">Nein, eine eingescannte Kopie allein beweist nichts über Echtheit. Eine beglaubigte Kopie wird von einer Fachperson unterschrieben und datiert, die das Original gesehen hat, wie GOV.UK erklärt. Fragen Sie den Anforderer, welche Art er braucht.</p></div>
+<div class="faq-item"><p class="faq-q">Kann ich ein digitales PDF wie ein gescanntes PDF aussehen lassen?</p><p class="faq-a">Ja. Das kostenlose <a href="/scan">Make PDF look scanned-Tool</a> rastert jede Seite und fügt in Ihrem Browser Drehung, Unschärfe, Rauschen und Papierton hinzu. Die Ausgabe ist ein reines Bild-PDF, behalten Sie also das Original, wenn Sie Suche brauchen.</p></div>
+<div class="faq-item"><p class="faq-q">Muss ein gescanntes PDF ein PDF/A sein?</p><p class="faq-a">Nur, wenn der Anforderer es verlangt. Manche Gerichte und Archive verlangen PDF/A für die Langzeitspeicherung. Ein gescanntes PDF kann als PDF/A gespeichert werden, im Idealfall mit OCR, damit es auch durchsuchbar ist.</p></div>
+<div class="faq-item"><p class="faq-q">Kann ich mehrere PDFs auf einmal scannen?</p><p class="faq-a">Mit unserem Tool ja: <a href="/scan/bulk">Stapelscan</a> verarbeitet mehrere Dateien und lädt sie als ein ZIP herunter, mit einem gescannten PDF pro Eingabedatei.</p></div>
+
+<h2 id="verdict">Was ist die kurze Antwort zu gescannten PDFs?</h2>
+<p>Ein gescanntes PDF ist ein Bild von Papier, verpackt in ein PDF. Testen Sie es, indem Sie Text auswählen und suchen, fügen Sie OCR hinzu, wenn Sie Suche oder Barrierefreiheit brauchen, senden Sie ein digital erstelltes PDF, wenn ein Gericht es bevorzugt, und nutzen Sie einen Scan-Look nur, wenn es dem Leser um das Aussehen geht, nicht um die Echtheit.</p>
+
+<p>Wenn es Ihnen um das Aussehen geht, öffnen Sie das <a href="/scan">kostenlose Scan-Tool</a>, behalten Sie den Standard-Farbraum Graustufen und die Auflösung 2×, und prüfen Sie die Vorschau, bevor Sie herunterladen.</p>

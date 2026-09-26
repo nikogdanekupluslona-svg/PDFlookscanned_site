@@ -1,3 +1,4 @@
+import i18n from '@/locale'
 import { imageToPdf } from './image-to-pdf'
 import { textToPdf } from './text-to-pdf'
 
@@ -47,19 +48,19 @@ export async function normalizeToPdf(file: File): Promise<File> {
 
   if (ext === 'docx') {
     const text = await docxToText(file)
-    if (!text) throw new Error('This Word file has no readable text')
+    if (!text) throw new Error(i18n.global.t('errors.wordNoText'))
     return textToPdf(text, file.name)
   }
 
   if (ext === 'xlsx' || ext === 'xls' || ext === 'csv') {
     const text = await spreadsheetToText(file)
-    if (!text) throw new Error('This spreadsheet is empty')
+    if (!text) throw new Error(i18n.global.t('errors.sheetEmpty'))
     return textToPdf(text, file.name)
   }
 
   if (ext === 'html' || ext === 'htm') {
     const text = await htmlToText(file)
-    if (!text) throw new Error('This HTML file has no readable text')
+    if (!text) throw new Error(i18n.global.t('errors.htmlNoText'))
     return textToPdf(text, file.name)
   }
 
@@ -67,5 +68,5 @@ export async function normalizeToPdf(file: File): Promise<File> {
     return textToPdf(await file.text(), file.name)
   }
 
-  throw new Error('This file type is not supported yet')
+  throw new Error(i18n.global.t('errors.unsupportedType'))
 }

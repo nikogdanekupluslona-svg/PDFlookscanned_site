@@ -1,0 +1,199 @@
+<p class="lead">Värillinen PDF muunnetaan mustavalkoiseksi avaamalla ilmainen <a href="/scan">selaintyökalu</a>, pitämällä Väriavaruus-asetuksena Harmaasävy, asettamalla kohina, sumennus ja kierto nollaan ja lataamalla tiedosto. Macissa käytä Esikatselun Vie-toimintoa Quartz-suotimen kanssa; Windowsissa tulosta harmaasävyasetuksella. Harmaasävy säilyttää 256 harmaan sävyä; puhdas mustavalkoinen vain kaksi.</p>
+<p>Värillinen PDF on usein väärä tiedostomuoto tehtävään: sen tulostaminen on kallista, se latautuu hitaasti tuomioistuinten ja koulujen verkkopalveluihin, ja lomake saattaa vaatia mustavalkoisen kopion. Tämä opas käy läpi viisi ilmaista tapaa muuntaa PDF mustavalkoiseksi, mitä kukin tapa tekee tekstille ja tiedostokoolle, sekä milloin harmaasävy piilottaa tietoa.</p>
+<p>Tuotetiedot tulevat omasta työkalustamme; loput lähteet ovat Applen ja Microsoftin tukisivut, liittovaltion digitointiohjeet, Yhdysvaltain tuomioistuimet ja yliopistokirjastot – kaikki linkitettynä suoraan tekstiin.</p>
+<nav class="toc" aria-label="Table of contents"><h2>Sisällys</h2><ol>
+<li><a href="#quick-answer">Miten värillinen PDF muunnetaan mustavalkoiseksi</a></li>
+<li><a href="#grayscale-vs-bw">Harmaasävy-PDF vs. mustavalkoinen PDF: mitä eroa niillä on?</a></li>
+<li><a href="#browser-tool">Tapa 1: PDF mustavalkoiseksi selaimessa</a></li>
+<li><a href="#tool-settings">Millä työkalun asetuksilla saat siistin harmaasävy-PDF:n?</a></li>
+<li><a href="#mac-preview">Tapa 2: PDF mustavalkoiseksi Macilla</a></li>
+<li><a href="#windows-print">Tapa 3: PDF mustavalkoiseksi Windowsissa</a></li>
+<li><a href="#chrome-edge">Tapa 4: Tallenna mustavalkoinen PDF Chromesta tai Edgestä</a></li>
+<li><a href="#print-and-scan">Tapa 5: Tulosta harmaasävyllä ja skannaa mustavalkoinen PDF</a></li>
+<li><a href="#comparison">Millä tavalla värillinen PDF kannattaa muuntaa mustavalkoiseksi?</a></li>
+<li><a href="#file-size">Onko harmaasävy-PDF pienempi kuin värillinen PDF?</a></li>
+<li><a href="#printing-cost">Maksaako mustavalkoisen PDF:n tulostaminen vähemmän?</a></li>
+<li><a href="#when-grayscale-fails">Milloin harmaasävy-PDF menettää tietoa?</a></li>
+<li><a href="#checks">Miten tarkistat mustavalkoisen PDF:n ennen lähetystä</a></li>
+<li><a href="#faq">PDF mustavalkoiseksi: usein kysytyt kysymykset</a></li>
+</ol></nav>
+
+<h2 id="quick-answer">Miten värillinen PDF muunnetaan mustavalkoiseksi</h2>
+<p>Värillinen PDF muunnetaan mustavalkoiseksi piirtämällä jokainen sivu uudelleen ilman väri-informaatiota. Selaintyökalu, macOS:n Esikatselu, tulostusikkuna tai fyysinen tulostin voi kukin tehdä tämän. Nopein ilmainen reitti on harmaasävymuunnos selaimessa, joka vie muutaman sekunnin eikä vaadi asennusta tai käyttäjätiliä.</p>
+<p>Alla esitellyt viisi tapaa eroavat kolmessa käytännön asiassa: pysyykö teksti valittavana, onko lopputulos aitoa kaksisävyistä mustavalkoista vai harmaasävyä, ja kuinka suureksi tiedosto kasvaa. Valitse tapa sen mukaan, mitä vastaanottaja tarvitsee – ei tottumuksen perusteella.</p>
+<ul>
+<li><strong>Selaintyökalu</strong> (mikä tahansa käyttöjärjestelmä): harmaasävysivut, yksityinen, toimii ilman verkkoyhteyttä ensimmäisen latauksen jälkeen, mutta sivuista tulee kuvia.</li>
+<li><strong>macOS:n Esikatselu</strong>: Quartz-suodin viennissä, sisäänrakennettuna jokaisessa Macissa.</li>
+<li><strong>Windowsin tulostusikkuna</strong>: harmaasävy, kun tulostimen ohjain tai sovellus tarjoaa sen.</li>
+<li><strong>Chromen tai Edgen tulostusikkuna</strong>: Väri-asetus, kun valittu kohde tukee sitä.</li>
+<li><strong>Tulosta ja skannaa</strong>: aito paperikopio harmaasävynä, skannattuna takaisin PDF:ksi.</li>
+</ul>
+<div class="callout callout-tip"><strong>Onko kiire?</strong>Avaa <a href="/scan">skanneri</a>, pudota PDF:si sinne, jätä Väriavaruus-asetukseksi Harmaasävy, siirrä Kohina, Sumennus ja Kierto nollaan ja napsauta latausta. Saat siistin harmaasävy-PDF:n alkuperäisellä asettelulla.</div>
+
+<h2 id="grayscale-vs-bw">Harmaasävy-PDF vs. mustavalkoinen PDF: mitä eroa niillä on?</h2>
+<p>Harmaasävy-PDF tallentaa jokaisen pikselin yhtenä monista harmaan sävyistä, tavallisesti 256 sävynä 8 bitillä. Aito mustavalkoinen PDF, jota kutsutaan myös kaksisävyiseksi tai 1-bittiseksi, tallentaa jokaisen pikselin joko puhtaan mustana tai puhtaan valkoisena. Suurin osa niistä, jotka pyytävät "mustavalkoista", haluaa itse asiassa harmaasävyn, joka pitää valokuvat ja sävyerot luettavina.</p>
+<p>Federal Agencies Digital Guidelines Initiative (FADGI) määrittelee molemmat termit tarkasti ohjeessaan <a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">Technical Guidelines for Digitizing Cultural Heritage Materials</a>: "Kaksisävyinen (bitonal): digitaalisia kuvia, jotka on tuotettu käyttäen vain kahta väriä, mustaa ja valkoista." ja "Harmaasävy: digitaalisia kuvia, jotka on tuotettu käyttäen harmaan sävyjä valkoisen ja mustan väliltä."</p>
+<p>Bittisyvyys selittää eron tarkkoina lukuina. <a href="https://en.wikipedia.org/wiki/Binary_image" target="_blank" rel="noopener">Wikipedian artikkelin binäärikuvista</a> mukaan kaksitasoinen kuva tallentaa jokaisen pikselin yhtenä bittinä. 8-bittisellä harmaasävypikselillä on 256 mahdollista arvoa; <a href="https://en.wikipedia.org/wiki/Image_scanner" target="_blank" rel="noopener">kuvanlukijoiden historiaa käsittelevä artikkeli</a> mainitsee, että 8-bittinen skannaus eli 256 harmaan sävyä saapui pöytäskannereihin vuonna 1989.</p>
+<div class="table-wrap"><table><caption>Värillinen, harmaasävyinen ja kaksisävyinen PDF-sivu vertailussa</caption><thead><tr><th scope="col">Sivutyyppi</th><th scope="col">Bittiä per pikseli</th><th scope="col">Sävyjä per pikseli</th><th scope="col">Sopii parhaiten</th></tr></thead><tbody>
+<tr><th scope="row">Värillinen (RGB)</th><td>24</td><td>Noin 16,7 miljoonaa väriä</td><td>Valokuvat, kaaviot, väriset leimat</td></tr>
+<tr><th scope="row">Harmaasävy</th><td>8</td><td>256 harmaan sävyä</td><td>Sekoitus tekstiä ja kuvia, tulostus, useimmat "mustavalkoista" pyytävät tilanteet</td></tr>
+<tr><th scope="row">Kaksisävyinen (aito mustavalkoinen)</th><td>1</td><td>2 (musta tai valkoinen)</td><td>Pelkkä konekirjoitettu teksti, oikeuslaitosten sähköinen jättö, faksin näköiset kopiot</td></tr>
+</tbody></table></div>
+<p>24-bittinen värillinen pikseli koostuu 8 bitistä jokaista väriä kohden – punaista, vihreää ja sinistä –, minkä vuoksi tavallista värillistä skannausta kutsutaan 24-bittiseksi <a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">liittovaltion arkistointisäännöissä (36 CFR 1236)</a>. Harmaasävy pudottaa kaksi näistä kanavista. Kaksisävyinen menee vielä pidemmälle ja hylkää kaikki harmaan sävyt, joten ohuet harmaat viivat, lyijykynämerkinnät ja valokuvan yksityiskohdat voivat kadota tai muuttua kohinaksi.</p>
+<p>Lyhyesti: jos PDF sisältää valokuvia, logoja, kaavioita tai vaaleita allekirjoituksia, valitse harmaasävy. Jos kyseessä on pelkkä konekirjoitettu teksti ja vastaanottaja vaatii mahdollisimman pienen tiedoston, kaksisävyinen kelpaa, mutta tarkista jokainen sivu muunnoksen jälkeen.</p>
+
+<h2 id="browser-tool">Tapa 1: PDF mustavalkoiseksi selaimessa</h2>
+<p>Ilmainen selaintyökalumme muuntaa värillisen PDF:n mustavalkoiseksi piirtämällä jokaisen sivun harmaasävynä ja tallentamalla sivut uuteen PDF-tiedostoon. Työ tapahtuu paikallisesti pdf.js:n ja canvasin avulla, joten tiedostoa ei lähetetä käsittelypalvelimelle. Se toimii Windowsissa, macOS:ssä, ChromeOS:ssä, Linuxissa ja mobiiliselaimissa.</p>
+<p>Työkalu on rakennettu tekemään PDF:istä skannatun näköisiä, minkä vuoksi sen oletusasetukset lisäävät kevyttä kohinaa, sumennusta ja pientä kallistusta. Kun nämä efektit asetetaan nollaan, sama moottori muuttuu siistiksi harmaasävymuuntimeksi. Jätä oletusasetukset päälle, jos haluat kopion näyttävän siltä kuin se olisi tullut toimiston kopiokoneesta.</p>
+<ol class="step-list">
+<li><strong>Avaa työkalu.</strong> Siirry osoitteeseen <a href="/scan">pdflookscanned.com/scan</a> Chromella, Edgellä, Safarilla tai Firefoxilla. Rekisteröitymistä ei tarvita, ja ensimmäisen latauksen jälkeen sivu toimii myös ilman verkkoyhteyttä.</li>
+<li><strong>Lisää värillinen PDF.</strong> Vedä tiedosto sivulle tai napsauta valitaksesi sen. Ensimmäisen sivun reaaliaikainen esikatselu ilmestyy muutamassa sekunnissa.</li>
+<li><strong>Jätä Väriavaruus-asetukseksi Harmaasävy.</strong> Harmaasävy on oletusasetus, joten tuore istunto tuottaa jo harmaasävy-PDF:n. Vaihda Värilliseksi vain, jos haluat säilyttää alkuperäiset värit.</li>
+<li><strong>Poista skannausefektit.</strong> Aseta Kohina nollaan, Sumennus nollaan, Kierto 0° ja Kierron vaihtelu 0°. Jätä Kellertävyys nollaan ja Reunus pois päältä, jotta sivu pysyy neutraalin harmaana valkoisella pohjalla.</li>
+<li><strong>Säädä kontrastia tarvittaessa.</strong> Kontrasti ja Kirkkaus vaihtelevat välillä 0–2, ja 1 on neutraali arvo. Nosta Kontrastia noin arvoon 1,2–1,4, kun vaalea värillinen teksti muuttuu harmaasävyssä kalpeaksi.</li>
+<li><strong>Valitse tarkkuus.</strong> 2× (noin 144 dpi) sopii näytöltä lukemiseen ja useimpiin latauksiin. Käytä 3× (noin 216 dpi), kun teksti on pientä tai aiot tulostaa asiakirjan.</li>
+<li><strong>Lataa PDF.</strong> Napsauta latausta, avaa lopputulos ja selaa jokainen sivu läpi ennen lähettämistä.</li>
+</ol>
+<p>Kokonaiselle tiedostokansiolle <a href="/scan/bulk">joukkoskannaus</a> soveltaa samat asetukset useaan PDF-tiedostoon ja palauttaa ne yhtenä ZIP-arkistona. Chrome-laajennus tarjoaa saman moottorin sivupaneelissa, jos muunnat tiedostoja usein.</p>
+<div class="callout callout-info"><strong>Mikä tiedostossa muuttuu</strong>Työkalu rasteroi jokaisen sivun: teksti, vektoriviivat ja kuvat muuttuvat yhdeksi harmaasävyiseksi JPEG-kuvaksi per sivu uuden PDF:n sisällä. Kopio näyttää oikealta, mutta sen teksti ei ole enää valittavissa tai haettavissa. Jos tarvitset elävää tekstiä, käytä alla olevia Esikatselu- tai tulostusreittejä, tai säilytä värillinen alkuperäinen hakua varten.</div>
+
+<h2 id="tool-settings">Millä työkalun asetuksilla saat siistin harmaasävy-PDF:n?</h2>
+<p>Siisti harmaasävy-PDF syntyy, kun Väriavaruus on Harmaasävy ja jokainen skannausefekti on nollassa: Kohina 0, Sumennus 0, Kierto 0°, Kierron vaihtelu 0°, Kellertävyys 0, Reunus pois. Kirkkaus ja Kontrasti pysyvät arvossa 1, ellei vaalea teksti tarvitse apua. Tarkkuus 2× on tasapainoinen oletusarvo koon ja terävyyden kannalta.</p>
+<dl class="spec-list">
+<dt>Väriavaruus</dt><dd>Harmaasävy (oletus). Tuottaa harmaasävysivuja, ei 1-bittisiä kaksisävyisiä sivuja.</dd>
+<dt>Kohina</dt><dd>0 siistiä kopiota varten; oletus 0,1 lisää kevyttä skannerin rakeisuutta.</dd>
+<dt>Sumennus</dt><dd>0 terävää tekstiä varten; oletus 0,3 pehmentää reunoja tasoskannerin tapaan.</dd>
+<dt>Kierto / Kierron vaihtelu</dt><dd>0° ja 0° suorille sivuille; oletusarvot ovat 1° ja 0,5°.</dd>
+<dt>Kirkkaus</dt><dd>1 on neutraali; vaihteluväli 0–2. Nosta hieman, jos haluat vaalentaa harmaan taustan.</dd>
+<dt>Kontrasti</dt><dd>1 on neutraali; vaihteluväli 0–2. Nosta arvoon 1,2–1,4 tummentaaksesi vaaleaa värillistä tekstiä.</dd>
+<dt>Kellertävyys</dt><dd>0 pitää paperin valkoisena; korkeammat arvot lisäävät lämpimän paperin sävyn.</dd>
+<dt>Tarkkuus</dt><dd>1×–3× 0,5 välein; 2× ≈ 144 dpi, 3× ≈ 216 dpi.</dd>
+</dl>
+<p>Kopiokoneen näköistä tulosta varten jätä oletukset voimaan: Harmaasävy, Kohina 0,1, Sumennus 0,3, Kierto 1°, vaihtelu 0,5°. Tätä asetusta useimmat tarkoittavat, kun he haluavat PDF:n, joka näyttää tulostetulta ja mustavalkoisena skannatulta. Oppaamme <a href="/blog/scan-effect/">skannausefektistä</a> selittää jokaisen jäljen ja valmisasetuksen yksityiskohtaisesti.</p>
+<p>Työkalu ei pysty tuottamaan aitoa 1-bittistä tiedostoa. Korkea kontrasti (noin 1,6–2) työntää sivut kohti jyrkkää kaksisävyistä ilmettä, mutta pikselit tallentuvat silti harmaasävyisenä JPEG-kuvana. Jos verkkopalvelu vaatii nimenomaan kaksisävyisiä kuvia, käytä skanneria mustavalkoisessa tilassa, kuten Tavassa 5 kuvataan.</p>
+
+<h2 id="mac-preview">Tapa 2: PDF mustavalkoiseksi Macilla</h2>
+<p>Macilla PDF muunnetaan mustavalkoiseksi Esikatselulla, koneen sisäänrakennetulla PDF-katselimella. Avaa tiedosto, valitse Arkisto → Vie, valitse Quartz-suodin kuten Mustavalkoinen tai Harmaasävy, ja tallenna uudella nimellä. Erillistä latausta tai lisäohjelmaa ei tarvita, ja vienti kestää muutaman sekunnin.</p>
+<p>Apple dokumentoi tämän suoraan <a href="https://support.apple.com/guide/preview/add-effects-to-a-pdf-prvw1510/mac" target="_blank" rel="noopener">Esikatselun käyttöoppaassa</a>: "Voit muokata Esikatselussa avattua PDF:ää Quartz-suotimilla, jotka lisäävät efektejä tai muuttavat värejä. Voit esimerkiksi muuntaa värillisen asiakirjan mustavalkoiseksi tai lisätä seepiasävyn."</p>
+<ol>
+<li>Avaa värillinen PDF Esikatselussa (kaksoisnapsauta tiedostoa tai valitse Avaa toisella sovelluksella → Esikatselu).</li>
+<li>Valitse Arkisto → Vie. Älä käytä Vie PDF:nä -toimintoa, koska sillä valikolla ei ole Quartz-suodin-valikkoa.</li>
+<li>Varmista, että muoto on asetettu PDF:ksi.</li>
+<li>Avaa Quartz-suodin-valikko ja valitse Mustavalkoinen tai Harmaasävy.</li>
+<li>Anna tiedostolle uusi nimi, kuten "lasku-mv.pdf", jotta värillinen alkuperäinen säilyy, ja napsauta sitten Tallenna.</li>
+</ol>
+<h3>Mustavalkoinen vai Harmaasävy Esikatselussa?</h3>
+<p>Molemmat Esikatselun suotimet poistavat värit, mutta ne tulkitsevat sävyt eri tavoin. Mustavalkoinen antaa yleensä kovemman, kontrastisemman sivun, jossa vaaleat värit voivat kadota kokonaan, kun taas Harmaasävy säilyttää pehmeämmät harmaat sävyt, jotka sopivat valokuville ja kaavioille. Vie tiedosto kertaalleen kummallakin suotimella ja vertaa niitä rinnakkain, jos asiakirjassa on värillistä grafiikkaa.</p>
+<p>Koska suodin sovelletaan PDF-viennin yhteydessä eikä sivua valokuvaamalla, konekirjoitettu teksti pysyy yleensä valittavana ja haettavana. Vahvista tämä komennolla Command-F näkyvästä sanasta. Esikatselussa on myös Pienennä tiedostokokoa -suodin; Applen <a href="https://support.apple.com/guide/preview/reduce-a-pdfs-file-size-prvw1509/mac" target="_blank" rel="noopener">sivu PDF:ien pienentämisestä</a> huomauttaa, että se voi heikentää laatua, joten käytä sitä vasta harmaasävytuloksen tarkistamisen jälkeen.</p>
+
+<h2 id="windows-print">Tapa 3: PDF mustavalkoiseksi Windowsissa</h2>
+<p>Windowsissa PDF muunnetaan mustavalkoiseksi tulostamalla se sisäänrakennettuun Microsoft Print to PDF -tulostimeen harmaasävy- tai mustavalkoasetus päällä. Kompastuskivi on, että asetus näkyy vain, jos sovellus tai tulostinajuri tarjoaa sen, joten jotkin kokoonpanot tulostavat silti värillisenä.</p>
+<p>Microsoftin oma ohje <a href="https://support.microsoft.com/en-us/office/print-in-black-and-white-59939d05-2f88-4712-a4e5-384be412c0bf" target="_blank" rel="noopener">mustavalkoisena tulostamisesta Wordista</a> neuvoo avaamaan Tiedosto → Tulosta → Tulostimen ominaisuudet ja "valitsemaan asetukset värillistä, harmaasävyistä tai mustavalkoista tulostusta varten". Sama sivu huomauttaa, että saatavilla olevat asetukset riippuvat tulostinmallista ja sen ajurista.</p>
+<ol>
+<li>Avaa PDF sovelluksessa, jota tavallisesti käytät sen katseluun, tai avaa lähdeasiakirja (Word, Excel), jos se on vielä tallella.</li>
+<li>Paina Ctrl+P ja valitse tulostimeksi Microsoft Print to PDF.</li>
+<li>Etsi ikkunasta Väri-, Väritila- tai Harmaasävy-asetus, tai napsauta Tulostimen ominaisuudet / Asetukset ja tarkista sieltä.</li>
+<li>Valitse Mustavalkoinen tai Harmaasävy, napsauta Tulosta ja nimeä uusi PDF, kun Windows kysyy tallennuspaikkaa.</li>
+<li>Avaa tallennettu tiedosto ja varmista, että värit ovat todella poissa.</li>
+</ol>
+<div class="callout callout-warn"><strong>Jos harmaasävyasetusta ei löydy</strong>Microsoft Print to PDF on yksinkertainen ajuri, ja monella koneella sen ominaisuudet näyttävät vain suunnan ja paperikoon. Kun väriasetusta ei näy, tuloste säilyttää värit. Käytä sen sijaan Edgen tulostusikkunaa Tavassa 4 tai <a href="/scan">selaintyökalua</a> Tavassa 1.</div>
+<p>Kun tulostusreitti toimii, sovelluksen piirtämä teksti säilyy yleensä tekstinä, joten mustavalkoinen PDF pysyy haettavana. Jos aloitit Word-tiedostosta, tulostaminen suoraan Wordista säilyttää asettelun paremmin kuin tulostaminen PDF-katselimesta.</p>
+
+<h2 id="chrome-edge">Tapa 4: Tallenna mustavalkoinen PDF Chromesta tai Edgestä</h2>
+<p>Chrome ja Edge voivat avata PDF:n ja tulostaa sen uudelleen, ja niiden tulostuksen esikatselussa on Väri-asetus kohteille, jotka tukevat sitä. Valitse Mustavalkoinen, kun asetus näkyy, ja tallenna tai tulosta. Näkyykö Väri-valinta PDF-kohteelle, riippuu selaimen versiosta ja valitusta tulostimesta.</p>
+<p>Microsoftin <a href="https://support.microsoft.com/en-us/edge/print-in-microsoft-edge" target="_blank" rel="noopener">Edgen tulostusopas</a> listaa Väri-asetuksen, jossa on valinnat Väri ja Mustavalkoinen Edgen tulostusikkunassa. Chromen tulostuksen esikatselu tarjoaa vastaavan Väri-valikon monille tulostimille. Sisäänrakennetulle Tallenna PDF-muodossa -kohteelle Väri-valikko kuitenkin puuttuu usein, eikä mikään muutu.</p>
+<ol>
+<li>Vedä värillinen PDF Chrome- tai Edge-ikkunaan, jolloin se avautuu sisäänrakennetussa katselimessa.</li>
+<li>Paina Ctrl+P (Command-P Macilla) avataksesi tulostuksen esikatselun.</li>
+<li>Valitse kohde: Tallenna PDF-muodossa, tai Microsoft Print to PDF Windowsissa.</li>
+<li>Avaa Lisää asetuksia tarvittaessa ja etsi Väri. Jos se löytyy, valitse Mustavalkoinen ja katso esikatselun muuttuvan harmaaksi.</li>
+<li>Jos esikatselu pysyy värillisenä, kohde ei tue vaihtoa; käytä eri reittiä.</li>
+<li>Napsauta Tallenna tai Tulosta ja nimeä uusi tiedosto.</li>
+</ol>
+<p>Esikatselupaneeli on testi: jos se muuttuu harmaaksi ennen tallennusta, myös tallennettu PDF on harmaa. Selaintulostus myös rakentaa sivut uudelleen, joten alkuperäisen lomakekentät, linkit ja kirjanmerkit eivät välttämättä säily. Säilytä värillinen alkuperäinen, jos näillä on merkitystä.</p>
+
+<h2 id="print-and-scan">Tapa 5: Tulosta harmaasävyllä ja skannaa mustavalkoinen PDF</h2>
+<p>Vanha kunnon tapa on tulostaa värillinen PDF harmaasävynä fyysisellä tulostimella ja skannata paperi takaisin skannerin ollessa Mustavalkoinen- tai Harmaasävy-tilassa. Menetelmä on hidas ja kuluttaa paperia ja väriainetta, mutta se on ainoa reitti, joka tuottaa aidon 1-bittisen kaksisävyisen skannauksen.</p>
+<p>Skannereissa ja monitoimitulostimissa on yleensä kolme väritilaa: Väri, Harmaasävy ja Mustavalkoinen (joskus nimellä Teksti tai Monokromi). Mustavalkoinen tila on kaksisävyinen asetus, jota oikeuslaitosten järjestelmät vaativat.</p>
+<p>Yhdysvaltain Middle District of North Carolina -piirituomioistuin selittää syyn <a href="https://www.ncmd.uscourts.gov/sites/ncmd/files/ecfprocman.pdf" target="_blank" rel="noopener">CM/ECF-menettelyoppaassaan</a>: "Koska värillisenä tai grafiikkaa sisältävänä skannatut asiakirjat latautuvat huomattavasti hitaammin, jättävien osapuolten on asetettava skannerinsa skannaamaan asiakirjat 300 dpi:n tarkkuudella ja mustavalkoisena värillisen sijaan."</p>
+<ol>
+<li>Tulosta PDF tulostimen Harmaasävy- tai Mustavalkoinen-asetus päällä.</li>
+<li>Aseta sivut skanneriin tai asiakirjansyöttölaitteeseen.</li>
+<li>Aseta väritila (Mustavalkoinen konekirjoitetulle tekstille, Harmaasävy valokuville) ja 300 dpi.</li>
+<li>Skannaa PDF:ksi ja tarkista jokainen sivu vinouden, katkenneiden reunojen ja haalistuneiden kohtien varalta.</li>
+</ol>
+<p>Lopputulos on kuva paperista, joten sen teksti ei ole haettavissa, ellei skannerin ohjelmisto aja tekstintunnistusta (OCR). Se kantaa myös aitoja skannerin jälkiä: pientä kallistusta, pölyä ja epätasaista harmaata. Jos haluat vain tämän ilmeen ilman paperia, <a href="/blog/pdf-to-scanned-pdf/">PDF skannatuksi PDF:ksi -opas</a> näyttää, miten sen toistaa digitaalisesti.</p>
+
+<h2 id="comparison">Millä tavalla värillinen PDF kannattaa muuntaa mustavalkoiseksi?</h2>
+<p>Paras tapa muuntaa värillinen PDF mustavalkoiseksi riippuu järjestelmästäsi ja siitä, mitä vastaanottaja tarvitsee. Selaintyökalu toimii kaikkialla ja antaa yhdenmukaisen harmaasävyn, Esikatselu on nopein Macilla, tulostusreitit säilyttävät haettavan tekstin, kun se on mahdollista, ja tulosta-ja-skannaa on ainoa aidosti kaksisävyinen vaihtoehto.</p>
+<div class="table-wrap"><table><caption>Viisi tapaa muuntaa värillinen PDF mustavalkoiseksi vertailussa</caption><thead><tr><th scope="col">Tapa</th><th scope="col">Järjestelmät</th><th scope="col">Pysyykö teksti valittavana?</th><th scope="col">Harmaasävy vai aito mustavalkoinen</th><th scope="col">Tiedostokoko</th><th scope="col">Nopeus</th></tr></thead><tbody>
+<tr><th scope="row">1. Selaintyökalu</th><td>Mikä tahansa käyttöjärjestelmä ja moderni selain, myös mobiili</td><td>Ei (sivuista tulee kuvia)</td><td>Harmaasävy</td><td>Ennustettava; määräytyy tarkkuudesta 1×–3×</td><td>Sekunteja per tiedosto; joukkoajo ZIP:nä</td></tr>
+<tr><th scope="row">2. Esikatselun Quartz-suodin</th><td>Vain macOS</td><td>Yleensä kyllä</td><td>Harmaasävy (Mustavalkoinen-suodin on kontrastisempi)</td><td>Vaihtelee; voi kutistua tai kasvaa</td><td>Sekunteja</td></tr>
+<tr><th scope="row">3. Microsoft Print to PDF</th><td>Windows</td><td>Yleensä kyllä</td><td>Harmaasävy, jos ajuri tarjoaa sen</td><td>Lähellä alkuperäistä</td><td>Sekunteja, kun asetus löytyy</td></tr>
+<tr><th scope="row">4. Chrome / Edge -tulostus</th><td>Windows, macOS, ChromeOS, Linux</td><td>Yleensä kyllä</td><td>Harmaasävy, jos kohde tukee Väriä</td><td>Lähellä alkuperäistä</td><td>Sekunteja</td></tr>
+<tr><th scope="row">5. Tulosta ja skannaa</th><td>Mikä tahansa, plus tulostin ja skanneri</td><td>Ei, ellei OCR aja</td><td>Aito 1-bittinen mustavalkoinen tai harmaasävy</td><td>Pieni mustavalkoisena, suuri harmaasävynä</td><td>Minuutteja per asiakirja</td></tr>
+</tbody></table></div>
+<p>"Yleensä kyllä" tarkoittaa, että reitti päästää olemassa olevan tekstin läpi, mutta jo valmiiksi skannatussa PDF:ssä ei ole tekstiä säilytettäväksi. Tee aina nopea haku lopputuloksesta varmistaaksesi asian.</p>
+<p>Yksinkertainen nyrkkisääntö: jos tarvitset haettavaa tekstiä, aloita Tavasta 2, 3 tai 4. Jos tarvitset jotain, joka toimii aina, millä tahansa laitteella, samalla tuloksella joka kerta, käytä Tapaa 1. Jos verkkopalvelu vaatii kaksisävyistä kuvaa, käytä Tapaa 5.</p>
+
+<h2 id="file-size">Onko harmaasävy-PDF pienempi kuin värillinen PDF?</h2>
+<p>Harmaasävy-PDF on yleensä pienempi kuin samat sivut värillisenä, ja aito mustavalkoinen PDF on vielä huomattavasti pienempi, koska jokainen pikseli vie 8 bittiä tai 1 bitin 24 bitin sijaan. PDF:issä, jotka sisältävät enimmäkseen tekstiä eivätkä kuvia, harmaasävyn tuoma säästö voi jäädä pieneksi.</p>
+<p>Yhdysvaltain Northern District of California -piirituomioistuin julkaisi osuvan vertailun <a href="https://cand.uscourts.gov/cases-e-filing/cmecf-information/preparing-your-cmecf-filing" target="_blank" rel="noopener">CM/ECF-jättöjen valmisteluoppaassaan</a>. 317-sivuinen asiakirja, joka skannattiin kaksisävyisenä 300 ppi:n tarkkuudella, oli 23,86 Mt ja pysyi luettavana; sama asiakirja harmaasävynä 400 ppi:n tarkkuudella oli 374,47 Mt, eli noin 15,7 kertaa suurempi.</p>
+<div class="stats-grid">
+<div class="stat-card"><span class="stat-number">23,86 Mt</span><span class="stat-label">317 sivua, kaksisävyinen 300 ppi (N.D. Cal.)</span></div>
+<div class="stat-card"><span class="stat-number">374,47 Mt</span><span class="stat-label">Samat sivut harmaasävynä 400 ppi (N.D. Cal.)</span></div>
+<div class="stat-card"><span class="stat-number">~15,7×</span><span class="stat-label">Kokoero näiden kahden skannauksen välillä</span></div>
+</div>
+<p>Kaksi tekijää selittää eron: bittisyvyys ja tarkkuus. Tuomioistuimen harmaasävyversio käytti myös korkeampaa tarkkuutta, joten osa erosta johtuu 400 ppi:n ja 300 ppi:n välisestä erosta. Opetus pitää silti paikkansa: kaksisävyiset tiedostot ovat dramaattisesti pienempiä, minkä vuoksi Western District of Washington varoittaa <a href="https://www.wawd.uscourts.gov/attorneys/cm-ecf-faqs/Technical" target="_blank" rel="noopener">CM/ECF-teknisessä UKK:ssaan</a>, että "skannaaminen korkeammalla tarkkuudella voi aiheuttaa hidastumista tai aikakatkaisuja latauksen aikana".</p>
+<p>Työkalullamme tarkkuus vaikuttaa enemmän kuin väritila. Tekstipainotteinen PDF, joka muunnetaan tarkkuudella 1× tai 1,5×, tuottaa paljon pienemmän tiedoston kuin 3×, koska jokainen sivu tallentuu JPEG-kuvana, jonka pikselimäärä kasvaa mittakaavan neliössä. Jos alkuperäinen PDF on jo pieni, sen muuntaminen kuviksi saattaa kasvattaa tiedostoa pienentämisen sijaan.</p>
+
+<h2 id="printing-cost">Maksaako mustavalkoisen PDF:n tulostaminen vähemmän?</h2>
+<p>Mustavalkoinen PDF maksaa yleensä vähemmän tulostaa siellä, missä tulostuksesta laskutetaan sivukohtaisesti. Yliopistokirjastot julkaisevat eron avoimesti: värilliset sivut maksavat tyypillisesti noin kaksi ja puoli - kolme kertaa mustavalkoisen hinnan. Kotona säästö riippuu tulostimesta ja väriaineesta, joten yhtä yleispätevää lukua ei ole.</p>
+<div class="table-wrap"><table><caption>Julkaistut sivukohtaiset tulostushinnat, mustavalkoinen vs. värillinen</caption><thead><tr><th scope="col">Kirjasto</th><th scope="col">Mustavalkoinen</th><th scope="col">Värillinen</th><th scope="col">Värillinen vs. mustavalkoinen</th></tr></thead><tbody>
+<tr><th scope="row"><a href="https://libanswers.med.utah.edu/faq/174028" target="_blank" rel="noopener">Utahin yliopiston terveystieteiden kirjasto</a> (tilanne 1.12.2025)</th><td>8¢</td><td>25¢</td><td>Noin 3,1×</td></tr>
+<tr><th scope="row"><a href="https://libanswers.etsu.edu/faq/40850" target="_blank" rel="noopener">East Tennessee State Universityn kirjasto</a></th><td>10¢</td><td>25¢</td><td>2,5×</td></tr>
+</tbody></table></div>
+<p>Näillä hinnoilla 40-sivuisen värillisen monisteen tulostaminen maksaa 10,00 dollaria värillisenä ja 3,20–4,00 dollaria mustavalkoisena. Monet kampusten ja toimistojen tulostusjärjestelmät veloittavat värihinnan mistä tahansa sivusta, jolla on väriä – vaikka kyseessä olisi pieni sininen logo – joten täysi harmaasävymuunnos ennen tulostusta välttää yllättävät kulut.</p>
+<p>Tiedoston muuntaminen on luotettavampaa kuin "mustavalkoinen"-ruudun rastittaminen tulostimella, kun lähetät PDF:n jollekulle toiselle, kopiointiliikkeeseen tai jaettuun tulostusjonoon. Vastaanottajan oletusasetuksilla ei enää ole väliä, koska tulostettavaa väriä ei ole jäljellä.</p>
+
+<h2 id="when-grayscale-fails">Milloin harmaasävy-PDF menettää tietoa?</h2>
+<p>Harmaasävy-PDF menettää tietoa aina, kun merkitys riippuu väristä: korostetut kohdat, punaiset leimat tai korjaukset, värikoodatut kaaviot, kartat ja liikennevalotaulukot. Väriltään samankirkkaudeltaan lähellä toisiaan olevat sävyt, kuten punainen ja vihreä, muuttuvat lähes samaksi harmaaksi, joten ero katoaa yksinkertaisesti muunnoksen jälkeen.</p>
+<p>Ongelma on kirkkaus, ei sävy. Harmaasävy säilyttää vain sen, kuinka vaalea tai tumma kukin väri on. Keltainen korostuskynän jälki on hyvin vaalea, joten se usein katoaa valkoiseen paperiin; kylläinen punainen ja keskivihreä voivat päätyä lähes samaan harmaaseen; sininen linkki voi näyttää tavalliselta mustalta tekstiltä.</p>
+<h3>Kontrastivinkkejä väriselle korostukselle, leimoille ja kaavioille</h3>
+<ul>
+<li><strong>Keltaiset korostukset:</strong> nosta Kontrasti noin arvoon 1,3 ja laske Kirkkautta hieman (0,9) työkalussa, jotta korostus pysyy näkyvänä harmaana kaistana.</li>
+<li><strong>Punaiset leimat ja allekirjoitukset:</strong> punainen muuttuu usein keskiharmaaksi. Nosta Kontrastia ja tarkenna esikatselua varmistaaksesi, että leiman teksti pysyy luettavana.</li>
+<li><strong>Kaaviot ja käyrät:</strong> jos sarjat erottuvat toisistaan vain värillä, muokkaa lähdettä lisäämällä kuvioita, merkkejä tai suoria selitteitä ja vie sitten uusi PDF ennen muuntamista.</li>
+<li><strong>Kartat ja lämpökartat:</strong> säilytä värillinen kopio tai lähetä molemmat versiot, koska liukuvärit selviävät harmaasävystä harvoin.</li>
+<li><strong>Vaalea teksti:</strong> vaaleanharmaa tai pastellinvärinen teksti valkoisella pohjalla voi haalistua; Kontrasti 1,2–1,4 tuo sen yleensä takaisin.</li>
+</ul>
+<p>Sama sääntö on saavutettavuuden peruslähtökohta. W3C:n <a href="https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html" target="_blank" rel="noopener">ohjeistus värin käytöstä</a> toteaa, ettei väri saa olla ainoa visuaalinen keino tiedon välittämiseen, ja harmaasävytesti on nopea tapa löytää kohdat, joissa asiakirja rikkoo tätä sääntöä.</p>
+<p>Kaksisävyinen muunnos on vielä ankarampi. Jokainen pikseli muuttuu mustaksi tai valkoiseksi kynnysarvon perusteella, joten kevyt varjostus, harmaat taustat ja valokuvat voivat muuttua läiskiksi tai kadota kokonaan. Tarkista valokuvat, kirjelomakkeiden logot ja allekirjoitukset sivu sivulta, kun verkkopalvelu pakottaa 1-bittisen tulosteen.</p>
+
+<h2 id="checks">Miten tarkistat mustavalkoisen PDF:n ennen lähetystä</h2>
+<p>Tarkista mustavalkoinen PDF avaamalla se 100 %:n zoomaustasolla ja selaamalla jokainen sivu, hakemalla näkyvää sanaa, vertaamalla sivumäärää alkuperäiseen ja katsomalla tiedostokokoa. Viisi minuuttia tarkistusta estää hylätyn latauksen tai lomakkeen, jossa on lukukelvoton leima.</p>
+<ol>
+<li><strong>Sivumäärä:</strong> muunnetussa tiedostossa pitäisi olla täsmälleen yhtä monta sivua kuin alkuperäisessä.</li>
+<li><strong>Luettavuus:</strong> zoomaa 100 %:iin tai enemmän pienimmässä painoksessa, alaviitteissä ja allekirjoituksissa.</li>
+<li><strong>Väristä riippuva sisältö:</strong> katso läpi jokainen korostus, kaavion selite ja leima yllä olevasta listasta.</li>
+<li><strong>Hakutesti:</strong> paina Ctrl+F tai Command-F ja hae näkyvää sanaa. Osuma tarkoittaa, että teksti on elävää; osuman puuttuminen tarkoittaa, että sivut ovat kuvia, kuten ne ovat selaintyökalun jälkeen. Oppaamme <a href="/blog/what-is-a-scanned-pdf/">skannatusta PDF:stä</a> selittää eron.</li>
+<li><strong>Tiedostokoko:</strong> vertaa sitä verkkopalvelun rajaan ennen latausta, ei sen jälkeen.</li>
+</ol>
+<div class="callout callout-warn"><strong>Käytä rehellisesti</strong>Mustavalkoiseksi muuntaminen tai skannausilmeen lisääminen muuttaa sitä, miltä tiedosto näyttää, ei sitä, onko se aito. Älä käytä sitä muuttaaksesi tai väärentääksesi virallisia asiakirjoja, henkilöllisyystodistuksia tai allekirjoituksia, jotka eivät ole omiasi. Jotkin tuomioistuimet ja viranomaiset vaativat tekstihakuisia PDF-tiedostoja, mikä sulkee pois pelkkiin kuviin perustuvat sivut, joten tarkista jättösäännöt ennen lähettämistä.</div>
+<p>Tekstin haettavuudella on väliä muutenkin kuin jättösääntöjen kannalta. W3C:n <a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF7" target="_blank" rel="noopener">PDF7-tekniikka</a> toteaa, että "asiakirja, joka koostuu skannatuista tekstikuvista, on luonnostaan saavuttamaton, koska sen sisältö on kuvia, ei haettavaa tekstiä". Jos saavutettavuus on pakollista, suosi reittiä, joka säilyttää tekstin, tai aja OCR pelkkiin kuviin perustuvalle tulokselle.</p>
+<div class="expert-quote"><blockquote>Useimmat, jotka kysyvät meiltä, miten värillinen PDF muunnetaan mustavalkoiseksi, tarvitsevat harmaasävyn, eivät aitoa 1-bittistä mustavalkoista. Pidämme Harmaasävyn oletusväriavaruutena, koska se toimii hyvin näytöllä ja tulostuu siististi, ja kerromme suoraan, että työkalumme muuttaa sivut kuviksi. Jos tarvitset haettavaa tekstiä, käytä Esikatselua tai tulostusreittiä; jos tarvitset saman tuloksen millä tahansa laitteella, käytä selainta.</blockquote><cite><strong>Make PDF look scanned -tiimi</strong> — verkkotyökalun ja Chrome-laajennuksen tekijät</cite></div>
+
+<h2 id="faq">PDF mustavalkoiseksi: usein kysytyt kysymykset</h2>
+<p>Nämä vastaukset kattavat kysymykset, joita ihmiset kysyvät useimmin muuntaessaan värillistä PDF:ää mustavalkoiseksi: ilmaiset vaihtoehdot, puhelimet, harmaasävy vai kaksisävyinen tuloste, haettava teksti, tiedostokoko, tulostus ja yksityisyys. Jokainen vastaus on lyhyt ja viittaa yllä olevaan osioon, jossa on täydet vaiheet ja lähteet.</p>
+<div class="faq-item"><p class="faq-q">Miten muunnan värillisen PDF:n mustavalkoiseksi ilmaiseksi?</p><p class="faq-a">Avaa ilmainen <a href="/scan">selaintyökalu</a>, jätä Väriavaruus-asetukseksi Harmaasävy, aseta Kohina, Sumennus ja Kierto nollaan ja lataa lopputulos. Macilla Esikatselun Vie-toiminto Quartz-suotimella on myös ilmainen. Windowsissa tulostusikkuna harmaasävyasetuksella toimii, kun ajurisi tarjoaa sellaisen.</p></div>
+<div class="faq-item"><p class="faq-q">Onko harmaasävy sama asia kuin mustavalkoinen?</p><p class="faq-a">Ei. Harmaasävy tallentaa jopa 256 harmaan sävyä pikseliä kohden 8 bitillä, kun taas aito mustavalkoinen (kaksisävyinen) tallentaa vain mustan tai valkoisen 1 bitillä. Arkikielessä "mustavalkoinen PDF" tarkoittaa yleensä harmaasävyä, joka pitää valokuvat ja sävyerot luettavina.</p></div>
+<div class="faq-item"><p class="faq-q">Pysyykö tekstini haettavana muunnoksen jälkeen?</p><p class="faq-a">Esikatselulla ja useimmilla tulosta-PDF:ksi-reiteillä konekirjoitettu teksti pysyy yleensä valittavana ja haettavana. Selaintyökalumme rasteroi sivut, joten tekstistä tulee osa kuvaa eikä sitä voi enää hakea tai kopioida. Testaa lopputulos komennolla Ctrl+F tai Command-F.</p></div>
+<div class="faq-item"><p class="faq-q">Miten muunnan PDF:n harmaasävyksi Macilla?</p><p class="faq-a">Avaa PDF Esikatselussa, valitse Arkisto → Vie, avaa Quartz-suodin-valikko ja valitse Harmaasävy tai Mustavalkoinen, ja tallenna uudella nimellä. Harmaasävy säilyttää pehmeämmän sävytyksen; Mustavalkoinen on kontrastisempi.</p></div>
+<div class="faq-item"><p class="faq-q">Miksi Microsoft Print to PDF säilyttää värini?</p><p class="faq-a">Harmaasävyasetus riippuu sovelluksesta ja tulostinajurista, ja Microsoft Print to PDF näyttää usein vain suunnan ja paperikoon. Ilman väriasetusta tuloste pysyy värillisenä. Käytä sen sijaan Edgen tulostusikkunaa tai selaintyökalua.</p></div>
+<div class="faq-item"><p class="faq-q">Voinko muuntaa värillisen PDF:n mustavalkoiseksi puhelimella?</p><p class="faq-a">Kyllä. Työkalumme verkkosivuversio toimii mobiiliselaimissa iPhonessa ja Androidissa, ja käsittely tapahtuu puhelimessa itsessään. Avaa skannaussivu, valitse PDF Tiedostoista, jätä Harmaasävy päälle ja lataa muunnettu kopio.</p></div>
+<div class="faq-item"><p class="faq-q">Pienentääkö mustavalkoiseksi muuntaminen PDF:n tiedostokokoa?</p><p class="faq-a">Usein, mutta ei aina. Kaksisävyiset skannaukset ovat paljon pienempiä kuin harmaasävyiset: Northern District of Californian testi mittasi 23,86 Mt vastaan 374,47 Mt samoille 317 sivulle. Alkuperäinen tekstipainotteinen PDF voi kasvaa, kun se muutetaan sivukuviksi, joten vertaa kokoja muunnoksen jälkeen.</p></div>
+<div class="faq-item"><p class="faq-q">Osaako selaintyökalu tehdä aitoa 1-bittistä mustavalkoista?</p><p class="faq-a">Ei. Työkalu tuottaa harmaasävyisiä JPEG-sivuja. Korkeat Kontrasti-arvot saavat sivut näyttämään jyrkiltä ja kaksisävyisiltä, mutta pikselit ovat silti harmaasävyä. Aitoa kaksisävyistä tiedostoa varten skannaa paperi skannerin Mustavalkoinen-tilassa.</p></div>
+<div class="faq-item"><p class="faq-q">Miksi keltaiset korostukseni katosivat?</p><p class="faq-a">Harmaasävy säilyttää vain kirkkauden, ja keltainen on lähes yhtä vaalea kuin valkoinen paperi, joten korostukset haalistuvat pois. Nosta Kontrasti noin arvoon 1,3 ja laske Kirkkautta hieman, tai alleviivaa tärkeät kohdat uudelleen ennen muuntamista.</p></div>
+<div class="faq-item"><p class="faq-q">Lähetetäänkö PDF:ni palvelimelle, kun käytän selaintyökalua?</p><p class="faq-a">Ei. Sivut piirretään ja muunnetaan paikallisesti selaimessasi pdf.js:n ja canvasin avulla, eikä tiedostoja lähetetä käsittelypalvelimelle. Ensimmäisen käynnin jälkeen työkalu toimii myös ilman verkkoyhteyttä.</p></div>
+<div class="faq-item"><p class="faq-q">Voinko tehdä mustavalkoisesta PDF:stä myös skannatun näköisen?</p><p class="faq-a">Kyllä. Jätä Väriavaruus-asetukseksi Harmaasävy ja pidä oletusarvot Kohina 0,1, Sumennus 0,3 ja 1° kierto kopiokoneen näköistä tulosta varten. Pilarioppaamme <a href="/blog/how-to-make-a-pdf-look-scanned/">PDF skannatun näköiseksi</a> vertailee kuutta menetelmää ja valmisasetusta.</p></div>
+<div class="faq-item"><p class="faq-q">Miten muunnan monta värillistä PDF:ää mustavalkoiseksi kerralla?</p><p class="faq-a">Käytä <a href="/scan/bulk">joukkoskannausta</a>: lisää useita PDF-tiedostoja, sovella Harmaasävyä skannausefektien ollessa nollassa ja lataa kaikki muunnetut tiedostot yhtenä ZIP-arkistona. Myös Chrome-laajennus hyväksyy useita tiedostoja kerralla.</p></div>

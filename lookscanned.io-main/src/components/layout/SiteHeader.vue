@@ -1,14 +1,18 @@
 <template>
   <header class="site-header">
     <div class="inner">
-      <RouterLink class="brand" to="/">{{ t('base.title') }}</RouterLink>
+      <RouterLink class="brand" :to="localePath('/')">{{ t('base.title') }}</RouterLink>
       <nav class="nav" aria-label="Primary">
-        <RouterLink to="/" :class="{ active: route.name === 'index' }">{{ t('base.nav.home') }}</RouterLink>
-        <RouterLink to="/scan" :class="{ active: isScan }">{{ t('base.nav.scan') }}</RouterLink>
-        <RouterLink to="/scan/bulk" :class="{ active: route.name === 'bulk' }">{{ t('base.nav.bulk') }}</RouterLink>
-        <a href="/blog/">Guides</a>
+        <RouterLink :to="localePath('/')" :class="{ active: route.name === 'index' }">{{ t('base.nav.home') }}</RouterLink>
+        <RouterLink :to="localePath('/scan')" :class="{ active: isScan }">{{ t('base.nav.scan') }}</RouterLink>
+        <RouterLink :to="localePath('/scan/bulk')" :class="{ active: route.name === 'bulk' }">{{
+          t('base.nav.bulk')
+        }}</RouterLink>
+        <a :href="localePath('/blog/')">{{ t('base.nav.guides') }}</a>
       </nav>
-      <ChromeExtensionBadge />
+      <LanguageSwitcher class="lang" />
+      <ChromeExtensionBadge class="badge" />
+      <span class="row-break" aria-hidden="true" />
     </div>
   </header>
 </template>
@@ -18,9 +22,12 @@ import { computed } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import ChromeExtensionBadge from './ChromeExtensionBadge.vue'
+import LanguageSwitcher from './LanguageSwitcher.vue'
+import { useLanguage } from '@/composables/use-language'
 
 const { t } = useI18n()
 const route = useRoute()
+const { localePath } = useLanguage()
 const isScan = computed(() => route.name === 'scan' || route.name === 'scan-canvas' || route.name === 'scan-magica')
 </script>
 
@@ -62,6 +69,7 @@ const isScan = computed(() => route.name === 'scan' || route.name === 'scan-canv
   color: #b8b8c2;
   text-decoration: none;
   font-size: 14px;
+  white-space: nowrap;
 }
 
 .nav a.active,
@@ -69,7 +77,12 @@ const isScan = computed(() => route.name === 'scan' || route.name === 'scan-canv
   color: #ffffff;
 }
 
+.row-break {
+  display: none;
+}
+
 @media (max-width: 720px) {
+  /* Row 1: brand + Chrome badge; row 2: navigation + language switcher */
   .inner {
     flex-wrap: wrap;
     padding: 10px 12px;
@@ -77,13 +90,30 @@ const isScan = computed(() => route.name === 'scan' || route.name === 'scan-canv
   }
 
   .brand {
+    flex: 1;
     font-size: 13px;
   }
 
-  .nav {
+  .badge {
+    order: 2;
+  }
+
+  .row-break {
+    display: block;
     order: 3;
-    width: 100%;
-    justify-content: flex-start;
+    flex-basis: 100%;
+    height: 0;
+  }
+
+  .nav {
+    order: 4;
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .lang {
+    order: 5;
   }
 }
 </style>

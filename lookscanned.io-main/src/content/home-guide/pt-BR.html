@@ -1,0 +1,115 @@
+<section class="home-guide" aria-labelledby="hg-what">
+  <h2 id="hg-what">O que significa fazer um PDF parecer escaneado?</h2>
+  <p>Fazer um PDF parecer escaneado é transformar um arquivo digital limpo em imagens de página com as marcas de um scanner de escritório de verdade: leve inclinação, granulação, foco suave, tom de papel cinza ou creme e texto que não pode ser selecionado. O resultado continua sendo um PDF comum, mas cada página agora é uma imagem, exatamente como um documento que passou por um scanner de mesa.</p>
+  <p>Esta ferramenta faz isso no seu navegador em menos de um minuto. Você solta um PDF, uma foto ou um arquivo do Word, ajusta o efeito de scanner com prévia ao vivo e baixa o PDF com cara de escaneado. Não importa se você buscou por fazer PDF parecer escaneado, deixar PDF com cara de escaneado online ou fazer PDF parecer digitalizado: a tarefa e os passos são os mesmos.</p>
+
+  <h2 id="hg-steps">Como fazer PDF parecer escaneado online em 3 passos</h2>
+  <p>Fazer um PDF parecer escaneado online leva três passos e, em geral, de 20 a 60 segundos para um arquivo de 10 páginas: escolher o arquivo, ajustar o efeito de scanner acompanhando a prévia e exportar. Nada precisa ser instalado, não é preciso criar conta, e a página continua funcionando offline depois de carregada.</p>
+  <ol class="step-list">
+    <li><strong>Escolha um arquivo.</strong> Abra <a href="/scan">o scanner</a> e solte um arquivo PDF, JPG, PNG, WebP, SVG, DOCX, XLSX, CSV, TXT, MD ou HTML. Arquivos do Word, do Excel e de texto são convertidos primeiro em páginas de texto simples; para manter o layout exato, salve o documento como PDF antes de escanear.</li>
+    <li><strong>Ajuste o efeito de scanner.</strong> Mova os controles deslizantes de ruído, desfoque, rotação, brilho, contraste e tom amarelado do papel, alterne entre cinza e colorido e adicione uma borda fina de scanner. A prévia é atualizada a cada controle que você move.</li>
+    <li><strong>Baixe o PDF escaneado.</strong> Clique em Gerar PDF escaneado. Cada página é renderizada como imagem com as suas configurações e salva em um novo PDF, que é baixado na hora.</li>
+  </ol>
+  <p>Tem uma pilha de arquivos? A opção <a href="/scan/bulk">Escanear em lote</a> aplica as mesmas configurações a vários documentos de uma vez e junta os resultados em um único arquivo ZIP.</p>
+
+  <h2 id="hg-settings">Quais configurações deixam o PDF com cara de escaneado real?</h2>
+  <p>Um escaneamento realista vem de valores pequenos, não de valores fortes. Os padrões — rotação de 1°, variação aleatória de 0,5° por página, desfoque 0,3, ruído 0,1, escala de cinza e resolução 2× — já parecem uma digitalização de escritório. Levar todos os controles ao máximo gera um resultado com cara de editado, e não de escaneado.</p>
+  <div class="table-wrap">
+    <table>
+      <caption>Controles do efeito de scanner, suas faixas e os valores que parecem naturais</caption>
+      <thead><tr><th scope="col">Controle</th><th scope="col">Faixa</th><th scope="col">Padrão</th><th scope="col">Valor com aparência natural</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Rotação</th><td>−10° a 10°</td><td>1°</td><td>0,5°–2°; acima de 3° parece descuido</td></tr>
+        <tr><th scope="row">Variação da rotação</th><td>0°–10°</td><td>0,5°</td><td>0,3°–1°, para que as páginas não fiquem com a mesma inclinação</td></tr>
+        <tr><th scope="row">Desfoque</th><td>0–1</td><td>0,3</td><td>0,2–0,4; o texto precisa continuar fácil de ler</td></tr>
+        <tr><th scope="row">Ruído</th><td>0–1</td><td>0,1</td><td>0,05–0,2 para a granulação do scanner</td></tr>
+        <tr><th scope="row">Brilho</th><td>0–2</td><td>1</td><td>0,95–1,1</td></tr>
+        <tr><th scope="row">Contraste</th><td>0–2</td><td>1</td><td>1–1,2 para um visual nítido de fotocópia</td></tr>
+        <tr><th scope="row">Amarelado</th><td>0–2</td><td>0</td><td>0,1–0,3 para papel mais antigo</td></tr>
+        <tr><th scope="row">Espaço de cor</th><td>Cinza ou Colorido</td><td>Cinza</td><td>Cinza para a maioria dos escaneamentos de escritório</td></tr>
+        <tr><th scope="row">Resolução</th><td>1×–3×</td><td>2×</td><td>2× (cerca de 144 dpi) equilibra nitidez e tamanho do arquivo</td></tr>
+        <tr><th scope="row">Borda</th><td>Sim ou Não</td><td>Não</td><td>Sim, para uma linha fina na borda, como a do scanner</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Para receitas passo a passo — escaneamento de escritório, fotocópia, estilo fax e papel envelhecido — veja o <a href="/blog/scan-effect/">guia de configurações do efeito de scanner</a>.</p>
+
+  <h2 id="hg-private">Fazer PDF parecer escaneado no navegador é privado?</h2>
+  <p>Sim. O efeito de scanner é renderizado no seu próprio dispositivo: a página lê o PDF com um mecanismo de PDF que roda no navegador, desenha cada página em um canvas, aplica ali o ruído, o desfoque e a rotação e monta o novo PDF localmente. Os arquivos não são enviados a um servidor de processamento nem armazenados na nuvem.</p>
+  <p>Você mesmo pode conferir: abra as ferramentas do desenvolvedor do navegador, vá até a guia Rede e faça um escaneamento. Nenhuma requisição leva o seu documento. Como o app é um aplicativo web progressivo (PWA), ele continua funcionando com o Wi-Fi desligado depois de carregado.</p>
+
+  <h2 id="hg-files">Quais arquivos você pode deixar com cara de escaneado?</h2>
+  <p>Você pode deixar um arquivo PDF com cara de escaneado, e também imagens, documentos do Word e do Excel e formatos de texto simples. PDFs de várias páginas mantêm a ordem das páginas, e cada página ganha uma leve inclinação aleatória própria, então o documento parece uma pilha de papel que passou pelo scanner uma folha de cada vez.</p>
+  <ul>
+    <li><strong>Documentos:</strong> PDF, DOCX (Word), XLSX (Excel), CSV, TXT, Markdown e HTML. PDFs mantêm o layout exato; arquivos do Word, do Excel e HTML viram páginas de texto limpo, então exporte-os para PDF antes quando a formatação importar.</li>
+    <li><strong>Imagens:</strong> JPG, PNG, WebP, SVG, GIF e BMP — cada imagem vira uma página de PDF escaneado. Saiba mais em <a href="/blog/image-to-scanned-pdf/">transformar imagem em PDF digitalizado</a>.</li>
+    <li><strong>Extras:</strong> marca d'água de texto ou imagem, sua própria imagem de carimbo ou assinatura com controles de posição e tamanho, e metadados do PDF editáveis, como título e autor.</li>
+  </ul>
+
+  <h2 id="hg-extension">Fazer PDF parecer escaneado online ou na extensão do Chrome?</h2>
+  <p>As duas opções usam o mesmo mecanismo de escaneamento e os mesmos controles. O site não precisa de instalação e funciona no celular; a extensão do Chrome, com nota 5 estrelas na Chrome Web Store, abre no painel lateral do navegador, para você fazer um PDF parecer escaneado sem sair da aba em que está trabalhando.</p>
+  <div class="table-wrap">
+    <table>
+      <caption>Ferramenta web comparada com a extensão do Chrome</caption>
+      <thead><tr><th scope="col">Recurso</th><th scope="col">Ferramenta web</th><th scope="col">Extensão do Chrome</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Instalação</th><td>Nenhuma</td><td>Um clique na Chrome Web Store</td></tr>
+        <tr><th scope="row">Funciona no celular</th><td>Sim</td><td>Não (Chrome para computador)</td></tr>
+        <tr><th scope="row">Controles de escaneamento</th><td>Ruído, desfoque, rotação, variação, brilho, contraste, amarelado, cinza/colorido, borda, resolução</td><td>Os mesmos</td></tr>
+        <tr><th scope="row">Vários arquivos em ZIP</th><td>Sim, com Escanear em lote</td><td>Sim, vários arquivos em um ZIP</td></tr>
+        <tr><th scope="row">Processamento</th><td>Local, no navegador</td><td>Local, no painel lateral</td></tr>
+        <tr><th scope="row">Preço</th><td>Grátis</td><td>Grátis</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="hg-uses">Por que fazer um PDF parecer escaneado?</h2>
+  <p>As pessoas fazem um PDF parecer escaneado quando um processo pressupõe papel: um locador, uma escola ou o RH pede uma "cópia digitalizada", a aparência de documento impresso e assinado combina melhor com o contexto, ou o arquivo não deve oferecer texto selecionável para copiar e colar. Designers também usam o efeito de scanner em mockups, zines e materiais com estilo vintage.</p>
+  <p>Um PDF com cara de escaneado também achata o conteúdo: texto, campos de formulário e camadas viram uma única imagem por página, então o arquivo abre do mesmo jeito em qualquer lugar. Se você só precisa desse achatamento, leia <a href="/blog/pdf-to-scanned-pdf/">converter PDF para PDF digitalizado</a>; se precisa de uma cópia simples em escala de cinza, veja <a href="/blog/convert-color-pdf-to-black-and-white/">como converter PDF colorido para preto e branco</a>.</p>
+  <div class="callout callout-warn"><strong>Use a aparência de escaneado com honestidade</strong>Um efeito de scanner muda a aparência de um documento, não o que ele é. Não o use para alterar ou fazer passar por verdadeiros registros oficiais, documentos de identidade ou assinaturas que não são seus. Alguns tribunais e órgãos públicos exigem PDFs com texto pesquisável, então confira as regras de envio antes de achatar uma petição em imagens.</div>
+
+  <h2 id="hg-methods">Fazer PDF parecer escaneado: ferramenta x outros métodos</h2>
+  <p>Há quatro formas comuns de fazer um PDF parecer escaneado: uma ferramenta de efeito de scanner no navegador, imprimir e escanear de verdade, fotografar a impressão com o celular ou editar as imagens das páginas em um editor de imagens rasterizadas. A ferramenta no navegador é a mais rápida e a mais consistente; as outras três levam mais tempo e dão menos controle.</p>
+  <div class="table-wrap">
+    <table>
+      <caption>Quatro formas de fazer um PDF parecer escaneado, comparadas</caption>
+      <thead><tr><th scope="col">Método</th><th scope="col">Tempo para 10 páginas</th><th scope="col">O que precisa</th><th scope="col">Controle sobre a aparência</th><th scope="col">Privacidade</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Ferramenta de efeito de scanner no navegador</th><td>Menos de 1 minuto</td><td>Um navegador</td><td>Cada imperfeição tem um controle deslizante e prévia ao vivo</td><td>Processamento local</td></tr>
+        <tr><th scope="row">Imprimir e depois escanear</th><td>10–20 minutos</td><td>Impressora, scanner, papel, toner</td><td>Imperfeições reais, mas impossíveis de ajustar</td><td>Depende de equipamentos compartilhados do escritório</td></tr>
+        <tr><th scope="row">Foto da impressão com o celular</th><td>5–15 minutos</td><td>Impressora e câmera do celular</td><td>Luz irregular, perspectiva e sombras</td><td>As fotos podem ir para o backup na nuvem</td></tr>
+        <tr><th scope="row">Editor de imagens rasterizadas</th><td>Mais de 30 minutos</td><td>Software de edição e prática</td><td>Total, mas manual, página por página</td><td>Local</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Um passo a passo completo de cada abordagem, incluindo as configurações exatas da caixa de diálogo de impressão, está em <a href="/blog/how-to-make-a-pdf-look-scanned/">como fazer um PDF parecer escaneado</a>.</p>
+
+  <h2 id="hg-check">Como conferir um PDF com cara de escaneado antes de enviar</h2>
+  <p>Um PDF com cara de escaneado convincente passa em quatro verificações rápidas: o texto não pode ser selecionado, as páginas estão levemente inclinadas e de forma desigual, o fundo não é o branco puro do digital e o arquivo fica bem maior que o original, porque cada página agora é uma imagem, e não texto.</p>
+  <ul>
+    <li><strong>Tente selecionar o texto.</strong> Arraste o cursor sobre uma linha. Em um escaneamento real e no resultado desta ferramenta, aparece um retângulo, e não palavras destacadas.</li>
+    <li><strong>Aplique zoom de 300–400%.</strong> As bordas das letras devem estar levemente suaves e o papel deve mostrar uma granulação discreta. Bordas vetoriais perfeitamente nítidas denunciam um arquivo digital.</li>
+    <li><strong>Compare duas páginas.</strong> A mesma inclinação em todas as páginas parece gerada por computador; mantenha a variação da rotação acima de 0.</li>
+    <li><strong>Imprima uma página.</strong> Se a cópia vai para o papel, confira se letras miúdas e assinaturas continuam legíveis depois do desfoque e do ruído.</li>
+  </ul>
+  <p>Se o destinatário precisa de texto pesquisável, a aparência de escaneado é o formato errado; entenda a diferença em <a href="/blog/what-is-a-scanned-pdf/">o que é PDF digitalizado</a>.</p>
+
+  <h2 id="hg-guides">Guias: como deixar um PDF com cara de escaneado</h2>
+  <p>Estes guias aprofundam cada forma de deixar um PDF com cara de escaneado, com configurações exatas, comparações entre métodos e verificações que você pode fazer no arquivo final antes de enviá-lo.</p>
+  <ul>
+    <li><a href="/blog/how-to-make-a-pdf-look-scanned/">Como fazer um PDF parecer escaneado: 6 métodos comparados</a></li>
+    <li><a href="/blog/make-a-document-look-scanned/">Documento com cara de escaneado: Word, Google Docs e fotos</a></li>
+    <li><a href="/blog/what-is-a-scanned-pdf/">O que é PDF digitalizado e como identificar um</a></li>
+    <li><a href="/blog/scan-effect/">Efeito de scanner: quais imperfeições fazem um arquivo parecer escaneado</a></li>
+  </ul>
+
+  <h2 id="hg-faq">Fazer PDF parecer escaneado: perguntas frequentes</h2>
+  <div class="faq-item"><p class="faq-q">Como faço um PDF parecer escaneado sem scanner?</p><p class="faq-a">Abra o scanner deste site, solte o PDF, mantenha as configurações padrão ou ajuste ruído, desfoque e rotação e clique em Gerar PDF escaneado. Cada página vira uma imagem inclinada, granulada e em escala de cinza, salva em um novo PDF. Não é preciso impressora, scanner nem conta.</p></div>
+  <div class="faq-item"><p class="faq-q">Esta ferramenta de efeito de scanner é grátis?</p><p class="faq-a">Sim. Escanear é grátis, não há cadastro e nenhuma marca d'água é adicionada, a menos que você mesmo coloque uma. A extensão do Chrome também é gratuita.</p></div>
+  <div class="faq-item"><p class="faq-q">Meus arquivos são enviados para algum lugar?</p><p class="faq-a">Não. Os arquivos são processados localmente no seu navegador e não são enviados a um servidor de processamento nem armazenados na nuvem. O app funciona até offline depois da primeira visita.</p></div>
+  <div class="faq-item"><p class="faq-q">O texto do PDF com cara de escaneado ainda pode ser selecionado?</p><p class="faq-a">Não. Cada página vira uma imagem, como em um escaneamento real, então o texto não pode ser selecionado, pesquisado nem copiado. Guarde o arquivo original se precisar de texto editável depois.</p></div>
+  <div class="faq-item"><p class="faq-q">Dá para fazer um PDF de várias páginas parecer escaneado?</p><p class="faq-a">Sim. Todas as páginas são processadas, e a configuração Variação da rotação dá a cada página uma inclinação um pouco diferente, para o documento não parecer perfeito demais, como se fosse feito por máquina. A opção Escanear em lote processa vários arquivos de uma vez.</p></div>
+  <div class="faq-item"><p class="faq-q">Posso deixar um documento do Word ou uma foto com cara de escaneado?</p><p class="faq-a">Sim. Arquivos DOCX, XLSX, CSV, TXT, Markdown e HTML e imagens JPG, PNG, WebP ou SVG são convertidos primeiro em páginas e depois recebem o mesmo efeito de scanner, gerando um PDF com cara de escaneado. Para um arquivo do Word com tabelas, logotipos ou formatação especial, salve-o como PDF antes para manter o layout exato.</p></div>
+  <div class="faq-item"><p class="faq-q">Qual resolução devo usar?</p><p class="faq-a">O padrão 2× (cerca de 144 dpi para uma página de PDF) é nítido o bastante para leitura e impressão e mantém o arquivo leve. Use 3× para documentos com letras miúdas e 1× quando o tamanho do arquivo for o mais importante.</p></div>
+  <div class="faq-item"><p class="faq-q">Funciona no celular?</p><p class="faq-a">Sim. O site roda nos navegadores de celular modernos sem instalar nada. A extensão do Chrome é para o Chrome no computador.</p></div>
+</section>

@@ -1,0 +1,241 @@
+<p class="lead">스캔 PDF는 컴퓨터로 입력한 텍스트와 벡터 도형이 아니라, 스캐너나 휴대폰 카메라로 찍은 종이 사진으로 페이지가 이루어진 PDF입니다. OCR(광학 문자 인식)로 숨은 텍스트 레이어를 추가하지 않는 한 글자를 선택하거나 검색하거나 복사할 수 없고, 스크린 리더도 페이지에서 아무것도 읽어 내지 못합니다.</p>
+
+<p>PDF를 받았는데 그 파일이 실제로 무엇인지 알아야 할 때가 있습니다. 워드 프로세서에서 내보낸 파일인지, 종이를 스캔한 파일인지, 텍스트 인식까지 마친 스캔 파일인지에 따라 검색할 수 있는지, 법원이나 기관이 받아 주는지, OCR이 필요한지가 달라집니다.</p>
+
+<p>이 글에서는 정확한 정의, 10초 테스트, 세 가지 PDF 비교, 용어집을 정리했습니다. 내용은 W3C 접근성 지침, 미국 연방법원, 미국 시민이민서비스국(USCIS), 미국 국립문서기록관리청(NARA)과 FADGI의 디지털화 규정, GOV.UK, 대학 접근성팀 자료, 그리고 스캔 효과 도구를 직접 만들며 알게 된 내용을 바탕으로 합니다.</p>
+
+<nav class="toc" aria-label="목차"><h2>목차</h2><ol>
+<li><a href="#what-is-a-scanned-pdf">스캔 PDF란 정확히 무엇인가요?</a></li>
+<li><a href="#scanned-pdf-vs-digital-pdf">스캔 PDF는 디지털 PDF와 어떻게 다른가요?</a></li>
+<li><a href="#scanned-copy-meaning">스캔본은 복사본과 무엇이 다른가요?</a></li>
+<li><a href="#how-to-tell-if-a-pdf-is-scanned">PDF가 스캔본인지 어떻게 알 수 있나요?</a></li>
+<li><a href="#accessibility-and-search">스캔 문서는 왜 검색하고 읽기 어려울까요?</a></li>
+<li><a href="#ocr-explained">OCR은 스캔 PDF에 무엇을 하나요?</a></li>
+<li><a href="#when-you-need-a-scanned-copy">기관은 언제 스캔본을 요구하나요?</a></li>
+<li><a href="#scanned-pdf-and-pdf-a">스캔 PDF를 PDF/A로 보관할 수 있나요?</a></li>
+<li><a href="#digital-pdf-to-scanned-look">디지털 PDF에 스캔 PDF 느낌을 내는 방법은?</a></li>
+<li><a href="#scanned-document-glossary">스캔 문서 용어집: 알아야 할 용어는?</a></li>
+<li><a href="#faq">스캔 PDF 자주 묻는 질문: 또 무엇이 궁금할까요?</a></li>
+<li><a href="#verdict">스캔 PDF, 한마디로 정리하면?</a></li>
+</ol></nav>
+
+<h2 id="what-is-a-scanned-pdf">스캔 PDF란 정확히 무엇인가요?</h2>
+<p>스캔 PDF는 실물 종이를 촬영하거나 스캔해 만든 래스터 이미지를 페이지마다 한 장씩 담은 PDF 컨테이너입니다. 눈에 보이는 글자는 문자가 아니라 픽셀입니다. 소프트웨어는 각 페이지를 사진처럼 다루므로, OCR 없이는 일반 텍스트 검색, 복사, 리플로우가 작동하지 않습니다.</p>
+
+<p>미국 캘리포니아 북부 연방지방법원은 국립문서기록관리청의 이관 지침을 인용해 이를 한 문장으로 정리합니다. "스캔된 텍스트는 디지털카메라나 스캐너로 만든, 인쇄된 페이지의 사진이다"(<a href="https://cand.uscourts.gov/cases-e-filing/cmecf-information/preparing-your-cmecf-filing" target="_blank" rel="noopener">캘리포니아 북부 연방지방법원, CM/ECF 제출 준비 안내</a>). PDF 형식 자체는 달라지지 않습니다. 스캔 PDF도 유효한 ISO 32000 파일입니다. 달라지는 것은 각 페이지 안에 무엇이 들어 있느냐입니다.</p>
+
+<p>제임스 매디슨 대학교 접근성팀은 읽는 사람의 관점에서 그 결과를 이렇게 설명합니다. "스캔한 문서의 PDF는 디지털 사진처럼 문서를 찍은 이미지에 불과한 경우가 많고, 대개 읽을 수 있는 텍스트가 들어 있지 않다"(<a href="https://www.jmu.edu/accessibility/digital-accessibility/guides/pdf/scanned-documents.shtml" target="_blank" rel="noopener">JMU 디지털 접근성 안내</a>). 이 한 가지 사실이 아래에서 다룰 실질적인 차이를 거의 모두 설명해 줍니다.</p>
+
+<p>다음은 기록 관리 담당자나 접근성 감사자가 파일을 살펴보는 방식 그대로, 정의를 확인 가능한 요소로 나눈 것입니다.</p>
+
+<dl class="spec-list">
+<dt>페이지 내용</dt><dd>글꼴 글리프와 벡터 경로가 아니라 페이지당 비트맵 이미지 한 장(JPEG, JBIG2, CCITT 또는 이와 비슷한 압축 방식).</dd>
+<dt>텍스트 레이어</dt><dd>이미지로만 된 PDF에는 없음. 검색 가능한 스캔 PDF에는 보이지 않는 OCR 레이어가 있음.</dd>
+<dt>출처</dt><dd>평판 스캐너나 자동 급지 스캐너, 복합기, 또는 운영체제에 스캔 기능이 내장된 휴대폰 카메라.</dd>
+<dt>일반적인 해상도</dt><dd>200~400 ppi. 사무용 텍스트에는 300 ppi가 가장 흔한 요구 사항입니다.</dd>
+<dt>색상 모드</dt><dd>순수 흑백(이진, 1비트), 회색조(8비트), 컬러(24비트).</dd>
+<dt>확대했을 때</dt><dd>높은 배율에서는 윤곽이 눈에 띄는 픽셀 블록으로 바뀝니다.</dd>
+<dt>파일 용량</dt><dd>보통 텍스트 PDF보다 페이지당 용량이 크며, 회색조나 컬러일 때 특히 큽니다.</dd>
+</dl>
+
+<h2 id="scanned-pdf-vs-digital-pdf">스캔 PDF는 디지털 PDF와 어떻게 다른가요?</h2>
+<p>스캔 PDF는 페이지의 사진을 저장하는 반면, 디지털 PDF는 소프트웨어에서 내보낸 실제 문자와 글꼴, 벡터 그래픽을 저장합니다. 세 번째 종류인, OCR을 적용한 스캔 PDF는 페이지 사진은 그대로 유지한 채 그 아래에 기계가 읽을 수 있는 숨은 텍스트를 추가해 검색 가능한 PDF로 만듭니다.</p>
+
+<p>매사추세츠 연방지방법원도 전자 제출 규정에서 같은 기준을 둡니다. 스캔 PDF는 종이를 광학 스캐너에 통과시켜 만들어지는 반면, "전자적으로 변환된" PDF는 워드 프로세서로 만들어져 텍스트 검색이 가능하다고 설명합니다(<a href="https://www.mad.uscourts.gov/caseinfo/pdf/ECFadminProc.pdf" target="_blank" rel="noopener">매사추세츠 연방지방법원, CM/ECF 행정 절차</a>). 아래 표는 세 종류를 나란히 비교한 것입니다.</p>
+
+<div class="table-wrap"><table><caption>PDF의 세 가지 종류: 디지털 PDF, 이미지로만 된 스캔 PDF, OCR을 적용한 스캔 PDF</caption>
+<thead><tr><th scope="col">속성</th><th scope="col">디지털 PDF</th><th scope="col">이미지로만 된 스캔 PDF</th><th scope="col">스캔 PDF + OCR(검색 가능)</th></tr></thead>
+<tbody>
+<tr><th scope="row">만드는 방법</th><td>워드, 구글 문서, 브라우저 등 여러 앱에서 PDF로 내보내거나 인쇄</td><td>스캐너, 복사기 또는 휴대폰 카메라</td><td>먼저 스캔한 뒤 OCR 소프트웨어로 텍스트 추가</td></tr>
+<tr><th scope="row">페이지에 담긴 내용</th><td>문자, 내장 글꼴, 벡터 선, 이미지</td><td>래스터 이미지 한 장</td><td>래스터 이미지 한 장과 숨은 텍스트</td></tr>
+<tr><th scope="row">텍스트 선택 및 복사</th><td>가능, 정확함</td><td>불가능</td><td>가능하지만 OCR 정확도만큼만</td></tr>
+<tr><th scope="row">Ctrl/Cmd+F 검색</th><td>작동함</td><td>아무것도 찾지 못함</td><td>작동하지만 잘못 인식된 단어는 놓칠 수 있음</td></tr>
+<tr><th scope="row">스크린 리더</th><td>읽을 수 있음, 태그가 있으면 가장 좋음</td><td>아무 소리도 내지 않음</td><td>읽을 수 있지만 구조가 없는 경우가 많음</td></tr>
+<tr><th scope="row">400%로 확대</th><td>어떤 크기에서도 선명한 윤곽</td><td>픽셀이 보임</td><td>픽셀이 보임</td></tr>
+<tr><th scope="row">페이지당 일반적인 용량</th><td>수십 KB</td><td>약 75 KB(이진)~1 MB 이상(회색조 또는 컬러)</td><td>이미지로만 된 버전과 같고 작은 텍스트 레이어가 추가됨</td></tr>
+<tr><th scope="row">종이처럼 보임</th><td>아니요</td><td>예</td><td>예</td></tr>
+</tbody></table></div>
+
+<p>표에 나온 페이지당 용량은 추측이 아니라 법원의 실측 결과에서 가져온 것입니다. 캘리포니아 북부 연방지방법원은 317페이지 문서를 스캔한 결과, 300 ppi 이진 스캔은 23.86 MB(페이지당 약 75 KB), 400 ppi 회색조 스캔은 374.47 MB(페이지당 약 1.2 MB)가 나왔다고 밝혔습니다. <a href="https://www.ncmd.uscourts.gov/sites/ncmd/files/ecfprocman.pdf" target="_blank" rel="noopener">노스캐롤라이나 중부 연방지방법원</a>은 2 MB에 PDF 텍스트 약 45페이지, 즉 페이지당 50 KB 미만이 들어간다고 설명합니다.</p>
+
+<h2 id="scanned-copy-meaning">스캔본은 복사본과 무엇이 다른가요?</h2>
+<p>스캔본은 종이 원본을 디지털 이미지 파일로 만든 것으로, 보통 스캔 PDF나 JPEG 형태로 전달됩니다. 복사본은 복사기로 인쇄한 또 다른 종이 한 장입니다. 인증 사본은 권한 있는 사람이 원본과 대조해 확인하고 서명한 사본을 말합니다.</p>
+
+<p>사람들은 "스캔본"이라는 말을 느슨하게 쓰고, 서류 양식이나 인사팀 이메일, 비자 체크리스트에서 이 세 용어가 뒤섞이곤 합니다. 하지만 그 차이는 중요합니다. 하나를 요구받았을 때 다른 것으로는 충족되지 않기 때문입니다.</p>
+
+<div class="table-wrap"><table><caption>스캔본, 복사본, 인증 사본 비교</caption>
+<thead><tr><th scope="col">용어</th><th scope="col">매체</th><th scope="col">만드는 사람</th><th scope="col">증명하는 것</th></tr></thead>
+<tbody>
+<tr><th scope="row">스캔본</th><td>디지털 파일(PDF, JPEG, TIFF)</td><td>스캐너나 휴대폰이 있는 누구나</td><td>문서의 이미지가 존재한다는 것뿐, 진위 여부는 증명하지 않음</td></tr>
+<tr><th scope="row">복사본</th><td>종이</td><td>복사기가 있는 누구나</td><td>마찬가지로 복제본일 뿐 원본이 아님</td></tr>
+<tr><th scope="row">인증(원본 대조) 사본</th><td>종이, 이후 스캔되기도 함</td><td>원본을 직접 확인한 전문가</td><td>그 사람의 확인에 따라 사본이 원본과 일치한다는 것</td></tr>
+<tr><th scope="row">원본</th><td>종이 또는 네이티브 디지털 파일</td><td>발급 기관</td><td>문서 그 자체</td></tr>
+</tbody></table></div>
+
+<p>영국 정부는 인증을 간단히 설명합니다. "변호사 같은 전문가에게 서명과 날짜를 받으면 문서를 원본 대조필 사본으로 인증할 수 있습니다"(<a href="https://www.gov.uk/certifying-a-document" target="_blank" rel="noopener">GOV.UK, 문서 인증하기</a>). 그렇게 인증된 페이지를 스캔해도 그것은 여전히 스캔본입니다. 인증의 효력은 서명과 날짜가 적힌 종이 자체에 있기 때문입니다.</p>
+
+<p>그러므로 집주인, 고용주, 학교가 "스캔본을 보내 달라"고 하면 거의 항상 "종이를 선명하게 찍은 디지털 이미지, PDF로"라는 뜻입니다. 반대로 "인증 사본"을 요구한다면, 아무리 그럴듯해 보여도 스캔본만으로는 충분하지 않습니다.</p>
+
+<h2 id="how-to-tell-if-a-pdf-is-scanned">PDF가 스캔본인지 어떻게 알 수 있나요?</h2>
+<p>PDF가 스캔본인지 확인하려면 페이지에서 단어를 선택해 보고, 눈에 보이는 단어를 검색해 보세요. 아무것도 강조되지 않으면 이미지로만 된 PDF입니다. 확대, 문서 속성, 글꼴 목록, 파일 용량을 확인하면 그 파일이 스캔본인지, 디지털 파일인지, OCR을 적용한 스캔본인지 최종적으로 판단할 수 있습니다.</p>
+
+<p>처음 두 가지 확인은 10초도 걸리지 않으며, 구글 크롬과 Microsoft Edge에 내장된 뷰어, macOS 미리보기(앱)를 포함해 어떤 PDF 뷰어에서도 통합니다. 나머지 확인은 1분 정도 걸리며 애매한 경우를 가려 줍니다.</p>
+
+<ol class="step-list">
+<li><strong>텍스트를 선택해 보세요.</strong> 한 줄 위로 커서를 드래그합니다. 디지털 PDF나 OCR을 적용한 PDF라면 단어 하나하나가 강조됩니다. 이미지로만 된 PDF라면 아무것도 강조되지 않거나, 일부 뷰어는 페이지 이미지 전체에 사각형을 그립니다.</li>
+<li><strong>Ctrl+F 또는 Cmd+F로 검색하세요.</strong> 첫 페이지에서 분명히 보이는 특징적인 단어를 입력합니다. 눈에 뻔히 보이는데도 결과가 0건이면 텍스트 레이어가 없다는 뜻입니다. 결과가 나오면 실제 텍스트나 OCR 레이어가 있다는 뜻입니다.</li>
+<li><strong>400%로 확대하세요.</strong> 글자의 윤곽을 살펴봅니다. 벡터 텍스트는 어떤 배율에서도 칼같이 선명합니다. 스캔한 페이지는 글자 주위에 계단 모양 픽셀, 부드러운 회색 번짐, 얼룩, 때로는 JPEG 블록 무늬가 나타납니다.</li>
+<li><strong>문서 속성을 열어 보세요.</strong> Chrome의 PDF 뷰어에서는 점 3개 메뉴에서 문서 속성을 선택하고, macOS 미리보기에서는 도구 메뉴에서 검사기 보기를 선택합니다. 제작 프로그램이나 애플리케이션 필드에 스캐너, 복합기 모델명, 휴대폰 스캔 기능, OCR 엔진 이름이 적혀 있는 경우가 많습니다. 워드 프로세서나 "PDF로 인쇄"라고 적혀 있으면 디지털 PDF일 가능성이 큽니다.</li>
+<li><strong>글꼴 목록을 확인하세요.</strong> 데스크톱 PDF 프로그램은 문서 속성에 글꼴 탭을 표시합니다. 디지털 PDF는 사용한 서체를 나열합니다. 이미지로만 된 스캔본은 아무것도 나열하지 않습니다. OCR을 적용한 스캔본은 흔히 숨은 레이어에만 쓰인 글꼴 하나만 나열합니다.</li>
+<li><strong>페이지당 용량을 비교하세요.</strong> 파일 용량을 페이지 수로 나눕니다. 텍스트 PDF는 보통 페이지당 50 KB 미만입니다. 회색조나 컬러 스캔본은 흔히 페이지당 수백 KB에서 1 MB를 넘습니다. 이진 스캔본은 용량이 작아서, 용량은 가장 신뢰도가 낮은 단서입니다.</li>
+</ol>
+
+<p>클리블랜드 주립대학교의 접근성 교재도 같은 빠른 검색 테스트를 권합니다. "페이지에서 단어가 강조 표시되면 텍스트를 검색할 수 있는 것이고, 그렇지 않으면 텍스트를 찍은 스캔 이미지일 뿐입니다"(<a href="https://pressbooks.ulib.csuohio.edu/accessibility/chapter/chapter-4-2-the-difference-between-an-accessible-pdf-and-a-scanned-image-of-text/" target="_blank" rel="noopener">Heather Caprette, 클리블랜드 주립대학교</a>).</p>
+
+<div class="callout callout-tip"><strong>애매한 결과 해석하기</strong>텍스트는 선택되는데 확대하면 픽셀이 보인다: OCR을 적용한 스캔 PDF. 텍스트도 선택되고 확대해도 선명하다: 디지털 PDF. 아무것도 선택되지 않고 확대하면 픽셀이 보인다: 이미지로만 된 PDF. 아무것도 선택되지 않는데 윤곽은 선명하다: 텍스트를 벡터 윤곽선으로 변환한, 드물지만 검색 측면에서는 스캔본처럼 동작하는 네 번째 경우.</div>
+
+<p>메타데이터는 단서일 뿐 증거는 아닙니다. 제작 프로그램과 작성 프로그램 필드는 저희 도구를 포함한 여러 도구로 얼마든지 수정할 수 있으므로, 속성 패널의 내용보다 선택과 확대에서 페이지가 실제로 어떻게 동작하는지를 믿으세요.</p>
+
+<h2 id="accessibility-and-search">스캔 문서는 왜 검색하고 읽기 어려울까요?</h2>
+<p>스캔 문서를 검색하고 읽기 어려운 이유는 이미지로만 된 PDF에는 소프트웨어가 색인화할 문자가 전혀 없기 때문입니다. 검색 엔진, 데스크톱 검색, 복사와 붙여넣기, 번역 도구, 스크린 리더는 모두 텍스트가 있어야 작동합니다. OCR 레이어가 없으면 스캔 PDF는 눈으로 보는 사람만 이용할 수 있는 그림에 불과합니다.</p>
+
+<p>W3C 웹 접근성 이니셔티브는 WCAG 가이드의 기법 PDF7에서 이를 단호하게 지적합니다. "텍스트를 스캔한 이미지로 구성된 문서는 본질적으로 접근할 수 없습니다. 문서 내용이 검색 가능한 텍스트가 아니라 이미지이기 때문입니다"(<a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF7" target="_blank" rel="noopener">W3C WAI, WCAG 기법 PDF7</a>).</p>
+
+<p>같은 W3C 페이지는 무엇을 잃게 되는지도 나열합니다. "보조 기술은 단어를 읽거나 추출할 수 없고, 사용자는 텍스트를 선택·편집·크기 조정·리플로우할 수 없으며 텍스트와 배경색을 바꿀 수도 없고, 작성자는 접근성을 위해 PDF를 수정할 수 없습니다." 해결책은 OCR입니다. 이미지 뒤에 실제 텍스트가 존재하게 만드는 것입니다.</p>
+
+<p>조지타운 대학교 접근성 사무국은 보조 기술에 의존하는 사람에게 실제로 어떤 결과가 생기는지 덧붙입니다. "스캔 PDF는 이미지의 모음이므로 대부분의 표준 스크린 리더로는 읽을 수 없습니다"(<a href="https://accessibility.georgetown.edu/digital-accessibility/pdf-accessibility/" target="_blank" rel="noopener">조지타운 대학교 접근성</a>).</p>
+
+<p>공공 기관 발행자들은 한 걸음 더 나아갑니다. 영국 정부 디지털 서비스(GDS)는 HTML과 비교했을 때 PDF로 게시된 정보는 찾기, 활용하기, 유지 관리하기가 더 어렵다고 주장합니다(<a href="https://gds.blog.gov.uk/2018/07/16/why-gov-uk-content-should-be-published-in-html-and-not-pdf/" target="_blank" rel="noopener">GDS 블로그, GOV.UK</a>). 이미지로만 된 스캔 PDF는 그 문제의 극단적인 형태입니다. 단어조차 기계가 읽을 수 없기 때문입니다.</p>
+
+<div class="table-wrap"><table><caption>PDF 종류별로 무엇이 되고 무엇이 안 되나요</caption>
+<thead><tr><th scope="col">작업</th><th scope="col">디지털 PDF</th><th scope="col">이미지로만 된 스캔</th><th scope="col">스캔 + OCR</th></tr></thead>
+<tbody>
+<tr><th scope="row">스크린 리더 출력</th><td>전체 텍스트</td><td>없음</td><td>텍스트는 나오지만 순서가 뒤섞이는 경우가 많음</td></tr>
+<tr><th scope="row">휴대폰에서 리플로우</th><td>태그가 있으면 가능</td><td>불가능</td><td>거의 불가능</td></tr>
+<tr><th scope="row">인용문 복사</th><td>정확함</td><td>손으로 다시 입력해야 함</td><td>OCR 오류가 있을 수 있음</td></tr>
+<tr><th scope="row">데스크톱 검색에서 발견</th><td>가능</td><td>파일명만</td><td>가능</td></tr>
+<tr><th scope="row">기계 번역</th><td>가능</td><td>먼저 OCR 필요</td><td>가능</td></tr>
+</tbody></table></div>
+
+<h2 id="ocr-explained">OCR은 스캔 PDF에 무엇을 하나요?</h2>
+<p>OCR, 즉 광학 문자 인식은 스캔 PDF에 담긴 글자 모양을 읽어서 각 페이지 이미지 뒤의 보이지 않는 레이어에 그에 맞는 기계 텍스트를 기록합니다. 페이지의 겉모습은 그대로지만 검색 가능한 PDF가 되어, 단어를 찾고 선택하고 복사하고 소리 내어 읽을 수 있게 됩니다.</p>
+
+<p>FADGI(미국 연방기관 디지털화 가이드라인)는 이를 정확히 정의합니다. "광학 문자 인식(OCR)은 텍스트의 래스터 이미지를 검색 가능한 전자 텍스트로 변환하는 과정입니다"(<a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">FADGI 기술 가이드라인, 3판, 2023</a>). OCR은 타이핑한 텍스트와 인쇄된 텍스트에서 잘 작동하며, 손글씨에는 정확도가 떨어집니다.</p>
+
+<h3>OCR이 스캔 문서에서 해결하는 것</h3>
+<ul>
+<li>Ctrl/Cmd+F 검색과 전문 색인 작업이 가능해집니다.</li>
+<li>텍스트를 선택하고 복사해 다른 문서에 붙여넣을 수 있습니다.</li>
+<li>스크린 리더가 읽어 줄 단어가 생기며, 이는 W3C PDF7이 제시하는 기본적인 해결책을 충족합니다.</li>
+<li>텍스트 검색이 가능한 제출 서류를 요구하는 법원 시스템도 파일을 받아 줍니다.</li>
+</ul>
+
+<h3>OCR이 해결하지 못하는 것</h3>
+<ul>
+<li><strong>이미지 품질.</strong> 페이지는 여전히 그림이므로 확대하면 여전히 픽셀이 보입니다. JMU는 확대해서 보는 사람에게는 "전자 텍스트가 텍스트 이미지 아래에 있기 때문에 결과물이 픽셀이 보이고 왜곡된다"고 설명합니다.</li>
+<li><strong>정확도.</strong> 흐림, 기울기, 낮은 해상도, 얼룩 노이즈는 "rn"을 "m"으로, "1"을 "l"로 잘못 읽는 등의 오류를 일으킵니다. 이미지는 멀쩡해 보여도 숨은 텍스트는 틀릴 수 있습니다.</li>
+<li><strong>구조.</strong> 제목, 읽기 순서, 표 셀, 이미지의 대체 텍스트는 완전한 접근성을 위해 여전히 수동 태깅이 필요합니다.</li>
+<li><strong>파일 용량.</strong> 페이지 이미지가 그대로 남으므로, OCR을 적용한 스캔 PDF도 이미지로만 된 버전과 거의 비슷한 용량입니다.</li>
+</ul>
+
+<div class="callout callout-info"><strong>OCR은 종이가 아니라 이미지를 대상으로 작동합니다</strong>인식 품질은 스캔 상태에 좌우됩니다. 선이 반듯한 깨끗한 300 ppi 페이지는 기울어지고 노이즈가 많은 휴대폰 사진보다 훨씬 잘 인식됩니다. OCR을 적용할 예정이라면 먼저 똑바르고 선명하게 스캔하세요.</div>
+
+<h2 id="when-you-need-a-scanned-copy">기관은 언제 스캔본을 요구하나요?</h2>
+<p>기관은 원본이 종이로 존재하고 디지털 기록이 필요할 때 스캔본을 요구합니다. 이민 증빙 서류, 법원 증거물, 인사팀 입사 서류, 서명된 계약서와 영수증이 그 예입니다. 기관마다 형식, 해상도, 파일 용량에 대한 규정이 다르며, 일부 법원은 이미지로만 된 PDF 대신 검색 가능한 PDF를 요구합니다.</p>
+
+<h3>이민 증빙 서류(USCIS)</h3>
+<p>미국 시민이민서비스국(USCIS)은 온라인 신청 시 스캔하거나 촬영한 증빙 서류를 받아 줍니다. 안내는 간단합니다. "스캐너를 사용하거나 각 서류의 사진을 찍으세요", "첨부하는 각 이미지가 선명하고 모든 텍스트를 읽을 수 있는지 확인하세요"(<a href="https://www.uscis.gov/file-online/tips-for-filing-forms-online" target="_blank" rel="noopener">USCIS, 온라인 서류 제출 팁</a>). 파일은 PDF, JPG, JPEG 형식으로 각각 최대 12 MB까지 가능하며, 일부 양식에서는 TIF나 TIFF도 허용됩니다.</p>
+
+<h3>연방 법원 제출 서류(CM/ECF)</h3>
+<p>연방 전자 제출 시스템은 PDF만 받으며, 많은 법원이 디지털 PDF를 선호합니다. 플로리다 남부 연방지방법원은 "CM/ECF로 전자 제출되는 소송 서류·주요 문서는 텍스트 검색이 가능한 PDF 형식이어야 합니다"라고 명시합니다(<a href="https://www.flsd.uscourts.gov/all-faqs/CMECF" target="_blank" rel="noopener">플로리다 남부 연방지방법원, CM/ECF FAQ</a>). 스캔 PDF는 주로 증거물이나 디지털 원본이 없는 서명된 종이 문서에 쓰입니다.</p>
+
+<p>스캔 설정과 용량 제한은 법원마다 다릅니다. 워싱턴 서부 연방지방법원은 300 dpi 스캔, 색상이 꼭 필요한 경우가 아니면 흑백, 문서당 최대 100 MB를 요구합니다(<a href="https://www.wawd.uscourts.gov/attorneys/cm-ecf-faqs/Technical" target="_blank" rel="noopener">워싱턴 서부 연방지방법원 기술 FAQ</a>). <a href="https://www.mnd.uscourts.gov/sites/mnd/files/Criminal-ECF-Procedures-Guide.pdf" target="_blank" rel="noopener">미네소타 연방지방법원</a>은 형사 ECF 절차에서 증거물 하나당 35 MB로 제한합니다.</p>
+
+<h3>인사팀, 집주인, 학교, 은행</h3>
+<p>고용주와 집주인은 보통 신분증, 졸업장, 서명된 근로계약서, 임대차 계약서 페이지의 스캔본을 원합니다. 이들은 기술적인 규정을 거의 공개하지 않으며, 대개 이메일 첨부 용량 제한을 언급하고 모든 글자를 읽을 수 있어야 한다고 요구할 뿐입니다. 포털에 별다른 제한이 없다면 300 dpi 회색조 PDF, 10 MB 미만이 합리적인 기본값이지만, 이는 명시된 규정이 아니라 추정치입니다.</p>
+
+<div class="table-wrap"><table><caption>요청 기관별 스캔본 요구 사항</caption>
+<thead><tr><th scope="col">요청 기관</th><th scope="col">형식</th><th scope="col">용량 또는 해상도 규정</th><th scope="col">검색 가능한 텍스트 필요 여부</th></tr></thead>
+<tbody>
+<tr><th scope="row">USCIS 온라인 제출</th><td>PDF, JPG, JPEG(일부 양식은 TIF/TIFF)</td><td>파일당 12 MB</td><td>불필요, 다만 텍스트를 읽을 수 있어야 함</td></tr>
+<tr><th scope="row">워싱턴 서부 연방지방법원</th><td>PDF</td><td>300 dpi, 흑백; 문서당 100 MB</td><td>문서 종류에 따라 다름</td></tr>
+<tr><th scope="row">플로리다 남부 연방지방법원</th><td>PDF</td><td>법원별 제한 적용</td><td>주요 문서는 필요</td></tr>
+<tr><th scope="row">미네소타 연방지방법원 형사 ECF</th><td>PDF</td><td>증거물당 35 MB</td><td>지역 규정 확인 필요</td></tr>
+<tr><th scope="row">고용주 또는 집주인</th><td>PDF 또는 이미지</td><td>보통 이메일 용량 제한</td><td>거의 불필요</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-tip"><strong>용량을 줄이는 방법</strong>텍스트 문서라면 300 dpi 회색조나 이진 스캔이 대개 읽을 수 있는 범위에서 가장 작은 용량입니다. 일반 텍스트를 컬러로 스캔하면 정보는 늘지 않으면서 용량만 몇 배로 커질 수 있습니다. 장단점은 <a href="/blog/convert-color-pdf-to-black-and-white/">컬러 PDF 흑백 변환</a> 가이드에서 다룹니다.</div>
+
+<h2 id="scanned-pdf-and-pdf-a">스캔 PDF를 PDF/A로 보관할 수 있나요?</h2>
+<p>스캔 PDF는 PDF의 장기 보관용 버전인 ISO 19005, 즉 PDF/A로 저장할 수 있습니다. PDF/A가 페이지 이미지를 허용하기 때문입니다. PDF/A는 글꼴 내장, 암호화 금지 등 장기적으로 읽을 수 있도록 규정을 추가하지만, 이미지로만 된 페이지를 검색 가능하게 만들지는 않습니다. OCR은 별도의 단계입니다.</p>
+
+<p>PDF/A는 2005년 10월 1일 처음 발표되었으며, 수십 년 뒤에도 파일을 열기 어렵게 만드는 글꼴 링크, 암호화 같은 기능을 금지합니다(<a href="https://en.wikipedia.org/wiki/PDF/A" target="_blank" rel="noopener">위키백과, PDF/A</a>). Microsoft Office는 PDF로 저장 옵션에서 바로 ISO 19005-1 규격에 맞는 파일을 내보낼 수 있습니다.</p>
+
+<p>PDF/A를 요구하는 법원은 대개 제출자에게 아예 스캔을 하지 말라고 안내합니다. 오클라호마 동부 연방지방법원은 파일 용량을 줄이고 텍스트 검색이 가능하도록, PDF/A 문서는 인쇄한 뒤 스캔하지 말고 워드 프로세서에서 직접 만들라고 권고합니다(<a href="https://www.oked.uscourts.gov/pdfa-frequently-asked-questions" target="_blank" rel="noopener">오클라호마 동부 연방지방법원, PDF/A FAQ</a>).</p>
+
+<dl class="spec-list">
+<dt>디지털 PDF/A</dt><dd>가장 작고 완전히 검색 가능함. 디지털 원본이 있을 때 가장 좋은 선택.</dd>
+<dt>OCR을 적용한 스캔 PDF/A</dt><dd>장기 보관에 적합하고 검색도 가능함. 종이로만 존재하는 기록에 알맞은 선택.</dd>
+<dt>이미지로만 된 PDF/A</dt><dd>보존용으로는 유효하지만 검색이나 접근성은 지원하지 않음.</dd>
+</dl>
+
+<h2 id="digital-pdf-to-scanned-look">디지털 PDF에 스캔 PDF 느낌을 내는 방법은?</h2>
+<p>디지털 PDF는 각 페이지를 이미지로 래스터화하고 실제 스캐너의 결함, 즉 살짝 기울어진 각도, 흐림, 노이즈, 회색조나 종이 색감을 더하면 스캔 PDF 느낌을 갖게 됩니다. 그 결과물은 아무것도 인쇄하지 않고 스캐너 없이도 실제 스캔본처럼 동작하는 이미지로만 된 PDF입니다.</p>
+
+<p>저희 무료 <a href="/scan">스캔 효과 도구</a>가 정확히 이 일을 합니다. 브라우저에서 PDF의 각 페이지를 렌더링하고, 선택한 효과를 적용한 뒤, 모든 페이지를 JPEG 이미지로 새 PDF 안에 저장합니다. 파일은 로컬에서 처리되며 서버에 업로드되지 않습니다.</p>
+
+<dl class="spec-list">
+<dt>회전</dt><dd>−10°~10°, 기본값 1°, 페이지마다 최대 10°의 무작위 편차 추가.</dd>
+<dt>흐림</dt><dd>0~1, 기본값 0.3, 스캐너 광학계처럼 벡터 윤곽을 부드럽게 만듦.</dd>
+<dt>노이즈</dt><dd>0~1, 기본값 0.1, 센서에서 나는 것과 같은 얼룩을 추가.</dd>
+<dt>밝기와 대비</dt><dd>각각 0~2, 기본값 1.</dd>
+<dt>누런 톤</dt><dd>0~2, 기본값 0, 오래된 종이처럼 페이지에 색조를 입힘.</dd>
+<dt>색 공간</dt><dd>회색조(기본값) 또는 컬러.</dd>
+<dt>해상도</dt><dd>1×~3×; PDF 페이지는 72 dpi에 배율을 곱한 값으로 렌더링되므로 2×는 약 144 dpi, 3×는 약 216 dpi입니다.</dd>
+</dl>
+
+<p>결과물이 이미지로만 이루어져 있으므로 앞서 설명한 특성을 그대로 이어받습니다. 선택할 수 있는 텍스트 없음, 검색 안 됨, 파일 용량 증가, 스크린 리더 출력 없음. 문서를 스캔본처럼 보이게 해야 하는 사람에게는 바로 이 점이 목적이고, 검색이 필요한 사람에게는 단점입니다. 원본 디지털 파일은 따로 보관하세요.</p>
+
+<p>해상도와 파일 용량의 장단점을 포함한 전체 작업 흐름은 <a href="/blog/pdf-to-scanned-pdf/">PDF 스캔본 변환</a> 가이드에서 읽어 보세요. 인쇄 후 스캔부터 운영체제 내장 기능까지 여섯 가지 방법은 <a href="/blog/how-to-make-a-pdf-look-scanned/">PDF 스캔한 것처럼 만드는 방법</a>을 참고하세요. 휴대폰 사진에서 시작한다면, <a href="/blog/image-to-scanned-pdf/">이미지를 스캔본 PDF로</a> 만드는 가이드가 JPG와 PNG를 다룹니다.</p>
+
+<div class="callout callout-warn"><strong>스캔 효과는 정직하게 사용하세요</strong>스캔 효과는 파일의 겉모습을 바꿀 뿐, 진위 여부를 바꾸지는 않습니다. 공식 문서, 신분증, 본인 것이 아닌 서명을 위조하거나 변조하는 데 사용하지 마세요. 일부 법원과 기관은 텍스트 검색이 가능한 PDF를 요구하므로 이미지로만 된 파일은 거부될 수 있습니다. 제출 전에 규정을 확인하세요.</div>
+
+<div class="expert-quote"><blockquote>저희는 스캔 느낌을 더하는 도구를 만들었고, 가장 많이 받는 질문은 사실 "내가 방금 뭘 만든 거지?"입니다. 솔직한 답은 이미지로만 된 PDF라는 것입니다. 종이처럼 보이지만 글자는 픽셀입니다. 읽는 사람이 검색하거나 소리 내어 들어야 한다면 디지털 원본을 함께 보관하거나 나중에 OCR을 돌리세요. 저희는 사람들이 다운로드 버튼을 누르기 전에 이 점을 알았으면 합니다.</blockquote><cite><strong>Make PDF look scanned 팀</strong> — 웹 도구와 Chrome 확장 프로그램 개발팀</cite></div>
+
+<h2 id="scanned-document-glossary">스캔 문서 용어집: 알아야 할 용어는?</h2>
+<p>스캔 문서에는 고유한 용어들이 따라옵니다. dpi와 ppi, 비트 심도, 이진, OCR, 래스터화, PDF/A, JBIG2입니다. 이 일곱 가지 용어만 알면 법원, 기관, 고용주가 제시하는 어떤 스캔 요구 사항도 읽을 수 있고, 받은 스캔 PDF를 판단할 수 있습니다.</p>
+
+<dl class="spec-list">
+<dt>dpi / ppi</dt><dd>인치당 점 또는 픽셀 수: 종이 1인치를 이미지 샘플 몇 개로 담는지를 뜻합니다. NARA는 현대 텍스트 기록에 최소 300 ppi, 사진과 세부 묘사가 중요한 기록에는 400 ppi를 요구합니다. PDF 페이지 규격은 인치당 72포인트를 쓰므로, 1× 렌더링이 72 dpi와 같습니다.</dd>
+<dt>비트 심도</dt><dd>픽셀당 저장되는 비트 수. 이진은 1비트, 회색조는 8비트(256단계), 일반적인 컬러 스캔은 24비트(3채널 각 8비트)입니다.</dd>
+<dt>이진(bitonal)</dt><dd>FADGI의 정의: "흑과 백, 두 가지 색만 사용해 만든 디지털 이미지." 일반 텍스트를 읽을 수 있는 형식 중 가장 작은 용량.</dd>
+<dt>OCR</dt><dd>광학 문자 인식: 이미지 속 글자 모양을 기계 텍스트로 바꿔 검색 가능한 PDF를 만드는 소프트웨어.</dd>
+<dt>래스터화</dt><dd>벡터 텍스트와 도형을 픽셀 격자로 변환하는 것. 디지털 PDF를 래스터화하면 이미지로만 된 PDF가 됩니다.</dd>
+<dt>PDF/A</dt><dd>2005년 발표된 PDF의 장기 보관용 규격, ISO 19005. 암호화, 글꼴 링크 같은 기능을 금지합니다.</dd>
+<dt>JBIG2</dt><dd>반복되는 기호를 한 번만 저장하는 이진 스캔용 압축 방식. BBC 뉴스는 2013년, 손실 압축 방식의 JBIG2 모드를 쓰는 일부 사무용 복사기가 스캔본의 숫자를 바꿔 놓았다고 보도했습니다. 흔히 6이 8로 바뀌었고, 한 실험에서는 방 치수 21.11 m가 14.13 m로 바뀌었습니다.</dd>
+<dt>이미지로만 된 PDF</dt><dd>텍스트 레이어가 전혀 없는 스캔 PDF.</dd>
+<dt>검색 가능한 PDF</dt><dd>실제 텍스트나 OCR 텍스트가 있어 검색하고 선택할 수 있는 PDF.</dd>
+</dl>
+
+<p>JBIG2 사례는 원본을 보관해야 하는 가장 강력한 이유입니다. 스캔본은 그림이고, 그림은 아무도 눈치채지 못한 채 압축 과정에서 바뀔 수 있습니다(<a href="https://www.bbc.com/news/technology-23588202" target="_blank" rel="noopener">BBC 뉴스, 2013</a>). NARA 역시 노이즈를 "원본 자료에 없던" 바람직하지 않은 아티팩트로 취급합니다(<a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">36 CFR 1236 Subpart E</a>).</p>
+
+<h2 id="faq">스캔 PDF 자주 묻는 질문: 또 무엇이 궁금할까요?</h2>
+<p>다음은 파일을 받았거나, 스캔본을 보내야 하거나, 법원이나 기관의 규정을 지켜야 하는 사람들이 가장 자주 묻는 스캔 PDF 질문입니다. 각 답변은 그 자체로 완결되어 있으므로, 본인 상황에 맞는 질문으로 바로 이동해 확인하면 됩니다.</p>
+
+<div class="faq-item"><p class="faq-q">스캔 PDF를 간단히 설명하면 무엇인가요?</p><p class="faq-a">스캔 PDF는 종이 페이지를 찍은 사진들로 이루어진 PDF입니다. 보이는 텍스트는 이미지의 일부이므로 OCR을 적용하지 않으면 선택하거나 검색할 수 없습니다.</p></div>
+<div class="faq-item"><p class="faq-q">스캔 PDF와 스캔본은 같은 말인가요?</p><p class="faq-a">거의 같습니다. 스캔본은 종이 문서를 디지털 이미지로 만든 것을 통틀어 가리키고, 스캔 PDF는 그것을 전달할 때 가장 흔히 쓰이는 파일 형식입니다. 스캔본은 JPEG나 TIFF일 수도 있습니다.</p></div>
+<div class="faq-item"><p class="faq-q">PDF가 스캔본인지 10초 만에 확인하려면?</p><p class="faq-a">단어를 선택해 보고, Ctrl+F나 Cmd+F를 눌러 눈에 보이는 단어를 검색해 보세요. 아무것도 강조되지 않고 검색 결과도 없다면 이미지로만 된 스캔본입니다. 400%로 확대해 보면 확실히 알 수 있습니다. 스캔한 텍스트는 픽셀이 보입니다.</p></div>
+<div class="faq-item"><p class="faq-q">스캔 PDF도 검색 가능하게 만들 수 있나요?</p><p class="faq-a">가능합니다. OCR이 페이지 이미지 뒤에 보이지 않는 텍스트 레이어를 추가해 스캔 PDF를 검색 가능한 PDF로 바꿔 줍니다. 페이지는 여전히 스캔본처럼 보이며, 숨은 텍스트에는 잘못 인식된 단어가 남을 수 있습니다.</p></div>
+<div class="faq-item"><p class="faq-q">왜 PDF에서 텍스트를 복사할 수 없나요?</p><p class="faq-a">십중팔구 OCR을 적용하지 않은 스캔본이라 복사할 문자가 없기 때문입니다. 플로리다 남부 연방지방법원의 FAQ도 같은 점을 지적합니다. PDF가 텍스트 검색이 되지 않으면 텍스트도 복사할 수 없습니다. OCR을 돌리거나 디지털 원본을 요청하세요.</p></div>
+<div class="faq-item"><p class="faq-q">스캔 PDF는 스크린 리더로 접근할 수 있나요?</p><p class="faq-a">OCR 없이는 불가능합니다. W3C 가이드는 이미지로만 된 스캔본을 본질적으로 접근할 수 없는 것으로 규정합니다. OCR을 적용하면 스크린 리더가 텍스트를 읽어 줄 수 있지만, 완전한 접근성을 갖추려면 제목, 읽기 순서, 표에 대한 태그도 필요합니다.</p></div>
+<div class="faq-item"><p class="faq-q">스캔 PDF는 왜 이렇게 용량이 큰가요?</p><p class="faq-a">페이지 하나하나가 완전한 이미지이기 때문입니다. 400 ppi 회색조 페이지는 1 MB를 넘을 수 있는 반면, 워드 프로세서로 만든 텍스트 페이지는 흔히 50 KB 미만입니다. 300 dpi 회색조나 흑백으로 스캔하면 용량을 줄일 수 있습니다.</p></div>
+<div class="faq-item"><p class="faq-q">스캔 문서는 어떤 해상도여야 하나요?</p><p class="faq-a">타이핑하거나 인쇄된 텍스트라면 300 dpi가 미국 연방 법원의 표준 요구 사항이자 NARA가 텍스트 기록에 정한 최소 기준입니다. 사진이나 세부 묘사가 중요한 경우에는 400 ppi가 필요합니다.</p></div>
+<div class="faq-item"><p class="faq-q">스캔본이 법적 효력이 있는 인증 사본인가요?</p><p class="faq-a">아닙니다. 스캔본만으로는 진위에 대해 아무것도 증명하지 못합니다. GOV.UK가 설명하듯, 인증 사본은 원본을 확인한 전문가가 서명하고 날짜를 적은 사본입니다. 요청한 쪽에 어떤 종류가 필요한지 확인하세요.</p></div>
+<div class="faq-item"><p class="faq-q">디지털 PDF를 스캔 PDF처럼 보이게 만들 수 있나요?</p><p class="faq-a">가능합니다. 무료 도구 <a href="/scan">Make PDF look scanned</a>가 브라우저에서 각 페이지를 래스터화하고 회전, 흐림, 노이즈, 종이 색감을 더해 줍니다. 결과물은 이미지로만 된 PDF이므로 검색이 필요하다면 원본을 따로 보관하세요.</p></div>
+<div class="faq-item"><p class="faq-q">스캔 PDF는 반드시 PDF/A여야 하나요?</p><p class="faq-a">요청하는 쪽이 명시한 경우에만 그렇습니다. 일부 법원과 기록보관소는 장기 보관을 위해 PDF/A를 요구합니다. 스캔 PDF는 PDF/A로 저장할 수 있으며, 검색까지 가능하게 하려면 OCR을 함께 적용하는 것이 좋습니다.</p></div>
+<div class="faq-item"><p class="faq-q">여러 PDF를 한 번에 스캔할 수 있나요?</p><p class="faq-a">저희 도구라면 가능합니다. <a href="/scan/bulk">일괄 스캔</a>은 여러 파일을 한 번에 처리해 ZIP 하나로 다운로드해 주며, 입력한 파일마다 스캔 PDF가 하나씩 생성됩니다.</p></div>
+
+<h2 id="verdict">스캔 PDF, 한마디로 정리하면?</h2>
+<p>스캔 PDF는 종이 사진을 PDF로 감싼 것입니다. 텍스트를 선택하고 검색해서 확인하고, 검색이나 접근성이 필요하면 OCR을 추가하고, 법원이 선호하면 디지털 PDF를 보내고, 읽는 사람에게 필요한 것이 진위가 아니라 겉모습뿐일 때만 스캔 느낌을 사용하세요.</p>
+
+<p>겉모습만 필요하다면 <a href="/scan">무료 스캔 도구</a>를 열어 기본값인 회색조 색 공간과 2× 해상도를 그대로 두고, 다운로드하기 전에 미리보기를 확인하세요.</p>

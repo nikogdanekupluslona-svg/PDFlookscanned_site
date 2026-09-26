@@ -1,0 +1,228 @@
+<p class="lead">Convertir un PDF a PDF escaneado significa renderizar cada página como una imagen y guardar esas imágenes en un PDF nuevo, de modo que la capa de texto, los enlaces y los campos de formulario se convierten en píxeles planos. Para obtener páginas legibles y compactas, elige una resolución de 2× y escala de grises; añade un poco de ruido e inclinación solo si además quieres el aspecto escaneado.</p>
+
+<p>Hay quien convierte un PDF a PDF escaneado porque un portal exige un archivo de solo imagen, porque un compañero ha pedido una copia aplanada o porque un formulario tiene que parecer que ha pasado por un escáner de oficina. Esta guía repasa las ventajas y los inconvenientes (resolución, color, tamaño del archivo, búsqueda de texto, normas de los tribunales) con los ajustes exactos de la herramienta, cifras de tribunales federales de EE. UU. y referencias de la Administración Nacional de Archivos y Registros de EE. UU. (NARA) y de FADGI.</p>
+
+<nav class="toc" aria-label="Índice"><h2>Índice</h2><ol>
+<li><a href="#what-it-means">¿Qué hace la conversión de PDF a PDF escaneado?</a></li>
+<li><a href="#before-after">¿Qué cambia cuando un PDF se convierte en PDF escaneado?</a></li>
+<li><a href="#how-to-convert">¿Cómo convertir un PDF a PDF escaneado en el navegador?</a></li>
+<li><a href="#resolution">¿Qué resolución mantiene legible un PDF escaneado?</a></li>
+<li><a href="#color-and-size">Gris, color o bitonal: ¿qué mantiene pequeño el archivo?</a></li>
+<li><a href="#flatten-vs-scan-look">¿Aplanar el PDF sin más o darle aspecto escaneado?</a></li>
+<li><a href="#required-or-refused">¿Cuándo se exige o se rechaza un PDF escaneado?</a></li>
+<li><a href="#privacy">¿Es seguro convertir un PDF a PDF escaneado online?</a></li>
+<li><a href="#batch">¿Cómo convertir muchos PDF a PDF escaneados a la vez?</a></li>
+<li><a href="#checking">¿Cómo comprobar que el resultado es un PDF escaneado?</a></li>
+<li><a href="#troubleshooting">¿Cómo solucionar problemas al convertir PDF a PDF escaneado?</a></li>
+<li><a href="#faq">Convertir PDF a PDF escaneado: preguntas frecuentes</a></li>
+</ol></nav>
+
+<h2 id="what-it-means">¿Qué hace la conversión de PDF a PDF escaneado?</h2>
+<p>La conversión de PDF a PDF escaneado toma cada página de un PDF digital, la dibuja en un lienzo (canvas) con la densidad de píxeles elegida y guarda el resultado como una imagen dentro de un PDF nuevo. El documento se ve igual, pero cada palabra, cada línea y cada logotipo forman ahora parte de una única imagen por página.</p>
+
+<p>Un escáner real hace lo mismo, solo que con papel en lugar de una página digital. El Tribunal de Distrito de EE. UU. para el Distrito Norte de California lo describe sin rodeos: <a href="https://cand.uscourts.gov/cases-e-filing/cmecf-information/preparing-your-cmecf-filing" target="_blank" rel="noopener">«El texto escaneado es una fotografía de una página impresa, obtenida con una cámara digital o con un escáner».</a> Una vez que la página es una fotografía, sus palabras ya no se pueden seleccionar, copiar ni buscar hasta que alguien le aplique reconocimiento óptico de caracteres (OCR).</p>
+
+<p>Hay dos términos que se suelen confundir. <strong>Aplanar un PDF</strong>, en sentido estricto, significa fusionar las capas interactivas (campos de formulario, comentarios, sellos) con el contenido de la página, y el texto puede seguir siendo seleccionable. <strong>Rasterizar</strong> un PDF significa convertirlo todo en píxeles, texto incluido. Convertir un PDF a PDF escaneado es la segunda operación, la más drástica.</p>
+
+<p>El resultado puede tener dos variantes. Un PDF de solo imagen <em>limpio</em> mantiene la página nítida y recta. Un PDF con <em>aspecto escaneado</em> añade una leve inclinación, un enfoque suave, ruido y un tono de papel. Nuestra <a href="/scan">herramienta gratuita para convertir PDF a PDF escaneado</a> produce ambos con los mismos controles. Para saber qué se considera un archivo escaneado, consulta <a href="/blog/what-is-a-scanned-pdf/">qué es un PDF escaneado</a>.</p>
+
+<h2 id="before-after">¿Qué cambia cuando un PDF se convierte en PDF escaneado?</h2>
+<p>Cuando un PDF se convierte en PDF escaneado, la página visible sigue igual, pero todo lo que una máquina podía leer en ella se sustituye por píxeles. El texto, las fuentes, los enlaces, los campos de formulario y las anotaciones dejan de ser objetos independientes. El archivo suele pesar más, y la búsqueda, la copia y los lectores de pantalla dejan de funcionar hasta que se aplica OCR.</p>
+
+<p>La tabla compara un PDF típico exportado desde un procesador de textos con el mismo archivo convertido en imágenes de página. El comportamiento de la columna «Tras la conversión» es el que obtienes con cualquier método de rasterización, incluida nuestra herramienta, porque cada página se guarda como una imagen JPEG dentro de un PDF nuevo.</p>
+
+<div class="table-wrap"><table>
+<caption>PDF digital frente al mismo PDF convertido en PDF escaneado (de solo imagen)</caption>
+<thead><tr><th scope="col">Elemento</th><th scope="col">PDF digital original</th><th scope="col">Tras la conversión a PDF escaneado</th></tr></thead>
+<tbody>
+<tr><th scope="row">Capa de texto</th><td>Caracteres reales que puedes seleccionar, copiar y buscar</td><td>Desaparece de la página; las palabras solo existen como píxeles</td></tr>
+<tr><th scope="row">Fuentes</th><td>Archivos de fuentes incrustados o referenciados</td><td>No hace falta ninguna fuente; la forma de las letras queda integrada en la imagen</td></tr>
+<tr><th scope="row">Enlaces</th><td>URL en las que se puede hacer clic y saltos internos</td><td>El texto del enlace sigue visible, pero ya no se puede hacer clic en él</td></tr>
+<tr><th scope="row">Campos de formulario</th><td>Casillas rellenables, casillas de verificación, listas desplegables</td><td>Ya no se pueden rellenar; revisa la vista previa para ver qué valores se han dibujado en la imagen</td></tr>
+<tr><th scope="row">Anotaciones</th><td>Comentarios, resaltados y sellos como objetos independientes</td><td>Ya no son objetos editables; lo que queda forma parte de la imagen</td></tr>
+<tr><th scope="row">Metadatos del documento</th><td>Título, autor y otras propiedades definidas por la aplicación que creó el archivo</td><td>Se escribe un PDF nuevo; el título, el autor, el asunto, las palabras clave, el productor y el creador se pueden definir en los extras de la herramienta</td></tr>
+<tr><th scope="row">Tamaño del archivo</th><td>Pequeño en páginas de texto</td><td>Suele ser mayor; depende de la resolución, del modo de color y del número de páginas</td></tr>
+<tr><th scope="row">Búsqueda</th><td>Ctrl+F y los lectores de pantalla funcionan</td><td>No se puede buscar en él ni es accesible hasta que el OCR añade una capa de texto</td></tr>
+</tbody></table></div>
+
+<p>Dos filas merecen una mirada más atenta. En los campos de formulario y las anotaciones, lo que se conserva visualmente depende de si el motor de renderizado los dibuja: el valor de un campo rellenado suele aparecer como texto impreso, mientras que un comentario emergente puede desaparecer, así que revisa la vista previa en directo. En cuanto a los metadatos, el panel de extras te permite escribir las propiedades que llevará el PDF nuevo; revísalas antes de enviar el archivo.</p>
+
+<p>La fila del tamaño es la que más sorprende. El Distrito Medio de Carolina del Norte señala que <a href="https://www.ncmd.uscourts.gov/sites/ncmd/files/ecfprocman.pdf" target="_blank" rel="noopener">2 MB equivalen aproximadamente a cuarenta y cinco páginas de texto en PDF</a> y añade, textualmente: «La mayoría de los PDF escaneados no permiten búsquedas y tienen un tamaño de archivo grande». Un PDF de texto describe las letras; un PDF escaneado almacena cada uno de sus píxeles.</p>
+
+<h2 id="how-to-convert">¿Cómo convertir un PDF a PDF escaneado en el navegador?</h2>
+<p>Para convertir un PDF a PDF escaneado en el navegador, abre la herramienta gratuita en pdflookscanned.com/scan, suelta el archivo, ajusta la resolución, el modo de color y los efectos de escaneado, revisa la vista previa en directo y descarga el resultado. Todo el proceso se ejecuta localmente en tu dispositivo y solo tarda más con documentos largos o resoluciones altas.</p>
+
+<ol class="step-list">
+<li><strong>Abre el escáner.</strong> Entra en <a href="/scan">pdflookscanned.com/scan</a> desde cualquier navegador moderno de escritorio o del móvil, o abre el panel lateral de la extensión de Chrome. No necesitas cuenta ni registro.</li>
+<li><strong>Añade tu PDF.</strong> Arrastra el archivo a la zona de carga o haz clic para elegirlo. Los PDF se usan tal cual, así que el diseño de página, las fuentes y las imágenes que ves ahora son exactamente lo que se renderiza.</li>
+<li><strong>Elige la resolución.</strong> Deja Resolución en 2×, el valor predeterminado, que equivale a unos 144 ppp (dpi), para cartas y formularios corrientes. Súbela a 2,5× o 3× (unos 216 ppp) si el archivo tiene notas al pie, letra pequeña o tablas densas.</li>
+<li><strong>Elige el espacio de color.</strong> Mantén Gris (el valor predeterminado) para documentos de texto; cambia a Color solo cuando el color aporte información, como en gráficos, cláusulas resaltadas o un logotipo en color.</li>
+<li><strong>Define el aspecto.</strong> Para un aplanado limpio, pon Rotación, Variación de rotación, Desenfoque y Ruido a 0. Para un aspecto escaneado, mantén los valores predeterminados (Rotación 1°, Desenfoque 0,3, Ruido 0,1) o ajústalos ligeramente.</li>
+<li><strong>Afina el brillo y el tono del papel.</strong> Brillo y Contraste valen 1 por defecto; sube un poco Contraste si el texto gris se ve débil. Amarillento añade un tono de papel envejecido y vale 0 por defecto.</li>
+<li><strong>Añade extras si hace falta.</strong> Opcional: una marca de agua de texto o de imagen, una imagen de sello o firma que tengas derecho a usar y los campos de metadatos del documento (título, autor, asunto, palabras clave, productor, creador).</li>
+<li><strong>Revisa la vista previa y descarga.</strong> Amplía el texto más pequeño en la vista previa. Si se lee bien, descarga el nuevo PDF escaneado; si no, sube la resolución y vuelve a revisar la vista previa.</li>
+</ol>
+
+<p>Si tu archivo de origen es un documento de Word, de Google Docs o una hoja de cálculo, expórtalo antes a PDF (en Word: Archivo → Guardar como → PDF (*.pdf); en Google Docs: Archivo → Descargar → Documento PDF (.pdf)). La herramienta puede leer DOCX y XLSX directamente, pero solo extrae el texto sin formato y lo vuelve a componer en páginas A4 con Helvetica de 11 puntos, así que se pierden el formato, las tablas y las imágenes.</p>
+
+<p>Exportar primero a PDF conserva el diseño exactamente como se creó. La <a href="/blog/how-to-make-a-pdf-look-scanned/">guía completa para hacer que un PDF parezca escaneado</a> compara esta vía con otros cinco métodos.</p>
+
+<h2 id="resolution">¿Qué resolución mantiene legible un PDF escaneado?</h2>
+<p>Un PDF escaneado sigue siendo legible cuando cada letra recibe suficientes píxeles. Nuestra herramienta renderiza las páginas PDF a 72 ppp multiplicados por el ajuste Resolución, así que 1× equivale a unos 72 ppp, 2× a unos 144 ppp y 3× a unos 216 ppp. La digitalización profesional de archivos trabaja con entre 200 y 300 ppp, así que 3× es adecuado para la letra pequeña.</p>
+
+<p>El 72 viene de la forma en que PDF mide las páginas. La geometría de PDF y PostScript se basa en <a href="https://en.wikipedia.org/wiki/Dots_per_inch" target="_blank" rel="noopener">72 puntos por pulgada</a>, así que una página tamaño carta (US Letter) mide 612 × 792 puntos. Al renderizarla a 1× se obtienen 612 × 792 píxeles; a 2×, 1224 × 1584 píxeles, y a 3×, 1836 × 2376 píxeles. El número de píxeles crece con el cuadrado de la escala.</p>
+
+<dl class="spec-list">
+<dt>1× (unos 72 ppp)</dt><dd>Página carta de 612 × 792 px. Sirve para titulares grandes y diapositivas; el texto normal empieza a deshacerse. Los archivos más pequeños.</dd>
+<dt>1,5× (unos 108 ppp)</dt><dd>Página carta de 918 × 1188 px. Aceptable para texto de 12 puntos en pantalla; insuficiente para notas al pie.</dd>
+<dt>2× (unos 144 ppp, predeterminado)</dt><dd>Página carta de 1224 × 1584 px. Texto nítido en cartas, facturas y formularios; la opción equilibrada.</dd>
+<dt>2,5× (unos 180 ppp)</dt><dd>Página carta de 1530 × 1980 px. Úsala cuando un documento mezcla texto normal con etiquetas pequeñas.</dd>
+<dt>3× (unos 216 ppp)</dt><dd>Página carta de 1836 × 2376 px. La mejor para contratos con letra pequeña, tablas densas y firmas que deben seguir siendo nítidas.</dd>
+</dl>
+
+<h3>Cómo se comporta la letra pequeña en cada resolución de PDF escaneado</h3>
+<p>Un cálculo sencillo muestra por qué el texto pequeño necesita más píxeles. Una nota al pie de 8 puntos mide 8/72 de pulgada como tamaño de fuente. A 1× eso son unos 8 píxeles para toda la altura de la letra, incluidos ascendentes y descendentes, lo que hace que la «e» y la «c» minúsculas se confundan. A 2× pasan a ser unos 16 píxeles, y a 3×, unos 24, que se leen con comodidad incluso tras un ligero desenfoque y la compresión JPEG.</p>
+
+<p>Como referencia, la NARA exige al menos <a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">300 ppp para los documentos textuales modernos digitalizados y 400 ppp para fotografías y documentos con detalles finos</a> según la norma 36 CFR 1236, subparte E. FADGI clasifica los documentos sin encuadernar en niveles de estrellas, desde 200 ppp (una estrella), pasando por 250 y 300, hasta 400 ppp (cuatro estrellas), en sus <a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">directrices técnicas de 2023</a>. Esos objetivos están pensados para proteger originales en papel.</p>
+
+<p>Una conversión de PDF a PDF escaneado parte de una página digital perfecta, no de papel arrugado, así que no necesita la densidad de una digitalización de archivo para verse nítida. Según nuestra experiencia, 2× basta para texto normal de 10–12 puntos, y 3× (216 ppp) queda justo por encima del nivel de una estrella de FADGI para la letra pequeña.</p>
+
+<p>La NARA añade una advertencia útil en la misma norma: «El organismo no puede basarse únicamente en las especificaciones del equipo, como los ajustes de ppp del escáner o los megapíxeles del sensor de la cámara, para garantizar la calidad de la imagen digital». En la práctica, juzga por la vista previa, no por el número.</p>
+
+<h2 id="color-and-size">Gris, color o bitonal: ¿qué mantiene pequeño el archivo?</h2>
+<p>Los archivos bitonales (blanco y negro puro) son los más pequeños, la escala de grises queda en medio y el color es lo que más pesa a la misma resolución. Para convertir un PDF a PDF escaneado, la escala de grises es la opción práctica por defecto: conserva el suavizado de los bordes de las letras y pesa mucho menos que el color. Usa el color solo cuando transmita información.</p>
+
+<p>Las cifras reales más contundentes vienen del Distrito Norte de California, que escaneó el mismo documento de 317 páginas de dos formas. Como <a href="https://cand.uscourts.gov/cases-e-filing/cmecf-information/preparing-your-cmecf-filing" target="_blank" rel="noopener">archivo bitonal a 300 ppp pesaba 23,86 MB y seguía siendo legible</a>; en escala de grises a 400 ppp llegó a 374,47 MB. Eso es aproximadamente quince veces más para las mismas páginas, por efecto tanto de la profundidad de color como de la mayor resolución.</p>
+
+<div class="table-wrap"><table>
+<caption>Modos de color de un PDF escaneado: para qué sirve cada uno</caption>
+<thead><tr><th scope="col">Modo</th><th scope="col">Bits por píxel</th><th scope="col">Tamaño relativo</th><th scope="col">Ideal para</th></tr></thead>
+<tbody>
+<tr><th scope="row">Bitonal (blanco y negro)</th><td>1</td><td>El más pequeño</td><td>Escritos judiciales de texto simple; no es un modo de nuestra herramienta</td></tr>
+<tr><th scope="row">Escala de grises (herramienta: Gris)</th><td>8</td><td>Medio</td><td>Cartas, contratos, formularios, cualquier documento con firmas</td></tr>
+<tr><th scope="row">Color (herramienta: Color)</th><td>24</td><td>El más grande</td><td>Gráficos, sellos en color, fotos, texto resaltado</td></tr>
+</tbody></table></div>
+
+<p>Nuestra herramienta ofrece Gris y Color y guarda cada página como una imagen JPEG. JPEG es eficiente con los tonos de gris, pero, como dice FADGI, «el procesamiento JPEG estándar introduce bloques de 8x8 píxeles que claramente no forman parte del contenido original». A 2× o 3×, esos bloques rara vez se ven en el texto.</p>
+
+<p>Si necesitas un blanco y negro real de un bit, nuestra guía para <a href="/blog/convert-color-pdf-to-black-and-white/">convertir un PDF a color en blanco y negro</a> explica la diferencia y las opciones.</p>
+
+<h3>Límites de tamaño de un PDF escaneado con los que puedes toparte</h3>
+<p>Los límites de subida hacen que la elección del color sea una cuestión práctica, no estética. El Distrito Oeste de Washington fija un <a href="https://www.wawd.uscourts.gov/attorneys/cm-ecf-faqs/Technical" target="_blank" rel="noopener">límite de 100 MB por documento y pide escaneos en blanco y negro a 300 ppp</a>, salvo que el color sea esencial. El Distrito de Minnesota limita cada prueba documental a <a href="https://www.mnd.uscourts.gov/sites/mnd/files/Criminal-ECF-Procedures-Guide.pdf" target="_blank" rel="noopener">35 MB en sus procedimientos ECF para causas penales</a>. El Servicio de Ciudadanía e Inmigración de EE. UU. (USCIS) limita cada <a href="https://www.uscis.gov/file-online/tips-for-filing-forms-online" target="_blank" rel="noopener">archivo de pruebas subido a 12 MB</a>.</p>
+
+<div class="callout callout-tip"><strong>Regla rápida para el tamaño</strong>Empieza con 2× y Gris. Si el archivo descargado es demasiado grande para un portal, baja a 1,5× antes de cambiar cualquier otra cosa, porque bajar un escalón de resolución reduce los píxeles mucho más que cualquier otro ajuste. Si aun así sigue siendo demasiado grande, divide el PDF y convierte las partes por separado.</div>
+
+<h2 id="flatten-vs-scan-look">¿Aplanar el PDF sin más o darle aspecto escaneado?</h2>
+<p>Elige un aplanado limpio cuando el destinatario solo necesite un PDF de solo imagen sin texto editable, y elige el aspecto escaneado cuando el archivo deba parecer papel que ha pasado por un escáner. La misma herramienta hace ambas cosas: pon Rotación, Variación de rotación, Desenfoque y Ruido a 0 para un aplanado limpio, o déjalos por encima de 0 para ganar realismo.</p>
+
+<p>Un aplanado limpio suele ser la respuesta correcta: enviar un contrato definitivo para que nadie pueda reescribir discretamente una cláusula con un editor de texto, bloquear un formulario rellenado para que sus valores no se puedan cambiar campo a campo o entregar páginas a un sistema que rechaza los PDF con fuentes o campos de formulario. En estos casos, una inclinación o unas motas no aportan nada.</p>
+
+<div class="table-wrap"><table>
+<caption>Ajustes para un aplanado limpio frente a un aspecto escaneado al convertir PDF a PDF escaneado</caption>
+<thead><tr><th scope="col">Control (rango)</th><th scope="col">Aplanado limpio</th><th scope="col">Aspecto escaneado suave</th><th scope="col">Aspecto escaneado marcado</th></tr></thead>
+<tbody>
+<tr><th scope="row">Rotación (−10° a 10°)</th><td>0°</td><td>1° (predeterminado)</td><td>1,5°–2°</td></tr>
+<tr><th scope="row">Variación de rotación (0–10°)</th><td>0</td><td>0,5</td><td>1</td></tr>
+<tr><th scope="row">Desenfoque (0–1)</th><td>0</td><td>0,3 (predeterminado)</td><td>0,4–0,5</td></tr>
+<tr><th scope="row">Ruido (0–1)</th><td>0</td><td>0,1 (predeterminado)</td><td>0,2–0,3</td></tr>
+<tr><th scope="row">Brillo / Contraste (0–2)</th><td>1 / 1</td><td>1 / 1,1</td><td>1,05 / 1,2</td></tr>
+<tr><th scope="row">Amarillento (0–2)</th><td>0</td><td>0–0,2</td><td>0,3–0,5</td></tr>
+<tr><th scope="row">Borde</th><td>No</td><td>No</td><td>Sí</td></tr>
+<tr><th scope="row">Espacio de color / Resolución</th><td>Gris o Color / 2×–3×</td><td>Gris / 2×</td><td>Gris / 2×</td></tr>
+</tbody></table></div>
+
+<p>Los valores del aspecto escaneado imitan defectos que los archiveros intentan eliminar. La norma de la NARA define el ruido como «uno o varios artefactos de imagen no deseados en un documento digitalizado que no forman parte del material original» e incluye la inclinación y el recorte incorrecto entre los defectos que hay que comprobar. Un poco de cada uno resulta creíble; demasiado parece una mala copia.</p>
+
+<p>Dos precauciones con el aspecto escaneado. Un Desenfoque por encima de 0,5 suaviza rápidamente la letra pequeña, así que sube Resolución cuando subas Desenfoque. Una rotación de más de 2° recorta las esquinas de la página y parece más un descuido que algo realista. Para un repaso completo de los artefactos y de combinaciones listas para usar, consulta nuestra <a href="/blog/scan-effect/">guía del efecto escaneado</a>.</p>
+
+<h2 id="required-or-refused">¿Cuándo se exige o se rechaza un PDF escaneado?</h2>
+<p>A veces se pide un PDF escaneado (subidas de solo imagen, copias finales aplanadas), pero a menudo se rechaza cuando importa poder buscar en el texto. Los tribunales federales y las normas de accesibilidad suelen preferir los PDF con texto buscable, así que consulta las normas del destinatario antes de convertir un PDF a PDF escaneado y conserva el archivo original.</p>
+
+<p>Los tribunales son el ejemplo más claro. Las preguntas frecuentes del poder judicial federal de EE. UU. indican que <a href="https://www.uscourts.gov/court-records/file-a-case-cm-ecf/faqs-case-management-electronic-case-files-cm-ecf" target="_blank" rel="noopener">«los sistemas CM/ECF están diseñados para aceptar únicamente documentos en formato PDF»</a>, pero los detalles varían según el distrito. El Distrito Sur de Florida es estricto: <a href="https://www.flsd.uscourts.gov/all-faqs/CMECF" target="_blank" rel="noopener">«los escritos y documentos principales presentados electrónicamente en CM/ECF deben estar en formato PDF con texto buscable»</a>, y las pruebas documentales deberían permitir búsquedas siempre que sea posible.</p>
+
+<p>Otros distritos expresan una preferencia en lugar de una prohibición. El Distrito de Massachusetts escribe que <a href="https://www.mad.uscourts.gov/caseinfo/pdf/ECFadminProc.pdf" target="_blank" rel="noopener">«para presentar en CM/ECF se prefieren los documentos convertidos a PDF, en lugar de escaneados»</a>. El Distrito de Minnesota dice: «Se prefieren los documentos PDF escaneados con texto buscable, pero no son obligatorios». El Distrito Este de Oklahoma recomienda crear <a href="https://www.oked.uscourts.gov/pdfa-frequently-asked-questions" target="_blank" rel="noopener">archivos PDF/A directamente desde un procesador de textos en lugar de imprimir y escanear</a>, para que los archivos sean pequeños y permitan búsquedas.</p>
+
+<p>La accesibilidad es el segundo motivo de rechazo. La técnica PDF7 de las pautas WCAG del W3C afirma: <a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF7" target="_blank" rel="noopener">«Un documento formado por imágenes escaneadas de texto es intrínsecamente inaccesible, porque el contenido del documento son imágenes, no texto buscable»</a>. Los documentos públicos de organismos, universidades y muchas empresas deben cumplir las WCAG, así que un archivo de solo imagen no es el formato adecuado para ellos, salvo que se le añada OCR.</p>
+
+<div class="callout callout-warn"><strong>Consulta las normas y usa el aspecto escaneado con honestidad</strong>Si un tribunal, un organismo o una empresa exige PDF con texto buscable, presenta el PDF digital original o aplica después OCR a la versión escaneada para recuperar una capa de texto oculta. Nuestra herramienta no hace OCR. Recuerda también que el aspecto escaneado cambia la apariencia, no la autenticidad: no lo uses para alterar ni falsificar documentos oficiales, documentos de identidad o firmas que no son tuyas.</div>
+
+<h3>Recuperar la capa de texto con OCR</h3>
+<p>Si necesitas a la vez el aspecto aplanado y la búsqueda de texto, convierte primero y después aplica OCR con un software de PDF de escritorio que ofrezca un paso de «reconocer texto» o «hacer que se pueda buscar». El OCR coloca texto invisible detrás de la imagen de la página, de modo que el archivo parece escaneado y Ctrl+F vuelve a funcionar. Revisa bien los documentos importantes, porque el OCR estima las letras.</p>
+
+<h2 id="privacy">¿Es seguro convertir un PDF a PDF escaneado online?</h2>
+<p>Convertir un PDF a PDF escaneado online es seguro cuando el procesamiento ocurre en tu navegador. Nuestra herramienta renderiza las páginas localmente con pdf.js y el canvas del navegador, así que el archivo no se sube a ningún servidor de procesamiento. Después de la primera visita también funciona sin conexión, lo que te permite comprobarlo por ti mismo.</p>
+
+<p>El procesamiento local importa por el tipo de archivos que se suelen aplanar: contratos firmados, nóminas, formularios médicos, documentos fiscales. Muchos conversores online suben el PDF, lo procesan en un servidor y te devuelven el resultado, lo que significa que existe una copia, al menos durante un momento, en equipos que no controlas. Con el renderizado en el navegador, las páginas nunca salen del dispositivo que las abrió.</p>
+
+<ul>
+<li><strong>Prueba sin conexión.</strong> Carga <a href="/scan">el escáner</a> una vez, desconéctate de internet y convierte un archivo. Si funciona sin conexión, no se ha subido nada.</li>
+<li><strong>Sin cuenta.</strong> No hay registro, así que ningún historial de documentos queda asociado a tu identidad.</li>
+<li><strong>El mismo motor en Chrome.</strong> La <a href="https://chromewebstore.google.com/detail/make-pdf-look-scanned/ijhpnlcipgiokgignkbbbgkobdmdoila" target="_blank" rel="noopener">extensión de Chrome</a>, valorada con 5 estrellas en Chrome Web Store, ejecuta el mismo motor local en un panel lateral.</li>
+</ul>
+
+
+<h2 id="batch">¿Cómo convertir muchos PDF a PDF escaneados a la vez?</h2>
+<p>Para convertir muchos PDF a PDF escaneados a la vez, abre la página de escaneo por lotes en pdflookscanned.com/scan/bulk, añade todos los archivos, elige un único conjunto de ajustes y descárgalo todo en un solo archivo ZIP. Cada archivo de entrada se convierte en su propio PDF escaneado con la misma resolución, el mismo modo de color y los mismos efectos.</p>
+
+<ol class="step-list">
+<li><strong>Abre el modo por lotes.</strong> Entra en <a href="/scan/bulk">pdflookscanned.com/scan/bulk</a> (en la extensión de Chrome, basta con añadir varios archivos).</li>
+<li><strong>Añade los archivos.</strong> Suelta los PDF. También funcionan entradas mixtas, como JPG o PNG; cada imagen se convierte en un PDF de una página.</li>
+<li><strong>Elige los ajustes comunes.</strong> Define Resolución, Espacio de color y los controles deslizantes de los efectos una sola vez; se aplican a todos los archivos.</li>
+<li><strong>Descarga el ZIP.</strong> Procesa el lote y descarga el ZIP; después revisa algunos resultados al azar para comprobar que la letra pequeña se lee bien.</li>
+</ol>
+
+<p>El modo por lotes mantiene los archivos separados a propósito; no los fusiona en un solo documento. Si necesitas un único PDF escaneado combinado, fusiona antes los PDF de origen (por ejemplo, en Vista Previa de macOS arrastra páginas de un PDF a la barra lateral de otro, o imprime varios documentos juntos con Microsoft Print to PDF en Windows) y después convierte una sola vez el archivo fusionado.</p>
+
+<p>El trabajo por lotes es también donde más ayuda Variación de rotación: cada página recibe una inclinación aleatoria ligeramente distinta, lo que resulta más natural a lo largo de un documento extenso.</p>
+
+<h2 id="checking">¿Cómo comprobar que el resultado es un PDF escaneado?</h2>
+<p>Comprueba un archivo convertido intentando seleccionar texto, buscando una palabra y ampliando la letra más pequeña. En un verdadero PDF escaneado no puedes seleccionar nada salvo imágenes de página completa, Ctrl+F no encuentra ninguna palabra y el texto sigue leyéndose bien con un zoom del 200%. Confirma también el tamaño del archivo y el número de páginas.</p>
+
+<p>La guía de accesibilidad de la Universidad Estatal de Cleveland describe la prueba más rápida: <a href="https://pressbooks.ulib.csuohio.edu/accessibility/chapter/chapter-4-2-the-difference-between-an-accessible-pdf-and-a-scanned-image-of-text/" target="_blank" rel="noopener">«Si la palabra se resalta en la página, entonces tiene texto buscable, a diferencia de una imagen escaneada de texto»</a>. Tras una conversión correcta no se resalta nada, y al arrastrar el cursor se selecciona la imagen de la página en lugar de palabras.</p>
+
+<div class="callout callout-info"><strong>Cinco comprobaciones antes de enviar</strong>1. El texto no se puede seleccionar ni copiar. 2. Ctrl+F no encuentra nada. 3. La letra más pequeña se lee con un zoom del 200%. 4. El número y el orden de las páginas coinciden con el original. 5. El tamaño del archivo cabe en el límite de subida del destinatario, y las propiedades del documento muestran solo lo que pretendías.</div>
+
+
+<h2 id="troubleshooting">¿Cómo solucionar problemas al convertir PDF a PDF escaneado?</h2>
+<p>La mayoría de los problemas al convertir PDF a PDF escaneado vienen de cuatro ajustes: resolución demasiado baja (texto borroso), resolución o color demasiado altos (archivo enorme), un origen que no es PDF (tamaño de página incorrecto) y la rotación activada (páginas inclinadas). Cada uno tiene una solución directa en la herramienta, que se indica a continuación junto con el ajuste que debes cambiar primero.</p>
+
+<h3>Texto borroso o roto en el PDF escaneado</h3>
+<p>Sube Resolución a 2,5× o 3× y luego baja Desenfoque a 0,1–0,2, o a 0 para un aplanado limpio. Si el texto gris fino sigue desvaneciéndose, sube Contraste hasta aproximadamente 1,2. El desenfoque y el ruido se aplican después del renderizado, así que a 1× incluso un valor de desenfoque pequeño puede volver ilegible un texto de 9 puntos.</p>
+
+<h3>El PDF escaneado pesa muchísimo</h3>
+<p>Cambia Espacio de color a Gris si el documento es de texto y después baja Resolución de 3× a 2× o 1,5×. El ruido también ocupa espacio, porque a JPEG le cuesta comprimir las motas aleatorias, así que mantén Ruido en 0,1 o menos en documentos largos. Si los archivos son muy largos, divídelos y conviértelos por partes.</p>
+
+<h3>Tamaño de página incorrecto tras convertir a escaneado</h3>
+<p>Las páginas PDF conservan su tamaño y su diseño originales. Si el resultado muestra páginas A4 con texto simple en Helvetica, el origen era un DOCX, una hoja de cálculo, un TXT o un HTML, que la herramienta vuelve a componer como texto en A4. Exporta primero el original a PDF desde su propia aplicación y después convierte ese PDF.</p>
+
+<h3>Las páginas salen inclinadas o con las esquinas cortadas</h3>
+<p>Pon Rotación y Variación de rotación a 0 para obtener una página recta. Los valores predeterminados (Rotación 1°) están ahí por realismo, pero un escrito judicial o un formulario destinado a procesamiento automático normalmente debe ir recto. Si quieres inclinación, mantenla por debajo de 2° para que las esquinas queden dentro de la página.</p>
+
+<h3>La firma o el sello se ven pixelados</h3>
+<p>Las líneas de una firma son finas y son las primeras en sufrir con una resolución baja. Usa 2,5× o 3×, mantén Desenfoque en 0,3 o menos y, si colocas una imagen de sello o firma desde los extras, parte de un PNG de alta resolución. Coloca solo firmas y sellos que tengas autorización para usar.</p>
+
+<div class="expert-quote"><blockquote>Diseñamos el control Resolución en torno a la propia cuadrícula de 72 puntos del PDF para que los números sean honestos: 2× son 144 ppp y 3× son 216 ppp, sin nada oculto. Por eso los valores predeterminados son 2× en Gris: lo bastante nítido para el texto normal y mucho más ligero que un renderizado en color de la misma página. Lo mantenemos todo en local, en el navegador, porque los archivos que la gente aplana suelen ser justo los que menos quiere subir.</blockquote><cite><strong>El equipo de Make PDF look scanned</strong> — creadores de la herramienta web y de la extensión de Chrome</cite></div>
+
+<h2 id="faq">Convertir PDF a PDF escaneado: preguntas frecuentes</h2>
+<p>Estas respuestas sobre cómo convertir PDF a PDF escaneado cubren las preguntas más habituales tras la conversión: qué pasa con el texto oculto y los metadatos, si el cambio se puede deshacer, qué papel tiene el OCR, qué ajustes elegir y si la herramienta funciona en el móvil. Cada respuesta refleja lo que la herramienta hace realmente.</p>
+
+<div class="faq-item"><p class="faq-q">¿Convertir un PDF a PDF escaneado elimina el texto oculto?</p><p class="faq-a">Sí, del contenido de la página. Las páginas nuevas son imágenes JPEG de lo que dibuja el motor de renderizado, así que no queda ninguna capa de texto que copiar, ni siquiera texto blanco o palabras ocultas tras un recuadro negro. Tómalo como un efecto secundario y, aun así, revisa la vista previa cuando sea importante que un dato quede tachado.</p></div>
+
+<div class="faq-item"><p class="faq-q">¿Qué pasa con los metadatos del PDF original?</p><p class="faq-a">La herramienta escribe un PDF nuevo y te permite definir su título, autor, asunto, palabras clave, productor y creador en el panel de extras. Rellena esos campos como quieras antes de descargar y luego comprueba las propiedades del documento resultante en tu visor de PDF.</p></div>
+
+<div class="faq-item"><p class="faq-q">¿Se puede volver a convertir un PDF escaneado en un PDF editable?</p><p class="faq-a">No exactamente. La capa de texto original, las fuentes, los enlaces y los campos de formulario han desaparecido. El OCR puede reconocer las letras y añadir una nueva capa buscable, y algunos programas pueden reconstruir texto editable a partir de ella, pero el formato y la precisión no coincidirán con el original. Conserva el archivo original.</p></div>
+
+<div class="faq-item"><p class="faq-q">¿Puedo aplicar OCR al PDF escaneado después?</p><p class="faq-a">Sí. Cualquier función de OCR de un software de PDF de escritorio tratará el resultado como un escaneo normal. Una resolución más alta y poco ruido dan un mejor reconocimiento, así que usa 2× o 3× con Ruido cerca de 0 si piensas pasar el archivo por OCR.</p></div>
+
+<div class="faq-item"><p class="faq-q">¿Qué diferencia hay entre «aplanar un PDF» y «convertir un PDF a escaneado»?</p><p class="faq-a">Aplanar, en sentido estricto, fusiona los campos de formulario y las anotaciones con la página, pero puede mantener el texto seleccionable. Convertir un PDF a escaneado transforma la página entera, texto incluido, en una imagen. Lo segundo es más drástico y es lo que hace nuestra herramienta.</p></div>
+
+<div class="faq-item"><p class="faq-q">¿Qué resolución debo elegir para convertir un PDF a PDF escaneado?</p><p class="faq-a">Usa 2× (unos 144 ppp) para documentos normales y 3× (unos 216 ppp) para letra pequeña, tablas densas o firmas. Baja a 1,5× solo cuando el archivo deba ser muy pequeño y el texto tenga 12 puntos o más.</p></div>
+
+<div class="faq-item"><p class="faq-q">¿Por qué mi PDF escaneado pesa mucho más que el original?</p><p class="faq-a">Un PDF de texto guarda las letras como instrucciones compactas; un PDF escaneado guarda cada píxel de cada página. Elegir Gris en lugar de Color, bajar Resolución y reducir Ruido disminuyen el tamaño. Los tribunales observan el mismo efecto: un archivo de prueba de 317 páginas osciló entre 23,86 MB y 374,47 MB según el modo de color y la resolución.</p></div>
+
+<div class="faq-item"><p class="faq-q">¿Aceptará un tribunal un PDF convertido en PDF escaneado?</p><p class="faq-a">Depende del tribunal. Algunos distritos exigen que los documentos principales tengan texto buscable; otros solo lo prefieren. Lee primero las normas locales de CM/ECF; ante la duda, presenta el PDF digital original o añade OCR a la versión escaneada.</p></div>
+
+
+<div class="faq-item"><p class="faq-q">¿La herramienta para convertir PDF a PDF escaneado funciona en el móvil?</p><p class="faq-a">Sí. La web funciona en los navegadores móviles, procesa los archivos localmente en el teléfono y descarga el PDF escaneado en tus archivos. Los documentos grandes a 3× tardan más y consumen más memoria en el móvil, así que ahí 2× es la opción más segura.</p></div>
+
+<div class="faq-item"><p class="faq-q">¿El conversor de PDF a PDF escaneado es gratis?</p><p class="faq-a">Sí. La herramienta web y la extensión de Chrome son gratuitas, no requieren registro y no añaden ninguna marca de agua, salvo que tú decidas añadir una en los extras.</p></div>

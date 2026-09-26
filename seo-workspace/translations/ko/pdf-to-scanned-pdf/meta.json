@@ -1,0 +1,44 @@
+{
+  "slug": "pdf-to-scanned-pdf",
+  "title": "PDF 스캔본 변환: 평탄화부터 해상도·용량까지",
+  "description": "PDF를 스캔본 PDF로 변환하는 방법. 텍스트를 페이지 이미지로 평탄화하고, DPI와 회색조를 고르고, 파일 용량을 작게 유지하는 과정을 단계별로 설명합니다. 무료.",
+  "h1": "PDF 스캔본 변환: 평탄화하면서 읽기 쉽게 유지하는 방법",
+  "tag": "변환",
+  "main_keyword": "pdf 스캔본 변환",
+  "keywords": [
+    "pdf 스캔본 변환",
+    "pdf 스캔본으로 변환",
+    "pdf 스캔 pdf 변환",
+    "스캔 pdf",
+    "pdf 평탄화",
+    "pdf 래스터화",
+    "이미지 pdf 변환",
+    "pdf 이미지로 저장",
+    "스캔 pdf 해상도",
+    "스캔 pdf 용량"
+  ],
+  "howto_name": "PDF를 스캔 PDF로 변환하는 방법",
+  "cta_title": "지금 PDF를 스캔본으로 변환하세요",
+  "cta_body": "무료 도구에 PDF를 넣고 해상도와 회색조를 고른 뒤 이미지로만 된 스캔 PDF를 다운로드하세요. 모든 처리는 브라우저에서 로컬로 이루어집니다.",
+  "about": [
+    "PDF",
+    "스캔 문서",
+    "래스터화",
+    "이미지 해상도",
+    "데이터 압축"
+  ],
+  "mentions": [
+    "JPEG",
+    "광학 문자 인식",
+    "DPI",
+    "그레이스케일",
+    "이진 이미지",
+    "CM/ECF",
+    "미국 국립문서기록관리청",
+    "Federal Agencies Digital Guidelines Initiative",
+    "웹 콘텐츠 접근성 지침",
+    "PDF/A",
+    "구글 크롬"
+  ],
+  "source_modified": "2026-09-18"
+}

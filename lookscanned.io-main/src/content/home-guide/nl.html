@@ -1,0 +1,115 @@
+<section class="home-guide" aria-labelledby="hg-what">
+  <h2 id="hg-what">Wat betekent het om een PDF gescand te laten lijken?</h2>
+  <p>Een PDF gescand laten lijken betekent dat je een strak digitaal bestand omzet in paginabeelden met de sporen van een echte kantoorscanner: een lichte kanteling, korrel, een zachte focus, een grijze of crèmekleurige papiertint en tekst die je niet kunt selecteren. Het resultaat is nog steeds een gewone PDF, maar elke pagina is nu een afbeelding, precies zoals bij een document dat door een flatbedscanner is gegaan.</p>
+  <p>Deze tool doet dat in minder dan een minuut in je browser. Je sleept een PDF, een foto of een Word-bestand erin, stemt het scaneffect af met een live voorbeeld en downloadt de PDF die er gescand uitziet. Of je nu zoekt op PDF gescand laten lijken, PDF er gescand uit laten zien of PDF laten lijken alsof hij gescand is: de taak en de stappen zijn hetzelfde.</p>
+
+  <h2 id="hg-steps">Een PDF online gescand laten lijken in 3 stappen</h2>
+  <p>Een PDF online gescand laten lijken gaat in drie stappen en duurt meestal 20–60 seconden voor een bestand van 10 pagina's: kies het bestand, stel het scaneffect in terwijl je het voorbeeld bekijkt, en exporteer. Je hoeft niets te installeren, je hebt geen account nodig en de pagina blijft offline werken zodra hij geladen is.</p>
+  <ol class="step-list">
+    <li><strong>Kies een bestand.</strong> Open <a href="/scan">de scanner</a> en sleep er een PDF-, JPG-, PNG-, WebP-, SVG-, DOCX-, XLSX-, CSV-, TXT-, MD- of HTML-bestand in. Word-, Excel- en tekstbestanden worden eerst omgezet in pagina's met platte tekst; wil je de opmaak precies behouden, sla het document dan eerst op als PDF voordat je het scant.</li>
+    <li><strong>Stel het scaneffect in.</strong> Verschuif de schuifregelaars voor ruis, vervaging, rotatie, helderheid, contrast en vergeling, schakel tussen grijs en kleur, en voeg een dunne scannerrand toe. Het voorbeeld wordt bijgewerkt terwijl je elke schuifregelaar verplaatst.</li>
+    <li><strong>Download de gescande PDF.</strong> Klik op Gescande PDF maken. Elke pagina wordt met jouw instellingen als afbeelding weergegeven en opgeslagen in een nieuwe PDF, die meteen wordt gedownload.</li>
+  </ol>
+  <p>Heb je een stapel bestanden? Met <a href="/scan/bulk">Bulkscan</a> pas je dezelfde instellingen in één keer toe op veel documenten en krijg je alle resultaten in één ZIP-archief.</p>
+
+  <h2 id="hg-settings">Welke instellingen laten een PDF realistisch gescand lijken?</h2>
+  <p>Een realistische scan krijg je met kleine waarden, niet met grote. De standaardwaarden — 1° rotatie, 0,5° willekeurige variatie per pagina, vervaging 0,3, ruis 0,1, grijstinten en 2× resolutie — zien er al uit als een kantoorscan. Zet je elke schuifregelaar op het maximum, dan lijkt het resultaat eerder bewerkt dan gescand.</p>
+  <div class="table-wrap">
+    <table>
+      <caption>Instellingen voor het scaneffect, hun bereik en de waarden die natuurlijk ogen</caption>
+      <thead><tr><th scope="col">Instelling</th><th scope="col">Bereik</th><th scope="col">Standaard</th><th scope="col">Natuurlijk ogende waarde</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Rotatie</th><td>−10° tot 10°</td><td>1°</td><td>0,5°–2°; boven 3° oogt het slordig</td></tr>
+        <tr><th scope="row">Rotatievariatie</th><td>0°–10°</td><td>0,5°</td><td>0,3°–1°, zodat niet alle pagina's precies even scheef staan</td></tr>
+        <tr><th scope="row">Vervaging</th><td>0–1</td><td>0,3</td><td>0,2–0,4; tekst moet goed leesbaar blijven</td></tr>
+        <tr><th scope="row">Ruis</th><td>0–1</td><td>0,1</td><td>0,05–0,2 voor scannerkorrel</td></tr>
+        <tr><th scope="row">Helderheid</th><td>0–2</td><td>1</td><td>0,95–1,1</td></tr>
+        <tr><th scope="row">Contrast</th><td>0–2</td><td>1</td><td>1–1,2 voor een scherpe kopieerlook</td></tr>
+        <tr><th scope="row">Vergeling</th><td>0–2</td><td>0</td><td>0,1–0,3 voor ouder papier</td></tr>
+        <tr><th scope="row">Kleurruimte</th><td>Grijs of kleur</td><td>Grijs</td><td>Grijs voor de meeste kantoorscans</td></tr>
+        <tr><th scope="row">Resolutie</th><td>1×–3×</td><td>2×</td><td>2× (ongeveer 144 dpi) houdt scherpte en bestandsgrootte in balans</td></tr>
+        <tr><th scope="row">Rand</th><td>Aan of uit</td><td>Uit</td><td>Aan voor een dun lijntje langs de scannerrand</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Stapsgewijze recepten — kantoorscan, fotokopie, faxlook en oud papier — vind je in de <a href="/blog/scan-effect/">handleiding voor scaneffect-instellingen</a>.</p>
+
+  <h2 id="hg-private">Is het veilig om een PDF in de browser gescand te laten lijken?</h2>
+  <p>Ja. Het scaneffect wordt op je eigen apparaat gemaakt: de pagina leest de PDF met een PDF-engine in de browser, tekent elke pagina op een canvas, past daar ruis, vervaging en rotatie toe en bouwt de nieuwe PDF lokaal op. Bestanden worden niet naar een verwerkingsserver geüpload en niet in de cloud opgeslagen.</p>
+  <p>Je kunt dat zelf controleren: open de ontwikkelaarstools van je browser, ga naar het tabblad Netwerk en voer een scan uit. Geen enkel verzoek bevat je document. Omdat de app een progressieve webapp is, blijft hij werken met wifi uit zodra hij geladen is.</p>
+
+  <h2 id="hg-files">Welke bestanden kun je gescand laten lijken?</h2>
+  <p>Je kunt een PDF-bestand gescand laten lijken, maar ook afbeeldingen, Word- en Excel-documenten en platte-tekstformaten. PDF's met meerdere pagina's behouden hun paginavolgorde en elke pagina krijgt een eigen, licht willekeurige kanteling, zodat het document leest als een stapel papier die vel voor vel door een scanner is gegaan.</p>
+  <ul>
+    <li><strong>Documenten:</strong> PDF, DOCX (Word), XLSX (Excel), CSV, TXT, Markdown en HTML. PDF's behouden hun exacte opmaak; Word-, Excel- en HTML-bestanden worden omgezet in pagina's met kale tekst, dus exporteer ze eerst naar PDF als de opmaak belangrijk is.</li>
+    <li><strong>Afbeeldingen:</strong> JPG, PNG, WebP, SVG, GIF en BMP — elke afbeelding wordt één gescande PDF-pagina. Lees meer in <a href="/blog/image-to-scanned-pdf/">afbeelding naar gescande PDF</a>.</li>
+    <li><strong>Extra's:</strong> een watermerk als tekst of afbeelding, je eigen stempel of handtekening als afbeelding met instellingen voor positie en grootte, en bewerkbare PDF-metadata zoals titel en auteur.</li>
+  </ul>
+
+  <h2 id="hg-extension">PDF gescand laten lijken: online of met de Chrome-extensie?</h2>
+  <p>Beide gebruiken dezelfde scanengine en dezelfde instellingen. De website hoef je niet te installeren en werkt op telefoons; de Chrome-extensie, beoordeeld met 5 sterren in de Chrome Web Store, opent in het zijpaneel van de browser, zodat je een PDF gescand kunt laten lijken zonder het tabblad te verlaten waarin je aan het werk bent.</p>
+  <div class="table-wrap">
+    <table>
+      <caption>De webtool vergeleken met de Chrome-extensie</caption>
+      <thead><tr><th scope="col">Functie</th><th scope="col">Webtool</th><th scope="col">Chrome-extensie</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Installatie</th><td>Geen</td><td>Eén klik in de Chrome Web Store</td></tr>
+        <tr><th scope="row">Werkt op telefoons</th><td>Ja</td><td>Nee (Chrome op desktop)</td></tr>
+        <tr><th scope="row">Scaninstellingen</th><td>Ruis, vervaging, rotatie, variatie, helderheid, contrast, vergeling, grijs/kleur, rand, resolutie</td><td>Dezelfde set</td></tr>
+        <tr><th scope="row">Meerdere bestanden naar ZIP</th><td>Ja, via Bulkscan</td><td>Ja, meerdere bestanden in één ZIP</td></tr>
+        <tr><th scope="row">Verwerking</th><td>Lokaal, in de browser</td><td>Lokaal, in het zijpaneel</td></tr>
+        <tr><th scope="row">Prijs</th><td>Gratis</td><td>Gratis</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="hg-uses">Waarom zou je een PDF gescand laten lijken?</h2>
+  <p>Mensen laten een PDF gescand lijken wanneer een procedure van papier uitgaat: een verhuurder, school of hr-afdeling vraagt om een "gescande kopie", een geprinte en ondertekende look past beter bij de situatie, of het bestand mag geen selecteerbare tekst bevatten die je kunt kopiëren en plakken. Ontwerpers gebruiken het scaneffect ook voor mock-ups, zines en hand-outs in vintagestijl.</p>
+  <p>Een PDF die er gescand uitziet, is bovendien afgevlakt: tekst, formuliervelden en lagen worden per pagina één afbeelding, zodat het bestand overal op dezelfde manier opent. Heb je alleen dat afvlakken nodig, lees dan <a href="/blog/pdf-to-scanned-pdf/">PDF naar gescande PDF</a>; wil je een gewone kopie in grijstinten, zie dan <a href="/blog/convert-color-pdf-to-black-and-white/">een kleuren-PDF zwart-wit maken</a>.</p>
+  <div class="callout callout-warn"><strong>Gebruik de scanlook eerlijk</strong>Een scaneffect verandert hoe een document eruitziet, niet wat het is. Gebruik het niet om officiële documenten, identiteitsbewijzen of handtekeningen die niet van jou zijn te wijzigen of als echt te laten doorgaan. Sommige rechtbanken en instanties eisen doorzoekbare PDF's, dus controleer de indieningsregels voordat je een processtuk tot afbeeldingen afvlakt.</div>
+
+  <h2 id="hg-methods">PDF gescand laten lijken: tool of andere methoden</h2>
+  <p>Er zijn vier gangbare manieren om een PDF gescand te laten lijken: een scaneffect-tool in de browser, printen en daarna echt scannen, de afdruk fotograferen met je telefoon, of paginabeelden bewerken in een rasterbeeldbewerker. De browsertool is het snelst en het consequentst; de andere drie kosten meer tijd en geven minder controle.</p>
+  <div class="table-wrap">
+    <table>
+      <caption>Vier manieren om een PDF gescand te laten lijken, vergeleken</caption>
+      <thead><tr><th scope="col">Methode</th><th scope="col">Tijd voor 10 pagina's</th><th scope="col">Nodig</th><th scope="col">Controle over de look</th><th scope="col">Privacy</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Scaneffect-tool in de browser</th><td>Minder dan 1 minuut</td><td>Een browser</td><td>Elk artefact heeft een schuifregelaar en een live voorbeeld</td><td>Lokale verwerking</td></tr>
+        <tr><th scope="row">Printen, dan scannen</th><td>10–20 minuten</td><td>Printer, scanner, papier, toner</td><td>Echte artefacten, maar je kunt ze niet afstemmen</td><td>Afhankelijk van gedeelde kantoorapparaten</td></tr>
+        <tr><th scope="row">Telefoonfoto van een afdruk</th><td>5–15 minuten</td><td>Printer en een telefooncamera</td><td>Ongelijk licht, perspectief en schaduwen</td><td>Foto's kunnen naar cloudback-ups synchroniseren</td></tr>
+        <tr><th scope="row">Rasterbeeldbewerker</th><td>30+ minuten</td><td>Bewerkingssoftware en vaardigheid</td><td>Volledig, maar handmatig per pagina</td><td>Lokaal</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Een volledige uitleg van elke aanpak, inclusief de exacte instellingen in het afdrukvenster, vind je in <a href="/blog/how-to-make-a-pdf-look-scanned/">een PDF er gescand uit laten zien</a>.</p>
+
+  <h2 id="hg-check">Zo controleer je een gescand ogende PDF voordat je hem verstuurt</h2>
+  <p>Een overtuigende PDF die er gescand uitziet, doorstaat vier snelle controles: tekst kan niet worden geselecteerd, pagina's staan licht en ongelijk scheef, de achtergrond is niet puur digitaal wit, en het bestand is duidelijk groter dan het origineel, omdat elke pagina nu een afbeelding is in plaats van tekst.</p>
+  <ul>
+    <li><strong>Probeer tekst te selecteren.</strong> Sleep de cursor over een regel. Bij een echte scan en bij het resultaat van deze tool krijg je een kader, geen gemarkeerde woorden.</li>
+    <li><strong>Zoom in tot 300–400%.</strong> De randen van letters moeten iets zacht zijn en het papier moet een lichte korrel tonen. Perfect scherpe vectorranden verraden een digitaal bestand.</li>
+    <li><strong>Vergelijk twee pagina's.</strong> Precies dezelfde kanteling op elke pagina oogt gegenereerd; houd de rotatievariatie boven 0.</li>
+    <li><strong>Print één pagina.</strong> Gaat de kopie op papier, controleer dan of kleine letters en handtekeningen leesbaar blijven na vervaging en ruis.</li>
+  </ul>
+  <p>Heeft je ontvanger doorzoekbare tekst nodig, dan is een scanlook het verkeerde formaat; lees het verschil in <a href="/blog/what-is-a-scanned-pdf/">wat is een gescande PDF</a>.</p>
+
+  <h2 id="hg-guides">Handleidingen: een PDF laten lijken alsof hij gescand is</h2>
+  <p>Deze handleidingen gaan dieper in op elke manier om een PDF te laten lijken alsof hij gescand is, met exacte instellingen, vergelijkingen van methoden en controles die je op het eindresultaat kunt uitvoeren voordat je het verstuurt.</p>
+  <ul>
+    <li><a href="/blog/how-to-make-a-pdf-look-scanned/">Een PDF er gescand uit laten zien: 6 methoden vergeleken</a></li>
+    <li><a href="/blog/make-a-document-look-scanned/">Een document gescand laten lijken: Word, Google Docs en foto's</a></li>
+    <li><a href="/blog/what-is-a-scanned-pdf/">Wat is een gescande PDF en hoe herken je er een?</a></li>
+    <li><a href="/blog/scan-effect/">Scaneffect: welke artefacten een bestand gescand laten lijken</a></li>
+  </ul>
+
+  <h2 id="hg-faq">PDF gescand laten lijken: veelgestelde vragen</h2>
+  <div class="faq-item"><p class="faq-q">Hoe laat ik een PDF gescand lijken zonder scanner?</p><p class="faq-a">Open de scanner op deze site, sleep de PDF erin, houd de standaardinstellingen aan of pas ruis, vervaging en rotatie aan, en klik op Gescande PDF maken. Elke pagina wordt een licht gekantelde, korrelige afbeelding in grijstinten en wordt opgeslagen als nieuwe PDF. Je hebt geen printer, scanner of account nodig.</p></div>
+  <div class="faq-item"><p class="faq-q">Is deze scaneffect-tool gratis?</p><p class="faq-a">Ja. Scannen is gratis, je hoeft geen account aan te maken en er komt geen watermerk op, tenzij je er zelf een toevoegt. De Chrome-extensie is ook gratis.</p></div>
+  <div class="faq-item"><p class="faq-q">Worden mijn bestanden ergens geüpload?</p><p class="faq-a">Nee. Bestanden worden lokaal in je browser verwerkt en niet naar een verwerkingsserver gestuurd of in de cloud opgeslagen. De app werkt na het eerste bezoek zelfs offline.</p></div>
+  <div class="faq-item"><p class="faq-q">Kan ik de tekst in mijn gescand ogende PDF nog selecteren?</p><p class="faq-a">Nee. Elke pagina wordt een afbeelding, net als bij een echte scan, dus tekst kan niet worden geselecteerd, doorzocht of gekopieerd. Bewaar je originele bestand als je later bewerkbare tekst nodig hebt.</p></div>
+  <div class="faq-item"><p class="faq-q">Kan ik een PDF met meerdere pagina's gescand laten lijken?</p><p class="faq-a">Ja. Alle pagina's worden verwerkt, en de instelling Rotatievariatie geeft elke pagina een eigen, net iets andere kanteling, zodat het document er niet machinaal perfect uitziet. Bulkscan verwerkt veel bestanden tegelijk.</p></div>
+  <div class="faq-item"><p class="faq-q">Kan ik een Word-document of een foto gescand laten lijken?</p><p class="faq-a">Ja. DOCX, XLSX, CSV, TXT, Markdown, HTML en afbeeldingen in JPG, PNG, WebP of SVG worden eerst omgezet in pagina's en krijgen daarna hetzelfde scaneffect, zodat je een PDF krijgt die er gescand uitziet. Sla een Word-bestand met tabellen, logo's of speciale opmaak eerst op als PDF, zodat de opmaak precies behouden blijft.</p></div>
+  <div class="faq-item"><p class="faq-q">Welke resolutie moet ik gebruiken?</p><p class="faq-a">De standaardwaarde 2× (ongeveer 144 dpi voor een PDF-pagina) is scherp genoeg om te lezen en te printen en houdt het bestand klein. Gebruik 3× voor documenten met kleine letters en 1× als de bestandsgrootte het belangrijkst is.</p></div>
+  <div class="faq-item"><p class="faq-q">Werkt het op een telefoon?</p><p class="faq-a">Ja. De website werkt in moderne mobiele browsers zonder dat je iets hoeft te installeren. De Chrome-extensie is bedoeld voor Chrome op de desktop.</p></div>
+</section>

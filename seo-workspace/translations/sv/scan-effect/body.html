@@ -1,0 +1,208 @@
+<p class="lead">En skanningseffekt är de små defekter som en riktig skanner lämnar på en sida: en lätt lutning, sensorbrus, mjuk skärpa, en varm papperston, gråtoner och JPEG-komprimering. För att få ett dokument att se skannat ut återskapar du de defekterna med måtta, till exempel Rotation 1°, Oskärpa 0,3, Brus 0,1, färgrymden Gråskala och 2× upplösning.</p>
+<p>En snabb lösning i stil med ”lägg på brus och luta sidan” ser ofta ut som ett filter, inte som en skanning. Den här referensen delar upp en riktig skanning i dess artefakter, förklarar vad i hårdvaran som orsakar var och en, kopplar den till ett reglage i vårt kostnadsfria <a href="/scan">skanningsverktyg</a> och ger fem färdiga recept. Fakta om hårdvaran kommer från NARA, FADGI, BBC News och Wikipedia; reglagens intervall kommer från vår egen källkod.</p>
+<nav class="toc" aria-label="Innehållsförteckning"><h2>Innehåll</h2><ol>
+<li><a href="#what-is-a-scan-effect">Vad är en skanningseffekt?</a></li>
+<li><a href="#what-makes-a-document-look-scanned">Vad får ett dokument att se skannat ut?</a></li>
+<li><a href="#skew-and-rotation">Hur skapar snedställning det skannade utseendet?</a></li>
+<li><a href="#sensor-noise">Varför innehåller en skannereffekt brus?</a></li>
+<li><a href="#blur-and-softness">Hur mycket oskärpa har en riktig skanning?</a></li>
+<li><a href="#paper-tone">Hur förändrar papperstonen skanningseffekten?</a></li>
+<li><a href="#brightness-contrast-bit-depth">Hur formar ljusstyrka och kontrast en skanning?</a></li>
+<li><a href="#grayscale-and-bitonal">Gråskala eller bitonalt: vilket skannat utseende?</a></li>
+<li><a href="#jpeg-and-resolution">Bidrar JPEG-block och upplösning till det skannade utseendet?</a></li>
+<li><a href="#moire">Vad är moaré i ett skannat dokument?</a></li>
+<li><a href="#edge-shadows-and-borders">Får kantskuggor en sida att se skannad ut?</a></li>
+<li><a href="#fax-and-photocopy-look">Hur skiljer sig faxstil och kopiatorstil åt?</a></li>
+<li><a href="#cheat-sheet">Fusklapp för skanningseffekten: vilket reglage gör vad?</a></li>
+<li><a href="#five-presets">Inställningar för skanningseffekt i 5 stilar</a></li>
+<li><a href="#apply-a-preset">Så använder du en förinställning för skanningseffekt steg för steg</a></li>
+<li><a href="#fake-scan-effect">Vad får en skanningseffekt att se falsk ut?</a></li>
+<li><a href="#honest-use">När passar ett skannat utseende?</a></li>
+<li><a href="#faq">Skanningseffekt: vanliga frågor</a></li>
+</ol></nav>
+
+<h2 id="what-is-a-scan-effect">Vad är en skanningseffekt?</h2>
+<p>En skanningseffekt är en digital simulering av de visuella spår som en optisk skanner eller kopiator lämnar på en sida. Skanningseffekten gör om en ren, digitalt skapad fil till en bildbaserad PDF med lutning, brus, mjukhet, tonförskjutningar och komprimering – samma signaler som människor använder för att känna igen en pappersskanning.</p>
+<p>Begreppet omfattar flera närliggande stilar. En ”skannereffekt” syftar oftast på kontorsutseendet från en flatbäddsskanner: grått, lite mjukt, en aning snett. En kopiatorstil är hårdare, med utfrätta vita partier och mörk text. En faxstil är grov och har låg upplösning. En stil med gulnat papper lägger till en varm, gulaktig ton. Alla bygger på samma lilla uppsättning artefakter, bara i olika mängd.</p>
+<p>Tekniskt slutar varje skanningseffekt på samma sätt: varje sida blir en bild. Vårt verktyg renderar varje PDF-sida till en canvas, lägger på effekten och sparar varje sida som en JPEG-bild i en ny PDF. Därför har en PDF med skannat utseende, precis som en riktig skannad PDF, ingen markerbar text om inte OCR (optisk teckenigenkänning) läggs till i efterhand. Vår guide <a href="/blog/what-is-a-scanned-pdf/">vad är en skannad PDF</a> går igenom skillnaden i detalj.</p>
+
+<h2 id="what-makes-a-document-look-scanned">Vad får ett dokument att se skannat ut?</h2>
+<p>Ett dokument ser skannat ut när flera ofullkomligheter syns samtidigt: sidan är lätt roterad, de vita partierna är inte helt vita, fint brus ligger i jämna ytor, bokstävernas kanter är mjuka och färgerna är reducerade till grått. Ingen enskild artefakt övertygar på egen hand; det är kombinationen som uppfattas som en skanning.</p>
+<p>Det amerikanska riksarkivet, U.S. National Archives, listar de defekter som dess granskare kontrollerar i digitaliserade handlingar. Enligt den federala digitaliseringsregeln i <a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">36 CFR Part 1236, Subpart E</a> letar kvalitetskontrollen efter klippning, felregistrering, kvantiseringsfel, snedställning och felaktig beskärning. Det som för en arkivarie är ”defekter” är för alla andra just de ingredienser som skannerartefakterna bygger det skannade utseendet av.</p>
+<dl class="spec-list">
+<dt>Geometri</dt><dd>Snedställning och rotation, olika på varje sida.</dd>
+<dt>Textur</dt><dd>Sensorbrus och papperets korn i jämna ytor.</dd>
+<dt>Skärpa</dt><dd>Optisk mjukhet från linsen och det rörliga skanningshuvudet.</dd>
+<dt>Ton</dt><dd>Papperets färg samt förskjutningar i ljusstyrka och kontrast.</dd>
+<dt>Färgdjup</dt><dd>Gråskala eller bitonalt i stället för full färg.</dd>
+<dt>Komprimering</dt><dd>JPEG-block på 8×8 pixlar och begränsad upplösning.</dd>
+<dt>Ram</dt><dd>Kantskuggor, linjer från locket och sidkanter.</dd>
+</dl>
+
+<h2 id="skew-and-rotation">Hur skapar snedställning det skannade utseendet?</h2>
+<p>Snedställning är den lilla rotation en sida får när den läggs på skannerglaset eller dras genom en dokumentmatare lite snett. Snedställningen är den mest igenkännbara delen av det skannade utseendet, eftersom digitalt skapade sidor alltid är helt raka, medan riktiga pappersark nästan aldrig hamnar på exakt 0°.</p>
+<p>Orsaken är mekanisk. FADGI, den amerikanska federala arbetsgruppen för digitalisering, konstaterar i sina riktlinjer <a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">Technical Guidelines for Digitizing Cultural Heritage Materials</a>: ”Snedställning i den tagna bilden kan ofta spåras till bristande parallellitet mellan kamerans fokalplan och underlaget.” På ett kontor är den vanligaste orsaken enklare: en hand lägger arket en grad eller två snett mot anslaget.</p>
+<p>I vårt verktyg ställer reglaget Rotation in grundlutningen från −10° till 10° (standard 1°). Negativa värden vrider sidan moturs. Ett naturligt intervall för en skanning i flatbäddsskanner är 0,5° till 1,5°. Värden över 3° ser ut som ett slarvigt foto, och över 5° som en avsiktlig effekt.</p>
+<h3>Variation per sida: därför lutar varje skannad sida olika</h3>
+<p>Rotationsvariation (0 till 10°, standard 0,5°) lägger till en slumpmässig extra lutning på varje sida. I vår källkod är varje sidas slutliga vinkel grundrotationen plus variationen multiplicerad med ett slumptal mellan 0 och 1. Med Rotation 1 och variation 0,5 hamnar varje sida någonstans mellan 1,0° och 1,5°, aldrig två gånger i exakt samma vinkel.</p>
+<p>Skillnaden mellan sidorna betyder mer än själva vinkeln. En pappersbunt som matas sida för sida upprepar aldrig samma snedställning, så identisk lutning på 20 sidor avslöjar direkt att något är fel. Håll variationen på 0,3–1° för en flatbäddsskanning och på 1–2° för en skanning med mobilen i handen.</p>
+
+<h2 id="sensor-noise">Varför innehåller en skannereffekt brus?</h2>
+<p>En skannereffekt innehåller brus eftersom varje bildsensor registrerar små slumpmässiga variationer som inte finns i originalpapperet. Bruset syns som svaga prickar i vita marginaler och jämna grå ytor. Utan brus blir en sida med skannat utseende för ren, och det är den vanligaste anledningen till att en simulerad skanning uppfattas som digital.</p>
+<p>NARA definierar problemet exakt i <a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">36 CFR 1236 Subpart E</a>: ”Brus är en eller flera oönskade bildartefakter i en digitaliserad handling som inte är en del av källmaterialet.” Samma regelverk sätter en övre brusgräns för arkivskanningar, mätt som en standardavvikelse på högst 2 i ljushet. Riktiga skanningar har alltså brus, men bara lite.</p>
+<p>FADGI lyfter fram den andra sidan av saken: hårdhänt brusreducering kan sudda ut papperets naturliga struktur, så riktlinjerna flaggar även brusvärden som är för låga. En helt slät sida väcker misstankar till och med hos en arkivarie.</p>
+<p>I vårt verktyg går reglaget Brus från 0 till 1 (standard 0,1). Det lägger en fin fraktal textur över hela sidan, även över de vita marginalerna, vilket efterliknar både sensorprickar och papperets korn. Ett naturligt intervall är 0,05–0,2. Över 0,3 syns texturen vid normal zoom och börjar se ut som en effekt snarare än en skanning.</p>
+
+<h2 id="blur-and-softness">Hur mycket oskärpa har en riktig skanning?</h2>
+<p>En riktig skanning har lite oskärpa: bokstävernas kanter är mjuka snarare än knivskarpa, och tunna linjer tappar lite kontrast. Mjukheten kommer från skannerns lins, från att skanningshuvudet rör sig under exponeringen och från papper som inte ligger helt plant mot glaset.</p>
+<p>Digitala PDF:er återger text som vektorkonturer som är skarpa vid alla zoomnivåer. En skanning har en fast upplösning, och varje pixel är ett medelvärde av ljuset från en liten yta av papperet, vilket lämnar en svag gloria runt tecknen.</p>
+<p>Reglaget Oskärpa i vårt verktyg går från 0 till 1 (standard 0,3). Värdet är en oskärperadie i pixlar på den renderade sidan, så samma värde ser mjukare ut vid 1× upplösning än vid 3×. Ett naturligt intervall är 0,2–0,4. Över 0,6 blir liten text svårläst, och kraftig oskärpa är ett av de snabbaste sätten att få en skanningseffekt att se falsk ut.</p>
+<div class="callout callout-tip"><strong>Kontrollera oskärpan i 100&nbsp;% zoom</strong>Bedöm oskärpan i den nedladdade PDF:en i 100&nbsp;% zoom, inte på en utzoomad miniatyr. En inställning som ser skarp ut som miniatyr kan vara för mjuk för fotnoter i 9 punkter.</div>
+
+
+<h2 id="paper-tone">Hur förändrar papperstonen skanningseffekten?</h2>
+<p>Papperstonen förändrar skanningseffekten genom att ersätta det rena digitala vitt med det lätt varma eller gråa vitt som riktigt papper har. Kontorspapper skannas lite off-white, returpapper ser grått ut, och gamla dokument blir gula eller bruna. En varm ton är den viktigaste ledtråden bakom utseendet av gulnat papper.</p>
+<p>Skannrar återger papperets gulning trofast, särskilt i färgläge, och lampor och vitbalans förskjuter tonen något från apparat till apparat.</p>
+<p>Vårt reglage Gulton (0 till 2, standard 0) lägger på en sepiaton. I vår kod läggs den på efter konverteringen till grått, så den tonar sidan även i färgrymden Gråskala; i färgrymden Färg värmer den även färgade element. Ett naturligt intervall är 0,1–0,3 för vanligt papper och 0,3–0,6 för ett åldrat eller arkivliknande utseende.</p>
+
+<h2 id="brightness-contrast-bit-depth">Hur formar ljusstyrka och kontrast en skanning?</h2>
+<p>Ljusstyrka och kontrast formar en skanning genom att avgöra hur vitt papperet och hur svart texten framstår. Kontorsskannrar och kopiatorer höjer ofta kontrasten, vilket gör texten mörkare och tvättar ur ljusa bakgrunder. Ljusstyrka under 1 ger en dov, grå skanning; över 1 ger en blekt, överexponerad kopia.</p>
+<p>Bakom båda inställningarna ligger bitdjupet, antalet tonsteg en skanner lagrar. Enligt <a href="https://en.wikipedia.org/wiki/Image_scanner" target="_blank" rel="noopener">Wikipedias artikel om bildläsare</a> fångar vanliga skannrar minst 24-bitars färg och skannrar av hög kvalitet 36–48 bitar. Gråskaleskanningar lagrar oftast 8 bitar, eller 256 nyanser. När en skanner klämmer ihop det intervallet försvinner fina toningar, vilket NARA kallar kvantisering.</p>
+<p>NARA:s regelverk uttrycker det så här: ”Kvantisering är en förlustbehäftad komprimeringsteknik som innebär att ett intervall av värden komprimeras till ett enda kvantiserat värde, oftast för att minska filstorleken.” Att höja kontrasten i vårt verktyg efterliknar samma visuella resultat: ljusa gråtoner smälter samman med vitt och mörka gråtoner smälter samman med svart.</p>
+<dl class="spec-list">
+<dt>Ljusstyrka</dt><dd>0 till 2, standard 1. Naturligt: 0,95–1,1. Fotokopia: 1,05–1,1. Gulnat papper: cirka 0,95.</dd>
+<dt>Kontrast</dt><dd>0 till 2, standard 1. Naturligt: 1–1,2. Fotokopia: 1,3–1,5. Fax: 1,5 eller högre.</dd>
+</dl>
+
+<h2 id="grayscale-and-bitonal">Gråskala eller bitonalt: vilket skannat utseende?</h2>
+<p>Gråskala ger det mjuka, jämna skannade utseendet från en modern kontorsskanner, medan bitonalt ger det hårda svartvita utseendet från faxmaskiner och domstolsinlagor. Gråskala behåller upp till 256 nyanser per pixel; bitonalt behåller bara två. De flesta ser gråskala framför sig när de föreställer sig en typisk dokumentskanning.</p>
+<p>FADGI definierar båda termerna i sin ordlista. ”Gråskala: Digitala bilder framställda med ett spann av gråtoner mellan vitt och svart.” Och: ”Bitonalt: Digitala bilder framställda med bara två färger, svart och vitt.” Bitonala filer är 1 bit per pixel, gråskalefiler oftast 8 eller 16 bitar, enligt <a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">FADGI Technical Guidelines</a>.</p>
+<p>Vårt verktyg erbjuder två färgrymder: Gråskala (standard) och Färg. Det finns inget riktigt 1-bitars bitonalt läge. För att närma dig ett bitonalt eller fotokopie-utseende: behåll Gråskala och höj kontrasten till 1,4–1,6; ljusa gråtoner faller då mot vitt och texten blir nästan svart medan filen förblir 8-bitars. Använd Färg bara när en logotyp, stämpel, överstrykningspenna eller papperston måste synas.</p>
+<p>För ren konvertering utan skanningsartefakter, se hur du <a href="/blog/convert-color-pdf-to-black-and-white/">konverterar en PDF i färg till svartvitt</a>.</p>
+
+<h2 id="jpeg-and-resolution">Bidrar JPEG-block och upplösning till det skannade utseendet?</h2>
+<p>JPEG-block och begränsad upplösning bidrar verkligen till det skannade utseendet. De flesta skannrar sparar sidor som JPEG-bilder, vilket lämnar svaga 8×8-pixelblock runt text, och kontorsskanningar görs oftast i 150–300 dpi, så en sida får aldrig den obegränsade skärpan hos en vektor-PDF när du zoomar in.</p>
+<p>FADGI beskriver komprimeringsartefakten rakt av: ”Till exempel skapar vanlig JPEG-bearbetning 8×8-pixelblock som tydligt inte är en del av originalinnehållet.” De blocken syns tydligast runt svart text på vitt papper och i mjuka toningar, vilket även <a href="https://en.wikipedia.org/wiki/Compression_artifact" target="_blank" rel="noopener">Wikipedias artikel om kompressionsartefakter</a> visar.</p>
+<p>Vårt verktyg sparar varje bearbetad sida som en JPEG-bild i den nya PDF:en, så lätt JPEG-blockighet uppstår naturligt, precis som i riktiga skanners resultat. Inställningen Upplösning styr pixeltätheten: sidor renderas vid 72 dpi multiplicerat med skalan.</p>
+<div class="table-wrap"><table><caption>Upplösningsinställningen i verktyget och vad den liknar</caption>
+<thead><tr><th scope="col">Inställning</th><th scope="col">Ungefärlig dpi</th><th scope="col">Liknar</th></tr></thead>
+<tbody>
+<tr><th scope="row">1×</th><td>72 dpi</td><td>Fax eller lågkvalitetskopia, synliga pixelsteg</td></tr>
+<tr><th scope="row">1,5×</th><td>108 dpi</td><td>Billig multifunktionsskrivare på ett utkastläge</td></tr>
+<tr><th scope="row">2× (standard)</th><td>144 dpi</td><td>Typisk kontors-”mejlskanning”</td></tr>
+<tr><th scope="row">2,5×</th><td>180 dpi</td><td>Resultat från en skannerapp i mobilen</td></tr>
+<tr><th scope="row">3×</th><td>216 dpi</td><td>Noggrann flatbäddsskanning, större fil</td></tr>
+</tbody></table></div>
+<p>Till jämförelse går arkivskanning mycket högre. NARA sätter minimikrav på 300 ppi för texthandlingar och 400 ppi för fotografiska avdrag, och FADGI:s stjärnnivåer för oinbundna dokument sträcker sig från ungefär 200 till 400 ppi. En skanningseffekt behöver ingen arkivupplösning; den behöver bara se ut som en vardaglig kontorsskanning.</p>
+
+<h2 id="moire">Vad är moaré i ett skannat dokument?</h2>
+<p>Moaré i ett skannat dokument är ett vågigt interferensmönster som uppstår när en skanner samplar en tryckt halvtonsbild, till exempel ett tidskriftsfoto eller en tidningsbild. Det tryckta rasterets regelbundna punktmönster och sensorns regelbundna pixelrutnät krockar och skapar krusningar som inte finns i originalet.</p>
+<p>FADGI förklarar: ”Moaré uppstår ofta vid visning av digitaliserade halvtonsmönster på grund av att halvtonsmönstrets och sensorgeometrins faser inte stämmer överens.” Riktlinjerna ger ett praktiskt exempel: ”Exempel – gravyrer behöver digitaliseras i högre upplösning för att undvika moaré.” <a href="https://en.wikipedia.org/wiki/Moir%C3%A9_pattern" target="_blank" rel="noopener">Wikipedias artikel om moarémönster</a> noterar samma effekt vid skanning av tryckta bilder.</p>
+<p>Vårt verktyg har inget moaré-reglage, och ett textdokument behöver inget: moaré uppstår bara på tryckta halvtonsbilder. Om din källa redan innehåller en skannad tidskriftsbild syns eventuell moaré kvar även efter bearbetningen. En lätt oskärpa på 0,3–0,4 mildrar den något.</p>
+
+<h2 id="edge-shadows-and-borders">Får kantskuggor en sida att se skannad ut?</h2>
+<p>Kantskuggor kan få en sida att se skannad ut, eftersom locket på en flatbäddsskanner sällan sluter helt tätt och glipan kastar en mörk rand längs en eller två kanter. Kopiatorer och dokumentmatare kan också lämna tunna mörka linjer där papperskanten möter glaset. De här ramartefakterna förekommer i många riktiga skanningar, men inte i alla.</p>
+<p>Var tydlig med vad vårt verktyg faktiskt gör här. Det ritar inte kantskuggor, toningar eller locklinjer. Det erbjuder en Kantlinje-omkopplare (av som standard) som ritar en 1-pixel mörk linje runt sidans kant. Den tunna ramen efterliknar papperskanten som en kopiator eller dokumentmatare fångar upp, och den passar fotokopie-utseenden.</p>
+<p>När en sida roteras fyller verktyget de blottade hörnen med vitt, vilket matchar en skanner med ett vitt lock.</p>
+
+<h2 id="fax-and-photocopy-look">Hur skiljer sig faxstil och kopiatorstil åt?</h2>
+<p>Faxstil och kopiatorstil skiljer sig huvudsakligen åt i upplösning och ton. En fax är grov, har låg upplösning och är nästan svartvit, med hackiga bokstavskanter. En fotokopia är skarpare men hårdare: vita partier är utfrätta, texten är mörk och tjock, och tonerprickar eller ränder kan förekomma.</p>
+<h3>Vad ger faxen dess lågupplösta utseende?</h3>
+<p>En fax ser grov ut eftersom standarden utformades för telefonlinjer. Enligt <a href="https://en.wikipedia.org/wiki/Fax" target="_blank" rel="noopener">Wikipedias artikel om fax</a> ligger upplösningen för Group 3-faxstandarden på ungefär 200–204 linjer per tum vågrätt och bara 98–100 lodrätt; ”Fine”-läget fördubblar den lodräta upplösningen till 196–200. En typisk Group 3-sida tar 6–15 sekunder att skicka.</p>
+<p>Den ojämna, låga lodräta upplösningen är anledningen till att faxtext ser utdragen och trappstegsformad ut. För att efterlikna den, använd den lägsta Upplösningen (1×), Gråskala som färgrymd, kontrast på 1,5 eller mer så att gråtoner faller mot svart och vitt, och lite mer oskärpa och brus än en kontorsskanning.</p>
+<h3>Vad ger fotokopian dess hårda utseende?</h3>
+<p>En fotokopia är en kopia av en skanning tryckt med toner, så den visar ofullkomligheter från två maskiner. <a href="https://en.wikipedia.org/wiki/Photocopier" target="_blank" rel="noopener">Wikipedias artikel om kopiatorer</a> konstaterar att kopiatorer kan identifieras genom ofullkomligheter i deras utskrifter, och att mekaniska toleranser i toner och pappersmatning orsakar bandning.</p>
+<p>Kopiatorer kan också ändra innehåll, inte bara utseende. BBC News <a href="https://www.bbc.com/news/technology-23588202" target="_blank" rel="noopener">rapporterade 2013</a> att vissa kontorskopiatorer ändrade siffror i skanningar på grund av förlustbehäftad mönstermatchande komprimering (JBIG2): ”I sina tester upptäckte Kriesel att siffran ’6’ ofta blev en ’8’, och tvärtom, samt att även andra siffror påverkades.” Vårt verktyg använder inte den typen av komprimering; det ändrar bara utseendet, aldrig tecknen.</p>
+<p>För att efterlikna en fotokopia, höj kontrasten till 1,3–1,5, höj ljusstyrkan till 1,05–1,1 för att bleka papperet, behåll Gråskala, lägg till brus runt 0,15 och slå på Kantlinje för en tunn kantlinje.</p>
+
+<h2 id="cheat-sheet">Fusklapp för skanningseffekten: vilket reglage gör vad?</h2>
+<p>Fusklappen nedan kopplar varje riktig skannerartefakt till dess fysiska orsak, till motsvarande reglage i vårt verktyg och till det intervall som fortfarande ser naturligt ut. Använd den som snabbreferens när ett resultat känns fel: hitta den artefakt som känns fel och justera bara det reglaget.</p>
+<div class="table-wrap"><table><caption>Skanningsartefakter, riktiga orsaker och verktygets reglage</caption>
+<thead><tr><th scope="col">Artefakt</th><th scope="col">Riktig orsak</th><th scope="col">Reglage i verktyget</th><th scope="col">Naturligt intervall</th></tr></thead>
+<tbody>
+<tr><th scope="row">Snedställning</th><td>Arket placerat eller matat snett; underlaget inte parallellt med sensorn</td><td>Rotation (−10° till 10°)</td><td>0,5°–1,5° (mobil: 1,5°–2,5°)</td></tr>
+<tr><th scope="row">Ojämn snedställning</th><td>Varje ark hamnar olika</td><td>Rotationsvariation (0–10°)</td><td>0,3°–1°</td></tr>
+<tr><th scope="row">Brus och korn</th><td>Sensorbrus, papperets struktur</td><td>Brus (0–1)</td><td>0,05–0,2</td></tr>
+<tr><th scope="row">Mjukhet</th><td>Lins, rörligt skanningshuvud, papper som inte ligger plant</td><td>Oskärpa (0–1)</td><td>0,2–0,4</td></tr>
+<tr><th scope="row">Papperston</th><td>Papperets färg, åldrande, lampa och vitbalans</td><td>Gulton (0–2)</td><td>0,1–0,3 (gulnat: 0,3–0,6)</td></tr>
+<tr><th scope="row">Exponering</th><td>Lampstyrka, automatisk exponering</td><td>Ljusstyrka (0–2)</td><td>0,95–1,1</td></tr>
+<tr><th scope="row">Hårda toner</th><td>Kopiatorns kontrast, kvantisering</td><td>Kontrast (0–2)</td><td>1–1,2 (kopia/fax: 1,3–1,6)</td></tr>
+<tr><th scope="row">Gråtoner</th><td>Gråskale- eller bitonal fångst</td><td>Färgrymd (Gråskala/Färg)</td><td>Gråskala för de flesta dokument</td></tr>
+<tr><th scope="row">Pixeltäthet</th><td>Skannerns dpi-inställning</td><td>Upplösning (1×–3×)</td><td>2× kontor, 1× fax</td></tr>
+<tr><th scope="row">JPEG-block</th><td>Förlustbehäftad JPEG-sparning</td><td>Automatiskt (sidor sparas som JPEG)</td><td>Kan inte justeras</td></tr>
+<tr><th scope="row">Kantlinje</th><td>Papperskant som fångas upp av kopiator eller matare</td><td>Kantlinje (1-px linje)</td><td>På för kopior, av för skanningar</td></tr>
+<tr><th scope="row">Kantskugga</th><td>Glipa vid locket på en flatbäddsskanner</td><td>Simuleras inte</td><td>Inte tillgängligt</td></tr>
+<tr><th scope="row">Moaré</th><td>Tryckt halvton möter sensorrutnät</td><td>Simuleras inte</td><td>Bara i tryckta bilder</td></tr>
+</tbody></table></div>
+
+<h2 id="five-presets">Inställningar för skanningseffekt i 5 stilar</h2>
+<p>De fem recepten för skanningseffekt nedan är våra rekommenderade utgångspunkter för de vanligaste stilarna: kontorsskanning, fotokopia, faxliknande, gulnat papper och mobilskanning. Var och en använder bara riktiga reglage från vårt verktyg. Ange värdena, kontrollera förhandsvisningen i realtid och justera sedan ett reglage i taget.</p>
+<div class="table-wrap"><table><caption>Rekommenderade startinställningar för 5 skannade stilar</caption>
+<thead><tr><th scope="col">Reglage</th><th scope="col">Kontorsskanning</th><th scope="col">Fotokopia</th><th scope="col">Faxliknande</th><th scope="col">Gulnat papper</th><th scope="col">Mobilskanning</th></tr></thead>
+<tbody>
+<tr><th scope="row">Rotation</th><td>1°</td><td>0,5°</td><td>0,5°</td><td>1°</td><td>1,5°–2,5°</td></tr>
+<tr><th scope="row">Rotationsvariation</th><td>0,5°</td><td>0,5°</td><td>0,5°</td><td>0,5°</td><td>1°</td></tr>
+<tr><th scope="row">Oskärpa</th><td>0,3</td><td>0,2</td><td>0,4</td><td>0,3</td><td>0,35</td></tr>
+<tr><th scope="row">Brus</th><td>0,1</td><td>0,15</td><td>0,2</td><td>0,12</td><td>0,15</td></tr>
+<tr><th scope="row">Ljusstyrka</th><td>1</td><td>1,05–1,1</td><td>1</td><td>0,95</td><td>1</td></tr>
+<tr><th scope="row">Kontrast</th><td>1</td><td>1,3–1,5</td><td>1,5 eller högre</td><td>1</td><td>1,1</td></tr>
+<tr><th scope="row">Gulton</th><td>0</td><td>0</td><td>0</td><td>0,3–0,6</td><td>0–0,1</td></tr>
+<tr><th scope="row">Färgrymd</th><td>Gråskala</td><td>Gråskala</td><td>Gråskala</td><td>Färg</td><td>Färg</td></tr>
+<tr><th scope="row">Kantlinje</th><td>Av</td><td>På</td><td>Av</td><td>Av</td><td>Av</td></tr>
+<tr><th scope="row">Upplösning</th><td>2×</td><td>2×</td><td>1×</td><td>2×</td><td>2,5×</td></tr>
+</tbody></table></div>
+<p>De här värdena är våra förslag, inte uppmätta standarder. När du ska använda respektive stil:</p>
+<dl class="spec-list">
+<dt>Kontorsskanning</dt><dd>Den vardagliga skanningen från flatbäddsskanner eller dokumentmatare. Ligger nära verktygets standardvärden; rätt för avtal, brev, formulär och de flesta dokument folk förväntar sig att få ”som en skanning”.</dd>
+<dt>Fotokopia</dt><dd>Ljust papper, mörk text, en tunn kantlinje. Passar dokument som ska se ut att ha kopierats flera gånger, till exempel utskick eller gamla interna PM.</dd>
+<dt>Faxliknande</dt><dd>Grov 1×-upplösning och hög kontrast. Passar rekvisita, retrodesign och formulär som traditionellt kommer via fax. Håll brödtexten på 10 punkter eller större, annars blir den svårläst.</dd>
+<dt>Gulnat papper</dt><dd>Färgläge med en varm sepiaton och något lägre ljusstyrka. Passar arkivliknande utskick, spelrekvisita, historieprojekt och vintagedesign.</dd>
+<dt>Mobilskanning</dt><dd>En större, mindre jämn lutning och färgfångst, som om en skannerapp i mobilen fotograferat sidan för hand. Passar kvitton och enstaka dokument.</dd>
+</dl>
+<div class="callout callout-info"><strong>Varför mobilstilen använder mer lutning</strong>En mobil som hålls i handen ligger sällan helt parallellt med papperet, så riktiga mobilskanningar visar mer rotation och mer variation mellan sidorna än en flatbäddsskanner. Vårt verktyg roterar sidan men lägger inte till perspektivförvrängning, så håll lutningen under 3°.</div>
+
+<h2 id="apply-a-preset">Så använder du en förinställning för skanningseffekt steg för steg</h2>
+<p>För att använda en förinställning för skanningseffekt öppnar du vårt kostnadsfria webbverktyg, läser in din PDF eller bild, anger receptets värden i inställningspanelen, jämför förhandsvisningen i realtid med originalet och laddar ned den skannade PDF:en. Hela processen körs i din webbläsare och tar oftast under en minut för ett kort dokument.</p>
+<ol class="step-list">
+<li><strong>Förbered en PDF.</strong> Exportera Word-, Google Dokument- eller kalkylarksfiler till PDF först (till exempel Arkiv → Ladda ned → PDF-dokument i Google Dokument). Verktyget godtar DOCX direkt men behåller bara texten, så export till PDF bevarar layouten.</li>
+<li><strong>Öppna verktyget.</strong> Gå till <a href="/scan">pdflookscanned.com/scan</a> och släpp PDF-, JPG- eller PNG-filen i uppladdningsområdet. Ingenting laddas upp till en server; bearbetningen sker lokalt.</li>
+<li><strong>Välj en stil.</strong> Välj ett av de fem recepten ovan, till exempel kontorsskanningen: rotation 1, variation 0,5, oskärpa 0,3, brus 0,1.</li>
+<li><strong>Ställ in färgrymd och upplösning.</strong> Välj Gråskala eller Färg och upplösningsskalan (2× för de flesta stilar, 1× för fax, 2,5× för mobilstilen).</li>
+<li><strong>Justera tonen.</strong> Ställ in ljusstyrka, kontrast och gulton enligt receptets värden; slå på Kantlinje bara för fotokopie-stilen.</li>
+<li><strong>Kontrollera förhandsvisningen.</strong> Zooma till 100 % på en sida med liten text. Om texten är svårläst, sänk oskärpan först och sedan kontrasten.</li>
+<li><strong>Ladda ned och kontrollera.</strong> Ladda ned PDF:en, öppna den i din visare och bläddra igenom alla sidor för att bekräfta att var och en har en något annorlunda lutning.</li>
+</ol>
+<p>För många filer samtidigt applicerar batchsidan på <a href="/scan/bulk">/scan/bulk</a> samma inställningar på varje fil och laddar ned allt som en ZIP. Bildinmatningar blir varsin PDF med en enda sida, precis som beskrivs i vår guide om att göra om en <a href="/blog/image-to-scanned-pdf/">bild till en skannad PDF</a>.</p>
+
+<h2 id="fake-scan-effect">Vad får en skanningseffekt att se falsk ut?</h2>
+<p>En skanningseffekt ser falsk ut när den är överdriven eller för enhetlig: en sida roterad 5° eller mer, samma lutning på varje sida, kraftig oskärpa som suddar ut texten, starkt brus över en nästan tom sida, eller marginaler som förblir rent digitalt vita. Riktiga skanningar är ofullkomliga på små, ojämna sätt.</p>
+<dl class="spec-list">
+<dt>Överrotation</dt><dd>Kontorsskanningar överstiger sällan 2°. Håll Rotation på 0,5–1,5° om du inte vill ha mobilstilen, och håll dig under 3° även då.</dd>
+<dt>Identisk lutning</dt><dd>Varje sida i exakt samma vinkel uppfattas som ett filter. Håll Rotationsvariation över 0, helst 0,3–1°.</dd>
+<dt>Kraftig oskärpa</dt><dd>Oskärpa över 0,6 gör liten text oläsbar, vilket en fungerande kontorsskanner inte skulle göra. Håll dig på 0,2–0,4.</dd>
+<dt>Brus på rent vita sidor</dt><dd>Brus täcker hela sidan, så på en nästan tom sida blir texturen det man ser mest av. Sänk Brus till 0,05–0,08 på sparsamma sidor.</dd>
+<dt>Rent digitalt vitt</dt><dd>Papper är aldrig RGB 255 vitt. En ljusstyrka på 0,97–0,99 eller ett gultonvärde på 0,05–0,15 tar bort det kliniska vita.</dd>
+<dt>Vektorskarpa logotyper</dt><dd>Om en sida blandar en mjuk skanning med en knivskarp inklistrad namnteckningsbild avslöjar kontrasten det. Lägg till stämplar eller namnteckningar i verktyget före bearbetningen så att de får samma effekt.</dd>
+</dl>
+<p>Ett bra test är att lägga ditt resultat bredvid en riktig skanning från din egen kontorsskanner eller mobil. Jämför gråtonen i marginalerna, kanten på en liten bokstav vid 100 % zoom och lutningen på tre olika sidor. Om något av detta skiljer sig tydligt, justera bara det enskilda reglaget. Samma princip går igenom vår huvudguide om <a href="/blog/how-to-make-a-pdf-look-scanned/">hur du får en PDF att se skannad ut</a>.</p>
+<div class="callout callout-tip"><strong>Mindre är mer</strong>Om ett skannat utseende känns ”nästan rätt”, minska effekterna i stället för att lägga till nya. Det trovärdiga i det utseende skanningsartefakter skapar kommer från flera svaga signaler, inte en stark.</div>
+
+<h2 id="honest-use">När passar ett skannat utseende?</h2>
+<p>Ett skannat utseende passar när du behöver ett dokument som matchar det format folk förväntar sig, till exempel en pappersliknande kopia för arkivering, ett enhetligt sidpaket, en design eller rekvisita, eller en tillplattad fil som är svårare att redigera oavsiktligt. Det skannade utseendet ändrar bara utseendet, aldrig vad ett dokument bevisar.</p>
+<div class="callout callout-warn"><strong>Använd skanningseffekten ärligt</strong>En skanningseffekt ändrar hur en fil ser ut, inte om den är äkta. Använd den inte för att förfalska eller ändra officiella handlingar, id-handlingar, intyg eller namnteckningar som inte är dina. Vissa domstolar och myndigheter kräver textsökbara PDF:er i stället för bildskanningar, så kontrollera inlämningsreglerna innan du skickar in en fil med skannat utseende.</div>
+<p>Avvägningen kring tillgänglighet är också verklig. En PDF med skannat utseende består av bilder, så skärmläsare kan inte läsa texten om inte OCR läggs till. Om ett dokument måste vara tillgängligt eller sökbart, spara originalet som digital PDF vid sidan av kopian med skannat utseende.</p>
+<div class="expert-quote"><blockquote>Vi byggde reglagen kring de artefakter som riktiga skannrar faktiskt ger upphov till, och vi höll medvetet standardvärdena diskreta: rotation 1°, oskärpa 0,3, brus 0,1, Gråskala. De flesta som tycker att ett resultat känns otroligt har dragit ett reglage för långt. Vi kör dessutom allt i webbläsaren, eftersom de dokument som behöver ett skannat utseende ofta är just de som folk helst inte vill ladda upp.</blockquote><cite><strong>Teamet bakom Make PDF look scanned</strong> — de som byggt webbverktyget och Chrome-tillägget</cite></div>
+
+<h2 id="faq">Skanningseffekt: vanliga frågor</h2>
+<p>De här frågorna om skanningseffekt kommer oftast upp när folk försöker få en PDF eller bild att se skannad ut. Varje svar är kort och fristående, och värdena syftar på de riktiga reglagen i vårt kostnadsfria verktyg, som fungerar i webbläsare på dator och mobil samt som Chrome-tillägg.</p>
+<div class="faq-item"><p class="faq-q">Vilken skanningseffekt är bäst för ett vanligt dokument?</p><p class="faq-a">Börja med receptet för kontorsskanning: rotation 1°, rotationsvariation 0,5°, oskärpa 0,3, brus 0,1, färgrymden Gråskala och 2× upplösning. Det är också verktygets standardvärden, och de passar avtal, brev och formulär. Justera bara om förhandsvisningen ser för ren eller för mjuk ut.</p></div>
+<div class="faq-item"><p class="faq-q">Vad är skillnaden mellan en skanningseffekt och en skannereffekt?</p><p class="faq-a">Termerna betyder i praktiken samma sak. Båda beskriver simulerade skannerartefakter som snedställning, brus, oskärpa och gråtoner. ”Skannereffekt” används lite oftare om det platta kontorsutseendet, medan ”skanningseffekt” även täcker fax-, fotokopie- och mobilskanningsutseenden.</p></div>
+<div class="faq-item"><p class="faq-q">Gör en skanningseffekt texten osökbar?</p><p class="faq-a">Ja. Varje sida sparas som en JPEG-bild i den nya PDF:en, så texten kan inte längre markeras, kopieras eller sökas i. Om du behöver sökbar text, kör OCR på resultatet eller spara originalfilen.</p></div>
+<div class="faq-item"><p class="faq-q">Kan jag lägga till kaffefläckar, veck eller vikningar?</p><p class="faq-a">Nej. Vårt verktyg skapar inte fläckar, veck, vikningar, perspektivförvrängning eller kantskuggor. Det simulerar lutning, brus, oskärpa, papperston, ljusstyrka, kontrast, färgdjup, upplösning och en 1-pixel kantlinje, vilket täcker det vardagliga skannade utseendet.</p></div>
+<div class="faq-item"><p class="faq-q">Hur får jag en PDF att se ut som en fotokopia?</p><p class="faq-a">Använd Gråskala som färgrymd, kontrast 1,3–1,5, ljusstyrka 1,05–1,1, brus omkring 0,15 och slå på Kantlinje. Håll oskärpan låg, runt 0,2, eftersom kopior är hårda snarare än mjuka.</p></div>
+<div class="faq-item"><p class="faq-q">Hur får jag ett faxutseende?</p><p class="faq-a">Ställ Upplösning på 1× (72 dpi), behåll Gråskala, höj kontrasten till 1,5 eller mer, och använd oskärpa 0,4 och brus 0,2. Riktiga Group 3-faxar kör i ungefär 204 × 98 linjer per tum i standardläget, vilket är varför de ser grova ut.</p></div>
+<div class="faq-item"><p class="faq-q">Varför ser mitt skannade utseende falskt ut?</p><p class="faq-a">De vanliga orsakerna är för mycket rotation, identisk lutning på varje sida, kraftig oskärpa eller starkt brus på en nästan tom sida. Sänk rotationen till omkring 1°, håll variationen över 0, och håll oskärpa och brus under 0,4 respektive 0,2.</p></div>
+<div class="faq-item"><p class="faq-q">Kan verktyget skapa en riktig svartvit (bitonal) skanning?</p><p class="faq-a">Ingen riktig 1-bitars fil. Färgrymden Gråskala ger gråskala; att höja kontrasten till 1,4–1,6 för den nära ett svartvitt utseende. För strikt bitonal utdata, se vår guide om att konvertera en PDF i färg till svartvitt.</p></div>
+<div class="faq-item"><p class="faq-q">Vilken upplösning bör jag välja?</p><p class="faq-a">Använd 2× (ungefär 144 dpi) för de flesta dokument, 2,5× (180 dpi) för mobilskanningsutseendet och 3× (216 dpi) när liten text måste förbli skarp. Högre upplösning ger större filer, så använd 1× eller 1,5× när storleksgränser är strikta.</p></div>
+<div class="faq-item"><p class="faq-q">Laddas min fil upp när jag applicerar en skanningseffekt?</p><p class="faq-a">Nej. Webbverktyget och Chrome-tillägget bearbetar filer lokalt i din webbläsare med pdf.js och canvas. Filerna skickas inte till någon bearbetningsserver, och webbplatsen fungerar offline efter första inläsningen.</p></div>
+<div class="faq-item"><p class="faq-q">Kan jag få ett dokument att se skannat ut i färg?</p><p class="faq-a">Ja. Byt Färgrymd till Färg för att behålla logotyper, stämplar och överstrykningar. Färg fungerar bäst för utseendena gulnat papper och mobilskanning; Gråskala är fortfarande det mest typiska för en kontorsskanning.</p></div>

@@ -1,0 +1,228 @@
+<p class="lead">Convertir un PDF en PDF scanné consiste à transformer chaque page en image et à enregistrer ces images dans un nouveau PDF, de sorte que la couche de texte, les liens et les champs de formulaire deviennent de simples pixels. Pour des pages lisibles et compactes, choisissez la résolution 2× et les niveaux de gris ; n'ajoutez un peu de bruit et d'inclinaison que si vous voulez aussi l'effet scanné.</p>
+
+<p>On convertit un PDF en PDF scanné parce qu'un portail exige un fichier composé uniquement d'images, qu'un collègue demande une copie aplatie, ou qu'un formulaire doit ressembler à un document passé par un scanner de bureau. Ce guide détaille les compromis (résolution, couleur, taille du fichier, possibilité de recherche, règles des tribunaux) avec les réglages exacts de l'outil, des chiffres des tribunaux fédéraux américains et les repères des National Archives et de la FADGI.</p>
+
+<nav class="toc" aria-label="Sommaire"><h2>Sommaire</h2><ol>
+<li><a href="#what-it-means">Que signifie convertir un PDF en PDF scanné ?</a></li>
+<li><a href="#before-after">Qu'est-ce qui change quand un PDF devient un PDF scanné ?</a></li>
+<li><a href="#how-to-convert">Comment convertir un PDF en PDF scanné dans le navigateur ?</a></li>
+<li><a href="#resolution">Quelle résolution garde un PDF scanné lisible ?</a></li>
+<li><a href="#color-and-size">Niveaux de gris, couleur ou bitonal : lequel garde un fichier léger ?</a></li>
+<li><a href="#flatten-vs-scan-look">Aplatir proprement ou ajouter un effet scanné ?</a></li>
+<li><a href="#required-or-refused">Quand un PDF scanné est-il exigé ou refusé ?</a></li>
+<li><a href="#privacy">Est-il sûr de convertir un PDF en PDF scanné en ligne ?</a></li>
+<li><a href="#batch">Comment convertir plusieurs PDF en PDF scannés à la fois ?</a></li>
+<li><a href="#checking">Comment vérifier que le résultat est un PDF scanné ?</a></li>
+<li><a href="#troubleshooting">Comment résoudre les problèmes de conversion en PDF scanné ?</a></li>
+<li><a href="#faq">Convertir un PDF en PDF scanné : questions fréquentes</a></li>
+</ol></nav>
+
+<h2 id="what-it-means">Que signifie convertir un PDF en PDF scanné ?</h2>
+<p>Convertir un PDF en PDF scanné consiste à prendre chaque page d'un PDF numérique, à la dessiner sur un canevas à une densité de pixels choisie, puis à enregistrer le résultat comme une image dans un nouveau PDF. Le rendu visuel reste le même, mais chaque mot, chaque ligne et chaque logo fait désormais partie d'une seule image par page.</p>
+
+<p>Un vrai scanner fait la même chose avec du papier au lieu d'une page numérique. Le tribunal fédéral du district Nord de la Californie (U.S. District Court for the Northern District of California) décrit le résultat sans détour : <a href="https://cand.uscourts.gov/cases-e-filing/cmecf-information/preparing-your-cmecf-filing" target="_blank" rel="noopener">« Un texte scanné est une photographie d'une page imprimée, produite par un appareil photo numérique ou un scanner. »</a> Une fois qu'une page est devenue une photographie, sélectionner, copier ou rechercher ses mots ne fonctionne plus tant que personne n'a fait passer une reconnaissance optique de caractères (OCR).</p>
+
+<p>Deux termes voisins sont souvent confondus. <strong>Aplatir un PDF</strong>, au sens strict, signifie fusionner les couches interactives (champs de formulaire, commentaires, tampons) dans le contenu de la page, tandis que le texte peut rester sélectionnable. <strong>Rastériser</strong> un PDF signifie transformer absolument tout, texte compris, en pixels. Convertir un PDF en PDF scanné est cette seconde opération, plus radicale.</p>
+
+<p>Il existe deux types de résultat. Un PDF image <em>propre</em> garde la page nette et droite. Un PDF avec <em>effet scanné</em> ajoute une légère inclinaison, un flou doux, du bruit et une teinte de papier. Notre <a href="/scan">outil gratuit de conversion PDF en PDF scanné</a> produit les deux à partir des mêmes réglages. Pour comprendre ce qui définit un fichier scanné, consultez <a href="/blog/what-is-a-scanned-pdf/">qu'est-ce qu'un PDF scanné</a>.</p>
+
+<h2 id="before-after">Qu'est-ce qui change quand un PDF devient un PDF scanné ?</h2>
+<p>Quand un PDF devient un PDF scanné, la page visible reste identique, mais tout ce qui était exploitable par une machine est remplacé par des pixels. Le texte, les polices, les liens, les champs de formulaire et les annotations cessent d'être des objets distincts. La taille du fichier augmente généralement, et la recherche, la copie et la lecture d'écran cessent de fonctionner tant qu'aucun OCR n'est appliqué.</p>
+
+<p>Le tableau compare un PDF typique exporté depuis un traitement de texte avec ce même fichier après conversion en images de page. Le comportement de la colonne « après » est celui de toute méthode de rastérisation, y compris notre outil, puisque chaque page est enregistrée comme une image JPEG dans un PDF neuf.</p>
+
+<div class="table-wrap"><table>
+<caption>PDF numérique contre le même PDF converti en PDF scanné (image uniquement)</caption>
+<thead><tr><th scope="col">Élément</th><th scope="col">PDF numérique d'origine</th><th scope="col">Après conversion en PDF scanné</th></tr></thead>
+<tbody>
+<tr><th scope="row">Couche de texte</th><td>De vrais caractères que l'on peut sélectionner, copier et rechercher</td><td>Disparue de la page ; les mots n'existent plus que sous forme de pixels</td></tr>
+<tr><th scope="row">Polices</th><td>Fichiers de police intégrés ou référencés</td><td>Aucune police n'est nécessaire ; le tracé des lettres est figé dans l'image</td></tr>
+<tr><th scope="row">Liens</th><td>URL cliquables et renvois internes</td><td>Le texte du lien reste visible mais n'est plus cliquable</td></tr>
+<tr><th scope="row">Champs de formulaire</th><td>Cases à remplir, cases à cocher, listes déroulantes</td><td>Plus modifiables ; vérifiez l'aperçu pour voir quelles valeurs ont été intégrées à l'image</td></tr>
+<tr><th scope="row">Annotations</th><td>Commentaires, surlignages, tampons en tant qu'objets distincts</td><td>Ne sont plus des objets modifiables ; ce qui subsiste fait partie de l'image</td></tr>
+<tr><th scope="row">Métadonnées du document</th><td>Titre, auteur et autres propriétés définis par l'application créatrice</td><td>Un nouveau PDF est écrit ; le titre, l'auteur, l'objet, les mots-clés, le producteur et le créateur peuvent être réglés dans les extras de l'outil</td></tr>
+<tr><th scope="row">Taille du fichier</th><td>Faible pour des pages de texte</td><td>Généralement plus élevée ; dépend de la résolution, du mode couleur et du nombre de pages</td></tr>
+<tr><th scope="row">Possibilité de recherche</th><td>Ctrl+F et les lecteurs d'écran fonctionnent</td><td>Non interrogeable ni accessible tant qu'un OCR n'ajoute pas une couche de texte</td></tr>
+</tbody></table></div>
+
+<p>Deux lignes méritent qu'on s'y attarde. Pour les champs de formulaire et les annotations, ce qui survit visuellement dépend du fait que le moteur de rendu de la page les dessine ou non ; la valeur d'un champ rempli apparaît généralement comme du texte imprimé, tandis qu'un commentaire en bulle peut disparaître — inspectez donc l'aperçu en direct. Pour les métadonnées, le panneau des extras permet de saisir les propriétés que le nouveau PDF doit porter ; vérifiez-les avant d'envoyer le fichier.</p>
+
+<p>La ligne sur la taille surprend le plus. Le tribunal fédéral du district Moyen de Caroline du Nord note que <a href="https://www.ncmd.uscourts.gov/sites/ncmd/files/ecfprocman.pdf" target="_blank" rel="noopener">2 Mo contiennent environ quarante-cinq pages de texte PDF</a>, et ajoute, mot pour mot : « La plupart des PDF scannés ne sont pas interrogeables et ont une taille de fichier importante. » Un PDF texte décrit des lettres ; un PDF scanné stocke chaque pixel de ces lettres.</p>
+
+<h2 id="how-to-convert">Comment convertir un PDF en PDF scanné dans le navigateur ?</h2>
+<p>Pour convertir un PDF en PDF scanné dans le navigateur, ouvrez l'outil gratuit sur pdflookscanned.com/scan, déposez le fichier, réglez la résolution, le mode couleur et les effets de scan, vérifiez l'aperçu en direct, puis téléchargez. Tout le traitement s'exécute localement sur votre appareil et ne prend plus de temps que pour les documents longs ou une résolution élevée.</p>
+
+<ol class="step-list">
+<li><strong>Ouvrez le scanner.</strong> Rendez-vous sur <a href="/scan">pdflookscanned.com/scan</a> depuis n'importe quel navigateur récent, ordinateur ou mobile, ou ouvrez le panneau latéral de l'extension Chrome. Aucun compte ni inscription n'est nécessaire.</li>
+<li><strong>Ajoutez votre PDF.</strong> Glissez le fichier sur la zone de dépôt ou cliquez pour le choisir. Les PDF sont utilisés tels quels, donc la mise en page, les polices et les images que vous voyez maintenant sont exactement ce qui sera rendu.</li>
+<li><strong>Choisissez la résolution.</strong> Laissez la Résolution au réglage par défaut 2× (environ 144 dpi) pour les lettres et formulaires ordinaires. Passez à 2,5× ou 3× (environ 216 dpi) si le fichier contient des notes de bas de page, du petit texte ou des tableaux denses.</li>
+<li><strong>Choisissez l'espace colorimétrique.</strong> Gardez Niveaux de gris (par défaut) pour les documents texte ; passez en Couleur uniquement quand la couleur porte du sens, comme des graphiques, des clauses surlignées ou un logo coloré.</li>
+<li><strong>Réglez le rendu.</strong> Pour un aplatissement propre, mettez Rotation, Variation de rotation, Flou et Bruit à 0. Pour un effet scanné, gardez les valeurs par défaut (Rotation 1°, Flou 0,3, Bruit 0,1) ou ajustez-les légèrement.</li>
+<li><strong>Ajustez la luminosité et la teinte du papier.</strong> Luminosité et Contraste valent 1 par défaut ; augmentez légèrement le Contraste si le texte gris paraît faible. Jaunissement ajoute une teinte de papier vieilli et vaut 0 par défaut.</li>
+<li><strong>Ajoutez des extras si besoin.</strong> En option : un filigrane texte ou image, une image de tampon ou de signature que vous avez le droit d'utiliser, et les champs de métadonnées du document (titre, auteur, objet, mots-clés, producteur, créateur).</li>
+<li><strong>Vérifiez l'aperçu et téléchargez.</strong> Zoomez sur le plus petit texte de l'aperçu. S'il se lit clairement, téléchargez le nouveau PDF scanné ; sinon, augmentez la résolution et prévisualisez à nouveau.</li>
+</ol>
+
+<p>Si votre source est un fichier Word, un Google Doc ou une feuille de calcul, exportez-le d'abord en PDF (dans Word : Fichier, Enregistrer sous, PDF ; dans Google Docs : Fichier, Télécharger, Document PDF). L'outil peut lire directement les fichiers DOCX et XLSX, mais il n'en extrait que le texte brut et le remet en page sur des feuilles A4 en Helvetica 11 points, ce qui fait perdre la mise en forme, les tableaux et les images.</p>
+
+<p>Exporter d'abord en PDF conserve la mise en page exactement telle qu'elle a été conçue. Le <a href="/blog/how-to-make-a-pdf-look-scanned/">guide complet pour faire ressembler un PDF à un scan</a> compare cette méthode à cinq autres.</p>
+
+<h2 id="resolution">Quelle résolution garde un PDF scanné lisible ?</h2>
+<p>Un PDF scanné reste lisible quand chaque lettre reçoit assez de pixels. Notre outil restitue les pages PDF à 72 dpi multipliés par le réglage Résolution, donc 1× vaut environ 72 dpi, 2× environ 144 dpi et 3× environ 216 dpi. La numérisation d'archives vise en réalité 200 à 300 ppi, donc 3× convient au petit texte.</p>
+
+<p>Le chiffre 72 vient de la façon dont le PDF mesure les pages. La géométrie du PDF et du PostScript repose sur <a href="https://en.wikipedia.org/wiki/Dots_per_inch" target="_blank" rel="noopener">72 points par pouce</a>, donc une page US Letter fait 612 × 792 points. La rendre à 1× donne 612 × 792 pixels, à 2× donne 1 224 × 1 584 pixels, et à 3× donne 1 836 × 2 376 pixels. Le nombre de pixels croît avec le carré de l'échelle.</p>
+
+<dl class="spec-list">
+<dt>1× (environ 72 dpi)</dt><dd>Page Letter 612 × 792 px. Convient aux grands titres et aux diapositives ; le corps de texte commence à se dégrader. Fichiers les plus légers.</dd>
+<dt>1,5× (environ 108 dpi)</dt><dd>Page Letter 918 × 1 188 px. Acceptable pour du texte 12 points à l'écran ; faible pour les notes de bas de page.</dd>
+<dt>2× (environ 144 dpi, par défaut)</dt><dd>Page Letter 1 224 × 1 584 px. Texte courant net pour des lettres, factures et formulaires ; le choix équilibré.</dd>
+<dt>2,5× (environ 180 dpi)</dt><dd>Page Letter 1 530 × 1 980 px. À utiliser quand un document mélange du texte normal et de petites mentions.</dd>
+<dt>3× (environ 216 dpi)</dt><dd>Page Letter 1 836 × 2 376 px. Idéal pour les contrats en petits caractères, les tableaux denses et les signatures qui doivent rester nettes.</dd>
+</dl>
+
+<h3>Comment se comporte le petit texte à chaque résolution de PDF scanné</h3>
+<p>Un calcul simple montre pourquoi le petit texte a besoin de plus de pixels. Une note de bas de page en corps 8 mesure 8/72e de pouce de hauteur en taille de police. À 1×, cela représente environ 8 pixels pour toute la hauteur de la lettre, jambages compris, ce qui rend flous et confondus les « e » et « c » minuscules. À 2×, cela devient environ 16 pixels, et à 3× environ 24 pixels, ce qui se lit confortablement même après un léger flou et une compression JPEG.</p>
+
+<p>À titre de comparaison, les National Archives américaines exigent au minimum <a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">300 ppi pour les documents textuels modernes numérisés et 400 ppi pour les photographies et documents à détails fins</a>, selon le 36 CFR 1236 Sous-partie E. La FADGI note les documents non reliés par niveaux d'étoiles, de 200 ppi (une étoile) à 250 puis 300 jusqu'à 400 ppi (quatre étoiles) dans ses <a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">directives techniques de 2023</a>. Ces objectifs protègent les originaux papier.</p>
+
+<p>Une conversion PDF en PDF scanné part d'une page numérique parfaite, pas d'un papier froissé, donc elle n'a pas besoin d'une densité d'archive pour paraître nette. Notre expérience montre que 2× traite bien un texte normal de 10 à 12 points, et que 3× (216 dpi) se situe juste au-dessus du niveau une étoile de la FADGI pour le petit texte.</p>
+
+<p>Les National Archives ajoutent une mise en garde utile dans le même règlement : « L'agence ne peut pas s'appuyer uniquement sur les spécifications de l'équipement, comme les réglages ppi du scanner ou les mégapixels du capteur de l'appareil photo, pour garantir la qualité de l'image numérique. » En pratique, jugez l'aperçu, pas le chiffre.</p>
+
+<h2 id="color-and-size">Niveaux de gris, couleur ou bitonal : lequel garde un fichier léger ?</h2>
+<p>Les fichiers bitonaux (noir et blanc pur) sont les plus légers, les niveaux de gris se situent au milieu, et la couleur est la plus lourde à résolution égale. Pour une conversion PDF en PDF scanné, les niveaux de gris sont le choix par défaut le plus pratique : ils gardent les contours anticrénelés des lettres lisses tout en restant bien plus légers que la couleur. N'utilisez la couleur que lorsqu'elle porte une information.</p>
+
+<p>Les chiffres réels les plus parlants viennent du district Nord de la Californie, qui a scanné le même document de 317 pages de deux façons. En <a href="https://cand.uscourts.gov/cases-e-filing/cmecf-information/preparing-your-cmecf-filing" target="_blank" rel="noopener">fichier bitonal à 300 ppi, il pesait 23,86 Mo et restait lisible</a> ; en niveaux de gris à 400 ppi, il grimpait à 374,47 Mo. C'est environ quinze fois plus lourd pour les mêmes pages, du fait à la fois de la profondeur de couleur et de la résolution plus élevée.</p>
+
+<div class="table-wrap"><table>
+<caption>Modes couleur pour un PDF scanné : à quoi chacun sert</caption>
+<thead><tr><th scope="col">Mode</th><th scope="col">Bits par pixel</th><th scope="col">Taille relative</th><th scope="col">Idéal pour</th></tr></thead>
+<tbody>
+<tr><th scope="row">Bitonal (noir et blanc)</th><td>1</td><td>La plus légère</td><td>Dépôts judiciaires en texte simple ; pas un mode disponible dans notre outil</td></tr>
+<tr><th scope="row">Niveaux de gris (outil : Niveaux de gris)</th><td>8</td><td>Moyenne</td><td>Lettres, contrats, formulaires, tout ce qui comporte des signatures</td></tr>
+<tr><th scope="row">Couleur (outil : Couleur)</th><td>24</td><td>La plus lourde</td><td>Graphiques, tampons colorés, photos, texte surligné</td></tr>
+</tbody></table></div>
+
+<p>Notre outil propose Niveaux de gris et Couleur et enregistre chaque page comme une image JPEG. Le JPEG est efficace pour les tons de gris mais, comme le dit la FADGI, « le traitement JPEG standard introduit des blocs de pixels de 8x8 qui ne font clairement pas partie du contenu d'origine ». À 2× ou 3×, ces blocs sont rarement visibles sur du texte.</p>
+
+<p>Si vous avez besoin d'un véritable noir et blanc en 1 bit, notre guide pour <a href="/blog/convert-color-pdf-to-black-and-white/">convertir un PDF couleur en noir et blanc</a> explique la différence et les options.</p>
+
+<h3>Les limites de taille de fichier d'un PDF scanné que vous pouvez rencontrer</h3>
+<p>Les plafonds de téléversement rendent le choix de la couleur pratique et pas seulement esthétique. Le district Ouest de Washington impose une <a href="https://www.wawd.uscourts.gov/attorneys/cm-ecf-faqs/Technical" target="_blank" rel="noopener">limite de 100 Mo par document et demande des scans noir et blanc à 300 dpi</a> sauf si la couleur est essentielle. Le district du Minnesota plafonne chaque pièce à <a href="https://www.mnd.uscourts.gov/sites/mnd/files/Criminal-ECF-Procedures-Guide.pdf" target="_blank" rel="noopener">35 Mo dans ses procédures ECF pénales</a>. L'USCIS limite chaque <a href="https://www.uscis.gov/file-online/tips-for-filing-forms-online" target="_blank" rel="noopener">fichier de preuve téléversé à 12 Mo</a>.</p>
+
+<div class="callout callout-tip"><strong>Règle rapide sur la taille</strong>Commencez à 2× et Niveaux de gris. Si le fichier téléchargé est trop lourd pour un portail, descendez à 1,5× avant de modifier autre chose, car diminuer la résolution d'un cran réduit bien plus le nombre de pixels que n'importe quel autre réglage. S'il est encore trop lourd, découpez le PDF et convertissez les parties séparément.</div>
+
+<h2 id="flatten-vs-scan-look">Aplatir proprement ou ajouter un effet scanné ?</h2>
+<p>Choisissez un aplatissement propre quand le destinataire n'a besoin que d'un PDF image sans texte modifiable, et choisissez l'effet scanné quand le fichier doit ressembler à du papier passé par un scanner. Le même outil fait les deux : mettez Rotation, Variation de rotation, Flou et Bruit à 0 pour un aplatissement propre, ou gardez-les au-dessus de 0 pour du réalisme.</p>
+
+<p>Un aplatissement propre est souvent la bonne réponse : envoyer un contrat final pour que personne ne puisse retaper discrètement une clause avec un éditeur de texte, verrouiller un formulaire rempli pour que ses valeurs ne puissent plus être modifiées champ par champ, ou livrer des pages à un système qui rejette les PDF avec des polices ou des champs de formulaire. Ici, une inclinaison ou du grain n'apporte rien.</p>
+
+<div class="table-wrap"><table>
+<caption>Réglages pour un aplatissement propre contre une conversion PDF en PDF scanné avec effet scanné</caption>
+<thead><tr><th scope="col">Réglage (plage)</th><th scope="col">Aplatissement propre</th><th scope="col">Effet scanné léger</th><th scope="col">Effet scanné marqué</th></tr></thead>
+<tbody>
+<tr><th scope="row">Rotation (−10° à 10°)</th><td>0°</td><td>1° (par défaut)</td><td>1,5°–2°</td></tr>
+<tr><th scope="row">Variation de rotation (0–10°)</th><td>0</td><td>0,5</td><td>1</td></tr>
+<tr><th scope="row">Flou (0–1)</th><td>0</td><td>0,3 (par défaut)</td><td>0,4–0,5</td></tr>
+<tr><th scope="row">Bruit (0–1)</th><td>0</td><td>0,1 (par défaut)</td><td>0,2–0,3</td></tr>
+<tr><th scope="row">Luminosité / Contraste (0–2)</th><td>1 / 1</td><td>1 / 1,1</td><td>1,05 / 1,2</td></tr>
+<tr><th scope="row">Jaunissement (0–2)</th><td>0</td><td>0–0,2</td><td>0,3–0,5</td></tr>
+<tr><th scope="row">Bordure</th><td>Non</td><td>Non</td><td>Oui</td></tr>
+<tr><th scope="row">Mode couleur / Résolution</th><td>Niveaux de gris ou Couleur / 2×–3×</td><td>Niveaux de gris / 2×</td><td>Niveaux de gris / 2×</td></tr>
+</tbody></table></div>
+
+<p>Les valeurs de l'effet scanné imitent des défauts que les archivistes cherchent à supprimer. Le règlement des National Archives définit le bruit comme « un ou plusieurs artefacts visuels indésirables dans un document numérisé qui ne font pas partie du matériau source », et cite l'inclinaison et le recadrage incorrect parmi les défauts à vérifier. Un peu de chaque paraît crédible ; trop en fait une mauvaise copie.</p>
+
+<p>Deux mises en garde pour l'effet scanné. Un Flou supérieur à environ 0,5 ramollit rapidement le petit texte, donc augmentez la Résolution quand vous augmentez le Flou. Une rotation supérieure à 2° coupe les coins de la page et paraît négligée plutôt que réaliste. Pour un tour complet des artefacts et des combinaisons prêtes à l'emploi, consultez notre <a href="/blog/scan-effect/">guide de l'effet scanner</a>.</p>
+
+<h2 id="required-or-refused">Quand un PDF scanné est-il exigé ou refusé ?</h2>
+<p>Un PDF scanné est parfois demandé (téléversements image uniquement, copies finales aplaties) mais souvent refusé là où la recherche de texte compte. Les tribunaux fédéraux et les règles d'accessibilité préfèrent généralement des PDF interrogeables, donc vérifiez les règles du destinataire avant de convertir un PDF en PDF scanné, et conservez le fichier d'origine.</p>
+
+<p>Les tribunaux sont l'exemple le plus clair. La FAQ du système judiciaire fédéral indique que <a href="https://www.uscourts.gov/court-records/file-a-case-cm-ecf/faqs-case-management-electronic-case-files-cm-ecf" target="_blank" rel="noopener">« les systèmes CM/ECF sont conçus pour n'accepter que des documents au format PDF »</a>, mais les détails varient selon le district. Le district Sud de Floride est strict : <a href="https://www.flsd.uscourts.gov/all-faqs/CMECF" target="_blank" rel="noopener">« les actes de procédure/documents principaux déposés électroniquement dans CM/ECF doivent être au format PDF interrogeable »</a>, et les pièces jointes doivent être interrogeables autant que possible.</p>
+
+<p>D'autres districts expriment une préférence plutôt qu'une interdiction. Le district du Massachusetts écrit que <a href="https://www.mad.uscourts.gov/caseinfo/pdf/ECFadminProc.pdf" target="_blank" rel="noopener">« les documents convertis en PDF, plutôt que scannés, sont préférés pour un dépôt dans CM/ECF »</a>. Le district du Minnesota indique : « Les PDF scannés interrogeables sont préférés, mais pas obligatoires. » Le district Est de l'Oklahoma conseille de créer des <a href="https://www.oked.uscourts.gov/pdfa-frequently-asked-questions" target="_blank" rel="noopener">fichiers PDF/A directement depuis un traitement de texte plutôt que d'imprimer puis de scanner</a>, pour garder des fichiers légers et interrogeables.</p>
+
+<p>L'accessibilité est la seconde raison de refus. La technique PDF7 du W3C (WCAG) indique : <a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF7" target="_blank" rel="noopener">« Un document composé d'images scannées de texte est intrinsèquement inaccessible, car le contenu du document est constitué d'images, pas de texte interrogeable. »</a> Les documents publics d'administrations, d'universités et de nombreuses entreprises doivent respecter les WCAG, donc un fichier image uniquement est le mauvais format pour eux, sauf si un OCR est ajouté.</p>
+
+<div class="callout callout-warn"><strong>Vérifiez les règles, et utilisez l'effet scanné honnêtement</strong>Si un tribunal, une administration ou un employeur exige des PDF interrogeables, déposez le PDF numérique d'origine, ou faites passer un OCR sur la version scannée ensuite pour qu'une couche de texte cachée réapparaisse. Notre outil ne fait pas d'OCR. Rappelez-vous aussi qu'un effet scanné change l'apparence, pas l'authenticité : ne l'utilisez pas pour altérer ou falsifier des documents officiels, des pièces d'identité ou des signatures qui ne sont pas les vôtres.</div>
+
+<h3>Rétablir une couche de texte avec l'OCR</h3>
+<p>Si vous avez besoin à la fois de l'apparence aplatie et de la possibilité de recherche, convertissez d'abord puis faites passer un OCR dans un logiciel PDF de bureau qui propose une étape « reconnaître le texte » ou « rendre interrogeable ». L'OCR place un texte invisible derrière l'image de la page, de sorte que le fichier a l'air scanné tandis que Ctrl+F fonctionne à nouveau. Relisez les documents importants, car l'OCR estime les lettres.</p>
+
+<h2 id="privacy">Est-il sûr de convertir un PDF en PDF scanné en ligne ?</h2>
+<p>Convertir un PDF en PDF scanné en ligne est sûr quand le traitement se déroule dans votre navigateur. Notre outil restitue les pages localement avec pdf.js et le canevas du navigateur, donc le fichier n'est pas envoyé à un serveur de traitement. Après la première visite, il fonctionne aussi hors ligne, ce qui vous permet de le vérifier vous-même.</p>
+
+<p>Le traitement local compte pour le genre de fichiers que l'on aplatit : contrats signés, fiches de paie, formulaires médicaux, documents fiscaux. De nombreux convertisseurs en ligne téléversent le PDF, le traitent sur un serveur et renvoient le résultat, ce qui signifie qu'une copie existe, au moins brièvement, sur un matériel que vous ne contrôlez pas. Avec un rendu dans le navigateur, les pages ne quittent jamais l'appareil qui les a ouvertes.</p>
+
+<ul>
+<li><strong>Test hors ligne.</strong> Chargez <a href="/scan">le scanner</a> une fois, coupez la connexion internet, et convertissez un fichier. S'il fonctionne sans connexion, rien n'a été envoyé.</li>
+<li><strong>Aucun compte.</strong> Il n'y a pas d'inscription, donc aucun historique de documents n'est rattaché à votre identité.</li>
+<li><strong>Même moteur dans Chrome.</strong> L'<a href="https://chromewebstore.google.com/detail/make-pdf-look-scanned/ijhpnlcipgiokgignkbbbgkobdmdoila" target="_blank" rel="noopener">extension Chrome</a>, notée 5 étoiles sur le Chrome Web Store, exécute le même moteur local dans un panneau latéral.</li>
+</ul>
+
+
+<h2 id="batch">Comment convertir plusieurs PDF en PDF scannés à la fois ?</h2>
+<p>Pour convertir plusieurs PDF en PDF scannés à la fois, ouvrez la page de scan par lots sur pdflookscanned.com/scan/bulk, ajoutez tous les fichiers, choisissez un seul jeu de réglages, et téléchargez le tout dans une seule archive ZIP. Chaque fichier d'entrée devient son propre PDF scanné avec la même résolution, le même mode couleur et les mêmes effets.</p>
+
+<ol class="step-list">
+<li><strong>Ouvrez le mode par lots.</strong> Rendez-vous sur <a href="/scan/bulk">pdflookscanned.com/scan/bulk</a> (dans l'extension Chrome, ajoutez simplement plusieurs fichiers).</li>
+<li><strong>Ajoutez les fichiers.</strong> Déposez les PDF. Des entrées mixtes comme JPG ou PNG fonctionnent aussi ; chaque image devient un PDF d'une page.</li>
+<li><strong>Choisissez des réglages communs.</strong> Réglez Résolution, Mode couleur et les curseurs d'effet une seule fois ; ils s'appliquent à tous les fichiers.</li>
+<li><strong>Téléchargez le ZIP.</strong> Lancez le traitement par lots et téléchargez le ZIP, puis vérifiez quelques résultats au hasard pour la lisibilité du petit texte.</li>
+</ol>
+
+<p>Le mode par lots garde les fichiers séparés volontairement ; il ne les fusionne pas en un seul document. Si vous avez besoin d'un seul PDF scanné combiné, fusionnez d'abord les PDF sources (par exemple, dans Aperçu sur macOS, glissez les pages d'un PDF dans le panneau latéral d'un autre, ou imprimez plusieurs documents ensemble vers « Microsoft Print to PDF » sur Windows), puis convertissez le fichier fusionné une seule fois.</p>
+
+<p>Le traitement par lots est aussi l'endroit où la Variation de rotation aide : chaque page reçoit une légère inclinaison aléatoire différente, ce qui paraît plus naturel sur un document long.</p>
+
+<h2 id="checking">Comment vérifier que le résultat est un PDF scanné ?</h2>
+<p>Vérifiez un fichier converti en essayant de sélectionner du texte, en recherchant un mot, et en zoomant sur le plus petit texte. Un vrai PDF scanné ne laisse sélectionner que des images de page entière, ne trouve aucun mot avec Ctrl+F, et se lit toujours proprement à 200 % de zoom. Vérifiez aussi la taille du fichier et le nombre de pages.</p>
+
+<p>Le guide d'accessibilité de la Cleveland State University décrit le test le plus rapide : <a href="https://pressbooks.ulib.csuohio.edu/accessibility/chapter/chapter-4-2-the-difference-between-an-accessible-pdf-and-a-scanned-image-of-text/" target="_blank" rel="noopener">« Si le mot se surligne sur la page, alors il possède un texte interrogeable au lieu d'être une image scannée de texte. »</a> Après une conversion correcte, rien ne se surligne, et faire glisser le curseur sélectionne l'image de la page au lieu de mots.</p>
+
+<div class="callout callout-info"><strong>Contrôle en cinq points avant d'envoyer</strong>1. Le texte ne peut être ni sélectionné ni copié. 2. Ctrl+F ne trouve rien. 3. Le plus petit texte se lit à 200 % de zoom. 4. Le nombre de pages et leur ordre correspondent à l'original. 5. La taille du fichier respecte la limite de téléversement du destinataire, et les propriétés du document n'affichent que ce que vous vouliez.</div>
+
+
+<h2 id="troubleshooting">Comment résoudre les problèmes de conversion en PDF scanné ?</h2>
+<p>La plupart des problèmes de conversion en PDF scanné viennent de quatre réglages : une résolution trop basse (texte flou), une résolution ou une couleur trop élevée (fichier énorme), une source qui n'est pas un PDF (mauvais format de page), et une rotation laissée activée (pages inclinées). Chacun a une solution directe dans l'outil, listée ci-dessous avec le réglage à modifier en premier.</p>
+
+<h3>Texte flou ou abîmé dans le PDF scanné</h3>
+<p>Augmentez la Résolution à 2,5× ou 3×, puis baissez le Flou à 0,1–0,2 ou 0 pour un aplatissement propre. Si un texte gris clair s'efface encore, augmentez le Contraste à environ 1,2. Le flou et le bruit s'appliquent après le rendu, donc à 1× même une petite valeur de flou peut rendre illisible un texte en corps 9.</p>
+
+<h3>Le fichier PDF scanné est énorme</h3>
+<p>Passez le Mode couleur sur Niveaux de gris si le document est du texte, puis baissez la Résolution de 3× à 2× ou 1,5×. Le Bruit coûte lui aussi de la place, car les grains aléatoires sont difficiles à compresser pour le JPEG, donc gardez le Bruit à 0,1 ou moins sur les documents longs. Pour des fichiers très longs, découpez-les et convertissez par parties.</p>
+
+<h3>Mauvais format de page après conversion en scanné</h3>
+<p>Les pages PDF conservent leur taille et leur mise en page d'origine. Si votre résultat affiche des pages A4 en Helvetica ordinaire, la source était un fichier DOCX, une feuille de calcul, un TXT ou un HTML, que l'outil remet en page comme du texte sur A4. Exportez d'abord l'original en PDF depuis son application, puis convertissez ce PDF.</p>
+
+<h3>Les pages sont inclinées ou les coins sont coupés</h3>
+<p>Mettez Rotation et Variation de rotation à 0 pour une page droite. Les valeurs par défaut (Rotation 1°) existent pour le réalisme, mais un dépôt judiciaire ou un formulaire destiné à un traitement automatisé devrait généralement rester droit. Si vous voulez de l'inclinaison, restez sous 2° pour que les coins demeurent dans la page.</p>
+
+<h3>La signature ou le tampon paraît pixelisé</h3>
+<p>Les traits de signature sont fins et souffrent en premier à basse résolution. Utilisez 2,5× ou 3×, gardez le Flou à 0,3 ou moins, et si vous placez un tampon ou une signature via les extras, partez d'un PNG en haute résolution. Ne placez que des signatures et des tampons que vous êtes autorisé à utiliser.</p>
+
+<div class="expert-quote"><blockquote>Nous avons construit le réglage Résolution autour de la grille native du PDF à 72 points pour que les chiffres restent honnêtes : 2× fait 144 dpi, 3× fait 216 dpi, rien n'est caché. C'est pourquoi les valeurs par défaut sont 2× en Niveaux de gris : assez net pour un texte courant normal, et bien plus léger qu'un rendu couleur de la même page. Nous gardons tout en local dans le navigateur, car les fichiers que l'on aplatit sont généralement ceux que l'on préfère le moins téléverser.</blockquote><cite><strong>L'équipe Make PDF look scanned</strong> — créateurs de l'outil web et de l'extension Chrome</cite></div>
+
+<h2 id="faq">Convertir un PDF en PDF scanné : questions fréquentes</h2>
+<p>Ces réponses sur la conversion d'un PDF en PDF scanné couvrent les questions les plus posées après la conversion : ce qui arrive au texte caché et aux métadonnées, si le changement peut être annulé, comment l'OCR s'intègre, quels réglages choisir, et si l'outil fonctionne sur téléphone. Chaque réponse reflète ce que l'outil fait réellement.</p>
+
+<div class="faq-item"><p class="faq-q">Convertir un PDF en PDF scanné supprime-t-il le texte caché ?</p><p class="faq-a">Oui, du contenu de la page. Les nouvelles pages sont des images JPEG de ce que le moteur de rendu dessine, donc il ne reste plus de couche de texte à copier, y compris du texte blanc ou des mots cachés derrière un rectangle noir. Considérez cela comme un effet secondaire, et inspectez tout de même l'aperçu quand une occultation compte.</p></div>
+
+<div class="faq-item"><p class="faq-q">Qu'advient-il des métadonnées du PDF d'origine ?</p><p class="faq-a">L'outil écrit un nouveau PDF et vous permet de définir son titre, son auteur, son objet, ses mots-clés, son producteur et son créateur dans le panneau des extras. Remplissez ces champs comme vous le souhaitez avant de télécharger, puis vérifiez les propriétés du document résultant dans votre lecteur PDF.</p></div>
+
+<div class="faq-item"><p class="faq-q">Un PDF scanné peut-il redevenir un PDF modifiable ?</p><p class="faq-a">Pas exactement. La couche de texte, les polices, les liens et les champs de formulaire d'origine ont disparu. L'OCR peut reconnaître les lettres et ajouter une nouvelle couche interrogeable, et certains logiciels peuvent reconstruire du texte modifiable à partir de là, mais la mise en forme et la précision ne correspondront pas à l'original. Conservez le fichier d'origine.</p></div>
+
+<div class="faq-item"><p class="faq-q">Puis-je faire passer un OCR sur le PDF scanné ensuite ?</p><p class="faq-a">Oui. N'importe quelle étape d'OCR dans un logiciel PDF de bureau traitera le résultat comme un scan normal. Une résolution plus élevée et peu de bruit donnent une meilleure reconnaissance, donc utilisez 2× ou 3× avec un Bruit proche de 0 si vous prévoyez de faire un OCR sur le fichier.</p></div>
+
+<div class="faq-item"><p class="faq-q">Quelle est la différence entre « aplatir un PDF » et « PDF scanné » ?</p><p class="faq-a">Aplatir, au sens étroit, fusionne les champs de formulaire et les annotations dans la page mais peut garder le texte sélectionnable. Convertir un PDF en scanné transforme la page entière, texte compris, en image. La seconde opération est plus radicale et c'est ce que fait notre outil.</p></div>
+
+<div class="faq-item"><p class="faq-q">Quelle résolution choisir pour convertir un PDF en PDF scanné ?</p><p class="faq-a">Utilisez 2× (environ 144 dpi) pour les documents courants et 3× (environ 216 dpi) pour le petit texte, les tableaux denses ou les signatures. Ne descendez à 1,5× que si le fichier doit être très léger et que le texte fait 12 points ou plus.</p></div>
+
+<div class="faq-item"><p class="faq-q">Pourquoi mon PDF scanné est-il tellement plus lourd que l'original ?</p><p class="faq-a">Un PDF texte stocke les lettres comme des instructions compactes ; un PDF scanné stocke chaque pixel de chaque page. Niveaux de gris plutôt que Couleur, une Résolution plus basse et moins de Bruit réduisent tous la taille. Les tribunaux constatent le même effet : un fichier test de 317 pages allait de 23,86 Mo à 374,47 Mo selon le mode couleur et la résolution.</p></div>
+
+<div class="faq-item"><p class="faq-q">Un tribunal acceptera-t-il un PDF converti en PDF scanné ?</p><p class="faq-a">Cela dépend du tribunal. Certains districts exigent des documents principaux interrogeables, d'autres les préfèrent seulement. Lisez d'abord les règles locales du CM/ECF ; en cas de doute, déposez le PDF numérique d'origine ou ajoutez un OCR à la version scannée.</p></div>
+
+
+<div class="faq-item"><p class="faq-q">L'outil de conversion PDF en PDF scanné fonctionne-t-il sur téléphone ?</p><p class="faq-a">Oui. Le site fonctionne dans les navigateurs mobiles, traite les fichiers localement sur le téléphone et télécharge le PDF scanné dans vos fichiers. Les documents volumineux à 3× prennent plus de temps et utilisent plus de mémoire sur téléphone, donc 2× y est le choix le plus sûr.</p></div>
+
+<div class="faq-item"><p class="faq-q">Le convertisseur PDF en PDF scanné est-il gratuit ?</p><p class="faq-a">Oui. L'outil web et l'extension Chrome sont gratuits, ne nécessitent aucune inscription, et n'ajoutent aucun filigrane sauf si vous choisissez d'en ajouter un vous-même dans les extras.</p></div>

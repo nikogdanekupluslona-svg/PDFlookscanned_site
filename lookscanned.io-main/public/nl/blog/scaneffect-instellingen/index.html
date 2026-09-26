@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scaneffect: waardoor een document er gescand uitziet</title>
+<meta name="description" content="Scaneffect uitgelegd: ruis, kanteling, vervaging, papiertint, randschaduwen en grijstinten — waardoor een bestand gescand lijkt, plus instellingen voor 5 looks.">
+<link rel="canonical" href="https://pdflookscanned.com/nl/blog/scaneffect-instellingen/">
+<link rel="alternate" hreflang="en" href="https://pdflookscanned.com/blog/scan-effect/">
+<link rel="alternate" hreflang="de" href="https://pdflookscanned.com/de/blog/scan-effekt/">
+<link rel="alternate" hreflang="fr" href="https://pdflookscanned.com/fr/blog/effet-scanner/">
+<link rel="alternate" hreflang="es" href="https://pdflookscanned.com/es/blog/efecto-escaneado/">
+<link rel="alternate" hreflang="it" href="https://pdflookscanned.com/it/blog/effetto-scansione/">
+<link rel="alternate" hreflang="pt-BR" href="https://pdflookscanned.com/pt-br/blog/efeito-de-scanner/">
+<link rel="alternate" hreflang="nl" href="https://pdflookscanned.com/nl/blog/scaneffect-instellingen/">
+<link rel="alternate" hreflang="sv" href="https://pdflookscanned.com/sv/blog/skanningseffekt-installningar/">
+<link rel="alternate" hreflang="da" href="https://pdflookscanned.com/da/blog/scanningseffekt-indstillinger/">
+<link rel="alternate" hreflang="no" href="https://pdflookscanned.com/no/blog/skanneeffekt-pdf/">
+<link rel="alternate" hreflang="fi" href="https://pdflookscanned.com/fi/blog/skannausefekti-asetukset/">
+<link rel="alternate" hreflang="ja" href="https://pdflookscanned.com/ja/blog/scan-effect/">
+<link rel="alternate" hreflang="ko" href="https://pdflookscanned.com/ko/blog/scan-effect/">
+<link rel="alternate" hreflang="x-default" href="https://pdflookscanned.com/blog/scan-effect/">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta property="og:site_name" content="Make PDF look scanned">
+<meta property="og:title" content="Scaneffect: waardoor een document er gescand uitziet">
+<meta property="og:description" content="Scaneffect uitgelegd: ruis, kanteling, vervaging, papiertint, randschaduwen en grijstinten — waardoor een bestand gescand lijkt, plus instellingen voor 5 looks.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pdflookscanned.com/nl/blog/scaneffect-instellingen/">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:image" content="https://pdflookscanned.com/pwa-512x512.png">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0b0b0f">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://pdflookscanned.com/#org", "name": "Make PDF look scanned", "url": "https://pdflookscanned.com/", "logo": "https://pdflookscanned.com/pwa-512x512.png", "sameAs": ["https://chromewebstore.google.com/detail/make-pdf-look-scanned/ijhpnlcipgiokgignkbbbgkobdmdoila"]}, {"@type": "Article", "@id": "https://pdflookscanned.com/nl/blog/scaneffect-instellingen/#article", "headline": "Scaneffect: waardoor een document er gescand uitziet", "description": "Scaneffect uitgelegd: ruis, kanteling, vervaging, papiertint, randschaduwen en grijstinten — waardoor een bestand gescand lijkt, plus instellingen voor 5 looks.", "url": "https://pdflookscanned.com/nl/blog/scaneffect-instellingen/", "mainEntityOfPage": "https://pdflookscanned.com/nl/blog/scaneffect-instellingen/", "inLanguage": "nl", "image": "https://pdflookscanned.com/pwa-512x512.png", "author": {"@id": "https://pdflookscanned.com/#org"}, "publisher": {"@id": "https://pdflookscanned.com/#org"}, "datePublished": "2026-09-18", "dateModified": "2026-09-18", "wordCount": 4652, "keywords": "scaneffect, scan effect, scaneffect toevoegen, gescande look, scaneffect instellingen, fotokopie-effect, faxeffect, er gescand uitzien, pdf gescand laten lijken", "about": [{"@type": "Thing", "name": "Scanner (grafisch)"}, {"@type": "Thing", "name": "Gescand document"}, {"@type": "Thing", "name": "Beeldruis"}, {"@type": "Thing", "name": "Scheefstand (beeld)"}, {"@type": "Thing", "name": "Compressieartefact"}], "mentions": [{"@type": "Thing", "name": "Moirépatroon"}, {"@type": "Thing", "name": "Fax"}, {"@type": "Thing", "name": "Kopieerapparaat"}, {"@type": "Thing", "name": "JPEG"}, {"@type": "Thing", "name": "Grijstinten"}, {"@type": "Thing", "name": "Binaire afbeelding"}, {"@type": "Thing", "name": "Halftoon"}, {"@type": "Thing", "name": "OCR"}, {"@type": "Thing", "name": "National Archives and Records Administration"}, {"@type": "Thing", "name": "Federal Agencies Digital Guidelines Initiative"}, {"@type": "Thing", "name": "PDF"}], "speakable": {"@type": "SpeakableSpecification", "cssSelector": [".lead", ".faq-a"]}, "translationOfWork": {"@id": "https://pdflookscanned.com/blog/scan-effect/#article"}}, {"@type": "FAQPage", "@id": "https://pdflookscanned.com/nl/blog/scaneffect-instellingen/#faq", "inLanguage": "nl", "mainEntity": [{"@type": "Question", "name": "Wat is de beste scaneffect-instelling voor een normaal document?", "acceptedAnswer": {"@type": "Answer", "text": "Begin met het kantoorscanrecept: rotatie 1°, rotatievariatie 0,5°, vervaging 0,3, ruis 0,1, Kleurruimte Grijs en resolutie 2×. Dit zijn ook de standaardinstellingen van de tool, en ze passen bij contracten, brieven en formulieren. Pas alleen aan als het voorbeeld te schoon of te zacht oogt."}}, {"@type": "Question", "name": "Wat is het verschil tussen een scaneffect en het effect van een scanner?", "acceptedAnswer": {"@type": "Answer", "text": "De termen betekenen in de praktijk hetzelfde. Beide beschrijven gesimuleerde scannerartefacten zoals scheefstand, ruis, vervaging en grijstinten. \"Het effect van een scanner\" wordt iets vaker gebruikt voor de flatbed-kantoorlook, terwijl \"scaneffect\" ook de fax-, fotokopie- en telefoonscanlook omvat."}}, {"@type": "Question", "name": "Maakt een scaneffect de tekst ondoorzoekbaar?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Elke pagina wordt opgeslagen als een JPEG-afbeelding in de nieuwe PDF, dus de tekst kan niet meer worden geselecteerd, gekopieerd of doorzocht. Heb je doorzoekbare tekst nodig, voer dan OCR uit op het resultaat of bewaar het originele PDF-bestand."}}, {"@type": "Question", "name": "Kan ik koffievlekken, vouwen of kreukels toevoegen?", "acceptedAnswer": {"@type": "Answer", "text": "Nee. Onze tool genereert geen vlekken, vouwen, kreukels, perspectiefvervorming of randschaduwen. Hij simuleert kanteling, ruis, vervaging, papiertint, helderheid, contrast, kleurdiepte, resolutie en een 1-px randlijn, wat de alledaagse gescande look dekt."}}, {"@type": "Question", "name": "Hoe laat ik een PDF eruitzien als een fotokopie?", "acceptedAnswer": {"@type": "Answer", "text": "Gebruik Kleurruimte Grijs, contrast 1,3–1,5, helderheid 1,05–1,1, ruis rond 0,15 en zet Rand aan. Houd de vervaging laag, rond 0,2, want kopieën zijn hard in plaats van zacht."}}, {"@type": "Question", "name": "Hoe krijg ik een faxlook?", "acceptedAnswer": {"@type": "Answer", "text": "Zet Resolutie op 1× (72 dpi), houd Grijs aan, verhoog het contrast naar 1,5 of meer, en gebruik vervaging 0,4 en ruis 0,2. Echte Group 3-faxen draaien op ongeveer 204 × 98 lijnen per inch in standaardmodus, wat verklaart waarom ze grof ogen."}}, {"@type": "Question", "name": "Waarom oogt mijn gescande look nep?", "acceptedAnswer": {"@type": "Answer", "text": "De gebruikelijke oorzaken zijn te veel rotatie, identieke kanteling op elke pagina, zware vervaging of sterke ruis op een bijna lege pagina. Verlaag de rotatie naar ongeveer 1°, houd de variatie boven 0, en houd vervaging en ruis onder 0,4 en 0,2."}}, {"@type": "Question", "name": "Kan de tool een echt zwart-wit (bitonaal) beeld maken?", "acceptedAnswer": {"@type": "Answer", "text": "Geen echt 1-bit bestand. Kleurruimte Grijs levert grijstinten op; contrast verhogen naar 1,4–1,6 duwt het dicht naar een zwart-witlook. Voor strikt bitonale uitvoer, zie onze gids over het omzetten van een kleuren-PDF naar zwart-wit."}}, {"@type": "Question", "name": "Welke resolutie moet ik kiezen?", "acceptedAnswer": {"@type": "Answer", "text": "Gebruik 2× (ongeveer 144 dpi) voor de meeste documenten, 2,5× (180 dpi) voor de telefoonscanlook en 3× (216 dpi) wanneer kleine lettertjes scherp moeten blijven. Hogere resolutie geeft grotere bestanden, dus gebruik 1× of 1,5× bij strikte groottelimieten."}}, {"@type": "Question", "name": "Wordt mijn bestand geüpload als ik een scaneffect toepas?", "acceptedAnswer": {"@type": "Answer", "text": "Nee. De webtool en de Chrome-extensie verwerken bestanden lokaal in je browser met pdf.js en canvas. Bestanden worden niet naar een verwerkingsserver gestuurd, en de website werkt offline na de eerste keer laden."}}, {"@type": "Question", "name": "Kan ik een document er gescand uit laten zien in kleur?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Zet Kleurruimte op Kleur om logo's, stempels en markeringen te behouden. Kleur werkt het best voor de verouderd-papier- en telefoonscanlook; Grijs blijft het meest typisch voor een kantoorscan."}}]}, {"@type": "HowTo", "name": "Een realistisch scaneffect toepassen op een PDF", "inLanguage": "nl", "step": [{"@type": "HowToStep", "position": 1, "text": "Bereid een PDF voor. Exporteer Word-, Google Docs- of spreadsheetbestanden eerst naar PDF (bijvoorbeeld Bestand → Downloaden → PDF-document in Google Docs). De tool accepteert DOCX direct, maar behoudt alleen de tekst, dus exporteren naar PDF behoudt je lay-out."}, {"@type": "HowToStep", "position": 2, "text": "Open de tool. Ga naar pdflookscanned.com/scan en sleep de PDF, JPG of PNG in het uploadgebied. Er wordt niets naar een server geüpload; de verwerking gebeurt lokaal."}, {"@type": "HowToStep", "position": 3, "text": "Kies een look. Kies een van de vijf recepten hierboven, bijvoorbeeld de kantoorscan: rotatie 1, variatie 0,5, vervaging 0,3, ruis 0,1."}, {"@type": "HowToStep", "position": 4, "text": "Stel kleurruimte en resolutie in. Kies Grijs of Kleur en de schaal Resolutie (2× voor de meeste looks, 1× voor fax, 2,5× voor de telefoonlook)."}, {"@type": "HowToStep", "position": 5, "text": "Pas de toon aan. Zet helderheid, contrast en vergeling op de receptwaarden; zet Rand alleen aan voor de fotokopie-look."}, {"@type": "HowToStep", "position": 6, "text": "Controleer het voorbeeld. Zoom in op 100% op een pagina met kleine lettertjes. Is tekst moeilijk leesbaar, verlaag dan eerst vervaging, daarna contrast."}, {"@type": "HowToStep", "position": 7, "text": "Download en controleer. Download de PDF, open hem in je viewer en blader door alle pagina's om te bevestigen dat elke pagina een iets andere kanteling heeft."}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://pdflookscanned.com/nl/"}, {"@type": "ListItem", "position": 2, "name": "Handleidingen", "item": "https://pdflookscanned.com/nl/blog/"}, {"@type": "ListItem", "position": 3, "name": "Scaneffect uitgelegd: waardoor een document er gescand uitziet (en de instellingen voor 5 looks)", "item": "https://pdflookscanned.com/nl/blog/scaneffect-instellingen/"}]}]}</script>
+<style>
+:root{--bg:#0b0b0f;--card:#14151b;--card2:#1b1c23;--line:#26272f;--text:#e7e7ea;--muted:#b8b8c2;--dim:#8e8e99;--accent:#8fd14f;--accent-ink:#10200a;--accent-soft:#1a2512;--warn:#e8a020;--warn-soft:#2a2112;--font:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);font-size:17px;line-height:1.75;-webkit-text-size-adjust:100%}
+a{color:var(--accent)}
+.site-header{position:sticky;top:0;z-index:10;background:rgba(11,11,15,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.site-header .inner{max-width:1100px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.site-header .brand{color:#f4f4f5;font-weight:700;text-decoration:none;font-size:17px}
+.site-header nav{display:flex;gap:16px;flex-wrap:wrap;font-size:15px}
+.site-header nav a{color:var(--muted);text-decoration:none}
+.site-header nav a:hover,.site-header nav a[aria-current]{color:#fff}
+.site-header .get{background:var(--accent);color:var(--accent-ink);font-weight:700;text-decoration:none;padding:8px 16px;border-radius:999px;font-size:14px}
+.pls-article .container{max-width:820px;margin:0 auto;padding:48px 20px 80px}
+.pls-article .breadcrumbs{font-size:14px;color:var(--dim);margin-bottom:22px}
+.pls-article .breadcrumbs a{color:var(--muted);text-decoration:none}
+.pls-article .article-header{margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid var(--line)}
+.pls-article .article-tag{display:inline-block;background:var(--accent-soft);color:var(--accent);font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:16px}
+.pls-article h1{font-size:clamp(28px,4.4vw,42px);line-height:1.15;letter-spacing:-.03em;margin:0 0 18px;color:#fff}
+.pls-article .article-meta{font-size:14px;color:var(--dim);display:flex;gap:18px;flex-wrap:wrap}
+.pls-article .article-meta a{color:var(--muted);font-weight:700;text-decoration:none}
+.pls-article .lead{font-size:19px;line-height:1.65;color:#f0f0f2;margin:0 0 32px;padding:22px 26px;background:var(--card);border-left:4px solid var(--accent);border-radius:0 10px 10px 0}
+.pls-article .trust-badge{display:flex;align-items:center;gap:16px;padding:18px 24px;margin:0 0 36px;background:var(--accent-soft);border:1px solid #2f4520;border-radius:14px}
+.pls-article .trust-badge-icon{font-size:28px;line-height:1;flex-shrink:0}
+.pls-article .trust-badge-title{font-size:18px;font-weight:800;line-height:1.3;color:#fff}
+.pls-article .trust-badge-title span{color:var(--accent)}
+.pls-article .trust-badge-sub{font-size:14px;line-height:1.5;color:var(--muted);margin-top:4px}
+.pls-article .toc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 26px;margin-bottom:44px}
+.pls-article .toc h2{font-size:13px;text-transform:uppercase;letter-spacing:.07em;margin:0 0 10px;padding:0;border:0;color:var(--muted)}
+.pls-article .toc ol{margin:0;padding-left:20px;display:grid;gap:4px}
+.pls-article .toc a{color:var(--text);text-decoration:none;font-size:15px}
+.pls-article .toc a:hover{color:var(--accent)}
+.pls-article h2{font-size:clamp(22px,3vw,29px);line-height:1.25;letter-spacing:-.02em;color:#fff;margin:56px 0 18px;padding-bottom:10px;border-bottom:1px solid var(--line);scroll-margin-top:80px}
+.pls-article h3{font-size:20px;line-height:1.35;color:#fff;margin:34px 0 12px}
+.pls-article p{margin:0 0 18px}
+.pls-article ul,.pls-article ol{padding-left:22px;margin:0 0 20px}
+.pls-article li{margin-bottom:6px}
+.pls-article strong{color:#fff}
+.pls-article code{background:var(--card2);padding:1px 6px;border-radius:5px;font-size:.9em}
+.pls-article .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin:28px 0}
+.pls-article .stat-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;text-align:center}
+.pls-article .stat-number{display:block;font-size:28px;font-weight:900;color:var(--accent);line-height:1.1}
+.pls-article .stat-label{display:block;font-size:13px;color:var(--muted);margin-top:6px;line-height:1.4}
+.pls-article .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:28px 0;border:1px solid var(--line);border-radius:12px}
+.pls-article table{width:100%;min-width:520px;border-collapse:collapse;font-size:15px;line-height:1.5}
+.pls-article caption{caption-side:top;text-align:left;padding:12px 16px;color:var(--muted);font-size:14px;font-weight:600;background:var(--card)}
+.pls-article th{background:var(--card2);color:#fff;font-weight:700;padding:11px 14px;text-align:left;vertical-align:top}
+.pls-article tbody th{background:transparent;color:#fff}
+.pls-article td{padding:11px 14px;border-top:1px solid var(--line);vertical-align:top;color:var(--text)}
+.pls-article tbody th{border-top:1px solid var(--line)}
+.pls-article .callout{border-radius:12px;padding:18px 22px;margin:28px 0;font-size:16px;line-height:1.65}
+.pls-article .callout strong{display:block;margin-bottom:6px}
+.pls-article .callout-tip{background:var(--card);border-left:4px solid var(--muted)}
+.pls-article .callout-warn{background:var(--warn-soft);border-left:4px solid var(--warn)}
+.pls-article .callout-info{background:var(--accent-soft);border-left:4px solid var(--accent)}
+.pls-article .spec-list{display:grid;grid-template-columns:minmax(140px,34%) 1fr;gap:0;margin:24px 0;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.pls-article .spec-list dt,.pls-article .spec-list dd{margin:0;padding:10px 14px;border-top:1px solid var(--line)}
+.pls-article .spec-list dt{font-weight:700;color:#fff;background:var(--card)}
+.pls-article .spec-list dt:first-of-type,.pls-article .spec-list dt:first-of-type+dd{border-top:0}
+.pls-article .step-list{list-style:none;padding:0;margin:22px 0;counter-reset:steps}
+.pls-article .step-list li{counter-increment:steps;position:relative;padding:14px 16px 14px 58px;border-bottom:1px solid var(--line);margin:0}
+.pls-article .step-list li:last-child{border-bottom:0}
+.pls-article .step-list li::before{content:counter(steps);position:absolute;left:12px;top:15px;width:30px;height:30px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+.pls-article .expert-quote{margin:36px 0;padding:26px 30px;background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:0 12px 12px 0}
+.pls-article .expert-quote blockquote{margin:0 0 12px;font-size:18px;line-height:1.7;font-style:italic;color:#f4f4f5}
+.pls-article .expert-quote cite{font-style:normal;font-size:14px;color:var(--muted)}
+.pls-article .faq-item{border-bottom:1px solid var(--line);padding:18px 0}
+.pls-article .faq-q{font-size:18px;font-weight:700;color:#fff;margin:0 0 8px}
+.pls-article .faq-a{margin:0;color:var(--text)}
+.pls-article .cta-block{margin:56px 0 0;background:linear-gradient(135deg,#1a2512,#14151b 70%);border:1px solid #2f4520;border-radius:16px;padding:32px 34px;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.pls-article .cta-text{flex:1;min-width:220px}
+.pls-article .cta-title{font-size:22px;font-weight:800;color:#fff;margin:0 0 6px}
+.pls-article .cta-body{color:var(--muted);margin:0;font-size:15px}
+.pls-article .cta-buttons{display:flex;gap:10px;flex-wrap:wrap}
+.pls-article .cta-btn{display:inline-block;border:2px solid var(--accent);color:var(--accent);font-weight:800;font-size:15px;padding:11px 20px;border-radius:10px;text-decoration:none;white-space:nowrap}
+.pls-article .cta-btn:first-child{background:var(--accent);color:var(--accent-ink)}
+.pls-article .article-footer{margin-top:56px;padding-top:24px;border-top:1px solid var(--line);font-size:14px;color:var(--dim)}
+.pls-article .related{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:18px 0 0;padding:0;list-style:none}
+.pls-article .related a{display:block;height:100%;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;text-decoration:none;color:var(--text);font-weight:600;line-height:1.4}
+.pls-article .related a:hover{border-color:var(--accent)}
+.pls-article .related span{display:block;color:var(--dim);font-weight:400;font-size:14px;margin-top:6px}
+.site-header .lang{position:relative;margin-left:auto}
+.site-header .row-break{display:none}
+.site-header .lang summary{list-style:none;display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 10px;border:1px solid #2a2b33;border-radius:999px;color:#d8d8de;font-size:13px;font-weight:600;cursor:pointer;user-select:none}
+.site-header .lang summary::-webkit-details-marker{display:none}
+.site-header .lang[open] summary,.site-header .lang summary:hover{border-color:var(--accent);color:#fff}
+.site-header .lang svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.site-header .lang ul{position:absolute;top:calc(100% + 8px);right:0;z-index:20;min-width:210px;max-height:70vh;overflow-y:auto;margin:0;padding:6px;list-style:none;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:0 16px 40px rgba(0,0,0,.45)}
+.site-header .lang ul a{display:flex;justify-content:space-between;gap:16px;padding:8px 10px;border-radius:8px;color:var(--text);text-decoration:none;font-size:14px;line-height:1.4}
+.site-header .lang ul a:hover{background:var(--card2);color:#fff}
+.site-header .lang ul a[aria-current]{color:var(--accent);font-weight:600}
+.site-header .lang ul span{color:var(--dim);font-size:12px}
+.site-footer{border-top:1px solid var(--line);color:var(--dim);font-size:14px;text-align:center;padding:28px 20px 48px}
+.site-footer a{color:var(--muted)}
+@media (max-width:600px){body{font-size:16px}.pls-article .container{padding:32px 16px 60px}.pls-article .lead{font-size:17px;padding:16px 18px}.pls-article .trust-badge{flex-direction:column;align-items:flex-start;gap:8px}.pls-article .cta-block{padding:22px}.pls-article .cta-btn{width:100%;text-align:center}.pls-article .spec-list{grid-template-columns:1fr}.pls-article .spec-list dd{border-top:0}.site-header .inner{gap:8px 12px;padding:10px 14px}.site-header .brand{flex:1;min-width:0;font-size:15px;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.site-header .get{display:none}.site-header .row-break{display:block;order:3;flex-basis:100%;height:0}.site-header nav{order:4;flex:1;min-width:0;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;white-space:nowrap}.site-header .lang{order:2}}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="inner"><a class="brand" href="/nl/">Make PDF look scanned</a><nav aria-label="Primary"><a href="/nl/">Home</a><a href="/nl/scan">PDF scannen</a><a href="/nl/scan/bulk">Bulkscan</a><a href="/nl/blog/" aria-current="page">Handleidingen</a></nav><details class="lang"><summary aria-label="Taal: Nederlands"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span>NL</span></summary><ul><li><a href="/blog/scan-effect/" hreflang="en" lang="en">English<span>EN</span></a></li><li><a href="/de/blog/scan-effekt/" hreflang="de" lang="de">Deutsch<span>DE</span></a></li><li><a href="/fr/blog/effet-scanner/" hreflang="fr" lang="fr">Français<span>FR</span></a></li><li><a href="/es/blog/efecto-escaneado/" hreflang="es" lang="es">Español<span>ES</span></a></li><li><a href="/it/blog/effetto-scansione/" hreflang="it" lang="it">Italiano<span>IT</span></a></li><li><a href="/pt-br/blog/efeito-de-scanner/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)<span>PT-BR</span></a></li><li><a href="/nl/blog/scaneffect-instellingen/" hreflang="nl" lang="nl" aria-current="true">Nederlands<span>NL</span></a></li><li><a href="/sv/blog/skanningseffekt-installningar/" hreflang="sv" lang="sv">Svenska<span>SV</span></a></li><li><a href="/da/blog/scanningseffekt-indstillinger/" hreflang="da" lang="da">Dansk<span>DA</span></a></li><li><a href="/no/blog/skanneeffekt-pdf/" hreflang="no" lang="no">Norsk<span>NO</span></a></li><li><a href="/fi/blog/skannausefekti-asetukset/" hreflang="fi" lang="fi">Suomi<span>FI</span></a></li><li><a href="/ja/blog/scan-effect/" hreflang="ja" lang="ja">日本語<span>JA</span></a></li><li><a href="/ko/blog/scan-effect/" hreflang="ko" lang="ko">한국어<span>KO</span></a></li></ul></details><a class="get" href="https://chromewebstore.google.com/detail/make-pdf-look-scanned/ijhpnlcipgiokgignkbbbgkobdmdoila" target="_blank" rel="noopener">Toevoegen aan Chrome — gratis</a><span class="row-break" aria-hidden="true"></span></div></header>
+<div class="pls-article"><article class="container"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/nl/">Home</a> › <a href="/nl/blog/">Handleidingen</a> › Scaneffect</nav><header class="article-header">
+  <span class="article-tag">Scaneffect</span>
+  <h1>Scaneffect uitgelegd: waardoor een document er gescand uitziet (en de instellingen voor 5 looks)</h1>
+  <div class="article-meta">
+    <span>📅 <time datetime="2026-09">september 2026</time></span>
+    
+    <span>⏱ 21 min. leestijd</span>
+    <span>✍ <a href="/nl/">Team Make PDF look scanned</a></span>
+  </div>
+</header>
+<p class="lead">Een scaneffect is de verzameling kleine gebreken die een echte scanner op een pagina achterlaat: een lichte kanteling, sensorruis, zachte focus, een warme papiertint, grijstinten en JPEG-compressie. Om een document er gescand uit te laten zien, bouw je die gebreken met mate na, bijvoorbeeld rotatie 1°, vervaging 0,3, ruis 0,1, Kleurruimte Grijs en resolutie 2×.</p>
+<div class="trust-badge">
+  <span class="trust-badge-icon" aria-hidden="true">🏆</span>
+  <div class="trust-badge-text">
+    <div class="trust-badge-title">Make PDF look scanned — <span>beoordeeld met 5 sterren in de Chrome Web Store</span></div>
+    <div class="trust-badge-sub">2026 — gratis scaneffect-tool die lokaal in je browser werkt, zonder account</div>
+  </div>
+</div>
+<p>Snel "wat ruis toevoegen en het scheeftrekken" oogt al gauw als een filter, niet als een scan. Deze naslaggids splitst een echte scan op in zijn artefacten, legt elke hardware-oorzaak uit, koppelt elk artefact aan een instelling in onze gratis <a href="/nl/scan">scantool</a> en geeft vijf kant-en-klare recepten. De hardwarefeiten komen van NARA, FADGI, BBC News en Wikipedia; de bereiken van de schuifregelaars komen uit onze eigen broncode.</p>
+<nav class="toc" aria-label="Table of contents"><h2>Inhoudsopgave</h2><ol>
+<li><a href="#what-is-a-scan-effect">Wat is een scaneffect?</a></li>
+<li><a href="#what-makes-a-document-look-scanned">Waardoor ziet een document er gescand uit?</a></li>
+<li><a href="#skew-and-rotation">Hoe zorgt scheefstand voor de gescande look?</a></li>
+<li><a href="#sensor-noise">Waarom hoort ruis bij een scaneffect?</a></li>
+<li><a href="#blur-and-softness">Hoeveel vervaging heeft een echte scan?</a></li>
+<li><a href="#paper-tone">Hoe verandert papiertint het scaneffect?</a></li>
+<li><a href="#brightness-contrast-bit-depth">Hoe bepalen helderheid en contrast een scan?</a></li>
+<li><a href="#grayscale-and-bitonal">Grijstinten of bitonaal: welke gescande look?</a></li>
+<li><a href="#jpeg-and-resolution">Dragen JPEG-blokken en resolutie bij aan de scanlook?</a></li>
+<li><a href="#moire">Wat is moiré in een gescand document?</a></li>
+<li><a href="#edge-shadows-and-borders">Zorgen randschaduwen voor een gescande look?</a></li>
+<li><a href="#fax-and-photocopy-look">Wat is het verschil tussen faxlook en fotokopie-look?</a></li>
+<li><a href="#cheat-sheet">Scaneffect-cheatsheet: wat doet elke instelling?</a></li>
+<li><a href="#five-presets">Scaneffect-instellingen voor 5 looks</a></li>
+<li><a href="#apply-a-preset">Zo pas je een scaneffect-voorinstelling stap voor stap toe</a></li>
+<li><a href="#fake-scan-effect">Waardoor oogt een scaneffect nep?</a></li>
+<li><a href="#honest-use">Wanneer is een gescande look gepast?</a></li>
+<li><a href="#faq">Scaneffect: veelgestelde vragen</a></li>
+</ol></nav>
+
+<h2 id="what-is-a-scan-effect">Wat is een scaneffect?</h2>
+<p>Een scaneffect is een digitale simulatie van de visuele sporen die een optische scanner of kopieerapparaat op een pagina achterlaat. Het scaneffect verandert een schoon, digitaal gegenereerd bestand in een op afbeeldingen gebaseerde PDF met kanteling, ruis, zachtheid, toonverschuivingen en compressie — precies de signalen waaraan mensen een papieren scan herkennen.</p>
+<p>De term dekt meerdere verwante looks. "Het effect van een scanner" betekent meestal de flatbed-kantoorlook: grijs, licht zacht, een beetje scheef. Een fotokopie-look is harder, met uitgevreten wit en donkere tekst. Een faxlook is grof en laagresolutie. Een verouderd-papier-look voegt een warme, vergeelde tint toe. Ze zijn allemaal opgebouwd uit dezelfde kleine set artefacten, alleen in andere hoeveelheden.</p>
+<p>Technisch gezien eindigt elk scaneffect op dezelfde manier: elke pagina wordt een afbeelding. Onze tool rendert elke PDF-pagina naar een canvas, past het effect toe en slaat elke pagina op als een JPEG-afbeelding in een nieuwe PDF. Daarom heeft een PDF met scanlook, net als een echt gescande PDF, geen selecteerbare tekst tenzij er later OCR wordt toegevoegd. Onze gids <a href="/nl/blog/wat-is-een-gescande-pdf/">wat is een gescande PDF</a> behandelt dat verschil in detail.</p>
+
+<h2 id="what-makes-a-document-look-scanned">Waardoor ziet een document er gescand uit?</h2>
+<p>Een document ziet er gescand uit wanneer meerdere onvolkomenheden samen optreden: de pagina is licht gedraaid, het wit is niet zuiver wit, fijne ruis zit in vlakke gebieden, letterranden zijn zacht, en de kleuren zijn teruggebracht tot grijstinten. Geen enkel artefact overtuigt op zichzelf; de combinatie is wat als scan overkomt.</p>
+<p>De U.S. National Archives somt de gebreken op die haar beoordelaars controleren in gedigitaliseerde archiefstukken. Volgens de federale digitaliseringsregel in <a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">36 CFR Part 1236, Subpart E</a> kijkt kwaliteitscontrole naar clipping, misregistratie, kwantiseringsfouten, scheefstand en verkeerd bijsnijden. Die "gebreken" zijn voor een archivaris precies de ingrediënten van de look die scan-artefacten voor iedereen anders creëren.</p>
+<dl class="spec-list">
+<dt>Geometrie</dt><dd>Scheefstand en rotatie, verschillend per pagina.</dd>
+<dt>Textuur</dt><dd>Sensorruis en papierkorrel in vlakke gebieden.</dd>
+<dt>Scherpte</dt><dd>Optische zachtheid door de lens en de bewegende scankop.</dd>
+<dt>Toon</dt><dd>Papierkleur, helderheid en contrastverschuivingen.</dd>
+<dt>Kleurdiepte</dt><dd>Grijstinten of bitonaal in plaats van volledige kleur.</dd>
+<dt>Compressie</dt><dd>JPEG-blokken van 8×8 en beperkte resolutie.</dd>
+<dt>Kader</dt><dd>Randschaduwen, lijnen van de scannerklep en paginaranden.</dd>
+</dl>
+
+<h2 id="skew-and-rotation">Hoe zorgt scheefstand voor de gescande look?</h2>
+<p>Scheefstand is de kleine rotatie die een pagina krijgt wanneer hij enigszins niet-vierkant op de scannerglasplaat wordt gelegd of door een documentinvoer wordt getrokken. Scheefstand is het meest herkenbare onderdeel van de gescande look, omdat digitaal gemaakte pagina's altijd perfect recht zijn, terwijl echte vellen bijna nooit precies op 0° belanden.</p>
+<p>De oorzaak is mechanisch. FADGI, de Amerikaanse federale digitaliseringswerkgroep, meldt in haar <a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">Technical Guidelines for Digitizing Cultural Heritage Materials</a>: "Scheefstandgedrag in het vastgelegde beeld is vaak terug te voeren op een gebrek aan parallellie tussen het brandvlak van de camera en de glasplaat." Op kantoor is de gangbaardere oorzaak simpeler: een hand legt het vel een graad of twee scheef van de geleider.</p>
+<p>In onze tool stelt de schuifregelaar Rotatie de basiskanteling in, van −10° tot 10° (standaard 1°). Negatieve waarden draaien de pagina linksom. Een natuurlijk bereik voor een flatbedscan is 0,5° tot 1,5°. Waarden boven 3° ogen als een onzorgvuldige foto, en boven 5° als een bewust effect.</p>
+<h3>Variatie per pagina: waarom elke gescande pagina anders kantelt</h3>
+<p>Rotatievariatie (0 tot 10°, standaard 0,5°) voegt een willekeurige extra kanteling toe aan elke pagina. In onze broncode is de uiteindelijke hoek van elke pagina de basisrotatie plus de variatie vermenigvuldigd met een willekeurig getal tussen 0 en 1. Met rotatie 1 en variatie 0,5 belandt elke pagina ergens tussen 1,0° en 1,5°, nooit twee keer op precies dezelfde hoek.</p>
+<p>Dat verschil per pagina telt zwaarder dan de hoek zelf. Een stapel papier die pagina voor pagina wordt ingevoerd, herhaalt nooit dezelfde scheefstand, dus een identieke kanteling op 20 pagina's is een verrader. Houd de variatie op 0,3–1° voor een flatbed-look en 1–2° voor een handheld-telefoonlook.</p>
+
+<h2 id="sensor-noise">Waarom hoort ruis bij een scaneffect?</h2>
+<p>Een scaneffect bevat ruis omdat elke beeldsensor kleine willekeurige variaties vastlegt die niet op het originele papier staan. Ruis toont zich als vage spikkels in witte marges en vlakke grijze gebieden. Zonder ruis is een pagina met scanlook te schoon, en dat is de meest voorkomende reden waarom een gesimuleerde scan als digitaal overkomt.</p>
+<p>NARA definieert het probleem precies in <a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">36 CFR 1236 Subpart E</a>: "Ruis is een of meer ongewenste beeldartefacten in een gedigitaliseerd archiefstuk die geen deel uitmaken van het bronmateriaal." Diezelfde regelgeving stelt een bovengrens voor ruis bij archiefscans, gemeten als een standaardafwijking van 2 of minder in lichtheid. Echte scans zijn dus wel ruisig, maar slechts licht.</p>
+<p>FADGI voegt de andere kant van het verhaal toe: te agressieve ruisonderdrukking kan de natuurlijke textuur van papier wegvlakken, dus haar richtlijnen markeren ook ruiswaarden die te laag zijn. Een volmaakt gladde pagina is zelfs voor een archivaris verdacht.</p>
+<p>In onze tool loopt de schuifregelaar Ruis van 0 tot 1 (standaard 0,1). Hij legt een fijne fractale textuur over de hele pagina, inclusief de witte marges, wat zowel sensorspikkel als papierkorrel nabootst. Een natuurlijk bereik is 0,05–0,2. Boven 0,3 wordt de textuur zichtbaar op normale zoom en begint hij als effect te ogen in plaats van als scan.</p>
+
+<h2 id="blur-and-softness">Hoeveel vervaging heeft een echte scan?</h2>
+<p>Een echte scan heeft een klein beetje vervaging: letterranden zijn zacht in plaats van vlijmscherp, en dunne lijnen verliezen wat contrast. De zachtheid komt van de scannerlens, van de bewegende scankop tijdens de belichting, en van papier dat niet volmaakt vlak tegen het glas ligt.</p>
+<p>Digitale PDF's renderen tekst als vectorcontouren, scherp op elke zoom. Een scan heeft een vaste resolutie, en elke pixel middelt licht over een klein stukje papier, wat een lichte halo rond letters achterlaat.</p>
+<p>De schuifregelaar Vervaging in onze tool loopt van 0 tot 1 (standaard 0,3). De waarde is een vervagingsradius in pixels van de gerenderde pagina, dus dezelfde waarde oogt zachter op 1× resolutie dan op 3×. Een natuurlijk bereik is 0,2–0,4. Boven 0,6 wordt kleine tekst moeilijk leesbaar, en zware vervaging is een van de snelste manieren om een scaneffect nep te laten ogen.</p>
+<div class="callout callout-tip"><strong>Controleer vervaging op 100% zoom</strong>Beoordeel vervaging op de gedownloade PDF op 100% zoom, niet op een uitgezoomde miniatuur. Een instelling die er als miniatuur scherp uitziet, kan te zacht zijn voor 9-punts voetnoten.</div>
+
+<h2 id="paper-tone">Hoe verandert papiertint het scaneffect?</h2>
+<p>Papiertint verandert het scaneffect door het zuivere digitale wit te vervangen door het licht warme of grijze wit van echt papier. Kantoorpapier scant een tikje off-white, kringlooppapier oogt grijs, en oude documenten worden geel of bruin. Een warme tint is het belangrijkste signaal achter de verouderd-papier-look.</p>
+<p>Scanners leggen papierverkleuring getrouw vast, vooral in kleurmodus, en lampen en witbalans verschuiven de tint een beetje van apparaat tot apparaat.</p>
+<p>Onze schuifregelaar Vergeling (0 tot 2, standaard 0) past een sepiatint toe. In onze code wordt hij toegepast na de grijsconversie, dus hij tint de pagina zelfs in Kleurruimte Grijs; in Kleurruimte Kleur verwarmt hij ook gekleurde elementen. Een natuurlijk bereik is 0,1–0,3 voor gewoon papier en 0,3–0,6 voor een verouderde of archiefachtige look.</p>
+
+<h2 id="brightness-contrast-bit-depth">Hoe bepalen helderheid en contrast een scan?</h2>
+<p>Helderheid en contrast bepalen een scan door in te stellen hoe wit het papier en hoe zwart de tekst oogt. Kantoorscanners en kopieerapparaten verhogen het contrast vaak, wat tekst donkerder maakt en lichte achtergronden uitwast. Helderheid onder 1 geeft een doffe, grijze scan; boven 1 een gebleekte, overbelichte kopie.</p>
+<p>Achter beide instellingen zit bitdiepte, het aantal toonstappen dat een scanner opslaat. Volgens <a href="https://en.wikipedia.org/wiki/Image_scanner" target="_blank" rel="noopener">Wikipedia's artikel over beeldscanners</a> leggen typische scanners minstens 24-bit kleur vast en scanners van hoge kwaliteit 36–48 bits. Grijstintenscans slaan meestal 8 bits op, oftewel 256 tinten. Als een scanner dat bereik samenperst, verdwijnen fijne gradaties, wat NARA kwantisering noemt.</p>
+<p>NARA's regel verwoordt het zo: "Kwantisering is een verliesgevende compressietechniek waarbij een reeks waarden wordt samengeperst tot één quantumwaarde, meestal om de bestandsgrootte te verkleinen." Contrast verhogen in onze tool bootst hetzelfde visuele resultaat na: lichte grijzen versmelten met wit en donkere grijzen versmelten met zwart.</p>
+<dl class="spec-list">
+<dt>Helderheid</dt><dd>0 tot 2, standaard 1. Natuurlijk: 0,95–1,1. Fotokopie: 1,05–1,1. Verouderd papier: ongeveer 0,95.</dd>
+<dt>Contrast</dt><dd>0 tot 2, standaard 1. Natuurlijk: 1–1,2. Fotokopie: 1,3–1,5. Fax: 1,5 of hoger.</dd>
+</dl>
+
+<h2 id="grayscale-and-bitonal">Grijstinten of bitonaal: welke gescande look?</h2>
+<p>Grijstinten geeft de zachte, egale gescande look van een moderne kantoorscanner, terwijl bitonaal de harde zwart-witlook van faxapparaten en rechtbankindieningen geeft. Grijstinten behoudt tot 256 tinten per pixel; bitonaal houdt er maar twee over. De meeste mensen denken aan grijstinten als ze zich een gewone documentscan voorstellen.</p>
+<p>FADGI definieert beide termen in haar woordenlijst. "Grijstinten: digitale beelden geproduceerd met een reeks grijzen tussen wit en zwart." En: "Bitonaal: digitale beelden geproduceerd met slechts twee kleuren, zwart en wit." Bitonale bestanden zijn 1 bit per pixel, grijstintenbestanden doorgaans 8 of 16 bits, volgens de <a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">FADGI Technical Guidelines</a>.</p>
+<p>Onze tool biedt twee kleurruimtes: Grijs (de standaard) en Kleur. Er is geen echte 1-bit bitonale modus. Om een bitonale of fotokopie-look te benaderen, houd je Grijs aan en verhoog je het contrast naar 1,4–1,6; lichte grijzen vallen dan naar wit en tekst gaat richting zwart, terwijl het bestand 8-bit blijft. Gebruik Kleur alleen wanneer een logo, stempel, markeerstift of verouderd-papier-tint zichtbaar moet blijven.</p>
+<p>Voor gewone conversie zonder scanartefacten, zie hoe je een <a href="/nl/blog/pdf-zwart-wit-maken/">kleuren-PDF zwart-wit maakt</a>.</p>
+
+<h2 id="jpeg-and-resolution">Dragen JPEG-blokken en resolutie bij aan de scanlook?</h2>
+<p>JPEG-blokken en beperkte resolutie dragen wel degelijk bij aan de scanlook. De meeste scanners slaan pagina's op als JPEG-afbeeldingen, wat vage 8×8-pixelblokken rond tekst achterlaat, en kantoorscans worden meestal gemaakt op 150–300 dpi, waardoor een pagina bij inzoomen nooit de onbeperkte scherpte van een vector-PDF heeft.</p>
+<p>FADGI beschrijft het compressie-artefact rechtstreeks: "Standaard JPEG-verwerking introduceert bijvoorbeeld 8x8-pixelblokken die duidelijk geen deel uitmaken van de oorspronkelijke inhoud." Die blokken zijn het best zichtbaar rond zwarte tekst op wit papier en in vloeiende kleurverlopen, zoals ook het <a href="https://en.wikipedia.org/wiki/Compression_artifact" target="_blank" rel="noopener">Wikipedia-artikel over compressieartefacten</a> laat zien.</p>
+<p>Onze tool slaat elke verwerkte pagina op als een JPEG-afbeelding in de nieuwe PDF, dus lichte JPEG-blokvorming verschijnt vanzelf, net als bij echte scanneruitvoer. De instelling Resolutie regelt de pixeldichtheid: pagina's renderen op 72 dpi vermenigvuldigd met de schaal.</p>
+<div class="table-wrap"><table><caption>Resolutie-instelling in de tool en waar ze op lijkt</caption>
+<thead><tr><th scope="col">Instelling</th><th scope="col">Ongeveer dpi</th><th scope="col">Lijkt op</th></tr></thead>
+<tbody>
+<tr><th scope="row">1×</th><td>72 dpi</td><td>Fax of kopie van lage kwaliteit, zichtbare pixelstappen</td></tr>
+<tr><th scope="row">1,5×</th><td>108 dpi</td><td>Budget multifunctionele printer op een conceptinstelling</td></tr>
+<tr><th scope="row">2× (standaard)</th><td>144 dpi</td><td>Typische kantoor-"e-mailscan"</td></tr>
+<tr><th scope="row">2,5×</th><td>180 dpi</td><td>Uitvoer van een scan-app op je telefoon</td></tr>
+<tr><th scope="row">3×</th><td>216 dpi</td><td>Zorgvuldige flatbedscan, groter bestand</td></tr>
+</tbody></table></div>
+<p>Ter vergelijking: archiefscannen gaat veel hoger. NARA stelt minimums van 300 ppi voor tekstuele archiefstukken en 400 ppi voor fotografische afdrukken, en FADGI-sterniveaus voor ongebonden documenten lopen van ongeveer 200 tot 400 ppi. Een scaneffect heeft geen archiefresolutie nodig; het moet eruitzien als een alledaagse kantoorscan.</p>
+
+<h2 id="moire">Wat is moiré in een gescand document?</h2>
+<p>Moiré in een gescand document is een golvend interferentiepatroon dat verschijnt wanneer een scanner een gedrukte halftoonafbeelding bemonstert, zoals een tijdschriftfoto of een krantenbeeld. Het regelmatige puntenraster van de druk en het regelmatige pixelraster van de sensor botsen en produceren rimpels die niet in het origineel zitten.</p>
+<p>FADGI legt uit: "Moiré treedt vaak op bij weergave van gedigitaliseerde halftoonpatronen, veroorzaakt door de niet-gesynchroniseerde interactie van het halftoonpatroon en de sensorgeometrie." De richtlijnen geven een praktisch voorbeeld: "Voorbeeld – gravures moeten op een hogere resolutie worden gedigitaliseerd om moiré te voorkomen." Het <a href="https://en.wikipedia.org/wiki/Moir%C3%A9_pattern" target="_blank" rel="noopener">Wikipedia-artikel over moirépatronen</a> vermeldt hetzelfde effect bij het scannen van gedrukte afbeeldingen.</p>
+<p>Onze tool heeft geen moiré-instelling, en een tekstdocument heeft er ook geen nodig: moiré verschijnt alleen op gedrukte halftoonafbeeldingen. Bevat je bron al een gescande tijdschriftafbeelding, dan blijft eventuele moiré daarin zichtbaar na verwerking. Een lichte vervaging van 0,3–0,4 verzacht het enigszins.</p>
+
+<h2 id="edge-shadows-and-borders">Zorgen randschaduwen voor een gescande look?</h2>
+<p>Randschaduwen kunnen een pagina er gescand uit laten zien, omdat een flatbedklep zelden perfect sluit en de opening een donkere strook langs een of twee randen werpt. Kopieerapparaten en documentinvoeren kunnen ook dunne donkere lijnen achterlaten waar de papierrand het glas raakt. Deze kaderartefacten komen voor in veel echte scans, maar niet in alle.</p>
+<p>Wees duidelijk over wat onze tool hier doet. Hij tekent geen randschaduwen, verlopen of lijnen van de klep. Hij biedt een schakelaar Rand (standaard uit) die een 1-pixel donkere lijn rond de paginarand tekent. Dat dunne kader bootst de papierrand na die een kopieerapparaat of documentinvoer oppikt, en past bij fotokopie-looks.</p>
+<p>Wanneer een pagina wordt gedraaid, vult de tool de blootgekomen hoeken met wit, wat overeenkomt met een scanner met een witte klep.</p>
+
+<h2 id="fax-and-photocopy-look">Wat is het verschil tussen faxlook en fotokopie-look?</h2>
+<p>De faxlook en de fotokopie-look verschillen vooral in resolutie en toon. Een fax is grof, laagresolutie en bijna zwart-wit, met kartelrandige letters. Een fotokopie is scherper maar hard: wit is uitgevreten, tekst is donker en dik, en tonerspikkels of strepen kunnen verschijnen.</p>
+<h3>Waardoor heeft een fax zo'n laagresolutie-look?</h3>
+<p>Een fax oogt ruw omdat de standaard is ontworpen voor telefoonlijnen. Volgens <a href="https://en.wikipedia.org/wiki/Fax" target="_blank" rel="noopener">Wikipedia's faxartikel</a> is de resolutie van de Group 3-faxstandaard ongeveer 200–204 lijnen per inch horizontaal en slechts 98–100 verticaal; de modus "Fine" verdubbelt de verticale resolutie naar 196–200. Een typische Group 3-pagina duurt 6–15 seconden om te versturen.</p>
+<p>Die ongelijke, lage verticale resolutie is waarom faxtekst uitgerekt en trapsgewijs oogt. Om dit na te bootsen, gebruik je de laagste Resolutie (1×), Kleurruimte Grijs, contrast van 1,5 of hoger zodat grijzen samensmelten richting zwart en wit, en iets meer vervaging en ruis dan een kantoorscan.</p>
+<h3>Waardoor heeft een fotokopie zo'n harde look?</h3>
+<p>Een fotokopie is een kopie van een scan die met toner is afgedrukt, dus toont hij onvolkomenheden van twee machines. Het <a href="https://en.wikipedia.org/wiki/Photocopier" target="_blank" rel="noopener">Wikipedia-artikel over kopieerapparaten</a> meldt dat kopieerapparaten te herkennen zijn aan onvolkomenheden in hun uitvoer, en dat mechanische toleranties in toner en papierinvoer banding veroorzaken.</p>
+<p>Kopieerapparaten kunnen ook inhoud veranderen, niet alleen uiterlijk. BBC News <a href="https://www.bbc.com/news/technology-23588202" target="_blank" rel="noopener">meldde in 2013</a> dat sommige kantoorkopieerapparaten cijfers in scans veranderden door verliesgevende patroonherkenning-compressie (JBIG2): "In zijn tests ontdekte de heer Kriesel dat het cijfer '6' vaak veranderde in een '8', en omgekeerd, waarbij ook andere cijfers werden beïnvloed." Onze tool gebruikt dat soort compressie niet; hij verandert alleen het uiterlijk, nooit tekens.</p>
+<p>Om een fotokopie na te bootsen, verhoog je het contrast naar 1,3–1,5, verhoog je de helderheid naar 1,05–1,1 om het papier te bleken, houd je Grijs aan, voeg je ruis toe rond 0,15, en zet je de Rand aan voor een dunne randlijn.</p>
+
+<h2 id="cheat-sheet">Scaneffect-cheatsheet: wat doet elke instelling?</h2>
+<p>De scaneffect-cheatsheet hieronder koppelt elk echt scannerartefact aan zijn fysieke oorzaak, aan de bijbehorende instelling in onze tool en aan het bereik dat nog natuurlijk oogt. Gebruik hem als snel naslagwerk wanneer een resultaat niet klopt: zoek het artefact dat fout aanvoelt en pas alleen die ene instelling aan.</p>
+<div class="table-wrap"><table><caption>Scanartefacten, echte oorzaken en tool-instellingen</caption>
+<thead><tr><th scope="col">Artefact</th><th scope="col">Echte oorzaak</th><th scope="col">Tool-instelling</th><th scope="col">Natuurlijk bereik</th></tr></thead>
+<tbody>
+<tr><th scope="row">Scheefstand</th><td>Vel scheef gelegd of ingevoerd; glasplaat niet parallel aan sensor</td><td>Rotatie (−10° tot 10°)</td><td>0,5°–1,5° (telefoon: 1,5°–2,5°)</td></tr>
+<tr><th scope="row">Ongelijke scheefstand</th><td>Elk vel belandt anders</td><td>Rotatievariatie (0–10°)</td><td>0,3°–1°</td></tr>
+<tr><th scope="row">Ruis en korrel</th><td>Sensorruis, papiertextuur</td><td>Ruis (0–1)</td><td>0,05–0,2</td></tr>
+<tr><th scope="row">Zachtheid</th><td>Lens, bewegende scankop, papier niet vlak</td><td>Vervaging (0–1)</td><td>0,2–0,4</td></tr>
+<tr><th scope="row">Papiertint</th><td>Papierkleur, veroudering, lamp en witbalans</td><td>Vergeling (0–2)</td><td>0,1–0,3 (verouderd: 0,3–0,6)</td></tr>
+<tr><th scope="row">Belichting</th><td>Lampsterkte, automatische belichting</td><td>Helderheid (0–2)</td><td>0,95–1,1</td></tr>
+<tr><th scope="row">Harde tinten</th><td>Contrast van kopieerapparaat, kwantisering</td><td>Contrast (0–2)</td><td>1–1,2 (kopie/fax: 1,3–1,6)</td></tr>
+<tr><th scope="row">Grijstinten</th><td>Grijstinten- of bitonale opname</td><td>Kleurruimte (Grijs/Kleur)</td><td>Grijs voor de meeste documenten</td></tr>
+<tr><th scope="row">Pixeldichtheid</th><td>Scan-dpi-instelling</td><td>Resolutie (1×–3×)</td><td>2× kantoor, 1× fax</td></tr>
+<tr><th scope="row">JPEG-blokken</th><td>Verliesgevende JPEG-opslag</td><td>Automatisch (pagina's opgeslagen als JPEG)</td><td>Niet instelbaar</td></tr>
+<tr><th scope="row">Randlijn</th><td>Papierrand opgepikt door kopieerapparaat of invoer</td><td>Rand (1-px lijn)</td><td>Aan voor kopieën, uit voor scans</td></tr>
+<tr><th scope="row">Randschaduw</th><td>Klepopening op een flatbed</td><td>Niet gesimuleerd</td><td>Niet beschikbaar</td></tr>
+<tr><th scope="row">Moiré</th><td>Halftoondruk ontmoet sensorraster</td><td>Niet gesimuleerd</td><td>Alleen in gedrukte afbeeldingen</td></tr>
+</tbody></table></div>
+
+<h2 id="five-presets">Scaneffect-instellingen voor 5 looks</h2>
+<p>De vijf scaneffect-recepten hieronder zijn onze aanbevolen startpunten voor de meest voorkomende looks: kantoorscan, fotokopie, faxachtig, verouderd papier en telefoonscan. Elk gebruikt alleen echte schuifregelaars uit onze tool. Voer de waarden in, controleer het live voorbeeld en pas dan één instelling tegelijk aan.</p>
+<div class="table-wrap"><table><caption>Aanbevolen startinstellingen voor 5 scanlooks</caption>
+<thead><tr><th scope="col">Instelling</th><th scope="col">Kantoorscan</th><th scope="col">Fotokopie</th><th scope="col">Faxachtig</th><th scope="col">Verouderd papier</th><th scope="col">Telefoonscanlook</th></tr></thead>
+<tbody>
+<tr><th scope="row">Rotatie</th><td>1°</td><td>0,5°</td><td>0,5°</td><td>1°</td><td>1,5°–2,5°</td></tr>
+<tr><th scope="row">Rotatievariatie</th><td>0,5°</td><td>0,5°</td><td>0,5°</td><td>0,5°</td><td>1°</td></tr>
+<tr><th scope="row">Vervaging</th><td>0,3</td><td>0,2</td><td>0,4</td><td>0,3</td><td>0,35</td></tr>
+<tr><th scope="row">Ruis</th><td>0,1</td><td>0,15</td><td>0,2</td><td>0,12</td><td>0,15</td></tr>
+<tr><th scope="row">Helderheid</th><td>1</td><td>1,05–1,1</td><td>1</td><td>0,95</td><td>1</td></tr>
+<tr><th scope="row">Contrast</th><td>1</td><td>1,3–1,5</td><td>1,5 of hoger</td><td>1</td><td>1,1</td></tr>
+<tr><th scope="row">Vergeling</th><td>0</td><td>0</td><td>0</td><td>0,3–0,6</td><td>0–0,1</td></tr>
+<tr><th scope="row">Kleurruimte</th><td>Grijs</td><td>Grijs</td><td>Grijs</td><td>Kleur</td><td>Kleur</td></tr>
+<tr><th scope="row">Rand</th><td>Uit</td><td>Aan</td><td>Uit</td><td>Uit</td><td>Uit</td></tr>
+<tr><th scope="row">Resolutie</th><td>2×</td><td>2×</td><td>1×</td><td>2×</td><td>2,5×</td></tr>
+</tbody></table></div>
+<p>Deze waarden zijn onze suggesties, geen gemeten standaarden. Wanneer je elke look gebruikt:</p>
+<dl class="spec-list">
+<dt>Kantoorscan</dt><dd>De alledaagse flatbed- of invoerscan. Dicht bij de standaardinstellingen van de tool; geschikt voor contracten, brieven, formulieren en de meeste documenten die mensen "als scan" verwachten te ontvangen.</dd>
+<dt>Fotokopie</dt><dd>Helder papier, donkere tekst, een dunne randlijn. Geschikt voor documenten die meerdere keren gekopieerd moeten lijken, zoals handouts of oude interne memo's.</dd>
+<dt>Faxachtig</dt><dd>Grove resolutie van 1× en hoog contrast. Geschikt voor props, retro-ontwerpen en formulieren die traditioneel per fax binnenkwamen. Houd de broodtekst op 10 pt of groter, anders wordt hij moeilijk leesbaar.</dd>
+<dt>Verouderd papier</dt><dd>Kleurmodus met een warme sepiatint en iets lagere helderheid. Geschikt voor archiefachtige handouts, gameprops, geschiedenisprojecten en vintage-ontwerpen.</dd>
+<dt>Telefoonscanlook</dt><dd>Een grotere, minder gelijkmatige kanteling en kleuropname, alsof een scan-app op een telefoon de pagina met de hand heeft gefotografeerd. Geschikt voor bonnetjes en documenten van één pagina.</dd>
+</dl>
+<div class="callout callout-info"><strong>Waarom de telefoonlook meer kanteling gebruikt</strong>Een telefoon in de hand staat zelden perfect parallel aan het papier, dus echte telefoonscans tonen meer rotatie en meer variatie tussen pagina's dan een flatbed. Onze tool draait de pagina maar voegt geen perspectiefvervorming toe, dus houd de kanteling onder 3°.</div>
+
+<h2 id="apply-a-preset">Zo pas je een scaneffect-voorinstelling stap voor stap toe</h2>
+<p>Om een scaneffect-voorinstelling toe te passen, open je onze gratis webtool, laad je je PDF of afbeelding, voer je de receptwaarden in het instellingenpaneel in, vergelijk je het live voorbeeld met het origineel en download je de gescande PDF. Het hele proces verloopt in je browser en duurt meestal minder dan een minuut voor een kort document.</p>
+<ol class="step-list">
+<li><strong>Bereid een PDF voor.</strong> Exporteer Word-, Google Docs- of spreadsheetbestanden eerst naar PDF (bijvoorbeeld Bestand → Downloaden → PDF-document in Google Docs). De tool accepteert DOCX direct, maar behoudt alleen de tekst, dus exporteren naar PDF behoudt je lay-out.</li>
+<li><strong>Open de tool.</strong> Ga naar <a href="/nl/scan">pdflookscanned.com/scan</a> en sleep de PDF, JPG of PNG in het uploadgebied. Er wordt niets naar een server geüpload; de verwerking gebeurt lokaal.</li>
+<li><strong>Kies een look.</strong> Kies een van de vijf recepten hierboven, bijvoorbeeld de kantoorscan: rotatie 1, variatie 0,5, vervaging 0,3, ruis 0,1.</li>
+<li><strong>Stel kleurruimte en resolutie in.</strong> Kies Grijs of Kleur en de schaal Resolutie (2× voor de meeste looks, 1× voor fax, 2,5× voor de telefoonlook).</li>
+<li><strong>Pas de toon aan.</strong> Zet helderheid, contrast en vergeling op de receptwaarden; zet Rand alleen aan voor de fotokopie-look.</li>
+<li><strong>Controleer het voorbeeld.</strong> Zoom in op 100% op een pagina met kleine lettertjes. Is tekst moeilijk leesbaar, verlaag dan eerst vervaging, daarna contrast.</li>
+<li><strong>Download en controleer.</strong> Download de PDF, open hem in je viewer en blader door alle pagina's om te bevestigen dat elke pagina een iets andere kanteling heeft.</li>
+</ol>
+<p>Voor meerdere bestanden tegelijk past de bulkpagina op <a href="/nl/scan/bulk">/scan/bulk</a> dezelfde instellingen toe op elk bestand en downloadt alles als een ZIP-bestand. Afbeeldingen worden elk één PDF van één pagina, zoals uitgelegd in onze gids om een <a href="/nl/blog/afbeelding-naar-gescande-pdf/">afbeelding om te zetten naar een gescande PDF</a>.</p>
+
+<h2 id="fake-scan-effect">Waardoor oogt een scaneffect nep?</h2>
+<p>Een scaneffect oogt nep wanneer het overdreven of te uniform is: een pagina van 5° of meer gedraaid, dezelfde kanteling op elke pagina, zware vervaging die tekst uitsmeert, sterke ruis over een bijna lege pagina, of marges die zuiver digitaal wit blijven. Echte scans zijn op kleine, ongelijke manieren onvolmaakt.</p>
+<dl class="spec-list">
+<dt>Overrotatie</dt><dd>Kantoorscans overschrijden zelden 2°. Houd Rotatie op 0,5–1,5°, tenzij je de telefoonlook wilt, en blijf ook dan onder 3°.</dd>
+<dt>Identieke kanteling</dt><dd>Elke pagina op precies dezelfde hoek oogt als een filter. Houd Rotatievariatie boven 0, idealiter 0,3–1°.</dd>
+<dt>Zware vervaging</dt><dd>Vervaging boven 0,6 maakt kleine lettertjes onleesbaar, wat een werkende kantoorscanner niet zou doen. Blijf op 0,2–0,4.</dd>
+<dt>Ruis op louter witte pagina's</dt><dd>Ruis bedekt de hele pagina, dus op een bijna lege pagina wordt de textuur het belangrijkste wat je ziet. Verlaag Ruis voor spaarzame pagina's naar 0,05–0,08.</dd>
+<dt>Zuiver digitaal wit</dt><dd>Papier is nooit RGB 255 wit. Een helderheid van 0,97–0,99 of een vergelingswaarde van 0,05–0,15 haalt het klinische wit weg.</dd>
+<dt>Vectorscherpe logo's</dt><dd>Combineert een pagina een zachte scan met een messcherpe geplakte handtekeningafbeelding, dan verraadt het contrast dit. Voeg stempels of handtekeningen in de tool toe vóór verwerking, zodat ze hetzelfde effect krijgen.</dd>
+</dl>
+<p>Een handige test is je resultaat naast een echte scan van je eigen kantoorscanner of telefoon te leggen. Vergelijk het grijs van de marges, de rand van een kleine letter op 100% zoom, en de kanteling van drie verschillende pagina's. Verschilt een van deze duidelijk, pas dan alleen die ene instelling aan. Datzelfde principe loopt door onze pijlergids over <a href="/nl/blog/pdf-er-gescand-uit-laten-zien/">een PDF er gescand uit laten zien</a>.</p>
+<div class="callout callout-tip"><strong>Minder is meer</strong>Voelt een gescande look "bijna goed", verminder dan effecten in plaats van nieuwe toe te voegen. De geloofwaardige look die scan-artefacten creëren komt van meerdere zwakke signalen, niet van één sterke.</div>
+
+<h2 id="honest-use">Wanneer is een gescande look gepast?</h2>
+<p>Een gescande look is gepast wanneer je een document nodig hebt dat past bij het formaat dat mensen verwachten, zoals een papierstijl-kopie voor archivering, een consistent pakket pagina's, een ontwerp of prop, of een afgevlakt bestand dat minder makkelijk terloops te bewerken is. De gescande look verandert alleen het uiterlijk, nooit wat een document bewijst.</p>
+<div class="callout callout-warn"><strong>Gebruik de scaneffect eerlijk</strong>Een scaneffect verandert hoe een bestand eruitziet, niet of het echt is. Gebruik het niet om officiële documenten, id-bewijzen, certificaten of handtekeningen die niet van jou zijn te vervalsen of te wijzigen. Sommige rechtbanken en instanties eisen doorzoekbare PDF's in plaats van beeldscans, dus controleer de indieningsregels voordat je een bestand met scanlook instuurt.</div>
+<p>De afweging voor toegankelijkheid is ook echt. Een PDF met scanlook bestaat uit afbeeldingen, dus schermlezers kunnen de tekst niet lezen tenzij er OCR is toegevoegd. Moet een document toegankelijk of doorzoekbaar zijn, bewaar dan het originele digitale PDF-bestand naast de kopie met scanlook.</p>
+<div class="expert-quote"><blockquote>We hebben de instellingen gebouwd rond de artefacten die echte scanners echt produceren, en we hielden de standaardinstelling bewust subtiel: rotatie 1°, vervaging 0,3, ruis 0,1, Grijs. De meeste mensen die een resultaat onovertuigend vinden, hebben één schuifregelaar te ver doorgeduwd. We laten ook alles in de browser draaien, want documenten die een gescande look nodig hebben, zijn meestal de documenten die mensen het liefst niet willen uploaden.</blockquote><cite><strong>Het team van Make PDF look scanned</strong> — bouwers van de webtool en de Chrome-extensie</cite></div>
+
+<h2 id="faq">Scaneffect: veelgestelde vragen</h2>
+<p>Deze vragen over het scaneffect komen het vaakst voor als mensen een PDF of afbeelding er gescand uit willen laten zien. Elk antwoord is kort en op zichzelf staand, en de waarden verwijzen naar de echte instellingen in onze gratis tool, die werkt op desktopbrowsers, mobiele browsers en als Chrome-extensie.</p>
+<div class="faq-item"><p class="faq-q">Wat is de beste scaneffect-instelling voor een normaal document?</p><p class="faq-a">Begin met het kantoorscanrecept: rotatie 1°, rotatievariatie 0,5°, vervaging 0,3, ruis 0,1, Kleurruimte Grijs en resolutie 2×. Dit zijn ook de standaardinstellingen van de tool, en ze passen bij contracten, brieven en formulieren. Pas alleen aan als het voorbeeld te schoon of te zacht oogt.</p></div>
+<div class="faq-item"><p class="faq-q">Wat is het verschil tussen een scaneffect en het effect van een scanner?</p><p class="faq-a">De termen betekenen in de praktijk hetzelfde. Beide beschrijven gesimuleerde scannerartefacten zoals scheefstand, ruis, vervaging en grijstinten. "Het effect van een scanner" wordt iets vaker gebruikt voor de flatbed-kantoorlook, terwijl "scaneffect" ook de fax-, fotokopie- en telefoonscanlook omvat.</p></div>
+<div class="faq-item"><p class="faq-q">Maakt een scaneffect de tekst ondoorzoekbaar?</p><p class="faq-a">Ja. Elke pagina wordt opgeslagen als een JPEG-afbeelding in de nieuwe PDF, dus de tekst kan niet meer worden geselecteerd, gekopieerd of doorzocht. Heb je doorzoekbare tekst nodig, voer dan OCR uit op het resultaat of bewaar het originele PDF-bestand.</p></div>
+<div class="faq-item"><p class="faq-q">Kan ik koffievlekken, vouwen of kreukels toevoegen?</p><p class="faq-a">Nee. Onze tool genereert geen vlekken, vouwen, kreukels, perspectiefvervorming of randschaduwen. Hij simuleert kanteling, ruis, vervaging, papiertint, helderheid, contrast, kleurdiepte, resolutie en een 1-px randlijn, wat de alledaagse gescande look dekt.</p></div>
+<div class="faq-item"><p class="faq-q">Hoe laat ik een PDF eruitzien als een fotokopie?</p><p class="faq-a">Gebruik Kleurruimte Grijs, contrast 1,3–1,5, helderheid 1,05–1,1, ruis rond 0,15 en zet Rand aan. Houd de vervaging laag, rond 0,2, want kopieën zijn hard in plaats van zacht.</p></div>
+<div class="faq-item"><p class="faq-q">Hoe krijg ik een faxlook?</p><p class="faq-a">Zet Resolutie op 1× (72 dpi), houd Grijs aan, verhoog het contrast naar 1,5 of meer, en gebruik vervaging 0,4 en ruis 0,2. Echte Group 3-faxen draaien op ongeveer 204 × 98 lijnen per inch in standaardmodus, wat verklaart waarom ze grof ogen.</p></div>
+<div class="faq-item"><p class="faq-q">Waarom oogt mijn gescande look nep?</p><p class="faq-a">De gebruikelijke oorzaken zijn te veel rotatie, identieke kanteling op elke pagina, zware vervaging of sterke ruis op een bijna lege pagina. Verlaag de rotatie naar ongeveer 1°, houd de variatie boven 0, en houd vervaging en ruis onder 0,4 en 0,2.</p></div>
+<div class="faq-item"><p class="faq-q">Kan de tool een echt zwart-wit (bitonaal) beeld maken?</p><p class="faq-a">Geen echt 1-bit bestand. Kleurruimte Grijs levert grijstinten op; contrast verhogen naar 1,4–1,6 duwt het dicht naar een zwart-witlook. Voor strikt bitonale uitvoer, zie onze gids over het omzetten van een kleuren-PDF naar zwart-wit.</p></div>
+<div class="faq-item"><p class="faq-q">Welke resolutie moet ik kiezen?</p><p class="faq-a">Gebruik 2× (ongeveer 144 dpi) voor de meeste documenten, 2,5× (180 dpi) voor de telefoonscanlook en 3× (216 dpi) wanneer kleine lettertjes scherp moeten blijven. Hogere resolutie geeft grotere bestanden, dus gebruik 1× of 1,5× bij strikte groottelimieten.</p></div>
+<div class="faq-item"><p class="faq-q">Wordt mijn bestand geüpload als ik een scaneffect toepas?</p><p class="faq-a">Nee. De webtool en de Chrome-extensie verwerken bestanden lokaal in je browser met pdf.js en canvas. Bestanden worden niet naar een verwerkingsserver gestuurd, en de website werkt offline na de eerste keer laden.</p></div>
+<div class="faq-item"><p class="faq-q">Kan ik een document er gescand uit laten zien in kleur?</p><p class="faq-a">Ja. Zet Kleurruimte op Kleur om logo's, stempels en markeringen te behouden. Kleur werkt het best voor de verouderd-papier- en telefoonscanlook; Grijs blijft het meest typisch voor een kantoorscan.</p></div>
+
+<div class="cta-block">
+  <div class="cta-text">
+    <p class="cta-title">Probeer nu de 5 voorinstellingen voor het scaneffect</p>
+    <p class="cta-body">Open de gratis tool, voer een van de recepten uit deze handleiding in en bekijk het live voorbeeld. Je bestand wordt in je browser verwerkt en nooit geüpload.</p>
+  </div>
+  <div class="cta-buttons">
+    <a href="/nl/scan" class="cta-btn">Open de gratis tool →</a>
+    <a href="https://chromewebstore.google.com/detail/make-pdf-look-scanned/ijhpnlcipgiokgignkbbbgkobdmdoila" target="_blank" rel="noopener" class="cta-btn">Toevoegen aan Chrome — gratis →</a>
+    <a href="/nl/blog/" class="cta-btn">Meer handleidingen →</a>
+  </div>
+</div>
+<footer class="article-footer"><p>Gepubliceerd door het team van Make PDF look scanned. De instellingen en standaardwaarden in deze handleiding komen overeen met de huidige versie van de webtool en de Chrome-extensie.</p><p><strong>Gerelateerde handleidingen</strong></p><ul class="related"><li><a href="/nl/blog/pdf-er-gescand-uit-laten-zien/">Een PDF er gescand uit laten zien: 6 methoden die een kritische blik doorstaan<span>Zo laat je een PDF er gescand uit zien: 6 geteste methoden — browsertool, Chrome-extensie, afdrukvenster, beel…</span></a></li><li><a href="/nl/blog/afbeelding-naar-gescande-pdf/">Afbeelding naar gescande PDF: maak van een JPG, PNG of telefoonfoto een echt ogende scan<span>Afbeelding naar gescande PDF: snijd een telefoonfoto bij, maak hem wit, voeg een echt scaneffect toe en bewaar…</span></a></li><li><a href="/nl/blog/pdf-zwart-wit-maken/">Een kleuren-PDF zwart-wit maken: 5 gratis manieren die werken<span>PDF zwart-wit maken op Windows, Mac en online: afdrukken naar PDF, Quartz-filter in Voorvertoning of een brows…</span></a></li></ul></footer></article></div>
+<footer class="site-footer">© 2026 Make PDF look scanned · <a href="/nl/">Scaneffect-tool</a> · <a href="/nl/blog/">Handleidingen</a> · <a href="https://chromewebstore.google.com/detail/make-pdf-look-scanned/ijhpnlcipgiokgignkbbbgkobdmdoila" target="_blank" rel="noopener">Chrome-extensie</a></footer>
+<script>document.addEventListener('click',function(e){document.querySelectorAll('details.lang[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open')})})</script>
+</body>
+</html>

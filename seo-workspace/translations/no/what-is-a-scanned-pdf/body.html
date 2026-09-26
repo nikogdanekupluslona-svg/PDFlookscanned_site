@@ -1,0 +1,241 @@
+<p class="lead">En skannet PDF er en PDF der sidene er bilder av papir, tatt med en skanner eller et mobilkamera, i stedet for tekst og vektorformer som er skrevet på en datamaskin. Med mindre OCR (optisk tegngjenkjenning) har lagt til et skjult tekstlag, kan du verken merke, søke i eller kopiere ordene, og en skjermleser finner ingenting å lese opp på siden.</p>
+
+<p>Du har fått en PDF og må vite hva den egentlig er: en fil eksportert fra et tekstbehandlingsprogram, en skanning av papir eller en skanning med gjenkjent tekst. Svaret avgjør om du kan søke i den, om en domstol eller etat godtar den, og om den trenger OCR.</p>
+
+<p>Denne forklaringen gir en presis definisjon, en test på 10 sekunder, en sammenligning av de tre typene PDF og en ordliste. Fakta kommer fra W3Cs retningslinjer for tilgjengelighet, amerikanske føderale domstoler, USCIS, digitaliseringsreglene til NARA og FADGI, GOV.UK og tilgjengelighetsteam ved universiteter, i tillegg til det vi har lært av å utvikle et verktøy for skanneeffekt.</p>
+
+<nav class="toc" aria-label="Innhold"><h2>Innhold</h2><ol>
+<li><a href="#what-is-a-scanned-pdf">Hva er en skannet PDF, helt konkret?</a></li>
+<li><a href="#scanned-pdf-vs-digital-pdf">Hvordan skiller en skannet PDF seg fra en digital PDF?</a></li>
+<li><a href="#scanned-copy-meaning">Hva er forskjellen på en skannet kopi og en fotokopi?</a></li>
+<li><a href="#how-to-tell-if-a-pdf-is-scanned">Hvordan ser du om en PDF er skannet?</a></li>
+<li><a href="#accessibility-and-search">Hvorfor er skannede dokumenter vanskelige å søke i og lese?</a></li>
+<li><a href="#ocr-explained">Hva gjør OCR med en skannet PDF?</a></li>
+<li><a href="#when-you-need-a-scanned-copy">Når ber virksomheter og etater om en skannet kopi?</a></li>
+<li><a href="#scanned-pdf-and-pdf-a">Kan en skannet PDF arkiveres som PDF/A?</a></li>
+<li><a href="#digital-pdf-to-scanned-look">Hvordan får en digital PDF utseendet til en skannet PDF?</a></li>
+<li><a href="#scanned-document-glossary">Ordliste for skannede dokumenter: hvilke begreper betyr noe?</a></li>
+<li><a href="#faq">Skannet PDF: hvilke spørsmål stilles oftest?</a></li>
+<li><a href="#verdict">Hva er det korte svaret om skannede PDF-er?</a></li>
+</ol></nav>
+
+<h2 id="what-is-a-scanned-pdf">Hva er en skannet PDF, helt konkret?</h2>
+<p>En skannet PDF er en PDF-beholder med ett rasterbilde per side, laget ved å fotografere eller skanne et fysisk ark. Bokstavene du ser, er piksler, ikke tegn. Programvare behandler hver side som et foto, så vanlig tekstsøk, kopiering og tekstflyt (reflow) fungerer ikke uten OCR.</p>
+
+<p>Den amerikanske føderale domstolen for Northern District of California viser til veiledningen fra National Archives om overføring og sier det på én linje: «Skannet tekst er et fotografi av en trykt side, laget enten med et digitalkamera eller en skanner» (<a href="https://cand.uscourts.gov/cases-e-filing/cmecf-information/preparing-your-cmecf-filing" target="_blank" rel="noopener">N.D. Cal., Preparing Your CM/ECF Filing</a>). Selve PDF-formatet endrer seg ikke: en skannet PDF er fortsatt en gyldig ISO 32000-fil. Det som endrer seg, er hva som ligger inne i hver side.</p>
+
+<p>Tilgjengelighetsteamet ved James Madison University beskriver resultatet fra leserens ståsted: «PDF-er av skannede dokumenter er ofte bare bilder av dokumenter, omtrent som digitale fotografier, og inneholder som regel ikke lesbar tekst» (<a href="https://www.jmu.edu/accessibility/digital-accessibility/guides/pdf/scanned-documents.shtml" target="_blank" rel="noopener">JMU Digital Accessibility</a>). Dette ene faktumet forklarer nesten alle de praktiske forskjellene som gjennomgås nedenfor.</p>
+
+<p>Her er definisjonen delt opp i deler du kan kontrollere, på samme måte som en arkivansatt eller en tilgjengelighetsrevisor ville vurdert en fil.</p>
+
+<dl class="spec-list">
+<dt>Sideinnhold</dt><dd>Ett punktgrafikkbilde per side (JPEG-, JBIG2-, CCITT- eller lignende komprimering), ikke skrifttegn (glyfer) og vektorbaner.</dd>
+<dt>Tekstlag</dt><dd>Ingen i en PDF med bare bilder; et usynlig OCR-lag i en søkbar skannet PDF.</dd>
+<dt>Kilde</dt><dd>En flatbedskanner eller en skanner med dokumentmater, en multifunksjonsmaskin (kopimaskin) eller et mobilkamera med en skannefunksjon som er innebygd i operativsystemet.</dd>
+<dt>Typisk oppløsning</dt><dd>200 til 400 ppi; 300 ppi er det vanligste kravet for kontortekst.</dd>
+<dt>Fargemodus</dt><dd>Bitonal (1 bit, svart-hvitt), gråtoner (8 bit) eller farge (24 bit).</dd>
+<dt>Oppførsel ved zoom</dt><dd>Kantene blir til synlige pikselblokker ved høy forstørrelse.</dd>
+<dt>Filstørrelse</dt><dd>Som regel større per side enn en tekst-PDF, særlig i gråtoner eller farge.</dd>
+</dl>
+
+<h2 id="scanned-pdf-vs-digital-pdf">Hvordan skiller en skannet PDF seg fra en digital PDF?</h2>
+<p>En skannet PDF lagrer bilder av sider, mens en digital (digitalt opprettet) PDF lagrer ekte tegn, skrifttyper og vektorgrafikk eksportert fra et program. En tredje type, den skannede PDF-en med OCR, beholder sidebildet, men legger til skjult maskinlesbar tekst under det og blir dermed en søkbar PDF.</p>
+
+<p>District of Massachusetts trekker den samme grensen i reglene sine for elektronisk innsending: en skannet PDF kommer fra papir som er kjørt gjennom en optisk skanner, mens en «elektronisk konvertert» PDF lages fra et tekstbehandlingsprogram og er tekstsøkbar (<a href="https://www.mad.uscourts.gov/caseinfo/pdf/ECFadminProc.pdf" target="_blank" rel="noopener">D. Mass. CM/ECF Administrative Procedures</a>). Tabellen stiller de tre typene opp side om side.</p>
+
+<div class="table-wrap"><table><caption>Tre typer PDF: digitalt opprettet, skannet med bare bilder og skannet med OCR</caption>
+<thead><tr><th scope="col">Egenskap</th><th scope="col">Digitalt opprettet PDF</th><th scope="col">Skannet PDF med bare bilder</th><th scope="col">Skannet PDF + OCR (søkbar)</th></tr></thead>
+<tbody>
+<tr><th scope="row">Slik lages den</th><td>Eksport eller utskrift til PDF fra Word, Google Docs, en nettleser eller et hvilket som helst program</td><td>Skanner, kopimaskin eller mobilkamera</td><td>Først skanning, deretter legger et OCR-program til tekst</td></tr>
+<tr><th scope="row">Hva en side inneholder</th><td>Tegn, innebygde skrifttyper, vektorlinjer, bilder</td><td>Ett rasterbilde</td><td>Ett rasterbilde pluss usynlig tekst</td></tr>
+<tr><th scope="row">Merke og kopiere tekst</th><td>Ja, nøyaktig</td><td>Nei</td><td>Ja, men bare så nøyaktig som OCR-en</td></tr>
+<tr><th scope="row">Søk med Ctrl/Cmd+F</th><td>Fungerer</td><td>Finner ingenting</td><td>Fungerer, men kan gå glipp av feilleste ord</td></tr>
+<tr><th scope="row">Skjermlesere</th><td>Lesbar, best med tagger</td><td>Stille</td><td>Lesbar, ofte uten struktur</td></tr>
+<tr><th scope="row">Zoom til 400 %</th><td>Skarpe kanter i alle størrelser</td><td>Pikselert</td><td>Pikselert</td></tr>
+<tr><th scope="row">Typisk størrelse per side</th><td>Noen titalls kB</td><td>Omtrent 75 kB (bitonal) til over 1 MB (gråtoner eller farge)</td><td>Som med bare bilder, pluss et lite tekstlag</td></tr>
+<tr><th scope="row">Ser ut som papir</th><td>Nei</td><td>Ja</td><td>Ja</td></tr>
+</tbody></table></div>
+
+<p>Størrelsene per side i tabellen bygger på tester gjort av domstoler, ikke på gjetninger. Northern District of California skannet et dokument på 317 sider: bitonalt med 300 ppi ble det 23,86 MB, omtrent 75 kB per side, og i gråtoner med 400 ppi nådde det 374,47 MB, omtrent 1,2 MB per side. <a href="https://www.ncmd.uscourts.gov/sites/ncmd/files/ecfprocman.pdf" target="_blank" rel="noopener">Middle District of North Carolina</a> påpeker at 2 MB rommer omtrent førtifem sider med PDF-tekst, altså under 50 kB per side.</p>
+
+<h2 id="scanned-copy-meaning">Hva er forskjellen på en skannet kopi og en fotokopi?</h2>
+<p>En skannet kopi er en digital bildefil av en papiroriginal, som regel levert som skannet PDF eller JPEG. En fotokopi er et nytt papirark skrevet ut av en kopimaskin. En bekreftet kopi er en hvilken som helst kopi som en autorisert person har kontrollert mot originalen og signert.</p>
+
+<p>Mange bruker «skannet kopi» litt løst, og de tre begrepene blandes sammen i skjemaer, e-poster fra HR og sjekklister for visum. Forskjellene betyr noe, for en forespørsel om den ene typen oppfylles ikke av de andre.</p>
+
+<div class="table-wrap"><table><caption>Skannet kopi, fotokopi og bekreftet kopi sammenlignet</caption>
+<thead><tr><th scope="col">Begrep</th><th scope="col">Medium</th><th scope="col">Hvem lager den</th><th scope="col">Hva den beviser</th></tr></thead>
+<tbody>
+<tr><th scope="row">Skannet kopi</th><td>Digital fil (PDF, JPEG, TIFF)</td><td>Alle med en skanner eller mobil</td><td>At det finnes et bilde av dokumentet; ingenting om ekthet</td></tr>
+<tr><th scope="row">Fotokopi</th><td>Papir</td><td>Alle med en kopimaskin</td><td>Det samme: den er en gjengivelse, ikke originalen</td></tr>
+<tr><th scope="row">Bekreftet (rett) kopi</th><td>Papir, noen ganger skannet i etterkant</td><td>En fagperson som har sett originalen</td><td>At kopien stemmer med originalen, på denne personens ord</td></tr>
+<tr><th scope="row">Original</th><td>Papir eller opprinnelig digital fil</td><td>Utstederen</td><td>Selve dokumentet</td></tr>
+</tbody></table></div>
+
+<p>Den britiske regjeringen forklarer bekreftelse enkelt: «Du kan bekrefte et dokument som en rett kopi ved å få det signert og datert av en fagperson, for eksempel en advokat» (<a href="https://www.gov.uk/certifying-a-document" target="_blank" rel="noopener">GOV.UK, Certifying a document</a>). En skannet kopi av den bekreftede siden er fortsatt bare en skannet kopi; bekreftelsen hører til papiret, med signaturen og datoen.</p>
+
+<p>Så når en utleier, arbeidsgiver eller skole sier «send en skannet kopi», mener de nesten alltid «et tydelig digitalt bilde av papiret, som PDF». Når de sier «bekreftet kopi», holder ikke en skanning alene, uansett hvor ekte den ser ut.</p>
+
+<h2 id="how-to-tell-if-a-pdf-is-scanned">Hvordan ser du om en PDF er skannet?</h2>
+<p>For å se om en PDF er skannet, prøv å merke et ord på siden og søk etter et ord du kan se. Hvis ingenting markeres, er PDF-en bare bilder. Zooming, dokumentegenskaper, listen over skrifttyper og filstørrelsen bekrefter deretter om filen er skannet, digital eller skannet med OCR.</p>
+
+<p>De to første kontrollene tar under 10 sekunder og fungerer i enhver PDF-leser, også den som er innebygd i Google Chrome, Microsoft Edge og macOS Forhåndsvisning. Resten tar et minutt og avgjør de uklare tilfellene.</p>
+
+<ol class="step-list">
+<li><strong>Prøv å merke tekst.</strong> Dra markøren over en linje. I en digitalt opprettet PDF eller en PDF med OCR markeres enkeltord. I en PDF med bare bilder markeres ingenting, eller noen lesere tegner en firkant rundt hele sidebildet.</li>
+<li><strong>Søk med Ctrl+F eller Cmd+F.</strong> Skriv inn et ord du tydelig ser på side én. Null treff på et ord som åpenbart står der, betyr at det ikke finnes noe tekstlag. Et treff betyr ekte tekst eller et OCR-lag.</li>
+<li><strong>Zoom til 400 %.</strong> Se på kanten av en bokstav. Vektortekst er knivskarp uansett zoomnivå. En skannet side viser pikseltrinn, myke grå kanter, prikker og noen ganger JPEG-blokkmønstre rundt bokstavene.</li>
+<li><strong>Åpne dokumentegenskapene.</strong> I Chromes PDF-leser bruker du menyen med de tre prikkene og velger Dokumentegenskaper; i macOS Forhåndsvisning bruker du Verktøy og deretter Vis inspektør. Feltet for produsent eller program nevner ofte en skanner, en kopimaskinmodell, en skannefunksjon på mobilen eller en OCR-motor. Et tekstbehandlingsprogram eller «Skriv ut til PDF» tyder på en digitalt opprettet fil.</li>
+<li><strong>Sjekk listen over skrifttyper.</strong> PDF-program for datamaskin viser som regel en Skrifter-fane i dokumentegenskapene. En digitalt opprettet PDF lister opp skrifttypene den bruker. En skanning med bare bilder lister ingen. En PDF med OCR lister ofte bare én skrift som kun brukes til det usynlige laget.</li>
+<li><strong>Sammenlign størrelse per side.</strong> Del filstørrelsen på antall sider. En tekst-PDF holder seg som regel under 50 kB per side. En skanning i gråtoner eller farge ligger ofte på flere hundre kB til over 1 MB per side. Bitonale skanninger er kompakte, så størrelse er det svakeste tegnet.</li>
+</ol>
+
+<p>Læreboken i tilgjengelighet ved Cleveland State University anbefaler den samme raske søketesten: «Hvis ordet blir uthevet på siden, har den søkbar tekst i motsetning til å være et skannet bilde av tekst» (<a href="https://pressbooks.ulib.csuohio.edu/accessibility/chapter/chapter-4-2-the-difference-between-an-accessible-pdf-and-a-scanned-image-of-text/" target="_blank" rel="noopener">Heather Caprette, Cleveland State University</a>).</p>
+
+<div class="callout callout-tip"><strong>Når resultatene spriker</strong>Tekst kan merkes, men zoom viser piksler: en skannet PDF med OCR. Tekst kan merkes og zoom holder seg skarp: digitalt opprettet. Ingenting merkes og zoom viser piksler: bare bilder. Ingenting merkes, men kantene holder seg skarpe: tekst konvertert til vektoromriss, et sjeldent fjerde tilfelle som oppfører seg som en skanning når det gjelder søk.</div>
+
+<p>Metadata er et tegn, ikke et bevis. Felt for produsent og program kan endres av mange verktøy, også vårt, så stol på hva sideinnholdet gjør ved merking og zoom, mer enn hva egenskapspanelet sier.</p>
+
+<h2 id="accessibility-and-search">Hvorfor er skannede dokumenter vanskelige å søke i og lese?</h2>
+<p>Skannede dokumenter er vanskelige å søke i og lese fordi en PDF med bare bilder ikke inneholder tegn programvare kan indeksere. Søkemotorer, søk på datamaskinen, kopiering, oversettelsesverktøy og skjermlesere trenger alle tekst. Uten et OCR-lag er den skannede PDF-en et bilde som bare seende lesere kan bruke.</p>
+
+<p>W3Cs Web Accessibility Initiative er rett på sak i teknikk PDF7 i WCAG-retningslinjene: «Et dokument som består av skannede bilder av tekst, er i utgangspunktet utilgjengelig fordi innholdet i dokumentet er bilder, ikke søkbar tekst» (<a href="https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF7" target="_blank" rel="noopener">W3C WAI, WCAG-teknikk PDF7</a>).</p>
+
+<p>Den samme W3C-siden lister opp hva som går tapt: «Hjelpemiddelteknologi kan ikke lese eller hente ut ordene; brukere kan ikke merke, redigere, endre størrelse på eller la teksten flyte om (reflow), og de kan heller ikke endre tekst- og bakgrunnsfarger; og forfattere kan ikke tilpasse PDF-en for tilgjengelighet.» Løsningen er OCR, slik at det finnes ekte tekst bak bildet.</p>
+
+<p>Tilgjengelighetskontoret ved Georgetown University legger til den praktiske konsekvensen for alle som er avhengige av hjelpemiddelteknologi: «Skannede PDF-er er en samling bilder, og derfor er de ikke lesbare for de fleste vanlige skjermlesere» (<a href="https://accessibility.georgetown.edu/digital-accessibility/pdf-accessibility/" target="_blank" rel="noopener">Accessibility at Georgetown</a>).</p>
+
+<p>Offentlige utgivere har gått enda lenger. Den britiske Government Digital Service argumenterer for at informasjon som publiseres som PDF, sammenlignet med HTML, er vanskeligere å finne, bruke og vedlikeholde (<a href="https://gds.blog.gov.uk/2018/07/16/why-gov-uk-content-should-be-published-in-html-and-not-pdf/" target="_blank" rel="noopener">GDS-bloggen, GOV.UK</a>). En skannet PDF med bare bilder er den ekstreme utgaven av dette problemet: ikke engang ordene er maskinlesbare.</p>
+
+<div class="table-wrap"><table><caption>Hva som fungerer i hver type PDF</caption>
+<thead><tr><th scope="col">Oppgave</th><th scope="col">Digitalt opprettet</th><th scope="col">Skanning med bare bilder</th><th scope="col">Skanning + OCR</th></tr></thead>
+<tbody>
+<tr><th scope="row">Opplesing med skjermleser</th><td>Full tekst</td><td>Ingen</td><td>Tekst, ofte i feil rekkefølge</td></tr>
+<tr><th scope="row">Tekstflyt på mobil</th><td>Mulig hvis tagget</td><td>Nei</td><td>Sjelden</td></tr>
+<tr><th scope="row">Kopiere et sitat</th><td>Nøyaktig</td><td>Må skrives inn på nytt</td><td>Kan inneholde OCR-feil</td></tr>
+<tr><th scope="row">Funnet ved søk på datamaskinen</th><td>Ja</td><td>Bare filnavnet</td><td>Ja</td></tr>
+<tr><th scope="row">Maskinoversettelse</th><td>Ja</td><td>Trenger OCR først</td><td>Ja</td></tr>
+</tbody></table></div>
+
+<h2 id="ocr-explained">Hva gjør OCR med en skannet PDF?</h2>
+<p>OCR, optisk tegngjenkjenning, leser bokstavformene i en skannet PDF og skriver tilsvarende maskinlesbar tekst inn i et usynlig lag bak hvert sidebilde. Siden ser nøyaktig lik ut, men blir en søkbar PDF: ord kan finnes, merkes, kopieres og leses opp.</p>
+
+<p>Federal Agencies Digital Guidelines Initiative definerer det presist: «Optisk tegngjenkjenning (OCR) er prosessen med å konvertere et rasterbilde av tekst til søkbar elektronisk tekst» (<a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">FADGIs tekniske retningslinjer, 3. utgave, 2023</a>). OCR fungerer på maskinskrevet og trykt tekst, og mindre pålitelig på håndskrift.</p>
+
+<h3>Hva OCR fikser i et skannet dokument</h3>
+<ul>
+<li>Søk med Ctrl/Cmd+F og full tekstindeksering begynner å fungere.</li>
+<li>Tekst kan merkes, kopieres og limes inn i andre dokumenter.</li>
+<li>Skjermlesere får ord å lese opp, som oppfyller det grunnleggende kravet i W3Cs PDF7.</li>
+<li>Domstoler som krever tekstsøkbare innsendinger, kan godta filen.</li>
+</ul>
+
+<h3>Hva OCR ikke fikser</h3>
+<ul>
+<li><strong>Bildekvalitet.</strong> Siden er fortsatt et bilde, så zooming gir fortsatt piksler. JMU påpeker at for de som zoomer inn, «blir resultatet pikselert og forvrengt fordi den elektroniske teksten ligger under bildet av teksten».</li>
+<li><strong>Nøyaktighet.</strong> Uskarphet, skråstilling, lav oppløsning og prikkstøy fører til feillesing, for eksempel «rn» i stedet for «m» eller «1» i stedet for «l». Den skjulte teksten kan være feil selv om bildet ser riktig ut.</li>
+<li><strong>Struktur.</strong> Overskrifter, leserekkefølge, tabellceller og alternativ tekst for bilder trenger fortsatt manuell tagging for full tilgjengelighet.</li>
+<li><strong>Filstørrelse.</strong> Sidebildene blir liggende, så en skannet PDF med OCR er nesten like stor som versjonen med bare bilder.</li>
+</ul>
+
+<div class="callout callout-info"><strong>OCR jobber med bildet, ikke papiret</strong>Gjenkjenningskvaliteten avhenger av skanningen. En ren side på 300 ppi med rette linjer gjenkjennes mye bedre enn et skjevt, støyete mobilfoto. Hvis en skanning skal OCR-behandles, bør du skanne den rett og skarpt først.</div>
+
+<h2 id="when-you-need-a-scanned-copy">Når ber virksomheter og etater om en skannet kopi?</h2>
+<p>Virksomheter og etater ber om en skannet kopi når originalen finnes på papir og de trenger en digital versjon: dokumentasjon i innvandringssaker, bevis i rettssaker, personalmapper ved ansettelse, signerte kontrakter og kvitteringer. Hver av dem setter sine egne regler for format, oppløsning og filstørrelse, og noen domstoler krever søkbare PDF-er i stedet for skanninger med bare bilder.</p>
+
+<h3>Dokumentasjon i innvandringssaker (USCIS)</h3>
+<p>U.S. Citizenship and Immigration Services godtar skannet eller fotografert dokumentasjon ved elektronisk innsending. Instruksjonen er kort: «Bruk en skanner eller ta bilder av hvert dokument», og «Sørg for at hvert bilde du legger ved, er tydelig, og at all tekst er lesbar» (<a href="https://www.uscis.gov/file-online/tips-for-filing-forms-online" target="_blank" rel="noopener">USCIS, Tips for Filing Forms Online</a>). Hver fil kan være opptil 12 MB, som PDF, JPG eller JPEG, med TIF eller TIFF godtatt for enkelte skjemaer.</p>
+
+<h3>Innsending til føderale domstoler (CM/ECF)</h3>
+<p>Føderale systemer for elektronisk innsending godtar bare PDF, og mange domstoler foretrekker digitalt opprettede filer. Southern District of Florida krever at «innlegg og hoveddokumenter som sendes inn elektronisk i CM/ECF, må være i tekstsøkbart PDF-format» (<a href="https://www.flsd.uscourts.gov/all-faqs/CMECF" target="_blank" rel="noopener">S.D. Fla. CM/ECF FAQ</a>). Skannede PDF-er er hovedsakelig til bevis og signert papir som ikke har noe digitalt original.</p>
+
+<p>Skanneinnstillinger og størrelsesgrenser varierer fra domstol til domstol. Western District of Washington krever skanning på 300 dpi, svart-hvitt med mindre farge er nødvendig, og setter et tak på 100 MB per dokument (<a href="https://www.wawd.uscourts.gov/attorneys/cm-ecf-faqs/Technical" target="_blank" rel="noopener">W.D. Wash. technical FAQ</a>). <a href="https://www.mnd.uscourts.gov/sites/mnd/files/Criminal-ECF-Procedures-Guide.pdf" target="_blank" rel="noopener">District of Minnesota</a> begrenser hvert bevis til 35 MB i sine prosedyrer for elektronisk straffesaksbehandling.</p>
+
+<h3>HR, utleiere, skoler og banker</h3>
+<p>Arbeidsgivere og utleiere vil som regel ha en skannet kopi av en ID, et vitnemål, et signert tilbudsbrev eller en side fra en leiekontrakt. De publiserer sjelden tekniske regler; de fleste nevner en grense for e-postvedlegg og ber om at hvert ord er lesbart. Når en portal ikke lister opp noen grenser, er en gråtone-PDF på 300 dpi under 10 MB et fornuftig utgangspunkt, ikke en fastsatt regel.</p>
+
+<div class="table-wrap"><table><caption>Vanlige krav til skannet kopi etter hvem som ber om den</caption>
+<thead><tr><th scope="col">Hvem som krever det</th><th scope="col">Format</th><th scope="col">Regel for størrelse eller oppløsning</th><th scope="col">Krav om søkbar tekst?</th></tr></thead>
+<tbody>
+<tr><th scope="row">USCIS, elektronisk innsending</th><td>PDF, JPG, JPEG (TIF/TIFF for enkelte skjemaer)</td><td>12 MB per fil</td><td>Nei; teksten må være lesbar</td></tr>
+<tr><th scope="row">W.D. Wash., domstol</th><td>PDF</td><td>300 dpi, svart-hvitt; 100 MB per dokument</td><td>Avhenger av dokumenttype</td></tr>
+<tr><th scope="row">S.D. Fla., domstol</th><td>PDF</td><td>Domstolens grenser gjelder</td><td>Ja, for hoveddokumenter</td></tr>
+<tr><th scope="row">D. Minn., straffesaker (ECF)</th><td>PDF</td><td>35 MB per bevis</td><td>Sjekk lokale regler</td></tr>
+<tr><th scope="row">Arbeidsgiver eller utleier</th><td>PDF eller bilde</td><td>Vanligvis en e-postgrense</td><td>Sjelden</td></tr>
+</tbody></table></div>
+
+<div class="callout callout-tip"><strong>Hold størrelsen nede</strong>For tekstdokumenter er gråtoner eller bitonalt ved 300 dpi som regel det minste lesbare alternativet. Fargeskanninger av vanlig tekst kan bli mange ganger større uten å gi mer informasjon. Guiden vår om <a href="/blog/convert-color-pdf-to-black-and-white/">å konvertere en farge-PDF til svart-hvitt</a> går gjennom avveiningene.</div>
+
+<h2 id="scanned-pdf-and-pdf-a">Kan en skannet PDF arkiveres som PDF/A?</h2>
+<p>En skannet PDF kan lagres som PDF/A, arkiveringsversjonen av PDF definert i ISO 19005, fordi PDF/A tillater sidebilder. PDF/A legger til regler for lesing på lang sikt, som innebygde skrifttyper og ingen kryptering, men den gjør ikke en side med bare bilder søkbar. OCR er et eget steg.</p>
+
+<p>PDF/A ble første gang utgitt 1. oktober 2005, og den forbyr funksjoner som gjør filer vanskelige å åpne flere tiår senere, som skriftlenking og kryptering (<a href="https://en.wikipedia.org/wiki/PDF/A" target="_blank" rel="noopener">Wikipedia, PDF/A</a>). Microsoft Office kan eksportere ISO 19005-1-kompatible filer direkte fra alternativene for Lagre som PDF.</p>
+
+<p>Domstoler som krever PDF/A, styrer ofte innsendere bort fra skanning i det hele tatt. Eastern District of Oklahoma anbefaler at PDF/A-dokumenter, for å holde filstørrelsen nede og sikre tekstsøkbare filer, bør lages i et tekstbehandlingsprogram i stedet for å skrives ut og skannes (<a href="https://www.oked.uscourts.gov/pdfa-frequently-asked-questions" target="_blank" rel="noopener">E.D. Okla. PDF/A FAQ</a>).</p>
+
+<dl class="spec-list">
+<dt>Digitalt opprettet PDF/A</dt><dd>Minst og fullt søkbar; best når det finnes et digitalt original.</dd>
+<dt>Skannet PDF/A med OCR</dt><dd>Arkivegnet og søkbar; det rette valget for arkiver som bare finnes på papir.</dd>
+<dt>PDF/A med bare bilder</dt><dd>Gyldig for bevaring, men ikke søkbar eller tilgjengelig.</dd>
+</dl>
+
+<h2 id="digital-pdf-to-scanned-look">Hvordan får en digital PDF utseendet til en skannet PDF?</h2>
+<p>En digital PDF får utseendet til en skannet PDF når hver side rasteriseres til et bilde og gis de ufullkommenhetene en ekte skanner etterlater: lett rotasjon, uskarphet, støy, grå eller gulnet papirtone. Resultatet er en PDF med bare bilder som oppfører seg som en skanning, uten at du trenger å skrive ut noe eller eie en skanner.</p>
+
+<p>Det er nøyaktig det vårt gratis <a href="/scan">verktøy for skanneeffekt</a> gjør. Det gjengir hver PDF-side i nettleseren din, legger på effektene du velger, og lagrer hver side som et JPEG-bilde i en ny PDF. Filene behandles lokalt og lastes ikke opp til en server.</p>
+
+<dl class="spec-list">
+<dt>Rotasjon</dt><dd>−10° til 10°, standard 1°, pluss tilfeldig variasjon per side på opptil 10°.</dd>
+<dt>Uskarphet</dt><dd>0 til 1, standard 0,3, mykner vektorkanter slik skanneroptikk gjør.</dd>
+<dt>Støy</dt><dd>0 til 1, standard 0,1, legger til prikker i sensorstil.</dd>
+<dt>Lysstyrke og kontrast</dt><dd>0 til 2 hver, standard 1.</dd>
+<dt>Gultone</dt><dd>0 til 2, standard 0, farger siden som gulnet papir.</dd>
+<dt>Fargerom</dt><dd>Gråtoner (standard) eller Farge.</dd>
+<dt>Oppløsning</dt><dd>1× til 3×; PDF-sider gjengis ved 72 dpi ganger skalaen, så 2× er omtrent 144 dpi og 3× omtrent 216 dpi.</dd>
+</dl>
+
+<p>Fordi resultatet bare består av bilder, arver det alle egenskapene beskrevet over: ingen tekst som kan merkes, ikke noe søk, større filer, ingen opplesing med skjermleser. Det er nettopp poenget for noen som trenger at et dokument ser ut som en skannet kopi, og en ulempe for alle som trenger det søkbart. Behold den digitale originalfilen.</p>
+
+<p>For hele arbeidsflyten, inkludert avveiningene mellom oppløsning og filstørrelse, kan du lese <a href="/blog/pdf-to-scanned-pdf/">hvordan du konverterer en PDF til en skannet PDF</a>. For alle seks metodene, fra utskrift-og-skanning til innebygde funksjoner i operativsystemet, se <a href="/blog/how-to-make-a-pdf-look-scanned/">slik får du en PDF til å se skannet ut</a>. Starter du i stedet fra et mobilfoto? Guiden om å <a href="/blog/image-to-scanned-pdf/">gjøre et bilde om til en skannet PDF</a> dekker JPG og PNG.</p>
+
+<div class="callout callout-warn"><strong>Bruk skanneutseendet ærlig</strong>En skanneeffekt endrer hvordan en fil ser ut, ikke om den er ekte. Ikke bruk den til å forfalske eller endre offisielle dokumenter, ID-er eller signaturer som ikke er dine egne. Noen domstoler og etater krever tekstsøkbare PDF-er, så en fil med bare bilder kan bli avvist; sjekk reglene før du sender inn.</div>
+
+<div class="expert-quote"><blockquote>Vi bygde verktøyet vårt for å legge på et skanneutseende, og det vanligste spørsmålet vi får, er egentlig «hva har jeg nå laget?». Det ærlige svaret er en PDF med bare bilder. Den ser ut som papir, men ordene er piksler. Hvis en leser trenger å søke i den eller høre den lest opp, bør du beholde det digitale originalen ved siden av, eller kjøre OCR i etterkant. Vi vil helst at folk vet det før de trykker Last ned.</blockquote><cite><strong>Teamet bak Make PDF look scanned</strong> — utviklerne av nettverktøyet og Chrome-utvidelsen</cite></div>
+
+<h2 id="scanned-document-glossary">Ordliste for skannede dokumenter: hvilke begreper betyr noe?</h2>
+<p>Et skannet dokument har sitt eget vokabular: dpi og ppi, bitdybde, bitonal, OCR, rasterisere, PDF/A og JBIG2. Å kjenne disse sju begrepene er nok til å lese ethvert skannekrav fra en domstol, etat eller arbeidsgiver, og til å vurdere en skannet PDF du mottar.</p>
+
+<dl class="spec-list">
+<dt>dpi / ppi</dt><dd>Punkter eller piksler per tomme: hvor mange bildeprøver som dekker én tomme papir. NARA krever minst 300 ppi for moderne tekstdokumenter og 400 ppi for fotografier og dokumenter med fine detaljer. PDF-sidegeometri bruker 72 punkter per tomme, som er grunnen til at 1×-gjengivelse tilsvarer 72 dpi.</dd>
+<dt>Bitdybde</dt><dd>Bits lagret per piksel. Bitonalt er 1 bit, gråtoner er 8 bit (256 nyanser), og en typisk fargeskanning er 24 bit (8 bit i hver av tre kanaler).</dd>
+<dt>Bitonal</dt><dd>FADGIs definisjon: «Digitale bilder produsert med bare to farger, svart og hvitt.» Det minste lesbare formatet for vanlig tekst.</dd>
+<dt>OCR</dt><dd>Optisk tegngjenkjenning: programvare som gjør om bokstavformene i et bilde til maskinlesbar tekst, og dermed lager en søkbar PDF.</dd>
+<dt>Rasterisere</dt><dd>Å gjøre om vektortekst og -former til et rutenett av piksler. Å rasterisere en digital PDF gjør den om til en PDF med bare bilder.</dd>
+<dt>PDF/A</dt><dd>ISO 19005, arkiveringsdelmengden av PDF, utgitt i 2005; den forbyr funksjoner som kryptering og skriftlenking.</dd>
+<dt>JBIG2</dt><dd>En komprimeringsmetode for bitonale skanninger som lagrer gjentatte tegn bare én gang. BBC News rapporterte i 2013 at enkelte kontorkopimaskiner med en lossy JBIG2-modus endret siffer i skanninger, ofte ved å gjøre en 6 om til en 8; i én test ble et romoppmål på 21,11 m til 14,13 m.</dd>
+<dt>PDF med bare bilder</dt><dd>En skannet PDF helt uten tekstlag.</dd>
+<dt>Søkbar PDF</dt><dd>En PDF med ekte eller OCR-generert tekst som kan søkes i og merkes.</dd>
+</dl>
+
+<p>JBIG2-saken er det sterkeste argumentet for å beholde originaler. En skannet kopi er et bilde, og bilder kan endres av komprimering uten at noen legger merke til det (<a href="https://www.bbc.com/news/technology-23588202" target="_blank" rel="noopener">BBC News, 2013</a>). NARA behandler også støy som en uønsket artefakt «som ikke er en del av kildematerialet» (<a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">36 CFR 1236 Subpart E</a>).</p>
+
+<h2 id="faq">Skannet PDF: hvilke spørsmål stilles oftest?</h2>
+<p>Disse spørsmålene om skannet PDF dukker oftest opp hos folk som har mottatt en fil, må sende en skannet kopi, eller må oppfylle en regel fra en domstol eller etat. Hvert svar står for seg selv, så du kan gå rett til det som passer din situasjon og handle ut fra det.</p>
+
+<div class="faq-item"><p class="faq-q">Hva er en skannet PDF, enkelt forklart?</p><p class="faq-a">En skannet PDF er en PDF laget av bilder av papirsider. Teksten du ser, er en del av et bilde, så du kan ikke merke eller søke i den med mindre OCR er brukt.</p></div>
+<div class="faq-item"><p class="faq-q">Er en skannet PDF det samme som en skannet kopi?</p><p class="faq-a">Nesten. En skannet kopi er et hvilket som helst digitalt bilde av et papirdokument, og en skannet PDF er det vanligste filformatet for å levere en slik kopi. En skannet kopi kan også være en JPEG- eller TIFF-fil.</p></div>
+<div class="faq-item"><p class="faq-q">Hvordan kan jeg se om en PDF er skannet på 10 sekunder?</p><p class="faq-a">Prøv å merke et ord, trykk deretter Ctrl+F eller Cmd+F og søk etter et ord du kan se. Hvis ingenting markeres og søket ikke finner noe, er PDF-en en skanning med bare bilder. Zoom til 400 % for å bekrefte: skannet tekst ser pikselert ut.</p></div>
+<div class="faq-item"><p class="faq-q">Kan en skannet PDF gjøres søkbar?</p><p class="faq-a">Ja. OCR legger til et usynlig tekstlag bak sidebildene og gjør en skannet PDF om til en søkbar PDF. Siden ser fortsatt ut som en skanning, og feillest ord kan forekomme i den skjulte teksten.</p></div>
+<div class="faq-item"><p class="faq-q">Hvorfor kan jeg ikke kopiere tekst fra PDF-en min?</p><p class="faq-a">PDF-en er mest sannsynlig en skanning uten OCR, så det finnes ingen tegn å kopiere. Southern District of Florida sin FAQ for domstoler påpeker det samme: hvis en PDF ikke er tekstsøkbar, kan teksten ikke kopieres. Kjør OCR, eller be om den digitale originalen.</p></div>
+<div class="faq-item"><p class="faq-q">Er skannede PDF-er tilgjengelige for skjermlesere?</p><p class="faq-a">Ikke uten OCR. W3C-retningslinjene kaller skanninger med bare bilder grunnleggende utilgjengelige. Etter OCR kan skjermlesere lese opp teksten, men full tilgjengelighet krever også tagging av overskrifter, leserekkefølge og tabeller.</p></div>
+<div class="faq-item"><p class="faq-q">Hvorfor er en skannet PDF så stor?</p><p class="faq-a">Hver side er et fullt bilde. En side i gråtoner ved 400 ppi kan overstige 1 MB, mens en tekstside fra et tekstbehandlingsprogram ofte er under 50 kB. Skanning ved 300 ppi i gråtoner eller svart-hvitt holder størrelsen nede.</p></div>
+<div class="faq-item"><p class="faq-q">Hvilken oppløsning bør et skannet dokument ha?</p><p class="faq-a">For maskinskrevet eller trykt tekst er 300 dpi standardkravet i amerikanske føderale domstoler og NARAs minstekrav for tekstdokumenter. Bilder og fine detaljer krever 400 ppi.</p></div>
+<div class="faq-item"><p class="faq-q">Er en skannet kopi en juridisk gyldig eller bekreftet kopi?</p><p class="faq-a">Nei, en skannet kopi beviser i seg selv ingenting om ekthet. En bekreftet kopi er signert og datert av en fagperson som har sett originalen, slik GOV.UK forklarer. Spør den som ber om kopien, hvilken type de trenger.</p></div>
+<div class="faq-item"><p class="faq-q">Kan jeg få en digital PDF til å se ut som en skannet PDF?</p><p class="faq-a">Ja. Det gratis verktøyet <a href="/scan">Make PDF look scanned</a> rasteriserer hver side og legger til rotasjon, uskarphet, støy og papirtone i nettleseren din. Resultatet er en PDF med bare bilder, så behold originalen hvis du trenger søk.</p></div>
+<div class="faq-item"><p class="faq-q">Må en skannet PDF være PDF/A?</p><p class="faq-a">Bare hvis den som ber om den, sier det. Noen domstoler og arkiver krever PDF/A for langtidslagring. En skannet PDF kan lagres som PDF/A, helst med OCR slik at den også blir søkbar.</p></div>
+<div class="faq-item"><p class="faq-q">Kan jeg skanne flere PDF-er samtidig?</p><p class="faq-a">Med verktøyet vårt, ja: <a href="/scan/bulk">masseskanning</a> behandler flere filer og laster dem ned som én ZIP-fil, med én skannet PDF per fil du legger inn.</p></div>
+
+<h2 id="verdict">Hva er det korte svaret om skannede PDF-er?</h2>
+<p>En skannet PDF er et bilde av papir pakket inn i en PDF. Test den ved å merke og søke i teksten, legg til OCR når du trenger søk eller tilgjengelighet, send en digitalt opprettet PDF når en domstol foretrekker det, og bruk et skanneutseende bare når det er utseendet, ikke ektheten, leseren trenger.</p>
+
+<p>Hvis det er utseendet du trenger, kan du åpne det <a href="/scan">gratis skanneverktøyet</a>, beholde standardinnstillingen Gråtoner og oppløsning 2×, og sjekke forhåndsvisningen før du laster ned.</p>

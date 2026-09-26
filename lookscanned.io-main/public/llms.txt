@@ -16,3 +16,20 @@
 - [Image to Scanned PDF: Turn a JPG, PNG or Phone Photo Into a Real-Looking Scan](https://pdflookscanned.com/blog/image-to-scanned-pdf/): Turn an image into a scanned PDF: crop and whiten a phone photo, add a realistic scan effect and save JPG or PNG pages as one PDF. Free, in your browser.
 - [How to Convert a Color PDF to Black and White: 5 Free Ways That Work](https://pdflookscanned.com/blog/convert-color-pdf-to-black-and-white/): How to convert a color PDF to black and white on Windows, Mac and online: print to PDF, Preview Quartz filter, browser tool. Grayscale vs pure B&W explained.
 - [Scan Effect Explained: What Makes a Document Look Scanned (and the Settings for 5 Looks)](https://pdflookscanned.com/blog/scan-effect/): The scan effect explained: noise, skew, blur, paper tone, edge shadows, grayscale — what makes a file look scanned, plus ready settings for 5 looks.
+
+## Other languages
+
+The tool and the guides are also available in these languages:
+
+- Deutsch (de): [tool](https://pdflookscanned.com/de/) · [guides](https://pdflookscanned.com/de/blog/)
+- Français (fr): [tool](https://pdflookscanned.com/fr/) · [guides](https://pdflookscanned.com/fr/blog/)
+- Español (es): [tool](https://pdflookscanned.com/es/) · [guides](https://pdflookscanned.com/es/blog/)
+- Italiano (it): [tool](https://pdflookscanned.com/it/) · [guides](https://pdflookscanned.com/it/blog/)
+- Português (Brasil) (pt-BR): [tool](https://pdflookscanned.com/pt-br/) · [guides](https://pdflookscanned.com/pt-br/blog/)
+- Nederlands (nl): [tool](https://pdflookscanned.com/nl/) · [guides](https://pdflookscanned.com/nl/blog/)
+- Svenska (sv): [tool](https://pdflookscanned.com/sv/) · [guides](https://pdflookscanned.com/sv/blog/)
+- Dansk (da): [tool](https://pdflookscanned.com/da/) · [guides](https://pdflookscanned.com/da/blog/)
+- Norsk (no): [tool](https://pdflookscanned.com/no/) · [guides](https://pdflookscanned.com/no/blog/)
+- Suomi (fi): [tool](https://pdflookscanned.com/fi/) · [guides](https://pdflookscanned.com/fi/blog/)
+- 日本語 (ja): [tool](https://pdflookscanned.com/ja/) · [guides](https://pdflookscanned.com/ja/blog/)
+- 한국어 (ko): [tool](https://pdflookscanned.com/ko/) · [guides](https://pdflookscanned.com/ko/blog/)

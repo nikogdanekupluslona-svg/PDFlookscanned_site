@@ -1,0 +1,110 @@
+{
+  "de": {
+    "how-to-make-a-pdf-look-scanned": "pdf-wie-gescannt-aussehen-lassen",
+    "make-a-document-look-scanned": "dokument-wie-gescannt-aussehen-lassen",
+    "pdf-to-scanned-pdf": "pdf-in-gescanntes-pdf-umwandeln",
+    "what-is-a-scanned-pdf": "was-ist-ein-gescanntes-pdf",
+    "image-to-scanned-pdf": "bild-in-gescanntes-pdf-umwandeln",
+    "convert-color-pdf-to-black-and-white": "pdf-in-schwarz-weiss-umwandeln",
+    "scan-effect": "scan-effekt"
+  },
+  "fr": {
+    "how-to-make-a-pdf-look-scanned": "faire-ressembler-pdf-a-un-scan",
+    "make-a-document-look-scanned": "donner-aspect-scanne-document",
+    "pdf-to-scanned-pdf": "convertir-pdf-en-pdf-scanne",
+    "what-is-a-scanned-pdf": "pdf-scanne-definition",
+    "image-to-scanned-pdf": "image-en-pdf-scanne",
+    "convert-color-pdf-to-black-and-white": "convertir-pdf-en-noir-et-blanc",
+    "scan-effect": "effet-scanner"
+  },
+  "es": {
+    "how-to-make-a-pdf-look-scanned": "hacer-que-un-pdf-parezca-escaneado",
+    "make-a-document-look-scanned": "hacer-que-un-documento-parezca-escaneado",
+    "pdf-to-scanned-pdf": "convertir-pdf-a-pdf-escaneado",
+    "what-is-a-scanned-pdf": "que-es-un-pdf-escaneado",
+    "image-to-scanned-pdf": "imagen-a-pdf-escaneado",
+    "convert-color-pdf-to-black-and-white": "convertir-pdf-a-blanco-y-negro",
+    "scan-effect": "efecto-escaneado"
+  },
+  "it": {
+    "how-to-make-a-pdf-look-scanned": "come-far-sembrare-un-pdf-scansionato",
+    "make-a-document-look-scanned": "far-sembrare-un-documento-scansionato",
+    "pdf-to-scanned-pdf": "convertire-pdf-in-pdf-scansionato",
+    "what-is-a-scanned-pdf": "cos-e-un-pdf-scansionato",
+    "image-to-scanned-pdf": "immagine-in-pdf-scansionato",
+    "convert-color-pdf-to-black-and-white": "convertire-pdf-in-bianco-e-nero",
+    "scan-effect": "effetto-scansione"
+  },
+  "pt-BR": {
+    "how-to-make-a-pdf-look-scanned": "como-fazer-pdf-parecer-escaneado",
+    "make-a-document-look-scanned": "documento-com-cara-de-escaneado",
+    "pdf-to-scanned-pdf": "converter-pdf-para-pdf-digitalizado",
+    "what-is-a-scanned-pdf": "o-que-e-pdf-digitalizado",
+    "image-to-scanned-pdf": "transformar-imagem-em-pdf-digitalizado",
+    "convert-color-pdf-to-black-and-white": "converter-pdf-colorido-preto-e-branco",
+    "scan-effect": "efeito-de-scanner"
+  },
+  "nl": {
+    "how-to-make-a-pdf-look-scanned": "pdf-er-gescand-uit-laten-zien",
+    "make-a-document-look-scanned": "document-gescand-laten-lijken",
+    "pdf-to-scanned-pdf": "pdf-naar-gescande-pdf",
+    "what-is-a-scanned-pdf": "wat-is-een-gescande-pdf",
+    "image-to-scanned-pdf": "afbeelding-naar-gescande-pdf",
+    "convert-color-pdf-to-black-and-white": "pdf-zwart-wit-maken",
+    "scan-effect": "scaneffect-instellingen"
+  },
+  "sv": {
+    "how-to-make-a-pdf-look-scanned": "fa-pdf-att-se-skannad-ut",
+    "make-a-document-look-scanned": "fa-dokument-att-se-skannat-ut",
+    "pdf-to-scanned-pdf": "pdf-till-skannad-pdf",
+    "what-is-a-scanned-pdf": "vad-ar-en-skannad-pdf",
+    "image-to-scanned-pdf": "bild-till-skannad-pdf",
+    "convert-color-pdf-to-black-and-white": "konvertera-pdf-till-svartvitt",
+    "scan-effect": "skanningseffekt-installningar"
+  },
+  "da": {
+    "how-to-make-a-pdf-look-scanned": "pdf-der-ser-scannet-ud",
+    "make-a-document-look-scanned": "dokument-der-ser-scannet-ud",
+    "pdf-to-scanned-pdf": "pdf-til-scannet-pdf",
+    "what-is-a-scanned-pdf": "hvad-er-en-scannet-pdf",
+    "image-to-scanned-pdf": "billede-til-scannet-pdf",
+    "convert-color-pdf-to-black-and-white": "konverter-pdf-til-sort-hvid",
+    "scan-effect": "scanningseffekt-indstillinger"
+  },
+  "no": {
+    "how-to-make-a-pdf-look-scanned": "pdf-se-skannet-ut",
+    "make-a-document-look-scanned": "dokument-se-skannet-ut",
+    "pdf-to-scanned-pdf": "pdf-til-skannet-pdf",
+    "what-is-a-scanned-pdf": "hva-er-en-skannet-pdf",
+    "image-to-scanned-pdf": "bilde-til-skannet-pdf",
+    "convert-color-pdf-to-black-and-white": "konverter-pdf-til-svart-hvitt",
+    "scan-effect": "skanneeffekt-pdf"
+  },
+  "fi": {
+    "how-to-make-a-pdf-look-scanned": "skannatun-nakoinen-pdf",
+    "make-a-document-look-scanned": "asiakirja-skannatun-nakoiseksi",
+    "pdf-to-scanned-pdf": "pdf-skannatuksi",
+    "what-is-a-scanned-pdf": "mika-on-skannattu-pdf",
+    "image-to-scanned-pdf": "kuva-skannatuksi-pdfksi",
+    "convert-color-pdf-to-black-and-white": "pdf-mustavalkoiseksi",
+    "scan-effect": "skannausefekti-asetukset"
+  },
+  "ja": {
+    "how-to-make-a-pdf-look-scanned": "how-to-make-a-pdf-look-scanned",
+    "make-a-document-look-scanned": "make-a-document-look-scanned",
+    "pdf-to-scanned-pdf": "pdf-to-scanned-pdf",
+    "what-is-a-scanned-pdf": "what-is-a-scanned-pdf",
+    "image-to-scanned-pdf": "image-to-scanned-pdf",
+    "convert-color-pdf-to-black-and-white": "convert-color-pdf-to-black-and-white",
+    "scan-effect": "scan-effect"
+  },
+  "ko": {
+    "how-to-make-a-pdf-look-scanned": "how-to-make-a-pdf-look-scanned",
+    "make-a-document-look-scanned": "make-a-document-look-scanned",
+    "pdf-to-scanned-pdf": "pdf-to-scanned-pdf",
+    "what-is-a-scanned-pdf": "what-is-a-scanned-pdf",
+    "image-to-scanned-pdf": "image-to-scanned-pdf",
+    "convert-color-pdf-to-black-and-white": "convert-color-pdf-to-black-and-white",
+    "scan-effect": "scan-effect"
+  }
+}

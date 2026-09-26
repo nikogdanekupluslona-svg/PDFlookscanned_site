@@ -1,0 +1,115 @@
+<section class="home-guide" aria-labelledby="hg-what">
+  <h2 id="hg-what">Que signifie donner un effet scanné à un PDF ?</h2>
+  <p>Donner un effet scanné à un PDF, c'est transformer un fichier numérique impeccable en images de pages qui portent les marques d'un vrai scanner de bureau : légère inclinaison, grain, léger flou, teinte de papier grise ou crème et texte impossible à sélectionner. Le résultat reste un PDF normal, mais chaque page est désormais une image, exactement comme un document passé dans un scanner à plat.</p>
+  <p>Cet outil le fait dans votre navigateur en moins d'une minute. Vous déposez un PDF, une photo ou un fichier Word, vous réglez l'effet scanné avec un aperçu en direct, puis vous téléchargez le PDF d'aspect scanné. Que vous cherchiez « donner un effet scanné à un PDF », « PDF effet scanné » ou « faire ressembler un PDF à un scan », la tâche et les étapes sont les mêmes.</p>
+
+  <h2 id="hg-steps">Donner un effet scanné à un PDF en ligne en 3 étapes</h2>
+  <p>Donner un effet scanné à un PDF en ligne se fait en trois étapes et prend en général 20 à 60 secondes pour un fichier de 10 pages : choisir le fichier, régler l'effet scanné en surveillant l'aperçu, puis exporter. Rien à installer, aucun compte à créer, et la page continue de fonctionner hors ligne une fois chargée.</p>
+  <ol class="step-list">
+    <li><strong>Choisissez un fichier.</strong> Ouvrez <a href="/scan">le scanner</a> et déposez un fichier PDF, JPG, PNG, WebP, SVG, DOCX, XLSX, CSV, TXT, MD ou HTML. Les fichiers Word, Excel et texte sont d'abord convertis en pages de texte brut ; pour conserver une mise en page exacte, enregistrez le document en PDF avant de le scanner.</li>
+    <li><strong>Réglez l'effet scanné.</strong> Déplacez les curseurs Bruit, Flou, Rotation, Luminosité, Contraste et Jaunissement (la teinte du papier), passez de Niveaux de gris à Couleur et ajoutez une fine bordure de scanner. L'aperçu se met à jour à chaque mouvement de curseur.</li>
+    <li><strong>Téléchargez le PDF scanné.</strong> Cliquez sur Générer le PDF scanné. Chaque page est rendue en image avec vos réglages et enregistrée dans un nouveau PDF, qui se télécharge aussitôt.</li>
+  </ol>
+  <p>Vous avez une pile de fichiers ? Le mode <a href="/scan/bulk">Scan par lots</a> applique les mêmes réglages à de nombreux documents à la fois et regroupe les résultats dans une seule archive ZIP.</p>
+
+  <h2 id="hg-settings">Quels réglages donnent un effet scanné réaliste à un PDF ?</h2>
+  <p>Un scan réaliste naît de petites valeurs, pas de valeurs fortes. Les réglages par défaut — rotation de 1°, variation aléatoire de 0,5° par page, flou 0,3, bruit 0,1, niveaux de gris et résolution 2× — ressemblent déjà à un scan de bureau. Pousser chaque curseur au maximum donne un résultat qui paraît retouché plutôt que scanné.</p>
+  <div class="table-wrap">
+    <table>
+      <caption>Réglages de l'effet scanné : plages, valeurs par défaut et valeurs d'aspect naturel</caption>
+      <thead><tr><th scope="col">Réglage</th><th scope="col">Plage</th><th scope="col">Par défaut</th><th scope="col">Valeur d'aspect naturel</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Rotation</th><td>−10° à 10°</td><td>1°</td><td>0,5°–2° ; au-delà de 3°, le rendu fait négligé</td></tr>
+        <tr><th scope="row">Variation de rotation</th><td>0°–10°</td><td>0,5°</td><td>0,3°–1° pour que les pages ne soient pas inclinées à l'identique</td></tr>
+        <tr><th scope="row">Flou</th><td>0–1</td><td>0,3</td><td>0,2–0,4 ; le texte doit rester facile à lire</td></tr>
+        <tr><th scope="row">Bruit</th><td>0–1</td><td>0,1</td><td>0,05–0,2 pour le grain du scanner</td></tr>
+        <tr><th scope="row">Luminosité</th><td>0–2</td><td>1</td><td>0,95–1,1</td></tr>
+        <tr><th scope="row">Contraste</th><td>0–2</td><td>1</td><td>1–1,2 pour un rendu net de photocopieur</td></tr>
+        <tr><th scope="row">Jaunissement</th><td>0–2</td><td>0</td><td>0,1–0,3 pour un papier ancien</td></tr>
+        <tr><th scope="row">Mode couleur</th><td>Niveaux de gris ou Couleur</td><td>Niveaux de gris</td><td>Niveaux de gris pour la plupart des scans de bureau</td></tr>
+        <tr><th scope="row">Résolution</th><td>1×–3×</td><td>2×</td><td>2× (environ 144 dpi) équilibre netteté et taille du fichier</td></tr>
+        <tr><th scope="row">Bordure</th><td>Oui ou Non</td><td>Non</td><td>Oui pour une fine ligne de bord de scanner</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Pour des recettes pas à pas — scan de bureau, photocopie, style fax et papier vieilli — consultez le <a href="/blog/scan-effect/">guide des réglages de l'effet scanner</a>.</p>
+
+  <h2 id="hg-private">Donner un effet scanné à un PDF dans le navigateur, est-ce privé ?</h2>
+  <p>Oui. L'effet scanné est calculé sur votre propre appareil : la page lit le PDF avec un moteur PDF intégré au navigateur, dessine chaque page sur un canevas, y applique le bruit, le flou et la rotation, puis construit le nouveau PDF localement. Les fichiers ne sont pas envoyés à un serveur de traitement et ne sont pas stockés dans le cloud.</p>
+  <p>Vous pouvez le vérifier vous-même : ouvrez les outils de développement de votre navigateur, passez à l'onglet Réseau et lancez un scan. Aucune requête ne transporte votre document. Comme l'application est une application web progressive (PWA), elle continue de fonctionner Wi-Fi coupé une fois chargée.</p>
+
+  <h2 id="hg-files">Quels fichiers peuvent recevoir un effet scanné ?</h2>
+  <p>Vous pouvez donner un effet scanné à un fichier PDF, mais aussi à des images, à des documents Word et Excel et à des formats texte. Les PDF de plusieurs pages gardent l'ordre de leurs pages, et chaque page reçoit sa propre légère inclinaison aléatoire : le document ressemble à une pile de feuilles passées une à une dans un scanner.</p>
+  <ul>
+    <li><strong>Documents :</strong> PDF, DOCX (Word), XLSX (Excel), CSV, TXT, Markdown et HTML. Les PDF conservent leur mise en page exacte ; les fichiers Word, Excel et HTML deviennent de simples pages de texte, alors exportez-les d'abord en PDF si la mise en forme compte.</li>
+    <li><strong>Images :</strong> JPG, PNG, WebP, SVG, GIF et BMP — chaque image devient une page de PDF scanné. Pour en savoir plus, lisez <a href="/blog/image-to-scanned-pdf/">image en PDF scanné</a>.</li>
+    <li><strong>Options :</strong> un filigrane texte ou image, votre propre image de tampon ou de signature avec réglage de la position et de la taille, et des métadonnées PDF modifiables comme le titre et l'auteur.</li>
+  </ul>
+
+  <h2 id="hg-extension">Effet scanné en ligne ou dans l'extension Chrome ?</h2>
+  <p>Les deux utilisent le même moteur de scan et les mêmes réglages. Le site ne demande aucune installation et fonctionne sur téléphone ; l'extension Chrome, notée 5 étoiles sur le Chrome Web Store, s'ouvre dans le panneau latéral du navigateur pour donner un effet scanné à un PDF sans quitter l'onglet sur lequel vous travaillez.</p>
+  <div class="table-wrap">
+    <table>
+      <caption>L'outil web et l'extension Chrome comparés</caption>
+      <thead><tr><th scope="col">Fonctionnalité</th><th scope="col">Outil web</th><th scope="col">Extension Chrome</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Installation</th><td>Aucune</td><td>Un clic depuis le Chrome Web Store</td></tr>
+        <tr><th scope="row">Fonctionne sur téléphone</th><td>Oui</td><td>Non (Chrome sur ordinateur)</td></tr>
+        <tr><th scope="row">Réglages du scan</th><td>Bruit, flou, rotation, variation, luminosité, contraste, jaunissement, niveaux de gris/couleur, bordure, résolution</td><td>Les mêmes</td></tr>
+        <tr><th scope="row">Plusieurs fichiers en ZIP</th><td>Oui, avec le Scan par lots</td><td>Oui, plusieurs fichiers dans un seul ZIP</td></tr>
+        <tr><th scope="row">Traitement</th><td>Local, dans le navigateur</td><td>Local, dans le panneau latéral</td></tr>
+        <tr><th scope="row">Prix</th><td>Gratuit</td><td>Gratuit</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="hg-uses">Pourquoi donner un effet scanné à un PDF ?</h2>
+  <p>On donne un effet scanné à un PDF quand une démarche attend du papier : un propriétaire, une école ou un service RH demande une « copie scannée », un rendu imprimé et signé convient mieux au contexte, ou le fichier ne doit pas proposer de texte sélectionnable à copier-coller. Les graphistes utilisent aussi l'effet scanné pour des maquettes, des fanzines et des documents au style rétro.</p>
+  <p>Un PDF d'aspect scanné aplatit aussi le contenu : texte, champs de formulaire et calques deviennent une seule image par page, si bien que le fichier s'ouvre de la même façon partout. Si vous avez seulement besoin de cet aplatissement, lisez <a href="/blog/pdf-to-scanned-pdf/">convertir un PDF en PDF scanné</a> ; pour une simple copie en niveaux de gris, voyez <a href="/blog/convert-color-pdf-to-black-and-white/">comment convertir un PDF couleur en noir et blanc</a>.</p>
+  <div class="callout callout-warn"><strong>Utilisez l'effet scanné honnêtement</strong>Un effet scanné change l'apparence d'un document, pas sa nature. Ne l'utilisez pas pour modifier ou faire passer pour authentiques des documents officiels, des pièces d'identité ou des signatures qui ne sont pas les vôtres. Certains tribunaux et administrations exigent des PDF au texte interrogeable : vérifiez les règles de dépôt avant de transformer un dossier en images.</div>
+
+  <h2 id="hg-methods">Donner un effet scanné à un PDF : l'outil face aux autres méthodes</h2>
+  <p>Il existe quatre façons courantes de donner un effet scanné à un PDF : un outil d'effet scanné dans le navigateur, l'impression suivie d'un vrai scan, la photo de l'impression au téléphone, ou la retouche des images de pages dans un éditeur d'images matricielles. L'outil dans le navigateur est le plus rapide et le plus régulier ; les trois autres prennent plus de temps et offrent moins de contrôle.</p>
+  <div class="table-wrap">
+    <table>
+      <caption>Quatre façons de donner un effet scanné à un PDF, comparées</caption>
+      <thead><tr><th scope="col">Méthode</th><th scope="col">Temps pour 10 pages</th><th scope="col">Matériel requis</th><th scope="col">Contrôle du rendu</th><th scope="col">Confidentialité</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Outil d'effet scanné dans le navigateur</th><td>Moins d'une minute</td><td>Un navigateur</td><td>Chaque défaut a son curseur et un aperçu en direct</td><td>Traitement local</td></tr>
+        <tr><th scope="row">Imprimer, puis scanner</th><td>10 à 20 minutes</td><td>Imprimante, scanner, papier, toner</td><td>De vrais défauts, mais impossibles à régler</td><td>Dépend des appareils partagés du bureau</td></tr>
+        <tr><th scope="row">Photo d'une impression au téléphone</th><td>5 à 15 minutes</td><td>Une imprimante et l'appareil photo du téléphone</td><td>Lumière inégale, perspective et ombres</td><td>Les photos peuvent se synchroniser avec des sauvegardes dans le cloud</td></tr>
+        <tr><th scope="row">Éditeur d'images matricielles</th><td>30 minutes et plus</td><td>Un logiciel de retouche et du savoir-faire</td><td>Total, mais manuel, page par page</td><td>Local</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Le détail de chaque méthode, avec les réglages exacts de la boîte de dialogue d'impression, se trouve dans <a href="/blog/how-to-make-a-pdf-look-scanned/">comment faire ressembler un PDF à un scan</a>.</p>
+
+  <h2 id="hg-check">Comment vérifier un PDF à effet scanné avant de l'envoyer</h2>
+  <p>Un PDF d'aspect scanné convaincant passe quatre contrôles rapides : le texte ne se sélectionne pas, les pages sont légèrement et inégalement inclinées, le fond n'est pas d'un blanc numérique pur, et le fichier est nettement plus lourd que l'original, car chaque page est désormais une image et non plus du texte.</p>
+  <ul>
+    <li><strong>Essayez de sélectionner du texte.</strong> Faites glisser le curseur sur une ligne. Dans un vrai scan comme dans le résultat de cet outil, vous obtenez un cadre, pas des mots surlignés.</li>
+    <li><strong>Zoomez à 300–400 %.</strong> Les bords des lettres doivent être légèrement adoucis et le papier doit montrer un grain discret. Des contours vectoriels parfaitement nets trahissent un fichier numérique.</li>
+    <li><strong>Comparez deux pages.</strong> Une inclinaison identique sur chaque page paraît générée par ordinateur ; gardez la variation de rotation au-dessus de 0.</li>
+    <li><strong>Imprimez une page.</strong> Si la copie finit sur papier, vérifiez que les petits caractères et les signatures restent lisibles malgré le flou et le bruit.</li>
+  </ul>
+  <p>Si votre destinataire a besoin d'un texte interrogeable, l'aspect scanné n'est pas le bon format ; découvrez la différence dans <a href="/blog/what-is-a-scanned-pdf/">qu'est-ce qu'un PDF scanné</a>.</p>
+
+  <h2 id="hg-guides">Guides : comment faire ressembler un PDF à un scan</h2>
+  <p>Ces guides approfondissent chaque façon de faire ressembler un PDF à un scan, avec des réglages exacts, des comparaisons de méthodes et des vérifications à faire sur le fichier final avant de l'envoyer.</p>
+  <ul>
+    <li><a href="/blog/how-to-make-a-pdf-look-scanned/">Faire ressembler un PDF à un scan : 6 méthodes comparées</a></li>
+    <li><a href="/blog/make-a-document-look-scanned/">Donner un aspect scanné à un document : Word, Google Docs et photos</a></li>
+    <li><a href="/blog/what-is-a-scanned-pdf/">Qu'est-ce qu'un PDF scanné et comment le reconnaître</a></li>
+    <li><a href="/blog/scan-effect/">Effet scanner : quels défauts donnent à un fichier l'air scanné</a></li>
+  </ul>
+
+  <h2 id="hg-faq">Donner un effet scanné à un PDF : questions fréquentes</h2>
+  <div class="faq-item"><p class="faq-q">Comment donner un effet scanné à un PDF sans scanner ?</p><p class="faq-a">Ouvrez le scanner de ce site, déposez le PDF, gardez les réglages par défaut ou ajustez le bruit, le flou et la rotation, puis cliquez sur Générer le PDF scanné. Chaque page devient une image inclinée, avec du grain et en niveaux de gris, enregistrée dans un nouveau PDF. Aucune imprimante, aucun scanner ni aucun compte n'est nécessaire.</p></div>
+  <div class="faq-item"><p class="faq-q">Cet outil d'effet scanné est-il gratuit ?</p><p class="faq-a">Oui. Le scan est gratuit, sans inscription, et aucun filigrane n'est ajouté, sauf si vous en ajoutez un vous-même. L'extension Chrome est gratuite elle aussi.</p></div>
+  <div class="faq-item"><p class="faq-q">Mes fichiers sont-ils envoyés quelque part ?</p><p class="faq-a">Non. Les fichiers sont traités localement dans votre navigateur ; ils ne sont ni envoyés à un serveur de traitement ni stockés dans le cloud. L'application fonctionne même hors ligne après la première visite.</p></div>
+  <div class="faq-item"><p class="faq-q">Le texte de mon PDF d'aspect scanné restera-t-il sélectionnable ?</p><p class="faq-a">Non. Chaque page devient une image, comme dans un vrai scan : le texte ne peut plus être sélectionné, recherché ni copié. Conservez votre fichier d'origine si vous aurez besoin d'un texte modifiable plus tard.</p></div>
+  <div class="faq-item"><p class="faq-q">Puis-je donner un effet scanné à un PDF de plusieurs pages ?</p><p class="faq-a">Oui. Toutes les pages sont traitées, et le réglage Variation de rotation donne à chaque page une inclinaison légèrement différente, pour que le document n'ait pas l'air trop parfait, comme sorti d'une machine. Le Scan par lots traite de nombreux fichiers à la fois.</p></div>
+  <div class="faq-item"><p class="faq-q">Puis-je donner un effet scanné à un document Word ou à une photo ?</p><p class="faq-a">Oui. Les fichiers DOCX, XLSX, CSV, TXT, Markdown et HTML ainsi que les images JPG, PNG, WebP ou SVG sont d'abord convertis en pages, puis reçoivent le même effet scanné pour produire un PDF d'aspect scanné. Pour un fichier Word avec des tableaux, des logos ou une mise en forme particulière, enregistrez-le d'abord en PDF afin de conserver exactement la mise en page.</p></div>
+  <div class="faq-item"><p class="faq-q">Quelle résolution choisir ?</p><p class="faq-a">La valeur par défaut 2× (environ 144 dpi pour une page PDF) est assez nette pour la lecture et l'impression tout en gardant un fichier léger. Choisissez 3× pour les documents en petits caractères, et 1× quand la taille du fichier compte avant tout.</p></div>
+  <div class="faq-item"><p class="faq-q">Est-ce que ça fonctionne sur téléphone ?</p><p class="faq-a">Oui. Le site fonctionne dans les navigateurs mobiles récents sans rien installer. L'extension Chrome est destinée à Chrome sur ordinateur.</p></div>
+</section>

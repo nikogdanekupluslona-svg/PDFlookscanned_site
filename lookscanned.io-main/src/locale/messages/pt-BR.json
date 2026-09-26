@@ -1,0 +1,212 @@
+{
+  "base": {
+    "title": "Make PDF look scanned",
+    "description": "Deixe um arquivo digital limpo com cara de escaneamento real — textura de papel, ruído, rotação e sombras, tudo processado localmente no seu navegador.",
+    "scanTitle": "Escanear",
+    "bulkTitle": "Escanear em lote",
+    "serviceWorker": {
+      "offlineReady": "App pronto para funcionar offline",
+      "needRefresh": "Nova versão disponível. Clique para atualizar."
+    },
+    "nav": {
+      "home": "Início",
+      "scan": "Escanear",
+      "bulk": "Escanear em lote",
+      "guides": "Guias"
+    },
+    "chrome": {
+      "label": "Extensão do Chrome",
+      "free": "GRÁTIS"
+    },
+    "landing": {
+      "headline": "Fazer PDF parecer escaneado",
+      "subhead": "Transforme PDFs, imagens e arquivos do Word e do Excel em cópias escaneadas realistas, com desfoque, ruído, rotação, marca d'água e carimbo — direto no navegador. Os arquivos originais ficam no seu dispositivo.",
+      "cta": "Converter em PDF escaneado",
+      "note": "Grátis · Sem cadastro · Os arquivos ficam no seu dispositivo",
+      "points": {
+        "formats": "PDF, imagens e formatos básicos do Office",
+        "local": "Processamento local · Os arquivos não saem do dispositivo",
+        "free": "Escanear é grátis · Sem cadastro",
+        "preview": "Prévia em tempo real · O que você vê é o que você exporta"
+      },
+      "stepsTitle": "Três passos para um PDF escaneado",
+      "step1Title": "Escolha um arquivo",
+      "step1Body": "Arraste um PDF, uma imagem ou um documento do Word ou do Excel. O arquivo fica no seu navegador.",
+      "step2Title": "Ajuste o efeito de scanner",
+      "step2Body": "Desfoque, ruído, rotação, tom do papel, marcas d'água e carimbos — com prévia ao vivo.",
+      "step3Title": "Exporte o PDF",
+      "step3Body": "Seu PDF escaneado fica pronto em segundos e é baixado na hora.",
+      "featuresTitle": "Principais recursos",
+      "footer": "Transforme documentos em cópias escaneadas no navegador. Nenhum arquivo é enviado para processamento."
+    },
+    "language": "Idioma",
+    "seo": {
+      "homeTitle": "Fazer PDF parecer escaneado online — grátis e sem upload",
+      "homeDescription": "Fazer PDF parecer escaneado: adicione granulação, desfoque, leve inclinação e tom de papel antigo. Grátis, sem cadastro e sem upload. Aceita imagens e Word."
+    }
+  },
+  "features": {
+    "privacy": {
+      "title": "Processamento local e privado",
+      "description": "Seus arquivos são processados neste navegador. Eles não são enviados a um servidor de processamento nem armazenados na nuvem."
+    },
+    "speed": {
+      "title": "Conversão rápida",
+      "description": "Transforme PDFs, imagens e documentos do Office em PDFs com cara de escaneados em segundos — sem impressora e sem scanner."
+    },
+    "customization": {
+      "title": "Efeitos de scanner",
+      "description": "Ajuste desfoque, ruído, rotação, brilho, contraste e tom do papel com prévia ao vivo. O que você vê é o que você exporta."
+    },
+    "openSource": {
+      "title": "Extensão do Chrome",
+      "description": "O mesmo mecanismo de escaneamento também está disponível como extensão gratuita do Chrome, para você processar PDFs no painel lateral.",
+      "github": "Chrome Web Store",
+      "scanyourpdf": "Extensão do Chrome"
+    },
+    "mobileFriendly": {
+      "title": "Funciona no celular",
+      "description": "O conversor roda nos navegadores de celular modernos. O site não exige instalação."
+    },
+    "offlineUse": {
+      "title": "Funciona offline",
+      "description": "Depois que os recursos do app ficam em cache, o escaneamento padrão continua funcionando sem conexão com a internet."
+    }
+  },
+  "actions": {
+    "navigateToScan": "Começar a escanear",
+    "navigateToHomePage": "Início",
+    "navigateToSupportMe": "Extensão do Chrome",
+    "backToIndex": "Voltar",
+    "preview": "Prévia",
+    "save": "Salvar",
+    "generateScannedPDF": "Gerar PDF escaneado",
+    "generating": "Gerando...",
+    "downloadScannedPDF": "Baixar PDF escaneado",
+    "generateSuccess": "Gerado com sucesso",
+    "generateError": "Falha ao gerar: ",
+    "addFiles": "Adicionar arquivos",
+    "processAll": "Gerar PDFs escaneados",
+    "downloadZip": "Baixar tudo em ZIP",
+    "converting": "Preparando o arquivo…",
+    "queued": "Na fila",
+    "done": "Concluído",
+    "failed": "Falhou"
+  },
+  "settings": {
+    "settings": "Configurações de escaneamento",
+    "attenuate": "Ruído",
+    "noise": "Ruído",
+    "blur": "Desfoque",
+    "border": {
+      "label": "Borda",
+      "true": "Sim",
+      "false": "Não"
+    },
+    "colorspace": {
+      "label": "Espaço de cor",
+      "colorful": "Colorido",
+      "grayscale": "Cinza"
+    },
+    "rotate": "Rotação",
+    "rotateVariance": "Variação da rotação",
+    "pdfSelectLabel": "Selecione ou arraste seu arquivo para cá",
+    "pdfNoSelectMessage": "Nenhum arquivo selecionado",
+    "supportedHint": "PDF, JPG, PNG, WebP, SVG, DOCX, XLSX, CSV, TXT, MD, HTML",
+    "scale": "Resolução",
+    "yellowish": "Amarelado",
+    "brightness": "Brilho",
+    "contrast": "Contraste",
+    "extras": {
+      "watermark": "Marca d'água",
+      "watermarkText": "Texto da marca d'água",
+      "watermarkImage": "Imagem da marca d'água",
+      "stamp": "Carimbo ou assinatura",
+      "stampImage": "Adicionar carimbo ou assinatura",
+      "stampX": "Posição horizontal",
+      "stampY": "Posição vertical",
+      "stampScale": "Tamanho",
+      "metadata": "Metadados do PDF",
+      "title": "Título",
+      "author": "Autor",
+      "subject": "Assunto",
+      "keywords": "Palavras-chave",
+      "producer": "Produtor",
+      "creator": "Criador",
+      "clearImage": "Remover"
+    }
+  },
+  "status": {
+    "notStarted": "Não iniciado",
+    "error": "Erro: {error}",
+    "finished": "Concluído",
+    "processsing": {
+      "default": "Processando",
+      "combine": "Juntando as páginas do PDF",
+      "progress": "Processando páginas do PDF: {current}/{total}"
+    }
+  },
+  "upload": {
+    "dropTitle": "Solte seu arquivo aqui",
+    "dropTitleMany": "Solte seus arquivos aqui",
+    "or": "ou",
+    "choose": "Escolher arquivo",
+    "chooseMany": "Escolher arquivos",
+    "replace": "Escolher outro arquivo",
+    "addMore": "Adicionar mais arquivos",
+    "privacy": "Processado no seu navegador — nada é enviado",
+    "dropOverlay": "Solte o arquivo para carregá-lo",
+    "dropOverlayMany": "Solte os arquivos para adicioná-los",
+    "unsupported": "Tipo de arquivo não suportado: {name}",
+    "readError": "Não foi possível abrir {name}: {error}",
+    "ready": "Carregado",
+    "pages": "{n} página | {n} páginas",
+    "sampleBanner": "Este é um documento de exemplo. Carregue seus próprios arquivos no passo 1 — dá para adicionar vários de uma vez."
+  },
+  "save": {
+    "create": "Criar PDF escaneado | Criar {n} PDFs escaneados",
+    "readyTitle": "Seu PDF escaneado está pronto | Seus {n} PDFs escaneados estão prontos",
+    "progress": "página {current} de {total}",
+    "fileProgress": "Arquivo {current} de {total}",
+    "autoHint": "O PDF escaneado é baixado automaticamente quando fica pronto. | Os {n} arquivos serão escaneados e baixados automaticamente em um único ZIP.",
+    "noFileHint": "Carregue um arquivo no passo 1 para começar.",
+    "busyHint": "Mantenha esta aba aberta — o download começa sozinho quando o escaneamento terminar.",
+    "downloadAgain": "Baixar novamente",
+    "downloadStarted": "Pronto — o download começou",
+    "whereSaved": "Procure o arquivo na pasta Downloads.",
+    "zipHint": "Para baixar um único arquivo, use o ícone de download ao lado dele no passo 1.",
+    "someFailed": "{n} arquivo não pôde ser escaneado | {n} arquivos não puderam ser escaneados"
+  },
+  "files": {
+    "preview": "Mostrar na prévia",
+    "previewOf": "Prévia: {name}",
+    "downloadOne": "Baixar este PDF escaneado",
+    "remove": "Remover arquivo",
+    "hint": "Clique em um arquivo para ver a prévia. Todos os arquivos usam as mesmas configurações.",
+    "openError": "Não foi possível abrir este arquivo",
+    "status": {
+      "loading": "Preparando…",
+      "ready": "Pronto",
+      "processing": "Escaneando…",
+      "done": "Escaneado"
+    }
+  },
+  "steps": {
+    "upload": "Carregar",
+    "adjust": "Ajustar",
+    "download": "Baixar",
+    "uploadTitle": "Carregue seus arquivos",
+    "adjustTitle": "Ajuste o efeito de scanner",
+    "downloadTitle": "Baixe seu PDF escaneado"
+  },
+  "preview": {
+    "original": "Original",
+    "scanned": "Prévia escaneada"
+  },
+  "errors": {
+    "wordNoText": "Este arquivo do Word não tem texto legível",
+    "sheetEmpty": "Esta planilha está vazia",
+    "htmlNoText": "Este arquivo HTML não tem texto legível",
+    "unsupportedType": "Este tipo de arquivo ainda não é suportado"
+  }
+}

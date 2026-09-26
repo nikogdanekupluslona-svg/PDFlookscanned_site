@@ -1,0 +1,43 @@
+{
+  "slug": "effet-scanner",
+  "title": "Effet scanner : ce qui donne à un document l'air scanné",
+  "description": "L'effet scanner expliqué : bruit, inclinaison, flou, teinte du papier, ombres de bord, niveaux de gris. Ce qui fait l'aspect scanné, et 5 réglages tout prêts.",
+  "h1": "L'effet scanner expliqué : ce qui donne à un document l'air scanné (et les réglages pour 5 rendus)",
+  "tag": "Effet scanner",
+  "main_keyword": "effet scanner",
+  "keywords": [
+    "effet scanner",
+    "effet scanné",
+    "aspect scanné",
+    "effet scan",
+    "rendu scanné",
+    "réglages effet scanner",
+    "effet photocopie",
+    "effet fax",
+    "donner un effet scanné à un pdf"
+  ],
+  "howto_name": "Comment appliquer un effet scanner réaliste à un PDF",
+  "cta_title": "Essayez les 5 préréglages d'effet scanner",
+  "cta_body": "Ouvrez l'outil gratuit, saisissez l'une des recettes de ce guide et observez l'aperçu en direct. Votre fichier est traité dans votre navigateur et n'est jamais envoyé.",
+  "about": [
+    "Numériseur",
+    "Document numérisé",
+    "Bruit numérique",
+    "Inclinaison (image)",
+    "Artefact de compression"
+  ],
+  "mentions": [
+    "Moiré",
+    "Télécopie",
+    "Photocopieur",
+    "JPEG",
+    "Niveau de gris",
+    "Image binaire",
+    "Similigravure",
+    "Reconnaissance optique de caractères",
+    "National Archives and Records Administration",
+    "Federal Agencies Digital Guidelines Initiative",
+    "PDF"
+  ],
+  "source_modified": "2026-09-18"
+}

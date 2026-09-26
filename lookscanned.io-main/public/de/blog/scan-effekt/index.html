@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scan-Effekt: Was ein Dokument gescannt aussehen lässt</title>
+<meta name="description" content="Der Scan-Effekt erklärt: Rauschen, Schräglage, Unschärfe, Papierton, Randschatten, Graustufen – was eine Datei gescannt wirken lässt, plus Werte für 5 Looks.">
+<link rel="canonical" href="https://pdflookscanned.com/de/blog/scan-effekt/">
+<link rel="alternate" hreflang="en" href="https://pdflookscanned.com/blog/scan-effect/">
+<link rel="alternate" hreflang="de" href="https://pdflookscanned.com/de/blog/scan-effekt/">
+<link rel="alternate" hreflang="fr" href="https://pdflookscanned.com/fr/blog/effet-scanner/">
+<link rel="alternate" hreflang="es" href="https://pdflookscanned.com/es/blog/efecto-escaneado/">
+<link rel="alternate" hreflang="it" href="https://pdflookscanned.com/it/blog/effetto-scansione/">
+<link rel="alternate" hreflang="pt-BR" href="https://pdflookscanned.com/pt-br/blog/efeito-de-scanner/">
+<link rel="alternate" hreflang="nl" href="https://pdflookscanned.com/nl/blog/scaneffect-instellingen/">
+<link rel="alternate" hreflang="sv" href="https://pdflookscanned.com/sv/blog/skanningseffekt-installningar/">
+<link rel="alternate" hreflang="da" href="https://pdflookscanned.com/da/blog/scanningseffekt-indstillinger/">
+<link rel="alternate" hreflang="no" href="https://pdflookscanned.com/no/blog/skanneeffekt-pdf/">
+<link rel="alternate" hreflang="fi" href="https://pdflookscanned.com/fi/blog/skannausefekti-asetukset/">
+<link rel="alternate" hreflang="ja" href="https://pdflookscanned.com/ja/blog/scan-effect/">
+<link rel="alternate" hreflang="ko" href="https://pdflookscanned.com/ko/blog/scan-effect/">
+<link rel="alternate" hreflang="x-default" href="https://pdflookscanned.com/blog/scan-effect/">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta property="og:site_name" content="Make PDF look scanned">
+<meta property="og:title" content="Scan-Effekt: Was ein Dokument gescannt aussehen lässt">
+<meta property="og:description" content="Der Scan-Effekt erklärt: Rauschen, Schräglage, Unschärfe, Papierton, Randschatten, Graustufen – was eine Datei gescannt wirken lässt, plus Werte für 5 Looks.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pdflookscanned.com/de/blog/scan-effekt/">
+<meta property="og:locale" content="de_DE">
+<meta property="og:image" content="https://pdflookscanned.com/pwa-512x512.png">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0b0b0f">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://pdflookscanned.com/#org", "name": "Make PDF look scanned", "url": "https://pdflookscanned.com/", "logo": "https://pdflookscanned.com/pwa-512x512.png", "sameAs": ["https://chromewebstore.google.com/detail/make-pdf-look-scanned/ijhpnlcipgiokgignkbbbgkobdmdoila"]}, {"@type": "Article", "@id": "https://pdflookscanned.com/de/blog/scan-effekt/#article", "headline": "Scan-Effekt: Was ein Dokument gescannt aussehen lässt", "description": "Der Scan-Effekt erklärt: Rauschen, Schräglage, Unschärfe, Papierton, Randschatten, Graustufen – was eine Datei gescannt wirken lässt, plus Werte für 5 Looks.", "url": "https://pdflookscanned.com/de/blog/scan-effekt/", "mainEntityOfPage": "https://pdflookscanned.com/de/blog/scan-effekt/", "inLanguage": "de", "image": "https://pdflookscanned.com/pwa-512x512.png", "author": {"@id": "https://pdflookscanned.com/#org"}, "publisher": {"@id": "https://pdflookscanned.com/#org"}, "datePublished": "2026-09-18", "dateModified": "2026-09-18", "wordCount": 4544, "keywords": "scan effekt, gescannt aussehen, scanner effekt, scan optik, gescannter look, scan effekt einstellungen, kopierer effekt, fax effekt, pdf wie gescannt aussehen lassen", "about": [{"@type": "Thing", "name": "Scanner (Datenerfassung)"}, {"@type": "Thing", "name": "Gescanntes Dokument"}, {"@type": "Thing", "name": "Bildrauschen"}, {"@type": "Thing", "name": "Schräglage"}, {"@type": "Thing", "name": "Kompressionsartefakt"}], "mentions": [{"@type": "Thing", "name": "Moiré-Effekt"}, {"@type": "Thing", "name": "Fax"}, {"@type": "Thing", "name": "Fotokopie"}, {"@type": "Thing", "name": "JPEG"}, {"@type": "Thing", "name": "Graustufen"}, {"@type": "Thing", "name": "Binärbild"}, {"@type": "Thing", "name": "Druckraster"}, {"@type": "Thing", "name": "Texterkennung"}, {"@type": "Thing", "name": "National Archives and Records Administration"}, {"@type": "Thing", "name": "Federal Agencies Digital Guidelines Initiative"}, {"@type": "Thing", "name": "Portable Document Format"}], "speakable": {"@type": "SpeakableSpecification", "cssSelector": [".lead", ".faq-a"]}, "translationOfWork": {"@id": "https://pdflookscanned.com/blog/scan-effect/#article"}}, {"@type": "FAQPage", "@id": "https://pdflookscanned.com/de/blog/scan-effekt/#faq", "inLanguage": "de", "mainEntity": [{"@type": "Question", "name": "Welche Scan-Effekt-Einstellung eignet sich für ein normales Dokument?", "acceptedAnswer": {"@type": "Answer", "text": "Beginnen Sie mit dem Büro-Scan-Rezept: Drehung 1°, Drehvarianz 0,5°, Unschärfe 0,3, Rauschen 0,1, Farbraum Graustufen und Auflösung 2×. Das sind auch die Tool-Standardwerte, passend für Verträge, Briefe und Formulare. Passen Sie nur an, wenn die Vorschau zu sauber oder zu weich wirkt."}}, {"@type": "Question", "name": "Was ist der Unterschied zwischen Scan-Effekt und Scanner-Effekt?", "acceptedAnswer": {"@type": "Answer", "text": "In der Praxis bedeuten die Begriffe dasselbe. Beide beschreiben simulierte Scanner-Artefakte wie Schräglage, Rauschen, Unschärfe und Grautöne. „Scanner-Effekt“ wird etwas häufiger für den flachen Büro-Look verwendet, während „Scan-Effekt“ auch Fax-, Kopierer- und Handy-Scan-Looks umfasst."}}, {"@type": "Question", "name": "Macht ein Scan-Effekt den Text unauffindbar für die Suche?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Jede Seite wird als JPEG-Bild im neuen PDF gespeichert, sodass der Text nicht mehr markiert, kopiert oder durchsucht werden kann. Brauchen Sie durchsuchbaren Text, lassen Sie OCR über das Ergebnis laufen oder bewahren Sie das Original-PDF auf."}}, {"@type": "Question", "name": "Kann ich Kaffeeflecken, Falten oder Knicke hinzufügen?", "acceptedAnswer": {"@type": "Answer", "text": "Nein. Unser Tool erzeugt keine Flecken, Falten, Knicke, perspektivische Verzerrung oder Randschatten. Es simuliert Neigung, Rauschen, Unschärfe, Papierton, Helligkeit, Kontrast, Farbtiefe, Auflösung und eine 1-px-Randlinie – das deckt den alltäglichen gescannten Look ab."}}, {"@type": "Question", "name": "Wie lasse ich ein PDF wie eine Fotokopie aussehen?", "acceptedAnswer": {"@type": "Answer", "text": "Nutzen Sie Farbraum Graustufen, Kontrast 1,3–1,5, Helligkeit 1,05–1,1, Rauschen etwa 0,15 und schalten Sie den Rand ein. Halten Sie die Unschärfe niedrig, etwa bei 0,2, denn Kopien wirken hart statt weich."}}, {"@type": "Question", "name": "Wie bekomme ich einen Fax-Look?", "acceptedAnswer": {"@type": "Answer", "text": "Stellen Sie die Auflösung auf 1× (72 dpi), behalten Sie Graustufen, erhöhen Sie den Kontrast auf 1,5 oder mehr, und nutzen Sie Unschärfe 0,4 und Rauschen 0,2. Echte Group-3-Faxe laufen mit etwa 204 × 98 Linien pro Zoll im Standardmodus, weshalb sie grob wirken."}}, {"@type": "Question", "name": "Warum wirkt mein gescannter Look unecht?", "acceptedAnswer": {"@type": "Answer", "text": "Die üblichen Ursachen sind zu viel Drehung, identische Neigung auf jeder Seite, starke Unschärfe oder kräftiges Rauschen auf einer fast leeren Seite. Senken Sie die Drehung auf etwa 1°, halten Sie die Varianz über 0, und halten Sie Unschärfe und Rauschen unter 0,4 und 0,2."}}, {"@type": "Question", "name": "Kann das Tool einen echten Schwarz-Weiß-Scan (bitonal) erzeugen?", "acceptedAnswer": {"@type": "Answer", "text": "Keine echte 1-Bit-Datei. Der Farbraum Graustufen erzeugt Graustufen; ein Kontrast von 1,4–1,6 drängt das Ergebnis nah an einen Schwarz-Weiß-Look. Für strikt bitonale Ausgabe lesen Sie unsere Anleitung zum Umwandeln eines farbigen PDFs in Schwarz-Weiß."}}, {"@type": "Question", "name": "Welche Auflösung sollte ich wählen?", "acceptedAnswer": {"@type": "Answer", "text": "Nutzen Sie 2× (etwa 144 dpi) für die meisten Dokumente, 2,5× (180 dpi) für die Handy-Scan-Optik und 3× (216 dpi), wenn kleiner Druck scharf bleiben muss. Höhere Auflösung ergibt größere Dateien, nutzen Sie also 1× oder 1,5×, wenn Größenlimits streng sind."}}, {"@type": "Question", "name": "Wird meine Datei hochgeladen, wenn ich einen Scan-Effekt anwende?", "acceptedAnswer": {"@type": "Answer", "text": "Nein. Das Web-Tool und die Chrome-Erweiterung verarbeiten Dateien lokal in Ihrem Browser mit pdf.js und Canvas. Dateien werden nicht an einen Verarbeitungsserver gesendet, und die Website funktioniert nach dem ersten Laden auch offline."}}, {"@type": "Question", "name": "Kann ich ein Dokument farbig wie gescannt aussehen lassen?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Schalten Sie den Farbraum auf Farbe, um Logos, Stempel und Markierungen zu erhalten. Farbe eignet sich am besten für den Altes-Papier- und den Handy-Scan-Look; Graustufen bleibt für einen Büro-Scan am typischsten."}}]}, {"@type": "HowTo", "name": "So wenden Sie einen realistischen Scan-Effekt auf ein PDF an", "inLanguage": "de", "step": [{"@type": "HowToStep", "position": 1, "text": "Bereiten Sie ein PDF vor. Exportieren Sie Word-, Google-Docs- oder Tabellendateien zuerst als PDF (zum Beispiel Datei → Herunterladen → PDF-Dokument in Google Docs). Das Tool akzeptiert DOCX direkt, behält aber nur den Text, daher bewahrt ein Export als PDF Ihr Layout."}, {"@type": "HowToStep", "position": 2, "text": "Öffnen Sie das Tool. Gehen Sie zu pdflookscanned.com/scan und legen Sie das PDF, JPG oder PNG in den Upload-Bereich. Es wird nichts auf einen Server hochgeladen; die Verarbeitung läuft lokal."}, {"@type": "HowToStep", "position": 3, "text": "Wählen Sie einen Look. Nehmen Sie eines der fünf Rezepte oben, zum Beispiel den Büro-Scan: Drehung 1, Varianz 0,5, Unschärfe 0,3, Rauschen 0,1."}, {"@type": "HowToStep", "position": 4, "text": "Stellen Sie Farbraum und Auflösung ein. Wählen Sie Graustufen oder Farbe und die Auflösungsskala (2× für die meisten Looks, 1× für Fax, 2,5× für den Handy-Look)."}, {"@type": "HowToStep", "position": 5, "text": "Passen Sie den Tonwert an. Setzen Sie Helligkeit, Kontrast und Vergilbung auf die Rezeptwerte; schalten Sie den Rand nur für den Fotokopie-Look ein."}, {"@type": "HowToStep", "position": 6, "text": "Prüfen Sie die Vorschau. Zoomen Sie auf 100 % bei einer Seite mit kleinem Druck. Ist Text schwer lesbar, senken Sie zuerst die Unschärfe, dann den Kontrast."}, {"@type": "HowToStep", "position": 7, "text": "Herunterladen und prüfen. Laden Sie das PDF herunter, öffnen Sie es in Ihrem Betrachter und blättern Sie alle Seiten durch, um zu bestätigen, dass jede eine leicht andere Neigung hat."}]}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://pdflookscanned.com/de/"}, {"@type": "ListItem", "position": 2, "name": "Anleitungen", "item": "https://pdflookscanned.com/de/blog/"}, {"@type": "ListItem", "position": 3, "name": "Scan-Effekt erklärt: Was ein Dokument gescannt aussehen lässt (plus Einstellungen für 5 Looks)", "item": "https://pdflookscanned.com/de/blog/scan-effekt/"}]}]}</script>
+<style>
+:root{--bg:#0b0b0f;--card:#14151b;--card2:#1b1c23;--line:#26272f;--text:#e7e7ea;--muted:#b8b8c2;--dim:#8e8e99;--accent:#8fd14f;--accent-ink:#10200a;--accent-soft:#1a2512;--warn:#e8a020;--warn-soft:#2a2112;--font:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);font-size:17px;line-height:1.75;-webkit-text-size-adjust:100%}
+a{color:var(--accent)}
+.site-header{position:sticky;top:0;z-index:10;background:rgba(11,11,15,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.site-header .inner{max-width:1100px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.site-header .brand{color:#f4f4f5;font-weight:700;text-decoration:none;font-size:17px}
+.site-header nav{display:flex;gap:16px;flex-wrap:wrap;font-size:15px}
+.site-header nav a{color:var(--muted);text-decoration:none}
+.site-header nav a:hover,.site-header nav a[aria-current]{color:#fff}
+.site-header .get{background:var(--accent);color:var(--accent-ink);font-weight:700;text-decoration:none;padding:8px 16px;border-radius:999px;font-size:14px}
+.pls-article .container{max-width:820px;margin:0 auto;padding:48px 20px 80px}
+.pls-article .breadcrumbs{font-size:14px;color:var(--dim);margin-bottom:22px}
+.pls-article .breadcrumbs a{color:var(--muted);text-decoration:none}
+.pls-article .article-header{margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid var(--line)}
+.pls-article .article-tag{display:inline-block;background:var(--accent-soft);color:var(--accent);font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:16px}
+.pls-article h1{font-size:clamp(28px,4.4vw,42px);line-height:1.15;letter-spacing:-.03em;margin:0 0 18px;color:#fff}
+.pls-article .article-meta{font-size:14px;color:var(--dim);display:flex;gap:18px;flex-wrap:wrap}
+.pls-article .article-meta a{color:var(--muted);font-weight:700;text-decoration:none}
+.pls-article .lead{font-size:19px;line-height:1.65;color:#f0f0f2;margin:0 0 32px;padding:22px 26px;background:var(--card);border-left:4px solid var(--accent);border-radius:0 10px 10px 0}
+.pls-article .trust-badge{display:flex;align-items:center;gap:16px;padding:18px 24px;margin:0 0 36px;background:var(--accent-soft);border:1px solid #2f4520;border-radius:14px}
+.pls-article .trust-badge-icon{font-size:28px;line-height:1;flex-shrink:0}
+.pls-article .trust-badge-title{font-size:18px;font-weight:800;line-height:1.3;color:#fff}
+.pls-article .trust-badge-title span{color:var(--accent)}
+.pls-article .trust-badge-sub{font-size:14px;line-height:1.5;color:var(--muted);margin-top:4px}
+.pls-article .toc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 26px;margin-bottom:44px}
+.pls-article .toc h2{font-size:13px;text-transform:uppercase;letter-spacing:.07em;margin:0 0 10px;padding:0;border:0;color:var(--muted)}
+.pls-article .toc ol{margin:0;padding-left:20px;display:grid;gap:4px}
+.pls-article .toc a{color:var(--text);text-decoration:none;font-size:15px}
+.pls-article .toc a:hover{color:var(--accent)}
+.pls-article h2{font-size:clamp(22px,3vw,29px);line-height:1.25;letter-spacing:-.02em;color:#fff;margin:56px 0 18px;padding-bottom:10px;border-bottom:1px solid var(--line);scroll-margin-top:80px}
+.pls-article h3{font-size:20px;line-height:1.35;color:#fff;margin:34px 0 12px}
+.pls-article p{margin:0 0 18px}
+.pls-article ul,.pls-article ol{padding-left:22px;margin:0 0 20px}
+.pls-article li{margin-bottom:6px}
+.pls-article strong{color:#fff}
+.pls-article code{background:var(--card2);padding:1px 6px;border-radius:5px;font-size:.9em}
+.pls-article .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin:28px 0}
+.pls-article .stat-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;text-align:center}
+.pls-article .stat-number{display:block;font-size:28px;font-weight:900;color:var(--accent);line-height:1.1}
+.pls-article .stat-label{display:block;font-size:13px;color:var(--muted);margin-top:6px;line-height:1.4}
+.pls-article .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:28px 0;border:1px solid var(--line);border-radius:12px}
+.pls-article table{width:100%;min-width:520px;border-collapse:collapse;font-size:15px;line-height:1.5}
+.pls-article caption{caption-side:top;text-align:left;padding:12px 16px;color:var(--muted);font-size:14px;font-weight:600;background:var(--card)}
+.pls-article th{background:var(--card2);color:#fff;font-weight:700;padding:11px 14px;text-align:left;vertical-align:top}
+.pls-article tbody th{background:transparent;color:#fff}
+.pls-article td{padding:11px 14px;border-top:1px solid var(--line);vertical-align:top;color:var(--text)}
+.pls-article tbody th{border-top:1px solid var(--line)}
+.pls-article .callout{border-radius:12px;padding:18px 22px;margin:28px 0;font-size:16px;line-height:1.65}
+.pls-article .callout strong{display:block;margin-bottom:6px}
+.pls-article .callout-tip{background:var(--card);border-left:4px solid var(--muted)}
+.pls-article .callout-warn{background:var(--warn-soft);border-left:4px solid var(--warn)}
+.pls-article .callout-info{background:var(--accent-soft);border-left:4px solid var(--accent)}
+.pls-article .spec-list{display:grid;grid-template-columns:minmax(140px,34%) 1fr;gap:0;margin:24px 0;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.pls-article .spec-list dt,.pls-article .spec-list dd{margin:0;padding:10px 14px;border-top:1px solid var(--line)}
+.pls-article .spec-list dt{font-weight:700;color:#fff;background:var(--card)}
+.pls-article .spec-list dt:first-of-type,.pls-article .spec-list dt:first-of-type+dd{border-top:0}
+.pls-article .step-list{list-style:none;padding:0;margin:22px 0;counter-reset:steps}
+.pls-article .step-list li{counter-increment:steps;position:relative;padding:14px 16px 14px 58px;border-bottom:1px solid var(--line);margin:0}
+.pls-article .step-list li:last-child{border-bottom:0}
+.pls-article .step-list li::before{content:counter(steps);position:absolute;left:12px;top:15px;width:30px;height:30px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center}
+.pls-article .expert-quote{margin:36px 0;padding:26px 30px;background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:0 12px 12px 0}
+.pls-article .expert-quote blockquote{margin:0 0 12px;font-size:18px;line-height:1.7;font-style:italic;color:#f4f4f5}
+.pls-article .expert-quote cite{font-style:normal;font-size:14px;color:var(--muted)}
+.pls-article .faq-item{border-bottom:1px solid var(--line);padding:18px 0}
+.pls-article .faq-q{font-size:18px;font-weight:700;color:#fff;margin:0 0 8px}
+.pls-article .faq-a{margin:0;color:var(--text)}
+.pls-article .cta-block{margin:56px 0 0;background:linear-gradient(135deg,#1a2512,#14151b 70%);border:1px solid #2f4520;border-radius:16px;padding:32px 34px;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.pls-article .cta-text{flex:1;min-width:220px}
+.pls-article .cta-title{font-size:22px;font-weight:800;color:#fff;margin:0 0 6px}
+.pls-article .cta-body{color:var(--muted);margin:0;font-size:15px}
+.pls-article .cta-buttons{display:flex;gap:10px;flex-wrap:wrap}
+.pls-article .cta-btn{display:inline-block;border:2px solid var(--accent);color:var(--accent);font-weight:800;font-size:15px;padding:11px 20px;border-radius:10px;text-decoration:none;white-space:nowrap}
+.pls-article .cta-btn:first-child{background:var(--accent);color:var(--accent-ink)}
+.pls-article .article-footer{margin-top:56px;padding-top:24px;border-top:1px solid var(--line);font-size:14px;color:var(--dim)}
+.pls-article .related{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:18px 0 0;padding:0;list-style:none}
+.pls-article .related a{display:block;height:100%;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;text-decoration:none;color:var(--text);font-weight:600;line-height:1.4}
+.pls-article .related a:hover{border-color:var(--accent)}
+.pls-article .related span{display:block;color:var(--dim);font-weight:400;font-size:14px;margin-top:6px}
+.site-header .lang{position:relative;margin-left:auto}
+.site-header .row-break{display:none}
+.site-header .lang summary{list-style:none;display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 10px;border:1px solid #2a2b33;border-radius:999px;color:#d8d8de;font-size:13px;font-weight:600;cursor:pointer;user-select:none}
+.site-header .lang summary::-webkit-details-marker{display:none}
+.site-header .lang[open] summary,.site-header .lang summary:hover{border-color:var(--accent);color:#fff}
+.site-header .lang svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.site-header .lang ul{position:absolute;top:calc(100% + 8px);right:0;z-index:20;min-width:210px;max-height:70vh;overflow-y:auto;margin:0;padding:6px;list-style:none;background:var(--card);border:1px solid var(--line);border-radius:12px;box-shadow:0 16px 40px rgba(0,0,0,.45)}
+.site-header .lang ul a{display:flex;justify-content:space-between;gap:16px;padding:8px 10px;border-radius:8px;color:var(--text);text-decoration:none;font-size:14px;line-height:1.4}
+.site-header .lang ul a:hover{background:var(--card2);color:#fff}
+.site-header .lang ul a[aria-current]{color:var(--accent);font-weight:600}
+.site-header .lang ul span{color:var(--dim);font-size:12px}
+.site-footer{border-top:1px solid var(--line);color:var(--dim);font-size:14px;text-align:center;padding:28px 20px 48px}
+.site-footer a{color:var(--muted)}
+@media (max-width:600px){body{font-size:16px}.pls-article .container{padding:32px 16px 60px}.pls-article .lead{font-size:17px;padding:16px 18px}.pls-article .trust-badge{flex-direction:column;align-items:flex-start;gap:8px}.pls-article .cta-block{padding:22px}.pls-article .cta-btn{width:100%;text-align:center}.pls-article .spec-list{grid-template-columns:1fr}.pls-article .spec-list dd{border-top:0}.site-header .inner{gap:8px 12px;padding:10px 14px}.site-header .brand{flex:1;min-width:0;font-size:15px;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.site-header .get{display:none}.site-header .row-break{display:block;order:3;flex-basis:100%;height:0}.site-header nav{order:4;flex:1;min-width:0;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;white-space:nowrap}.site-header .lang{order:2}}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="inner"><a class="brand" href="/de/">Make PDF look scanned</a><nav aria-label="Primary"><a href="/de/">Startseite</a><a href="/de/scan">PDF scannen</a><a href="/de/scan/bulk">Stapelscan</a><a href="/de/blog/" aria-current="page">Anleitungen</a></nav><details class="lang"><summary aria-label="Sprache: Deutsch"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span>DE</span></summary><ul><li><a href="/blog/scan-effect/" hreflang="en" lang="en">English<span>EN</span></a></li><li><a href="/de/blog/scan-effekt/" hreflang="de" lang="de" aria-current="true">Deutsch<span>DE</span></a></li><li><a href="/fr/blog/effet-scanner/" hreflang="fr" lang="fr">Français<span>FR</span></a></li><li><a href="/es/blog/efecto-escaneado/" hreflang="es" lang="es">Español<span>ES</span></a></li><li><a href="/it/blog/effetto-scansione/" hreflang="it" lang="it">Italiano<span>IT</span></a></li><li><a href="/pt-br/blog/efeito-de-scanner/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)<span>PT-BR</span></a></li><li><a href="/nl/blog/scaneffect-instellingen/" hreflang="nl" lang="nl">Nederlands<span>NL</span></a></li><li><a href="/sv/blog/skanningseffekt-installningar/" hreflang="sv" lang="sv">Svenska<span>SV</span></a></li><li><a href="/da/blog/scanningseffekt-indstillinger/" hreflang="da" lang="da">Dansk<span>DA</span></a></li><li><a href="/no/blog/skanneeffekt-pdf/" hreflang="no" lang="no">Norsk<span>NO</span></a></li><li><a href="/fi/blog/skannausefekti-asetukset/" hreflang="fi" lang="fi">Suomi<span>FI</span></a></li><li><a href="/ja/blog/scan-effect/" hreflang="ja" lang="ja">日本語<span>JA</span></a></li><li><a href="/ko/blog/scan-effect/" hreflang="ko" lang="ko">한국어<span>KO</span></a></li></ul></details><a class="get" href="https://chromewebstore.google.com/detail/make-pdf-look-scanned/ijhpnlcipgiokgignkbbbgkobdmdoila" target="_blank" rel="noopener">Zu Chrome hinzufügen – kostenlos</a><span class="row-break" aria-hidden="true"></span></div></header>
+<div class="pls-article"><article class="container"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/de/">Startseite</a> › <a href="/de/blog/">Anleitungen</a> › Scan-Effekt</nav><header class="article-header">
+  <span class="article-tag">Scan-Effekt</span>
+  <h1>Scan-Effekt erklärt: Was ein Dokument gescannt aussehen lässt (plus Einstellungen für 5 Looks)</h1>
+  <div class="article-meta">
+    <span>📅 <time datetime="2026-09">September 2026</time></span>
+    
+    <span>⏱ 20 Min. Lesezeit</span>
+    <span>✍ <a href="/de/">Team von Make PDF look scanned</a></span>
+  </div>
+</header>
+<p class="lead">Ein Scan-Effekt ist die Summe kleiner Makel, die ein echter Scanner auf einer Seite hinterlässt: eine leichte Neigung, Sensorrauschen, weiche Schärfe, ein warmer Papierton, Grautöne und JPEG-Kompression. Um ein Dokument wie gescannt aussehen zu lassen, bilden Sie diese Makel maßvoll nach, zum Beispiel Drehung 1°, Unschärfe 0,3, Rauschen 0,1, Farbraum Graustufen und Auflösung 2×.</p>
+<div class="trust-badge">
+  <span class="trust-badge-icon" aria-hidden="true">🏆</span>
+  <div class="trust-badge-text">
+    <div class="trust-badge-title">Make PDF look scanned — <span>im Chrome Web Store mit 5 Sternen bewertet</span></div>
+    <div class="trust-badge-sub">2026 – kostenloses Scan-Effekt-Tool, das lokal in Ihrem Browser läuft, ohne Anmeldung</div>
+  </div>
+</div>
+<p>Ein schnelles „Rauschen drauf und schief drehen“ wirkt oft wie ein Filter, nicht wie ein Scan. Diese Referenz zerlegt einen echten Scan in seine Artefakte, erklärt jede technische Ursache, ordnet sie einem Regler in unserem kostenlosen <a href="/de/scan">Scan-Tool</a> zu und liefert fünf fertige Rezepte. Die Hardware-Fakten stammen von NARA, FADGI, BBC News und Wikipedia; die Reglerbereiche stammen aus unserem eigenen Quellcode.</p>
+<nav class="toc" aria-label="Table of contents"><h2>Inhaltsverzeichnis</h2><ol>
+<li><a href="#what-is-a-scan-effect">Was ist ein Scan-Effekt?</a></li>
+<li><a href="#what-makes-a-document-look-scanned">Was lässt ein Dokument gescannt aussehen?</a></li>
+<li><a href="#skew-and-rotation">Wie erzeugt Schräglage den gescannten Look?</a></li>
+<li><a href="#sensor-noise">Warum gehört Rauschen zum Scan-Effekt?</a></li>
+<li><a href="#blur-and-softness">Wie viel Unschärfe hat ein echter Scan?</a></li>
+<li><a href="#paper-tone">Wie verändert der Papierton den Scan-Effekt?</a></li>
+<li><a href="#brightness-contrast-bit-depth">Wie prägen Helligkeit und Kontrast einen Scan?</a></li>
+<li><a href="#grayscale-and-bitonal">Graustufen oder bitonal: welcher gescannte Look?</a></li>
+<li><a href="#jpeg-and-resolution">Tragen JPEG-Blöcke und Auflösung zum Scan-Effekt bei?</a></li>
+<li><a href="#moire">Was ist Moiré in einem gescannten Dokument?</a></li>
+<li><a href="#edge-shadows-and-borders">Lassen Randschatten eine Seite gescannt wirken?</a></li>
+<li><a href="#fax-and-photocopy-look">Wie unterscheiden sich Fax-Look und Kopierer-Look?</a></li>
+<li><a href="#cheat-sheet">Scan-Effekt-Spickzettel: Welcher Regler macht was?</a></li>
+<li><a href="#five-presets">Scan-Effekt-Einstellungen für 5 Looks</a></li>
+<li><a href="#apply-a-preset">So wenden Sie eine Scan-Effekt-Vorlage Schritt für Schritt an</a></li>
+<li><a href="#fake-scan-effect">Wodurch wirkt ein Scan-Effekt unecht?</a></li>
+<li><a href="#honest-use">Wann ist ein gescannter Look angemessen?</a></li>
+<li><a href="#faq">Scan-Effekt: FAQ</a></li>
+</ol></nav>
+
+<h2 id="what-is-a-scan-effect">Was ist ein Scan-Effekt?</h2>
+<p>Ein Scan-Effekt ist eine digitale Nachbildung der optischen Spuren, die ein Scanner oder Kopierer auf einer Seite hinterlässt. Der Scan-Effekt macht aus einer sauberen, digital erzeugten Datei ein bildbasiertes PDF, das Neigung, Rauschen, Weichheit, Tonverschiebungen und Kompression zeigt – genau die Hinweise, an denen Menschen einen Papierscan erkennen.</p>
+<p>Der Begriff umfasst mehrere verwandte Looks. „Scanner-Effekt“ meint meist den flachen Büro-Look: grau, leicht weich, ein wenig schief. Ein Kopierer-Look ist härter, mit ausgebrannten Weißtönen und dunklem Text. Ein Fax-Look ist grob und niedrig aufgelöst. Ein Look mit altem Papier fügt einen warmen, vergilbten Ton hinzu. Alle bestehen aus derselben kleinen Gruppe von Artefakten, nur in unterschiedlichen Mengen.</p>
+<p>Technisch endet jeder Scan-Effekt gleich: Jede Seite wird zu einem Bild. Unser Tool rendert jede PDF-Seite auf eine Canvas, wendet den Effekt an und speichert jede Seite als JPEG-Bild in einem neuen PDF. Deshalb hat ein PDF mit Scan-Look, genau wie ein echtes gescanntes PDF, keinen markierbaren Text, solange keine OCR nachträglich hinzukommt. Unsere Anleitung <a href="/de/blog/was-ist-ein-gescanntes-pdf/">was ist ein gescanntes PDF</a> behandelt diesen Unterschied im Detail.</p>
+
+<h2 id="what-makes-a-document-look-scanned">Was lässt ein Dokument gescannt aussehen?</h2>
+<p>Ein Dokument wirkt gescannt, wenn mehrere Unvollkommenheiten gemeinsam auftreten: Die Seite ist leicht gedreht, die Weißtöne sind nicht rein weiß, feines Rauschen liegt in flächigen Bereichen, Buchstabenkanten sind weich, und die Farben sind auf Grautöne reduziert. Kein einzelnes Artefakt wirkt für sich allein überzeugend; erst die Kombination liest sich als Scan.</p>
+<p>Das U.S. National Archives listet die Mängel auf, die seine Prüfer bei digitalisierten Akten kontrollieren. Nach der föderalen Digitalisierungsregel <a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">36 CFR Part 1236, Subpart E</a> achtet die Qualitätskontrolle auf Beschnitt, Registrierungsfehler, Quantisierungsfehler, Schräglage und falsches Zuschneiden. Diese „Mängel“ für einen Archivar sind genau die Zutaten, die den Scan-Look für alle anderen ausmachen.</p>
+<dl class="spec-list">
+<dt>Geometrie</dt><dd>Schräglage und Drehung, auf jeder Seite anders.</dd>
+<dt>Textur</dt><dd>Sensorrauschen und Papierkorn in flächigen Bereichen.</dd>
+<dt>Schärfe</dt><dd>Optische Weichheit durch Objektiv und beweglichen Scankopf.</dd>
+<dt>Tonwert</dt><dd>Papierfarbe, Helligkeits- und Kontrastverschiebungen.</dd>
+<dt>Farbtiefe</dt><dd>Graustufen oder bitonal statt Vollfarbe.</dd>
+<dt>Kompression</dt><dd>JPEG-8×8-Blöcke und begrenzte Auflösung.</dd>
+<dt>Rahmen</dt><dd>Randschatten, Deckellinien und Seitenränder.</dd>
+</dl>
+
+<h2 id="skew-and-rotation">Wie erzeugt Schräglage den gescannten Look?</h2>
+<p>Schräglage ist die kleine Drehung, die eine Seite bekommt, wenn sie leicht schräg auf das Scannerglas gelegt oder durch einen Dokumenteinzug gezogen wird. Schräglage ist der erkennbarste Teil des gescannten Looks, denn digital erzeugte Seiten sind immer perfekt gerade, während echte Blätter fast nie exakt bei 0° landen.</p>
+<p>Die Ursache ist mechanisch. FADGI, die föderale US-Digitalisierungsgruppe, schreibt in ihren <a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">Technical Guidelines for Digitizing Cultural Heritage Materials</a>: „Schräglage im aufgenommenen Bild lässt sich oft auf fehlende Parallelität zwischen der Fokusebene der Kamera und der Auflagefläche zurückführen.“ Im Büro ist die Ursache meist einfacher: Eine Hand legt das Blatt ein bis zwei Grad neben die Führung.</p>
+<p>In unserem Tool legt der Regler Drehung die Grundneigung von −10° bis 10° fest (Standard 1°). Negative Werte drehen die Seite gegen den Uhrzeigersinn. Ein natürlicher Bereich für einen Flachbett-Scan liegt bei 0,5° bis 1,5°. Werte über 3° wirken wie ein nachlässiges Foto, über 5° wie ein bewusster Effekt.</p>
+<h3>Drehvarianz pro Seite: warum jede gescannte Seite anders kippt</h3>
+<p>Drehvarianz (0 bis 10°, Standard 0,5°) fügt jeder Seite eine zufällige zusätzliche Neigung hinzu. In unserem Quellcode ist der endgültige Winkel jeder Seite die Grundrotation plus die Varianz, multipliziert mit einer Zufallszahl zwischen 0 und 1. Bei Drehung 1 und Varianz 0,5 landet jede Seite irgendwo zwischen 1,0° und 1,5°, nie zweimal exakt beim gleichen Winkel.</p>
+<p>Dieser Unterschied von Seite zu Seite zählt mehr als der Winkel selbst. Ein Stapel Papier, der Blatt für Blatt eingezogen wird, wiederholt nie dieselbe Schräglage, sodass eine identische Neigung auf 20 Seiten ein Verräter ist. Halten Sie die Varianz bei 0,3–1° für einen Flachbett-Look und bei 1–2° für eine Handy-Scan-Optik.</p>
+
+<h2 id="sensor-noise">Warum gehört Rauschen zum Scan-Effekt?</h2>
+<p>Ein Scan-Effekt enthält Rauschen, weil jeder Bildsensor kleine zufällige Abweichungen aufzeichnet, die nicht im Original-Papier stehen. Rauschen zeigt sich als feines Sprenkeln in weißen Rändern und flächigen grauen Bereichen. Ohne Rauschen wirkt eine Seite mit Scan-Look zu sauber – der häufigste Grund, warum ein simulierter Scan digital wirkt.</p>
+<p>NARA definiert das Problem präzise in <a href="https://www.ecfr.gov/current/title-36/chapter-XII/subchapter-B/part-1236/subpart-E" target="_blank" rel="noopener">36 CFR 1236 Subpart E</a>: „Rauschen ist ein oder mehrere unerwünschte Bildartefakte in einer digitalisierten Akte, die nicht Teil des Quellmaterials sind.“ Dieselbe Regelung setzt eine Obergrenze für Rauschen bei Archivscans, gemessen als Standardabweichung von 2 oder weniger in der Helligkeit. Echte Scans sind also verrauscht, aber nur leicht.</p>
+<p>FADGI ergänzt die andere Seite: Zu aggressive Rauschunterdrückung kann die natürliche Papierstruktur auslöschen, weshalb die Richtlinien auch zu niedrige Rauschwerte kennzeichnen. Eine völlig glatte Seite ist selbst für einen Archivar verdächtig.</p>
+<p>In unserem Tool läuft der Regler Rauschen von 0 bis 1 (Standard 0,1). Er legt eine feine fraktale Textur über die gesamte Seite, einschließlich der weißen Ränder, und ahmt so sowohl Sensorrauschen als auch Papierkorn nach. Ein natürlicher Bereich liegt bei 0,05–0,2. Über 0,3 wird die Textur bei normalem Zoom sichtbar und wirkt eher wie ein Effekt als wie ein Scan.</p>
+
+<h2 id="blur-and-softness">Wie viel Unschärfe hat ein echter Scan?</h2>
+<p>Ein echter Scan hat eine kleine Menge Unschärfe: Buchstabenkanten sind weich statt rasiermesserscharf, und dünne Linien verlieren etwas Kontrast. Die Weichheit kommt vom Scanner-Objektiv, vom Scankopf, der sich während der Belichtung bewegt, und von Papier, das nicht perfekt flach auf dem Glas liegt.</p>
+<p>Digitale PDFs stellen Text als Vektorumrisse dar, scharf bei jedem Zoom. Ein Scan hat eine feste Auflösung, und jedes Pixel mittelt Licht aus einem kleinen Papierbereich, was einen leichten Schleier um Zeichen legt.</p>
+<p>Der Regler Unschärfe in unserem Tool läuft von 0 bis 1 (Standard 0,3). Der Wert ist ein Unschärferadius in Pixeln der gerenderten Seite, weshalb derselbe Wert bei 1× Auflösung weicher wirkt als bei 3×. Ein natürlicher Bereich liegt bei 0,2–0,4. Über 0,6 wird kleiner Druck schwer lesbar, und starke Unschärfe ist einer der schnellsten Wege, einen Scan-Effekt unecht wirken zu lassen.</p>
+<div class="callout callout-tip"><strong>Unschärfe bei 100 % Zoom prüfen</strong>Beurteilen Sie Unschärfe am heruntergeladenen PDF bei 100 % Zoom, nicht an einer verkleinerten Miniaturansicht. Eine Einstellung, die als Miniaturansicht scharf wirkt, kann für 9-pt-Fußnoten zu weich sein.</div>
+
+<h2 id="paper-tone">Wie verändert der Papierton den Scan-Effekt?</h2>
+<p>Der Papierton verändert den Scan-Effekt, indem er reines digitales Weiß durch das leicht warme oder graue Weiß echten Papiers ersetzt. Büropapier scannt leicht cremeweiß, Recyclingpapier wirkt grau, und alte Dokumente werden gelb oder braun. Ein warmer Ton ist der Haupthinweis hinter dem Look mit altem Papier.</p>
+<p>Scanner zeichnen die Vergilbung von Papier originalgetreu auf, besonders im Farbmodus, und Lampen sowie Weißabgleich verschieben den Ton von Gerät zu Gerät leicht.</p>
+<p>Unser Regler Vergilbung (0 bis 2, Standard 0) legt einen Sepiaton an. In unserem Code wird er nach der Graustufen-Umwandlung angewendet, sodass er die Seite auch im Farbraum Graustufen tönt; im Farbraum Farbe wärmt er zudem farbige Elemente. Ein natürlicher Bereich liegt bei 0,1–0,3 für normales Papier und 0,3–0,6 für einen gealterten oder archivartigen Look.</p>
+
+<h2 id="brightness-contrast-bit-depth">Wie prägen Helligkeit und Kontrast einen Scan?</h2>
+<p>Helligkeit und Kontrast prägen einen Scan, indem sie festlegen, wie weiß das Papier und wie schwarz der Text wirkt. Büroscanner und Kopierer erhöhen den Kontrast oft, was Text dunkler macht und helle Hintergründe ausbleicht. Helligkeit unter 1 ergibt einen dunklen, grauen Scan; über 1 eine gebleichte, überbelichtete Kopie.</p>
+<p>Hinter beiden Einstellungen steht die Farbtiefe, die Anzahl der Tonstufen, die ein Scanner speichert. Laut dem <a href="https://en.wikipedia.org/wiki/Image_scanner" target="_blank" rel="noopener">Wikipedia-Artikel zum Bildscanner</a> erfassen typische Scanner mindestens 24-Bit-Farbe, hochwertige Modelle 36–48 Bit. Graustufen-Scans speichern meist 8 Bit, also 256 Abstufungen. Presst ein Scanner diesen Bereich zusammen, verschwinden feine Abstufungen – NARA nennt das Quantisierung.</p>
+<p>NARAs Regel formuliert es so: „Quantisierung ist ein verlustbehaftetes Kompressionsverfahren, das eine Bandbreite von Werten auf einen einzigen Quantenwert komprimiert, meist um die Dateigröße zu verringern.“ Eine Erhöhung des Kontrasts in unserem Tool bildet dasselbe visuelle Ergebnis nach: Helle Grautöne verschmelzen mit Weiß, dunkle Grautöne mit Schwarz.</p>
+<dl class="spec-list">
+<dt>Helligkeit</dt><dd>0 bis 2, Standard 1. Natürlich: 0,95–1,1. Fotokopie: 1,05–1,1. Altes Papier: etwa 0,95.</dd>
+<dt>Kontrast</dt><dd>0 bis 2, Standard 1. Natürlich: 1–1,2. Fotokopie: 1,3–1,5. Fax: 1,5 oder höher.</dd>
+</dl>
+
+<h2 id="grayscale-and-bitonal">Graustufen oder bitonal: welcher gescannte Look?</h2>
+<p>Graustufen ergeben den weichen, gleichmäßigen gescannten Look eines modernen Büroscanners, während bitonal den harten Schwarz-Weiß-Look von Faxgeräten und Gerichtseinreichungen liefert. Graustufen behalten bis zu 256 Abstufungen pro Pixel; bitonal nur zwei. Die meisten stellen sich Graustufen vor, wenn sie an einen typischen Dokumentenscan denken.</p>
+<p>FADGI definiert beide Begriffe in seinem Glossar. „Graustufen: Digitale Bilder, die mit einer Bandbreite von Grautönen zwischen Weiß und Schwarz erzeugt werden.“ Und: „Bitonal: Digitale Bilder, die nur mit zwei Farben erzeugt werden, Schwarz und Weiß.“ Bitonale Dateien haben laut den <a href="https://www.digitizationguidelines.gov/guidelines/FADGITechnicalGuidelinesforDigitizingCulturalHeritageMaterials_ThirdEdition_05092023.pdf" target="_blank" rel="noopener">FADGI Technical Guidelines</a> 1 Bit pro Pixel, Graustufendateien meist 8 oder 16 Bit.</p>
+<p>Unser Tool bietet zwei Farbräume: Graustufen (Standard) und Farbe. Es gibt keinen echten 1-Bit-bitonalen Modus. Um sich einem bitonalen oder Kopierer-Look anzunähern, behalten Sie Graustufen bei und erhöhen den Kontrast auf 1,4–1,6; helle Grautöne fallen dann auf Weiß, und Text geht nahezu auf Schwarz, während die Datei 8-Bit bleibt. Nutzen Sie Farbe nur, wenn ein Logo, Stempel, Textmarker oder ein gealterter Papierton sichtbar bleiben muss.</p>
+<p>Für die reine Umwandlung ohne Scan-Artefakte lesen Sie, wie Sie <a href="/de/blog/pdf-in-schwarz-weiss-umwandeln/">ein farbiges PDF in Schwarz-Weiß umwandeln</a>.</p>
+
+<h2 id="jpeg-and-resolution">Tragen JPEG-Blöcke und Auflösung zum Scan-Effekt bei?</h2>
+<p>JPEG-Blöcke und begrenzte Auflösung tragen tatsächlich zum Scan-Look bei. Die meisten Scanner speichern Seiten als JPEG-Bilder, was feine 8×8-Pixel-Blöcke rund um Text hinterlässt, und Büro-Scans entstehen meist bei 150–300 dpi, sodass eine Seite nie die unbegrenzte Schärfe eines Vektor-PDFs beim Hineinzoomen hat.</p>
+<p>FADGI beschreibt das Kompressionsartefakt direkt: „Standardmäßige JPEG-Verarbeitung führt zum Beispiel 8×8-Pixel-Blöcke ein, die eindeutig nicht Teil des Originalinhalts sind.“ Diese Blöcke sind am deutlichsten rund um schwarzen Text auf weißem Papier und in weichen Verläufen zu sehen, wie auch der <a href="https://en.wikipedia.org/wiki/Compression_artifact" target="_blank" rel="noopener">Wikipedia-Artikel zu Kompressionsartefakten</a> zeigt.</p>
+<p>Unser Tool speichert jede verarbeitete Seite als JPEG-Bild in dem neuen PDF, sodass leichte JPEG-Blockbildung natürlich entsteht, genau wie bei echter Scanner-Ausgabe. Die Einstellung Auflösung steuert die Pixeldichte: Seiten werden bei 72 dpi multipliziert mit der Skalierung gerendert.</p>
+<div class="table-wrap"><table><caption>Auflösungseinstellung im Tool und wofür sie steht</caption>
+<thead><tr><th scope="col">Einstellung</th><th scope="col">Ungefähre dpi</th><th scope="col">Wirkt wie</th></tr></thead>
+<tbody>
+<tr><th scope="row">1×</th><td>72 dpi</td><td>Fax oder minderwertige Kopie, sichtbare Pixelstufen</td></tr>
+<tr><th scope="row">1,5×</th><td>108 dpi</td><td>Einfacher Multifunktionsdrucker im Entwurfsmodus</td></tr>
+<tr><th scope="row">2× (Standard)</th><td>144 dpi</td><td>Typischer Büro-„E-Mail-Scan“</td></tr>
+<tr><th scope="row">2,5×</th><td>180 dpi</td><td>Ausgabe einer Scanner-App fürs Handy</td></tr>
+<tr><th scope="row">3×</th><td>216 dpi</td><td>Sorgfältiger Flachbett-Scan, größere Datei</td></tr>
+</tbody></table></div>
+<p>Zum Vergleich: Archivscans gehen deutlich höher. NARA setzt Mindestwerte von 300 ppi für Textakten und 400 ppi für fotografische Abzüge, und FADGI-Sternestufen für ungebundene Dokumente reichen von etwa 200 bis 400 ppi. Ein Scan-Effekt braucht keine Archivauflösung; er muss nur wie ein alltäglicher Büro-Scan aussehen.</p>
+
+<h2 id="moire">Was ist Moiré in einem gescannten Dokument?</h2>
+<p>Moiré in einem gescannten Dokument ist ein welliges Interferenzmuster, das entsteht, wenn ein Scanner ein gedrucktes Rasterbild abtastet, etwa ein Zeitschriftenfoto oder ein Zeitungsbild. Das regelmäßige Punktraster des Drucks und das regelmäßige Pixelraster des Sensors überlagern sich und erzeugen Wellen, die im Original nicht vorhanden sind.</p>
+<p>FADGI erklärt: „Moiré tritt oft bei der Darstellung digitalisierter Rasterbilder auf, verursacht durch die phasenverschobene Wechselwirkung von Rastermuster und Sensorgeometrie.“ Die Richtlinien fügen ein praktisches Beispiel hinzu: „Beispiel – Stiche müssen mit höherer Auflösung digitalisiert werden, um Moiré zu vermeiden.“ Der <a href="https://en.wikipedia.org/wiki/Moir%C3%A9_pattern" target="_blank" rel="noopener">Wikipedia-Artikel zu Moiré-Mustern</a> beschreibt denselben Effekt beim Scannen gedruckter Bilder.</p>
+<p>Unser Tool hat keinen Moiré-Regler, und ein Textdokument braucht auch keinen: Moiré tritt nur bei gedruckten Rasterbildern auf. Enthält Ihre Quelle bereits ein gescanntes Zeitschriftenbild, bleibt dessen Moiré nach der Verarbeitung sichtbar. Eine leichte Unschärfe von 0,3–0,4 mildert es etwas.</p>
+
+<h2 id="edge-shadows-and-borders">Lassen Randschatten eine Seite gescannt wirken?</h2>
+<p>Randschatten können eine Seite gescannt wirken lassen, weil ein Flachbettdeckel selten perfekt schließt und die Lücke einen dunklen Streifen an einer oder zwei Kanten wirft. Kopierer und Einzüge können ebenfalls dünne dunkle Linien hinterlassen, wo die Papierkante das Glas berührt. Diese Rahmenartefakte kommen in vielen echten Scans vor, aber nicht in allen.</p>
+<p>Seien Sie sich klar darüber, was unser Tool hier tut. Es zeichnet keine Randschatten, Verläufe oder Deckellinien. Es bietet einen Schalter Rand (standardmäßig aus), der eine 1 Pixel breite dunkle Linie um die Seitenkante zieht. Dieser dünne Rahmen ahmt die Papierkante nach, die ein Kopierer oder Einzug aufnimmt, und passt zu Kopierer-Looks.</p>
+<p>Wird eine Seite gedreht, füllt das Tool die freigelegten Ecken mit Weiß, was zu einem Scanner mit weißem Deckel passt.</p>
+
+<h2 id="fax-and-photocopy-look">Wie unterscheiden sich Fax-Look und Kopierer-Look?</h2>
+<p>Fax-Look und Kopierer-Look unterscheiden sich vor allem in Auflösung und Tonwert. Ein Fax ist grob, niedrig aufgelöst und fast schwarz-weiß, mit gezackten Buchstabenkanten. Eine Fotokopie ist schärfer, aber hart: Weißtöne sind ausgebrannt, Text ist dunkel und dick, und Tonerstaub oder Streifen können auftauchen.</p>
+<h3>Was verleiht einem Fax seinen niedrig aufgelösten Look?</h3>
+<p>Ein Fax wirkt grob, weil der Standard für Telefonleitungen entworfen wurde. Laut dem <a href="https://en.wikipedia.org/wiki/Fax" target="_blank" rel="noopener">Wikipedia-Artikel zu Fax</a> liegt die Group-3-Fax-Standardauflösung bei etwa 200–204 Linien pro Zoll horizontal und nur 98–100 vertikal; der „Fine“-Modus verdoppelt die vertikale Auflösung auf 196–200. Eine typische Group-3-Seite braucht 6–15 Sekunden zum Senden.</p>
+<p>Diese ungleiche, niedrige vertikale Auflösung ist der Grund, warum Fax-Text gestreckt und stufig wirkt. Um das nachzubilden, nutzen Sie die niedrigste Auflösung (1×), Farbraum Graustufen, einen Kontrast von 1,5 oder mehr, damit Grautöne zu Schwarz und Weiß zusammenfallen, und etwas mehr Unschärfe und Rauschen als bei einem Büro-Scan.</p>
+<h3>Was verleiht einer Fotokopie ihren harten Look?</h3>
+<p>Eine Fotokopie ist eine mit Toner gedruckte Kopie eines Scans, sie zeigt also Unvollkommenheiten von zwei Maschinen. Der <a href="https://en.wikipedia.org/wiki/Photocopier" target="_blank" rel="noopener">Wikipedia-Artikel zum Fotokopierer</a> merkt an, dass sich Kopierer an Unvollkommenheiten ihrer Ausgabe erkennen lassen und dass mechanische Toleranzen bei Toner und Papiereinzug Streifenbildung verursachen.</p>
+<p>Kopierer können auch Inhalte verändern, nicht nur das Aussehen. BBC News <a href="https://www.bbc.com/news/technology-23588202" target="_blank" rel="noopener">berichtete 2013</a>, dass manche Bürokopierer Ziffern in Scans veränderten, wegen verlustbehafteter Muster-Erkennungskompression (JBIG2): „In seinen Tests fand Herr Kriesel heraus, dass oft die Ziffer ‚6‘ zu einer ‚8‘ wurde, und umgekehrt, wobei auch andere Zahlen betroffen waren.“ Unser Tool nutzt keine solche Kompression; es verändert nur das Aussehen, niemals Zeichen.</p>
+<p>Um eine Fotokopie nachzubilden, erhöhen Sie den Kontrast auf 1,3–1,5, die Helligkeit auf 1,05–1,1, um das Papier auszubleichen, behalten Graustufen bei, fügen Rauschen um 0,15 hinzu und schalten den Rand für eine dünne Kante ein.</p>
+
+<h2 id="cheat-sheet">Scan-Effekt-Spickzettel: Welcher Regler macht was?</h2>
+<p>Der Scan-Effekt-Spickzettel unten ordnet jedes echte Scanner-Artefakt seiner physischen Ursache, dem passenden Regler in unserem Tool und dem Bereich zu, der noch natürlich wirkt. Nutzen Sie ihn als schnelle Referenz, wenn ein Ergebnis seltsam wirkt: Finden Sie das Artefakt, das falsch wirkt, und passen Sie nur diesen einen Regler an.</p>
+<div class="table-wrap"><table><caption>Scan-Artefakte, echte Ursachen und Tool-Regler</caption>
+<thead><tr><th scope="col">Artefakt</th><th scope="col">Echte Ursache</th><th scope="col">Tool-Regler</th><th scope="col">Natürlicher Bereich</th></tr></thead>
+<tbody>
+<tr><th scope="row">Schräglage</th><td>Blatt schief aufgelegt oder eingezogen; Auflage nicht parallel zum Sensor</td><td>Drehung (−10° bis 10°)</td><td>0,5°–1,5° (Handy: 1,5°–2,5°)</td></tr>
+<tr><th scope="row">Ungleiche Schräglage</th><td>Jedes Blatt landet anders</td><td>Drehvarianz (0–10°)</td><td>0,3°–1°</td></tr>
+<tr><th scope="row">Rauschen und Korn</th><td>Sensorrauschen, Papierstruktur</td><td>Rauschen (0–1)</td><td>0,05–0,2</td></tr>
+<tr><th scope="row">Weichheit</th><td>Objektiv, beweglicher Scankopf, Papier nicht flach</td><td>Unschärfe (0–1)</td><td>0,2–0,4</td></tr>
+<tr><th scope="row">Papierton</th><td>Papierfarbe, Alterung, Lampe und Weißabgleich</td><td>Vergilbung (0–2)</td><td>0,1–0,3 (Altes Papier: 0,3–0,6)</td></tr>
+<tr><th scope="row">Belichtung</th><td>Lampenstärke, Auto-Belichtung</td><td>Helligkeit (0–2)</td><td>0,95–1,1</td></tr>
+<tr><th scope="row">Harte Tonwerte</th><td>Kopiererkontrast, Quantisierung</td><td>Kontrast (0–2)</td><td>1–1,2 (Kopie/Fax: 1,3–1,6)</td></tr>
+<tr><th scope="row">Grautöne</th><td>Graustufen- oder bitonale Aufnahme</td><td>Farbraum (Graustufen/Farbe)</td><td>Graustufen für die meisten Dokumente</td></tr>
+<tr><th scope="row">Pixeldichte</th><td>Scan-dpi-Einstellung</td><td>Auflösung (1×–3×)</td><td>2× Büro, 1× Fax</td></tr>
+<tr><th scope="row">JPEG-Blöcke</th><td>Verlustbehaftetes JPEG-Speichern</td><td>Automatisch (Seiten als JPEG gespeichert)</td><td>Nicht einstellbar</td></tr>
+<tr><th scope="row">Randlinie</th><td>Papierkante, von Kopierer oder Einzug aufgenommen</td><td>Rand (1-px-Linie)</td><td>An für Kopien, aus für Scans</td></tr>
+<tr><th scope="row">Randschatten</th><td>Deckellücke bei einem Flachbettscanner</td><td>Nicht simuliert</td><td>Nicht verfügbar</td></tr>
+<tr><th scope="row">Moiré</th><td>Rasterdruck trifft auf Sensorraster</td><td>Nicht simuliert</td><td>Nur in gedruckten Bildern</td></tr>
+</tbody></table></div>
+
+<h2 id="five-presets">Scan-Effekt-Einstellungen für 5 Looks</h2>
+<p>Die fünf Scan-Effekt-Rezepte unten sind unsere empfohlenen Ausgangspunkte für die häufigsten Looks: Büro-Scan, Fotokopie, Fax-Optik, altes Papier und Handy-Scan-Optik. Jedes nutzt nur echte Regler aus unserem Tool. Geben Sie die Werte ein, prüfen Sie die Live-Vorschau, und passen Sie dann jeweils nur einen Regler an.</p>
+<div class="table-wrap"><table><caption>Empfohlene Startwerte für 5 Scan-Looks</caption>
+<thead><tr><th scope="col">Regler</th><th scope="col">Büro-Scan</th><th scope="col">Fotokopie</th><th scope="col">Fax-Optik</th><th scope="col">Altes Papier</th><th scope="col">Handy-Scan-Optik</th></tr></thead>
+<tbody>
+<tr><th scope="row">Drehung</th><td>1°</td><td>0,5°</td><td>0,5°</td><td>1°</td><td>1,5°–2,5°</td></tr>
+<tr><th scope="row">Drehvarianz</th><td>0,5°</td><td>0,5°</td><td>0,5°</td><td>0,5°</td><td>1°</td></tr>
+<tr><th scope="row">Unschärfe</th><td>0,3</td><td>0,2</td><td>0,4</td><td>0,3</td><td>0,35</td></tr>
+<tr><th scope="row">Rauschen</th><td>0,1</td><td>0,15</td><td>0,2</td><td>0,12</td><td>0,15</td></tr>
+<tr><th scope="row">Helligkeit</th><td>1</td><td>1,05–1,1</td><td>1</td><td>0,95</td><td>1</td></tr>
+<tr><th scope="row">Kontrast</th><td>1</td><td>1,3–1,5</td><td>1,5 oder höher</td><td>1</td><td>1,1</td></tr>
+<tr><th scope="row">Vergilbung</th><td>0</td><td>0</td><td>0</td><td>0,3–0,6</td><td>0–0,1</td></tr>
+<tr><th scope="row">Farbraum</th><td>Graustufen</td><td>Graustufen</td><td>Graustufen</td><td>Farbe</td><td>Farbe</td></tr>
+<tr><th scope="row">Rand</th><td>Aus</td><td>An</td><td>Aus</td><td>Aus</td><td>Aus</td></tr>
+<tr><th scope="row">Auflösung</th><td>2×</td><td>2×</td><td>1×</td><td>2×</td><td>2,5×</td></tr>
+</tbody></table></div>
+<p>Diese Werte sind unsere Vorschläge, keine gemessenen Standards. Wann Sie welchen Look nutzen:</p>
+<dl class="spec-list">
+<dt>Büro-Scan</dt><dd>Der alltägliche Flachbett- oder Einzugsscan. Nahe an den Tool-Standardwerten; passend für Verträge, Briefe, Formulare und die meisten Dokumente, die Menschen „als Scan“ erwarten.</dd>
+<dt>Fotokopie</dt><dd>Helles Papier, dunkler Text, eine dünne Randlinie. Passt zu Dokumenten, die mehrfach kopiert wirken sollen, etwa Handouts oder alte interne Vermerke.</dd>
+<dt>Fax-Optik</dt><dd>Grobe 1×-Auflösung und hoher Kontrast. Passt zu Requisiten, Retro-Designs und Formularen, die traditionell per Fax ankommen. Halten Sie Fließtext bei 10 pt oder größer, sonst wird er schwer lesbar.</dd>
+<dt>Altes Papier</dt><dd>Farbmodus mit warmem Sepiaton und leicht reduzierter Helligkeit. Passt zu Archiv-Handouts, Spielrequisiten, Geschichtsprojekten und Vintage-Designs.</dd>
+<dt>Handy-Scan-Optik</dt><dd>Eine größere, weniger gleichmäßige Neigung und Farbaufnahme, als hätte eine Scanner-App fürs Handy die Seite freihändig fotografiert. Passt zu Quittungen und einseitigen Dokumenten.</dd>
+</dl>
+<div class="callout callout-info"><strong>Warum der Handy-Look mehr Neigung nutzt</strong>Ein Handy in der Hand liegt selten perfekt parallel zum Papier, daher zeigen echte Handyscans mehr Rotation und mehr Unterschiede zwischen den Seiten als ein Flachbettscanner. Unser Tool dreht die Seite, fügt aber keine perspektivische Verzerrung hinzu, halten Sie die Neigung also unter 3°.</div>
+
+<h2 id="apply-a-preset">So wenden Sie eine Scan-Effekt-Vorlage Schritt für Schritt an</h2>
+<p>Um eine Scan-Effekt-Vorlage anzuwenden, öffnen Sie unser kostenloses Web-Tool, laden Ihr PDF oder Bild, geben die Rezeptwerte im Einstellungsfeld ein, vergleichen die Live-Vorschau mit dem Original und laden das gescannte PDF herunter. Der gesamte Vorgang läuft in Ihrem Browser und dauert bei einem kurzen Dokument meist unter einer Minute.</p>
+<ol class="step-list">
+<li><strong>Bereiten Sie ein PDF vor.</strong> Exportieren Sie Word-, Google-Docs- oder Tabellendateien zuerst als PDF (zum Beispiel Datei → Herunterladen → PDF-Dokument in Google Docs). Das Tool akzeptiert DOCX direkt, behält aber nur den Text, daher bewahrt ein Export als PDF Ihr Layout.</li>
+<li><strong>Öffnen Sie das Tool.</strong> Gehen Sie zu <a href="/de/scan">pdflookscanned.com/scan</a> und legen Sie das PDF, JPG oder PNG in den Upload-Bereich. Es wird nichts auf einen Server hochgeladen; die Verarbeitung läuft lokal.</li>
+<li><strong>Wählen Sie einen Look.</strong> Nehmen Sie eines der fünf Rezepte oben, zum Beispiel den Büro-Scan: Drehung 1, Varianz 0,5, Unschärfe 0,3, Rauschen 0,1.</li>
+<li><strong>Stellen Sie Farbraum und Auflösung ein.</strong> Wählen Sie Graustufen oder Farbe und die Auflösungsskala (2× für die meisten Looks, 1× für Fax, 2,5× für den Handy-Look).</li>
+<li><strong>Passen Sie den Tonwert an.</strong> Setzen Sie Helligkeit, Kontrast und Vergilbung auf die Rezeptwerte; schalten Sie den Rand nur für den Fotokopie-Look ein.</li>
+<li><strong>Prüfen Sie die Vorschau.</strong> Zoomen Sie auf 100 % bei einer Seite mit kleinem Druck. Ist Text schwer lesbar, senken Sie zuerst die Unschärfe, dann den Kontrast.</li>
+<li><strong>Herunterladen und prüfen.</strong> Laden Sie das PDF herunter, öffnen Sie es in Ihrem Betrachter und blättern Sie alle Seiten durch, um zu bestätigen, dass jede eine leicht andere Neigung hat.</li>
+</ol>
+<p>Für viele Dateien auf einmal wendet die Stapelseite unter <a href="/de/scan/bulk">/scan/bulk</a> dieselben Einstellungen auf jede Datei an und lädt alles als ZIP herunter. Bild-Eingaben werden je zu einem einzigen einseitigen PDF, wie in unserer Anleitung zum Umwandeln eines <a href="/de/blog/bild-in-gescanntes-pdf-umwandeln/">Bildes in ein gescanntes PDF</a> erklärt.</p>
+
+<h2 id="fake-scan-effect">Wodurch wirkt ein Scan-Effekt unecht?</h2>
+<p>Ein Scan-Effekt wirkt unecht, wenn er übertrieben oder zu einheitlich ist: eine Seite um 5° oder mehr gedreht, dieselbe Neigung auf jeder Seite, starke Unschärfe, die Text verschmiert, kräftiges Rauschen über einer fast leeren Seite, oder Ränder, die rein digital weiß bleiben. Echte Scans sind auf kleine, ungleichmäßige Art unvollkommen.</p>
+<dl class="spec-list">
+<dt>Überdrehung</dt><dd>Büro-Scans überschreiten selten 2°. Halten Sie Drehung bei 0,5–1,5°, außer Sie wollen den Handy-Look, und bleiben Sie auch dann unter 3°.</dd>
+<dt>Identische Neigung</dt><dd>Jede Seite exakt im gleichen Winkel liest sich als Filter. Halten Sie die Drehvarianz über 0, idealerweise 0,3–1°.</dd>
+<dt>Starke Unschärfe</dt><dd>Unschärfe über 0,6 macht kleinen Druck unlesbar, was ein funktionierender Büroscanner nicht tun würde. Bleiben Sie bei 0,2–0,4.</dd>
+<dt>Rauschen auf reinen Weißseiten</dt><dd>Rauschen bedeckt die ganze Seite, sodass auf einer fast leeren Seite die Textur zum Hauptmerkmal wird. Senken Sie Rauschen bei spärlichen Seiten auf 0,05–0,08.</dd>
+<dt>Reines digitales Weiß</dt><dd>Papier ist nie RGB-255-Weiß. Eine Helligkeit von 0,97–0,99 oder eine Vergilbung von 0,05–0,15 entfernt das klinische Weiß.</dd>
+<dt>Vektorscharfe Logos</dt><dd>Mischt eine Seite einen weichen Scan mit einem scharf eingefügten Unterschriftsbild, verrät der Kontrast das Bild. Fügen Sie Stempel oder Unterschriften im Tool hinzu, bevor Sie verarbeiten, damit sie denselben Effekt erhalten.</dd>
+</dl>
+<p>Ein nützlicher Test ist, Ihre Ausgabe neben einen echten Scan von Ihrem eigenen Büroscanner oder Handy zu legen. Vergleichen Sie das Grau der Ränder, die Kante eines kleinen Buchstabens bei 100 % Zoom und die Neigung dreier verschiedener Seiten. Weicht eines davon deutlich ab, passen Sie nur diesen einen Regler an. Dasselbe Prinzip zieht sich durch unsere Pillar-Anleitung <a href="/de/blog/pdf-wie-gescannt-aussehen-lassen/">PDF wie gescannt aussehen lassen</a>.</p>
+<div class="callout callout-tip"><strong>Weniger ist mehr</strong>Wirkt ein gescannter Look „fast richtig“, reduzieren Sie Effekte, statt neue hinzuzufügen. Der glaubwürdige Look, den Scan-Artefakte erzeugen, entsteht aus mehreren schwachen Hinweisen, nicht aus einem starken.</div>
+
+<h2 id="honest-use">Wann ist ein gescannter Look angemessen?</h2>
+<p>Ein gescannter Look ist angemessen, wenn ein Dokument dem Format entsprechen soll, das Menschen erwarten, etwa eine papierartige Kopie für Akten, ein einheitliches Seitenpaket, ein Design oder eine Requisite, oder eine flach gemachte Datei, die sich schwerer beiläufig bearbeiten lässt. Der gescannte Look verändert nur das Aussehen, niemals, was ein Dokument beweist.</p>
+<div class="callout callout-warn"><strong>Setzen Sie den Scan-Effekt ehrlich ein</strong>Ein Scan-Effekt verändert, wie eine Datei aussieht, nicht ob sie echt ist. Nutzen Sie ihn nicht, um offizielle Dokumente, Ausweise, Urkunden oder Unterschriften zu fälschen oder zu verändern, die nicht Ihre eigenen sind. Manche Gerichte und Behörden verlangen durchsuchbare PDFs statt Bildscans – prüfen Sie also vor dem Einreichen einer Datei mit Scan-Look die Vorgaben.</div>
+<p>Auch der Kompromiss bei der Barrierefreiheit ist real. Ein PDF mit Scan-Look besteht aus Bildern, sodass Screenreader den Text nicht lesen können, außer OCR wird hinzugefügt. Muss ein Dokument barrierefrei oder durchsuchbar sein, bewahren Sie das digitale Original neben der Kopie mit Scan-Look auf.</p>
+<div class="expert-quote"><blockquote>Wir haben die Regler um die Artefakte herum gebaut, die echte Scanner tatsächlich erzeugen, und den Standard bewusst dezent gehalten: Drehung 1°, Unschärfe 0,3, Rauschen 0,1, Graustufen. Die meisten, die ein Ergebnis unüberzeugend finden, haben einen Regler zu weit aufgedreht. Wir lassen außerdem alles im Browser laufen, denn Dokumente, die einen gescannten Look brauchen, sind meist genau die, die Menschen am wenigsten hochladen wollen.</blockquote><cite><strong>Das Team von Make PDF look scanned</strong> — Entwickler des Web-Tools und der Chrome-Erweiterung</cite></div>
+
+<h2 id="faq">Scan-Effekt: FAQ</h2>
+<p>Diese Fragen zum Scan-Effekt kommen am häufigsten auf, wenn Menschen versuchen, ein PDF oder Bild wie gescannt aussehen zu lassen. Jede Antwort ist kurz und in sich geschlossen, und die Werte beziehen sich auf die echten Regler in unserem kostenlosen Tool, das in Desktop-Browsern, mobilen Browsern und als Chrome-Erweiterung funktioniert.</p>
+<div class="faq-item"><p class="faq-q">Welche Scan-Effekt-Einstellung eignet sich für ein normales Dokument?</p><p class="faq-a">Beginnen Sie mit dem Büro-Scan-Rezept: Drehung 1°, Drehvarianz 0,5°, Unschärfe 0,3, Rauschen 0,1, Farbraum Graustufen und Auflösung 2×. Das sind auch die Tool-Standardwerte, passend für Verträge, Briefe und Formulare. Passen Sie nur an, wenn die Vorschau zu sauber oder zu weich wirkt.</p></div>
+<div class="faq-item"><p class="faq-q">Was ist der Unterschied zwischen Scan-Effekt und Scanner-Effekt?</p><p class="faq-a">In der Praxis bedeuten die Begriffe dasselbe. Beide beschreiben simulierte Scanner-Artefakte wie Schräglage, Rauschen, Unschärfe und Grautöne. „Scanner-Effekt“ wird etwas häufiger für den flachen Büro-Look verwendet, während „Scan-Effekt“ auch Fax-, Kopierer- und Handy-Scan-Looks umfasst.</p></div>
+<div class="faq-item"><p class="faq-q">Macht ein Scan-Effekt den Text unauffindbar für die Suche?</p><p class="faq-a">Ja. Jede Seite wird als JPEG-Bild im neuen PDF gespeichert, sodass der Text nicht mehr markiert, kopiert oder durchsucht werden kann. Brauchen Sie durchsuchbaren Text, lassen Sie OCR über das Ergebnis laufen oder bewahren Sie das Original-PDF auf.</p></div>
+<div class="faq-item"><p class="faq-q">Kann ich Kaffeeflecken, Falten oder Knicke hinzufügen?</p><p class="faq-a">Nein. Unser Tool erzeugt keine Flecken, Falten, Knicke, perspektivische Verzerrung oder Randschatten. Es simuliert Neigung, Rauschen, Unschärfe, Papierton, Helligkeit, Kontrast, Farbtiefe, Auflösung und eine 1-px-Randlinie – das deckt den alltäglichen gescannten Look ab.</p></div>
+<div class="faq-item"><p class="faq-q">Wie lasse ich ein PDF wie eine Fotokopie aussehen?</p><p class="faq-a">Nutzen Sie Farbraum Graustufen, Kontrast 1,3–1,5, Helligkeit 1,05–1,1, Rauschen etwa 0,15 und schalten Sie den Rand ein. Halten Sie die Unschärfe niedrig, etwa bei 0,2, denn Kopien wirken hart statt weich.</p></div>
+<div class="faq-item"><p class="faq-q">Wie bekomme ich einen Fax-Look?</p><p class="faq-a">Stellen Sie die Auflösung auf 1× (72 dpi), behalten Sie Graustufen, erhöhen Sie den Kontrast auf 1,5 oder mehr, und nutzen Sie Unschärfe 0,4 und Rauschen 0,2. Echte Group-3-Faxe laufen mit etwa 204 × 98 Linien pro Zoll im Standardmodus, weshalb sie grob wirken.</p></div>
+<div class="faq-item"><p class="faq-q">Warum wirkt mein gescannter Look unecht?</p><p class="faq-a">Die üblichen Ursachen sind zu viel Drehung, identische Neigung auf jeder Seite, starke Unschärfe oder kräftiges Rauschen auf einer fast leeren Seite. Senken Sie die Drehung auf etwa 1°, halten Sie die Varianz über 0, und halten Sie Unschärfe und Rauschen unter 0,4 und 0,2.</p></div>
+<div class="faq-item"><p class="faq-q">Kann das Tool einen echten Schwarz-Weiß-Scan (bitonal) erzeugen?</p><p class="faq-a">Keine echte 1-Bit-Datei. Der Farbraum Graustufen erzeugt Graustufen; ein Kontrast von 1,4–1,6 drängt das Ergebnis nah an einen Schwarz-Weiß-Look. Für strikt bitonale Ausgabe lesen Sie unsere Anleitung zum Umwandeln eines farbigen PDFs in Schwarz-Weiß.</p></div>
+<div class="faq-item"><p class="faq-q">Welche Auflösung sollte ich wählen?</p><p class="faq-a">Nutzen Sie 2× (etwa 144 dpi) für die meisten Dokumente, 2,5× (180 dpi) für die Handy-Scan-Optik und 3× (216 dpi), wenn kleiner Druck scharf bleiben muss. Höhere Auflösung ergibt größere Dateien, nutzen Sie also 1× oder 1,5×, wenn Größenlimits streng sind.</p></div>
+<div class="faq-item"><p class="faq-q">Wird meine Datei hochgeladen, wenn ich einen Scan-Effekt anwende?</p><p class="faq-a">Nein. Das Web-Tool und die Chrome-Erweiterung verarbeiten Dateien lokal in Ihrem Browser mit pdf.js und Canvas. Dateien werden nicht an einen Verarbeitungsserver gesendet, und die Website funktioniert nach dem ersten Laden auch offline.</p></div>
+<div class="faq-item"><p class="faq-q">Kann ich ein Dokument farbig wie gescannt aussehen lassen?</p><p class="faq-a">Ja. Schalten Sie den Farbraum auf Farbe, um Logos, Stempel und Markierungen zu erhalten. Farbe eignet sich am besten für den Altes-Papier- und den Handy-Scan-Look; Graustufen bleibt für einen Büro-Scan am typischsten.</p></div>
+
+<div class="cta-block">
+  <div class="cta-text">
+    <p class="cta-title">Jetzt die 5 Scan-Effekt-Vorlagen ausprobieren</p>
+    <p class="cta-body">Öffnen Sie das kostenlose Tool, geben Sie eine der Einstellungen aus dieser Anleitung ein und beobachten Sie die Live-Vorschau. Ihre Datei wird im Browser verarbeitet und nie hochgeladen.</p>
+  </div>
+  <div class="cta-buttons">
+    <a href="/de/scan" class="cta-btn">Kostenloses Tool öffnen →</a>
+    <a href="https://chromewebstore.google.com/detail/make-pdf-look-scanned/ijhpnlcipgiokgignkbbbgkobdmdoila" target="_blank" rel="noopener" class="cta-btn">Zu Chrome hinzufügen – kostenlos →</a>
+    <a href="/de/blog/" class="cta-btn">Weitere Anleitungen →</a>
+  </div>
+</div>
+<footer class="article-footer"><p>Veröffentlicht vom Team von Make PDF look scanned. Die hier beschriebenen Einstellungen und Standardwerte entsprechen der aktuellen Version des Web-Tools und der Chrome-Erweiterung.</p><p><strong>Passende Anleitungen</strong></p><ul class="related"><li><a href="/de/blog/pdf-wie-gescannt-aussehen-lassen/">PDF wie gescannt aussehen lassen: 6 Methoden, die auch genauem Hinsehen standhalten<span>PDF wie gescannt aussehen lassen: 6 getestete Wege – Browser-Tool, Chrome-Erweiterung, Druckdialog, Bildbearbe…</span></a></li><li><a href="/de/blog/bild-in-gescanntes-pdf-umwandeln/">Bild in gescanntes PDF umwandeln: JPG, PNG oder Handyfoto als echt wirkender Scan<span>Bild in gescanntes PDF umwandeln: Handyfoto zuschneiden und aufhellen, realistischen Scan-Effekt hinzufügen, J…</span></a></li><li><a href="/de/blog/pdf-in-schwarz-weiss-umwandeln/">Farbiges PDF in Schwarz-Weiß umwandeln: 5 kostenlose Wege, die funktionieren<span>Farbiges PDF in Schwarz-Weiß umwandeln – unter Windows, am Mac und online: als PDF drucken, Quartz-Filter in V…</span></a></li></ul></footer></article></div>
+<footer class="site-footer">© 2026 Make PDF look scanned · <a href="/de/">Scan-Effekt-Tool</a> · <a href="/de/blog/">Anleitungen</a> · <a href="https://chromewebstore.google.com/detail/make-pdf-look-scanned/ijhpnlcipgiokgignkbbbgkobdmdoila" target="_blank" rel="noopener">Chrome-Erweiterung</a></footer>
+<script>document.addEventListener('click',function(e){document.querySelectorAll('details.lang[open]').forEach(function(d){if(!d.contains(e.target))d.removeAttribute('open')})})</script>
+</body>
+</html>

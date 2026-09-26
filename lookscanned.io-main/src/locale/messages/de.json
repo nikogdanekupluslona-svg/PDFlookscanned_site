@@ -1,0 +1,212 @@
+{
+  "base": {
+    "title": "Make PDF look scanned",
+    "description": "Lassen Sie eine saubere digitale Datei wie einen echten Scan aussehen – mit Papierstruktur, Rauschen, Drehung und Schatten, lokal in Ihrem Browser verarbeitet.",
+    "scanTitle": "Scannen",
+    "bulkTitle": "Stapelscan",
+    "serviceWorker": {
+      "offlineReady": "Die App ist jetzt offline nutzbar",
+      "needRefresh": "Neue Version verfügbar. Zum Aktualisieren klicken."
+    },
+    "nav": {
+      "home": "Startseite",
+      "scan": "Scannen",
+      "bulk": "Stapelscan",
+      "guides": "Anleitungen"
+    },
+    "chrome": {
+      "label": "Chrome-Erweiterung",
+      "free": "GRATIS"
+    },
+    "landing": {
+      "headline": "PDF wie gescannt aussehen lassen",
+      "subhead": "Verwandeln Sie PDFs, Bilder, Word- und Excel-Dateien in realistische Scans – mit Unschärfe, Rauschen, Drehung, Wasserzeichen und Stempeln, direkt im Browser. Ihre Quelldateien bleiben auf Ihrem Gerät.",
+      "cta": "In gescanntes PDF umwandeln",
+      "note": "Kostenlos · Ohne Anmeldung · Dateien bleiben auf Ihrem Gerät",
+      "points": {
+        "formats": "PDF, Bilder und einfache Office-Formate",
+        "local": "Lokale Verarbeitung · Quelldateien bleiben bei Ihnen",
+        "free": "Scannen ist kostenlos · Ohne Anmeldung",
+        "preview": "Live-Vorschau · Exportiert wird, was Sie sehen"
+      },
+      "stepsTitle": "In drei Schritten zum gescannten PDF",
+      "step1Title": "Datei auswählen",
+      "step1Body": "Legen Sie ein PDF, ein Bild oder ein Word- oder Excel-Dokument ab. Die Datei bleibt in Ihrem Browser.",
+      "step2Title": "Scan-Effekt anpassen",
+      "step2Body": "Unschärfe, Rauschen, Drehung, Papierton, Wasserzeichen und Stempel – mit Live-Vorschau.",
+      "step3Title": "PDF exportieren",
+      "step3Body": "Ihr gescanntes PDF ist in Sekunden erstellt und wird sofort heruntergeladen.",
+      "featuresTitle": "Die wichtigsten Funktionen",
+      "footer": "Dokumente direkt im Browser in Scans verwandeln. Zur Verarbeitung wird nichts hochgeladen."
+    },
+    "language": "Sprache",
+    "seo": {
+      "homeTitle": "PDF wie gescannt aussehen lassen – kostenlos, ohne Upload",
+      "homeDescription": "PDF wie gescannt aussehen lassen: Körnung, Unschärfe, leichte Schräglage und vergilbtes Papier. Kostenlos, ohne Anmeldung – die Datei bleibt im Browser."
+    }
+  },
+  "features": {
+    "privacy": {
+      "title": "Private, lokale Verarbeitung",
+      "description": "Ihre Dateien werden in diesem Browser verarbeitet. Sie werden weder auf einen Verarbeitungsserver hochgeladen noch in der Cloud gespeichert."
+    },
+    "speed": {
+      "title": "Schnelle Umwandlung",
+      "description": "PDFs, Bilder und Office-Dokumente in Sekunden in gescannt wirkende PDFs verwandeln – ohne Drucker und ohne Scanner."
+    },
+    "customization": {
+      "title": "Scan-Effekte",
+      "description": "Unschärfe, Rauschen, Drehung, Helligkeit, Kontrast und Papierton fein einstellen – mit Live-Vorschau. Exportiert wird genau das, was Sie sehen."
+    },
+    "openSource": {
+      "title": "Chrome-Erweiterung",
+      "description": "Dieselbe Scan-Engine gibt es auch als kostenlose Chrome-Erweiterung – so bearbeiten Sie PDFs direkt in der Seitenleiste.",
+      "github": "Chrome Web Store",
+      "scanyourpdf": "Chrome-Erweiterung"
+    },
+    "mobileFriendly": {
+      "title": "Funktioniert auf dem Handy",
+      "description": "Der Konverter läuft in modernen mobilen Browsern. Für die Website ist keine Installation nötig."
+    },
+    "offlineUse": {
+      "title": "Funktioniert offline",
+      "description": "Sobald die App-Ressourcen zwischengespeichert sind, funktioniert das normale Scannen auch ohne Netzwerkverbindung."
+    }
+  },
+  "actions": {
+    "navigateToScan": "Jetzt scannen",
+    "navigateToHomePage": "Startseite",
+    "navigateToSupportMe": "Chrome-Erweiterung",
+    "backToIndex": "Zurück",
+    "preview": "Vorschau",
+    "save": "Speichern",
+    "generateScannedPDF": "Gescanntes PDF erstellen",
+    "generating": "Wird erstellt …",
+    "downloadScannedPDF": "Gescanntes PDF herunterladen",
+    "generateSuccess": "Erfolgreich erstellt",
+    "generateError": "Erstellung fehlgeschlagen: ",
+    "addFiles": "Dateien hinzufügen",
+    "processAll": "Gescannte PDFs erstellen",
+    "downloadZip": "Alle als ZIP herunterladen",
+    "converting": "Datei wird vorbereitet …",
+    "queued": "In Warteschlange",
+    "done": "Fertig",
+    "failed": "Fehlgeschlagen"
+  },
+  "settings": {
+    "settings": "Scan-Einstellungen",
+    "attenuate": "Rauschen",
+    "noise": "Rauschen",
+    "blur": "Unschärfe",
+    "border": {
+      "label": "Rand",
+      "true": "Ja",
+      "false": "Nein"
+    },
+    "colorspace": {
+      "label": "Farbraum",
+      "colorful": "Farbe",
+      "grayscale": "Graustufen"
+    },
+    "rotate": "Drehung",
+    "rotateVariance": "Drehvarianz",
+    "pdfSelectLabel": "Datei auswählen oder hier ablegen",
+    "pdfNoSelectMessage": "Keine Datei ausgewählt",
+    "supportedHint": "PDF, JPG, PNG, WebP, SVG, DOCX, XLSX, CSV, TXT, MD, HTML",
+    "scale": "Auflösung",
+    "yellowish": "Vergilbung",
+    "brightness": "Helligkeit",
+    "contrast": "Kontrast",
+    "extras": {
+      "watermark": "Wasserzeichen",
+      "watermarkText": "Wasserzeichentext",
+      "watermarkImage": "Wasserzeichenbild",
+      "stamp": "Stempel oder Unterschrift",
+      "stampImage": "Stempel oder Unterschrift hinzufügen",
+      "stampX": "Horizontale Position",
+      "stampY": "Vertikale Position",
+      "stampScale": "Größe",
+      "metadata": "PDF-Metadaten",
+      "title": "Titel",
+      "author": "Autor",
+      "subject": "Thema",
+      "keywords": "Stichwörter",
+      "producer": "PDF-Erzeuger",
+      "creator": "Anwendung",
+      "clearImage": "Entfernen"
+    }
+  },
+  "status": {
+    "notStarted": "Nicht gestartet",
+    "error": "Fehler: {error}",
+    "finished": "Abgeschlossen",
+    "processsing": {
+      "default": "Wird verarbeitet",
+      "combine": "PDF-Seiten werden zusammengefügt",
+      "progress": "PDF-Seiten werden verarbeitet: {current}/{total}"
+    }
+  },
+  "upload": {
+    "dropTitle": "Datei hier ablegen",
+    "dropTitleMany": "Dateien hier ablegen",
+    "or": "oder",
+    "choose": "Datei auswählen",
+    "chooseMany": "Dateien auswählen",
+    "replace": "Andere Datei auswählen",
+    "addMore": "Weitere Dateien hinzufügen",
+    "privacy": "Verarbeitung im Browser – nichts wird hochgeladen",
+    "dropOverlay": "Datei loslassen, um sie zu laden",
+    "dropOverlayMany": "Dateien loslassen, um sie hinzuzufügen",
+    "unsupported": "Dieser Dateityp wird nicht unterstützt: {name}",
+    "readError": "{name} konnte nicht geöffnet werden: {error}",
+    "ready": "Geladen",
+    "pages": "{n} Seite | {n} Seiten",
+    "sampleBanner": "Dies ist ein Beispieldokument. Laden Sie in Schritt 1 Ihre eigenen Dateien hoch – auch mehrere auf einmal."
+  },
+  "save": {
+    "create": "Gescanntes PDF erstellen | {n} gescannte PDFs erstellen",
+    "readyTitle": "Ihr gescanntes PDF ist fertig | Ihre {n} gescannten PDFs sind fertig",
+    "progress": "Seite {current} von {total}",
+    "fileProgress": "Datei {current} von {total}",
+    "autoHint": "Das gescannte PDF wird automatisch heruntergeladen, sobald es fertig ist. | Alle {n} Dateien werden gescannt und automatisch als eine ZIP-Datei heruntergeladen.",
+    "noFileHint": "Laden Sie in Schritt 1 eine Datei hoch, um zu beginnen.",
+    "busyHint": "Lassen Sie diesen Tab geöffnet – der Download startet von selbst, sobald der Scan fertig ist.",
+    "downloadAgain": "Erneut herunterladen",
+    "downloadStarted": "Fertig – der Download wurde gestartet",
+    "whereSaved": "Sie finden die Datei in Ihrem Ordner „Downloads“.",
+    "zipHint": "Eine einzelne Datei erhalten Sie über das Download-Symbol daneben in Schritt 1.",
+    "someFailed": "{n} Datei konnte nicht gescannt werden | {n} Dateien konnten nicht gescannt werden"
+  },
+  "files": {
+    "preview": "In der Vorschau anzeigen",
+    "previewOf": "Vorschau: {name}",
+    "downloadOne": "Dieses gescannte PDF herunterladen",
+    "remove": "Datei entfernen",
+    "hint": "Klicken Sie auf eine Datei, um sie in der Vorschau zu sehen. Alle Dateien verwenden dieselben Einstellungen.",
+    "openError": "Diese Datei konnte nicht geöffnet werden",
+    "status": {
+      "loading": "Wird vorbereitet …",
+      "ready": "Bereit",
+      "processing": "Wird gescannt …",
+      "done": "Gescannt"
+    }
+  },
+  "steps": {
+    "upload": "Hochladen",
+    "adjust": "Anpassen",
+    "download": "Herunterladen",
+    "uploadTitle": "Dateien hochladen",
+    "adjustTitle": "Scan-Optik anpassen",
+    "downloadTitle": "Gescanntes PDF erhalten"
+  },
+  "preview": {
+    "original": "Original",
+    "scanned": "Scan-Vorschau"
+  },
+  "errors": {
+    "wordNoText": "Diese Word-Datei enthält keinen lesbaren Text",
+    "sheetEmpty": "Diese Tabelle ist leer",
+    "htmlNoText": "Diese HTML-Datei enthält keinen lesbaren Text",
+    "unsupportedType": "Dieser Dateityp wird noch nicht unterstützt"
+  }
+}
